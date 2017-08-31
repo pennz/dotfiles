@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/pengyu.zhou/works/fix_security_issue/gpl/4700/WNDR4700-V1.0.0.52_gpl_src/target/linux/wndr4700/image'

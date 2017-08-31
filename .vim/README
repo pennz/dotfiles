@@ -1,0 +1,3 @@
+vim-airline	status/tabline
+vim-fugitive	integration with git
+
