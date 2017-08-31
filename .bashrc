@@ -116,3 +116,10 @@ fi
 export PATH=$HOME/bin:${PATH}
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# disable CTRL-D terminating terminal
+set -o ignoreeof
+
+#alias
+alias updatecs='cscope -bqkR'
+alias tat='tmux attach -t'
