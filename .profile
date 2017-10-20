@@ -40,7 +40,7 @@ if [ -f ~/.bash_customed ]; then
 fi
 
 # fzf, fuzzy search
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && [ -n "$BASH_VERSION" ] && source ~/.fzf.bash
 
 if [ "x$MACHINE_NAME" = "xD" ]
 then
