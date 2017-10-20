@@ -204,7 +204,3 @@ if [ "x$MACHINE_NAME" = "xD" ]
 then
 	echo "Have a good time";
 fi
-#alias
-alias updatecs='cscope -bqkR'
-alias tat='tmux attach -t'
-alias sudop='sudo proxychains'
