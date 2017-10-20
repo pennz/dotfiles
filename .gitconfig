@@ -1,3 +1,65 @@
 [user]
 	email = fireflysuccess@gmail.com
 	name = Vincent Zhou
+[color]
+	branch = auto
+	diff = auto
+	grep = auto
+	interactive = auto
+	pager = true
+	showbranch = auto
+	status = auto
+	ui = auto
+	decorate = auto
+[color "branch"]
+	current = yellow reverse
+	local = green
+	remote = red
+	plain = cyan
+[color "diff"]
+	frag = magenta
+	meta = yellow
+	old = red bold
+	new = green bold
+	whitespace = red
+	commit = yellow
+	plain = normal
+[color "grep"]
+	match = red bold
+	external = normal
+[color "interactive"]
+	header = yellow bold
+	help = red bold
+	prompt = cyan bold
+	error = magenta bold
+[color "status"]
+	added = yellow bold
+	changed = green bold
+	header = normal
+	untracked = cyan
+	nobranch = red bold
+[color "decorate"]
+	branch = green bold
+	remoteBranch = red bold
+	tag = magenta bold
+	stash = magenta bold
+	HEAD = cyan bold
+[core]
+	editor = vim
+	whitespace = trailing-space,space-before-tab
+	autocrlf = false
+[alias]
+	logp = log --pretty=oneline --graph --decorate=full
+	logt = log --pretty=oneline --graph --topo-order
+	logd = log --pretty=oneline --graph --date-order
+	loga = log --oneline --decorate=full
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !"git lg1"
+[format]
+	pretty = fuller
+[gui]
+	commitmsgwidth = 0
+[merge]
+	log = true
+	tool = vimdiff
