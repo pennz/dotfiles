@@ -41,6 +41,7 @@ fi
 
 # fzf, fuzzy search
 [ -f ~/.fzf.bash ] && [ -n "$BASH_VERSION" ] && source ~/.fzf.bash
+[ -f ~/.fzf.zsh ] && [ -n "$ZSH_VERSION" ] && source ~/.fzf.zsh
 
 if [ "x$MACHINE_NAME" = "xD" ]
 then
