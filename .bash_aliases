@@ -8,3 +8,4 @@ alias rootgrep='grep --exclude-dir=home --exclude-dir=mnt --exclude-dir=var -snr
 alias updatecs='cscope -bqkR'
 alias tat='tmux attach -t'
 alias cmt='git commit -s'
+alias sudop='sudo proxychains'
