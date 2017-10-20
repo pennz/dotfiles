@@ -1,21 +1,21 @@
 # figure out what machine I'm in right now
-if [ "$(cat .MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+if [ "$(cat ~/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
 then 
 		export MACHINE_NAME="D"; 
 fi
 
 
-if [ "$(cat .MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+if [ "$(cat ~/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
 then 
 		echo "eq" ; 
 fi
 
-if [ "$(cat .MUID)" = aca16920583e42bdcf5fc70618f55b6a ]
+if [ "$(cat ~/.MUID)" = aca16920583e42bdcf5fc70618f55b6a ]
 then 
 		export MACHINE_NAME="M"; 
 fi
 
-if [ "$(cat .MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+if [ "$(cat ~/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
 then 
 		echo "eq" ; 
 fi
