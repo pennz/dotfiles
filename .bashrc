@@ -4,19 +4,19 @@ then
 		export MACHINE_NAME="D"; 
 fi
 
-if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+if [ $(cat .MUID) = 001e5a9f026a9def84d8d88e0a4ce9e3e59690f7 ];
 then 
-		echo "eq" ; 
+		export MACHINE_NAME="C"; 
 fi
 
 if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
 then 
-		echo "eq" ; 
+		export MACHINE_NAME="C"; 
 fi
 
 if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
 then 
-		echo "eq" ; 
+		export MACHINE_NAME="C"; 
 fi
 
 #some color define
