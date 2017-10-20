@@ -99,7 +99,7 @@ set -o ignoreeof
 # fzf, fuzzy search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-if [ $MACHINE_NAME = D ]
+if [ "x$MACHINE_NAME" = "xD" ]
 then
 	echo "Have a good time";
 fi
