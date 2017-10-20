@@ -1,3 +1,24 @@
+# figure out what machine I'm in right now
+if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+then 
+		export MACHINE_NAME="D"; 
+fi
+
+if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+then 
+		echo "eq" ; 
+fi
+
+if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+then 
+		echo "eq" ; 
+fi
+
+if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+then 
+		echo "eq" ; 
+fi
+
 #some color define
 BLACK='\[\e[30m\]'
 RED='\[\e[31m\]'
@@ -69,29 +90,17 @@ unset NORMAL
 # ls colors
 eval `dircolors ~/.dir_colors`
 
-#alias
-alias grep='grep --color=auto'
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -alF'
-alias ls='ls --color=auto'
-alias vi='vim'
-alias gotodniserver='ssh pengyu.zhoug@dniserver'
-alias rootgrep='grep --exclude-dir=home --exclude-dir=mnt --exclude-dir=var -snr '
-alias updatecs='cscope -bqkR'
-alias tat='tmux attach -t'
-
-#functions
-dniget()
-{
-	scp dniserver:~/smbdir/$1 .
-}
-
-export PATH=$HOME/local/bin:/usr/lib/git-core:/home/common/bin:$PATH
-export PKG_CONFIG_PATH=${PKG_CONFIG_PATH}:${HOME}/lib/pkgconfig
+# alias
+[ -f ~/.bash_alias ] && source ~/.bash_alias
 
 # disable CTRL-D terminating terminal
 set -o ignoreeof
 
-
+# fzf, fuzzy search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+if [ $MACHINE_NAME = D ]
+then
+	echo "Have a good time";
+fi
+

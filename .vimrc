@@ -89,6 +89,9 @@ Plugin 'taglist.vim'
 	let Tlist_Ctags_Cmd='ctags'
 	let Tlist_Exit_OnlyWindow=1
 Plugin 'scrooloose/syntastic'
+	set statusline+=%#warningmsg#
+	set statusline+=%{SyntasticStatuslineFlag()}
+	set statusline+=%*
 	let g:syntastic_error_symbol='✗'
 	let g:syntastic_warning_symbol='⚠'
 	let g:syntastic_check_on_open=0
