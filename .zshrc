@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval $(thefuck --alias)
+command -v fuck && eval $(thefuck --alias)
 
 export GOPATH=$HOME/works/go
 export LC_ALL=en_US.UTF-8
