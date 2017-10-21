@@ -107,6 +107,30 @@ Plugin 'vim-airline/vim-airline'
 	let g:airline_detect_whitespace = 1
 	let g:airline#extensions#tabline#enabled = 1
 	let g:airline#extensions#hunks#non_zero_only = 1
+
+	let g:airline_powerline_fonts = 1
+
+	if !exists('g:airline_symbols')
+	    let g:airline_symbols = {}
+	endif
+	let g:airline_left_sep = "\ua0"
+	let g:airline_left_alt_sep = "\ua0"
+	let g:airline_right_sep = "\ua0"
+	let g:airline_right_alt_sep = "\ua0"
+	let g:airline_symbols.maxlinenr = '㏑'
+	"let g:airline_symbols.linenr = '␊'
+	let g:airline_symbols.linenr = '␤'
+	"let g:airline_symbols.linenr = '¶'
+	let g:airline_symbols.branch = '⎇'
+	let g:airline_symbols.paste = 'ρ'
+	"let g:airline_symbols.paste = 'Þ'
+	"let g:airline_symbols.paste = '∥'
+	let g:airline_symbols.whitespace = 'Ξ'
+	let g:airline_symbols.space = "\ua0"
+	let g:airline_symbols.spell = 'Ꞩ'
+	let g:airline_symbols.notexists = '∄'
+	let g:airline_symbols.readonly = "\ua0"
+
 Plugin 'ctrlp.vim'
 	let g:ctrlp_follow_symlinks=1
 	let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
@@ -179,7 +203,7 @@ let Tlist_Show_Menu=1
 let Tlist_File_Fold_Auto_Close=1
 
 if has("cscope")
-	set csprg=~/local/bin/cscope
+	set csprg=cscope
 
 	if has('quickfix')
 		set cscopequickfix=s-,c-,d-,i-,t-,e-

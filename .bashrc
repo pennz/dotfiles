@@ -1,24 +1,3 @@
-# figure out what machine I'm in right now
-if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
-then 
-		export MACHINE_NAME="D"; 
-fi
-
-if [ $(cat .MUID) = 001e5a9f026a9def84d8d88e0a4ce9e3e59690f7 ];
-then 
-		export MACHINE_NAME="C"; 
-fi
-
-if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
-then 
-		export MACHINE_NAME="C"; 
-fi
-
-if [ $(cat .MUID) = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
-then 
-		export MACHINE_NAME="C"; 
-fi
-
 #some color define
 BLACK='\[\e[30m\]'
 RED='\[\e[31m\]'
@@ -105,13 +84,6 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -175,18 +147,6 @@ unset CYAN
 unset WHITE
 unset NORMAL
 
-# disable CTRL-D terminating terminal
-set -o ignoreeof
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-# fzf, fuzzy search
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# customed rc files
-[ -f ~/.bash_customed ] && source ~/.bash_customed
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -203,7 +163,6 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
-if [ "x$MACHINE_NAME" = "xD" ]
-then
-	echo "Have a good time";
-fi
+eval $(thefuck --alias);
+
+[[ -e ~/.profile ]] && source ~/.profile
