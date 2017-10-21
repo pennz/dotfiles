@@ -184,6 +184,9 @@ fi
 # fzf, fuzzy search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# customed rc files
+[ -f ~/.bash_customed ] && source ~/.bash_customed
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
