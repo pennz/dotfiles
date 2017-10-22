@@ -43,6 +43,9 @@ fi
 [ -f ~/.fzf.bash ] && [ -n "$BASH_VERSION" ] && source ~/.fzf.bash
 [ -f ~/.fzf.zsh ] && [ -n "$ZSH_VERSION" ] && source ~/.fzf.zsh
 
+# fuck 
+command -v fuck >/dev/null && eval $(thefuck --alias)
+
 if [ "x$MACHINE_NAME" = "xD" ]
 then
 	echo "Have a good time";
