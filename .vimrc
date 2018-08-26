@@ -51,8 +51,8 @@ autocmd BufReadPost *
     \   exe "normal! g'\"" |
     \ endif
 
-" auto open Project
-autocmd VimEnter * Project
+" auto deoplete
+autocmd VimEnter * UpdateRemotePlugins
 
 " 启用VIM内置的man page reviewer，可以用命令`:Man XXX`查看手册页
 runtime! ftplugin/man.vim
@@ -155,6 +155,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'lilydjwg/colorizer'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	let g:deoplete#enable_at_startup = 1
 
 " 安装了Vundle后，首次自动安装插件
 if iCanHazVundle == 0
@@ -377,6 +379,9 @@ function! s:build_go_files()
   endif
 endfunction
 
-
-" easy motion"
+" easy motion
 map <Leader><Leader> <Plug>(easymotion-prefix)
+
+" others...
+inoremap jk <ESC>
+
