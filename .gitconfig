@@ -63,3 +63,5 @@
 [merge]
 	log = true
 	tool = vimdiff
+[push]
+	default = simple
