@@ -1,9 +1,10 @@
 " VIM 配置（终端环境）
-" Iceway Zhang
+" Iceway Zhang 
+" Updated by Pengyu Zhou
 " {vim:set shiftwidth=4 tabstop=4 softtabstop=4 expandtab:} "
 
 """ ### VIM 特性配置 {{{
-set nocompatible			" 不使用vi兼容模式
+"set nocompatible			" 不使用vi兼容模式
 
 set ruler				" 显示状态栏光标标尺
 set cursorline				" 突出显示当前行
@@ -50,6 +51,9 @@ autocmd BufReadPost *
     \   exe "normal! g'\"" |
     \ endif
 
+" auto open Project
+autocmd VimEnter * Project
+
 " 启用VIM内置的man page reviewer，可以用命令`:Man XXX`查看手册页
 runtime! ftplugin/man.vim
 " ### }}} VIM 特性配置结束
@@ -65,6 +69,7 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
 call plug#end()
+
 
 " ############################################################################ "
 " ###############     VIM插件：使用Vundle.vim 管理插件     ################### "
@@ -329,13 +334,13 @@ augroup go
   autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
   " :GoBuild and :GoTestCompile
-  autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+  autocmd FileType go nmap <Leader>b :<C-u>call <SID>build_go_files()<CR>
 
   " :GoTest
-  autocmd FileType go nmap <leader>t  <Plug>(go-test)
+  autocmd FileType go nmap <Leader>t  <Plug>(go-test)
 
   " :GoRun
-  autocmd FileType go nmap <leader>r  <Plug>(go-run)
+  autocmd FileType go nmap <Leader>r  <Plug>(go-run)
 
   " :GoDoc
   autocmd FileType go nmap <Leader>d <Plug>(go-doc)
@@ -373,3 +378,5 @@ function! s:build_go_files()
 endfunction
 
 
+" easy motion"
+map <Leader><Leader> <Plug>(easymotion-prefix)
