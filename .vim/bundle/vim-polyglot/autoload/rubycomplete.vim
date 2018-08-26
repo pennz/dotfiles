@@ -198,7 +198,7 @@ function! rubycomplete#Complete(findstart, base)
             if c =~ '\w'
                 continue
             elseif ! c =~ '\.'
-                idx = -1
+                let idx = -1
                 break
             else
                 break
@@ -261,7 +261,7 @@ class VimRubyCompletion
     nums.each do |x|
       ln = buf[x]
       begin
-        eval( "require %s" % $1 ) if /.*require\s*(.*)$/.match( ln )
+        eval( "require %s" % $1 ) if /.*require\s*(["'].*?["'])/.match( ln )
       rescue Exception
         #ignore?
       end
@@ -589,11 +589,13 @@ class VimRubyCompletion
 # {{{ main completion code
   def self.preload_rails
     a = VimRubyCompletion.new
-    require 'Thread'
-    Thread.new(a) do |b|
-      begin
-      b.load_rails
-      rescue
+    if VIM::evaluate("has('nvim')") == 0
+      require 'thread'
+      Thread.new(a) do |b|
+        begin
+        b.load_rails
+        rescue
+        end
       end
     end
     a.load_rails

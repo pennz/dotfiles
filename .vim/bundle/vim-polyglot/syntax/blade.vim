@@ -21,19 +21,46 @@ unlet! b:current_syntax
 syn case match
 syn clear htmlError
 
+if has('patch-7.4.1142')
+    syn iskeyword @,48-57,_,192-255,@-@,:
+else
+    setlocal iskeyword+=@-@
+endif
+
 syn region  bladeEcho       matchgroup=bladeDelimiter start="@\@<!{{" end="}}"  contains=@bladePhp,bladePhpParenBlock  containedin=ALLBUT,@bladeExempt keepend
 syn region  bladeEcho       matchgroup=bladeDelimiter start="{!!" end="!!}"  contains=@bladePhp,bladePhpParenBlock  containedin=ALLBUT,@bladeExempt keepend
 syn region  bladeComment    matchgroup=bladeDelimiter start="{{--" end="--}}"  contains=bladeTodo  containedin=ALLBUT,@bladeExempt keepend
 
-syn keyword bladeKeyword    @if @elseif @foreach @forelse @for @while @can @include @each @inject @extends @section @unless nextgroup=bladePhpParenBlock skipwhite containedin=ALLBUT,@bladeExempt
-syn keyword bladeKeyword    @else @endif @endunless @endfor @endforeach @empty @endforelse @endwhile @endcan @stop @append @endsection containedin=ALLBUT,@bladeExempt
+syn keyword bladeKeyword @if @elseif @foreach @forelse @for @while @can @cannot @elsecan @elsecannot @include
+    \ @includeIf @each @inject @extends @section @stack @push @unless @yield @parent @hasSection @break @continue
+    \ @unset @lang @choice @component @slot @prepend @json @isset @auth @guest @switch @case @includeFirst @empty
+    \ nextgroup=bladePhpParenBlock skipwhite containedin=ALLBUT,@bladeExempt
+
+syn keyword bladeKeyword @else @endif @endunless @endfor @endforeach @endforelse @endwhile @endcan
+    \ @endcannot @stop @append @endsection @endpush @show @overwrite @verbatim @endverbatim @endcomponent
+    \ @endslot @endprepend @endisset @endempty @endauth @endguest @endswitch
+    \ containedin=ALLBUT,@bladeExempt
+
+if exists('g:blade_custom_directives')
+    exe "syn keyword bladeKeyword @" . join(g:blade_custom_directives, ' @') . " nextgroup=bladePhpParenBlock skipwhite containedin=ALLBUT,@bladeExempt"
+endif
+if exists('g:blade_custom_directives_pairs')
+    exe "syn keyword bladeKeyword @" . join(keys(g:blade_custom_directives_pairs), ' @') . " nextgroup=bladePhpParenBlock skipwhite containedin=ALLBUT,@bladeExempt"
+    exe "syn keyword bladeKeyword @" . join(values(g:blade_custom_directives_pairs), ' @') . " containedin=ALLBUT,@bladeExempt"
+endif
+
+syn region  bladePhpRegion  matchgroup=bladeKeyword start="\<@php\>\s*(\@!" end="\<@endphp\>"  contains=@bladePhp  containedin=ALLBUT,@bladeExempt keepend
+syn match   bladeKeyword "@php\ze\s*(" nextgroup=bladePhpParenBlock skipwhite containedin=ALLBUT,@bladeExempt
 
 syn region  bladePhpParenBlock  matchgroup=bladeDelimiter start="\s*(" end=")" contains=@bladePhp,bladePhpParenBlock skipwhite contained
 
 syn cluster bladePhp contains=@phpClTop
-syn cluster bladeExempt contains=bladeComment,@htmlTop
+syn cluster bladeExempt contains=bladeComment,bladePhpRegion,bladePhpParenBlock,@htmlTop
 
-syn keyword bladeTodo todo fixme xxx  contained
+syn cluster htmlPreproc add=bladeEcho,bladeComment,bladePhpRegion
+
+syn case ignore
+syn keyword bladeTodo todo fixme xxx note  contained
 
 hi def link bladeDelimiter      PreProc
 hi def link bladeComment        Comment

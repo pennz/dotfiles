@@ -6,10 +6,10 @@ if !exists('g:polyglot_disabled') || index(g:polyglot_disabled, 'go') == -1
 "
 " compiler/go.vim: Vim compiler file for Go.
 
-if exists("current_compiler")
+if exists("g:current_compiler")
   finish
 endif
-let current_compiler = "go"
+let g:current_compiler = "go"
 
 if exists(":CompilerSet") != 2
   command -nargs=* CompilerSet setlocal <args>
@@ -18,9 +18,9 @@ endif
 let s:save_cpo = &cpo
 set cpo-=C
 if filereadable("makefile") || filereadable("Makefile")
-    CompilerSet makeprg=make
+  CompilerSet makeprg=make
 else
-    CompilerSet makeprg=go\ build
+  CompilerSet makeprg=go\ build
 endif
 
 " Define the patterns that will be recognized by QuickFix when parsing the
@@ -40,6 +40,6 @@ CompilerSet errorformat+=%-G%.%#                      " All lines not matching a
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-" vim:ts=4:sw=4:et
+" vim: sw=2 ts=2 et
 
 endif

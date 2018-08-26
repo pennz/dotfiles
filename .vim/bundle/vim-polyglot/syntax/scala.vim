@@ -34,7 +34,6 @@ function! s:ContainedGroup()
   endtry
 endfunction
 
-syn include @scalaHtml syntax/html.vim  " Doc comment HTML
 unlet! b:current_syntax
 
 syn case match
@@ -53,6 +52,13 @@ exe 'syn region scalaBlock start=/{/ end=/}/ contains=' . s:ContainedGroup() . '
 syn keyword scalaAkkaSpecialWord when goto using startWith initialize onTransition stay become unbecome
 hi link scalaAkkaSpecialWord PreProc
 
+syn keyword scalatestSpecialWord shouldBe
+syn match scalatestShouldDSLA /^\s\+\zsit should/
+syn match scalatestShouldDSLB /\<should\>/
+hi link scalatestSpecialWord PreProc
+hi link scalatestShouldDSLA PreProc
+hi link scalatestShouldDSLB PreProc
+
 syn match scalaSymbol /'[_A-Za-z0-9$]\+/
 hi link scalaSymbol Number
 
@@ -69,8 +75,9 @@ syn match scalaOperator "||"
 syn match scalaOperator "&&"
 hi link scalaOperator Special
 
-syn match scalaNameDefinition /\<[_A-Za-z0-9$]\+\>/ contained nextgroup=scalaPostNameDefinition
+syn match scalaNameDefinition /\<[_A-Za-z0-9$]\+\>/ contained nextgroup=scalaPostNameDefinition,scalaVariableDeclarationList
 syn match scalaNameDefinition /`[^`]\+`/ contained nextgroup=scalaPostNameDefinition
+syn match scalaVariableDeclarationList /\s*,\s*/ contained nextgroup=scalaNameDefinition
 syn match scalaPostNameDefinition /\_s*:\_s*/ contained nextgroup=scalaTypeDeclaration
 hi link scalaNameDefinition Function
 
@@ -95,9 +102,9 @@ syn match scalaTypeTypeDeclaration /(/ contained nextgroup=scalaTypeTypeExtensio
 syn match scalaTypeTypeDeclaration /\%(⇒\|=>\)\ze/ contained nextgroup=scalaTypeTypeDeclaration contains=scalaTypeTypeExtension skipwhite
 syn match scalaTypeTypeDeclaration /\<[_\.A-Za-z0-9$]\+\>/ contained nextgroup=scalaTypeTypeExtension,scalaTypeTypeEquals skipwhite
 syn match scalaTypeTypeEquals /=\ze[^>]/ contained nextgroup=scalaTypeTypePostDeclaration skipwhite
-syn match scalaTypeTypeExtension /)\?\_s*\zs\%(⇒\|=>\|<:\|:>\|=:=\|::\|#\)/ contained nextgroup=scalaTypeTypeDeclaration skipwhite
+syn match scalaTypeTypeExtension /)\?\_s*\zs\%(⇒\|=>\|<:\|:>\|=:=\|::\|#\)/ contained contains=scalaTypeOperator nextgroup=scalaTypeTypeDeclaration skipwhite
 syn match scalaTypeTypePostDeclaration /\<[_\.A-Za-z0-9$]\+\>/ contained nextgroup=scalaTypeTypePostExtension skipwhite
-syn match scalaTypeTypePostExtension /\%(⇒\|=>\|<:\|:>\|=:=\|::\)/ contained nextgroup=scalaTypeTypePostDeclaration skipwhite
+syn match scalaTypeTypePostExtension /\%(⇒\|=>\|<:\|:>\|=:=\|::\)/ contained contains=scalaTypeOperator nextgroup=scalaTypeTypePostDeclaration skipwhite
 hi link scalaTypeTypeDeclaration Type
 hi link scalaTypeTypeExtension Keyword
 hi link scalaTypeTypePostDeclaration Special
@@ -106,7 +113,7 @@ hi link scalaTypeTypePostExtension Keyword
 syn match scalaTypeDeclaration /(/ contained nextgroup=scalaTypeExtension contains=scalaRoundBrackets skipwhite
 syn match scalaTypeDeclaration /\%(⇒\|=>\)\ze/ contained nextgroup=scalaTypeDeclaration contains=scalaTypeExtension skipwhite
 syn match scalaTypeDeclaration /\<[_\.A-Za-z0-9$]\+\>/ contained nextgroup=scalaTypeExtension skipwhite
-syn match scalaTypeExtension /)\?\_s*\zs\%(⇒\|=>\|<:\|:>\|=:=\|::\|#\)/ contained nextgroup=scalaTypeDeclaration skipwhite
+syn match scalaTypeExtension /)\?\_s*\zs\%(⇒\|=>\|<:\|:>\|=:=\|::\|#\)/ contained contains=scalaTypeOperator nextgroup=scalaTypeDeclaration skipwhite
 hi link scalaTypeDeclaration Type
 hi link scalaTypeExtension Keyword
 hi link scalaTypePostExtension Keyword
@@ -115,17 +122,19 @@ syn match scalaTypeAnnotation /\%([_a-zA-Z0-9$\s]:\_s*\)\ze[_=(\.A-Za-z0-9$]\+/ 
 syn match scalaTypeAnnotation /)\_s*:\_s*\ze[_=(\.A-Za-z0-9$]\+/ skipwhite nextgroup=scalaTypeDeclaration
 hi link scalaTypeAnnotation Normal
 
-syn match scalaCaseFollowing /\<[_\.A-Za-z0-9$]\+\>/ contained
-syn match scalaCaseFollowing /`[^`]\+`/ contained
+syn match scalaCaseFollowing /\<[_\.A-Za-z0-9$]\+\>/ contained contains=scalaCapitalWord
+syn match scalaCaseFollowing /`[^`]\+`/ contained contains=scalaCapitalWord
 hi link scalaCaseFollowing Special
 
-syn keyword scalaKeywordModifier abstract override final lazy implicit implicitly private protected sealed null require super
+syn keyword scalaKeywordModifier abstract override final lazy implicit private protected sealed null super
+syn keyword scalaSpecialFunction implicitly require
 hi link scalaKeywordModifier Function
+hi link scalaSpecialFunction Function
 
 syn keyword scalaSpecial this true false ne eq
 syn keyword scalaSpecial new nextgroup=scalaInstanceDeclaration skipwhite
 syn match scalaSpecial "\%(=>\|⇒\|<-\|←\|->\|→\)"
-syn match scalaSpecial /`[^`]*`/  " Backtick literals
+syn match scalaSpecial /`[^`]\+`/  " Backtick literals
 hi link scalaSpecial PreProc
 
 syn keyword scalaExternal package import
@@ -179,10 +188,10 @@ hi link scalaTypeOperator Keyword
 hi link scalaTypeAnnotationParameter Function
 
 syn match scalaShebang "\%^#!.*" display
-syn region scalaMultilineComment start="/\*" end="\*/" contains=scalaMultilineComment,scalaDocLinks,scalaParameterAnnotation,scalaCommentAnnotation,scalaTodo,scalaCommentCodeBlock,@scalaHtml,@Spell keepend fold
+syn region scalaMultilineComment start="/\*" end="\*/" contains=scalaMultilineComment,scalaDocLinks,scalaParameterAnnotation,scalaCommentAnnotation,scalaTodo,scalaCommentCodeBlock,@Spell keepend fold
 syn match scalaCommentAnnotation "@[_A-Za-z0-9$]\+" contained
-syn match scalaParameterAnnotation "@param" nextgroup=scalaParamAnnotationValue skipwhite contained
-syn match scalaParamAnnotationValue /[`_A-Za-z0-9$]\+/ contained
+syn match scalaParameterAnnotation "\%(@tparam\|@param\|@see\)" nextgroup=scalaParamAnnotationValue skipwhite contained
+syn match scalaParamAnnotationValue /[.`_A-Za-z0-9$]\+/ contained
 syn region scalaDocLinks start="\[\[" end="\]\]" contained
 syn region scalaCommentCodeBlock matchgroup=Keyword start="{{{" end="}}}" contained
 syn match scalaTodo "\vTODO|FIXME|XXX" contained
@@ -192,7 +201,6 @@ hi link scalaDocLinks Function
 hi link scalaParameterAnnotation Function
 hi link scalaParamAnnotationValue Keyword
 hi link scalaCommentAnnotation Function
-hi link scalaCommentCodeBlockBrackets String
 hi link scalaCommentCodeBlock String
 hi link scalaTodo Todo
 

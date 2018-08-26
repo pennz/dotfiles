@@ -46,18 +46,11 @@ endif
 setlocal formatoptions-=t formatoptions+=croql
 
 setlocal include=^\\s*\\<\\(load\\>\\\|require\\>\\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
-setlocal includeexpr=substitute(substitute(v:fname,'::','/','g'),'\%(\.rb\)\=$','.rb','')
 setlocal suffixesadd=.rb
 
 if exists("&ofu") && has("ruby")
   setlocal omnifunc=rubycomplete#Complete
 endif
-
-" To activate, :set ballooneval
-if has('balloon_eval') && exists('+balloonexpr')
-  setlocal balloonexpr=RubyBalloonexpr()
-endif
-
 
 " TODO:
 "setlocal define=^\\s*def
@@ -71,26 +64,26 @@ endif
 
 function! s:query_path(root) abort
   let code = "print $:.join %q{,}"
-  if &shell =~# 'sh'
+  if &shell =~# 'sh' && empty(&shellxquote)
     let prefix = 'env PATH='.shellescape($PATH).' '
   else
     let prefix = ''
   endif
   if &shellxquote == "'"
-    let path_check = prefix.'ruby -e "' . code . '"'
+    let path_check = prefix.'ruby --disable-gems -e "' . code . '"'
   else
-    let path_check = prefix."ruby -e '" . code . "'"
+    let path_check = prefix."ruby --disable-gems -e '" . code . "'"
   endif
 
   let cd = haslocaldir() ? 'lcd' : 'cd'
-  let cwd = getcwd()
+  let cwd = fnameescape(getcwd())
   try
     exe cd fnameescape(a:root)
     let path = split(system(path_check),',')
-    exe cd fnameescape(cwd)
+    exe cd cwd
     return path
   finally
-    exe cd fnameescape(cwd)
+    exe cd cwd
   endtry
 endfunction
 
@@ -143,50 +136,60 @@ if (has("gui_win32") || has("gui_gtk")) && !exists("b:browsefilter")
                      \ "All Files (*.*)\t*.*\n"
 endif
 
-let b:undo_ftplugin = "setl fo< inc< inex< sua< def< com< cms< path< tags< kp<"
+let b:undo_ftplugin = "setl inc= sua= path= tags= fo< com< cms< kp="
       \."| unlet! b:browsefilter b:match_ignorecase b:match_words b:match_skip"
       \."| if exists('&ofu') && has('ruby') | setl ofu< | endif"
-      \."| if has('balloon_eval') && exists('+bexpr') | setl bexpr< | endif"
+
+if get(g:, 'ruby_recommended_style', 1)
+  setlocal shiftwidth=2 softtabstop=2 expandtab
+  let b:undo_ftplugin .= ' | setl sw< sts< et<'
+endif
+
+" To activate, :set ballooneval
+if exists('+balloonexpr') && get(g:, 'ruby_balloonexpr')
+  setlocal balloonexpr=RubyBalloonexpr()
+  let b:undo_ftplugin .= "| setl bexpr="
+endif
 
 function! s:map(mode, flags, map) abort
   let from = matchstr(a:map, '\S\+')
   if empty(mapcheck(from, a:mode))
-    exe a:mode.'map' '<buffer>'.(a:0 ? a:1 : '') a:map
+    exe a:mode.'map' '<buffer>' a:map
     let b:undo_ftplugin .= '|sil! '.a:mode.'unmap <buffer> '.from
   endif
 endfunction
 
-cmap <buffer><script><expr> <Plug><cword> substitute(RubyCursorIdentifier(),'^$',"\022\027",'')
+cmap <buffer><script><expr> <Plug><ctag> substitute(RubyCursorTag(),'^$',"\022\027",'')
 cmap <buffer><script><expr> <Plug><cfile> substitute(RubyCursorFile(),'^$',"\022\006",'')
-let b:undo_ftplugin .= "| sil! cunmap <buffer> <Plug><cword>| sil! cunmap <buffer> <Plug><cfile>"
+let b:undo_ftplugin .= "| sil! cunmap <buffer> <Plug><ctag>| sil! cunmap <buffer> <Plug><cfile>"
 
 if !exists("g:no_plugin_maps") && !exists("g:no_ruby_maps")
   nmap <buffer><script> <SID>:  :<C-U>
   nmap <buffer><script> <SID>c: :<C-U><C-R>=v:count ? v:count : ''<CR>
 
-  nnoremap <silent> <buffer> [m :<C-U>call <SID>searchsyn('\<def\>','rubyDefine','b','n')<CR>
-  nnoremap <silent> <buffer> ]m :<C-U>call <SID>searchsyn('\<def\>','rubyDefine','','n')<CR>
-  nnoremap <silent> <buffer> [M :<C-U>call <SID>searchsyn('\<end\>','rubyDefine','b','n')<CR>
-  nnoremap <silent> <buffer> ]M :<C-U>call <SID>searchsyn('\<end\>','rubyDefine','','n')<CR>
-  xnoremap <silent> <buffer> [m :<C-U>call <SID>searchsyn('\<def\>','rubyDefine','b','v')<CR>
-  xnoremap <silent> <buffer> ]m :<C-U>call <SID>searchsyn('\<def\>','rubyDefine','','v')<CR>
-  xnoremap <silent> <buffer> [M :<C-U>call <SID>searchsyn('\<end\>','rubyDefine','b','v')<CR>
-  xnoremap <silent> <buffer> ]M :<C-U>call <SID>searchsyn('\<end\>','rubyDefine','','v')<CR>
+  nnoremap <silent> <buffer> [m :<C-U>call <SID>searchsyn('\<def\>',['rubyDefine'],'b','n')<CR>
+  nnoremap <silent> <buffer> ]m :<C-U>call <SID>searchsyn('\<def\>',['rubyDefine'],'','n')<CR>
+  nnoremap <silent> <buffer> [M :<C-U>call <SID>searchsyn('\<end\>',['rubyDefine'],'b','n')<CR>
+  nnoremap <silent> <buffer> ]M :<C-U>call <SID>searchsyn('\<end\>',['rubyDefine'],'','n')<CR>
+  xnoremap <silent> <buffer> [m :<C-U>call <SID>searchsyn('\<def\>',['rubyDefine'],'b','v')<CR>
+  xnoremap <silent> <buffer> ]m :<C-U>call <SID>searchsyn('\<def\>',['rubyDefine'],'','v')<CR>
+  xnoremap <silent> <buffer> [M :<C-U>call <SID>searchsyn('\<end\>',['rubyDefine'],'b','v')<CR>
+  xnoremap <silent> <buffer> ]M :<C-U>call <SID>searchsyn('\<end\>',['rubyDefine'],'','v')<CR>
 
-  nnoremap <silent> <buffer> [[ :<C-U>call <SID>searchsyn('\<\%(class\<Bar>module\)\>','rubyModule\<Bar>rubyClass','b','n')<CR>
-  nnoremap <silent> <buffer> ]] :<C-U>call <SID>searchsyn('\<\%(class\<Bar>module\)\>','rubyModule\<Bar>rubyClass','','n')<CR>
-  nnoremap <silent> <buffer> [] :<C-U>call <SID>searchsyn('\<end\>','rubyModule\<Bar>rubyClass','b','n')<CR>
-  nnoremap <silent> <buffer> ][ :<C-U>call <SID>searchsyn('\<end\>','rubyModule\<Bar>rubyClass','','n')<CR>
-  xnoremap <silent> <buffer> [[ :<C-U>call <SID>searchsyn('\<\%(class\<Bar>module\)\>','rubyModule\<Bar>rubyClass','b','v')<CR>
-  xnoremap <silent> <buffer> ]] :<C-U>call <SID>searchsyn('\<\%(class\<Bar>module\)\>','rubyModule\<Bar>rubyClass','','v')<CR>
-  xnoremap <silent> <buffer> [] :<C-U>call <SID>searchsyn('\<end\>','rubyModule\<Bar>rubyClass','b','v')<CR>
-  xnoremap <silent> <buffer> ][ :<C-U>call <SID>searchsyn('\<end\>','rubyModule\<Bar>rubyClass','','v')<CR>
+  nnoremap <silent> <buffer> [[ :<C-U>call <SID>searchsyn('\<\%(class\<Bar>module\)\>',['rubyModule','rubyClass'],'b','n')<CR>
+  nnoremap <silent> <buffer> ]] :<C-U>call <SID>searchsyn('\<\%(class\<Bar>module\)\>',['rubyModule','rubyClass'],'','n')<CR>
+  nnoremap <silent> <buffer> [] :<C-U>call <SID>searchsyn('\<end\>',['rubyModule','rubyClass'],'b','n')<CR>
+  nnoremap <silent> <buffer> ][ :<C-U>call <SID>searchsyn('\<end\>',['rubyModule','rubyClass'],'','n')<CR>
+  xnoremap <silent> <buffer> [[ :<C-U>call <SID>searchsyn('\<\%(class\<Bar>module\)\>',['rubyModule','rubyClass'],'b','v')<CR>
+  xnoremap <silent> <buffer> ]] :<C-U>call <SID>searchsyn('\<\%(class\<Bar>module\)\>',['rubyModule','rubyClass'],'','v')<CR>
+  xnoremap <silent> <buffer> [] :<C-U>call <SID>searchsyn('\<end\>',['rubyModule','rubyClass'],'b','v')<CR>
+  xnoremap <silent> <buffer> ][ :<C-U>call <SID>searchsyn('\<end\>',['rubyModule','rubyClass'],'','v')<CR>
 
   let b:undo_ftplugin = b:undo_ftplugin
         \."| sil! exe 'unmap <buffer> [[' | sil! exe 'unmap <buffer> ]]' | sil! exe 'unmap <buffer> []' | sil! exe 'unmap <buffer> ]['"
         \."| sil! exe 'unmap <buffer> [m' | sil! exe 'unmap <buffer> ]m' | sil! exe 'unmap <buffer> [M' | sil! exe 'unmap <buffer> ]M'"
 
-  if maparg('im','n') == ''
+  if maparg('im','x') == '' && maparg('im','o') == '' && maparg('am','x') == '' && maparg('am','o') == ''
     onoremap <silent> <buffer> im :<C-U>call <SID>wrap_i('[m',']M')<CR>
     onoremap <silent> <buffer> am :<C-U>call <SID>wrap_a('[m',']M')<CR>
     xnoremap <silent> <buffer> im :<C-U>call <SID>wrap_i('[m',']M')<CR>
@@ -196,7 +199,7 @@ if !exists("g:no_plugin_maps") && !exists("g:no_ruby_maps")
           \."| sil! exe 'xunmap <buffer> im' | sil! exe 'xunmap <buffer> am'"
   endif
 
-  if maparg('iM','n') == ''
+  if maparg('iM','x') == '' && maparg('iM','o') == '' && maparg('aM','x') == '' && maparg('aM','o') == ''
     onoremap <silent> <buffer> iM :<C-U>call <SID>wrap_i('[[','][')<CR>
     onoremap <silent> <buffer> aM :<C-U>call <SID>wrap_a('[[','][')<CR>
     xnoremap <silent> <buffer> iM :<C-U>call <SID>wrap_i('[[','][')<CR>
@@ -206,19 +209,18 @@ if !exists("g:no_plugin_maps") && !exists("g:no_ruby_maps")
           \."| sil! exe 'xunmap <buffer> iM' | sil! exe 'xunmap <buffer> aM'"
   endif
 
-  call s:map('c', '', '<C-R><C-W> <Plug><cword>')
   call s:map('c', '', '<C-R><C-F> <Plug><cfile>')
 
   cmap <buffer><script><expr> <SID>tagzv &foldopen =~# 'tag' ? '<Bar>norm! zv' : ''
-  call s:map('n', '<silent>', '<C-]>       <SID>:exe  v:count1."tag <Plug><cword>"<SID>tagzv<CR>')
-  call s:map('n', '<silent>', 'g<C-]>      <SID>:exe         "tjump <Plug><cword>"<SID>tagzv<CR>')
-  call s:map('n', '<silent>', 'g]          <SID>:exe       "tselect <Plug><cword>"<SID>tagzv<CR>')
-  call s:map('n', '<silent>', '<C-W>]      <SID>:exe v:count1."stag <Plug><cword>"<SID>tagzv<CR>')
-  call s:map('n', '<silent>', '<C-W><C-]>  <SID>:exe v:count1."stag <Plug><cword>"<SID>tagzv<CR>')
-  call s:map('n', '<silent>', '<C-W>g<C-]> <SID>:exe        "stjump <Plug><cword>"<SID>tagzv<CR>')
-  call s:map('n', '<silent>', '<C-W>g]     <SID>:exe      "stselect <Plug><cword>"<SID>tagzv<CR>')
-  call s:map('n', '<silent>', '<C-W>}      <SID>:exe v:count1."ptag <Plug><cword>"<CR>')
-  call s:map('n', '<silent>', '<C-W>g}     <SID>:exe        "ptjump <Plug><cword>"<CR>')
+  call s:map('n', '<silent>', '<C-]>       <SID>:exe  v:count1."tag <Plug><ctag>"<SID>tagzv<CR>')
+  call s:map('n', '<silent>', 'g<C-]>      <SID>:exe         "tjump <Plug><ctag>"<SID>tagzv<CR>')
+  call s:map('n', '<silent>', 'g]          <SID>:exe       "tselect <Plug><ctag>"<SID>tagzv<CR>')
+  call s:map('n', '<silent>', '<C-W>]      <SID>:exe v:count1."stag <Plug><ctag>"<SID>tagzv<CR>')
+  call s:map('n', '<silent>', '<C-W><C-]>  <SID>:exe v:count1."stag <Plug><ctag>"<SID>tagzv<CR>')
+  call s:map('n', '<silent>', '<C-W>g<C-]> <SID>:exe        "stjump <Plug><ctag>"<SID>tagzv<CR>')
+  call s:map('n', '<silent>', '<C-W>g]     <SID>:exe      "stselect <Plug><ctag>"<SID>tagzv<CR>')
+  call s:map('n', '<silent>', '<C-W>}      <SID>:exe v:count1."ptag <Plug><ctag>"<CR>')
+  call s:map('n', '<silent>', '<C-W>g}     <SID>:exe        "ptjump <Plug><ctag>"<CR>')
 
   call s:map('n', '<silent>', 'gf           <SID>c:find <Plug><cfile><CR>')
   call s:map('n', '<silent>', '<C-W>f      <SID>c:sfind <Plug><cfile><CR>')
@@ -290,12 +292,13 @@ function! s:searchsyn(pattern, syn, flags, mode) abort
     norm! gv
   endif
   let i = 0
+  call map(a:syn, 'hlID(v:val)')
   while i < cnt
     let i = i + 1
     let line = line('.')
     let col  = col('.')
     let pos = search(a:pattern,'W'.a:flags)
-    while pos != 0 && s:synname() !~# a:syn
+    while pos != 0 && index(a:syn, s:synid()) < 0
       let pos = search(a:pattern,'W'.a:flags)
     endwhile
     if pos == 0
@@ -305,8 +308,8 @@ function! s:searchsyn(pattern, syn, flags, mode) abort
   endwhile
 endfunction
 
-function! s:synname() abort
-  return synIDattr(synID(line('.'),col('.'),0),'name')
+function! s:synid() abort
+  return synID(line('.'),col('.'),0)
 endfunction
 
 function! s:wrap_i(back,forward) abort
@@ -351,6 +354,10 @@ function! RubyCursorIdentifier() abort
   return stripped == '' ? expand("<cword>") : stripped
 endfunction
 
+function! RubyCursorTag() abort
+  return substitute(RubyCursorIdentifier(), '^[$@]*', '', '')
+endfunction
+
 function! RubyCursorFile() abort
   let isfname = &isfname
   try
@@ -362,8 +369,9 @@ function! RubyCursorFile() abort
   let pre = matchstr(strpart(getline('.'), 0, col('.')-1), '.*\f\@<!')
   let post = matchstr(strpart(getline('.'), col('.')), '\f\@!.*')
   let ext = getline('.') =~# '^\s*\%(require\%(_relative\)\=\|autoload\)\>' && cfile !~# '\.rb$' ? '.rb' : ''
-  if s:synname() ==# 'rubyConstant'
+  if s:synid() ==# hlID('rubyConstant')
     let cfile = substitute(cfile,'\.\w\+[?!=]\=$','','')
+    let cfile = substitute(cfile,'^::','','')
     let cfile = substitute(cfile,'::','/','g')
     let cfile = substitute(cfile,'\(\u\+\)\(\u\l\)','\1_\2', 'g')
     let cfile = substitute(cfile,'\(\l\|\d\)\(\u\)','\1_\2', 'g')

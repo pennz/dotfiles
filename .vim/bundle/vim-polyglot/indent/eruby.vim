@@ -6,7 +6,7 @@ if !exists('g:polyglot_disabled') || index(g:polyglot_disabled, 'ruby') == -1
 " URL:			https://github.com/vim-ruby/vim-ruby
 " Release Coordinator:	Doug Kearns <dougkearns@gmail.com>
 
-if exists("b:did_indent")
+if get(b:, 'did_indent') =~# '\<eruby\>'
   finish
 endif
 
@@ -14,12 +14,14 @@ runtime! indent/ruby.vim
 unlet! b:did_indent
 setlocal indentexpr=
 
-if exists("b:eruby_subtype")
-  exe "runtime! indent/".b:eruby_subtype.".vim"
-else
-  runtime! indent/html.vim
+if &filetype =~# '^eruby\>'
+  if exists("b:eruby_subtype") && b:eruby_subtype != '' && b:eruby_subtype !=# 'eruby'
+    exe "runtime! indent/".b:eruby_subtype.".vim"
+  else
+    runtime! indent/html.vim
+  endif
 endif
-unlet! b:did_indent
+let b:did_indent = get(b:, 'did_indent', 1) . '.eruby'
 
 " Force HTML indent to not keep state.
 let b:html_indent_usestate = 0
@@ -33,8 +35,6 @@ if &l:indentexpr == ''
 endif
 let b:eruby_subtype_indentexpr = &l:indentexpr
 
-let b:did_indent = 1
-
 setlocal indentexpr=GetErubyIndent()
 setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
 
@@ -42,6 +42,10 @@ setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescu
 if exists("*GetErubyIndent")
   finish
 endif
+
+" this file uses line continuations
+let s:cpo_sav = &cpo
+set cpo&vim
 
 function! GetErubyIndent(...)
   " The value of a single shift-width
@@ -93,6 +97,7 @@ function! GetErubyIndent(...)
     let ind = ind + sw
   endif
   if line !~# '^\s*<%' && line =~# '%>\s*$' && line !~# '^\s*end\>'
+	\ && synID(v:lnum, match(cline, '\S') + 1, 1) != hlID('htmlEndTag')
     let ind = ind - sw
   endif
   if cline =~# '^\s*[-=]\=%>\s*$'
@@ -100,6 +105,9 @@ function! GetErubyIndent(...)
   endif
   return ind
 endfunction
+
+let &cpo = s:cpo_sav
+unlet! s:cpo_sav
 
 " vim:set sw=2 sts=2 ts=8 noet:
 
