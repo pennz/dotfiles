@@ -1,21 +1,22 @@
-# figure out what machine I'm in right now
-if [ "$(cat ~/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+#!/bin/bash
+
+if [ "$(cat $HOME/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
 then 
 		export MACHINE_NAME="D"; 
 fi
 
 
-if [ "$(cat ~/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+if [ "$(cat $HOME/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
 then 
 		echo "eq" ; 
 fi
 
-if [ "$(cat ~/.MUID)" = aca16920583e42bdcf5fc70618f55b6a ]
+if [ "$(cat $HOME/.MUID)" = aca16920583e42bdcf5fc70618f55b6a ]
 then 
 		export MACHINE_NAME="M"; 
 fi
 
-if [ "$(cat ~/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ]; 
+if [ "$(cat $HOME/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
 then 
 		echo "eq" ; 
 fi
@@ -31,20 +32,20 @@ fi
 # disable CTRL-D terminating terminal
 set -o ignoreeof
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+    source $HOME/.bash_aliases
 fi
 
-if [ -f ~/.bash_customed ]; then
-    . ~/.bash_customed
+if [ -f $HOME/.bash_customed ]; then
+    . $HOME/.bash_customed
 fi
 
 # fzf, fuzzy search
-[ -f ~/.fzf.bash ] && [ -n "$BASH_VERSION" ] && source ~/.fzf.bash
-[ -f ~/.fzf.zsh ] && [ -n "$ZSH_VERSION" ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.bash ] && [ -n "$BASH_VERSION" ] && source $HOME/.fzf.bash
+[ -f $HOME/.fzf.zsh ] && [ -n "$ZSH_VERSION" ] && source $HOME/.fzf.zsh
 
 # fuck 
-command -v fuck >/dev/null && eval $(thefuck --alias)
+command -v fuck >/dev/null && eval "$(thefuck --alias)"
 
 if [ "x$MACHINE_NAME" = "xD" ]
 then

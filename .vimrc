@@ -54,6 +54,18 @@ autocmd BufReadPost *
 runtime! ftplugin/man.vim
 " ### }}} VIM 特性配置结束
 
+" Show byte offset 
+set statusline+=%o
+
+" writes the content of the file automatically if you call :make
+set autowrite 
+
+call plug#begin('~/.vim/plugged')
+Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'SirVer/ultisnips'
+call plug#end()
+
 " ############################################################################ "
 " ###############     VIM插件：使用Vundle.vim 管理插件     ################### "
 " ############################################################################ "
@@ -89,9 +101,9 @@ Plugin 'taglist.vim'
 	let Tlist_Ctags_Cmd='ctags'
 	let Tlist_Exit_OnlyWindow=1
 Plugin 'scrooloose/syntastic'
-	set statusline+=%#warningmsg#
-	set statusline+=%{SyntasticStatuslineFlag()}
-	set statusline+=%*
+        "set statusline+=%#warningmsg#
+	"set statusline+=%{SyntasticStatuslineFlag()}
+	"set statusline+=%*
 	let g:syntastic_error_symbol='✗'
 	let g:syntastic_warning_symbol='⚠'
 	let g:syntastic_check_on_open=0
@@ -195,12 +207,14 @@ if has('autocmd')
 	au FileType sh setlocal tabstop=4
 	au BufEnter /usr/include/* setf c
 	au BufEnter /usr/* call GnuIndent()
+	"autocmd BufEnter * silent! lcd %:p:h
 endif
 
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Show_Menu=1
 let Tlist_File_Fold_Auto_Close=1
+
 
 if has("cscope")
 	set csprg=cscope
@@ -224,7 +238,7 @@ if has("cscope")
 	nmap <Leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 	nmap <Leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 	nmap <Leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-	nmap <Leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+	" nmap <Leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
 	nmap <Leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
 	nmap <Leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 	nmap <Leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
@@ -261,9 +275,101 @@ if has("cscope")
 	nmap <Leader>vd
 	    \:vert scs find d <C-R>=expand("<cword>")<CR><CR>
 endif
+
 set mouse=""
 ab csf cs find
 ab csfg cs find g
 ab csfc cs find c
 ab csfs cs find s
 ab csft cs find t
+
+
+""" other mappings
+" Set leader shortcut to a comma ','. By default it's the backslash
+let mapleader = ","
+
+" Jump to next error with Ctrl-n and previous error with Ctrl-m. Close the
+" quickfix window with <leader>a
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+
+"""""""""""""""""""""
+"      Plugins      "
+"""""""""""""""""""""
+
+" vim-go
+let g:go_fmt_command = "goimports"
+let g:go_autodetect_gopath = 1
+let g:go_list_type = "quickfix"
+
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_generate_tags = 1
+
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "5s"
+
+let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1
+
+let g:go_decls_includes = "func,type"
+" Open :GoDeclsDir with ctrl-g
+nmap <C-g> :GoDecls<cr>
+nmap <C-G> :GoDeclsDir<cr>
+imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
+
+augroup go
+  autocmd!
+
+  " Show by default 4 spaces for a tab
+  autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+
+  " :GoBuild and :GoTestCompile
+  autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+
+  " :GoTest
+  autocmd FileType go nmap <leader>t  <Plug>(go-test)
+
+  " :GoRun
+  autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+  " :GoDoc
+  autocmd FileType go nmap <Leader>d <Plug>(go-doc)
+
+  " :GoCoverageToggle
+  autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+
+  " :GoInfo
+  autocmd FileType go nmap <Leader>i <Plug>(go-info)
+
+  " :GoMetaLinter
+  autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
+
+  " :GoDef but opens in a vertical split
+  autocmd FileType go nmap <Leader>v <Plug>(go-def-vertical)
+  " :GoDef but opens in a horizontal split
+  autocmd FileType go nmap <Leader>s <Plug>(go-def-split)
+
+  " :GoAlternate  commands :A, :AV, :AS and :AT
+  autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+  autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+  autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+  autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+augroup END
+
+" build_go_files is a custom function that builds or compiles the test file.
+" It calls :GoBuild if its a Go file, or :GoTestCompile if it's a test file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+
