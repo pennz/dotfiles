@@ -12,10 +12,12 @@ set number				" 显示行号
 "set relativenumber			" 显示相对（当前光标所在行）行号而不是绝对行号
 set hlsearch				" 高亮搜索结果
 set incsearch				" 输入搜索内容时就同步显示搜索结果
-"set ignorecase				" 搜索时大小写不敏感
+set ignorecase				" 搜索时大小写不敏感
+set smartcase
 "set nowrap				" 长度超过窗口宽度不要换行显示
 "set list				" 让VIM显示空格、tab、换行等不可见字符
 "set listchars=nbsp:¬,trail:·,tab:»	" 设置VIM把空格、换行、tab显示为什么字符
+set gcr=a:blinkon0
 set scrolloff=3				" 光标移动到顶部和底部时自动保持3行距离
 set showmatch				" 显示自动匹配到的对应括号
 set showmode				" 让VIM在窗口最低下显示当前模式，如--INSERT--等
@@ -24,36 +26,131 @@ set nobackup				" 保存文件时，不要创建备份文件
 set textwidth=0				" 一行内输入字符达到多少时自动换行，0表示不限制
 set history=500				" 记录的历史命令个数
 
-"set shiftwidth=4			" 设定VIM的自动缩进，以及>和<命令时移动的空白长度
-"set softtabstop=4			" 按下tab时，插入的是空格和tab制表符的混合，具体方式参见:help softtabstop
-"set tabstop=4				" 设定tab长度为4字节
-"set expandtab				" 键入tab时，自动用空格替换tab，空格长度等于tabstop的设置
+set shiftwidth=4			" 设定VIM的自动缩进，以及>和<命令时移动的空白长度
+set softtabstop=0			" 按下tab时，插入的是空格和tab制表符的混合，具体方式参见:help softtabstop
+set tabstop=4				" 设定tab长度为4字节
+set expandtab				" 键入tab时，自动用空格替换tab，空格长度等于tabstop的设置
 
 set backspace=indent,eol,start		" 退格键（backspace）默认工作vi模式下。该设置可以让退格键工作在大家熟悉的方式下。
 					" indent: 如果设置了:set indent等自动缩进，按退格键会删掉这个缩进。
 					" eol: 如果插入模式下在行开头，设置了eol后按下退格键会合并到上一行。
 					" start: 若不设置为start，则在回退时，只能回退删除自己新添加的字符，原来已经存在的字符无法回退删除。
 " set pastetoggle=<F3>			" 按下F3键可以切换粘贴插入模式[Insert (paste)]和普通插入模式。
-set viminfo='100,f1,<500
 
-"map <C-H> <C-W>h
-"map <C-J> <C-W>j
-"map <C-K> <C-W>k
-"map <C-L> <C-W>l
-cmap w!! w !sudo tee >/dev/null %
+" 开启语法高亮显示，终端支持256色。
+syntax on
+set t_Co=256
+
+let no_buffers_menu=1
+set mousemodel=extend
+" 设置色彩空间为暗色调，使用solarized配色方案
+set background=dark
+
+" the following is for myself
+set colorcolumn=72
+set listchars=eol:\$,tab:>-
+set nolist
+
+set title
+set titleold="Terminal"
+set titlestring=%F
+
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+set viminfo='100,f1,<500
+set fileformats=unix,dos,mac
+
+if exists('$SHELL')
+    set shell=$SHELL
+else
+    set shell=/bin/sh
+endif
+
+" session management
+let g:session_directory = "~/.config/nvim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+let g:session_command_aliases = 1
+
+cmap w!! w !sudo tee > /dev/null %
+
+"*****************************************************************************
+"" Abbreviations
+"*****************************************************************************
+"" no one is really happy until you have this shortcuts
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Qall qall
+cnoreabbrev Qa! qa!
+cnoreabbrev Qa qa
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
 
 " 不重启VIM，让配置文件保存后立即生效
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+" autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
-" 打开文件后，自动跳转到上一次退出时所在行
-autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g'\"" |
-    \ endif
+"*****************************************************************************
+"" Functions
+"*****************************************************************************
+if !exists('*s:setupWrapping')
+  function s:setupWrapping()
+    set wrap
+    set wm=2
+    set textwidth=79
+  endfunction
+endif
 
-" auto deoplete
-autocmd VimEnter * UpdateRemotePlugins
+"*****************************************************************************
+"" Autocmd Rules
+"*****************************************************************************
+"" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
+augroup vimrc-sync-fromstart
+  autocmd!
+  autocmd BufEnter * :syntax sync maxlines=200
+augroup END
 
+"" Remember cursor position
+augroup vimrc-remember-cursor-position
+  autocmd!
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+augroup END
+
+"" txt
+augroup vimrc-wrapping
+  autocmd!
+  autocmd BufRead,BufNewFile *.txt call s:setupWrapping()
+augroup END
+
+"" make/cmake
+augroup vimrc-make-cmake
+  autocmd!
+  autocmd FileType make setlocal noexpandtab
+  autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
+augroup END
+
+if has('autocmd')
+	function! GnuIndent()
+		setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
+		setlocal shiftwidth=2
+		setlocal tabstop=8
+	endfunction
+
+	if $VIM_HATE_SPACE_ERRORS != '0'
+		let c_space_errors=1
+	endif
+
+	au FileType c,cpp setlocal cinoptions=:0,g0,(0,w1 shiftwidth=4 tabstop=4
+	au FileType diff setlocal shiftwidth=4 tabstop=4
+	au FileType sh setlocal tabstop=4
+	au BufEnter /usr/include/* setf c
+	au BufEnter /usr/* call GnuIndent()
+	"autocmd BufEnter * silent! lcd %:p:h
+endif
+set autoread
 " 启用VIM内置的man page reviewer，可以用命令`:Man XXX`查看手册页
 runtime! ftplugin/man.vim
 " ### }}} VIM 特性配置结束
@@ -106,9 +203,9 @@ Plugin 'taglist.vim'
 	let Tlist_Ctags_Cmd='ctags'
 	let Tlist_Exit_OnlyWindow=1
 Plugin 'scrooloose/syntastic'
-        "set statusline+=%#warningmsg#
-	"set statusline+=%{SyntasticStatuslineFlag()}
-	"set statusline+=%*
+    set statusline+=%#warningmsg#
+	set statusline+=%{SyntasticStatuslineFlag()}
+	set statusline+=%*
 	let g:syntastic_error_symbol='✗'
 	let g:syntastic_warning_symbol='⚠'
 	let g:syntastic_check_on_open=0
@@ -153,10 +250,18 @@ Plugin 'ctrlp.vim'
 	let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
+    if exists("*fugitive#statusline")
+      set statusline+=%{fugitive#statusline()}
+    endif
 Plugin 'lilydjwg/colorizer'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'fatih/vim-go'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    " auto deoplete
+    autocmd VimEnter * UpdateRemotePlugins
 	let g:deoplete#enable_at_startup = 1
+
+Plugin 'zchee/deoplete-go', { 'do': 'make' }
 
 " 安装了Vundle后，首次自动安装插件
 if iCanHazVundle == 0
@@ -171,51 +276,33 @@ call vundle#end()
 filetype plugin indent on
 " }}} End of Vundle Setting
 
-" 开启语法高亮显示，终端支持256色。
-syntax on
-set t_Co=256
-" 设置色彩空间为暗色调，使用solarized配色方案
-set background=dark
-colorscheme torte
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
-" the following is for myself
-set colorcolumn=72
-set listchars=eol:\$,tab:>-
-set nolist
 " key mappings                           
- nmap <F3> :set list<CR>
- nmap <Leader><F3> :set nolist<CR>
- " Key mapping to stop the search highlight
- nmap <silent> <F4>      :nohlsearch<CR>
- imap <silent> <F4> <C-O>:nohlsearch<CR>
- " Key mapping for the taglist.vim plugin
+nmap <F3> :set list<CR>
+nmap <Leader><F3> :set nolist<CR>
+" Key mapping to stop the search highlight
+nmap <silent> <F4>      :nohlsearch<CR>
+imap <silent> <F4> <C-O>:nohlsearch<CR>
+" Key mapping for the taglist.vim plugin
 " nmap <F9>      :Tlist<CR>
 " imap <F9> <C-O>:Tlist<CR>
- " Key mappings for the quickfix commands
- nmap <F11> :cn<CR>
- nmap <F12> :cp<CR>
+" Key mappings for the quickfix commands
+nmap <F11> :cn<CR>
+nmap <F12> :cp<CR>
 
 " Find match name in Project
 nmap <F6> ebye<C-W>t\g<C-R>0<CR><C-L>
 
-if has('autocmd')
-	function! GnuIndent()
-		setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
-		setlocal shiftwidth=2
-		setlocal tabstop=8
-	endfunction
+"" Switching windows
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
 
-	if $VIM_HATE_SPACE_ERRORS != '0'
-		let c_space_errors=1
-	endif
-
-	au FileType c,cpp setlocal cinoptions=:0,g0,(0,w1 shiftwidth=4 tabstop=4
-	au FileType diff setlocal shiftwidth=4 tabstop=4
-	au FileType sh setlocal tabstop=4
-	au BufEnter /usr/include/* setf c
-	au BufEnter /usr/* call GnuIndent()
-	"autocmd BufEnter * silent! lcd %:p:h
-endif
 
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
@@ -303,11 +390,30 @@ map <C-m> :cprevious<CR>
 """""""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
+" deoplete-go
+" neocomplete like
+set completeopt+=noinsert
+" deoplete.nvim recommend
+set completeopt+=noselect
+
+" Path to python interpreter for neovim
+let g:python3_host_prog  = '/Users/vincent/bin/anaconda3/bin/python'
+" Skip the check of neovim module
+let g:python3_host_skip_check = 1
+
+" Run deoplete.nvim automatically
+let g:deoplete#enable_at_startup = 1
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = '/Users/vincent/works/go/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 " vim-go
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
 let g:go_list_type = "quickfix"
+let g:go_fmt_fail_silently = 1
+let g:syntastic_go_checkers = ['golint', 'govet']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -315,6 +421,8 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
 
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
@@ -333,7 +441,7 @@ augroup go
   autocmd!
 
   " Show by default 4 spaces for a tab
-  autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+  autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
   " :GoBuild and :GoTestCompile
   autocmd FileType go nmap <Leader>b :<C-u>call <SID>build_go_files()<CR>
@@ -368,6 +476,14 @@ augroup go
   autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 augroup END
 
+" python
+" vim-python
+augroup vimrc-python
+  autocmd!
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+      \ formatoptions+=croq softtabstop=4
+      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+augroup END
 " build_go_files is a custom function that builds or compiles the test file.
 " It calls :GoBuild if its a Go file, or :GoTestCompile if it's a test file
 function! s:build_go_files()
@@ -385,3 +501,15 @@ map <Leader><Leader> <Plug>(easymotion-prefix)
 " others...
 inoremap jk <ESC>
 
+"" Vmap for maintain Visual Mode after shifting > and <
+vmap < <gv
+vmap > >gv
+
+"" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+"" Open current line on GitHub
+nnoremap <Leader>o :.Gbrowse<CR>
+
+colorscheme molokai
