@@ -142,7 +142,6 @@ if has('autocmd')
 	if $VIM_HATE_SPACE_ERRORS != '0'
 		let c_space_errors=1
 	endif
-
 	au FileType c,cpp setlocal cinoptions=:0,g0,(0,w1 shiftwidth=4 tabstop=4
 	au FileType diff setlocal shiftwidth=4 tabstop=4
 	au FileType sh setlocal tabstop=4
@@ -161,13 +160,6 @@ set statusline+=%o
 " writes the content of the file automatically if you call :make
 set autowrite 
 
-call plug#begin('~/.vim/plugged')
-Plug 'fatih/vim-go', { 'tag': '*' }
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'SirVer/ultisnips'
-call plug#end()
-
-
 " ############################################################################ "
 " ###############     VIM插件：使用Vundle.vim 管理插件     ################### "
 " ############################################################################ "
@@ -177,32 +169,165 @@ set nocompatible
 filetype off
 
 " refer to http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
-let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
-if !filereadable(vundle_readme)
-    echo "Installing Vundle..."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle/
-    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    let iCanHazVundle=0
+"let iCanHazVundle=1
+"let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
+"if !filereadable(vundle_readme)
+"    echo "Installing Vundle..."
+"    echo ""
+"    silent !mkdir -p ~/.vim/bundle/
+"    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"    let iCanHazVundle=0
+"endif
+"
+"" 设置包括vundle和初始化相关的runtime path
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin('~/.vim/bundle/')
+"
+"" Vundle必须：让vundle管理插件版本
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'nerdtree-ack'
+"Plugin 'VundleVim/Vundle.vim'
+"
+"Plugin 'altercation/vim-colors-solarized'
+"	let g:solarized_termcolors=256
+"Plugin 'chriskempson/vim-tomorrow-theme'
+"Plugin 'tomasr/molokai'
+"Plugin 'taglist.vim'
+"	map <F2> :silent! Tlist<CR>
+"	let Tlist_Ctags_Cmd='ctags'
+"	let Tlist_Exit_OnlyWindow=1
+"Plugin 'scrooloose/syntastic'
+"        "set statusline+=%#warningmsg#
+"	"set statusline+=%{SyntasticStatuslineFlag()}
+"	"set statusline+=%*
+"	let g:syntastic_error_symbol='✗'
+"	let g:syntastic_warning_symbol='⚠'
+"	let g:syntastic_check_on_open=0
+"	let g:syntastic_check_on_wq=1
+"	let g:syntastic_auto_loc_list=1
+"Plugin 'EasyMotion'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-airline/vim-airline'
+"	set noshowmode
+"	set laststatus=2
+"	let g:airline_theme='powerlineish'
+"	let g:airline_powerline_fonts = 1
+"	let g:airline_detect_whitespace = 1
+"	let g:airline#extensions#tabline#enabled = 1
+"	let g:airline#extensions#hunks#non_zero_only = 1
+"
+"	let g:airline_powerline_fonts = 1
+"
+"	if !exists('g:airline_symbols')
+"	    let g:airline_symbols = {}
+"	endif
+"	let g:airline_left_sep = "\ua0"
+"	let g:airline_left_alt_sep = "\ua0"
+"	let g:airline_right_sep = "\ua0"
+"	let g:airline_right_alt_sep = "\ua0"
+"	let g:airline_symbols.maxlinenr = '㏑'
+"	"let g:airline_symbols.linenr = '␊'
+"	let g:airline_symbols.linenr = '␤'
+"	"let g:airline_symbols.linenr = '¶'
+"	let g:airline_symbols.branch = '⎇'
+"	let g:airline_symbols.paste = 'ρ'
+"	"let g:airline_symbols.paste = 'Þ'
+"	"let g:airline_symbols.paste = '∥'
+"	let g:airline_symbols.whitespace = 'Ξ'
+"	let g:airline_symbols.space = "\ua0"
+"	let g:airline_symbols.spell = 'Ꞩ'
+"	let g:airline_symbols.notexists = '∄'
+"	let g:airline_symbols.readonly = "\ua0"
+"
+"Plugin 'ctrlp.vim'
+"	let g:ctrlp_follow_symlinks=1
+"	let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
+"Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'lilydjwg/colorizer'
+"Plugin 'sheerun/vim-polyglot'
+"Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"	let g:deoplete#enable_at_startup = 1
+"
+"" 安装了Vundle后，首次自动安装插件
+"if iCanHazVundle == 0
+"    echo "Installing plugins, please ignore key map error messages"
+"    echo ""
+"    :PluginInstall
+"endif
+"
+"" 你的所有插件需要在下面这行之前
+"call vundle#end()
+" Vundle必须：加载vim自带和插件相应的语法和文件类型相关脚本
+" }}} End of Vundle Setting
+call plug#begin()
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'SirVer/ultisnips'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-scripts/grep.vim'
+Plug 'vim-scripts/CSApprox'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'Raimondi/delimitMate'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
+Plug 'Yggdroot/indentLine'
+Plug 'avelino/vim-bootstrap-updater'
+Plug 'sheerun/vim-polyglot'
+let g:make = 'gmake'
+if exists('make')
+        let g:make = 'make'
+endif
+Plug 'Shougo/vimproc.vim', {'do': g:make}
+
+"" Vim-Session
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+
+if v:version >= 703
+  Plug 'Shougo/vimshell.vim'
 endif
 
-" 设置包括vundle和初始化相关的runtime path
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if v:version >= 704
+  "" Snippets
+  Plug 'SirVer/ultisnips'
+endif
 
-" Vundle必须：让vundle管理插件版本
-Plugin 'VundleVim/Vundle.vim'
+Plug 'honza/vim-snippets'
 
-Plugin 'altercation/vim-colors-solarized'
-	let g:solarized_termcolors=256
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'tomasr/molokai'
-Plugin 'taglist.vim'
-	map <F2> :silent! Tlist<CR>
-	let Tlist_Ctags_Cmd='ctags'
-	let Tlist_Exit_OnlyWindow=1
-Plugin 'scrooloose/syntastic'
+"" Color
+Plug 'tomasr/molokai'
+
+"*****************************************************************************
+"" Custom bundles
+"*****************************************************************************
+
+" c
+Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
+Plug 'ludwig/split-manpage.vim'
+
+
+" go
+"" Go Lang Bundle
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+
+" python
+"" Python Bundle
+Plug 'davidhalter/jedi-vim'
+Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+call plug#end()
+"Plugin 'taglist.vim'
+"	map <F2> :silent! Tlist<CR>
+"	let Tlist_Ctags_Cmd='ctags'
+"	let Tlist_Exit_OnlyWindow=1
+"Plugin 'scrooloose/syntastic'
     set statusline+=%#warningmsg#
 	set statusline+=%{SyntasticStatuslineFlag()}
 	set statusline+=%*
@@ -211,70 +336,50 @@ Plugin 'scrooloose/syntastic'
 	let g:syntastic_check_on_open=0
 	let g:syntastic_check_on_wq=1
 	let g:syntastic_auto_loc_list=1
-Plugin 'EasyMotion'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-airline/vim-airline'
-	set noshowmode
-	set laststatus=2
-	let g:airline_theme='powerlineish'
-	let g:airline_powerline_fonts = 1
-	let g:airline_detect_whitespace = 1
-	let g:airline#extensions#tabline#enabled = 1
-	let g:airline#extensions#hunks#non_zero_only = 1
-
-	let g:airline_powerline_fonts = 1
-
-	if !exists('g:airline_symbols')
-	    let g:airline_symbols = {}
-	endif
-	let g:airline_left_sep = "\ua0"
-	let g:airline_left_alt_sep = "\ua0"
-	let g:airline_right_sep = "\ua0"
-	let g:airline_right_alt_sep = "\ua0"
-	let g:airline_symbols.maxlinenr = '㏑'
-	"let g:airline_symbols.linenr = '␊'
-	let g:airline_symbols.linenr = '␤'
-	"let g:airline_symbols.linenr = '¶'
-	let g:airline_symbols.branch = '⎇'
-	let g:airline_symbols.paste = 'ρ'
-	"let g:airline_symbols.paste = 'Þ'
-	"let g:airline_symbols.paste = '∥'
-	let g:airline_symbols.whitespace = 'Ξ'
-	let g:airline_symbols.space = "\ua0"
-	let g:airline_symbols.spell = 'Ꞩ'
-	let g:airline_symbols.notexists = '∄'
-	let g:airline_symbols.readonly = "\ua0"
-
-Plugin 'ctrlp.vim'
-	let g:ctrlp_follow_symlinks=1
-	let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-fugitive'
-    if exists("*fugitive#statusline")
-      set statusline+=%{fugitive#statusline()}
-    endif
-Plugin 'lilydjwg/colorizer'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'fatih/vim-go'
-Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    " auto deoplete
-    autocmd VimEnter * UpdateRemotePlugins
+"Plugin 'EasyMotion'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-airline/vim-airline'
+"	set noshowmode
+"	set laststatus=2
+"	let g:airline_theme='powerlineish'
+"	let g:airline_powerline_fonts = 1
+"	let g:airline_detect_whitespace = 1
+"	let g:airline#extensions#tabline#enabled = 1
+"	let g:airline#extensions#hunks#non_zero_only = 1
+"
+"	let g:airline_powerline_fonts = 1
+"
+"	if !exists('g:airline_symbols')
+"	    let g:airline_symbols = {}
+"	endif
+"	let g:airline_left_sep = "\ua0"
+"	let g:airline_left_alt_sep = "\ua0"
+"	let g:airline_right_sep = "\ua0"
+"	let g:airline_right_alt_sep = "\ua0"
+"	let g:airline_symbols.maxlinenr = '㏑'
+"	"let g:airline_symbols.linenr = '␊'
+"	let g:airline_symbols.linenr = '␤'
+"	"let g:airline_symbols.linenr = '¶'
+"	let g:airline_symbols.branch = '⎇'
+"	let g:airline_symbols.paste = 'ρ'
+"	"let g:airline_symbols.paste = 'Þ'
+"	"let g:airline_symbols.paste = '∥'
+"	let g:airline_symbols.whitespace = 'Ξ'
+"	let g:airline_symbols.space = "\ua0"
+"	let g:airline_symbols.spell = 'Ꞩ'
+"	let g:airline_symbols.notexists = '∄'
+"	let g:airline_symbols.readonly = "\ua0"
+"
+"Plugin 'ctrlp.vim'
+"	let g:ctrlp_follow_symlinks=1
+"	let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
+"Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'lilydjwg/colorizer'
+"Plugin 'sheerun/vim-polyglot'
+"Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	let g:deoplete#enable_at_startup = 1
-
-Plugin 'zchee/deoplete-go', { 'do': 'make' }
-
-" 安装了Vundle后，首次自动安装插件
-if iCanHazVundle == 0
-    echo "Installing plugins, please ignore key map error messages"
-    echo ""
-    :PluginInstall
-endif
-
-" 你的所有插件需要在下面这行之前
-call vundle#end()
-" Vundle必须：加载vim自带和插件相应的语法和文件类型相关脚本
 filetype plugin indent on
-" }}} End of Vundle Setting
 
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
@@ -513,3 +618,8 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.Gbrowse<CR>
 
 colorscheme molokai
+"" Switching windows
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
