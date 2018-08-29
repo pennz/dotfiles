@@ -279,6 +279,8 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
+Plug 'ctrlpvim/ctrlp.vim'
+
 let g:make = 'gmake'
 if exists('make')
         let g:make = 'make'
@@ -534,7 +536,7 @@ let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_metalinter_deadline = "5s"
 
-let g:go_auto_type_info = 0
+let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
 
 let g:go_decls_includes = "func,type"
