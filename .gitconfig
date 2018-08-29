@@ -62,6 +62,11 @@
 	commitmsgwidth = 0
 [merge]
 	log = true
-	tool = vimdiff
+	tool = diffconflicts
+[mergetool "diffconflicts"]
+	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+[mergetool]
+	keepBackup = false
 [push]
 	default = simple
