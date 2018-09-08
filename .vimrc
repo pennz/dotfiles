@@ -14,6 +14,11 @@ set hlsearch				" 高亮搜索结果
 set incsearch				" 输入搜索内容时就同步显示搜索结果
 set ignorecase				" 搜索时大小写不敏感
 set smartcase
+set noswapfile
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+set undofile "undo !!!!!!!!!!!!!
 "set nowrap				" 长度超过窗口宽度不要换行显示
 "set list				" 让VIM显示空格、tab、换行等不可见字符
 "set listchars=nbsp:¬,trail:·,tab:»	" 设置VIM把空格、换行、tab显示为什么字符
@@ -434,9 +439,10 @@ if has("cscope")
 		cs add $CSCOPE_DB
 	endif
 	set csverb
-	set path+=/home/pengyu.zhou/works/git_repos/gaming_router-buildroot/build_dir/linux-ipq806x/linux-3.4.103/source/include
+"	set path+=/home/pengyu.zhou/works/git_repos/gaming_router-buildroot/build_dir/linux-ipq806x/linux-3.4.103/source/include
 
-	nmap <Leader>a :cs add cscope.out<CR>
+	"nmap <Leader>a :cs add cscope.out<CR>
+	nmap <Leader>a :cs find a <C-R>=expand("<cword>")<CR><CR>
 	nmap <Leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 	nmap <Leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 	nmap <Leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
@@ -544,6 +550,35 @@ let g:go_decls_includes = "func,type"
 nmap <C-g> :GoDecls<cr>
 nmap <C-G> :GoDeclsDir<cr>
 imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
+
+" tagbar, for go
+let g:tagbar_type_go = {
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+    \ }
 
 augroup go
   autocmd!
