@@ -89,3 +89,5 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
