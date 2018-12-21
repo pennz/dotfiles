@@ -84,6 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# about zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 export GOPATH=$HOME/works/go
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
