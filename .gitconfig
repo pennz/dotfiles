@@ -48,6 +48,7 @@
 	editor = vim
 	whitespace = trailing-space,space-before-tab
 	autocrlf = false
+	excludesfile = /Users/vincent/.gitignore_global
 [alias]
 	logp = log --pretty=oneline --graph --decorate=full
 	logt = log --pretty=oneline --graph --topo-order
