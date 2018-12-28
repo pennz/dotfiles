@@ -48,6 +48,7 @@
 	editor = vim
 	whitespace = trailing-space,space-before-tab
 	autocrlf = false
+	excludesfile = /Users/vincent/.gitignore_global
 [alias]
 	logp = log --pretty=oneline --graph --decorate=full
 	logt = log --pretty=oneline --graph --topo-order
@@ -70,3 +71,9 @@
 	keepBackup = false
 [push]
 	default = simple
+[mergetool]
+	keepBackup = false
+[diff "localizablestrings"]
+    textconv = "iconv -f utf-16 -t utf-8"
+[diff "utf16"]
+    textconv = "iconv -f utf-16 -t utf-8"

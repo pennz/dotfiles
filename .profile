@@ -44,8 +44,16 @@ fi
 [ -f $HOME/.fzf.bash ] && [ -n "$BASH_VERSION" ] && source $HOME/.fzf.bash
 [ -f $HOME/.fzf.zsh ] && [ -n "$ZSH_VERSION" ] && source $HOME/.fzf.zsh
 
+# nvim back folder
+[ ! -d $HOME/.vim/backup/ ] && mkdir -p $HOME/.vim/backup/ 
+[ ! -d $HOME/.vim/swap/   ] && mkdir -p $HOME/.vim/swap/   
+[ ! -d $HOME/.vim/undo/   ] && mkdir -p $HOME/.vim/undo/   
+
 # fuck 
 command -v fuck >/dev/null && eval "$(thefuck --alias)"
+
+# conda
+#eval "$(register-python-argcomplete conda)" # it does not work
 
 if [ "x$MACHINE_NAME" = "xD" ]
 then

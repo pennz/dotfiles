@@ -164,3 +164,5 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 [[ -e ~/.profile ]] && source ~/.profile
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
