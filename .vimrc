@@ -655,4 +655,4 @@ vnoremap K :m '<-2<CR>gv=gv
 "" Open current line on GitHub
 nnoremap <Leader>o :.Gbrowse<CR>
 
-colorscheme molokai
+colorscheme torte

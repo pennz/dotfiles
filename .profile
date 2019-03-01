@@ -21,6 +21,12 @@ then
 		echo "eq" ; 
 fi
 
+# env vars
+export GOPATH=$HOME/works/go
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -39,10 +45,6 @@ fi
 if [ -f $HOME/.bash_customed ]; then
     . $HOME/.bash_customed
 fi
-
-# fzf, fuzzy search
-[ -f $HOME/.fzf.bash ] && [ -n "$BASH_VERSION" ] && source $HOME/.fzf.bash
-[ -f $HOME/.fzf.zsh ] && [ -n "$ZSH_VERSION" ] && source $HOME/.fzf.zsh
 
 # nvim back folder
 [ ! -d $HOME/.vim/backup/ ] && mkdir -p $HOME/.vim/backup/ 
