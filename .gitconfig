@@ -24,9 +24,6 @@
 	whitespace = red
 	commit = yellow
 	plain = normal
-[color "grep"]
-	match = red bold
-	external = normal
 [color "interactive"]
 	header = yellow bold
 	help = red bold
