@@ -511,7 +511,7 @@ set completeopt+=noinsert
 set completeopt+=noselect
 
 " Path to python interpreter for neovim
-let g:python3_host_prog  = '/Users/vincent/bin/anaconda3/bin/python'
+let g:python3_host_prog  = '/Users/v/anaconda3/bin/python'
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1
 
