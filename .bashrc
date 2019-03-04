@@ -165,4 +165,4 @@ fi
 
 [ -e ~/.profile ] && source ~/.profile
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
