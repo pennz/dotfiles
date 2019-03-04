@@ -163,6 +163,6 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
-[[ -e ~/.profile ]] && source ~/.profile
+[ -e ~/.profile ] && source ~/.profile
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -643,6 +643,7 @@ map <Leader><Leader> <Plug>(easymotion-prefix)
 
 " others...
 inoremap jk <ESC>
+inoremap fd <ESC>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
