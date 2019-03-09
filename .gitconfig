@@ -1,6 +1,7 @@
 [user]
 	email = fireflysuccess@gmail.com
 	name = Vincent Zhou
+	signingkey = 7E8D419A
 [color]
 	branch = auto
 	diff = auto
