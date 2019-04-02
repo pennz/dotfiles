@@ -31,10 +31,3 @@ if type brew &> /dev/null; then
     eval "$(brew command-not-found-init)";
   fi
 fi
-
-# NixOS command-not-found support
-if [ -x /run/current-system/sw/bin/command-not-found ]; then
-    command_not_found_handler () {
-        /run/current-system/sw/bin/command-not-found $@
-    }
-fi
