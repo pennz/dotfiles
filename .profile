@@ -61,3 +61,6 @@ if [ "x$MACHINE_NAME" = "xD" ]
 then
 	echo "Have a good time";
 fi
+
+# for visual studio code
+DOTNET_CLI_TELEMETRY_OPTOUT=1
