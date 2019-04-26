@@ -65,8 +65,11 @@ fi
 # for visual studio code
 DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-# virtualenv and virtualenvwrapper
+# for my binaries
+PATH=$PATH:$HOME/bin
+
 export WORKON_HOME=$HOME/.virtualenvs
+# virtualenv and virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 [ -f /usr/bin/virtualenvwrapper.sh ] && source /usr/bin/virtualenvwrapper.sh
