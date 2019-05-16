@@ -43,7 +43,7 @@ if [ -f $HOME/.bash_aliases ]; then
 fi
 
 if [ -f $HOME/.bash_customed ]; then
-    . $HOME/.bash_customed
+    source $HOME/.bash_customed
 fi
 
 # nvim back folder
