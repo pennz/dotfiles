@@ -20,3 +20,4 @@ fi
 
 alias p='popd'
 alias c='pushd'
+alias m='mosh --ssh="ssh -p 29932" pengyu@97.64.108.66'
