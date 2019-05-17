@@ -337,7 +337,7 @@ call plug#end()
 "	let Tlist_Exit_OnlyWindow=1
 "Plugin 'scrooloose/syntastic'
 "    set statusline+=%#warningmsg#
-""	set statusline+=%{SyntasticStatuslineFlag()}
+"	set statusline+=%{SyntasticStatuslineFlag()}
 "	set statusline+=%*
 "	let g:syntastic_error_symbol='✗'
 "	let g:syntastic_warning_symbol='⚠'
