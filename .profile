@@ -43,7 +43,7 @@ if [ -f $HOME/.bash_aliases ]; then
 fi
 
 if [ -f $HOME/.bash_customed ]; then
-    . $HOME/.bash_customed
+    source $HOME/.bash_customed
 fi
 
 # nvim back folder
@@ -64,3 +64,12 @@ fi
 
 # for visual studio code
 DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+# for my binaries
+PATH=$PATH:$HOME/bin
+
+export WORKON_HOME=$HOME/.virtualenvs
+# virtualenv and virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
+[ -f /usr/bin/virtualenvwrapper.sh ] && source /usr/bin/virtualenvwrapper.sh
