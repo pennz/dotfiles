@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=/media/p/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
+#export BORG_REPO=/media/p/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
+export BORG_REPO=/run/media/pengyu/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
 
 # Setting this, so you won't be asked for your repository passphrase:
 export BORG_PASSPHRASE='lit2bit@backup'
@@ -16,6 +17,7 @@ info "Starting backup"
 
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
+SOURCE_HOME=/home/pengyu  # if you sudo, $HOME will be /root ...
 
 borg create                         \
     --verbose                       \
@@ -26,12 +28,19 @@ borg create                         \
     --compression lz4               \
     --exclude-caches                \
     --exclude '/home/*/.cache/*'    \
-    --exclude '/home/p/zz/*'        \
-    --exclude '/home/p/z/*'         \
-    --exclude '/home/p/d/*'         \
-    --exclude '/home/p/snap/*'      \
-    --exclude '/home/p/miniconda3/*'\
-    --exclude '/home/p/e/*'         \
+    --exclude "$SOURCE_HOME/zz/*"          \
+    --exclude "$SOURCE_HOME/z/*"           \
+    --exclude "$SOURCE_HOME/d/*"           \
+    --exclude "$SOURCE_HOME/snap/*"        \
+    --exclude "$SOURCE_HOME/miniconda3/*"  \
+    --exclude "$SOURCE_HOME/Android/*"  \
+    --exclude "$SOURCE_HOME/Arduino/*"  \
+    --exclude "$SOURCE_HOME/boinc-client/*"\
+    --exclude "$SOURCE_HOME/oldhome/*"  \
+    --exclude "$SOURCE_HOME/e/*"           \
+    --exclude "$SOURCE_HOME/Downloads/*"   \
+    --exclude "$SOURCE_HOME/.config/electronic-wechat/*" \
+    --exclude "$SOURCE_HOME/.local/share/Trash/*" \
     --exclude '/home/boinc/*'       \
     --exclude '/var/cache/*'        \
     --exclude '/var/tmp/*'          \
@@ -75,5 +84,4 @@ else
 fi
 
 exit ${global_exit}
-
 
