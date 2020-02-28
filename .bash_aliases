@@ -18,9 +18,11 @@ if [ x"${sys_info/inux/}" != x"$sys_info" ]; then
     alias open='xdg-open'
 fi
 
+SERVER_IP='107.182.177.9'
+
 alias p='popd'
 alias c='pushd'
-alias m='mosh --ssh="ssh -p 29932" pengyu@23.105.212.181'
+alias m='mosh --ssh="ssh -p 29932" pengyu@'$SERVER_IP
 alias s='ssh -p 29932 pengyu@23.105.212.181'
 alias setproxy='export http_proxy="http://192.168.123.1:7777"; export https_proxy="http://192.168.123.1:7777"'
 alias unsetproxy='export http_proxy= ; export https_proxy= '
