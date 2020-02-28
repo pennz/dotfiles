@@ -184,3 +184,5 @@ if [ -x /home/pengyu/anaconda3/bin/conda ]; then
     unset __conda_setup
     # <<< conda initialize <<<
 fi
+
+set -o vi
