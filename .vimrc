@@ -1,3 +1,5 @@
+scriptencoding utf-8
+set encoding=utf-8
 " vim-bootstrap 
 
 "*****************************************************************************
@@ -76,7 +78,7 @@ Plug 'tomasr/molokai'
 " python
 "" Python Bundle
 Plug 'tmhedberg/SimpylFold'
-Plug 'szymonmaszke/vimpyter'
+Plug 'goerz/jupytext.vim'
 Plug 'ivanov/vim-ipython'
 
 if has('nvim')
@@ -609,8 +611,8 @@ set diffopt+=vertical
 
 set ruler				" 显示状态栏光标标尺
 set cursorline				" 突出显示当前行
-"set number				" 显示行号
-set nonu
+set number				" 显示行号
+"set nonu
 "set relativenumber			" 显示相对（当前光标所在行）行号而不是绝对行号
 set hlsearch				" 高亮搜索结果
 set incsearch				" 输入搜索内容时就同步显示搜索结果
@@ -622,8 +624,8 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 set undofile "undo !!!!!!!!!!!!!
 "set nowrap				" 长度超过窗口宽度不要换行显示
-"set list				" 让vim显示空格、tab、换行等不可见字符
-"set listchars=nbsp:¬,trail:·,tab:»	" 设置vim把空格、换行、tab显示为什么字符
+set list				" 让vim显示空格、tab、换行等不可见字符
+set listchars=nbsp:¬,trail:·,tab:»·	" 设置vim把空格、换行、tab显示为什么字符
 set gcr=a:blinkon0
 set scrolloff=3				" 光标移动到顶部和底部时自动保持3行距离
 "set showmatch				" 显示自动匹配到的对应括号
