@@ -78,6 +78,7 @@ Plug 'tomasr/molokai'
 " python
 "" Python Bundle
 Plug 'tmhedberg/SimpylFold'
+Plug 'Chiel92/vim-autoformat'
 Plug 'goerz/jupytext.vim'
 Plug 'ivanov/vim-ipython'
 
@@ -269,6 +270,9 @@ nnoremap <silent> <leader>sh :terminal<CR>
 " remove trailing whitespaces
 command! FixWhitespace :%s/\s\+$//e
 
+" Add Gadd
+command Gadd Git add %
+
 "*****************************************************************************
 "" Functions
 "*****************************************************************************
@@ -331,6 +335,9 @@ set autoread
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
+
+"" format
+noremap <F3> :Autoformat<CR>
 
 "" Split
 noremap <Leader>h :<C-u>split<CR>
