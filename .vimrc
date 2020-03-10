@@ -266,6 +266,7 @@ filetype off
 " Vundle必须：加载vim自带和插件相应的语法和文件类型相关脚本
 " }}} End of Vundle Setting
 call plug#begin()
+Plug 'easymotion/vim-easymotion'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
@@ -641,9 +642,6 @@ endfunction
 " easy motion
 map <Leader><Leader> <Plug>(easymotion-prefix)
 
-" others...
-inoremap jk <ESC>
-inoremap fd <ESC>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
@@ -657,3 +655,7 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.Gbrowse<CR>
 
 colorscheme torte
+
+" Customized mapping...
+inoremap jk <ESC>
+inoremap fd <ESC>
