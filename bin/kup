@@ -1,2 +1,2 @@
 #!/bin/bash -x
-curl  --header "File-Name:${1}" --data-binary @${1} http://23.105.212.181:8001
+curl  --header "File-Name:${1}" --data-binary @${1} http://107.182.177.9:8001
