@@ -3,13 +3,13 @@ ismac=false
 [ $(uname) = Darwin ] && ismac=true
 
 for filename in "$@"; do
-    cp "$filename" ~"$filename"
+    cp "$filename" .4diff."$filename"
     kup "$filename" & # a little slow, so put it to background
     while true; do
-        #diff_content=$(diff ~"$filename" "$filename")
-        #[ x = x"$diff_content" ] || cp "$filename" ~"$filename"
+        #diff_content=$(diff .4diff."$filename" "$filename")
+        #[ x = x"$diff_content" ] || cp "$filename" .4diff."$filename"
         #echo $diff_content
-        colordiff -uw ~"$filename" "$filename" || ( cp "$filename" ~"$filename" ; kup "$filename" )
+        colordiff -uw .4diff."$filename" "$filename" || ( cp "$filename" .4diff."$filename" ; kup "$filename" )
         sleep 3  # check every 5 s
     done&
 done
