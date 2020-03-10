@@ -100,39 +100,6 @@ plugins=(git osx)
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-fpath+=$HOME/.zsh/pure
-
-autoload -U promptinit; promptinit
-
-zstyle :prompt:pure:git:stash show yes
-prompt pure
-#eval "$(starship init zsh)"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/Users/v/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/Users/v/anaconda3/etc/profile.d/conda.sh" ]; then
-#        . "/Users/v/anaconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/Users/v/anaconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda initialize <<<
-
-
-# Avoid duplicates
-HISTCONTROL=ignoredups:erasedups  
-# When the shell exits, append to the history file instead of overwriting it
-setopt inc_append_history
-setopt share_history
-
-# After each command, append to the history file and reread it
-PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-
-if [ -f "$HOME"/.shrc_customised ]; then
-    source "$HOME"/.shrc_customised
-fi
+autoload -Uz compinit
+compinit
+source /home/pengyu/.jfrog/jfrog_zsh_completion
