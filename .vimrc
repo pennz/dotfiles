@@ -337,8 +337,8 @@ runtime! ftplugin/man.vim
 " Show byte offset 
 set statusline+=%o
 " ALE linting events
-"augroup ale
-"  autocmd!
+augroup ale
+  autocmd!
 
   autocmd VimEnter *
     \ set updatetime=1000 |
