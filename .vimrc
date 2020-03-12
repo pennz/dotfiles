@@ -82,6 +82,9 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'goerz/jupytext.vim'
 Plug 'ivanov/vim-ipython'
 
+" JS
+Plug 'pangloss/vim-javascript'
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -270,8 +273,6 @@ nnoremap <silent> <leader>sh :terminal<CR>
 " remove trailing whitespaces
 command! FixWhitespace :%s/\s\+$//e
 
-" Add Gadd
-command Gadd Git add %
 
 "*****************************************************************************
 "" Functions
@@ -367,7 +368,9 @@ noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Git
-noremap <Leader>ga :Gwrite<CR>
+" Add Gadd
+noremap <Leader>ga :silent !git add %<CR>
+noremap <Leader>gw :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
 noremap <Leader>gsh :Gpush<CR>
 noremap <Leader>gll :Gpull<CR>
@@ -472,6 +475,7 @@ noremap <leader>x :bn<CR>
 
 "" Close buffer
 noremap <leader>c :bd<CR>
+noremap <leader>C :BD<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>

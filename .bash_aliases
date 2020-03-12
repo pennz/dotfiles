@@ -19,11 +19,11 @@ if [ x"${sys_info/inux/}" != x"$sys_info" ]; then
 fi
 
 SERVER_IP=lab.pengyuzhou.com
-PROXY_URL='http://127.0.0.1:31210'
+PROXY_URL='http://192.168.2.1:7777'
 
 alias p='popd'
 alias c='pushd'
 alias m='mosh --ssh="ssh -p 29932" pengyu@'$SERVER_IP
 alias s="ssh -p 29932 pengyu@$SERVER_IP"
-alias setproxy="export http_proxy=$PROXY_URL; export https_proxy=$PROXY_URL; "'echo $http_proxy'
+alias setproxy="export HTTP_PROXY=$PROXY_URL; export HTTPS_PROXY=$PROXY_URL; export http_proxy=$PROXY_URL; export https_proxy=$PROXY_URL; "'echo $http_proxy'
 alias unsetproxy='export http_proxy= ; export https_proxy= '
