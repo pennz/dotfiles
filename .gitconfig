@@ -1,7 +1,7 @@
 [user]
 	email = fireflysuccess@gmail.com
 	name = Vincent Zhou
-	signingkey = 7E8D419A
+	signingkey = 3FCEC9A87E8D419A
 [color]
 	branch = auto
 	diff = auto
@@ -76,4 +76,4 @@
 [diff "utf16"]
     textconv = "iconv -f utf-16 -t utf-8"
 [gpg]
-	program = gpg2
+	program = gpg
