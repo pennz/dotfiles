@@ -771,9 +771,12 @@ endfunction
 
 "Bind the BufSel() function to a user-command
 command! -nargs=1 Bs :call BufSel("<args>")
-noremap <Leader>s :Bs 
+noremap <Leader>bs :Bs 
 
 " Customized mapping...
 inoremap jk <ESC>
 inoremap fd <ESC>
 noremap \ :Ag<SPACE>
+inoremap <Leader>s <C-O>:w<CR>
+inoremap <Leader>S <ESC>:wq<CR>
+noremap <Leader>s :<C-U>w<CR>
