@@ -27,3 +27,5 @@ alias m='mosh --ssh="ssh -p 29932" pengyu@'$SERVER_IP
 alias s="ssh -p 29932 pengyu@$SERVER_IP"
 alias setproxy="export HTTP_PROXY=$PROXY_URL; export HTTPS_PROXY=$PROXY_URL; export http_proxy=$PROXY_URL; export https_proxy=$PROXY_URL; "'echo $http_proxy'
 alias unsetproxy='export http_proxy= ; export https_proxy= '
+alias antlr4='java org.antlr.v4.Tool'
+alias grun='java org.antlr.v4.gui.TestRig'
