@@ -780,3 +780,4 @@ noremap \ :Ag<SPACE>
 inoremap <Leader>s <C-O>:w<CR>
 inoremap <Leader>S <ESC>:wq<CR>
 noremap <Leader>s :<C-U>w<CR>
+noremap <Leader>S :<C-U>wq<CR>
