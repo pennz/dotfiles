@@ -101,6 +101,7 @@ plugins=(git osx)
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 autoload -Uz compinit
 compinit
 source /home/pengyu/.jfrog/jfrog_zsh_completion
