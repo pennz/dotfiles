@@ -109,6 +109,8 @@ check_last_backup () {
                 info "Backup and/or Prune finished with errors"
             fi
             exit ${global_exit}
+        else
+            info "Last backup is within one day old, no need to backup now"
         fi
     fi
 }
