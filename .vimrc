@@ -47,6 +47,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'easymotion/vim-easymotion'
 Plug 'qpkorr/vim-bufkill'
+Plug 'YorickPeterse/happy_hacking.vim'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -68,8 +69,6 @@ Plug 'xolox/vim-session'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-"" Color
-Plug 'tomasr/molokai'
 
 "*****************************************************************************
 "" Custom bundles
@@ -168,8 +167,9 @@ let g:session_command_aliases = 1
 syntax on
 set ruler
 
-let no_buffers_menu=1
-silent! colorscheme molokai
+"let no_buffers_menu=1
+
+silent! colorscheme happy_hacking
 
 "set mousemodel=popup
 set t_Co=256
