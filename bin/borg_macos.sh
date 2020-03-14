@@ -38,7 +38,7 @@ backup () {
         --exclude "$SOURCE_HOME/miniconda3/*"  \
         --exclude "$SOURCE_HOME/Android/*"  \
         --exclude "$SOURCE_HOME/Arduino/*"  \
-        --exclude "$SOURCE_HOME/boinc-client/*"\
+        --exclude "$SOURCE_HOME/Library/Caches/*"\
         --exclude "$SOURCE_HOME/oldhome/*"  \
         --exclude "$SOURCE_HOME/e/*"           \
         --exclude "$SOURCE_HOME/Downloads/*"   \
