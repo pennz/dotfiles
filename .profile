@@ -75,3 +75,4 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 [ -f /usr/bin/virtualenvwrapper.sh ] && source /usr/bin/virtualenvwrapper.sh
 
 export GPG_TTY=$(tty)
+export KEYTIMEOUT=1
