@@ -371,13 +371,13 @@ noremap <Leader>v :<C-u>vsplit<CR>
 " Add Gadd
 noremap <Leader>ga :silent !git add %<CR>
 noremap <Leader>gw :Gwrite<CR>
-noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gsh :Gpush<CR>
-noremap <Leader>gll :Gpull<CR>
-noremap <Leader>gs :Gstatus<CR>
-noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gc :Git commit<CR>
+noremap <Leader>gsh :Git push<CR>
+noremap <Leader>gll :Git pull<CR>
+noremap <Leader>gs :Git<CR>
+noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
-noremap <Leader>gr :Gremove<CR>
+noremap <Leader>gr :GRemove<CR>
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
@@ -475,10 +475,11 @@ noremap <leader>x :bn<CR>
 
 "" Close buffer
 noremap <leader>c :bd<CR>
+inoremap <leader>c <ESC>:BD<CR>
 noremap <leader>C :BD<CR>
 
 "" Clean search (highlight)
-nnoremap <silent> <leader><space> :noh<cr>
+nnoremap <silent> <leader><space> :noh<CR>
 
 "" Switching windows
 noremap <C-j> <C-w>j
@@ -630,14 +631,14 @@ inoremap <S-Tab> <C-n>
 nnoremap <Leader><Leader> <C-^>
 
 " Run commands that require an interactive shell
-nnoremap <Leader>r :RunInInteractiveShell<Space>
+nnoremap <silent> <Leader>r :source ~/.vimrc<CR>
 
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
 " Always use vertical diffs
-set diffopt+=vertical
+" set diffopt+=vertical
 
 """ ### vim 特性配置 {{{
 "set nocompatible			" 不使用vi兼容模式
@@ -778,6 +779,6 @@ inoremap jk <ESC>
 inoremap fd <ESC>
 noremap \ :Ag<SPACE>
 inoremap <Leader>s <C-O>:w<CR>
-inoremap <Leader>S <ESC>:wq<CR>
+inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
-noremap <Leader>S :<C-U>wq<CR>
+noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
