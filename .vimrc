@@ -48,6 +48,16 @@ Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'easymotion/vim-easymotion'
 Plug 'qpkorr/vim-bufkill'
 Plug 'YorickPeterse/happy_hacking.vim'
+Plug 'tpope/vim-rsi'
+
+" Add maktaba and codefmt to the runtimepath.
+" (The latter must be installed before it can be used.)
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+" Also add Glaive, which is used to configure codefmt's maktaba flags. See
+" `:help :Glaive` for usage.
+Plug 'google/vim-glaive'
+" ...
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -73,6 +83,22 @@ Plug 'honza/vim-snippets'
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
+
+" Java
+Plug 'artur-shaik/vim-javacomplete2'
+au FileType java setlocal omnifunc=javacomplete#Complete
+""To enable smart (trying to guess import option) inserting class imports with F4, add:
+"nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+"imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+""To enable usual (will ask for import option) inserting class imports with F5, add:
+"nmap <F5> <Plug>(JavaComplete-Imports-Add)
+"imap <F5> <Plug>(JavaComplete-Imports-Add)
+""To add all missing imports with F6:
+"nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+"imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+""To remove all unused imports with F7:
+"nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+"imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
 " python
 "" Python Bundle
@@ -258,7 +284,7 @@ nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 " grep.vim
-nnoremap <silent> <leader>f :Rgrep<CR>
+" nnoremap <silent> <leader>f :Rgrep<CR>
 let Grep_Default_Options = '-IR'
 let Grep_Skip_Files = '*.log *.db'
 let Grep_Skip_Dirs = '.git node_modules'
@@ -328,7 +354,7 @@ if has('autocmd')
 	au FileType sh setlocal tabstop=4
 	au BufEnter /usr/include/* setf c
 	au BufEnter /usr/* call GnuIndent()
-	"autocmd BufEnter * silent! lcd %:p:h
+	au BufEnter * silent! lcd %:p:h
 endif
 set autoread
 " 启用VIM内置的man page reviewer，可以用命令`:Man XXX`查看手册页
@@ -372,6 +398,7 @@ noremap <Leader>v :<C-u>vsplit<CR>
 noremap <Leader>ga :silent !git add %<CR>
 noremap <Leader>gw :Gwrite<CR>
 noremap <Leader>gc :Git commit<CR>
+noremap <Leader>gca :Git commit --amend<CR>
 noremap <Leader>gsh :Git push<CR>
 noremap <Leader>gll :Git pull<CR>
 noremap <Leader>gs :Git<CR>
@@ -628,7 +655,7 @@ inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
 inoremap <S-Tab> <C-n>
 
 " Switch between the last two files
-nnoremap <Leader><Leader> <C-^>
+nmap <Leader>. <C-^>
 
 " Run commands that require an interactive shell
 nnoremap <silent> <Leader>r :source ~/.vimrc<CR>
@@ -775,10 +802,23 @@ command! -nargs=1 Bs :call BufSel("<args>")
 noremap <Leader>bs :Bs 
 
 " Customized mapping...
+"vnoremap jk <ESC>
+"vnoremap fd <ESC>
 inoremap jk <ESC>
 inoremap fd <ESC>
+inoremap <C-z> <ESC>
 noremap \ :Ag<SPACE>
 inoremap <Leader>s <C-O>:w<CR>
+inoremap <Leader>s <ESC>:w<CR>
 inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
+nnoremap <silent> <leader>f :Files<CR>
+
+" Optional: Enable codefmt's default mappings on the <Leader>= prefix.
+"Glaive codefmt plugin[mappings]
+let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
+let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
+call glaive#Install()
+execute gje
+"nnoremap <Leader>= :FormatCode<CR>
