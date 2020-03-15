@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
 export BORG_REPO=/Volumes/mac_files/borg
