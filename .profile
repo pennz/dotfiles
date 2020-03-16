@@ -76,3 +76,4 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
 export GPG_TTY=$(tty)
 export KEYTIMEOUT=1
+export BASH_ENV=~/.vim_bash_env
