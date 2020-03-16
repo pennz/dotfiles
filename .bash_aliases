@@ -1,3 +1,9 @@
+shell=$(readlink /proc/$$/exe)
+case $shell in
+  *bash) shopt -s expand_aliases;;
+  *) setopt aliases;;
+esac
+
 alias grep='grep --color=auto'
 alias l='ls -CF'
 alias la='ls -A'
