@@ -26,6 +26,7 @@ endif
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
 
+let $BASH_ENV = expand('~/.vim_bash_env')
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
@@ -270,6 +271,8 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
+cnoreabbrev A !java org.antlr.v4.Tool
+cnoreabbrev G !java org.antlr.v4.gui.TestRig
 
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
@@ -354,7 +357,7 @@ if has('autocmd')
 	au FileType sh setlocal tabstop=4
 	au BufEnter /usr/include/* setf c
 	au BufEnter /usr/* call GnuIndent()
-	au BufEnter * silent! lcd %:p:h
+	"au BufEnter * silent! lcd %:p:h
 endif
 set autoread
 " 启用VIM内置的man page reviewer，可以用命令`:Man XXX`查看手册页
@@ -799,7 +802,7 @@ endfunction
 
 "Bind the BufSel() function to a user-command
 command! -nargs=1 Bs :call BufSel("<args>")
-noremap <Leader>bs :Bs 
+noremap <Leader>bs :Bs
 
 " Customized mapping...
 "vnoremap jk <ESC>
@@ -815,10 +818,12 @@ noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
 nnoremap <silent> <leader>f :Files<CR>
 
+
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
 "Glaive codefmt plugin[mappings]
 let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
 let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
 call glaive#Install()
 execute gje
-"nnoremap <Leader>= :FormatCode<CR>
+
+nnoremap <silent> <Leader>= :FormatCode<CR>
