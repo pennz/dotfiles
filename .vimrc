@@ -285,8 +285,11 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
-cnoreabbrev A !java org.antlr.v4.Tool
+cnoreabbrev A !java org.antlr.v4.Tool -visitor %
 cnoreabbrev G !java org.antlr.v4.gui.TestRig
+cnoreabbrev B !javac %:t:r*.java
+cnoreabbrev AB !java org.antlr.v4.Tool -visitor % && javac %:t:r*.java
+cnoreabbrev J !java %:t:r
 
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
@@ -826,3 +829,6 @@ call glaive#Install()
 execute gje
 
 nnoremap <silent> <Leader>= :FormatCode<CR>
+imap <C-w> <C-o><C-w>
+noremap <M-<> <C-W><
+noremap <M->> <C-W>>
