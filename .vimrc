@@ -49,6 +49,7 @@ Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'easymotion/vim-easymotion'
 Plug 'qpkorr/vim-bufkill'
 Plug 'YorickPeterse/happy_hacking.vim'
+Plug 'arzg/vim-colors-xcode'
 Plug 'tpope/vim-rsi'
 
 " Add maktaba and codefmt to the runtimepath.
@@ -192,11 +193,24 @@ let g:session_command_aliases = 1
 "" Visual Settings
 "*****************************************************************************
 syntax on
-set ruler
+set ruler				" 显示状态栏光标标尺
+set cursorline				" 突出显示当前行
+set number				" 显示行号
+" 开启语法高亮显示，终端支持256色。
+"syntax on
+"set t_Co=256
+
+let no_buffers_menu=1
+set mousemodel=extend
+" 设置色彩空间为暗色调，使用solarized配色方案
+set background=dark
+
+" the following is for myself
+set colorcolumn=80
 
 "let no_buffers_menu=1
 
-silent! colorscheme happy_hacking
+silent! colorscheme xcodedark
 
 "set mousemodel=popup
 set t_Co=256
@@ -668,16 +682,12 @@ nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
 " Always use vertical diffs
-" set diffopt+=vertical
+set diffopt+=vertical
 
 """ ### vim 特性配置 {{{
-"set nocompatible			" 不使用vi兼容模式
-
-set ruler				" 显示状态栏光标标尺
-set cursorline				" 突出显示当前行
-set number				" 显示行号
+set nocompatible			" 不使用vi兼容模式
 "set nonu
-"set relativenumber			" 显示相对（当前光标所在行）行号而不是绝对行号
+set relativenumber			" 显示相对（当前光标所在行）行号而不是绝对行号
 set hlsearch				" 高亮搜索结果
 set incsearch				" 输入搜索内容时就同步显示搜索结果
 set ignorecase				" 搜索时大小写不敏感
@@ -687,7 +697,7 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 set undofile "undo !!!!!!!!!!!!!
-"set nowrap				" 长度超过窗口宽度不要换行显示
+set nowrap				" 长度超过窗口宽度不要换行显示
 set list				" 让vim显示空格、tab、换行等不可见字符
 set listchars=nbsp:¬,trail:·,tab:»·	" 设置vim把空格、换行、tab显示为什么字符
 set gcr=a:blinkon0
@@ -709,18 +719,6 @@ set backspace=indent,eol,start		" 退格键（backspace）默认工作vi模式�
 					" eol: 如果插入模式下在行开头，设置了eol后按下退格键会合并到上一行。
 					" start: 若不设置为start，则在回退时，只能回退删除自己新添加的字符，原来已经存在的字符无法回退删除。
 " set pastetoggle=<f3>			" 按下f3键可以切换粘贴插入模式[insert (paste)]和普通插入模式。
-
-" 开启语法高亮显示，终端支持256色。
-"syntax on
-"set t_Co=256
-
-let no_buffers_menu=1
-set mousemodel=extend
-" 设置色彩空间为暗色调，使用solarized配色方案
-set background=dark
-
-" the following is for myself
-set colorcolumn=80
 
 " easy motion
 "map <Leader><Leader> <Plug>(easymotion-prefix)
@@ -817,6 +815,7 @@ inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
 nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>t :Tags<CR>
 
 
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
