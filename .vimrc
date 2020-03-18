@@ -823,10 +823,13 @@ nnoremap <silent> <leader>t :Tags<CR>
 
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
 "Glaive codefmt plugin[mappings]
-let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
-let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
 call glaive#Install()
-execute gje
+
+let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
+if !filereadable(gjf)
+    let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
+    execute gje
+endif
 
 nnoremap <silent> <Leader>= :FormatCode<CR>
 imap <C-w> <C-o><C-w>
