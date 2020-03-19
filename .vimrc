@@ -51,7 +51,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'YorickPeterse/happy_hacking.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'tpope/vim-rsi'
-
+Plug 'skywind3000/asyncrun.vim'
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
 Plug 'google/vim-maktaba'
@@ -288,7 +288,7 @@ cnoreabbrev Qall qall
 cnoreabbrev A !java org.antlr.v4.Tool -visitor %
 cnoreabbrev G !java org.antlr.v4.gui.TestRig
 cnoreabbrev B !javac %:t:r*.java
-cnoreabbrev AB !java org.antlr.v4.Tool -visitor % && javac %:t:r*.java
+cnoreabbrev AB AsyncRun java org.antlr.v4.Tool -visitor % && javac %:r*.java
 cnoreabbrev J !java %:t:r
 
 "" NERDTree configuration
@@ -533,6 +533,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
+noremap <C-p> <C-w><C-p>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
