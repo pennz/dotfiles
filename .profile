@@ -77,3 +77,4 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export GPG_TTY=$(tty)
 export KEYTIMEOUT=1
 export BASH_ENV=~/.vim_bash_env
+export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
