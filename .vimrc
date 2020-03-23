@@ -419,8 +419,8 @@ noremap <Leader>ga :silent !git add %<CR>
 noremap <Leader>gw :Gwrite<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <Leader>gsh :Git push<CR>
-noremap <Leader>gll :Git pull<CR>
+noremap <Leader>gsh :AsyncRun git -C %:p:h push<CR>
+noremap <Leader>gll :AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
