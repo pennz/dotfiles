@@ -49,8 +49,9 @@ Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'easymotion/vim-easymotion'
 Plug 'qpkorr/vim-bufkill'
 Plug 'YorickPeterse/happy_hacking.vim'
+Plug 'arzg/vim-colors-xcode'
 Plug 'tpope/vim-rsi'
-
+Plug 'skywind3000/asyncrun.vim'
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
 Plug 'google/vim-maktaba'
@@ -192,11 +193,24 @@ let g:session_command_aliases = 1
 "" Visual Settings
 "*****************************************************************************
 syntax on
-set ruler
+set ruler				" 显示状态栏光标标尺
+set cursorline				" 突出显示当前行
+set number				" 显示行号
+" 开启语法高亮显示，终端支持256色。
+"syntax on
+"set t_Co=256
+
+let no_buffers_menu=1
+set mousemodel=extend
+" 设置色彩空间为暗色调，使用solarized配色方案
+set background=dark
+
+" the following is for myself
+set colorcolumn=80
 
 "let no_buffers_menu=1
 
-silent! colorscheme happy_hacking
+silent! colorscheme xcodedark
 
 "set mousemodel=popup
 set t_Co=256
@@ -271,8 +285,11 @@ cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
-cnoreabbrev A !java org.antlr.v4.Tool
+cnoreabbrev A !java org.antlr.v4.Tool -visitor %
 cnoreabbrev G !java org.antlr.v4.gui.TestRig
+cnoreabbrev B !javac %:t:r*.java
+cnoreabbrev AB AsyncRun java org.antlr.v4.Tool -visitor % && javac %:r*.java
+cnoreabbrev J !java %:t:r
 
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
@@ -402,8 +419,8 @@ noremap <Leader>ga :silent !git add %<CR>
 noremap <Leader>gw :Gwrite<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <Leader>gsh :Git push<CR>
-noremap <Leader>gll :Git pull<CR>
+noremap <Leader>gsh :AsyncRun git -C %:p:h push<CR>
+noremap <Leader>gll :AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
@@ -516,6 +533,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
+noremap <C-p> <C-w><C-p>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
@@ -668,16 +686,12 @@ nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
 " Always use vertical diffs
-" set diffopt+=vertical
+set diffopt+=vertical
 
 """ ### vim 特性配置 {{{
-"set nocompatible			" 不使用vi兼容模式
-
-set ruler				" 显示状态栏光标标尺
-set cursorline				" 突出显示当前行
-set number				" 显示行号
+set nocompatible			" 不使用vi兼容模式
 "set nonu
-"set relativenumber			" 显示相对（当前光标所在行）行号而不是绝对行号
+set relativenumber			" 显示相对（当前光标所在行）行号而不是绝对行号
 set hlsearch				" 高亮搜索结果
 set incsearch				" 输入搜索内容时就同步显示搜索结果
 set ignorecase				" 搜索时大小写不敏感
@@ -687,7 +701,7 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 set undofile "undo !!!!!!!!!!!!!
-"set nowrap				" 长度超过窗口宽度不要换行显示
+set nowrap				" 长度超过窗口宽度不要换行显示
 set list				" 让vim显示空格、tab、换行等不可见字符
 set listchars=nbsp:¬,trail:·,tab:»·	" 设置vim把空格、换行、tab显示为什么字符
 set gcr=a:blinkon0
@@ -709,18 +723,6 @@ set backspace=indent,eol,start		" 退格键（backspace）默认工作vi模式�
 					" eol: 如果插入模式下在行开头，设置了eol后按下退格键会合并到上一行。
 					" start: 若不设置为start，则在回退时，只能回退删除自己新添加的字符，原来已经存在的字符无法回退删除。
 " set pastetoggle=<f3>			" 按下f3键可以切换粘贴插入模式[insert (paste)]和普通插入模式。
-
-" 开启语法高亮显示，终端支持256色。
-"syntax on
-"set t_Co=256
-
-let no_buffers_menu=1
-set mousemodel=extend
-" 设置色彩空间为暗色调，使用solarized配色方案
-set background=dark
-
-" the following is for myself
-set colorcolumn=80
 
 " easy motion
 "map <Leader><Leader> <Plug>(easymotion-prefix)
@@ -761,7 +763,7 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 let g:SimpylFold_docstring_preview = 1
 
 " swith between python and ipynb filetype
-noremap <Leader>p :set filetype=python<CR>
+" noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
 "let g:python_host_prog = '/Users/v/anaconda3/envs/torch/bin/python2'
@@ -817,13 +819,20 @@ inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
 nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>t :Tags<CR>
 
 
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
 "Glaive codefmt plugin[mappings]
-let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
-let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
 call glaive#Install()
-execute gje
+
+let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
+if !filereadable(gjf)
+    let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
+    execute gje
+endif
 
 nnoremap <silent> <Leader>= :FormatCode<CR>
+imap <C-w> <C-o><C-w>
+noremap <M-<> <C-W><
+noremap <M->> <C-W>>
