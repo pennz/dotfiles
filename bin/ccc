@@ -5,4 +5,4 @@ config pull && \
 config stash pop
 config commit -asm "$*" && \
 config push; config checkout $cb && \
-config merge master
+config merge --no-edit master
