@@ -1,0 +1,6 @@
+#!/bin/bash -li
+cb=$(config rev-parse --abbrev-ref HEAD)
+config stash; config checkout master; 
+config stash pop
+config commit -asm "Added change"; config push; config checkout $cb
+config merge master
