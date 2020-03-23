@@ -763,7 +763,7 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 let g:SimpylFold_docstring_preview = 1
 
 " swith between python and ipynb filetype
-noremap <Leader>p :set filetype=python<CR>
+" noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
 "let g:python_host_prog = '/Users/v/anaconda3/envs/torch/bin/python2'
