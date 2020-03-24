@@ -67,13 +67,6 @@ Plug 'google/vim-codefmt'
 " `:help :Glaive` for usage.
 Plug 'google/vim-glaive'
 
-call glaive#Install()
-
-let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
-if !filereadable(gjf)
-    let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
-    execute gje
-endif
 " ...
 
 if isdirectory('/usr/local/opt/fzf')
@@ -845,8 +838,17 @@ nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>t :Tags<CR>
 
 
+if !lite
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
 "Glaive codefmt plugin[mappings]
+call glaive#Install()
+
+let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
+if !filereadable(gjf)
+    let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
+    execute gje
+endif
+endif
 
 nnoremap <silent> <Leader>= :FormatCode<CR>
 imap <C-w> <C-o><C-w>
