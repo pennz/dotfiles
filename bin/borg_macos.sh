@@ -31,6 +31,7 @@ backup () {
         --compression lz4               \
         --exclude-caches                \
         --exclude '/home/*/.cache/*'    \
+        --exclude '/Applications/Xcode.app/*'   \
         --exclude "$SOURCE_HOME/VirtualBox\ VMs/*"          \
         --exclude "$SOURCE_HOME/not-backup/*"           \
         --exclude "$SOURCE_HOME/d/*"           \
