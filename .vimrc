@@ -23,10 +23,17 @@ if !filereadable(vimplug_exists)
   autocmd VimEnter * PlugInstall
 endif
 
+let lite = 0
+let home_path = expand('~')
+if home_path =~ "pengyu"
+  let lite = 1
+endif
+
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
 
 let $BASH_ENV = expand('~/.vim_bash_env')
+if !lite
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
@@ -59,6 +66,14 @@ Plug 'google/vim-codefmt'
 " Also add Glaive, which is used to configure codefmt's maktaba flags. See
 " `:help :Glaive` for usage.
 Plug 'google/vim-glaive'
+
+call glaive#Install()
+
+let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
+if !filereadable(gjf)
+    let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
+    execute gje
+endif
 " ...
 
 if isdirectory('/usr/local/opt/fzf')
@@ -112,16 +127,18 @@ Plug 'ivanov/vim-ipython'
 " JS
 Plug 'pangloss/vim-javascript'
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'deoplete-plugins/deoplete-jedi'
-  let g:deoplete#enable_at_startup = 1
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'deoplete-plugins/deoplete-jedi'
+    let g:deoplete#enable_at_startup = 1
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+  Plug 'davidhalter/jedi-vim'
 endif
-Plug 'davidhalter/jedi-vim'
+
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 
@@ -384,6 +401,8 @@ runtime! ftplugin/man.vim
 " Show byte offset 
 set statusline+=%o
 " ALE linting events
+
+if has('ale')
 augroup ale
   autocmd!
 
@@ -395,6 +414,7 @@ augroup ale
   autocmd InsertEnter * call ale#Queue(0)
   autocmd InsertLeave * call ale#Queue(0)
 augroup END
+endif
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
@@ -827,13 +847,6 @@ nnoremap <silent> <leader>t :Tags<CR>
 
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
 "Glaive codefmt plugin[mappings]
-call glaive#Install()
-
-let gjf = expand('~/bin/google-java-format-1.7-all-deps.jar')
-if !filereadable(gjf)
-    let gje = 'Glaive codefmt google_java_executable='. "\"java -jar " . gjf . "\""
-    execute gje
-endif
 
 nnoremap <silent> <Leader>= :FormatCode<CR>
 imap <C-w> <C-o><C-w>
