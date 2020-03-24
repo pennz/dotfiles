@@ -114,14 +114,14 @@ Plug 'pangloss/vim-javascript'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'deoplete-plugins/deoplete-jedi'
+  let g:deoplete#enable_at_startup = 1
 else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-let g:deoplete#enable_at_startup = 1
 Plug 'davidhalter/jedi-vim'
-Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 
@@ -686,7 +686,10 @@ nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
 " Always use vertical diffs
-set diffopt+=vertical
+if has('nvim')
+    set diffopt+=vertical
+endif
+
 
 """ ### vim 特性配置 {{{
 set nocompatible			" 不使用vi兼容模式
