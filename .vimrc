@@ -758,7 +758,7 @@ set mouse=nv
 " Jump to next error with Ctrl-n and previous error with Ctrl-m. Close the
 " quickfix window with <leader>a
 map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
+"map <C-m> :cprevious<CR>
 
 
 " <Leader>f{char} to move to {char}
