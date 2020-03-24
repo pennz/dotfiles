@@ -58,6 +58,10 @@ backup () {
         /etc                            \
         $SOURCE_HOME                    \
         /Applications                   \
+        /usr/local                      \
+        /Library/Services                      \
+        /Library/Haskell                      \
+        /var/log                      \
         && osascript -e "display notification \"Backup completed\" with title \"Borgbackup\"" \
         && touch $SOURCE_HOME/.lastbackup ) \
         || ([ "$1" -ge 604800 ] \
