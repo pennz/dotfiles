@@ -32,9 +32,13 @@ backup () {
         --exclude-caches                \
         --exclude '/home/*/.cache/*'    \
         --exclude '/Applications/Xcode.app/*'   \
+        --exclude "/usr/local/texlive/*"          \
+        --exclude "/usr/local/Homebrew/.git/*"          \
+        --exclude "/usr/local/Homebrew/.github/*"          \
         --exclude "$SOURCE_HOME/VirtualBox\ VMs/*"          \
         --exclude "$SOURCE_HOME/not-backup/*"           \
         --exclude "$SOURCE_HOME/d/*"           \
+        --exclude "$SOURCE_HOME/anaconda3/*"           \
         --exclude "$SOURCE_HOME/snap/*"        \
         --exclude "$SOURCE_HOME/miniconda3/*"  \
         --exclude "$SOURCE_HOME/Android/*"  \
