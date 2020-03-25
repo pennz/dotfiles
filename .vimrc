@@ -33,17 +33,26 @@ endif
 call plug#begin(expand('~/.config/nvim/plugged'))
 
 let $BASH_ENV = expand('~/.vim_bash_env')
+
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+if isdirectory('/usr/local/opt/fzf')
+  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+else
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+  Plug 'junegunn/fzf.vim'
+endif
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+
 if !lite
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
@@ -52,7 +61,6 @@ Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'easymotion/vim-easymotion'
 Plug 'qpkorr/vim-bufkill'
 Plug 'YorickPeterse/happy_hacking.vim'
@@ -69,12 +77,6 @@ Plug 'google/vim-glaive'
 
 " ...
 
-if isdirectory('/usr/local/opt/fzf')
-  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-  Plug 'junegunn/fzf.vim'
-endif
 let g:make = 'gmake'
 if exists('make')
         let g:make = 'make'
@@ -476,7 +478,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 
   "if !exists(":Ag")
-  ""  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+  "  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
   "endif
 endif
 
@@ -486,6 +488,9 @@ if executable('rg')
   set grepprg=rg\ --vimgrep
   command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 endif
+
+let g:fzf_buffers_jump = 1
+let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
@@ -828,7 +833,7 @@ noremap <Leader>bs :Bs
 inoremap jk <ESC>
 inoremap fd <ESC>
 inoremap <C-z> <ESC>
-noremap \ :Ag<SPACE>
+noremap \ :Rg<SPACE>
 inoremap <Leader>s <C-O>:w<CR>
 inoremap <Leader>s <ESC>:w<CR>
 inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
