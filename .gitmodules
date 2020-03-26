@@ -1,3 +1,6 @@
 [submodule ".dotfiles/dotfiles"]
 	path = .dotfiles/dotfiles
 	url = https://github.com/SidOfc/dotfiles
+[submodule "/Users/v/.tmux/plugins/tpm"]
+	path = /Users/v/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
