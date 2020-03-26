@@ -45,6 +45,13 @@ else
 endif
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'majutsushi/tagbar'
+Plug 'easymotion/vim-easymotion'
+Plug 'qpkorr/vim-bufkill'
+"" Vim-Session
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+
 
 if !lite
 "*****************************************************************************
@@ -56,13 +63,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
-Plug 'majutsushi/tagbar'
 Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
-Plug 'easymotion/vim-easymotion'
-Plug 'qpkorr/vim-bufkill'
 Plug 'YorickPeterse/happy_hacking.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'tpope/vim-rsi'
@@ -82,10 +86,6 @@ if exists('make')
         let g:make = 'make'
 endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
-
-"" Vim-Session
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
 
 "" Snippets
 "Plug 'SirVer/ultisnips'
@@ -491,6 +491,7 @@ endif
 
 let g:fzf_buffers_jump = 1
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+let g:fzf_layout = { 'window': 'enew' }
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
@@ -841,7 +842,8 @@ noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
 nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>t :Tags<CR>
-
+nnoremap <silent> <leader>rg       :Rg <C-R><C-W><CR>
+xnoremap <silent> <leader>rg       y:Rg <C-R><C-W><CR>
 
 if !lite
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
