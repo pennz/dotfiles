@@ -1,0 +1,9 @@
+[submodule ".dotfiles/dotfiles"]
+	path = .dotfiles/dotfiles
+	url = https://github.com/SidOfc/dotfiles
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule ".fzf"]
+	path = .fzf
+	url = https://github.com/junegunn/fzf.git
