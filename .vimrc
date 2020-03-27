@@ -51,6 +51,7 @@ Plug 'qpkorr/vim-bufkill'
 "" Vim-Session
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
+Plug 'skywind3000/asyncrun.vim'
 
 
 if !lite
@@ -70,7 +71,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'YorickPeterse/happy_hacking.vim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'tpope/vim-rsi'
-Plug 'skywind3000/asyncrun.vim'
 " Add maktaba and codefmt to the runtimepath.
 " (The latter must be installed before it can be used.)
 Plug 'google/vim-maktaba'
