@@ -430,9 +430,9 @@ noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Git
 " Add Gadd
-noremap <Leader>ga :silent !git add %<CR>
+noremap <silent> <Leader>ga :silent !git add %<CR>
 noremap <Leader>gw :Gwrite<CR>
-noremap <Leader>gc :Git commit<CR>
+noremap <Leader>gc :AsyncRun git commit -sm<SPACE>
 noremap <Leader>gca :Git commit --amend<CR>
 noremap <Leader>gsh :AsyncRun git -C %:p:h push<CR>
 noremap <Leader>gll :AsyncRun git -C %:p:h pull<CR>
