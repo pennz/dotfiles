@@ -2,9 +2,9 @@
 
 # config change commit
 cb=$(config rev-parse --abbrev-ref HEAD)
-config stash; config checkout master; 
+[ $# -lt 1 ] || config stash; 
+config checkout master; 
 config pull && \
-config stash pop
-( [ $# -lt 1 ] || config commit -asm "$*" ) && \
-config push; config checkout $cb && \
+( [ $# -lt 1 ] || (config stash pop && config commit -asm "$*" && config push ) ) && \  # $# < 1, no commit message, just pull
+config checkout "$cb" && \
 config merge --no-edit master
