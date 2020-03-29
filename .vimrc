@@ -862,7 +862,6 @@ imap <C-w> <C-o><C-w>
 noremap <M-<> <C-W><
 noremap <M->> <C-W>>
 
-<<<<<<< Updated upstream
 if has('cscope')
   set cscopetag cscopeverbose
 
@@ -879,6 +878,5 @@ if has('cscope')
 
   command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
 endif
-=======
+
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
->>>>>>> Stashed changes
