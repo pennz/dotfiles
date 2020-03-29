@@ -294,7 +294,7 @@ cnoreabbrev Wq wq
 cnoreabbrev Wa wa
 cnoreabbrev wQ wq
 cnoreabbrev WQ wq
-cnoreabbrev W w
+"cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 cnoreabbrev A !java org.antlr.v4.Tool -visitor %
@@ -878,3 +878,5 @@ if has('cscope')
 
   command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
 endif
+
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
