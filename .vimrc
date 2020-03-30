@@ -396,6 +396,9 @@ runtime! ftplugin/man.vim
 " Show byte offset 
 set statusline+=%o
 " ALE linting events
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
 
 if has('ale')
 augroup ale
@@ -505,8 +508,6 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 
-" ale
-let g:ale_linters = {}
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -591,6 +592,7 @@ let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 0
 
 " ale
+let g:ale_linters = {}
 :call extend(g:ale_linters, {
     \'python': ['flake8'], })
 
@@ -700,9 +702,6 @@ nmap <Leader>. <C-^>
 " Run commands that require an interactive shell
 nnoremap <silent> <Leader>r :source ~/.vimrc<CR>
 
-" Move between linting errors
-nnoremap ]r :ALENextWrap<CR>
-nnoremap [r :ALEPreviousWrap<CR>
 
 " Always use vertical diffs
 if has('nvim')
