@@ -219,8 +219,6 @@ set number				" 显示行号
 
 let no_buffers_menu=1
 set mousemodel=extend
-" 设置色彩空间为暗色调，使用solarized配色方案
-set background=dark
 
 " the following is for myself
 set colorcolumn=80
