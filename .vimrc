@@ -79,7 +79,10 @@ Plug 'google/vim-codefmt'
 " `:help :Glaive` for usage.
 Plug 'google/vim-glaive'
 
-" ...
+" for TypeScript
+" REQUIRED: Add a syntax file. YATS is the best
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 let g:make = 'gmake'
 if exists('make')
@@ -131,6 +134,8 @@ Plug 'pangloss/vim-javascript'
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
   endif
+  " For Denite features
+  Plug 'Shougo/denite.nvim'
   Plug 'davidhalter/jedi-vim'
 endif
 
