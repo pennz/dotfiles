@@ -595,7 +595,21 @@ let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 0
 
 " ale
-let g:ale_linters = {}
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tsserver', 'tslint'],
+\   'vue': ['eslint']
+\}
+let g:ale_fixers = {
+\    'javascript': ['eslint'],
+\    'typescript': ['prettier'],
+\    'vue': ['eslint'],
+\    'scss': ['prettier'],
+\    'html': ['prettier']
+\}
+let g:ale_fix_on_save = 1
+
+
 :call extend(g:ale_linters, {
     \'python': ['flake8'], })
 
@@ -882,3 +896,6 @@ if has('cscope')
 endif
 
 command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
+" formatter
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
