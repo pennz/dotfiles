@@ -82,7 +82,7 @@ Plug 'google/vim-glaive'
 " for TypeScript
 " REQUIRED: Add a syntax file. YATS is the best
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'mhartington/nvim-typescript', {'do': './install.sh; :UpdateRemotePlugins'}
 
 let g:make = 'gmake'
 if exists('make')
@@ -435,6 +435,7 @@ noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Git
 " Add Gadd
+inoremap <silent> <Leader>ga <ESC> :silent !git add %<CR>
 noremap <silent> <Leader>ga :silent !git add %<CR>
 noremap <Leader>gw :Gwrite<CR>
 noremap <Leader>gc :AsyncRun git commit -sm<SPACE>
@@ -885,3 +886,4 @@ if has('cscope')
 endif
 
 command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+set pastetoggle=<F6>
