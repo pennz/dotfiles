@@ -219,8 +219,6 @@ set number				" 显示行号
 
 let no_buffers_menu=1
 set mousemodel=extend
-" 设置色彩空间为暗色调，使用solarized配色方案
-set background=dark
 
 " the following is for myself
 set colorcolumn=80
@@ -401,6 +399,9 @@ runtime! ftplugin/man.vim
 " Show byte offset 
 set statusline+=%o
 " ALE linting events
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
 
 if has('ale')
 augroup ale
@@ -511,8 +512,6 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 
-" ale
-let g:ale_linters = {}
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -596,7 +595,25 @@ let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 0
 
+" typescript related
+let g:yats_host_keyword = 1
+
 " ale
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tsserver', 'tslint'],
+\   'vue': ['eslint']
+\}
+let g:ale_fixers = {
+\    'javascript': ['eslint'],
+\    'typescript': ['prettier'],
+\    'vue': ['eslint'],
+\    'scss': ['prettier'],
+\    'html': ['prettier']
+\}
+let g:ale_fix_on_save = 1
+
+
 :call extend(g:ale_linters, {
     \'python': ['flake8'], })
 
@@ -706,9 +723,6 @@ nmap <Leader>. <C-^>
 " Run commands that require an interactive shell
 nnoremap <silent> <Leader>r :source ~/.vimrc<CR>
 
-" Move between linting errors
-nnoremap ]r :ALENextWrap<CR>
-nnoremap [r :ALEPreviousWrap<CR>
 
 " Always use vertical diffs
 if has('nvim')
@@ -886,4 +900,14 @@ if has('cscope')
 endif
 
 command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
 set pastetoggle=<F6>
+
+" formatter
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+
+
+"" Include user's local vim config
+if filereadable(expand("~/.rc.local"))
+  source ~/.rc.local
+endif
