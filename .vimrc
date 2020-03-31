@@ -594,6 +594,9 @@ let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 0
 
+" typescript related
+let g:yats_host_keyword = 1
+
 " ale
 let g:ale_linters = {
 \   'javascript': ['eslint'],
@@ -899,3 +902,9 @@ command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 " formatter
 autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+
+
+"" Include user's local vim config
+if filereadable(expand("~/.rc.local"))
+  source ~/.rc.local
+endif
