@@ -36,6 +36,7 @@ backup () {
         --exclude "/usr/local/Homebrew/.git/*"          \
         --exclude "/usr/local/Homebrew/.github/*"          \
         --exclude "$SOURCE_HOME/VirtualBox\ VMs/*"          \
+        --exclude "$SOURCE_HOME/VirtualBox VMs/*"       \
         --exclude "$SOURCE_HOME/not-backup/*"           \
         --exclude "$SOURCE_HOME/d/*"           \
         --exclude "$SOURCE_HOME/anaconda3/*"           \
@@ -125,4 +126,4 @@ check_last_backup () {
 }
 
 check_last_backup
-
+diskutil eject /dev/disk2
