@@ -303,7 +303,7 @@ cnoreabbrev Qall qall
 cnoreabbrev A !java org.antlr.v4.Tool -visitor %
 cnoreabbrev G !java org.antlr.v4.gui.TestRig
 cnoreabbrev B !javac %:t:r*.java
-cnoreabbrev AB AsyncRun java org.antlr.v4.Tool -visitor % && javac %:r*.java
+ca AB copen \| wincmd p \| AsyncRun java org.antlr.v4.Tool -visitor % && javac %:r*.java<CR>
 cnoreabbrev J !java %:t:r
 
 "" NERDTree configuration
@@ -439,10 +439,10 @@ noremap <Leader>v :<C-u>vsplit<CR>
 inoremap <silent> <Leader>ga <ESC> :silent !git add %<CR>
 noremap <silent> <Leader>ga :silent !git add %<CR>
 noremap <Leader>gw :Gwrite<CR>
-noremap <Leader>gc :AsyncRun git commit -sm<SPACE>
+noremap <Leader>gc :copen \| wincmd p \| <C-u>AsyncRun git commit -sm<SPACE>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <Leader>gsh :AsyncRun git -C %:p:h push<CR>
-noremap <Leader>gll :AsyncRun git -C %:p:h pull<CR>
+noremap <Leader>gsh :copen \| wincmd p \| <C-u>AsyncRun git -C %:p:h push<CR>
+noremap <Leader>gll :copen \| wincmd p \| <C-u>AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
