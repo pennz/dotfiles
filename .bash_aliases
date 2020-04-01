@@ -13,6 +13,7 @@ alias ll='tree -rt -L 1 -a -x -p -h -i -f -D'
 #alias vi='vim'
 alias rootgrep='grep --exclude-dir=home --exclude-dir=mnt --exclude-dir=var -snr'
 alias updatecs='cscope -bqkR'
+alias t='tmux attach -d'
 alias tat='tmux attach -d -t'
 alias cmt='git commit -s'
 alias sudop='sudo proxychains'
@@ -29,7 +30,7 @@ PROXY_URL='http://192.168.2.1:7777'
 
 alias p='popd'
 alias c='pushd'
-alias m='mosh --ssh="ssh -p 29932" pengyu@'$SERVER_IP
+alias m='mosh --ssh="ssh -t -p 29932" pengyu@'${SERVER_IP}' -- tmux attach -d'
 alias s="ssh -p 29932 pengyu@$SERVER_IP"
 alias setproxy="export HTTP_PROXY=$PROXY_URL; export HTTPS_PROXY=$PROXY_URL; export http_proxy=$PROXY_URL; export https_proxy=$PROXY_URL; "'echo $http_proxy'
 alias unsetproxy='export http_proxy= ; export https_proxy= '
