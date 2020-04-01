@@ -1,10 +1,24 @@
 #!/usr/bin/env python
+import sys
 import miniupnpc
 u = miniupnpc.UPnP()
-u.discoverdelay=200;u.discover();u.selectigd()
+u.discoverdelay = 200
+u.discover()
+u.selectigd()
 
-import sys
-if len(sys.argv)==3: extPortNo,intPortNo = int(sys.argv[1]),int(sys.argv[2])
-elif len(sys.argv)==2: extPortNo = intPortNo = int(sys.argv[1])
-else: sys.stderr.write("Syntax: upnp-add-port external-port [internal-port]\n"),sys.exit(1)
-u.addportmapping(extPortNo,'TCP',u.lanaddr,intPortNo,'upnp-add-port '+str(extPortNo),'')
+p = "TCP"
+if len(sys.argv) == 3:
+    try:
+        extPortNo, intPortNo = int(sys.argv[1]), int(sys.argv[2])
+    except ValueError:
+        intPortNo = int(sys.argv[1])
+        extPortNo = intPortNo
+        p = "TCP" if sys.argv[2] != "UDP" else "UDP"
+
+elif len(sys.argv) == 2:
+    extPortNo = intPortNo = int(sys.argv[1])
+else:
+    sys.stderr.write(
+        "Syntax: upnp-add-port external-port [internal-port]\n"), sys.exit(1)
+u.addportmapping(extPortNo, p, u.lanaddr, intPortNo,
+                 'upnp-add-port '+str(extPortNo), '')

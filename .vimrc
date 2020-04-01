@@ -855,8 +855,7 @@ inoremap jk <ESC>
 inoremap fd <ESC>
 inoremap <C-z> <ESC>
 noremap \ :Rg<SPACE>
-inoremap <Leader>s <C-O>:w<CR>
-inoremap <Leader>s <ESC>:w<CR>
+inoremap <Leader>ss <C-O>:w<CR>
 inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
