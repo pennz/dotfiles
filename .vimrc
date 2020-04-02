@@ -146,8 +146,17 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 "Plug 'posva/vim-vue'
 "Plug 'leafOfTree/vim-vue-plugin'
 
+" go
+"" Go Lang Bundle
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
+" Use release branch (Recommend)
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "*****************************************************************************
 "*****************************************************************************
 
@@ -431,7 +440,7 @@ set autoread
 noremap <F3> :Autoformat<CR>
 
 "" Split
-noremap <Leader>h :<C-u>split<CR>
+"noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Git
@@ -439,10 +448,10 @@ noremap <Leader>v :<C-u>vsplit<CR>
 inoremap <silent> <Leader>ga <ESC> :silent !git add %<CR>
 noremap <silent> <Leader>ga :silent !git add %<CR>
 noremap <Leader>gw :Gwrite<CR>
-noremap <Leader>gc :copen \| wincmd p \| <C-u>AsyncRun git commit -sm<SPACE>
+noremap <Leader>gc :copen \| wincmd p \| AsyncRun git commit -sm<SPACE>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <Leader>gsh :copen \| wincmd p \| <C-u>AsyncRun git -C %:p:h push<CR>
-noremap <Leader>gll :copen \| wincmd p \| <C-u>AsyncRun git -C %:p:h pull<CR>
+noremap <silent> <Leader>gsh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
+noremap <silent> <Leader>gll :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
@@ -721,7 +730,7 @@ inoremap <S-Tab> <C-n>
 nmap <Leader>. <C-^>
 
 " Run commands that require an interactive shell
-nnoremap <silent> <Leader>r :source ~/.vimrc<CR>
+nnoremap <silent> <Leader>R :source ~/.vimrc<CR>
 
 
 " Always use vertical diffs
@@ -905,8 +914,163 @@ set pastetoggle=<F6>
 " formatter
 autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
+" go
+" vim-go
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
+
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_space_tab_error = 0
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_extra_types = 1
+
+let g:go_info_mode = 'go-langserver'
+let g:go_def_mode = 'go-langserver'
+let g:go_referrers_mode = 'go-langserver'
+
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+augroup completion_preview_close
+  autocmd!
+  if v:version > 703 || v:version == 703 && has('patch598')
+    autocmd CompleteDone * if !&previewwindow && &completeopt =~ 'preview' | silent! pclose | endif
+  endif
+augroup END
+
+augroup go
+
+  au!
+  au Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+  au Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+  au Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+  au Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+  au FileType go nmap <Leader>dd <Plug>(go-def-vertical)
+  au FileType go nmap <Leader>dv <Plug>(go-doc-vertical)
+  au FileType go nmap <Leader>db <Plug>(go-doc-browser)
+
+  au FileType go nmap <leader>r  <Plug>(go-run)
+  au FileType go nmap <leader>t  <Plug>(go-test)
+  au FileType go nmap <Leader>gt <Plug>(go-coverage-toggle)
+  au FileType go nmap <Leader>i <Plug>(go-info)
+  au FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
+  au FileType go nmap <C-g> :GoDecls<cr>
+  au FileType go nmap <leader>dr :GoDeclsDir<cr>
+  au FileType go imap <C-g> <esc>:<C-u>GoDecls<cr>
+  au FileType go imap <leader>dr <esc>:<C-u>GoDeclsDir<cr>
+  au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
+
+augroup END
+
+" ale
+call extend(g:ale_linters, {
+    \"go": ['golint', 'go vet'], })
+
+let g:LanguageClient_serverCommands = {
+    \ 'go': ['go-langserver']
+    \ }
+
+
 
 "" Include user's local vim config
 if filereadable(expand("~/.rc.local"))
   source ~/.rc.local
 endif
+
+nnoremap <Leader>a :copen <BAR> wincmd p <BAR> AsyncRun<SPACE>
+
+" -------------------------------------------------------------------------------------------------
+" coc.nvim default settings
+" -------------------------------------------------------------------------------------------------
+
+"" if hidden is not set, TextEdit might fail.
+"set hidden
+"" Better display for messages
+"set cmdheight=2
+"" Smaller updatetime for CursorHold & CursorHoldI
+"set updatetime=300
+"" don't give |ins-completion-menu| messages.
+"set shortmess+=c
+"" always show signcolumns
+"set signcolumn=yes
+"
+"" Use tab for trigger completion with characters ahead and navigate.
+"" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+"
+"" Use <c-space> to trigger completion.
+"inoremap <silent><expr> <c-space> coc#refresh()
+"
+"" Use `[c` and `]c` to navigate diagnostics
+"nmap <silent> [c <Plug>(coc-diagnostic-prev)
+"nmap <silent> ]c <Plug>(coc-diagnostic-next)
+"
+"" Remap keys for gotos
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
+"
+"" Use U to show documentation in preview window
+"nnoremap <silent> U :call <SID>show_documentation()<CR>
+"
+"" Remap for rename current word
+"nmap <leader>rn <Plug>(coc-rename)
+"
+"" Remap for format selected region
+"vmap <leader>f  <Plug>(coc-format-selected)
+"nmap <leader>f  <Plug>(coc-format-selected)
+"" Show all diagnostics
+"nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+"" Manage extensions
+"nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+"" Show commands
+"nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+"" Find symbol of current document
+"nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+"" Search workspace symbols
+"nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+"" Do default action for next item.
+"nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+"" Do default action for previous item.
+"nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+"" Resume latest coc list
+"nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+"
+"" disable vim-go :GoDef short cut (gd)
+"" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
+
+nnoremap <silent> <leader>h :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> <leader>d :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <leader>fr :call LanguageClient_textDocument_references()<CR>
+nnoremap <silent> <leader>ren :call LanguageClient_textDocument_rename()<CR>
+nnoremap <silent> <leader>m :call LanguageClient_contextMenu()<CR>
