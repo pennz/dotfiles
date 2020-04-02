@@ -22,7 +22,7 @@ then
 fi
 
 # env vars
-export GOPATH=$HOME/works/go
+export GOPATH=$HOME/go
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
