@@ -150,10 +150,11 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 "" Go Lang Bundle
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+"Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ }
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " Use release branch (Recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -943,9 +944,9 @@ let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
 
-let g:go_info_mode = 'go-langserver'
-let g:go_def_mode = 'go-langserver'
-let g:go_referrers_mode = 'go-langserver'
+let g:go_info_mode = 'gopls'
+let g:go_def_mode = 'gopls'
+let g:go_referrers_mode = 'gopls'
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
@@ -983,12 +984,11 @@ augroup END
 
 " ale
 call extend(g:ale_linters, {
-    \"go": ['golint', 'go vet'], })
+    \"go": ['golint', 'gopls', 'go vet'], })
 
-let g:LanguageClient_serverCommands = {
-    \ 'go': ['go-langserver']
-    \ }
-
+"let g:LanguageClient_serverCommands = {
+"    \ 'go': ['gopls']
+"    \ }
 
 
 "" Include user's local vim config
@@ -1067,10 +1067,21 @@ nnoremap <Leader>a :copen <BAR> wincmd p <BAR> AsyncRun<SPACE>
 "
 "" disable vim-go :GoDef short cut (gd)
 "" this is handled by LanguageClient [LC]
-let g:go_def_mapping_enabled = 0
+"let g:go_def_mapping_enabled = 0
+"
+"nnoremap <silent> <leader>h :call LanguageClient_textDocument_hover()<CR>
+"nnoremap <silent> <leader>d :call LanguageClient_textDocument_definition()<CR>
+"nnoremap <silent> <leader>fr :call LanguageClient_textDocument_references()<CR>
+"nnoremap <silent> <leader>ren :call LanguageClient_textDocument_rename()<CR>
+"nnoremap <silent> <leader>m :call LanguageClient_contextMenu()<CR>
 
-nnoremap <silent> <leader>h :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> <leader>d :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <leader>fr :call LanguageClient_textDocument_references()<CR>
-nnoremap <silent> <leader>ren :call LanguageClient_textDocument_rename()<CR>
-nnoremap <silent> <leader>m :call LanguageClient_contextMenu()<CR>
+" for complition
+" neocomplete like
+set completeopt+=noinsert
+" deoplete.nvim recommend
+set completeopt+=noselect
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gopls'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+
+nnoremap <silent><Leader>m :make<CR>
