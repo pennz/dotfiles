@@ -1,0 +1,2 @@
+#!/bin/sh
+jupyter lab --port=18888 --no-browser --ip=$(ip addr show dev en0 | grep "inet "|awk '{print $2}'|cut -f1 -d'/')
