@@ -154,7 +154,7 @@ Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 "    \ 'branch': 'next',
 "    \ 'do': 'bash install.sh',
 "    \ }
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+"Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " Use release branch (Recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -1081,7 +1081,7 @@ set completeopt+=noinsert
 " deoplete.nvim recommend
 set completeopt+=noselect
 " deoplete-go settings
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gopls'
+"let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gopls'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 nnoremap <silent><Leader>m :make<CR>
