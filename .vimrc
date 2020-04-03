@@ -53,6 +53,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'skywind3000/asyncrun.vim'
 
+Plug 'ctrlpvim/ctrlp.vim'
 
 if !lite
 "*****************************************************************************
@@ -289,12 +290,32 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
-let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#ale#enabled = 0
+let g:airline_theme = 'papercolor'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
+
+let g:airline#extensions#branch#vcs_priority = ["git", "mercurial"]
+
+let airline#extensions#ale#error_symbol = 'E:'
+let airline#extensions#ale#warning_symbol = 'W:'
+let airline#extensions#ale#show_line_numbers = 1
+let airline#extensions#ale#open_lnum_symbol = '(L'
+let airline#extensions#ale#close_lnum_symbol = ')'
+
+let g:airline#extensions#bookmark#enabled = 1
+let g:airline#extensions#fugitiveline#enabled = 1
+
+let g:airline#extensions#ctrlp#enabled = 1
+let g:airline#extensions#ctrlp#color_template = 'insert' 
+"let g:airline#extensions#ctrlp#color_template = 'normal'
+"let g:airline#extensions#ctrlp#color_template = 'visual'
+"let g:airline#extensions#ctrlp#color_template = 'replace'
+let g:airline#extensions#ctrlp#show_adjacent_modes = 1
+
+
 
 "*****************************************************************************
 "" Abbreviations
@@ -539,7 +560,7 @@ if has('unnamedplus')
 endif
 
 noremap YY "+y<CR>
-noremap <leader>p "+gP<CR>
+noremap <leader>P "+gP<CR>
 noremap XX "+x<CR>
 
 if has('macunix')
@@ -567,7 +588,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
-noremap <C-p> <C-w><C-p>
+"noremap <C-p> <C-w><C-p>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
@@ -939,7 +960,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_generate_tags = 1
-let g:go_highlight_space_tab_error = 0
+let g:go_highlight_space_tab_error = 1
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
@@ -973,6 +994,8 @@ augroup go
   au FileType go nmap <leader>t  <Plug>(go-test)
   au FileType go nmap <Leader>gt <Plug>(go-coverage-toggle)
   au FileType go nmap <Leader>i <Plug>(go-info)
+  au FileType go let g:jedi#documentation_command = ""
+  au FileType go nnoremap <silent>K :GoDoc <BAR> wincmd p<CR>
   au FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
   au FileType go nmap <C-g> :GoDecls<cr>
   au FileType go nmap <leader>dr :GoDeclsDir<cr>
@@ -982,6 +1005,8 @@ augroup go
 
 augroup END
 
+let g:go_doc_popup_window = 0
+let g:go_doc_keywordprg_enabled = 1
 " ale
 call extend(g:ale_linters, {
     \"go": ['golint', 'gopls', 'go vet'], })
@@ -1085,3 +1110,8 @@ set completeopt+=noselect
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 nnoremap <silent><Leader>m :make<CR>
+nnoremap <silent><Leader>E :e ~/.vimrc<CR>
+noremap <silent><Leader>p :<C-u>wincmd p<CR>
+
+let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
