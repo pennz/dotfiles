@@ -1,0 +1,17 @@
+#!/bin/sh
+launchctlFind () {
+    LaunchctlPATHS=( \
+        ~/Library/LaunchAgents \
+        /Library/LaunchAgents \
+        /Library/LaunchDaemons \
+        /System/Library/LaunchAgents \
+        /System/Library/LaunchDaemons \
+    )
+
+    for curPATH in "${LaunchctlPATHS[@]}"
+    do
+        #grep -r "$curPATH" -e "$1"
+        sudo find "$curPATH" -name "*${1}*"
+    done
+    return 0;
+}
