@@ -313,7 +313,7 @@ cnoreabbrev Qall qall
 cnoreabbrev A !java org.antlr.v4.Tool -visitor %
 cnoreabbrev G !java org.antlr.v4.gui.TestRig
 cnoreabbrev B !javac %:t:r*.java
-ca AB copen \| wincmd p \| AsyncRun java org.antlr.v4.Tool -visitor % && javac %:r*.java<CR>
+ca AB copen \| wincmd p \| AsyncRun java org.antlr.v4.Tool -visitor % && javac %:r*.java
 cnoreabbrev J !java %:t:r
 
 "" NERDTree configuration
