@@ -8,5 +8,6 @@ config checkout master;
 config pull --no-edit && \
 ( [ $# -lt 1 ] || (config stash pop && config commit -asm "$*" && config push ) ) && \  # $# < 1, no commit message, just pull
 config checkout "$cb" && \
-config merge --no-edit master
+config merge --no-edit master && \
+config submodule init && config submodule update
 popd
