@@ -122,6 +122,7 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Chiel92/vim-autoformat'
 Plug 'goerz/jupytext.vim'
 Plug 'ivanov/vim-ipython'
+Plug 'cjrh/vim-conda'
 
 " JS
 Plug 'pangloss/vim-javascript'
@@ -624,7 +625,7 @@ let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "0"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
-let g:jedi#completions_enabled = 0
+let g:jedi#completions_enabled = 0 # use deoplete-jedi for completions
 
 " typescript related
 let g:yats_host_keyword = 1
@@ -1115,3 +1116,7 @@ noremap <silent><Leader>p :<C-u>wincmd p<CR>
 
 let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+let g:jedi#force_py_version = 2
+let g:UltisnipsUsePythonVersion = 2
+let g:conda_startup_msg_suppress = 1
