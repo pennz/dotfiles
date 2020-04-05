@@ -1,28 +1,28 @@
 #!/bin/bash
 
-if [ "$(cat $HOME/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
+if [ "$(cat "$HOME"/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
 then 
 		export MACHINE_NAME="D"; 
 fi
 
 
-if [ "$(cat $HOME/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
+if [ "$(cat "$HOME"/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
 then 
 		echo "eq" ; 
 fi
 
-if [ "$(cat $HOME/.MUID)" = aca16920583e42bdcf5fc70618f55b6a ]
+if [ "$(cat "$HOME"/.MUID)" = aca16920583e42bdcf5fc70618f55b6a ]
 then 
 		export MACHINE_NAME="M"; 
 fi
 
-if [ "$(cat $HOME/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
+if [ "$(cat "$HOME"/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
 then 
 		echo "eq" ; 
 fi
 
 # env vars
-export GOPATH=$HOME/go
+export GOPATH="$HOME"/go
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -38,18 +38,18 @@ fi
 # disable CTRL-D terminating terminal
 set -o ignoreeof
 
-if [ -f $HOME/.bash_aliases ]; then
-    source $HOME/.bash_aliases
+if [ -f "$HOME"/.bash_aliases ]; then
+    source "$HOME"/.bash_aliases
 fi
 
-if [ -f $HOME/.bash_customed ]; then
-    source $HOME/.bash_customed
+if [ -f "$HOME"/.bash_customed ]; then
+    source "$HOME"/.bash_customed
 fi
 
 # nvim back folder
-[ ! -d $HOME/.vim/backup/ ] && mkdir -p $HOME/.vim/backup/ 
-[ ! -d $HOME/.vim/swap/   ] && mkdir -p $HOME/.vim/swap/   
-[ ! -d $HOME/.vim/undo/   ] && mkdir -p $HOME/.vim/undo/   
+[ ! -d "$HOME"/.vim/backup/ ] && mkdir -p "$HOME"/.vim/backup/ 
+[ ! -d "$HOME"/.vim/swap/   ] && mkdir -p "$HOME"/.vim/swap/   
+[ ! -d "$HOME"/.vim/undo/   ] && mkdir -p "$HOME"/.vim/undo/   
 
 # fuck 
 command -v fuck >/dev/null && eval "$(thefuck --alias)"
@@ -63,12 +63,12 @@ then
 fi
 
 # for visual studio code
-DOTNET_CLI_TELEMETRY_OPTOUT=1
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # for my binaries
-PATH=$PATH:$HOME/bin
+PATH=$PATH:"$HOME"/bin
 
-export WORKON_HOME=$HOME/.virtualenvs
+export WORKON_HOME="$HOME"/.virtualenvs
 # virtualenv and virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
