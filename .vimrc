@@ -622,10 +622,10 @@ let g:jedi#goto_definitions_command = "<leader>d"
 let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
+let g:jedi#show_call_signatures = "1"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
-let g:jedi#completions_enabled = 0 # use deoplete-jedi for completions
+let g:jedi#completions_enabled = 0 " use deoplete-jedi for completions
 
 " typescript related
 let g:yats_host_keyword = 1
