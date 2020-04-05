@@ -7,7 +7,8 @@ set encoding=utf-8
 "*****************************************************************************
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
-let g:vim_bootstrap_langs = "python"
+"let g:vim_bootstrap_langs = "python"
+let $VIRTUAL_ENV = $CONDA_PREFIX
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 
 if !filereadable(vimplug_exists)
@@ -80,6 +81,16 @@ Plug 'google/vim-codefmt'
 " `:help :Glaive` for usage.
 Plug 'google/vim-glaive'
 
+" assuming you're using vim-plug: https://github.com/junegunn/vim-plug
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'HansPinckaers/ncm2-jedi'
+
 " for TypeScript
 " REQUIRED: Add a syntax file. YATS is the best
 Plug 'HerringtonDarkholme/yats.vim'
@@ -120,8 +131,8 @@ au FileType java setlocal omnifunc=javacomplete#Complete
 "" Python Bundle
 Plug 'tmhedberg/SimpylFold'
 Plug 'Chiel92/vim-autoformat'
-Plug 'goerz/jupytext.vim'
-Plug 'ivanov/vim-ipython'
+"Plug 'goerz/jupytext.vim'
+"Plug 'ivanov/vim-ipython'
 Plug 'cjrh/vim-conda'
 
 " JS
@@ -381,6 +392,15 @@ endif
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
+autocmd FileType go let b:noNCM2=1
+
+func! NCM2_enable()
+  if exists('b:noNCM2')
+    return
+  endif
+  call ncm2#enable_for_buffer()
+endfunc
+autocmd BufEnter * call NCM2_enable()
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
   autocmd!
@@ -616,6 +636,7 @@ augroup vimrc-python
 augroup END
 
 " jedi-vim
+let g:jedi#auto_initialization = 1
 let g:jedi#popup_on_dot = 0
 let g:jedi#goto_assignments_command = "<leader>g"
 let g:jedi#goto_definitions_command = "<leader>d"
@@ -623,7 +644,7 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "1"
-let g:jedi#completions_command = "<C-Space>"
+let g:jedi#completions_command = ""
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 0 " use deoplete-jedi for completions
 
@@ -840,10 +861,11 @@ let g:SimpylFold_docstring_preview = 1
 " noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
-"let g:python_host_prog = '/Users/v/anaconda3/envs/torch/bin/python2'
-let g:python3_host_prog = '/Users/v/anaconda3/envs/torch/bin/python3'
-let g:python2_host_prog = '/Users/v/anaconda3/envs/torch/bin/python3'
-let g:python_host_prog = '/Users/v/anaconda3/envs/torch/bin/python3'
+let g:python3_host_prog = $CONDA_PREFIX . "/bin/python"
+let g:python_host_prog = '/Users/v/anaconda3/envs/ipod/bin/python'
+"let g:python_host_prog = '/Users/v/anaconda3/envs/torch/bin/python3'
+"let g:python_host_prog = '/usr/bin/python'
+"let g:python_host_prog = $CONDA_PREFIX . "/bin/python"
 
 "set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
 "noremap <Leader>x :bunload<CR>
@@ -887,6 +909,7 @@ inoremap jk <ESC>
 inoremap fd <ESC>
 inoremap <C-z> <ESC>
 noremap \ :Rg<SPACE>
+inoremap <Leader>s <ESC>:w<CR>
 inoremap <Leader>ss <C-O>:w<CR>
 inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
@@ -1103,9 +1126,9 @@ nnoremap <Leader>a :copen <BAR> wincmd p <BAR> AsyncRun<SPACE>
 
 " for complition
 " neocomplete like
-set completeopt+=noinsert
 " deoplete.nvim recommend
-set completeopt+=noselect
+" added for ncm2
+set completeopt=noinsert,noselect,menuone
 " deoplete-go settings
 "let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gopls'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
@@ -1117,6 +1140,14 @@ noremap <silent><Leader>p :<C-u>wincmd p<CR>
 let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-let g:jedi#force_py_version = 2
+"let g:jedi#force_py_version = 2  " conda plugin recommend
 let g:UltisnipsUsePythonVersion = 2
 let g:conda_startup_msg_suppress = 1
+
+" other ncm2 settings
+set shortmess+=c
+inoremap <c-c> <ESC>
+let ncm2#popup_delay = 5
+let ncm2#complete_length = [[1, 1]]
+" Use new fuzzy based matches
+let g:ncm2#matcher = 'substrfuzzy'
