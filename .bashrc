@@ -116,7 +116,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PROMPT_COMMAND='echo -ne "[$(date +%H%M)]\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+    #PROMPT_COMMAND='echo -ne "[$(date +%H%M)]\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
@@ -168,7 +168,19 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 set -o vi
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND} __bp_precmd_invoke_cmd; __bp_interactive_mode; __git_ps1 "\[\033[0;33m\]\u@\h \[\033[1;34m\]\w\[\033[0m\]" "\[\033[1;34m\] $\[\033[0m\] "; __git_ps1 "\[\033[0;33m\]\u@\h \[\033[1;34m\]\w\[\033[0m\]" "\[\033[1;34m\] $\[\033[0m\] "; __git_ps1 "\[\033[0;33m\]\u@\h \[\033[1;34m\]\w\[\033[0m\]" "\[\033[1;34m\] $\[\033[0m\] "
+
+# credit https://stackoverflow.com/questions/4133904/ps1-line-with-git-current-branch-and-colors
+function color_my_prompt {
+    local __user_and_host="\[\033[01;32m\]\u@\h"
+    local __cur_location="\[\033[01;34m\]\w"
+    local __git_branch_color="\[\033[31m\]"
+    #local __git_branch="\`ruby -e \"print (%x{git branch 2> /dev/null}.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`"
+    local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+    local __prompt_tail="\[\033[35m\]$"
+    local __last_color="\[\033[00m\]"
+    export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
+}
+color_my_prompt
 
 export CALIBRE_USE_SYSTEM_THEME=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
