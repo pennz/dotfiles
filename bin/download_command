@@ -1,0 +1,2 @@
+#!/bin/sh
+aria2c -j 6 -c --all-proxy="http://192.168.123.175:7777" -x 10 -s 5 $1
