@@ -49,15 +49,12 @@ if type brew &>/dev/null; then
 fi
 
 # for cross compilation
-. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
-. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
-
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWCOLORHINTS=1
-#export GIT_PS1_SHOWUNTRACKEDFILES=1
-export GIT_PS1_SHOWUPSTREAM="auto"
-
-# Watch the escapes for " in the following
-
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+#. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+#
+#export GIT_PS1_SHOWDIRTYSTATE=1
+#export GIT_PS1_SHOWSTASHSTATE=1
+#export GIT_PS1_SHOWCOLORHINTS=1
+##export GIT_PS1_SHOWUNTRACKEDFILES=1
+#export GIT_PS1_SHOWUPSTREAM="auto"
+#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
