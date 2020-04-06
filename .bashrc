@@ -116,7 +116,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+    PROMPT_COMMAND='echo -ne "[$(date +%H%M)]\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
@@ -167,22 +167,9 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-if [ -x /home/pengyu/anaconda3/bin/conda ]; then
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
-
-    __conda_setup="$('/home/pengyu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    else
-        if [ -f "/home/pengyu/anaconda3/etc/profile.d/conda.sh" ]; then
-            . "/home/pengyu/anaconda3/etc/profile.d/conda.sh"
-        else
-            export PATH="/home/pengyu/anaconda3/bin:$PATH"
-        fi
-    fi
-    unset __conda_setup
-    # <<< conda initialize <<<
-fi
-
 set -o vi
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND} __bp_precmd_invoke_cmd; __bp_interactive_mode; __git_ps1 "\[\033[0;33m\]\u@\h \[\033[1;34m\]\w\[\033[0m\]" "\[\033[1;34m\] $\[\033[0m\] "; __git_ps1 "\[\033[0;33m\]\u@\h \[\033[1;34m\]\w\[\033[0m\]" "\[\033[1;34m\] $\[\033[0m\] "; __git_ps1 "\[\033[0;33m\]\u@\h \[\033[1;34m\]\w\[\033[0m\]" "\[\033[1;34m\] $\[\033[0m\] "
+
+export CALIBRE_USE_SYSTEM_THEME=1
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
