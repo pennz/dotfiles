@@ -1,7 +1,7 @@
-shell=$(readlink /proc/$$/exe)
+shell=$(/usr/bin/readlink /proc/$$/exe)
 case $shell in
-  *bash) shopt -s expand_aliases;;
-  *) setopt aliases;;
+  *zsh) setopt aliases;;
+  *) shopt -s expand_aliases;;
 esac
 
 alias grep='grep --color=auto'
