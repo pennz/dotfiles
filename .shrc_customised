@@ -35,7 +35,7 @@ fi
 unset __conda_setup
 # <<< conda init <<<<Paste>
 
-source activate torch
+#source activate torch
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -47,3 +47,17 @@ if type brew &>/dev/null; then
   # I actually like that man grep gives the BSD grep man page
   #for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnuman; do export MANPATH=$d:$MANPATH; done
 fi
+
+# for cross compilation
+. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+#export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+
+# Watch the escapes for " in the following
+
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"

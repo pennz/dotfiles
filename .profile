@@ -42,8 +42,8 @@ if [ -f "$HOME"/.bash_aliases ]; then
     source "$HOME"/.bash_aliases
 fi
 
-if [ -f "$HOME"/.bash_customed ]; then
-    source "$HOME"/.bash_customed
+if [ -f "$HOME"/.shrc_customised ]; then
+    source "$HOME"/.shrc_customised
 fi
 
 # nvim back folder
