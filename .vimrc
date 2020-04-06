@@ -1151,3 +1151,5 @@ let ncm2#popup_delay = 5
 let ncm2#complete_length = [[1, 1]]
 " Use new fuzzy based matches
 let g:ncm2#matcher = 'substrfuzzy'
+
+tnoremap <Esc> <C-\><C-n>
