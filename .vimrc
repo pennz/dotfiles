@@ -1153,3 +1153,4 @@ let ncm2#complete_length = [[1, 1]]
 let g:ncm2#matcher = 'substrfuzzy'
 
 tnoremap <Esc> <C-\><C-n>
+set lazyredraw
