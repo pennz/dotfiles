@@ -1,8 +1,10 @@
-shell=$(/usr/bin/readlink /proc/$$/exe)
-case $shell in
-  *zsh) setopt aliases;;
-  *) shopt -s expand_aliases;;
-esac
+#shell=$(/usr/bin/readlink /proc/$$/exe)
+#case $shell in
+#  *zsh) setopt aliases;;
+#  *) shopt -s expand_aliases;;
+#esac
+type setopt > /dev/null && setopt aliases
+type shopt > /dev/null && shopt -s expand_aliases
 
 alias grep='grep --color=auto'
 alias l='ls -CF'
