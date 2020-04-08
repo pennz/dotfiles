@@ -133,7 +133,7 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Chiel92/vim-autoformat'
 "Plug 'goerz/jupytext.vim'
 "Plug 'ivanov/vim-ipython'
-Plug 'cjrh/vim-conda'
+"Plug 'cjrh/vim-conda'
 
 " JS
 Plug 'pangloss/vim-javascript'
@@ -1153,3 +1153,4 @@ let ncm2#complete_length = [[1, 1]]
 let g:ncm2#matcher = 'substrfuzzy'
 
 tnoremap <Esc> <C-\><C-n>
+set lazyredraw
