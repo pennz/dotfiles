@@ -50,6 +50,7 @@ backup () {
         --exclude "$SOURCE_HOME/Downloads/*"   \
         --exclude "$SOURCE_HOME/.config/electronic-wechat/*" \
         --exclude "$SOURCE_HOME/.local/share/Trash/*" \
+        --exclude "$SOURCE_HOME/works/android_build/aosp/*" \
         --exclude '/home/boinc/*'       \
         --exclude '/Users/Shared/*'       \
         --exclude '/var/cache/*'        \
