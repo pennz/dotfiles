@@ -57,4 +57,5 @@ fi
 #export GIT_PS1_SHOWCOLORHINTS=1
 ##export GIT_PS1_SHOWUNTRACKEDFILES=1
 #export GIT_PS1_SHOWUPSTREAM="auto"
-#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#PATH="/usr/local/go/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/usr/local/go/bin:$PATH"
