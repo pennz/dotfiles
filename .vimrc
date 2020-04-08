@@ -400,7 +400,10 @@ func! NCM2_enable()
   endif
   call ncm2#enable_for_buffer()
 endfunc
-autocmd BufEnter * call NCM2_enable()
+
+if !lite
+  autocmd BufEnter * call NCM2_enable()
+endif
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
   autocmd!
@@ -1154,3 +1157,4 @@ let g:ncm2#matcher = 'substrfuzzy'
 
 tnoremap <Esc> <C-\><C-n>
 set lazyredraw
+let g:go_version_warning = 0
