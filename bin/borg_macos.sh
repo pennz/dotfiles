@@ -42,12 +42,14 @@ backup () {
         --exclude "$SOURCE_HOME/anaconda3/*"           \
         --exclude "$SOURCE_HOME/snap/*"        \
         --exclude "$SOURCE_HOME/miniconda3/*"  \
+        --exclude "$SOURCE_HOME/.Genymobile/*" \
         --exclude "$SOURCE_HOME/Android/*"  \
         --exclude "$SOURCE_HOME/Arduino/*"  \
         --exclude "$SOURCE_HOME/Library/Caches/*"\
         --exclude "$SOURCE_HOME/oldhome/*"  \
         --exclude "$SOURCE_HOME/e/*"           \
         --exclude "$SOURCE_HOME/Downloads/*"   \
+        --exclude "$SOURCE_HOME/.android/avd/*" \
         --exclude "$SOURCE_HOME/.config/electronic-wechat/*" \
         --exclude "$SOURCE_HOME/.local/share/Trash/*" \
         --exclude "$SOURCE_HOME/works/android_build/aosp/*" \
