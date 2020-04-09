@@ -13,3 +13,6 @@
 [submodule "go/src/golang.org/x/tools"]
 	path = go/src/golang.org/x/tools
 	url = https://go.googlesource.com/tools
+[submodule ".SpaceVim"]
+	path = .SpaceVim
+	url = https://github.com/SpaceVim/SpaceVim.git
