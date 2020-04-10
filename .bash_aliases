@@ -28,7 +28,6 @@ if [ x"${sys_info/inux/}" != x"$sys_info" ]; then
 fi
 
 SERVER_IP=lab.pengyuzhou.com
-PROXY_URL='http://192.168.2.1:7777'
 
 alias p='popd'
 alias c='pushd'
@@ -37,3 +36,4 @@ alias setproxy="export HTTP_PROXY=$PROXY_URL; export HTTPS_PROXY=$PROXY_URL; exp
 alias unsetproxy='export http_proxy= ; export https_proxy= '
 alias antlr4='java org.antlr.v4.Tool'
 alias grun='java org.antlr.v4.gui.TestRig'
+alias vim='nvim -u ~/.config/nvim_back/init.vim'
