@@ -35,6 +35,7 @@ call plug#begin(expand('~/.config/nvim_back/plugged'))
 
 let $BASH_ENV = expand('~/.vim_bash_env')
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
@@ -306,7 +307,7 @@ let g:airline_theme = 'papercolor'
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#ale#enabled = 0
 let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#tagbar#enabled = 0
+let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 
 let g:airline#extensions#branch#vcs_priority = ["git", "mercurial"]
