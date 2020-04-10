@@ -30,6 +30,9 @@ if home_path =~ "pengyu"
   let lite = 1
 endif
 
+nnoremap <SPACE> <Nop>
+"" Map leader to <SPACE>
+let mapleader=' '
 " Required:
 call plug#begin(expand('~/.config/nvim_back/plugged'))
 
@@ -113,8 +116,8 @@ Plug 'honza/vim-snippets'
 "*****************************************************************************
 
 " Java
-Plug 'artur-shaik/vim-javacomplete2'
-au FileType java setlocal omnifunc=javacomplete#Complete
+"Plug 'artur-shaik/vim-javacomplete2'
+"au FileType java setlocal omnifunc=javacomplete#Complete
 ""To enable smart (trying to guess import option) inserting class imports with F4, add:
 "nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 "imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
@@ -203,9 +206,6 @@ set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set expandtab
-
-"" Map leader to ,
-let mapleader=','
 
 "" Enable hidden buffers
 set hidden
@@ -298,15 +298,31 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 "noremap n nzzzv
 "nnoremap N Nzzzv
 
-if exists("*fugitive#statusline")
-  set statusline+=%{fugitive#statusline()}
-endif
+"if exists("*coc#status")
+"  set statusline+=%{coc#status()}
+"endif
+"if exists("*fugitive#statusline")
+"  set statusline+=%{fugitive#statusline()}
+"endif
 
 " vim-airline
+
+func GetCustomisedText()
+    if exists("*coc#status")
+      echo coc#status() . " Fighting"
+    endif
+endfunc
+
+call airline#parts#define_function('customise_st', 'GetCustomisedText')
+call airline#parts#define_minwidth('customise_st', 150)
+call airline#parts#define_condition('customise_st', 'getcwd() =~ "works"')
+"let g:airline_section_y = airline#section#create_right(['ffenc','customise_st'])
+
 let g:airline_theme = 'papercolor'
 let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#ale#enabled = 0
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = "default"
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 
@@ -319,7 +335,7 @@ let airline#extensions#ale#open_lnum_symbol = '(L'
 let airline#extensions#ale#close_lnum_symbol = ')'
 
 let g:airline#extensions#bookmark#enabled = 0
-let g:airline#extensions#fugitiveline#enabled = 0
+let g:airline#extensions#fugitiveline#enabled = 1
 
 let g:airline#extensions#ctrlp#enabled = 1
 let g:airline#extensions#ctrlp#color_template = 'insert' 
@@ -327,8 +343,6 @@ let g:airline#extensions#ctrlp#color_template = 'insert'
 "let g:airline#extensions#ctrlp#color_template = 'visual'
 "let g:airline#extensions#ctrlp#color_template = 'replace'
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
-
-
 
 "*****************************************************************************
 "" Abbreviations
@@ -492,7 +506,7 @@ noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Git
 " Add Gadd
-inoremap <silent> <Leader>ga <ESC> :silent !git add %<CR>
+"inoremap <silent> <Leader>ga <ESC> :silent !git add %<CR>
 noremap <silent> <Leader>ga :silent !git add %<CR>
 noremap <Leader>gw :Gwrite<CR>
 noremap <Leader>gc :copen \| wincmd p \| AsyncRun git commit -sm<SPACE>
@@ -506,7 +520,7 @@ noremap <Leader>gr :GRemove<CR>
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
-nnoremap <leader>ss :SaveSession<Space>
+nnoremap <leader>sss :SaveSession<Space>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
@@ -560,7 +574,8 @@ cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
-nmap <leader>y :History:<CR>
+nmap <leader>y :History<CR>
+nmap <leader>M :Marks<CR>
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -602,7 +617,7 @@ noremap <leader>x :bn<CR>
 
 "" Close buffer
 noremap <leader>c :bd<CR>
-inoremap <leader>c <ESC>:BD<CR>
+"inoremap <leader>c <ESC>:BD<CR>
 noremap <leader>C :BD<CR>
 
 "" Clean search (highlight)
@@ -651,6 +666,9 @@ let g:jedi#show_call_signatures = "1"
 let g:jedi#completions_command = ""
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 0 " use deoplete-jedi for completions
+
+autocmd FileType java
+       \ call deoplete#custom#buffer_option('auto_complete', v:false)
 
 " typescript related
 let g:yats_host_keyword = 1
@@ -775,7 +793,7 @@ inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
 inoremap <S-Tab> <C-n>
 
 " Switch between the last two files
-nmap <Leader>. <C-^>
+nmap <Leader>p <C-^>
 
 " Run commands that require an interactive shell
 nnoremap <silent> <Leader>R :source ~/.vimrc_back<CR>
@@ -824,7 +842,7 @@ set backspace=indent,eol,start		" 退格键（backspace）默认工作vi模式�
 " set pastetoggle=<f3>			" 按下f3键可以切换粘贴插入模式[insert (paste)]和普通插入模式。
 
 " easy motion
-"map <Leader><Leader> <Plug>(easymotion-prefix)
+nnoremap <Leader><Leader> <Plug>(easymotion-prefix)
 
 
 "" Vmap for maintain Visual Mode after shifting > and <
@@ -852,11 +870,11 @@ map <C-n> :cnext<CR>
 "nmap s <Plug>(easymotion-overwin-f2)
 
 " Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
+"map <Leader>L <Plug>(easymotion-bd-jk)
+"nmap <Leader>L <Plug>(easymotion-overwin-line)
 
 " Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
+"map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 let g:SimpylFold_docstring_preview = 1
@@ -913,9 +931,10 @@ inoremap jk <ESC>
 inoremap fd <ESC>
 inoremap <C-z> <ESC>
 noremap \ :Rg<SPACE>
-inoremap <Leader>s <ESC>:w<CR>
-inoremap <Leader>ss <C-O>:w<CR>
-inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
+"inoremap <Leader>s <ESC>:w<CR>
+nnoremap <Leader>s <ESC>:w<CR>
+"inoremap <Leader>ss <C-O>:w<CR>
+"inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
 nnoremap <silent> <leader>f :Files<CR>
@@ -1055,69 +1074,69 @@ nnoremap <Leader>a :copen <BAR> wincmd p <BAR> AsyncRun<SPACE>
 " coc.nvim default settings
 " -------------------------------------------------------------------------------------------------
 
-"" if hidden is not set, TextEdit might fail.
-"set hidden
-"" Better display for messages
-"set cmdheight=2
-"" Smaller updatetime for CursorHold & CursorHoldI
-"set updatetime=300
-"" don't give |ins-completion-menu| messages.
-"set shortmess+=c
-"" always show signcolumns
-"set signcolumn=yes
-"
-"" Use tab for trigger completion with characters ahead and navigate.
-"" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-"inoremap <silent><expr> <TAB>
-"      \ pumvisible() ? "\<C-n>" :
-"      \ <SID>check_back_space() ? "\<TAB>" :
-"      \ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-"
-"function! s:check_back_space() abort
-"  let col = col('.') - 1
-"  return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
-"
-"" Use <c-space> to trigger completion.
-"inoremap <silent><expr> <c-space> coc#refresh()
-"
-"" Use `[c` and `]c` to navigate diagnostics
-"nmap <silent> [c <Plug>(coc-diagnostic-prev)
-"nmap <silent> ]c <Plug>(coc-diagnostic-next)
-"
-"" Remap keys for gotos
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> gy <Plug>(coc-type-definition)
-"nmap <silent> gi <Plug>(coc-implementation)
-"nmap <silent> gr <Plug>(coc-references)
-"
-"" Use U to show documentation in preview window
-"nnoremap <silent> U :call <SID>show_documentation()<CR>
-"
-"" Remap for rename current word
-"nmap <leader>rn <Plug>(coc-rename)
-"
-"" Remap for format selected region
-"vmap <leader>f  <Plug>(coc-format-selected)
-"nmap <leader>f  <Plug>(coc-format-selected)
-"" Show all diagnostics
-"nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-"" Manage extensions
-"nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-"" Show commands
-"nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-"" Find symbol of current document
-"nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-"" Search workspace symbols
-"nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-"" Do default action for next item.
-"nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-"" Do default action for previous item.
-"nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-"" Resume latest coc list
-"nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-"
+" if hidden is not set, TextEdit might fail.
+set hidden
+" Better display for messages
+set cmdheight=2
+" Smaller updatetime for CursorHold & CursorHoldI
+set updatetime=300
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" always show signcolumns
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use `[c` and `]c` to navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use U to show documentation in preview window
+nnoremap <silent> U :call <SID>show_documentation()<CR>
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap for format selected region
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
 "" disable vim-go :GoDef short cut (gd)
 "" this is handled by LanguageClient [LC]
 "let g:go_def_mapping_enabled = 0
@@ -1159,3 +1178,23 @@ let g:ncm2#matcher = 'substrfuzzy'
 tnoremap <Esc> <C-\><C-n>
 set lazyredraw
 let g:go_version_warning = 0
+nnoremap <silent> <Leader>h :<C-u>hide<CR>
+
+" Define mappings
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+  \ denite#do_map('do_action')
+  nnoremap <silent><buffer><expr> d
+  \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+  \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> q
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i
+  \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space>
+  \ denite#do_map('toggle_select').'j'
+endfunction
+
+nnoremap <leader>ss :<C-u>w<CR>
