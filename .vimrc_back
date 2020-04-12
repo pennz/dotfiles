@@ -574,7 +574,7 @@ cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
-nmap <leader>y :History<CR>
+nmap <leader>H :History<CR>
 nmap <leader>M :Marks<CR>
 
 " snippets
@@ -669,6 +669,7 @@ let g:jedi#completions_enabled = 0 " use deoplete-jedi for completions
 
 autocmd FileType java
        \ call deoplete#custom#buffer_option('auto_complete', v:false)
+nnoremap <silent><Leader>dd :<C-u>call deoplete#custom#buffer_option('auto_complete', v:false)<CR>
 
 " typescript related
 let g:yats_host_keyword = 1
@@ -1198,3 +1199,6 @@ function! s:denite_my_settings() abort
 endfunction
 
 nnoremap <leader>ss :<C-u>w<CR>
+nnoremap <leader>d :<C-u>bd<CR>
+nnoremap <leader>D :<C-u>BD<CR>
+nnoremap <leader>p <C-^>
