@@ -5,7 +5,7 @@ set encoding=utf-8
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
-let vimplug_exists=expand('~/.config/nvim_back_back/autoload/plug.vim')
+let vimplug_exists=expand('~/.config/nvim_back/autoload/plug.vim')
 
 "let g:vim_bootstrap_langs = "python"
 let $VIRTUAL_ENV = $CONDA_PREFIX
@@ -815,9 +815,9 @@ set incsearch				" 输入搜索内容时就同步显示搜索结果
 set ignorecase				" 搜索时大小写不敏感
 set smartcase
 set noswapfile
-set backupdir=~/.vim_back/backup//
-set directory=~/.vim_back/swap//
-set undodir=~/.vim_back/undo//
+set backupdir=~/.vim_back/backup/
+set directory=~/.vim_back/swap/
+set undodir=~/.vim_back/undo/
 set undofile "undo !!!!!!!!!!!!!
 set nowrap				" 长度超过窗口宽度不要换行显示
 set list				" 让vim显示空格、tab、换行等不可见字符
