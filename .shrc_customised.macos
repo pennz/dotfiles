@@ -14,7 +14,7 @@ export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
-PROXY_URL='http://127.0.0.1:8081'
+PROXY_URL='http://127.0.0.1:7890'
 
 export SHELL=$(which zsh)
 
@@ -58,4 +58,4 @@ fi
 ##export GIT_PS1_SHOWUNTRACKEDFILES=1
 #export GIT_PS1_SHOWUPSTREAM="auto"
 #PATH="/usr/local/go/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-PATH="/usr/local/go/bin:$PATH"
+export ANDROID_HOME=$HOME/Library/Android/sdk
