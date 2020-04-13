@@ -116,3 +116,4 @@ autoload -U promptinit; promptinit
 
 zstyle :prompt:pure:git:stash show yes
 prompt pure
+eval "$(starship init zsh)"
