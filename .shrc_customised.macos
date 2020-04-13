@@ -14,7 +14,7 @@ export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
-PROXY_URL='http://127.0.0.1:7890'
+PROXY_URL='http://127.0.0.1:8080'
 
 export SHELL=$(which zsh)
 

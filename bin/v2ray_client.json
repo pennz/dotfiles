@@ -10,14 +10,7 @@
     {
       "tag": "agentinhttp",
       "port": 8080,
-      "listen": "127.0.0.1",
-      "protocol": "http",
-      "settings": {}
-    },
-    {
-      "tag": "agentinhttp",
-      "port": 8080,
-      "listen": "192.168.2.89",
+      "listen": "0.0.0.0",
       "protocol": "http",
       "settings": {}
     },
