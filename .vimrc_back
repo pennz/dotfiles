@@ -884,8 +884,8 @@ let g:SimpylFold_docstring_preview = 1
 " noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
-let g:python3_host_prog = $CONDA_PREFIX . "/bin/python"
-let g:python_host_prog = '/Users/v/anaconda3/envs/ipod/bin/python'
+let g:python3_host_prog = "/usr" . "/bin/python3"
+let g:python_host_prog = "/usr" . "/bin/python"
 "let g:python_host_prog = '/Users/v/anaconda3/envs/torch/bin/python3'
 "let g:python_host_prog = '/usr/bin/python'
 "let g:python_host_prog = $CONDA_PREFIX . "/bin/python"
