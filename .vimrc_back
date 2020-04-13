@@ -307,7 +307,7 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
 " vim-airline
 
-func GetCustomisedText()
+func! GetCustomisedText()
     if exists("*coc#status")
       echo coc#status() . " Fighting"
     endif
@@ -843,7 +843,7 @@ set backspace=indent,eol,start		" 退格键（backspace）默认工作vi模式�
 " set pastetoggle=<f3>			" 按下f3键可以切换粘贴插入模式[insert (paste)]和普通插入模式。
 
 " easy motion
-nnoremap <Leader><Leader> <Plug>(easymotion-prefix)
+nnoremap <Leader>em <Plug>(easymotion-prefix)
 
 
 "" Vmap for maintain Visual Mode after shifting > and <
@@ -1199,6 +1199,7 @@ function! s:denite_my_settings() abort
 endfunction
 
 nnoremap <leader>ss :<C-u>w<CR>
+nnoremap <Leader><Leader> <SPACE>
 nnoremap <leader>d :<C-u>bd<CR>
 nnoremap <leader>D :<C-u>BD<CR>
 nnoremap <leader>p <C-^>
