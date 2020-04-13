@@ -35,6 +35,7 @@ backup () {
         --exclude "/usr/local/texlive/*"          \
         --exclude "/usr/local/Homebrew/.git/*"          \
         --exclude "/usr/local/Homebrew/.github/*"          \
+        --exclude "$SOURCE_HOME/Library/Containers/com.docker.docker/Data/vms" \
         --exclude "$SOURCE_HOME/VirtualBox\ VMs/*"          \
         --exclude "$SOURCE_HOME/VirtualBox VMs/*"       \
         --exclude "$SOURCE_HOME/not-backup/*"           \
@@ -50,6 +51,7 @@ backup () {
         --exclude "$SOURCE_HOME/e/*"           \
         --exclude "$SOURCE_HOME/Downloads/*"   \
         --exclude "$SOURCE_HOME/.android/avd/*" \
+        --exclude "$SOURCE_HOME/.docker/*" \
         --exclude "$SOURCE_HOME/.config/electronic-wechat/*" \
         --exclude "$SOURCE_HOME/.local/share/Trash/*" \
         --exclude "$SOURCE_HOME/works/android_build/aosp/*" \
