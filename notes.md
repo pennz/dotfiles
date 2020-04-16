@@ -53,7 +53,13 @@ then find your app name in the website for your created app
 now 
 heroku git:clone -a YOUR_APP # authentication will be set up automatically
 
-Then you change your code
+Then you change your code, and 
+```sh
+make heroku
+```
+which will create related docker and push to the heroku server and then run our server
+
+ 
 heroku container:login # so you can push to the heroku registry
 # 10:24
 check the tda4 thing, ~ do it this afternoon
