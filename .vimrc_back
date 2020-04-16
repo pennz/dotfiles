@@ -1204,3 +1204,9 @@ nnoremap <Leader><Leader> <SPACE>
 nnoremap <leader>d :<C-u>bd<CR>
 nnoremap <leader>D :<C-u>BD<CR>
 nnoremap <leader>p <C-^>
+
+" timeout for keys mappings
+set timeout
+set ttimeout
+
+set tm=200
