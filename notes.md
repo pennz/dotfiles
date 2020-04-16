@@ -16,7 +16,6 @@ So for the frida thing?
 
 
 ## useful commands
-
 base ❯ docker save kylemanna/aosp:latest-add-py3-repo |  pv | docker $(docker-machine config default) load
 1.04GiB 0:00:25 [42.5MiB/s] [                               <=>                                                                  ]
 1ea5a27b0484: Loading layer [==================================================>]  123.5MB/123.5MB
@@ -37,4 +36,25 @@ Loaded image: kylemanna/aosp:latest-add-py3-repo
 
 # 16, 09:24
 start of the day
+# todo setup heroku
+
+## website
+https://devcenter.heroku.com/articles/getting-started-with-go#set-up
+brew install heroku/brew/heroku
+To use the Heroku CLI's autocomplete --                                                                                                                       │+   1                                                                                   Via homebrew's shell completion:                                                                                                                            │  47
+    1) Follow homebrew's install instructions https://docs.brew.sh/Shell-Completion                                                                           │~
+        NOTE: For zsh, as the instructions mention, be sure compinit is autoloaded                                                                            │~
+              and called, either explicitly or via a framework like oh-my-zsh.                                                                                │~
+    2) Then run                                                                                                                                               │~      $ heroku autocomplete --refresh-cache
+    heroku autocomplete --refresh-cache
+#// it will log you in too
+then find your app name in the website for your created app
+
+now 
+heroku git:clone -a YOUR_APP # authentication will be set up automatically
+
+Then you change your code
+heroku container:login # so you can push to the heroku registry
+# 10:24
+check the tda4 thing, ~ do it this afternoon
 
