@@ -1,3 +1,22 @@
+# life
+Enjoy the moment
+
+
+*parts*
+
+# 15, 18:33
+worked on antlr thing, just retrieve memory.
+Test gg
+Test Done
+Antl4 thing, so it is the problem for go target generation, but the language is for CPP.
+It really takes time. Go to eat now.
+Another 25min ... still handle the error.
+And another time. Issue found , it can be search in the github. So always search.
+So for the frida thing?
+
+
+## useful commands
+
 base ❯ docker save kylemanna/aosp:latest-add-py3-repo |  pv | docker $(docker-machine config default) load
 1.04GiB 0:00:25 [42.5MiB/s] [                               <=>                                                                  ]
 1ea5a27b0484: Loading layer [==================================================>]  123.5MB/123.5MB
