@@ -507,10 +507,10 @@ noremap <Leader>v :<C-u>vsplit<CR>
 "" Git
 " Add Gadd
 "inoremap <silent> <Leader>ga <ESC> :silent !git add %<CR>
-noremap <silent> <Leader>ga :silent !git add %<CR>
+noremap <silent> <Leader>ga :silent !git -C %:p:h add %<CR>
 noremap <Leader>gw :Gwrite<CR>
-noremap <Leader>gc :copen \| wincmd p \| AsyncRun git commit -sm<SPACE>
-noremap <Leader>gg :Git add % \| copen \| wincmd p \| AsyncRun git commit -sm "Good Game" && git -C %:p:h push<CR>
+noremap <Leader>gc :copen \| wincmd p \| AsyncRun git -C %:p:h commit -sm<SPACE>
+noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add % && git commit -sm "Good Game" && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
 noremap <silent> <Leader>gsh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
 noremap <silent> <Leader>gll :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
@@ -924,7 +924,7 @@ endfunction
 
 "Bind the BufSel() function to a user-command
 command! -nargs=1 Bs :call BufSel("<args>")
-noremap <Leader>bs :Bs
+noremap <Leader>bs :Bs<SPACE>
 
 " Customized mapping...
 "vnoremap jk <ESC>
