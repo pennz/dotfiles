@@ -1195,4 +1195,4 @@ nnoremap <leader>p <C-^>
 " timeout for keys mappings
 set timeout
 set ttimeout
-set tm=200
+set tm=250
