@@ -1,0 +1,56 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "v2raygcon": {
+    "alias": "lab",
+    "description": ""
+  },
+  "inbounds": [
+    {
+      "tag": "agentinhttp",
+      "port": 8080,
+      "listen": "0.0.0.0",
+      "protocol": "http",
+      "settings": {}
+    },
+    {
+      "tag": "agentin",
+      "port": 1080,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {}
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "tag": "agentout",
+      "settings": {
+        "vnext": [
+          {
+            "address": "45.63.19.129",
+            "port": 26990,
+            "users": [
+              {
+                "id": "a37cd4fd-6dfd-4ebe-a2ce-afe1b4cdaca5",
+                "alterId": 16,
+                "security": "auto",
+                "level": 0
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    }
+  ]
+}
