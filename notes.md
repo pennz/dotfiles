@@ -64,3 +64,8 @@ heroku container:login # so you can push to the heroku registry
 # 10:24
 check the tda4 thing, ~ do it this afternoon
 
+# 4/17 9:17
+
+go rest api client
+we found this https://github.com/go-resty/resty
+
