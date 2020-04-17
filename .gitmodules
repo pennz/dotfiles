@@ -10,6 +10,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
-[submodule "go/src/golang.org/x/tools"]
-	path = go/src/golang.org/x/tools
-	url = https://go.googlesource.com/tools
+[submodule ".SpaceVim"]
+	path = .SpaceVim
+	url = https://github.com/SpaceVim/SpaceVim.git

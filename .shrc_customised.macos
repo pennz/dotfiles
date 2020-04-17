@@ -7,14 +7,14 @@ fi
 
 alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
-alias vim='nvim'
+alias vim='nvim -u ~/.config/nvim_back/init.vim'
+alias ccc="source $HOME/bin/ccc"
 
 export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$HOME/anaconda3/bin:$GOPATH/bin:$PATH:/usr/local/lib/ruby/gems/2.5.0/bin/
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
-#export http_proxy=http://127.0.0.1:7777/
-#export https_proxy=$http_proxy
+PROXY_URL='http://127.0.0.1:8080'
 
 export SHELL=$(which zsh)
 
@@ -57,4 +57,5 @@ fi
 #export GIT_PS1_SHOWCOLORHINTS=1
 ##export GIT_PS1_SHOWUNTRACKEDFILES=1
 #export GIT_PS1_SHOWUPSTREAM="auto"
-#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#PATH="/usr/local/go/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export ANDROID_HOME=$HOME/Library/Android/sdk
