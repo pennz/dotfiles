@@ -166,6 +166,7 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 " go
 "" Go Lang Bundle
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+Plug 'buoto/gotests-vim'
 
 "Plug 'autozimu/LanguageClient-neovim', {
 "    \ 'branch': 'next',
