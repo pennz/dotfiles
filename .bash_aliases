@@ -3,8 +3,8 @@
 #  *zsh) setopt aliases;;
 #  *) shopt -s expand_aliases;;
 #esac
-type setopt 1>/dev/null 2>1 && setopt aliases
-type shopt 1>/dev/null 2>1 && shopt -s expand_aliases
+type setopt 1>/dev/null 2>&1 && setopt aliases
+type shopt 1>/dev/null 2>&1 && shopt -s expand_aliases
 
 alias grep='grep --color=auto'
 alias l='ls -CF'
