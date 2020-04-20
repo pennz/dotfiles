@@ -38,7 +38,7 @@ call plug#begin(expand('~/.config/nvim_back/plugged'))
 
 let $BASH_ENV = expand('~/.vim_bash_env')
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
@@ -166,6 +166,7 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 " go
 "" Go Lang Bundle
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+Plug 'buoto/gotests-vim'
 
 "Plug 'autozimu/LanguageClient-neovim', {
 "    \ 'branch': 'next',
@@ -407,7 +408,7 @@ endif
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
-autocmd FileType go let b:noNCM2=1
+autocmd FileType go let b:noNCM2=1 " for go we use another ... "
 
 func! NCM2_enable()
   if exists('b:noNCM2')
@@ -507,10 +508,10 @@ noremap <Leader>v :<C-u>vsplit<CR>
 "" Git
 " Add Gadd
 "inoremap <silent> <Leader>ga <ESC> :silent !git add %<CR>
-noremap <silent> <Leader>ga :silent !git add %<CR>
+noremap <silent> <Leader>ga :silent !git -C %:p:h add %:p:t<CR>
 noremap <Leader>gw :Gwrite<CR>
-noremap <Leader>gc :copen \| wincmd p \| AsyncRun git commit -sm<SPACE>
-noremap <Leader>gg :Git add % \| copen \| wincmd p \| AsyncRun git commit -sm "Good Game" && git -C %:p:h push<CR>
+noremap <Leader>gc :copen \| wincmd p \| AsyncRun git -C %:p:h commit -sm<SPACE>
+noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && git commit -sm "Good Game" && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
 noremap <silent> <Leader>gsh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
 noremap <silent> <Leader>gll :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
@@ -669,7 +670,7 @@ let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 0 " use deoplete-jedi for completions
 
 autocmd FileType java
-       \ call deoplete#custom#buffer_option('auto_complete', v:false)
+       \ call deoplete#custom#buffer_option('auto_complete', v:false) | s:coc_setting()
 nnoremap <silent><Leader>dd :<C-u>call deoplete#custom#buffer_option('auto_complete', v:false)<CR>
 
 " typescript related
@@ -924,7 +925,7 @@ endfunction
 
 "Bind the BufSel() function to a user-command
 command! -nargs=1 Bs :call BufSel("<args>")
-noremap <Leader>bs :Bs
+noremap <Leader>bs :Bs<SPACE>
 
 " Customized mapping...
 "vnoremap jk <ESC>
@@ -1060,11 +1061,6 @@ let g:go_doc_keywordprg_enabled = 1
 call extend(g:ale_linters, {
     \"go": ['golint', 'gopls', 'go vet'], })
 
-"let g:LanguageClient_serverCommands = {
-"    \ 'go': ['gopls']
-"    \ }
-
-
 "" Include user's local vim config
 if filereadable(expand("~/.rc.local"))
   source ~/.rc.local
@@ -1087,6 +1083,7 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
+func! s:coc_setting()
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -1138,16 +1135,7 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-"" disable vim-go :GoDef short cut (gd)
-"" this is handled by LanguageClient [LC]
-"let g:go_def_mapping_enabled = 0
-"
-"nnoremap <silent> <leader>h :call LanguageClient_textDocument_hover()<CR>
-"nnoremap <silent> <leader>d :call LanguageClient_textDocument_definition()<CR>
-"nnoremap <silent> <leader>fr :call LanguageClient_textDocument_references()<CR>
-"nnoremap <silent> <leader>ren :call LanguageClient_textDocument_rename()<CR>
-"nnoremap <silent> <leader>m :call LanguageClient_contextMenu()<CR>
+endfunc
 
 " for complition
 " neocomplete like
@@ -1199,8 +1187,13 @@ function! s:denite_my_settings() abort
   \ denite#do_map('toggle_select').'j'
 endfunction
 
-nnoremap <leader>ss :<C-u>w<CR>
-nnoremap <Leader><Leader> <SPACE>
+nnoremap <leader>ss :<C-u>wq<CR>
+nnoremap <Leader><Leader> <C-^>
 nnoremap <leader>d :<C-u>bd<CR>
 nnoremap <leader>D :<C-u>BD<CR>
 nnoremap <leader>p <C-^>
+
+" timeout for keys mappings
+set timeout
+set ttimeout
+set tm=250
