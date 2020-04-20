@@ -36,6 +36,7 @@ backup () {
         --exclude "/usr/local/Homebrew/.git/*"          \
         --exclude "/usr/local/Homebrew/.github/*"          \
         --exclude "$SOURCE_HOME/Library/Containers/com.docker.docker/Data/vms" \
+        --exclude "$SOURCE_HOME/works/android_build/aosp.sparseimage" \
         --exclude "$SOURCE_HOME/VirtualBox\ VMs/*"          \
         --exclude "$SOURCE_HOME/VirtualBox VMs/*"       \
         --exclude "$SOURCE_HOME/not-backup/*"           \
