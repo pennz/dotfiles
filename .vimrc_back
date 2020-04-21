@@ -398,7 +398,8 @@ endif
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
-autocmd FileType go let b:noNCM2=1 " for go we use another ... "
+autocmd FileType go let b:noNCM2=0 " for go we use another ... "
+autocmd FileType go CocDisable
 
 func! NCM2_enable()
   if exists('b:noNCM2')
@@ -770,20 +771,21 @@ endif
 " Use one space, not two, after punctuation.
 set nojoinspaces
 
-" Tab completion
+" Tab completion -> mapping use ncm2 suggested one
+" https://vimawesome.com/plugin/ncm2
 " will insert tab at beginning of line,
 " will use completion if not at beginning
-set wildmode=list:longest,list:full
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<Tab>"
-    else
-        return "\<C-p>"
-    endif
-endfunction
-inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
-inoremap <S-Tab> <C-n>
+"set wildmode=list:longest,list:full
+"function! InsertTabWrapper()
+"    let col = col('.') - 1
+"    if !col || getline('.')[col - 1] !~ '\k'
+"        return "\<Tab>"
+"    else
+"        return "\<C-p>"
+"    endif
+"endfunction
+"inoremap <Tab> <C-r>=InsertTabWrapper()<CR>
+"inoremap <S-Tab> <C-n>
 
 " Switch between the last two files
 nmap <Leader>p <C-^>
@@ -1068,55 +1070,55 @@ set signcolumn=yes
 func! s:coc_setting()
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+	inoremap <silent><expr> <TAB>
+		  \ pumvisible() ? "\<C-n>" :
+		  \ <SID>check_back_space() ? "\<TAB>" :
+		  \ coc#refresh()
+	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+	function! s:check_back_space() abort
+	  let col = col('.') - 1
+	  return !col || getline('.')[col - 1]  =~# '\s'
+	endfunction
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+	" Use <c-space> to trigger completion.
+	inoremap <silent><expr> <c-space> coc#refresh()
 
-" Use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
+	" Use `[c` and `]c` to navigate diagnostics
+	nmap <silent> [c <Plug>(coc-diagnostic-prev)
+	nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+	" Remap keys for gotos
+	nmap <silent> gd <Plug>(coc-definition)
+	nmap <silent> gy <Plug>(coc-type-definition)
+	nmap <silent> gi <Plug>(coc-implementation)
+	nmap <silent> gr <Plug>(coc-references)
 
-" Use U to show documentation in preview window
-nnoremap <silent> U :call <SID>show_documentation()<CR>
+	" Use U to show documentation in preview window
+	nnoremap <silent> U :call <SID>show_documentation()<CR>
 
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+	" Remap for rename current word
+	nmap <leader>rn <Plug>(coc-rename)
 
-" Remap for format selected region
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+	" Remap for format selected region
+	vmap <leader>f  <Plug>(coc-format-selected)
+	nmap <leader>f  <Plug>(coc-format-selected)
+	" Show all diagnostics
+	nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+	" Manage extensions
+	nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+	" Show commands
+	nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+	" Find symbol of current document
+	nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+	" Search workspace symbols
+	nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+	" Do default action for next item.
+	nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+	" Do default action for previous item.
+	nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+	" Resume latest coc list
+	nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 endfunc
 
 " for complition
@@ -1143,8 +1145,32 @@ let ncm2#popup_delay = 5
 let ncm2#complete_length = [[1, 1]]
 " Use new fuzzy based matches
 let g:ncm2#matcher = 'substrfuzzy'
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
+" Use <TAB> to select the popup menu:
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" wrap existing omnifunc
+" Note that omnifunc does not run in background and may probably block the
+" editor. If you don't want to be blocked by omnifunc too often, you could
+" add 180ms delay before the omni wrapper:
+"  'on_complete': ['ncm2#on_complete#delay', 180,
+"               \ 'ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
+au User Ncm2Plugin call ncm2#register_source({
+		\ 'name' : 'css',
+		\ 'priority': 9,
+		\ 'subscope_enable': 1,
+		\ 'scope': ['css','scss'],
+		\ 'mark': 'css',
+		\ 'word_pattern': '[\w\-]+',
+		\ 'complete_pattern': ':\s*',
+		\ 'on_complete': ['ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
+		\ })
+
+" escape from terminal
 tnoremap <Esc> <C-\><C-n>
+
 set lazyredraw
 let g:go_version_warning = 0
 nnoremap <silent> <Leader>h :<C-u>hide<CR>
