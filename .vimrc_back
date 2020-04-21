@@ -38,7 +38,6 @@ call plug#begin(expand('~/.config/nvim_back/plugged'))
 
 let $BASH_ENV = expand('~/.vim_bash_env')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
@@ -56,6 +55,7 @@ Plug 'qpkorr/vim-bufkill'
 "" Vim-Session
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
+
 Plug 'skywind3000/asyncrun.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
@@ -85,9 +85,10 @@ Plug 'google/vim-codefmt'
 " `:help :Glaive` for usage.
 Plug 'google/vim-glaive'
 
-" assuming you're using vim-plug: https://github.com/junegunn/vim-plug
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " NOTE: you need to install completion sources to get completions. Check
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
@@ -95,16 +96,25 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'HansPinckaers/ncm2-jedi'
 
-" for TypeScript
-" REQUIRED: Add a syntax file. YATS is the best
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh; :UpdateRemotePlugins'}
-
 let g:make = 'gmake'
 if exists('make')
         let g:make = 'make'
 endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
+
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'deoplete-plugins/deoplete-jedi'
+    let g:deoplete#enable_at_startup = 1
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+  " For Denite features
+  Plug 'Shougo/denite.nvim'
+  Plug 'davidhalter/jedi-vim'
+endif
 
 "" Snippets
 "Plug 'SirVer/ultisnips'
@@ -135,26 +145,14 @@ Plug 'honza/vim-snippets'
 "" Python Bundle
 Plug 'tmhedberg/SimpylFold'
 Plug 'Chiel92/vim-autoformat'
-"Plug 'goerz/jupytext.vim'
-"Plug 'ivanov/vim-ipython'
-"Plug 'cjrh/vim-conda'
 
-" JS
+" javascript
 Plug 'pangloss/vim-javascript'
 
-  if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'deoplete-plugins/deoplete-jedi'
-    let g:deoplete#enable_at_startup = 1
-  else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-  endif
-  " For Denite features
-  Plug 'Shougo/denite.nvim'
-  Plug 'davidhalter/jedi-vim'
-endif
+" for TypeScript
+" REQUIRED: Add a syntax file. YATS is the best
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh; :UpdateRemotePlugins'}
 
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
@@ -168,14 +166,6 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'buoto/gotests-vim'
 
-"Plug 'autozimu/LanguageClient-neovim', {
-"    \ 'branch': 'next',
-"    \ 'do': 'bash install.sh',
-"    \ }
-"Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-
-" Use release branch (Recommend)
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "*****************************************************************************
 "*****************************************************************************
 
@@ -888,9 +878,6 @@ let g:SimpylFold_docstring_preview = 1
 
 let g:python3_host_prog = "/usr" . "/bin/python3"
 let g:python_host_prog = "/usr" . "/bin/python"
-"let g:python_host_prog = '/Users/v/anaconda3/envs/torch/bin/python3'
-"let g:python_host_prog = '/usr/bin/python'
-"let g:python_host_prog = $CONDA_PREFIX . "/bin/python"
 
 "set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
 "noremap <Leader>x :bunload<CR>
@@ -986,7 +973,7 @@ set pastetoggle=<F6>
 " formatter
 autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
-" go
+" LANG: go
 " vim-go
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
@@ -1060,11 +1047,6 @@ let g:go_doc_keywordprg_enabled = 1
 " ale
 call extend(g:ale_linters, {
     \"go": ['golint', 'gopls', 'go vet'], })
-
-"" Include user's local vim config
-if filereadable(expand("~/.rc.local"))
-  source ~/.rc.local
-endif
 
 nnoremap <Leader>a :copen <BAR> wincmd p <BAR> AsyncRun<SPACE>
 
@@ -1146,9 +1128,6 @@ set completeopt=noinsert,noselect,menuone
 "let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gopls'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
-nnoremap <silent><Leader>m :make<CR>
-nnoremap <silent><Leader>E :e ~/.vimrc_back<CR>
-noremap <silent><Leader>p :<C-u>wincmd p<CR>
 
 let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
@@ -1187,13 +1166,24 @@ function! s:denite_my_settings() abort
   \ denite#do_map('toggle_select').'j'
 endfunction
 
+" META KEYS: timeout for keys mappings
+set timeout
+set ttimeout
+set tm=250
+
+" KEY MAPPING
+nnoremap <silent><Leader>m :make<CR>
+nnoremap <silent><Leader>E :e ~/.vimrc_back<CR>
+noremap <silent><Leader>p :<C-u>wincmd p<CR>
 nnoremap <leader>ss :<C-u>wq<CR>
 nnoremap <Leader><Leader> <C-^>
 nnoremap <leader>d :<C-u>bd<CR>
 nnoremap <leader>D :<C-u>BD<CR>
 nnoremap <leader>p <C-^>
 
-" timeout for keys mappings
-set timeout
-set ttimeout
-set tm=250
+
+"" Include user's local vim config
+if filereadable(expand("~/.rc.local"))
+  source ~/.rc.local
+endif
+
