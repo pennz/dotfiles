@@ -29,7 +29,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "45.63.19.129",
+            "address": "lab.pengyuzhou.com",
             "port": 26990,
             "users": [
               {
