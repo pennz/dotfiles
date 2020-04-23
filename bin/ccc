@@ -8,8 +8,9 @@ git checkout good-day;
 chmod 644 ~/.ssh/config
 git pull --no-edit && \
 chmod 644 ~/.ssh/config && \
-( [ $# -lt 1 ] || (git stash pop && git commit -asm "$*" && git push ) ) && \  # $# < 1, no commit message, just pull
+( [ $# -lt 1 ] || (git stash pop && chmod 644 ~/.ssh/config && git commit -asm "$*" && git push ) ) && \  # $# < 1, no commit message, just pull
 git checkout "$cb" && \
+chmod 644 ~/.ssh/config && \
 git merge --no-edit good-day && \
 chmod 644 ~/.ssh/config && \
 #git submodule init && git submodule update
