@@ -116,7 +116,7 @@ autoload -U promptinit; promptinit
 
 zstyle :prompt:pure:git:stash show yes
 prompt pure
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
