@@ -1,16 +1,17 @@
 #!/bin/bash -li
 
-# config change commit
+# git change commit
 pushd ~
-cb=$(config rev-parse --abbrev-ref HEAD)
-[ $# -lt 1 ] || config stash; 
-config checkout master; 
+cb=$(git rev-parse --abbrev-ref HEAD)
+[ $# -lt 1 ] || git stash; 
+git checkout good-day; 
 chmod 644 ~/.ssh/config
-config pull --no-edit && \
+git pull --no-edit && \
 chmod 644 ~/.ssh/config && \
-( [ $# -lt 1 ] || (config stash pop && config commit -asm "$*" && config push ) ) && \  # $# < 1, no commit message, just pull
-config checkout "$cb" && \
-config merge --no-edit master && \
+( [ $# -lt 1 ] || (git stash pop && chmod 644 ~/.ssh/config && git commit -asm "$*" && git push ) ) && \  # $# < 1, no commit message, just pull
+git checkout "$cb" && \
 chmod 644 ~/.ssh/config && \
-#config submodule init && config submodule update
+git merge --no-edit good-day && \
+chmod 644 ~/.ssh/config && \
+#git submodule init && git submodule update
 popd
