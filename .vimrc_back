@@ -116,6 +116,10 @@ if has('nvim')
   Plug 'davidhalter/jedi-vim'
 endif
 
+"" CodeQuery
+Plug 'Shougo/unite.vim'
+Plug 'devjoe/vim-codequery'
+
 "" Snippets
 "Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -1213,3 +1217,4 @@ if filereadable(expand("~/.rc.local"))
   source ~/.rc.local
 endif
 
+let g:asyncrun_open = 8
