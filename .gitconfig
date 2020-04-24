@@ -79,5 +79,3 @@
 	program = gpg
 [commit]
        gpgsign = true
-[credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
