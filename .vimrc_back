@@ -1206,7 +1206,7 @@ nnoremap <leader>ss :<C-u>wq<CR>
 nnoremap <Leader><Leader> <C-^>
 nnoremap <leader>d :<C-u>bd<CR>
 nnoremap <leader>D :<C-u>BD<CR>
-nnoremap <leader>p <C-^>
+vnoremap <Leader><Leader><Leader> <ESC>
 
 
 "" Include user's local vim config
