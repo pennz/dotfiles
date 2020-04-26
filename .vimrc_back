@@ -314,7 +314,7 @@ call airline#parts#define_condition('customise_st', 'getcwd() =~ "works"')
 "let g:airline_section_y = airline#section#create_right(['ffenc','customise_st'])
 
 let g:airline_theme = 'papercolor'
-let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = "default"
@@ -402,8 +402,10 @@ endif
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
+let b:coc_enabled=0
+"CocDisable
 autocmd FileType go let b:noNCM2=0 " for go we use another ... "
-autocmd FileType go CocDisable
+autocmd FileType * let b:coc_enabled=0
 
 func! NCM2_enable()
   if exists('b:noNCM2')
@@ -506,7 +508,7 @@ noremap <Leader>v :<C-u>vsplit<CR>
 noremap <silent> <Leader>ga :silent !git -C %:p:h add %:p:t<CR>
 noremap <Leader>gw :Gwrite<CR>
 "noremap <Leader>gc :copen \| wincmd p \| AsyncRun git -C %:p:h commit -sm<SPACE>
-noremap <Leader>gc :AsyncRun git -C %:p:h commit -sm<SPACE>
+noremap <Leader>gc :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
 noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && git commit -sm "Good Game" && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
 noremap <silent> <Leader>gsh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
