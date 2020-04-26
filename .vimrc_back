@@ -406,6 +406,7 @@ let b:coc_enabled=0
 "CocDisable
 autocmd FileType go let b:noNCM2=0 " for go we use another ... "
 autocmd FileType * let b:coc_enabled=0
+autocmd FileType * CocDisable
 
 func! NCM2_enable()
   if exists('b:noNCM2')
