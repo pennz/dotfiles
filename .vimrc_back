@@ -88,7 +88,7 @@ Plug 'google/vim-glaive'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " NOTE: you need to install completion sources to get completions. Check
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
@@ -406,7 +406,7 @@ let b:coc_enabled=0
 "CocDisable
 autocmd FileType go let b:noNCM2=0 " for go we use another ... "
 autocmd FileType * let b:coc_enabled=0
-autocmd FileType * CocDisable
+"autocmd FileType * CocDisable
 
 func! NCM2_enable()
   if exists('b:noNCM2')
