@@ -2,8 +2,8 @@
 
 # Setting this, so the repo does not need to be given on the commandline:
 test -d /Volumes/mac_files/bor && export BORG_REPO=/Volumes/mac_files/borg
-test -d /media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg && \
-	export BORG_REPO=/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
+test -d /media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg &&
+  export BORG_REPO=/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
 
 # Setting this, so you won't be asked for your repository passphrase:
 # or this to ask an external program to supply the passphrase:
@@ -23,10 +23,9 @@ test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 TRY=/home/v
 test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 
-BORG=borg
+BORG="sudo borg"
 TRY=/home/v/miniconda3/bin/borg
-test -e $TRY && BORG=$TRY
-
+test -e $TRY && BORG="sudo $TRY"
 
 backup() {
   (
@@ -34,7 +33,6 @@ backup() {
     $BORG create \
       --progress \
       --filter AME \
-      --list \
       --stats \
       --show-rc \
       --compression lz4 \
@@ -79,8 +77,6 @@ backup() {
       $SOURCE_HOME \
       /Applications \
       /usr/local \
-      /Library/Services \
-      /Library/Haskell \
       /var/log &&
       info "Backup completed" &&
       touch $SOURCE_HOME/.lastbackup
