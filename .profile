@@ -66,7 +66,7 @@ fi
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # for my binaries
-PATH=$PATH:"$HOME"/bin
+PATH=$PATH:"$HOME"/bin:"$HOME"/.local/bin
 
 export WORKON_HOME="$HOME"/.virtualenvs
 # virtualenv and virtualenvwrapper
