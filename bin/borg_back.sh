@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=/Volumes/mac_files/borg
+test -d /Volumes/mac_files/bor && export BORG_REPO=/Volumes/mac_files/borg
+test -d /media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg && export BORG_REPO=/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
 
 # Setting this, so you won't be asked for your repository passphrase:
 # or this to ask an external program to supply the passphrase:
@@ -17,7 +18,10 @@ trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
 
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
-SOURCE_HOME=/Users/v  # if you sudo, $HOME will be /root ...
+TRY=/Users/v
+test -d $TRY && SOURCE_HOME=$TRY  # if you sudo, $HOME will be /root ...
+TRY=/home/v
+test -d $TRY && SOURCE_HOME=$TRY  # if you sudo, $HOME will be /root ...
 
 backup () {
     (
