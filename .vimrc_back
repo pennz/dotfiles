@@ -836,7 +836,7 @@ set scrolloff=3				" 光标移动到顶部和底部时自动保持3行距离
 set showmode				" 让vim在窗口最低下显示当前模式，如--insert--等
 set showcmd				" 在命令模式下输入命令时，同步显示已经键入的命令内容
 set nobackup				" 保存文件时，不要创建备份文件
-set textwidth=0				" 一行内输入字符达到多少时自动换行，0表示不限制
+"set textwidth=0				" 一行内输入字符达到多少时自动换行，0表示不限制
 set history=500				" 记录的历史命令个数
 
 set shiftwidth=4			" 设定vim的自动缩进，以及>和<命令时移动的空白长度
@@ -943,7 +943,7 @@ nnoremap <Leader>s <ESC>:w<CR>
 "inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
-nnoremap <silent> <leader>f :Files<CR>
+"nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>t :Tags<CR>
 nnoremap <silent> <leader>rg       :Rg <C-R><C-W><CR>
 xnoremap <silent> <leader>rg       y:Rg <C-R><C-W><CR>
@@ -959,7 +959,7 @@ if !filereadable(gjf)
     execute gje
 endif
 endif
-
+nnoremap Q gqip
 nnoremap <silent> <Leader>= :FormatCode<CR>
 imap <C-w> <C-o><C-w>
 noremap <M-<> <C-W><
@@ -1289,6 +1289,7 @@ set fencs=ucs-bom,utf-8,default,latin2
 """" Formatting
 
 "set formatoptions=cql12
+set formatoptions=acq12
 
 "set list listchars=tab:\ \ ,trail:-
 
