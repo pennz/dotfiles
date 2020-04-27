@@ -23,10 +23,15 @@ test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 TRY=/home/v
 test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 
+BORG=borg
+TRY=/home/v/miniconda3/bin/borg
+test -e $TRY && BORG=$TRY
+
+
 backup() {
   (
     info "Starting backup"
-    borg create \
+    $BORG create \
       --progress \
       --filter AME \
       --list \
@@ -91,7 +96,7 @@ remove_old_backup() {
   # limit prune's operation to this machine's archives and not apply to
   # other machines' archives also:
 
-  borg prune \
+  $BORG prune \
     --list \
     --prefix '{hostname}-' \
     --show-rc \
