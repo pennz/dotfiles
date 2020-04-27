@@ -510,7 +510,8 @@ noremap <Leader>v :<C-u>vsplit<CR>
 noremap <silent> <Leader>ga :silent !git -C %:p:h add %:p:t<CR>
 noremap <Leader>gw :Gwrite<CR>
 "noremap <Leader>gc :copen \| wincmd p \| AsyncRun git -C %:p:h commit -sm<SPACE>
-noremap <Leader>gc :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
+noremap <Leader>c :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
+noremap <Leader>C :AsyncRun git -C %:p:h commit -sm<SPACE>
 noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && git commit -sm "Good Game" && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
 noremap <silent> <Leader>gsh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
@@ -618,9 +619,9 @@ noremap <leader>x :bn<CR>
 "noremap <leader>w :bn<CR>
 
 "" Close buffer
-noremap <leader>c :bd<CR>
-"inoremap <leader>c <ESC>:BD<CR>
-noremap <leader>C :BD<CR>
+"noremap <leader>c :bd<CR>
+""inoremap <leader>c <ESC>:BD<CR>
+"noremap <leader>C :BD<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<CR>
@@ -675,7 +676,7 @@ let g:deoplete#sources#jedi#ignore_private_members = 1
 
 autocmd FileType java
        \ call deoplete#custom#buffer_option('auto_complete', v:false) | s:coc_setting()
-nnoremap <silent><Leader>dd :<C-u>call deoplete#custom#buffer_option('auto_complete', v:false)<CR>
+"nnoremap <silent><Leader>dd :<C-u>call deoplete#custom#buffer_option('auto_complete', v:false)<CR>
 
 " typescript related
 let g:yats_host_keyword = 1
@@ -1216,7 +1217,8 @@ nnoremap <silent><Leader>E :e ~/.vimrc_back<CR>
 noremap <silent><Leader>p :<C-u>wincmd p<CR>
 nnoremap <leader>ss :<C-u>wq<CR>
 nnoremap <Leader><Leader> <C-^>
-nnoremap <leader>d :<C-u>bd<CR>
+nnoremap <leader>dd :<C-u>bd<CR>
+nnoremap <leader>ddd :<C-u>bd!<CR>
 nnoremap <leader>D :<C-u>BD<CR>
 vnoremap <Leader><Leader><Leader> <ESC>
 
