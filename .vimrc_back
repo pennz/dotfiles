@@ -404,7 +404,8 @@ endif
 "*****************************************************************************
 let b:coc_enabled=0
 "CocDisable
-autocmd FileType go let b:noNCM2=0 " for go we use another ... "
+autocmd FileType go let b:noNCM2=0 " enable ncm for go
+autocmd FileType python let b:noNCM2=0
 autocmd FileType * let b:coc_enabled=0
 "autocmd FileType * CocDisable
 
@@ -657,7 +658,8 @@ augroup END
 
 " jedi-vim
 let g:jedi#auto_initialization = 1
-let g:jedi#popup_on_dot = 0
+let g:jedi#popup_on_dot = 1
+let g:jedi#popup_select_first = 1
 let g:jedi#goto_assignments_command = "<leader>g"
 let g:jedi#goto_definitions_command = "<leader>d"
 let g:jedi#documentation_command = "K"
@@ -667,6 +669,9 @@ let g:jedi#show_call_signatures = "1"
 let g:jedi#completions_command = ""
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 0 " use deoplete-jedi for completions
+" deoplete-jedi
+let g:deoplete#sources#jedi#enable_typeinfo = 1
+let g:deoplete#sources#jedi#ignore_private_members = 1
 
 autocmd FileType java
        \ call deoplete#custom#buffer_option('auto_complete', v:false) | s:coc_setting()
@@ -1222,3 +1227,292 @@ if filereadable(expand("~/.rc.local"))
 endif
 
 let g:asyncrun_open = 8
+
+" copy from pasky
+"""" Core stuff
+
+"version 5.0
+
+set nocompatible " has to be on the first line
+
+"set modeline
+set nomodeline
+"set modelines=3
+
+set exrc
+
+"let mapleader="~" " make sure this is done before any <Leader> stuff happens
+
+"filetype on
+"filetype plugin on
+"filetype indent on
+"
+"set nobackup
+"set viminfo='20,\"50
+
+" Otherwise, contents of last visual will appear in X11 selection buffer - eek!
+"set clipboard=autoselectml
+
+
+"""" Charset
+set fencs=ucs-bom,utf-8,default,latin2
+
+
+"""" Autocompletion
+
+"set wildchar=<Tab>
+"set wildmenu
+"set wildmode=longest:full,full
+"
+"set history=200
+
+
+"""" Searching
+
+"set ignorecase
+"set smartcase
+"set hlsearch
+"set incsearch
+"
+"
+""""" Indentation
+"
+"set shiftwidth=8
+"
+""set cindent
+""set smartindent
+"set noautoindent
+
+
+"""" Formatting
+
+"set formatoptions=cql12
+
+"set list listchars=tab:\ \ ,trail:-
+
+" If you don't want it for B&W terminals, but you do want it for color terminals, put this in your .vimrc:
+if &t_Co > 1
+  syntax on
+endif
+
+
+"""" Folding
+
+set foldmethod=indent
+set foldenable
+set foldlevel=99
+
+
+"""" Tags
+
+set tags=./tags,tags,./TAGS,TAGS,tags,TAGS,../tags,../TAGS,../../tags,../../TAGS,../../../tags,../../../TAGS,../../../../tags,../../../../TAGS,../../../../../tags,../../../../../TAGS,../../../../../../tags,../../../../../../TAGS,../../../../../../../tags,../../../../../../../TAGS,../../../../../../../../tags,../../../../../../../../TAGS,../../../../../../../../../tags,../../../../../../../../../TAGS,../../../../../../../../../../tags,../../../../../../../../../../TAGS,../../../../../../../../../../../tags,../../../../../../../../../../../TAGS,../../../../../../../../../../../../tags,../../../../../../../../../../../../TAGS,/usr/include/tags,/usr/include/TAGS,/usr/local/include/tags,/usr/local/include/TAGS
+
+
+
+"""" User mapping (misc)
+
+" v) "`"'	visual content quoted
+vnoremap "" <esc>:set paste<cr>`>a"<c-o>`<"<esc>:set nopaste<cr>`>2l
+vnoremap "' <esc>:set paste<cr>`>a'<c-o>`<'<esc>:set nopaste<cr>
+vnoremap "` <esc>:set paste<cr>`>a`<c-o>`<`<esc>:set nopaste<cr>
+
+" v) "<>[](){}	visual content parenthesed
+vnoremap "< <esc>:set paste<cr>`>a><c-o>`<<<esc>:set nopaste<cr>
+vnoremap "> <esc>:set paste<cr>`>a><c-o>`<<<esc>:set nopaste<cr>`>2l
+vnoremap "[ <esc>:set paste<cr>`>a]<c-o>`<[<esc>:set nopaste<cr>
+vnoremap "] <esc>:set paste<cr>`>a]<c-o>`<[<esc>:set nopaste<cr>`>4l
+vnoremap "( <esc>:set paste<cr>`>a)<c-o>`<(<esc>:set nopaste<cr>
+vnoremap ") <esc>:set paste<cr>`>a)<c-o>`<(<esc>:set nopaste<cr>`>2l
+vnoremap "{ <esc>:set paste<cr>`>a}<c-o>`<{<esc>:set nopaste<cr>
+vnoremap "} <esc>:set paste<cr>`>a}<c-o>`<{<esc>:set nopaste<cr>`>2l
+
+" v> ">		visual content mail-quoted
+" TODO: autocommand for mails only!
+vnoremap "> :s/^/> <cr>:nohl<cr>
+vnoremap ". :s/^/> <cr>:nohl<cr>
+
+" v> "#		visual content shelloidically commented out
+vnoremap "# :s/^/# <cr>:nohl<cr>
+vnoremap "3 :s/^/# <cr>:nohl<cr>
+
+" v> "*		visual content C-commented out
+vnoremap "* <esc>:set paste<cr>`>a */<c-o>`</* <esc>:set nopaste<cr>
+
+" v> m-c	cd to directory given in the visual
+" FIXME: doesn't work when ^M is at the end (line visual)!
+vnoremap c y:cd "\|pwd<cr>
+
+" n> m-h	hide highlight
+noremap h :nohl<cr>
+
+" n> L          light background
+noremap L :set bg=light<cr>
+
+" v) m-yY	gradual yank - first use m-Y and then m-y, it is accumulated into "a register
+"		just use p to put it eventually; you don't have to pre-select "a register
+vmap y "Ay
+vmap Y "ay
+
+"ni> m-p	paste/nopaste switch
+nmap p :set paste!<cr>:set paste?<cr>
+imap p <esc>pa
+set pastetoggle=p
+
+" n> s		split line at the place of cursor
+nmap s i<cr><c-c>
+
+" n> S		insert blank line after the current line
+nmap S o<c-c>
+
+" n> m-S	insert blank line in front of the current line
+nmap S O<c-c>
+
+" n> &		highlight word under cursor
+nmap & *N
+
+" n> m-n	reformat buglist in glibc NEWS
+"noremap n <ap:set tw=74<cr>gqapkvip:left 2<cr>:set tw&<cr>
+
+
+"" Buffer switching
+
+map <A-1> :b1<CR>
+map <A-2> :b2<CR>
+map <A-3> :b3<CR>
+map <A-4> :b4<CR>
+map <A-5> :b5<CR>
+map <A-6> :b6<CR>
+map <A-7> :b7<CR>
+map <A-8> :b8<CR>
+map <A-9> :b9<CR>
+map <A-0> :b10<CR>
+map <C-Tab> :bn<CR>
+map <S-C-Tab> :bp<CR>
+
+
+
+
+"""" User mapping (misc ex commands)
+"command! Pohelp :new /opt/vim/share/vim/vim61/ftplugin/po.vim|:set readonly
+
+
+
+"""" Per-filetype mapping
+
+au BufEnter *vimrc set keywordprg=
+au BufLeave *vimrc set keywordprg=man
+
+au FileType perl set formatoptions=cql
+
+au! BufNewFile,BufRead *.ino setlocal ft=arduino
+au! BufNewFile,BufRead *.pde setlocal ft=arduino
+au! BufNewFile,BufRead *.md setlocal ft=markdown
+
+
+
+"""" UI
+
+"" I/O
+"set mouse=
+"set bg=dark
+"set bg=light
+set bs=2
+
+set ttimeout ttimeoutlen=10 " esc v insert modu ma okamzitou odezvu
+
+"set statusline=%{VimBuddy()}
+
+set ruler
+
+"" Windows
+set noequalalways
+
+"" Buffers
+set switchbuf=useopen
+
+"" GUI
+set guifont=Monospace\ 9
+
+"" Grep in QuickFix
+autocmd QuickFixCmdPost *grep* cwindow
+
+"" Auto-close preview when leaving insert mode (after completion)
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+
+
+"""" Plugins
+
+""" Pathogen
+"execute pathogen#infect()
+"" Ctrl-P
+let g:ctrlp_user_command =
+    \ ['.git', 'cd %s && git ls-files . -co --exclude-standard']
+"" Gundo
+nnoremap U :GundoToggle<CR>
+"" Syntastic
+let g:syntastic_mode_map = { 'mode': 'active',
+                        \ 'passive_filetypes': ['java', 'markdown'] }
+let g:syntastic_cpp_compiler_options = ' -std=gnu++11'
+let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
+let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
+let g:syntastic_python_python_exec = 'python3'
+"" Eclim
+let g:EclimCValidate = 0
+let g:EclimCppValidate = 0
+let g:EclimXmlIndentDisabled = 0  " no indentation is actually done with the eclim-shipped xml indent?!
+let g:EclimLoggingDisabled = 1  " trouble with class hierarchies where the ancestor also has a logger
+"" jedi
+"let g:jedi#goto_assignments_command = '<cr>'
+let g:jedi#use_tabs_not_buffers = "0"
+let g:jedi#use_splits_not_buffers = "top"
+let g:jedi#popup_on_dot = 0
+let g:pymode_rope = 0
+
+""" Prehistoric
+
+"" Increment
+
+" c-A in visual mode works as gradual incrementation
+vnoremap <c-a> :Inc<CR>
+
+
+"" Calendar
+
+let g:calendar_mark='right'
+let g:calendar_navi='both'
+let g:calendar_monday=1
+
+
+"" EnhancedCommentify
+
+let g:EnhCommentifyPretty = 'Yes'
+let g:EnhCommentifyRespectIdent = 'Yes'
+let g:EnhCommentifyUseAltKeys = 'Yes'
+
+
+"" MiniBufExplorer
+let g:miniBufExplSplitBelow=1
+
+
+"" VimSpell
+
+"let spell_language_list = "english,czech"
+""highlight SpellErrors ctermbg=Red guibg=Red ctermfg=White guifg=White cterm=underline gui=underline term=reverse
+"highlight link SpellErrors Error
+
+"" TeX
+let g:tex_flavor = "latex"
+
+"" SQL
+" This is something purely evil, hijacking C-C.
+let g:omni_sql_no_default_maps = 1
+
+
+
+"""" Sourcing standalone rcs
+
+"so /home/pasky/.vimrc.shell
+
+
+
