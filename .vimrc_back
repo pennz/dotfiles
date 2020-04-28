@@ -316,8 +316,27 @@ call airline#parts#define_condition('customise_st', 'getcwd() =~ "works"')
 let g:airline_theme = 'papercolor'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = "default"
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#fnametruncate = 16
+let g:airline#extensions#tabline#fnamecollapse = 2
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>- <Plug>AirlineSelectPrevTab
+nmap <leader>+ <Plug>AirlineSelectNextTab
+
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 
@@ -1209,16 +1228,24 @@ set ttimeout
 set tm=250
 
 " KEY MAPPING
+func! BufSwitch()
+  if bufnr("#") == bufnr()
+    bp
+  else
+    b#
+  endif
+endfunc
+
 nnoremap <silent><Leader>m :make<CR>
 nnoremap <silent><Leader>E :e ~/.vimrc_back<CR>
 noremap <silent><Leader>p :<C-u>wincmd p<CR>
 nnoremap <leader>ss :<C-u>wq<CR>
-nnoremap <Leader><Leader> <C-^>
-nnoremap <leader>dd :<C-u>bd<CR>
+nnoremap <silent><Leader><Leader> :call BufSwitch()<CR>
+"nnoremap <leader>D :<C-u>let @#="<C-R>#" <BAR> keepalt BD<CR> nnoremap
+"<leader>dd :keepalt bd<CR>
 nnoremap <leader>ddd :<C-u>bd!<CR>
-nnoremap <leader>D :<C-u>BD<CR>
+nnoremap <silent><leader>dd :bd <BAR> let @#=bufnr()<CR>
 vnoremap <Leader><Leader><Leader> <ESC>
-
 
 "" Include user's local vim config
 if filereadable(expand("~/.rc.local"))
