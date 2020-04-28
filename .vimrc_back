@@ -821,7 +821,7 @@ set nojoinspaces
 nmap <Leader>p <C-^>
 
 " Run commands that require an interactive shell
-nnoremap <silent> <Leader>R :source ~/.vimrc_back<CR>
+nnoremap <silent> <Leader>r :source ~/.vimrc_back<CR>
 
 
 " Always use vertical diffs
@@ -1229,14 +1229,38 @@ set tm=250
 
 " KEY MAPPING
 func! BufSwitch()
-  if bufnr("#") == bufnr()
-    bp
+  let buflist = []
+  let bufdict = {}
+  let bufcount = bufnr("$")
+  let currbufnr = 1
+  let numexists = 0
+  let firstmatchingbufnr = 0
+  while currbufnr <= bufcount
+    if(bufexists(currbufnr) && buflisted(bufname(currbufnr)))
+      "echo numexists . "/" . currbufnr . ": ". bufname(currbufnr)
+      let bufdict[numexists] = currbufnr
+      let numexists = numexists + 1
+      call add(buflist, currbufnr)
+    endif
+    let currbufnr = currbufnr + 1
+  endwhile
+  if(numexists <= 1)
+    CtrlP
   else
-    echo "edit " . @#
-    if @# =~ "NERD" || @# == ""
-      bp
+    if bufnr("#") == bufnr()
+      if bufnr() == buflist[0]
+          bn
+      else
+          bp
+      endif
     else
-      edit #
+      if @# =~ "NERD" || @# == ""
+        echo bp
+        bp
+      else
+        echo "edit " . @#
+        edit #
+      endif
     endif
   endif
 endfunc
