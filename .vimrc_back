@@ -694,7 +694,7 @@ let g:ale_fixers = {
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
-\    'python': ['black','autopep8']
+\    'python': ['black',"isort",'autopep8']
 \}
 let g:ale_fix_on_save = 1
 
