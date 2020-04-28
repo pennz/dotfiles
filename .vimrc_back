@@ -1232,8 +1232,27 @@ func! BufSwitch()
   if bufnr("#") == bufnr()
     bp
   else
-    b#
+    echo "edit " . @#
+    if @# =~ "NERD" || @# == ""
+      bp
+    else
+      edit #
+    endif
   endif
+endfunc
+
+func! BufDelete()
+  let @" = bufnr()
+  call BufSwitch()
+  if @# =~ "NERD" || @# == ""
+    "echo "buffer not good, try close\" b" . @" . " EOL"
+    bd "
+  else
+    echo "buffer not good, try close\" b" . @" . " EOL"
+    "let @" = bufnr("#")
+    bd #
+  endif
+  let @#=bufnr()
 endfunc
 
 nnoremap <silent><Leader>m :make<CR>
@@ -1244,7 +1263,7 @@ nnoremap <silent><Leader><Leader> :call BufSwitch()<CR>
 "nnoremap <leader>D :<C-u>let @#="<C-R>#" <BAR> keepalt BD<CR> nnoremap
 "<leader>dd :keepalt bd<CR>
 nnoremap <leader>ddd :<C-u>bd!<CR>
-nnoremap <silent><leader>dd :bd <BAR> let @#=bufnr()<CR>
+nnoremap <silent><leader>dd :call BufDelete()<CR>
 vnoremap <Leader><Leader><Leader> <ESC>
 
 "" Include user's local vim config
@@ -1386,7 +1405,7 @@ imap p <esc>pa
 set pastetoggle=p
 
 " n> s		split line at the place of cursor
-nmap s i<cr><c-c>
+"nmap s i<cr><c-c>
 
 " n> S		insert blank line after the current line
 nmap S o<c-c>
