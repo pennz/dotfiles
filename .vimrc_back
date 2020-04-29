@@ -88,7 +88,7 @@ Plug 'google/vim-glaive'
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " NOTE: you need to install completion sources to get completions. Check
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
@@ -314,10 +314,29 @@ call airline#parts#define_condition('customise_st', 'getcwd() =~ "works"')
 "let g:airline_section_y = airline#section#create_right(['ffenc','customise_st'])
 
 let g:airline_theme = 'papercolor'
-let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = "default"
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#fnametruncate = 16
+let g:airline#extensions#tabline#fnamecollapse = 2
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>- <Plug>AirlineSelectPrevTab
+nmap <leader>+ <Plug>AirlineSelectNextTab
+
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 
@@ -395,15 +414,19 @@ if !exists('*s:setupWrapping')
   function s:setupWrapping()
     set wrap
     set wm=2
-    set textwidth=79
+    set textwidth=80
   endfunction
 endif
 
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
-autocmd FileType go let b:noNCM2=0 " for go we use another ... "
-autocmd FileType go CocDisable
+let b:coc_enabled=0
+"CocDisable
+autocmd FileType go let b:noNCM2=0 " enable ncm for go
+autocmd FileType python let b:noNCM2=0
+autocmd FileType * let b:coc_enabled=0
+"autocmd FileType * CocDisable
 
 func! NCM2_enable()
   if exists('b:noNCM2')
@@ -506,7 +529,8 @@ noremap <Leader>v :<C-u>vsplit<CR>
 noremap <silent> <Leader>ga :silent !git -C %:p:h add %:p:t<CR>
 noremap <Leader>gw :Gwrite<CR>
 "noremap <Leader>gc :copen \| wincmd p \| AsyncRun git -C %:p:h commit -sm<SPACE>
-noremap <Leader>gc :AsyncRun git -C %:p:h commit -sm<SPACE>
+noremap <Leader>c :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
+noremap <Leader>C :AsyncRun git -C %:p:h commit -sm<SPACE>
 noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && git commit -sm "Good Game" && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
 noremap <silent> <Leader>gsh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
@@ -614,9 +638,9 @@ noremap <leader>x :bn<CR>
 "noremap <leader>w :bn<CR>
 
 "" Close buffer
-noremap <leader>c :bd<CR>
-"inoremap <leader>c <ESC>:BD<CR>
-noremap <leader>C :BD<CR>
+"noremap <leader>c :bd<CR>
+""inoremap <leader>c <ESC>:BD<CR>
+"noremap <leader>C :BD<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<CR>
@@ -654,7 +678,8 @@ augroup END
 
 " jedi-vim
 let g:jedi#auto_initialization = 1
-let g:jedi#popup_on_dot = 0
+let g:jedi#popup_on_dot = 1
+let g:jedi#popup_select_first = 1
 let g:jedi#goto_assignments_command = "<leader>g"
 let g:jedi#goto_definitions_command = "<leader>d"
 let g:jedi#documentation_command = "K"
@@ -664,10 +689,13 @@ let g:jedi#show_call_signatures = "1"
 let g:jedi#completions_command = ""
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 0 " use deoplete-jedi for completions
+" deoplete-jedi
+let g:deoplete#sources#jedi#enable_typeinfo = 1
+let g:deoplete#sources#jedi#ignore_private_members = 1
 
 autocmd FileType java
        \ call deoplete#custom#buffer_option('auto_complete', v:false) | s:coc_setting()
-nnoremap <silent><Leader>dd :<C-u>call deoplete#custom#buffer_option('auto_complete', v:false)<CR>
+"nnoremap <silent><Leader>dd :<C-u>call deoplete#custom#buffer_option('auto_complete', v:false)<CR>
 
 " typescript related
 let g:yats_host_keyword = 1
@@ -676,20 +704,18 @@ let g:yats_host_keyword = 1
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'tslint'],
-\   'vue': ['eslint']
+\   'vue': ['eslint'],
+\   'python': ['flake8'],
 \}
 let g:ale_fixers = {
 \    'javascript': ['eslint'],
 \    'typescript': ['prettier'],
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
-\    'html': ['prettier']
+\    'html': ['prettier'],
+\    'python': ['black',"isort",'autopep8']
 \}
 let g:ale_fix_on_save = 1
-
-
-:call extend(g:ale_linters, {
-    \'python': ['flake8'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
@@ -698,7 +724,6 @@ let g:airline#extensions#virtualenv#enabled = 1
 " Default highlight is better than polyglot
 let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
-
 
 
 " vuejs
@@ -796,7 +821,7 @@ set nojoinspaces
 nmap <Leader>p <C-^>
 
 " Run commands that require an interactive shell
-nnoremap <silent> <Leader>R :source ~/.vimrc_back<CR>
+nnoremap <silent> <Leader>r :source ~/.vimrc_back<CR>
 
 
 " Always use vertical diffs
@@ -827,7 +852,7 @@ set scrolloff=3				" 光标移动到顶部和底部时自动保持3行距离
 set showmode				" 让vim在窗口最低下显示当前模式，如--insert--等
 set showcmd				" 在命令模式下输入命令时，同步显示已经键入的命令内容
 set nobackup				" 保存文件时，不要创建备份文件
-set textwidth=0				" 一行内输入字符达到多少时自动换行，0表示不限制
+"set textwidth=0				" 一行内输入字符达到多少时自动换行，0表示不限制
 set history=500				" 记录的历史命令个数
 
 set shiftwidth=4			" 设定vim的自动缩进，以及>和<命令时移动的空白长度
@@ -934,7 +959,7 @@ nnoremap <Leader>s <ESC>:w<CR>
 "inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
-nnoremap <silent> <leader>f :Files<CR>
+"nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>t :Tags<CR>
 nnoremap <silent> <leader>rg       :Rg <C-R><C-W><CR>
 xnoremap <silent> <leader>rg       y:Rg <C-R><C-W><CR>
@@ -950,7 +975,7 @@ if !filereadable(gjf)
     execute gje
 endif
 endif
-
+nnoremap Q gq$
 nnoremap <silent> <Leader>= :FormatCode<CR>
 imap <C-w> <C-o><C-w>
 noremap <M-<> <C-W><
@@ -1203,15 +1228,67 @@ set ttimeout
 set tm=250
 
 " KEY MAPPING
+func! BufSwitch()
+  let buflist = []
+  let bufdict = {}
+  let bufcount = bufnr("$")
+  let currbufnr = 1
+  let numexists = 0
+  let firstmatchingbufnr = 0
+  while currbufnr <= bufcount
+    if(bufexists(currbufnr) && buflisted(bufname(currbufnr)))
+      "echo numexists . "/" . currbufnr . ": ". bufname(currbufnr)
+      let bufdict[numexists] = currbufnr
+      let numexists = numexists + 1
+      call add(buflist, currbufnr)
+    endif
+    let currbufnr = currbufnr + 1
+  endwhile
+  if(numexists <= 1)
+    CtrlP
+  else
+    if bufnr("#") == bufnr()
+      if bufnr() == buflist[0]
+          bn
+      else
+          bp
+      endif
+    else
+      if @# =~ "NERD" || @# == ""
+        echo bp
+        bp
+      else
+        echo "edit " . @#
+        edit #
+      endif
+    endif
+  endif
+endfunc
+
+func! BufDelete()
+  let @" = bufnr()
+  call BufSwitch()
+  if @# =~ "NERD" || @# == ""
+    "echo "buffer not good, try close\" b" . @" . " EOL"
+    bd "
+  else
+    echo "buffer not good, try close\" b" . @" . " EOL"
+    "let @" = bufnr("#")
+    bd #
+  endif
+  let @#=bufnr()
+endfunc
+
 nnoremap <silent><Leader>m :make<CR>
 nnoremap <silent><Leader>E :e ~/.vimrc_back<CR>
 noremap <silent><Leader>p :<C-u>wincmd p<CR>
 nnoremap <leader>ss :<C-u>wq<CR>
-nnoremap <Leader><Leader> <C-^>
-nnoremap <leader>d :<C-u>bd<CR>
-nnoremap <leader>D :<C-u>BD<CR>
+nnoremap <silent><Leader><Leader> :call BufSwitch()<CR>
+"nnoremap <leader>D :<C-u>let @#="<C-R>#" <BAR> keepalt BD<CR> nnoremap
+"<leader>dd :keepalt bd<CR>
+nnoremap <leader>ddd :<C-u>bd!<CR>
+nnoremap <silent><leader>dd :call BufDelete()<CR>
 vnoremap <Leader><Leader><Leader> <ESC>
-
 
 "" Include user's local vim config
 if filereadable(expand("~/.rc.local"))
@@ -1219,3 +1296,293 @@ if filereadable(expand("~/.rc.local"))
 endif
 
 let g:asyncrun_open = 8
+
+" copy from pasky
+"""" Core stuff
+
+"version 5.0
+
+set nocompatible " has to be on the first line
+
+"set modeline
+set nomodeline
+"set modelines=3
+
+set exrc
+
+"let mapleader="~" " make sure this is done before any <Leader> stuff happens
+
+"filetype on
+"filetype plugin on
+"filetype indent on
+"
+"set nobackup
+"set viminfo='20,\"50
+
+" Otherwise, contents of last visual will appear in X11 selection buffer - eek!
+"set clipboard=autoselectml
+
+
+"""" Charset
+set fencs=ucs-bom,utf-8,default,latin2
+
+
+"""" Autocompletion
+
+"set wildchar=<Tab>
+"set wildmenu
+"set wildmode=longest:full,full
+"
+"set history=200
+
+
+"""" Searching
+
+"set ignorecase
+"set smartcase
+"set hlsearch
+"set incsearch
+"
+"
+""""" Indentation
+"
+"set shiftwidth=8
+"
+""set cindent
+""set smartindent
+"set noautoindent
+
+
+"""" Formatting
+
+"set formatoptions=cql12
+set formatoptions=acq12
+
+"set list listchars=tab:\ \ ,trail:-
+
+" If you don't want it for B&W terminals, but you do want it for color terminals, put this in your .vimrc:
+if &t_Co > 1
+  syntax on
+endif
+
+
+"""" Folding
+
+set foldmethod=indent
+set foldenable
+set foldlevel=99
+
+
+"""" Tags
+
+set tags=./tags,tags,./TAGS,TAGS,tags,TAGS,../tags,../TAGS,../../tags,../../TAGS,../../../tags,../../../TAGS,../../../../tags,../../../../TAGS,../../../../../tags,../../../../../TAGS,../../../../../../tags,../../../../../../TAGS,../../../../../../../tags,../../../../../../../TAGS,../../../../../../../../tags,../../../../../../../../TAGS,../../../../../../../../../tags,../../../../../../../../../TAGS,../../../../../../../../../../tags,../../../../../../../../../../TAGS,../../../../../../../../../../../tags,../../../../../../../../../../../TAGS,../../../../../../../../../../../../tags,../../../../../../../../../../../../TAGS,/usr/include/tags,/usr/include/TAGS,/usr/local/include/tags,/usr/local/include/TAGS
+
+
+
+"""" User mapping (misc)
+
+" v) "`"'	visual content quoted
+vnoremap "" <esc>:set paste<cr>`>a"<c-o>`<"<esc>:set nopaste<cr>`>2l
+vnoremap "' <esc>:set paste<cr>`>a'<c-o>`<'<esc>:set nopaste<cr>
+vnoremap "` <esc>:set paste<cr>`>a`<c-o>`<`<esc>:set nopaste<cr>
+
+" v) "<>[](){}	visual content parenthesed
+vnoremap "< <esc>:set paste<cr>`>a><c-o>`<<<esc>:set nopaste<cr>
+vnoremap "> <esc>:set paste<cr>`>a><c-o>`<<<esc>:set nopaste<cr>`>2l
+vnoremap "[ <esc>:set paste<cr>`>a]<c-o>`<[<esc>:set nopaste<cr>
+vnoremap "] <esc>:set paste<cr>`>a]<c-o>`<[<esc>:set nopaste<cr>`>4l
+vnoremap "( <esc>:set paste<cr>`>a)<c-o>`<(<esc>:set nopaste<cr>
+vnoremap ") <esc>:set paste<cr>`>a)<c-o>`<(<esc>:set nopaste<cr>`>2l
+vnoremap "{ <esc>:set paste<cr>`>a}<c-o>`<{<esc>:set nopaste<cr>
+vnoremap "} <esc>:set paste<cr>`>a}<c-o>`<{<esc>:set nopaste<cr>`>2l
+
+" v> ">		visual content mail-quoted
+" TODO: autocommand for mails only!
+vnoremap "> :s/^/> <cr>:nohl<cr>
+vnoremap ". :s/^/> <cr>:nohl<cr>
+
+" v> "#		visual content shelloidically commented out
+vnoremap "# :s/^/# <cr>:nohl<cr>
+vnoremap "3 :s/^/# <cr>:nohl<cr>
+
+" v> "*		visual content C-commented out
+vnoremap "* <esc>:set paste<cr>`>a */<c-o>`</* <esc>:set nopaste<cr>
+
+" v> m-c	cd to directory given in the visual
+" FIXME: doesn't work when ^M is at the end (line visual)!
+vnoremap c y:cd "\|pwd<cr>
+
+" n> m-h	hide highlight
+noremap h :nohl<cr>
+
+" n> L          light background
+noremap L :set bg=light<cr>
+
+" v) m-yY	gradual yank - first use m-Y and then m-y, it is accumulated into "a register
+"		just use p to put it eventually; you don't have to pre-select "a register
+vmap y "Ay
+vmap Y "ay
+
+"ni> m-p	paste/nopaste switch
+nmap p :set paste!<cr>:set paste?<cr>
+imap p <esc>pa
+set pastetoggle=p
+
+" n> s		split line at the place of cursor
+"nmap s i<cr><c-c>
+
+" n> S		insert blank line after the current line
+nmap S o<c-c>
+
+" n> m-S	insert blank line in front of the current line
+nmap S O<c-c>
+
+" n> &		highlight word under cursor
+nmap & *N
+
+" n> m-n	reformat buglist in glibc NEWS
+"noremap n <ap:set tw=74<cr>gqapkvip:left 2<cr>:set tw&<cr>
+
+
+"" Buffer switching
+
+map <A-1> :b1<CR>
+map <A-2> :b2<CR>
+map <A-3> :b3<CR>
+map <A-4> :b4<CR>
+map <A-5> :b5<CR>
+map <A-6> :b6<CR>
+map <A-7> :b7<CR>
+map <A-8> :b8<CR>
+map <A-9> :b9<CR>
+map <A-0> :b10<CR>
+map <C-Tab> :bn<CR>
+map <S-C-Tab> :bp<CR>
+
+
+
+
+"""" User mapping (misc ex commands)
+"command! Pohelp :new /opt/vim/share/vim/vim61/ftplugin/po.vim|:set readonly
+
+
+
+"""" Per-filetype mapping
+
+au BufEnter *vimrc set keywordprg=
+au BufLeave *vimrc set keywordprg=man
+
+au FileType perl set formatoptions=cql
+
+au! BufNewFile,BufRead *.ino setlocal ft=arduino
+au! BufNewFile,BufRead *.pde setlocal ft=arduino
+au! BufNewFile,BufRead *.md setlocal ft=markdown
+
+
+
+"""" UI
+
+"" I/O
+"set mouse=
+"set bg=dark
+"set bg=light
+set bs=2
+
+set ttimeout ttimeoutlen=10 " esc v insert modu ma okamzitou odezvu
+
+"set statusline=%{VimBuddy()}
+
+set ruler
+
+"" Windows
+set noequalalways
+
+"" Buffers
+set switchbuf=useopen
+
+"" GUI
+set guifont=Monospace\ 9
+
+"" Grep in QuickFix
+autocmd QuickFixCmdPost *grep* cwindow
+
+"" Auto-close preview when leaving insert mode (after completion)
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+
+
+"""" Plugins
+
+""" Pathogen
+"execute pathogen#infect()
+"" Ctrl-P
+let g:ctrlp_user_command =
+    \ ['.git', 'cd %s && git ls-files . -co --exclude-standard']
+"" Gundo
+nnoremap U :GundoToggle<CR>
+"" Syntastic
+let g:syntastic_mode_map = { 'mode': 'active',
+                        \ 'passive_filetypes': ['java', 'markdown'] }
+let g:syntastic_cpp_compiler_options = ' -std=gnu++11'
+let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
+let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
+let g:syntastic_python_python_exec = 'python3'
+"" Eclim
+let g:EclimCValidate = 0
+let g:EclimCppValidate = 0
+let g:EclimXmlIndentDisabled = 0  " no indentation is actually done with the eclim-shipped xml indent?!
+let g:EclimLoggingDisabled = 1  " trouble with class hierarchies where the ancestor also has a logger
+"" jedi
+"let g:jedi#goto_assignments_command = '<cr>'
+let g:jedi#use_tabs_not_buffers = "0"
+let g:jedi#use_splits_not_buffers = "top"
+let g:jedi#popup_on_dot = 0
+let g:pymode_rope = 0
+
+""" Prehistoric
+
+"" Increment
+
+" c-A in visual mode works as gradual incrementation
+vnoremap <c-a> :Inc<CR>
+
+
+"" Calendar
+
+let g:calendar_mark='right'
+let g:calendar_navi='both'
+let g:calendar_monday=1
+
+
+"" EnhancedCommentify
+
+let g:EnhCommentifyPretty = 'Yes'
+let g:EnhCommentifyRespectIdent = 'Yes'
+let g:EnhCommentifyUseAltKeys = 'Yes'
+
+
+"" MiniBufExplorer
+let g:miniBufExplSplitBelow=1
+
+
+"" VimSpell
+
+"let spell_language_list = "english,czech"
+""highlight SpellErrors ctermbg=Red guibg=Red ctermfg=White guifg=White cterm=underline gui=underline term=reverse
+"highlight link SpellErrors Error
+
+"" TeX
+let g:tex_flavor = "latex"
+
+"" SQL
+" This is something purely evil, hijacking C-C.
+let g:omni_sql_no_default_maps = 1
+
+
+
+"""" Sourcing standalone rcs
+
+"so /home/pasky/.vimrc.shell
+
+
+
