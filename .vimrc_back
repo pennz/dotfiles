@@ -149,6 +149,7 @@ Plug 'honza/vim-snippets'
 "" Python Bundle
 Plug 'tmhedberg/SimpylFold'
 Plug 'Chiel92/vim-autoformat'
+Plug 'alfredodeza/pytest.vim'
 
 " javascript
 Plug 'pangloss/vim-javascript'
@@ -713,7 +714,7 @@ let g:ale_fixers = {
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
-\    'python': ['black',"isort",'autopep8']
+\    'python': ['isort','black','autopep8']
 \}
 let g:ale_fix_on_save = 1
 
@@ -818,7 +819,7 @@ set nojoinspaces
 "inoremap <S-Tab> <C-n>
 
 " Switch between the last two files
-nmap <Leader>p <C-^>
+nmap <Leader>p CtrlP
 
 " Run commands that require an interactive shell
 nnoremap <silent> <Leader>r :source ~/.vimrc_back<CR>
@@ -1255,7 +1256,7 @@ func! BufSwitch()
       endif
     else
       if @# =~ "NERD" || @# == ""
-        echo bp
+        echo "bp"
         bp
       else
         echo "edit " . @#
@@ -1312,8 +1313,9 @@ set exrc
 
 "let mapleader="~" " make sure this is done before any <Leader> stuff happens
 
-"filetype on
-"filetype plugin on
+" turned on for pytest
+filetype on
+filetype plugin on  
 "filetype indent on
 "
 "set nobackup
