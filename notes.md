@@ -79,3 +79,9 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.22.2068&rep=rep1&type=p
 memory graph
 
 # so we use antlr for parse our files , do translation, then push it to our web server, and do data analysis
+v2ray_client set up
+borg-backup
+kaggle
+.config/clash
+.spacevim.d
+notes.md 
