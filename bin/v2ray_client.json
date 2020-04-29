@@ -1,6 +1,8 @@
 {
   "log": {
-    "loglevel": "warning"
+    "loglevel": "warning",
+    "error" : "/var/log/v2ray/error.log",
+    "access" : "/var/log/v2ray/acess.log"
   },
   "v2raygcon": {
     "alias": "lab",
