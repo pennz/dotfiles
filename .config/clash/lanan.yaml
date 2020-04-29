@@ -6,36 +6,36 @@ log-level: info
 external-controller: '0.0.0.0:9090'
 secret: ''
 Proxy:
-    - { name: 'N-101 | π­π° ι¦ζΈ―1', type: vmess, server: lsb-v1.lanan.world, port: 3001, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-102 | π­π° ι¦ζΈ―2', type: vmess, server: lsb-v1.lanan.world, port: 3002, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-103 | π­π° ι¦ζΈ―3', type: vmess, server: lsb-v1.lanan.world, port: 3003, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-104 | π­π° ι¦ζΈ―4', type: vmess, server: lsb-v1.lanan.world, port: 3004, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-105 | π­π° ι¦ζΈ―5', type: vmess, server: lsb-v1.lanan.world, port: 3005, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-106 | π­π° ι¦ζΈ―6', type: vmess, server: lsb-v1.lanan.world, port: 3006, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-201 | π―π΅ ζζ¬1', type: vmess, server: lsb-v1.lanan.world, port: 4001, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-202 | π―π΅ ζζ¬2', type: vmess, server: lsb-v1.lanan.world, port: 4002, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-203 | π―π΅ ζζ¬3', type: vmess, server: lsb-v1.lanan.world, port: 4003, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-204 | π―π΅ ζζ¬4', type: vmess, server: lsb-v1.lanan.world, port: 4004, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-205 | π―π΅ ζζ¬5', type: vmess, server: lsb-v1.lanan.world, port: 4005, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-206 | π―π΅ ζζ¬6', type: vmess, server: lsb-v1.lanan.world, port: 4006, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-207 | π―π΅ ζζ¬7', type: vmess, server: lsb-v1.lanan.world, port: 4007, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-208 | π―π΅ ζζ¬8', type: vmess, server: lsb-v1.lanan.world, port: 4008, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-209 | π―π΅ ζζ¬9', type: vmess, server: lsb-v1.lanan.world, port: 4009, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-211 | π―π΅ ζζ¬10', type: vmess, server: lsb-v1.lanan.world, port: 4010, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-301 | πΈπ¬ ζ°ε εʽ1', type: vmess, server: lsb-v1.lanan.world, port: 5001, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-302 | πΈπ¬ ζ°ε εʽ2', type: vmess, server: lsb-v1.lanan.world, port: 5002, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-303 | πΈπ¬ ζ°ε εʽ3', type: vmess, server: lsb-v1.lanan.world, port: 5003, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-304 | πΈπ¬ ζ°ε εʽ4', type: vmess, server: lsb-v1.lanan.world, port: 5004, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-305 | πΈπ¬ ζ°ε εʽ5', type: vmess, server: lsb-v1.lanan.world, port: 5005, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-401 | πΊπΈ ηΎε1', type: vmess, server: lsb-v1.lanan.world, port: 5041, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-402 | πΊπΈ ηΎε2', type: vmess, server: lsb-v1.lanan.world, port: 5042, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-403 | πΊπΈ ηΎε3', type: vmess, server: lsb-v1.lanan.world, port: 5043, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-404 | πΊπΈ ηΎε4', type: vmess, server: lsb-v1.lanan.world, port: 5044, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
-    - { name: 'N-405 | πΊπΈ ηΎε5', type: vmess, server: lsb-v1.lanan.world, port: 5045, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-101', type: vmess, server: lsb-v1.lanan.world, port: 3001, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-102', type: vmess, server: lsb-v1.lanan.world, port: 3002, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-103', type: vmess, server: lsb-v1.lanan.world, port: 3003, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-104', type: vmess, server: lsb-v1.lanan.world, port: 3004, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-105', type: vmess, server: lsb-v1.lanan.world, port: 3005, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-106', type: vmess, server: lsb-v1.lanan.world, port: 3006, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-201', type: vmess, server: lsb-v1.lanan.world, port: 4001, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-202', type: vmess, server: lsb-v1.lanan.world, port: 4002, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-203', type: vmess, server: lsb-v1.lanan.world, port: 4003, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-204', type: vmess, server: lsb-v1.lanan.world, port: 4004, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-205', type: vmess, server: lsb-v1.lanan.world, port: 4005, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-206', type: vmess, server: lsb-v1.lanan.world, port: 4006, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-207', type: vmess, server: lsb-v1.lanan.world, port: 4007, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-208', type: vmess, server: lsb-v1.lanan.world, port: 4008, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-209', type: vmess, server: lsb-v1.lanan.world, port: 4009, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-211', type: vmess, server: lsb-v1.lanan.world, port: 4010, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-301', type: vmess, server: lsb-v1.lanan.world, port: 5001, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-302', type: vmess, server: lsb-v1.lanan.world, port: 5002, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-303', type: vmess, server: lsb-v1.lanan.world, port: 5003, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-304', type: vmess, server: lsb-v1.lanan.world, port: 5004, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-305', type: vmess, server: lsb-v1.lanan.world, port: 5005, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-401', type: vmess, server: lsb-v1.lanan.world, port: 5041, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-402', type: vmess, server: lsb-v1.lanan.world, port: 5042, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-403', type: vmess, server: lsb-v1.lanan.world, port: 5043, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-404', type: vmess, server: lsb-v1.lanan.world, port: 5044, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
+    - { name: 'N-405', type: vmess, server: lsb-v1.lanan.world, port: 5045, uuid: 72a2f96f-0ded-4aea-8059-0771dba85464, alterId: 2, cipher: auto }
 'Proxy Group':
-    - { name: auto, type: url-test, proxies: ['N-101 | π­π° ι¦ζΈ―1', 'N-102 | π­π° ι¦ζΈ―2', 'N-103 | π­π° ι¦ζΈ―3', 'N-104 | π­π° ι¦ζΈ―4', 'N-105 | π­π° ι¦ζΈ―5', 'N-106 | π­π° ι¦ζΈ―6', 'N-201 | π―π΅ ζζ¬1', 'N-202 | π―π΅ ζζ¬2', 'N-203 | π―π΅ ζζ¬3', 'N-204 | π―π΅ ζζ¬4', 'N-205 | π―π΅ ζζ¬5', 'N-206 | π―π΅ ζζ¬6', 'N-207 | π―π΅ ζζ¬7', 'N-208 | π―π΅ ζζ¬8', 'N-209 | π―π΅ ζζ¬9', 'N-211 | π―π΅ ζζ¬10', 'N-301 | πΈπ¬ ζ°ε εʽ1', 'N-302 | πΈπ¬ ζ°ε εʽ2', 'N-303 | πΈπ¬ ζ°ε εʽ3', 'N-304 | πΈπ¬ ζ°ε εʽ4', 'N-305 | πΈπ¬ ζ°ε εʽ5', 'N-401 | πΊπΈ ηΎε1', 'N-402 | πΊπΈ ηΎε2', 'N-403 | πΊπΈ ηΎε3', 'N-404 | πΊπΈ ηΎε4', 'N-405 | πΊπΈ ηΎε5'], url: 'https://www.bing.com', interval: 300 }
-    - { name: fallback-auto, type: fallback, proxies: ['N-101 | π­π° ι¦ζΈ―1', 'N-102 | π­π° ι¦ζΈ―2', 'N-103 | π­π° ι¦ζΈ―3', 'N-104 | π­π° ι¦ζΈ―4', 'N-105 | π­π° ι¦ζΈ―5', 'N-106 | π­π° ι¦ζΈ―6', 'N-201 | π―π΅ ζζ¬1', 'N-202 | π―π΅ ζζ¬2', 'N-203 | π―π΅ ζζ¬3', 'N-204 | π―π΅ ζζ¬4', 'N-205 | π―π΅ ζζ¬5', 'N-206 | π―π΅ ζζ¬6', 'N-207 | π―π΅ ζζ¬7', 'N-208 | π―π΅ ζζ¬8', 'N-209 | π―π΅ ζζ¬9', 'N-211 | π―π΅ ζζ¬10', 'N-301 | πΈπ¬ ζ°ε εʽ1', 'N-302 | πΈπ¬ ζ°ε εʽ2', 'N-303 | πΈπ¬ ζ°ε εʽ3', 'N-304 | πΈπ¬ ζ°ε εʽ4', 'N-305 | πΈπ¬ ζ°ε εʽ5', 'N-401 | πΊπΈ ηΎε1', 'N-402 | πΊπΈ ηΎε2', 'N-403 | πΊπΈ ηΎε3', 'N-404 | πΊπΈ ηΎε4', 'N-405 | πΊπΈ ηΎε5'], url: 'https://www.bing.com', interval: 300 }
-    - { name: select, type: select, proxies: ['N-101 | π­π° ι¦ζΈ―1', 'N-102 | π­π° ι¦ζΈ―2', 'N-103 | π­π° ι¦ζΈ―3', 'N-104 | π­π° ι¦ζΈ―4', 'N-105 | π­π° ι¦ζΈ―5', 'N-106 | π­π° ι¦ζΈ―6', 'N-201 | π―π΅ ζζ¬1', 'N-202 | π―π΅ ζζ¬2', 'N-203 | π―π΅ ζζ¬3', 'N-204 | π―π΅ ζζ¬4', 'N-205 | π―π΅ ζζ¬5', 'N-206 | π―π΅ ζζ¬6', 'N-207 | π―π΅ ζζ¬7', 'N-208 | π―π΅ ζζ¬8', 'N-209 | π―π΅ ζζ¬9', 'N-211 | π―π΅ ζζ¬10', 'N-301 | πΈπ¬ ζ°ε εʽ1', 'N-302 | πΈπ¬ ζ°ε εʽ2', 'N-303 | πΈπ¬ ζ°ε εʽ3', 'N-304 | πΈπ¬ ζ°ε εʽ4', 'N-305 | πΈπ¬ ζ°ε εʽ5', 'N-401 | πΊπΈ ηΎε1', 'N-402 | πΊπΈ ηΎε2', 'N-403 | πΊπΈ ηΎε3', 'N-404 | πΊπΈ ηΎε4', 'N-405 | πΊπΈ ηΎε5', auto, fallback-auto] }
+    - { name: auto, type: url-test, proxies: ['N-101', 'N-102', 'N-103', 'N-104', 'N-105', 'N-106', 'N-201', 'N-202', 'N-203', 'N-204', 'N-205', 'N-206', 'N-207', 'N-208', 'N-209', 'N-211', 'N-301', 'N-302', 'N-303', 'N-304', 'N-305', 'N-401', 'N-402', 'N-403', 'N-404', 'N-405'], url: 'https://www.bing.com', interval: 300 }
+    - { name: fallback-auto, type: fallback, proxies: ['N-101', 'N-102', 'N-103', 'N-104', 'N-105', 'N-106', 'N-201', 'N-202', 'N-203', 'N-204', 'N-205', 'N-206', 'N-207', 'N-208', 'N-209', 'N-211', 'N-301', 'N-302', 'N-303', 'N-304', 'N-305', 'N-401', 'N-402', 'N-403', 'N-404', 'N-405'], url: 'https://www.bing.com', interval: 300 }
+    - { name: select, type: select, proxies: ['N-101', 'N-102', 'N-103', 'N-104', 'N-105', 'N-106', 'N-201', 'N-202', 'N-203', 'N-204', 'N-205', 'N-206', 'N-207', 'N-208', 'N-209', 'N-211', 'N-301', 'N-302', 'N-303', 'N-304', 'N-305', 'N-401', 'N-402', 'N-403', 'N-404', 'N-405', auto, fallback-auto] }
 Rule:
     - 'DOMAIN,safebrowsing.urlsec.qq.com,DIRECT'
     - 'DOMAIN,safebrowsing.googleapis.com,DIRECT'
