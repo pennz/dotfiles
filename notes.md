@@ -85,3 +85,4 @@ kaggle
 .config/clash
 .spacevim.d
 notes.md 
+rm bin/upnp
