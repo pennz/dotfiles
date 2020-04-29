@@ -86,3 +86,23 @@ kaggle
 .spacevim.d
 notes.md 
 rm bin/upnp
+sudo vim /etc/systemd/system/snap.docker.dockerd.service
+[Unit]
+# Auto-generated, DO NOT EDIT
+Description=Service for snap application docker.dockerd
+Requires=snap-docker-423.mount
+Wants=network.target
+After=snap-docker-423.mount network.target
+X-Snappy=yes
+
+[Service]
+Environment="HTTP_PROXY=http://172.26.20.7:7890/"
+ExecStart=/usr/bin/snap run docker.dockerd
+SyslogIdentifier=docker.dockerd
+Restart=on-failure
+WorkingDirectory=/var/snap/docker/423
+TimeoutStopSec=30
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
