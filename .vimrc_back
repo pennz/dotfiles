@@ -1352,7 +1352,7 @@ set wildmenu
 "
 "set cindent
 set smartindent
-set noautoindent
+"set noautoindent
 
 
 """" Formatting
