@@ -666,15 +666,19 @@ nnoremap <Leader>o :.Gbrowse<CR>
 
 "*****************************************************************************
 "" Custom configs
-"*****************************************************************************
+"*****************************************************************************\
 
 " python
 " vim-python
+function SetPythonOptions()
+  setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79 formatoptions+=croq softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+  set errorformat=%f:%l:\ %m
+  set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
+endfunction
+
 augroup vimrc-python
   autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79
-      \ formatoptions+=croq softtabstop=4
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+  autocmd FileType python call SetPythonOptions()
 augroup END
 
 " jedi-vim
@@ -706,15 +710,16 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'tslint'],
 \   'vue': ['eslint'],
-\   'python': ['flake8'],
+\   'python': ['pylint', 'flake8'],
 \}
+let g:ale_python_pylint_executable = '/home/v/miniconda3/envs/pyt/bin/pylint'
 let g:ale_fixers = {
 \    'javascript': ['eslint'],
 \    'typescript': ['prettier'],
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
-\    'python': ['isort','black','autopep8']
+\    'python': ['remove_trailing_lines', 'trim_whitespace', 'isort','black','autopep8']
 \}
 let g:ale_fix_on_save = 1
 
@@ -963,7 +968,7 @@ noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
 "nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>t :Tags<CR>
 nnoremap <silent> <leader>rg       :Rg <C-R><C-W><CR>
-xnoremap <silent> <leader>rg       y:Rg <C-R><C-W><CR>
+xnoremap <silent> \       y:Rg <C-R><C-W><CR>
 
 if !lite
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
@@ -1255,9 +1260,15 @@ func! BufSwitch()
           bp
       endif
     else
-      if @# =~ "NERD" || @# == ""
-        echo "bp"
-        bp
+      if @# =~ "NERD" || @# == "" || @# =~ "__"
+        " if it is the fist buf
+        if bufnr() == buflist[0]
+          echo "bn"
+          bn
+        else
+          echo "bp"
+          bp
+        endif
       else
         echo "edit " . @#
         edit #
