@@ -673,7 +673,8 @@ nnoremap <Leader>o :.Gbrowse<CR>
 function SetPythonOptions()
   setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79 formatoptions+=croq softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
   set errorformat=%f:%l:\ %m
-  set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
+  "set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
+  nnoremap <Leader>l :copen \| wincmd p \| AsyncRun pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p <CR>
 endfunction
 
 augroup vimrc-python
@@ -824,7 +825,7 @@ set nojoinspaces
 "inoremap <S-Tab> <C-n>
 
 " Switch between the last two files
-nmap <Leader>p CtrlP
+nnoremap <silent><Leader>p :CtrlP<CR>
 
 " Run commands that require an interactive shell
 nnoremap <silent> <Leader>r :source ~/.vimrc_back<CR>
@@ -850,7 +851,7 @@ set directory=~/.vim_back/swap/
 set undodir=~/.vim_back/undo/
 set undofile "undo !!!!!!!!!!!!!
 set nowrap				" 长度超过窗口宽度不要换行显示
-set list				" 让vim显示空格、tab、换行等不可见字符
+"set list				" 让vim显示空格、tab、换行等不可见字符
 set listchars=nbsp:¬,trail:·,tab:»·	" 设置vim把空格、换行、tab显示为什么字符
 set gcr=a:blinkon0
 set scrolloff=3				" 光标移动到顶部和底部时自动保持3行距离
@@ -911,7 +912,7 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 let g:SimpylFold_docstring_preview = 1
 
 " swith between python and ipynb filetype
-" noremap <Leader>p :set filetype=python<CR>
+"noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
 let g:python3_host_prog = "/usr" . "/bin/python3"
@@ -1260,7 +1261,7 @@ func! BufSwitch()
           bp
       endif
     else
-      if @# =~ "NERD" || @# == "" || @# =~ "__"
+      if @# =~ "NERD" || @# == "" || @# =~ "__" || @# =~ "term"
         " if it is the fist buf
         if bufnr() == buflist[0]
           echo "bn"
@@ -1293,7 +1294,7 @@ endfunc
 
 nnoremap <silent><Leader>m :make<CR>
 nnoremap <silent><Leader>E :e ~/.vimrc_back<CR>
-noremap <silent><Leader>p :<C-u>wincmd p<CR>
+"noremap <silent><Leader>p :<C-u>wincmd p<CR>
 nnoremap <leader>ss :<C-u>wq<CR>
 nnoremap <silent><Leader><Leader> :call BufSwitch()<CR>
 "nnoremap <leader>D :<C-u>let @#="<C-R>#" <BAR> keepalt BD<CR> nnoremap
@@ -1423,6 +1424,7 @@ vnoremap "* <esc>:set paste<cr>`>a */<c-o>`</* <esc>:set nopaste<cr>
 
 " v> m-c	cd to directory given in the visual
 " FIXME: doesn't work when ^M is at the end (line visual)!
+" !!  is ascii 27, ESC key
 vnoremap c y:cd "\|pwd<cr>
 
 " n> m-h	hide highlight
@@ -1439,7 +1441,7 @@ vmap Y "ay
 "ni> m-p	paste/nopaste switch
 nmap p :set paste!<cr>:set paste?<cr>
 imap p <esc>pa
-set pastetoggle=p
+" set pastetoggle=p " might colide with CtrlP if pressed accidently [ too...
 
 " n> s		split line at the place of cursor
 "nmap s i<cr><c-c>
@@ -1606,3 +1608,4 @@ filetype indent on
 
 noremap <silent><leader>tf :Pytest file<CR>
 noremap <silent><leader>tc :Pytest class<CR>
+noremap <silent><leader>M :wincmd \| <BAR> wincmd _<CR>
