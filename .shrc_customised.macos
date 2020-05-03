@@ -7,37 +7,34 @@ fi
 
 alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
-alias vim='nvim -u ~/.config/nvim_back/init.vim'
+
+alias vim='test -G /tmp/nvimsocket -a $(pgrep -c nvim) -gt 0 && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim_back/init.vim'
+alias v='/snap/bin/nvim -u ~/.config/nvim_back/init.vim'
 alias ccc="source $HOME/bin/ccc"
 
-export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$HOME/anaconda3/bin:$GOPATH/bin:$PATH:/usr/local/lib/ruby/gems/2.5.0/bin/
+export PATH=/snap/bin:/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$HOME/miniconda3/bin:$GOPATH/bin:$PATH:/usr/local/lib/ruby/gems/2.5.0/bin/
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
-PROXY_URL='http://127.0.0.1:8080'
+PROXY_URL='http://127.0.0.1:7890'
 
 export SHELL=$(which zsh)
 
-# added by Anaconda3 5.3.0 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/v/anaconda3/bin/conda' shell.zsh hook 2> /dev/null)"
+__conda_setup="$('/home/v/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
+    eval "$__conda_setup"
 else
-    if [ -f "/Users/v/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/v/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
+    if [ -f "/home/v/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/v/miniconda3/etc/profile.d/conda.sh"
     else
-        \export PATH="/Users/v/anaconda3/bin:$PATH"
+        export PATH="/home/v/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda init <<<<Paste>
 
 #source activate torch
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+test -e /usr/libexec/java_home && export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Get list of gnubin directories
 if type brew &>/dev/null; then
@@ -59,3 +56,37 @@ fi
 #export GIT_PS1_SHOWUPSTREAM="auto"
 #PATH="/usr/local/go/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export ANDROID_HOME=$HOME/Library/Android/sdk
+#eval "$(/home/v/miniconda3/bin/conda shell.YOUR_SHELL_NAME hook)"
+#source /home/v/.nix-profile/etc/profile.d/nix.sh
+###-begin-leetcode-completions-###
+#
+# yargs command completion script
+#
+# Installation: leetcode completion >> ~/.bashrc
+#    or leetcode completion >> ~/.bash_profile on OSX.
+#
+_yargs_completions()
+{
+    local cur_word args type_list
+
+    cur_word="${COMP_WORDS[COMP_CWORD]}"
+    args=("${COMP_WORDS[@]}")
+
+    # ask yargs to generate completions.
+    type_list=$(leetcode --get-yargs-completions "${args[@]}")
+
+    COMPREPLY=( $(compgen -W "${type_list}" -- ${cur_word}) )
+
+    # if no match was found, fall back to filename completion
+    if [ ${#COMPREPLY[@]} -eq 0 ]; then
+      COMPREPLY=( $(compgen -f -- "${cur_word}" ) )
+    fi
+
+    return 0
+}
+complete -F _yargs_completions leetcode
+###-end-leetcode-completions-###
+ alias lc='leetcode'
+export EDITOR=/snap/bin/nvim
+export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/
+
