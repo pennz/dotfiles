@@ -36,8 +36,6 @@ let mapleader=' '
 " Required:
 call plug#begin(expand('~/.config/nvim_back/plugged'))
 
-let $BASH_ENV = expand('~/.vim_bash_env')
-
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
