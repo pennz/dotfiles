@@ -80,6 +80,6 @@ export BASH_ENV=~/.vim_bash_env
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 if [ -e /home/v/.nix-profile/etc/profile.d/nix.sh ]; then . /home/v/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-#setterm -clrtabs
-#setterm -regtabs 4    
+[ x$TERM != x ] && setterm -clrtabs
+[ x$TERM != x ] && setterm -regtabs 4    
 [ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
