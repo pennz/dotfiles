@@ -201,3 +201,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+setterm -clrtabs
+setterm -regtabs 4    
+[ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
