@@ -120,3 +120,8 @@ for s in `tmux list-sessions -F '#{session_name}'` ; do
   done
 done
 https://superuser.com/questions/212714/how-to-find-which-tmux-session-a-process-belongs-to
+
+1. vim plugin ((((  call plug#begin() , then you can see PlugInstall -> page        https://github.com/junegunn/vim-plug ))))
+2. python3 pip install 
+3 install ctags
+htop
