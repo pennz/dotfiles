@@ -230,7 +230,7 @@ let g:session_command_aliases = 1
 "" Visual Settings
 "*****************************************************************************
 syntax on
-set ruler				" 显示状态栏光标标尺
+"set ruler				" 显示状态栏光标标尺
 set cursorline				" 突出显示当前行
 set number				" 显示行号
 " 开启语法高亮显示，终端支持256色。
@@ -1507,7 +1507,7 @@ set ttimeout ttimeoutlen=10 " esc v insert modu ma okamzitou odezvu
 
 "set statusline=%{VimBuddy()}
 
-set ruler
+set noruler
 
 "" Windows
 set noequalalways
