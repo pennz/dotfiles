@@ -137,7 +137,8 @@ unset __conda_setup
 # Avoid duplicates
 HISTCONTROL=ignoredups:erasedups  
 # When the shell exits, append to the history file instead of overwriting it
-setopt histappend
+setopt inc_append_history
+setopt share_history
 
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
