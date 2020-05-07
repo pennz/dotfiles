@@ -38,3 +38,4 @@ alias unsetproxy='export http_proxy= ; export https_proxy= ;export HTTP_PROXY= ;
 alias antlr4='java org.antlr.v4.Tool'
 alias grun='java org.antlr.v4.gui.TestRig'
 alias vim='nvim -u ~/.config/nvim_back/init.vim'
+alias gc='git commit --no-gpg-sign -s -m'
