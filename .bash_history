@@ -1,25 +1,3 @@
-floatToint $(/usr/bin/time -f "%e" sleep 3)
-export flotToint() {     printf "%.0f\n" "$@"; }
-fg
-exit
-which time
-exit
-wait_time=3
-echo $?
-echo $nc_time
-nct=c
-nc_time=$($(which time) -f "%e" nc -zw $wait_time $SERVER $PORT > /dev/null)
-nc_time=$($(which time) -f "%e" nc -zw $wait_time $SERVER $PORT 2>&1 >/dev/null)
-echo $?
-echo $nc_time
-echo $nc_time | awk  '{print $NF}'
-exit
-ls
-ls
-exit
-clear
-pwd
-ls
 ./fpipe | (trap '' INT; nc -v -q 1 127.1 9001)
 ./fpipe | (trap '' SIGINT; nc -v -q 1 127.1 9001)
 cat ./connect.sh 
@@ -497,4 +475,26 @@ tmux ls
 tat kaggle
 tmux ls
 tat kaggle
+exit
+ls
+ls *hs
+runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
+runhaskell zsh-history-merge.hs 
+runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac zsh_history_merged
+runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
+wc -l zsh_history_mac 
+wc -l .zsh_history 
+vi zsh-history-merge.hs +87
+cp .zsh_history wsl_zsh_history
+git checkout HEAD .zsh_history
+wl -l *zsh_history
+wc -l *zsh_history
+wc -l *sh_history
+wc -l .*sh_history
+history
+head .zsh_history 
+head wsl_zsh_history 
+ls
+help
+exit
 exit
