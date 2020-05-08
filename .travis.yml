@@ -1,0 +1,12 @@
+env:
+  global:
+    - SHELL=bash
+before_script:
+  - apt install tig ctags htop tree pv nmap screen time tmux netcat psmisc vim -y
+  - git submodule update --init && rsync -r .* ~
+  - ~/.fzf/install --all
+  - curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  - vim -v -u ~/.vimrc_back +PlugInstall
+  - echo "unalias vim" >> ~/.bash_aliases && source ~/.bashrc
+script:
+  - vim +function
