@@ -1,6 +1,9 @@
 env:
   global:
     - SHELL=bash
+language: go
+go:
+  - master
 before_script:
   - apt install tig ctags htop tree pv nmap screen time tmux netcat psmisc vim -y
   - git submodule update --init && rsync -r .* ~
