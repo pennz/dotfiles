@@ -1,40 +1,3 @@
-./fpipe | (trap '' INT; nc -v -q 1 127.1 9001)
-./fpipe | (trap '' SIGINT; nc -v -q 1 127.1 9001)
-cat ./connect.sh 
-./connect.sh 9001
-vi ./connect.sh 
-./connect.sh 9001
-vi ./connect.sh 
-./connect.sh 9001
-man bash
-fg
-./connect.sh 9001
-fg
-./connect.sh 9001
-fg
-./connect.sh 9001
-fg
-./connect.sh 9001
-fg
-./connect.sh 9001
-fg
-kill %2
-clear
-fg
-./connect.sh 9001
-exit
-stty -echo
-lsls
-exit
-stty -a
-lsadfjlkasjf
-clear
-ls
-stty -a
-t
-exit
-connect 9021
-kill %1
 fg
 alias connect
 fpipe | (trap "" INT;  ncat localhost 9022)
@@ -497,4 +460,41 @@ head wsl_zsh_history
 ls
 help
 exit
+exit
+ls
+clear
+ls
+ps aux | grep tmux
+ps aux | grep clash
+tat 0
+who
+who
+clear
+who
+uname -a
+tmux ls
+tat -=0
+tat 0
+ghci
+tmux ls
+tat kaggle
+who
+htop
+exit
+ls
+tat kaggle
+tmux new-session go-ci
+tmux new-session 
+clear
+jobs
+exit
+pass add
+pass add github_tok
+pass github_tok
+pass
+pass test
+pass delete test
+clear
+tmux ls
+tat kaggle
 exit
