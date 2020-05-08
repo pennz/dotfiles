@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -gt 0 ]; then
+  t=$1
+else
+  t=ncat
+fi
+
+pids=$(pgrep "\<$t\>");
+[ -z "$pids" ] || {
+IFS=$'\n' array=("$pids")
+ ps -o pid,command ww $array | sort ; }
