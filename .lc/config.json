@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "github": {
+      "repo": "git@github.com/pennz/leetcode-go"
+    }
+  },
+  "code": {
+    "lang": "golang"
+  }
+}
