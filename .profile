@@ -78,8 +78,9 @@ export GPG_TTY=$(tty)
 export KEYTIMEOUT=1
 export BASH_ENV=~/.vim_bash_env
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
-if [ -e /home/v/.nix-profile/etc/profile.d/nix.sh ]; then . /home/v/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-TERM=xterm-256color
-[[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -clrtabs
-[[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -regtabs 4    
-[ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
+if [ -e /etc/profile.d/nix.sh ]; then source /etc/profile.d/nix.sh; fi # added by Nix installer
+# TERM=xterm-256color
+# [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -clrtabs
+# [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -regtabs 4    
+# [ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
+# pgrep ssh-agent >/dev/null || eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa
