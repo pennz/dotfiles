@@ -6,7 +6,7 @@ ENV TOOLS 'tig ctags htop tree pv nmap screen time tmux netcat psmisc vim'
 RUN apt-get update && apt-get install -y ${TOOLS} --no-install-recommends
     
 RUN mkdir /app
-COPY .* /app
+COPY .* /app/
 WORKDIR /app
 COPY .git/ ./.git/
 COPY bin/ ./bin/
