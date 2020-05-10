@@ -1,0 +1,1 @@
+/home/v/works/dotfiles/config.fish
