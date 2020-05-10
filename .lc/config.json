@@ -2,9 +2,15 @@
   "plugins": {
     "github": {
       "repo": "git@github.com/pennz/leetcode-go"
+    },
+    "cookie.chrome": {
+      "profile": "Default"
     }
   },
   "code": {
     "lang": "golang"
+  },
+  "autologin": {
+    "enable": true
   }
 }
