@@ -22,22 +22,20 @@ alias sudop='sudo proxychains'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ping='ping -n'
 
-sys_info=$(uname)
-if [ x"${sys_info/inux/}" != x"$sys_info" ]; then
-    alias open='xdg-open'
-fi
+set sys_info (uname)
+# if [ x"{$sys_info/inux/}" != x"$sys_info" ]; then alias open='xdg-open' fi
 
-SERVER_IP=lab.pengyuzhou.com
+set SERVER_IP lab.pengyuzhou.com
 
 alias p='popd'
 alias c='pushd'
 alias cc='pushd -'
-alias m='mosh --ssh="ssh -t -p 29932" pengyu@'${SERVER_IP}' -- tmux attach -d'
+alias m='mosh --ssh="ssh -t -p 29932" pengyu@'{$SERVER_IP}' -- tmux attach -d'
 alias setproxy="eval export HTTP_PROXY=\$PROXY_URL HTTPS_PROXY=\$PROXY_URL http_proxy=\$PROXY_URL https_proxy=\$PROXY_URL; echo \$http_proxy"
 alias unsetproxy='export http_proxy= ; export https_proxy= ;export HTTP_PROXY= ; export HTTPS_PROXY= '
 alias antlr4='java org.antlr.v4.Tool'
 alias grun='java org.antlr.v4.gui.TestRig'
 alias vim='nvim -u ~/.config/nvim_back/init.vim'
 alias gc='git commit --no-gpg-sign -s -m'
-alias ss='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
+#alias ss='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
 alias nv='nix-env'
