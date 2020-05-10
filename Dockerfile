@@ -11,10 +11,9 @@ WORKDIR /app
 COPY .git/ ./.git/
 COPY bin/ ./bin/
 
-RUN git submodule update --init && .fzf/install --all && \
+RUN git submodule update --init && .fzf/install --all; \
     curl -fLo .vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
-    vim -e -u .vimrc_back +PlugInstall +q && \
-    echo "unalias vim" >> .bash_aliases && source .bashrc && \
-    vim -e +function +q
+    vim -u .vimrc_back +PlugInstall "+:wq" .vimrc_back ; \
+    echo "unalias vim" >> .bash_aliases && source .bashrc
 
 ENTRYPOINT ["/usr/bin/vim"]
