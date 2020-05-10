@@ -710,6 +710,7 @@ let g:ale_linters = {
 \   'typescript': ['tsserver', 'tslint'],
 \   'vue': ['eslint'],
 \   'python': ['pylint', 'flake8'],
+\   'sh': ['shellcheck'],
 \}
 let g:ale_python_pylint_executable = '/home/v/miniconda3/envs/pyt/bin/pylint'
 let g:ale_fixers = {
@@ -718,7 +719,8 @@ let g:ale_fixers = {
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
-\    'python': ['remove_trailing_lines', 'trim_whitespace', 'isort','black','autopep8']
+\    'python': ['remove_trailing_lines', 'trim_whitespace', 'isort','black','autopep8'],
+\    'sh': ['shfmt'],
 \}
 let g:ale_fix_on_save = 1
 
@@ -1607,3 +1609,5 @@ filetype indent on
 noremap <silent><leader>tf :Pytest file<CR>
 noremap <silent><leader>tc :Pytest class<CR>
 noremap <silent><leader>M :wincmd \| <BAR> wincmd _<CR>
+
+let g:go_debug=['shell-commands']

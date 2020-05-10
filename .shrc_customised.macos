@@ -92,3 +92,4 @@ export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/qt5/plugins/platfor
 
 alias connect='fpipe | trap "" INT;  ncat localhost'
 alias gdrive='gdrive  --service-account go-2-learn-00c8bf796e90.json'
+stty eof ^\f
