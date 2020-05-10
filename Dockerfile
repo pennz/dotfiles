@@ -12,8 +12,8 @@ COPY .git/ ./.git/
 COPY bin/ ./bin/
 
 RUN git submodule update --init && .fzf/install --all; \
-    curl -fLo .vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
-    vim -u .vimrc_back +PlugInstall "+:wq" .vimrc_back ; \
+    curl -fLo /root/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
+    vim -u .vimrc_back "+call plug#begin()" +PlugInstall +qa &; \
     echo "unalias vim" >> .bash_aliases && source .bashrc
 
 ENTRYPOINT ["/usr/bin/vim"]
