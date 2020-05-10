@@ -1,0 +1,56 @@
+#!/bin/bash
+mv_file_back() {
+  IFS=' ' read -ra ADDR <<< "$*"
+  file=${ADDR[0]}
+  [ -f "$file.orig" ] && mv "$file.orig" "$file"
+}
+add_debug_code() {
+  PS4='Add Debug Line ${LINENO}: '
+  set -x
+  IFS=' ' read -ra ADDR <<< "$*" # should list all the line that changed
+  file=${ADDR[0]}
+
+  cp $file $file.orig # backup
+  # git stash save --keep-index  # working tree changes will be changed
+  # should use ast to get line type and then add imports and debug command
+  exprs=""
+  for i in "${ADDR[@]:1}"; do
+    # before 10 it should be imports thing...just guess
+    # now just blindly add
+    [ "$i" -gt 10 ] &&
+      if [ ! $(sed "$i,$((i + 2))!d" "$file" | grep -c "^func") -eq 0 ]; then
+        i=$((i + 2))
+      fi &&
+      exprs="$exprs -e \"$((i - 1)) a runtime.Breakpoint()\""
+  done
+  imp_expr="\'1 a import \"runtime\"\'"
+  grep "\"runtime\"" "$file" && imp_expr="" # if already imported
+  bash -x -c "sed -i ""$imp_expr ""$exprs ""$file"
+  set +x
+}
+
+export -f add_debug_code
+export -f mv_file_back
+
+np=/tmp/go_add_debug.$$
+np_added=/tmp/go_add_debug.added.$$
+mkfifo $np
+mkfifo ${np_added}
+pushd "$(git rev-parse --show-toplevel)" || exit
+git-diff-changed-lines.sh | grep -e ".*go [0-9]\{1,\}" | #tee >/dev/tty |
+  tee >(
+    xargs -d'\n' -I{} -P2 bash -c "add_debug_code {}"
+    echo > ${np_added}
+  ) | tee > /dev/tty | (
+  cat $np > /dev/null
+  xargs -d'\n' -I{} -P2 bash -c "mv_file_back {}"
+  # git stash pop  # might fail? we added debug lines
+) &
+
+cat ${np_added} > /dev/null
+dlv test --build-flags '-N -l' || echo "dlv failed, maybe no test files?"
+echo > $np
+
+rm ${np_added}
+rm $np
+popd || exit
