@@ -1,6 +1,5 @@
-LABEL maintainer="fireflysuccess@gmail.com"
-
 FROM debian:buster
+LABEL maintainer="fireflysuccess@gmail.com"
 
 ENV TOOLS 'tig ctags htop tree pv nmap screen time tmux netcat psmisc vim'
 
