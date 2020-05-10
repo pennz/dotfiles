@@ -1607,3 +1607,5 @@ filetype indent on
 noremap <silent><leader>tf :Pytest file<CR>
 noremap <silent><leader>tc :Pytest class<CR>
 noremap <silent><leader>M :wincmd \| <BAR> wincmd _<CR>
+
+let g:go_debug=['shell-commands']
