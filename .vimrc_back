@@ -1431,7 +1431,7 @@ vnoremap c y:cd "\|pwd<cr>
 noremap h :nohl<cr>
 
 " n> L          light background
-noremap L :set bg=light<cr>
+"noremap L :set bg=light<cr> " conflict with L goto bottom of the screen
 
 " v) m-yY	gradual yank - first use m-Y and then m-y, it is accumulated into "a register
 "		just use p to put it eventually; you don't have to pre-select "a register
