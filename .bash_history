@@ -1,1050 +1,3 @@
-ssh pengyu@192.168.1.7
-eit
-exit
-ping 10.0.0.215
-ping 192.168.21.5
-ssh 192.168.21.5
-cat boinc_pass 
-ping 192.168.1.2
-ifconfig
-ping 192.168.1.2
-cat boinc_pass 
-cat boinc_pass 
-ls
-clear
-ls
-ssh pengyu@192.168.1.2
-ssh root@192.168.1.2
-vi /Users/vincent/.ssh/known_hosts +14
-ssh root@192.168.1.2
-clear
-ls
-ssh pengyu@192.168.1.2
-ssh pengyu@192.168.1.2
-ssh pengyu@192.168.1.2
-cat boinc_pass 
-exit
-ssh pengyu@192.168.1.2
-clear
-exit
-clear
-who
-exit
-exit
-cat >> boinc_pass 
-vi boinc_pass 
-cat boinc_pass 
-clear
-ping 192.168.1.32
-ping 192.168.1.3
-service
-sshd
-sudo sshd .
-sudo sshd /Users/vincent/
-ping 192.168.1.3
-ifconfig
-exit
-ping 192.168.1.1
-ping 192.168.1.2
-ping 192.168.1.3
-                     clear
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ssh2vps 
-ping 192.168.1.5
-ping 192.168.1.5
-clear
-ls
-ping 192.168.1.5
-ping 192.168.1.6
-cat bin/ssh2vps
-ssh2vps 
-cat bin/ssh2vps
-exit
-clear
-clear
-parted
-hombrew
-brew install parted
-vime
-vim
-clear
-ls
-rm Introduction\ of\ Net-wall.pdf 
-ls
-clear
-ls
-archlinux
-eject /Volumes/MobileBackups/
-ls /Volumes/MobileBackups/
-ls -l /Volumes/MobileBackups/
-file /Volumes/MobileBackups/Backups.backupdb/
-ls /Volumes/MobileBackups/Backups.backupdb
-exit
-ls .ssh/
-cp .ssh/id_rsa.pub ~
-cp .ssh/id_rsa ~
-ping 192.168.1.8
-ping 8.8.8.8
-clear
-ifconfig
-ip route
-clear
-ifconfig en0
-sftp -P 4433 45.78.52.248
-jobs
-jobs -p
-kill 2659
-jobs
-fg
-jobs
-rm Microsoft_Office_2016_15.36.17070200_Installer.pkg 
-ls
-ls
-clear
-ls
-route -v get
-route  get
-sudo route  get
-route  get 8.8.8.8
-clear
-netstat 
-netstat route
-netstat -h
-route print
-clear
-clear
-route
-route sh
-route shw
-route show
-route -h
-man route
-clear
-ping 192.168.1.4
-ping 192.168.1.4
-ping 192.168.1.4
-ping 192.168.1.4
-ping 172.17.144.120
-ping 192.168.1.4
-ping 172.17.144.12
-ping 172.17.144.120
-ping 172.17.144.120
-ip route
-iproute2
-brew install iproute2
-brew install iproute2mac
-ip route
-clear
-ip link
-clear
-ip a
-ss
-brew install ss
-brew install iproute
-ss
-brew install iproutemac
-clear
-netstat 
-clear
-ip route sh
-whreis ip
-whereis ip
-which ip
-file /usr/local/bin/ip
-vi /usr/local/bin/ip
-clear
-ssh2vps 
-man 2 waitpid
-clear
-clear
-ls /Volumes/
-clear
-ls
-cd /Volumes/
-ls
-cd Mac
-cd Mac-file/
-ln -s /etc/passwd .
-ls
-ls -l
-exit
-iptables
-clear
-firewall
-clear
-who
-ls
-ls
-clear
-ls
-clear
-ping 192.168.1.3
-clear
-ll
-ssh pi@192.168.1.4
-clear
-nmap
-clear
-brew install nmap
-brew install nmap
-nmap
-clear
-which nmap
-file /usr/local/bin/nmap
-file -v /usr/local/bin/nmap
-nmap 192.168.21.1
-ssh2vps 
-exit
-ssh2vps 
-ping 172.17.144.120
-clear
-ping 172.17.144.120
-ping 172.17.144.120
-clear
-ifconfig
-ping 192.168.1.98
-ping 192.168.1.1
-ping 192.168.1.1
-ping 192.168.1.98
-ping 192.168.1.6
-ping 192.168.1.6
-ping 192.168.1.6
-ping 192.168.1.6
-ping 192.168.1.6
-ping 192.168.1.6
-telnet
-telnet 192.168.1.1 123
-nmap 192.168.1.1
-telnet 192.168.1.1 
-telnet 192.168.1.1 123
-exit
-ifconfig en0
-ifconfig en0
-ifconfig en0
-pwd
-ls
-ls -l
-rm 20170808102739-WNDR4700-V1.0.0.54.img
-ls
-ping 192.168.17
-ping 192.168.1.7
-ping 192.168.1.1
-ipconfig 
-ifcofig 
-ifconfig 
-ping 10.0.1.1
-ping 10.0.1.1
-ifconfig en0
-ping 192.168.1.7
-clear
-ls
-ifconfig
-ifconfig en0
-ping 192.168.1.7
-ifconfig en0
-ping 192.168.1.2
-ping 192.168.1.6
-ping 192.168.1.7
-ifconfig
-ifconfig en0
-ifconfig 
-ifconfig en3
-ping 192.168.1.1
-ifconfig en3
-ifconfig
-ifconfig en0
-ping 192.168.1.6
-clear
-ls
-arp -a
-ping 192.168.1.6
-clear
-ping 192.168.1.7
-exit
-ping 192.168.1.6
-ping 192.168.1.6
-clear
-ls
-clear
-ping 192.168.1.1
-ping 192.168.1.1
-clear
-ifconfig
-ping 192.168.1.1
-telnet 192.168.1.1 123
-clear
-brew install zsh zsh-completions
-zsh --version
-echo $SHELL
-ls /bin/sh
-ls -l /bin/sh
-exit
-echo $SHELL
-which zsh
-ls -l zsh
-ls -l /usr/local/bin/zsh
-file /usr/local/bin/zsh
-ls ..
-chsh -s /usr/local/bin/zsh
-exit
-echo $SHELL
-echo $SHELL
-echo $SHELL
-ZSH
-which zsh
-sudo chsh -s /usr/local/bin/zsh vincent
-vi ~/.bash_profile
-sudo echo "$(which zsh)" >> /etc/shells
-sudo echo "$(which zsh)" >> /etc/shells
-sudo vi /etc/shells
-sudo vi /etc/shells
-ls /bin/zsh 
-/bin/zsh --version
-zsh --version
-chsh -s /usr/local/bin/zsh
-exit
-echo $SHELL
-ls
-clear
-ls
-echo $CLICOLOR 
-clear
-ls
-vi ~/.bashrc 
-ls --color=auto
-fg
-ls
-l
-fg
-vi ~/.bashrc 
-unalias ls
-ls
-clear
-l
-clear
-ls
-clar
-clear
-exit
-ls
-clear
-ls
-cat .bash_customed 
-echo $SHELL
-clear
-git status
-clear
-exit
-tat
-tat 0
-exit
-ls
-clear
-tat
-ls
-clear
-exit
-clear
-source .bashrc 
-ls
-clear
-ls
-cat .profile 
-cat ~/.bash_aliases 
-cmt
-cat ~/.bash_aliases 
-vi .bash_customed 
-updatecs
-clear
-ls
-exit
-echo $SHELL
-exit
-echo $BASH_VERSION 
-exit
-ls
-clear
-fzf
-clear
-ls
-vi ~/.profile 
-sl
-fuck
-vi .profile 
-exit
-exit
-sl
-ls
-exit
-tat
-cat .bash_aliases 
-cmt
-exit
-ls name[abc].c
-ls adf
-touch nameo.c
-touch namet.c
-touch namer.c
-ls name[abc].c
-ls name?.c
-ls name[a-f].c
-clear
-ls
-ls name[^d].c
-ls name[^t].c
-ls name[ort].c
-ls name[orte].c
-touch name-new[orte].c 
-ls
-touch name-new\[orte\].c 
-ls
-ls name[orte].c
-ls *.[ch]
-touch a.h
-ls *.[ch]
-ls ??
-ls ???
-ls
-clear
-exit
-config submodule update
-curl https://google.com
-curl -v https://google.com
-exit
-curl -v https://google.com
-exit
-lskfjlaskdjflaksj
-asdflkjas
-exit
-set -o nv
-set -o v
-set -o vi
-set -o nvi
-set -o emacs
-clear
-ls
-jobs
-exit
-jobs
-exit
-lksdfjaklsdfj
-exit
-echo $SHELL
-exit
-echo $SHELL
-bash
-clear
-exit
-clear
-ls
-vim .bashrc
-config grep anaconda
-vim ~/.bashrc
-config grep anaconda
-fg
-exit
-vim ~/.bashrc
-exit
-vim ~/.profile 
-clear
-ls
-which git
-echo $PROMPT_COMMAND 
-vim ~/.bashrc
-export PROMPT_COMMAND=
-bash
-exit
-bash
-exit
-jobs
-fg
-exit
-echo $PROMPT_COMMAND
-exit
-. ~/.bashrc
-exit
-echo $PROMPT_COMMAND
-config grep __bp_install
-zsh
-exit
-time
-exit
-echo $PROMPT_COMMAND 
-exit
-echo $PROMPT_COMMAND 
-tail ~/.profile 
-clear
-vim ~/.bashrc
-clear
-ls
-vim ~/.profile 
-config grep PROMPT
-vim ~/.bash_customed
-fg
-exit
-echo $PROMPT_COMMAND 
-man bashrc
-man bash
-exit
-exit
-exit
-echo $PROMPT_COMMAND 
-vim ~/.bashrc
-ls
-cd .dotfiles/
-ls
-cd ..
-cd works/
-ls
-cd frida/
-ls
-exit
-jobs
-fg
-exit
-echo $PROMPT_COMMAND 
-clear
-conda activate frida
-exit
-echo $TERM
-exit
-echo $PATH
-dirs
-c ../..
-c ..
-echo $PROMPT_COMMAND 
-echo $TERM
-make
-make V=sc
-cd scripts/
-ls
-cd ../build_dir/target-aarch64_generic_musl/linux-armvirt_64/
-cd linux-5.4.28/
-vim scripts/Makefile
-make V=sc
-c ../../../..
-make V=cs
-pushd
-rm scripts/kconfig/.*cmd
-c ../../../..
-make V=cs
-p
-ls
-vim Makefile 
-c ../../../..
-make V=cs
-make 
-make -j4
-df -h
-make -C feeds/packages/lang/golang/golang install
-make feeds/packages/lang/golang/golang install
-make feeds/packages/lang/golang/golang/install
-clear
-df -h
-make V=s
-df -h
-exit
-config grep setopt
-vim .bash_aliases 
-exit
-vim .bashrc
-exit
-vim .bashrc
-vim ~/.bashrc
-setopt
-config grep setopt
-fg
-readlink /proc/$$/exe
-echo $$
-readlink /proc/$$/exe
-which readlink
-fg
-exit
-git checkout HEAD 
-config diff
-vim ~/.bashrc
-fg
-exit
-readlink
-which readlink
-/usr/bin/readlink /proc/$$/exe
-fg
-jobs
-exit
-fg
-jobs
-fg
-vim ~/.bashrc
-exit
-ls
-clear
-exit
-cd ..
-ls
-clear
-ls
-ll
-jbos
-jobs
-vim ~/.bashrc
-bash
-exit
-fg
-jobs
-vim ~/.shrc_customised
-vim ~/.bashrc
-config grep setopt
-vim ~/.bash_aliases 
-shell=$(/usr/bin/readlink /proc/$$/exe)
-echo $shell
-/usr/bin/readlink /proc/$$/exe
-shell
-/usr/bin/readlink /proc/$$/exe
-file /usr/bin/readlink
-vim ~/.bash_aliases 
-exit
-jobs
-fg
-exit
-pwd
-clear
-ls
-who
-clear
-setopt
-. ~/.bash_customed
-setopt
-cat >> ~/.bash_customed
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-ls /usr/local/opt/coreutils/libexec/gnubin
-asciinema rec
- asciinema upload /var/folders/kl/jmjcrkxs61df9pgkps1h607m0000gn/T/tmppbc8zm1n-ascii.cast
-ls -lh /var/folders/kl/jmjcrkxs61df9pgkps1h607m0000gn/T/tmppbc8zm1n-ascii.cast
-clear
-cd ..
-clear
-cd ..
-ls
-vim .config
-brew install patchelf
-patchelf -h
-c /tmp
-mkdir binu
-cd binu/
-tar xvf ../binutils_2.27-1_aarch64_generic.ipk 
-tar xvf data.tar.gz 
-file ./usr/bin/elfedit
-patchelf ./usr/bin/elfedit
-patchelf -h ./usr/bin/elfedit
-patchelf --print-interpreter ./usr/bin/elfedit
-patchelf --print-needed ./usr/bin/elfedit
-setopt
-export PATH=/Volumes/OpenWrt/openwrt/staging_dir/toolchain-aarch64_generic_gcc-8.4.0_musl/bin:$PATH
-readelf
-readelf -d usr/bin/elfedit 
-file usr/bin/elfedit 
-cp /bin/mv .
-readelf mv
-readelf -d mv
-file mv
-patchelf mv
-patchelf /usr/bin/shasum
-ls  -lh /usr/bin
-patchelf /usr/bin/znew
-git clone https://github.com/NixOS/patchelf
-ls
-cd patchelf/
-ls
-./bootstrap.sh 
-cat ./bootstrap.sh 
-which patchelf.
-which patchelf
-file /usr/local/bin/patchelf
-patchelf /usr/local/bin/patchelf
-cd ..
-ls
-patchelf usr/bin/ld
-file usr/bin/ld
-file file
-which file
-file /usr/bin/file
-clear
-ssh pi@192.168.2.27
-ssh kali@192.168.2.27
-ls
-cd
-exit
-who
-tt
-.
-.....
-tree 
-exit
-go version
-exit
-gradle tasks
-zsh
-gradle connectedAndroidTest
-vim 
-vim --clean build.gradle 
-fg
-clear
-ls
-./gradlew build
-jobs
-vim --clean build.gradle 
-./gradlew build
-fg
-./gradlew build
-ggfg
-fg
-./gradlew build
-bg
-adb devices
-adb shell
-fg
-alias connect
-fpipe | (trap "" INT;  ncat localhost 9022)
-clear
-exit
-stty -echo
-sss
-stty echo
-ls
-clear
-ls
-man stty
-stty echoctl
-sldfjasf
-stty -echoctl
-lsjflaskf
-stty echoctl
-man stty
-stty raw
-ls 
-stty -raw
-clear
-ls
-man stty
-stty -a
-ls
-jobs
-fg
-stty -icanon min 5 time 2
-stty -a
-ls
-stty -echoe
-stty -echok
-lksdjfl
-stty -a
-stty -echoke
-stty -a
-stty -echoctl
-stty -a
-set -bs0
-stty -bs0
-stty bs0
-stty bs
-stty bs1
-stty -a
-connect 9011
-fg
-stty min 20
-stty -a
-fg
-stty time 20
-fg
-lsfjlksajf lasdfjlkasdfjllsadfjlksdfj
-clear
-ls
-jobs
-fg
-stty echoctl
-stty -a
-fg
-set bs0
-fg
-stty echoke
-fg
-stty -a
-stty -astty -a
-stty echok 
-stty echoe
-fg
-set -a
-stty -a
-fg
-stty -a
-stty icanon
-fg
-stty -a
-stty -ignpar
-stty -icrnl
-stty -opost
-fg
-jobs
-clear
-ls
-stty -a
-connect 9025
-fg
-set -a
-stty -a
-stty icrnl
-ls
-fg
-stty -a
-stty time 0
-fg
-stty  min 1
-fg
-stty -a
-set -cread
-@s
-stty -a
-stty -a > mock_raw
-ls
-cat mock_raw 
-vi mock_raw 
-stty -a
-clear
-fg
-jobs
-kill %1
-kill %2
-kill %3
-kill %4
-jobs
-clear
-ls
-stty -a
-clear
-l
-clear
-ls
-stty raw
-clear
-ls
-clear
-ls
-stty 0a
-stty -a
-ls
-clear
-ls
-stty snae
-stty sane
-ls
-clear
-ls
-stty raw
-ls
-stty -a
-set icanon
-clear
-ls
-set -a
-stty -a
-stty -a > _raw
-clear
-ls
-stty isig
-clear
-ls
-clear
-ls
-clear
-ls
-clear
-ljklsadfj
-while true; do sleep 1; done
-jobs
-kill %1
-clear
-connect 9041
-clear
-ls
-stty bs3
-stty bs1
-sttty bs2
-stty -a | grep canon
-stty time 5 min 10
-fg
-clear
-ls
-stty time 20
-fg
-set opost
-stty opost
-stty osp
-stty opost
-fg
-stty -a
-stty intr \^k
-stty -a
-fg
-stty time 3
-fg
-echo -echo
-fg
-stty echoe
-fg
-stty echoprt
-fg
-stty
-stty -a
-stty
-stty icanon
-fg
-stty -icanon
-fg
-clear
-stty
-fg
-stty intr ^\c
-fg
-stty 
-stty icrnl
-fg
-stty
-stty icanon
-stty
-stty bs0
-stty
-fg
-stty
-stty -echoprt
-fg
-kill %2
-jobs
-fg
-stty
-stty sane
-fg
-clear
-ls
-jobs
-kill %1
-jobs
-fg
-clear
-ls
-clear
-l
-connect 9041
-ls
-fg
-stty raw
-fg
-ls
-exit
-jobs
-stty sane
-clear
-fg
-connect 9047
-clear
-stty
-stty raw -echo
-stty echo
-ls
-stty isig
-clear
-ls
-stty
-stty isig
-stty
-clear
-ls
-stty
-fg
-stty icrnl
-stty -a
-stty
-fg
-stty susp ^\x
-ls
-stty
-fg
-stty crterase
-stty
-fg
-clear
-stty
-set echoe
-stty echoe
-fg
-stty prterase
-fg
-stty 
-fg
-clear
-stty raw
-clear
-stty
-fg
-IFS=', ' read -r -a array <<< "$string"
-exit
-stty raw isig -echo icrnl time 3 echoprt opost
-stty -a
-fg
-cexit
-exit
-cat ENVS
-exit
-ls
-exit
-spd-say "test"
-vim
-:q
-clear
-which vim
-alias
-which vim
-v
-:q
-clear
-man man
-clear
-stty -a
-exit
-yasr -s festival -p '| festival --pipe'
-exit
-sudo apt upgrade
-clear
-ip route
-unsetopt
-echo $SHELL
-bash
-zsh
-bash
-echo $$
-ps ww 4660
-. ~/.bashrc
-which vim
-vim -ed
-:q
-clear
-ls
-ls -lh
-ls
-cleaar
-stty
-stty -a
-clear
-stty rows 40
-ls
-ls -l
 stty rows 30
 ls -l
 stty rows 34
@@ -1211,4 +164,337 @@ pass delete test
 clear
 tmux ls
 tat kaggle
+exit
+clear
+ conda env list
+conda activate tf
+conda init bash
+conda activate tf
+vi ~/.profile 
+vi ~/.shrc_customised
+fg
+. ~/.shrc_customised
+conda activate pyt
+conda activate tf
+conda activate torch
+clear
+ls
+pytest -k "TestCoor" -s -v tests/test_coord.py 
+which jupytext
+git diff
+git diff --cached
+git stash
+pytest -k "TestCoor" -s -v tests/test_coord.py 
+clear
+pip list
+clear
+ls
+git status
+clear
+ls
+pgrep nc
+ps aux| grep rvs
+ps aux| grep bash
+psnc
+psnc nc
+pgrep | grep nc
+ps aux | grep nc
+ps aux | grep "\<nc\>"
+jobs
+exit
+conda activate torch
+pytest -k "TestCoor" -s -v tests/test_coord.py 
+pytest  -s -v tests/test_coord.py 
+python -V
+which python
+conda activate python
+conda activate torch
+pip list
+which python
+ls
+clear
+ls
+which python
+conda env list
+conda activate t
+conda activate tf
+which python
+exit
+. ~/profile
+source ~/.profile
+echo $SHELL
+exit
+source ~/.bashrc
+vi ~/.bashrc
+who
+clear
+. ~/.profile
+vi ~/.profile
+clear
+exit
+unner
+ls
+cd .runner
+ls
+cd .runner
+cd kaggle_runner
+ls
+ls .*
+cd ..
+ls .*
+cd .runners
+cd in*
+clear
+ls
+which bash
+bash -x rvs.sh
+wxit
+exit
+zsh
+exit
+ps aux| grep nix
+ps aux| grep nix
+echo $PATH
+nix-env -q
+fish
+. ~/.profile
+nix-env -q
+. ~/.bashrc
+fish
+vi history_bash 
+vi history_zsh 
+ls /nix
+ls /nix/
+echo $PATH
+who
+echo $BASHID
+echo $BASHPID
+chsh -s /bin/bash
+cat /etc/fstab.hd
+cat /etc/fstab
+clear
+cat /etc/fstab.hd
+sudo -i
+cat >> .shrc_customised
+vi ~/.shrc_customised
+pgrep nix-daemon
+fg
+exit
+echo $BASHPID
+setopt
+who
+clear
+echo $PATH 
+which python
+fish
+nix-env
+nix-env -q
+cmatrix 
+clear
+which fish
+ls -lh /usr/local/bin/fish
+clear
+who
+ls
+exit
+exit
+exit
+nix-env -q
+fish
+vi ~/.config/fish/config.fish
+which
+clear
+fish
+fish
+fish
+zsh
+exit
+clear
+who
+asf
+ncat 127.1 9005
+stty raw -echo && fg
+tmux ls
+tat 2
+exit
+clear
+ncat 127.1 9080
+exit
+stty raw -echo && fg
+which python
+python35
+echo $PATH
+echo $$
+ps aux 80989
+ls //nix/store/b6afqd7jcf40k7m1qnk5zssgxpjikw6q-bash-interactive-4.4-p23/bin:
+ls /nix/store/b6afqd7jcf40k7m1qnk5zssgxpjikw6q-bash-interactive-4.4-p23/bin
+which python3
+python35
+man nix-shell
+which python3
+python3 --version
+exit
+cat >> nix_basic_usage.nix
+nix-shell nix_basic_usage.nix 
+vi nix_basic_usage.nix +15
+nix-shell nix_basic_usage.nix 
+nix-shell nix_basic_usage.nix 
+jobs
+vi nix_basic_usage.nix 
+nix-shell nix_basic_usage.nix 
+fg
+nix-shell nix_basic_usage.nix 
+fg
+git status
+git diff
+clear
+git status
+psnc ncat
+git diff bin/
+psnc
+clear
+fg
+cat nix_basic_usage.nix 
+nix-shell nix_basic_usage.nix 
+fg
+fg
+vi nix_basic_usage.nix 
+cat > build.nix
+nix-shell build.nix 
+clear
+ls
+nv -e todoman
+nv -i todoman umlet
+nv -i umlet
+umlet 
+nv -i log4j
+clear
+who
+nix-env -qa go\*
+which go
+go --version
+go version
+nv -i go
+which go
+go env
+go /usr/local/Cellar/go/1.14.2_1/libexec/pkg/tool/darwin_amd64
+ls /usr/local/Cellar/go/1.14.2_1/libexec/pkg/tool/darwin_amd64
+which go
+/usr/local/go/bin/go env
+nv -qa firefox
+nv
+cd /Volumes/CaseSensitive/mq/
+ls
+go run receive_logs_topic.go \*.\*
+exit
+source ~/.bashrc
+ls
+clear
+exit
+cd /Volumes/CaseSensitive/
+ls
+cd toxic_bias/
+ls
+cat README.md 
+git remote show
+git pull
+git status
+tig
+git commit -asm "Split codes"
+git status
+git pull
+git status
+clear
+ls
+tig .travis.yml 
+cp ../kaggle_runner/Makefile  .
+ls
+git add Makefile 
+ls
+git status
+git 
+git status
+cat .gitignore 
+ls
+clear
+ls
+cat notes.md 
+fg
+clear
+ls
+tig .
+ls
+ls
+wc -l *
+kaggle kernels list --user k1gaggle
+mkdir kaggle
+kaggle kernels pull -p kaggle/ k1gaggle/nb-toxic 
+cd kaggle/nb-toxic.ipynb 
+ls
+clear
+ls
+cd kaggle/
+ls
+which python
+fish
+cd kaggle/nb-toxic.ipynb 
+bash
+. ~/.bashrc
+kaggle kernels pull -p . -m k1gaggle/nb-toxic 
+ls
+vi kernel-metadata.json 
+clear
+ls
+vi nb-toxic.py 
+v nb-toxic.py 
+exit
+asldfj
+aldjfslajkdfalsfj
+ls
+clear
+ls
+clear
+ls
+nix-env 
+nv -q
+cmatrix
+ncat 127.1 9098
+ncat 127.1 9099
+clear
+ncat 127.1 9099
+ncat 127.1 9100
+ncat 127.1 9101
+ncat 127.1 9198
+ncat 127.1 9098
+vi ~/.tmux.conf
+git add ~/.tmux.conf
+ncat 127.1 9104 8
+ncat 127.1 9104 
+ncat 127.1 9138
+ncat 127.1 9140
+ncat 127.1 9141
+ncat 127.1 9142
+ncat 127.1 9117
+ncat 127.1 9126
+ncat 127.1 9141
+stty raw -echo && fg
+clear
+. ~/.profile 
+nv
+ps aux| grep nix
+clear
+. ~/.bashrc
+mv
+nv
+who
+clar
+clear
+ip route
+exit
+alacity
+. .profile
+alacritty
+exit
+exit
+exit
 exit
