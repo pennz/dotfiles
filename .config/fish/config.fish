@@ -10,6 +10,7 @@
   set -gx GPG_TTY                    (tty)
   set -gx PROXY_URL                  'http://127.0.0.1:7890'
   set -gx QT_QPA_PLATFORM_PLUGIN_PATH /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/
+  set PATH $HOME/anaconda3/envs/torch/bin $PATH
 # }}}
 
 # Abbreviations {{{
@@ -59,7 +60,7 @@
   abbr antlr4	'java org.antlr.v4.Tool'
   abbr grun	'java org.antlr.v4.gui.TestRig'
   abbr vim	'nvim -u ~/.config/nvim_back/init.vim'
-  abbr ss	'eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
+  abbr ss	'eval (ssh-agent -s | sed -e "s/;/;\n/g" | sed "s/\([^=]*\)=\([^;]*\)/set \1 \2/") && ssh-add ~/.ssh/id_rsa'
   abbr nv	'nix-env'
   abbr setproxy "eval export HTTP_PROXY=$PROXY_URL HTTPS_PROXY=$PROXY_URL http_proxy=$PROXY_URL https_proxy	$PROXY_URL; echo $http_proxy"
   abbr unsetproxy 'export http_proxy= ; export https_proxy= ;export HTTP_PROXY= ; export HTTPS_PROXY	 '
@@ -187,6 +188,6 @@
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /home/v/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# eval /home/v/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 

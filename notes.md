@@ -131,3 +131,6 @@ losses summed is 280.71681679505855, cnt is 80, loss_dict_reduced is {'loss_clas
 Epoch: [0]  [ 80/663]  eta: 8:38:53  lr: 0.000122  loss: 3.508960  loss_mask: 0.158282  loss_classifier: 0.0046 (0.1389)  loss_objectness: 0.0048 (3.2118)  time: 54.7966  data: 0.0231
 
 ....
+pass exports
+then we can update pypi, the script for runner which uses gdrive(just remove it for now), do not block the normal process
+

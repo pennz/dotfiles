@@ -12,7 +12,7 @@ alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already s
 alias v='/snap/bin/nvim -u ~/.config/nvim_back/init.vim'
 alias ccc="source $HOME/bin/ccc"
 
-export PATH=/snap/bin:/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$HOME/miniconda3/bin:$GOPATH/bin:$PATH:/usr/local/lib/ruby/gems/2.5.0/bin/
+export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$GOPATH/bin:/usr/local/lib/ruby/gems/2.5.0/bin/:$PATH
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
@@ -20,14 +20,14 @@ PROXY_URL='http://127.0.0.1:7890'
 
 export SHELL=$(which zsh)
 
-__conda_setup="$('/home/v/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/v/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/v/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/v/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/v/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/v/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/v/miniconda3/bin:$PATH"
+        export PATH="/Users/v/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -54,7 +54,6 @@ fi
 #export GIT_PS1_SHOWCOLORHINTS=1
 ##export GIT_PS1_SHOWUNTRACKEDFILES=1
 #export GIT_PS1_SHOWUPSTREAM="auto"
-#PATH="/usr/local/go/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 #eval "$(/home/v/miniconda3/bin/conda shell.YOUR_SHELL_NAME hook)"
 #source /home/v/.nix-profile/etc/profile.d/nix.sh
@@ -94,3 +93,4 @@ alias connect='fpipe | trap "" INT;  ncat localhost'
 alias gdrive='gdrive  --service-account go-2-learn-00c8bf796e90.json'
 stty eof ^\f
 alias tmux="$HOME/.nix-profile/bin/tmux"
+pgrep nix-daemon >/dev/null || ( sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )

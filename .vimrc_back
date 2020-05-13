@@ -709,7 +709,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'tslint'],
 \   'vue': ['eslint'],
-\   'python': ['pylint', 'flake8'],
+\   'python': ['black'],
 \   'sh': ['shellcheck'],
 \}
 let g:ale_python_pylint_executable = '/home/v/miniconda3/envs/pyt/bin/pylint'
@@ -1611,3 +1611,4 @@ noremap <silent><leader>tc :Pytest class<CR>
 noremap <silent><leader>M :wincmd \| <BAR> wincmd _<CR>
 
 let g:go_debug=['shell-commands']
+let g:loaded_node_provider=0
