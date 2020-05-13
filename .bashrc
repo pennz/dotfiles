@@ -185,21 +185,6 @@ export CALIBRE_USE_SYSTEM_THEME=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/v/miniconda3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/v/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/v/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/v/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 setterm -clrtabs
 setterm -regtabs 4
 [ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console

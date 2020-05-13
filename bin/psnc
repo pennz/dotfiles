@@ -6,7 +6,7 @@ else
   t=ncat
 fi
 
-pids=$(pgrep "\<$t\>");
+pids=$(ps -o pid,comm | grep nc | sed 's/ nc//')
 [ -z "$pids" ] || {
 IFS=$'\n' array=("$pids")
  ps -o pid,command ww $array | sort ; }
