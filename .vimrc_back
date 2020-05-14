@@ -5,6 +5,8 @@ set encoding=utf-8
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
+set nocompatible			" 不使用vi兼容模式
+
 let vimplug_exists=expand('~/.config/nvim_back/autoload/plug.vim')
 
 "let g:vim_bootstrap_langs = "python"
@@ -54,7 +56,9 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
+if has('nvim')
 Plug 'skywind3000/asyncrun.vim'
+endif
 
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -838,7 +842,6 @@ endif
 
 
 """ ### vim 特性配置 {{{
-set nocompatible			" 不使用vi兼容模式
 "set nonu
 set relativenumber			" 显示相对（当前光标所在行）行号而不是绝对行号
 set hlsearch				" 高亮搜索结果
