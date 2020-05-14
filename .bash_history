@@ -1,39 +1,3 @@
-pstree -pa $$
-. .profile
-ls .profile 
-. .bashrc
-tmux ls
-  $ nix-shell -p nix-info --run "nix-info -m"
-  $ n
-  $ nix-shell -p nix-info --run "nix-info -m"
- nix-shell -p nix-info --run "nix-info -m"
-nix
-exit
-help
-ls
-ghc
-nix-env -qa
-nix-env -q
-nix-channel -l
-nix-channel --help
-nix-channel --list
-nix-channel -h
-nix-channel --help
-fg
-jobs
-exit
-curl -v localhost:28080
-curl -v localhost:28080/lab?
-exit
-exit
-exit
-clear
-ls
-ls
-clear
-who
-exit
-sudo apt upgrade -y
 clear
 who
 tmux ls
@@ -498,3 +462,41 @@ exit
 fish
 exit
 exit
+exit
+htop
+htop
+htop
+clear
+ls
+htop
+docker ps
+exit
+cd
+ls
+git status
+git add .vimrc_back 
+git commit -asm "vim nocompitible"
+git status
+cd bin
+ls
+rg filter-repo
+ls git-filter-repo 
+rg filter-repo
+git push
+clear
+ls
+clear
+exit
+.nix-profile/bin/alacritty
+fish
+setproxy
+cd /Volumes/CaseSensitive/kaggle_runner/
+ls
+make
+file ./cc-test-reporter 
+./cc-test-reporter 
+make test
+fish
+fish
+. ~/.profile
+which python

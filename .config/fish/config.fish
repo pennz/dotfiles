@@ -60,7 +60,7 @@
   abbr antlr4	'java org.antlr.v4.Tool'
   abbr grun	'java org.antlr.v4.gui.TestRig'
   abbr vim	'nvim -u ~/.config/nvim_back/init.vim'
-  abbr ss	'eval (ssh-agent -s | sed -e "s/;/;\n/g" | sed "s/\([^=]*\)=\([^;]*\)/set \1 \2/") && ssh-add ~/.ssh/id_rsa'
+  abbr ss	'eval (ssh-agent -s | sed "s/\([^=]*\)=\([^;]*\)/set \1 \2/") && ssh-add ~/.ssh/id_rsa'
   abbr nv	'nix-env'
   abbr setproxy "eval export HTTP_PROXY=$PROXY_URL HTTPS_PROXY=$PROXY_URL http_proxy=$PROXY_URL https_proxy	$PROXY_URL; echo $http_proxy"
   abbr unsetproxy 'export http_proxy= ; export https_proxy= ;export HTTP_PROXY= ; export HTTPS_PROXY	 '
