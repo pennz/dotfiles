@@ -1,61 +1,3 @@
-stty rows 30
-ls -l
-stty rows 34
-ls -l
-stty rows 38
-ls -l
-clear
-ls
-stty columns 80
-ls
-ls -lh
-stty columns 150
-ls
-clear
-vim
-stty columns 140
-fg
-vim .vimrc_back 
-stty columns 120
-stty columns 100
-stty columns 140
-vim
-stty columns 135
-stty columns 138
-vim
-stty columns 137
-stty columns 136
-vim
-stty
-stty -a
-stty rows 39
-stty
-stty rows 38
-clear
-ls
-clear
-elinks
-jobs
-tmux
-tat 0
-echo $TERM
-fg
-mv ~/.profile.bak ~/.profile
-vi .profile 
-fg
-[[ x == x -o x == x ]] && echo "yes"
-[[ x == x -or x == x ]] && echo "yes"
-man test
-[[ x == x ]] -o [[ x == x ]] && echo "yes"
-[ [[ x == x ]] -o [[ x == x ]] ] && echo "yes"
-test [[ x == x ]]
-fg
-vim
-tmux
-tat kaggle
-setopt
-unsetopt
-echo $$
 pstree -pa $$
 . .profile
 ls .profile 
@@ -496,5 +438,63 @@ alacity
 alacritty
 exit
 exit
+exit
+exit
+cd
+git status
+git status
+cat >> .gitignore
+git status
+git commit -asm "Updates"
+git status
+git status
+git push
+wc -l bin/go_add_debug
+clear
+jobs
+htop
+sudo htop
+exit
+setproxy
+make install_dep
+bg
+exit
+ncat 127.1 9302
+ncat 127.1 9305
+ncat 127.1 9302
+exit
+tmux ls
+fish
+echo $ANDROID_HOME 
+vi .profile 
+vi .profile 
+fish
+clear
+ls
+clear
+ls
+cd /Volumes/CaseSensitive/kaggle_runner/
+ls
+clear
+cd reversShells/
+bash -x tcpservers_setup 
+jobs
+pkill tcpserver
+clear
+bash tcpservers_setup 
+pkill tcpserver
+bash -x tcpservers_setup 
+pkill tcpserver
+bash tcpservers_setup 
+exit
+ bash -c "[ -z \"$(python3 -m albumentations 2>&1 | grep direct)\" ] && pip install -U git+https://github.com/albu/albumentations"
+
+which python
+ bash -c "[ -z \"$(python3 -m albumentations 2>&1 | grep direct)\" ] && pip install -U git+https://github.com/albu/albumentations"
+clear
+fg
+zsh
+exit
+fish
 exit
 exit
