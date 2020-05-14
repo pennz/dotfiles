@@ -7,7 +7,7 @@ SETUVAR _fish_abbr_aa:nvim\x20\x7e/\x2econfig/alacritty/alacritty\x2eyml
 SETUVAR _fish_abbr_antlr4:java\x20org\x2eantlr\x2ev4\x2eTool
 SETUVAR _fish_abbr_c:pushd
 SETUVAR _fish_abbr_cc:pushd\x20\x2d
-SETUVAR _fish_abbr_ccc:bash\x20/Users/v/bin/ccc
+SETUVAR _fish_abbr_ccc:bash\x20/home/v/bin/ccc
 SETUVAR _fish_abbr_f5:source\x20\x20\x7e/\x2econfig/fish/config\x2efish
 SETUVAR _fish_abbr_ff:nvim\x20\x7e/\x2econfig/fish/config\x2efish
 SETUVAR _fish_abbr_g_2E_:git\x20add\x20\x2e
@@ -33,7 +33,7 @@ SETUVAR _fish_abbr_setproxy:eval\x20export\x20HTTP_PROXY\x3dhttp\x3a//127\x2e0\x
 SETUVAR _fish_abbr_ss:eval\x20\x28ssh\x2dagent\x20\x2ds\x20\x7c\x20sed\x20\x22s/\x5c\x28\x5b\x5e\x3d\x5d\x2a\x5c\x29\x3d\x5c\x28\x5b\x5e\x3b\x5d\x2a\x5c\x29/set\x20\x5c1\x20\x5c2/\x22\x29\x20\x26\x26\x20ssh\x2dadd\x20\x7e/\x2essh/id_rsa
 SETUVAR _fish_abbr_t:tmux\x20attach\x20\x2dd
 SETUVAR _fish_abbr_tat:tmux\x20attach\x20\x2dd\x20\x2dt
-SETUVAR _fish_abbr_tmux:/Users/v/\x2enix\x2dprofile/bin/tmux
+SETUVAR _fish_abbr_tmux:/home/v/\x2enix\x2dprofile/bin/tmux
 SETUVAR _fish_abbr_tt:nvim\x20\x7e/\x2etmux\x2econf
 SETUVAR _fish_abbr_unsetproxy:export\x20http_proxy\x3d\x20\x3b\x20export\x20https_proxy\x3d\x20\x3bexport\x20HTTP_PROXY\x3d\x20\x3b\x20export\x20HTTPS_PROXY\x09\x20
 SETUVAR _fish_abbr_v:nvim\x20\x2du\x20\x7e/\x2econfig/nvim_back/init\x2evim
@@ -73,4 +73,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/usr/local/opt/openssl/bin\x1e/Users/v/bin\x1e/Users/v/\x2easdf/shims\x1e/Users/v/\x2easdf/bin\x1e/Users/v/\x2efzf/bin
+SETUVAR fish_user_paths:/usr/local/opt/openssl/bin\x1e/home/v/bin\x1e/home/v/\x2easdf/shims\x1e/home/v/\x2easdf/bin\x1e/home/v/\x2efzf/bin
