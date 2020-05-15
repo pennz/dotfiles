@@ -9,7 +9,6 @@ set nocompatible			" 不使用vi兼容模式
 
 let vimplug_exists=expand('~/.config/nvim_back/autoload/plug.vim')
 
-"let g:vim_bootstrap_langs = "python"
 let $VIRTUAL_ENV = $CONDA_PREFIX
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 
@@ -675,8 +674,8 @@ nnoremap <Leader>o :.Gbrowse<CR>
 function SetPythonOptions()
   setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79 formatoptions+=croq softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
   set errorformat=%f:%l:\ %m
-  "set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
-  nnoremap <Leader>l :copen \| wincmd p \| AsyncRun pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p <CR>
+  set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
+  nnoremap <Leader>l :copen \| wincmd p \| make <CR>
 endfunction
 
 augroup vimrc-python
@@ -713,7 +712,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'tslint'],
 \   'vue': ['eslint'],
-\   'python': ['black'],
+\   'python': ['pylint','black'],
 \   'sh': ['shellcheck'],
 \}
 let g:ale_python_pylint_executable = '/home/v/miniconda3/envs/pyt/bin/pylint'
@@ -723,7 +722,7 @@ let g:ale_fixers = {
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
-\    'python': ['remove_trailing_lines', 'trim_whitespace', 'isort','black','autopep8'],
+\    'python': ['add_blank_lines_for_python_control_statements', 'remove_trailing_lines', 'trim_whitespace', 'isort'],
 \    'sh': ['shfmt'],
 \}
 let g:ale_fix_on_save = 1
@@ -832,7 +831,7 @@ set nojoinspaces
 nnoremap <silent><Leader>p :CtrlP<CR>
 
 " Run commands that require an interactive shell
-nnoremap <silent> <Leader>r :source ~/.vimrc_back<CR>
+nnoremap <Leader>r :source ~/.vimrc_back<CR>
 
 
 " Always use vertical diffs
@@ -918,8 +917,8 @@ let g:SimpylFold_docstring_preview = 1
 "noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
-let g:python3_host_prog = "/usr" . "/bin/python3"
-let g:python_host_prog = "/usr" . "/bin/python"
+let g:python3_host_prog = system('echo -n (which python3)')
+let g:python3_host_prog = system('echo -n (which python)')
 
 "set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
 "noremap <Leader>x :bunload<CR>
@@ -1538,13 +1537,13 @@ let g:ctrlp_user_command =
     \ ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 "" Gundo
 nnoremap U :GundoToggle<CR>
-"" Syntastic
-let g:syntastic_mode_map = { 'mode': 'active',
-                        \ 'passive_filetypes': ['java', 'markdown'] }
-let g:syntastic_cpp_compiler_options = ' -std=gnu++11'
-let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
-let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
-let g:syntastic_python_python_exec = 'python3'
+"" Syntastic -> we use ALE
+" let g:syntastic_mode_map = { 'mode': 'active',
+"                         \ 'passive_filetypes': ['java', 'markdown'] }
+" let g:syntastic_cpp_compiler_options = ' -std=gnu++11'
+" let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
+" let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
+" let g:syntastic_python_python_exec = 'python3'
 "" Eclim
 let g:EclimCValidate = 0
 let g:EclimCppValidate = 0
