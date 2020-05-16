@@ -94,4 +94,5 @@ stty eof ^\f
 alias tmux="$HOME/.nix-profile/bin/tmux"
 pgrep nix-daemon >/dev/null || ( sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )
 # source $HOME/.nix-profile/etc/profile.d/nix.sh
-hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage
+[ -d /Volumes/CaseSensitive/ ] || hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage
+[ -z $NOFISH ] && fish

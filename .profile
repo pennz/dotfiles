@@ -84,4 +84,3 @@ fi
 if [ -f "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised
 fi
-[ -z $NOFISH ] || fish
