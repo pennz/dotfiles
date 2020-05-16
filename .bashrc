@@ -188,6 +188,8 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 setterm -clrtabs
 setterm -regtabs 4
 [ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
+FILE=/etc/bashrc
+[ -f "$FILE" ] && source "$FILE"
 # Avoid duplicates
 HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file instead of overwriting it
