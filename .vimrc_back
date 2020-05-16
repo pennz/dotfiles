@@ -7,7 +7,7 @@ set encoding=utf-8
 "*****************************************************************************
 set nocompatible			" 不使用vi兼容模式
 
-let vimplug_exists=expand('~/.config/nvim_back/autoload/plug.vim')
+let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
 let $VIRTUAL_ENV = $CONDA_PREFIX
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
