@@ -56,7 +56,6 @@ fi
 #export GIT_PS1_SHOWUPSTREAM="auto"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 #eval "$(/home/v/miniconda3/bin/conda shell.YOUR_SHELL_NAME hook)"
-#source /home/v/.nix-profile/etc/profile.d/nix.sh
 ###-begin-leetcode-completions-###
 #
 # yargs command completion script
@@ -94,3 +93,5 @@ alias gdrive='gdrive  --service-account go-2-learn-00c8bf796e90.json'
 stty eof ^\f
 alias tmux="$HOME/.nix-profile/bin/tmux"
 pgrep nix-daemon >/dev/null || ( sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )
+# source $HOME/.nix-profile/etc/profile.d/nix.sh
+hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage
