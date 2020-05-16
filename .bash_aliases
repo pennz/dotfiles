@@ -22,10 +22,7 @@ alias sudop='sudo proxychains'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ping='ping -n'
 
-set sys_info (uname)
 # if [ x"{$sys_info/inux/}" != x"$sys_info" ]; then alias open='xdg-open' fi
-
-set SERVER_IP lab.pengyuzhou.com
 
 alias p='popd'
 alias c='pushd'
