@@ -10,6 +10,7 @@ git filter-repo \
 --path .kaggle  \
 --path bin/v2ray_client.json \
 --path bin/v2ray_router_client.json \
+--path-glob '.config/v2ray*.json' \
 --path-glob '.*history' \
 --path .duckdns \
 --path .electrum \
@@ -19,6 +20,6 @@ git filter-repo \
 --invert-paths
 git remote add public git@github.com:pennz/dotfiles.git
 git fetch public
-git rebase public/$BRANCH
+git merge public/$BRANCH
 git push --set-upstream public $BRANCH
 popd
