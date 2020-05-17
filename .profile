@@ -17,9 +17,9 @@ fi
 set -o ignoreeof
 
 # nvim back folder
-[ ! -d "$HOME"/.vim/backup/ ] && mkdir -p "$HOME"/.vim/backup/ 
-[ ! -d "$HOME"/.vim/swap/   ] && mkdir -p "$HOME"/.vim/swap/   
-[ ! -d "$HOME"/.vim/undo/   ] && mkdir -p "$HOME"/.vim/undo/   
+[ ! -d "$HOME"/.vim/backup/ ] && mkdir -p "$HOME"/.vim/backup 
+[ ! -d "$HOME"/.vim/swap/   ] && mkdir -p "$HOME"/.vim/swap   
+[ ! -d "$HOME"/.vim/undo/   ] && mkdir -p "$HOME"/.vim/undo  
 
 # fuck 
 command -v fuck >/dev/null && eval "$(thefuck --alias)"
