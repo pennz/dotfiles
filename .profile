@@ -1,26 +1,4 @@
 #!/bin/bash
-
-if [ "$(cat "$HOME"/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
-then 
-		export MACHINE_NAME="D"; 
-fi
-
-
-if [ "$(cat "$HOME"/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
-then 
-		echo "eq" ; 
-fi
-
-if [ "$(cat "$HOME"/.MUID)" = aca16920583e42bdcf5fc70618f55b6a ]
-then 
-		export MACHINE_NAME="M"; 
-fi
-
-if [ "$(cat "$HOME"/.MUID)" = a57a753581205757ac302383c1a6b2f686a84356941c17d4eea95a227d6a25dc ] 
-then 
-		echo "eq" ; 
-fi
-
 # env vars
 export GOPATH="$HOME"/go
 export LC_ALL=en_US.UTF-8
