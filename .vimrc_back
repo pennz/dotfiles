@@ -146,6 +146,9 @@ Plug 'honza/vim-snippets'
 "nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 "imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
+" tmux
+Plug 'tmux-plugins/vim-tmux-focus-events'
+
 " python
 "" Python Bundle
 Plug 'tmhedberg/SimpylFold'
