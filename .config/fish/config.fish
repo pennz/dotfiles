@@ -62,11 +62,12 @@
   abbr vim	'nvim -u ~/.config/nvim_back/init.vim'
   abbr ss	'eval (ssh-agent -s | sed "s/\([^=]*\)=\([^;]*\)/set \1 \2/") && ssh-add ~/.ssh/id_rsa'
   abbr nv	'nix-env'
-  abbr setproxy "eval export HTTP_PROXY=$PROXY_URL HTTPS_PROXY=$PROXY_URL http_proxy=$PROXY_URL https_proxy	$PROXY_URL; echo $http_proxy"
-  abbr unsetproxy 'export http_proxy= ; export https_proxy= ;export HTTP_PROXY= ; export HTTPS_PROXY	 '
+  abbr setproxy "eval set -gx HTTP_PROXY $PROXY_URL; set -gx HTTPS_PROXY $PROXY_URL; set -gx http_proxy $PROXY_URL; set -gx https_proxy	$PROXY_URL; echo $http_proxy"
+  abbr unsetproxy 'set -gx http_proxy  ; set -gx https_proxy  ;set -gx HTTP_PROXY  ; set -gx HTTPS_PROXY	 '
   abbr ccc	"bash $HOME/bin/ccc"
   abbr gdrive	'gdrive  --service-account go-2-learn-00c8bf796e90.json'
   abbr tmux     "$HOME/.nix-profile/bin/tmux"
+  abbr b     "NO_FISH=1 bash"
 # }}}
 
 # Utility functions {{{
