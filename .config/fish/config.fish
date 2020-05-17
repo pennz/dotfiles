@@ -42,11 +42,10 @@
   abbr gsp 'git stash pop'
 
   # vim / vim-isms
-  #abbr v   "$EDITOR ."
+  abbr v   "$EDITOR"
   abbr vip "$EDITOR +PlugInstall +qall"
   abbr vup "$EDITOR +PlugUpdate"
   abbr vcp "$EDITOR +PlugClean +qall"
-  abbr v   "$EDITOR -u ~/.config/nvim_back/init.vim"
   abbr :q  "exit"
   abbr :Q  "exit"
 
@@ -62,7 +61,7 @@
   abbr vim	'nvim -u ~/.config/nvim_back/init.vim'
   abbr ss	'eval (ssh-agent -s | sed "s/\([^=]*\)=\([^;]*\)/set \1 \2/") && ssh-add ~/.ssh/id_rsa'
   abbr nv	'nix-env'
-  abbr setproxy "eval set -gx HTTP_PROXY $PROXY_URL; set -gx HTTPS_PROXY $PROXY_URL; set -gx http_proxy $PROXY_URL; set -gx https_proxy	$PROXY_URL; echo $http_proxy"
+  abbr setproxy "set -gx HTTP_PROXY $PROXY_URL; set -gx HTTPS_PROXY $PROXY_URL; set -gx http_proxy $PROXY_URL; set -gx https_proxy	$PROXY_URL; echo $PROXY_URL"
   abbr unsetproxy 'set -gx http_proxy  ; set -gx https_proxy  ;set -gx HTTP_PROXY  ; set -gx HTTPS_PROXY	 '
   abbr ccc	"bash $HOME/bin/ccc"
   abbr gdrive	'gdrive  --service-account go-2-learn-00c8bf796e90.json'
