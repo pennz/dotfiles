@@ -1,8 +1,18 @@
-#!/bin/bash
+#!/bin/bash -e
 BRANCH=good-day
 
-git clone --single-branch --branch ${BRANCH} file://$HOME/
-pushd $(basename $HOME)
+cd $HOME
+if [ -d "$HOME/$(basename $HOME)" ]; then
+  pushd $(basename $HOME)
+  git remote add local file://$HOME/ || true
+  git fetch local
+  git checkout $BRANCH
+  git merge local/$BRANCH
+else
+  git clone --single-branch --branch ${BRANCH} file://$HOME/
+  pushd $(basename $HOME)
+fi
+
 git filter-repo \
 --path .lc \
 --path notes.md \
@@ -18,7 +28,7 @@ git filter-repo \
 --path works \
 --path bin/filter_public \
 --invert-paths
-git remote add public git@github.com:pennz/dotfiles.git
+git remote add public git@github.com:pennz/dotfiles.git || true
 git fetch public
 git merge public/$BRANCH
 git push --set-upstream public $BRANCH
