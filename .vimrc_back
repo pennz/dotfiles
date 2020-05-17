@@ -35,7 +35,7 @@ nnoremap <SPACE> <Nop>
 "" Map leader to <SPACE>
 let mapleader=' '
 " Required:
-call plug#begin(expand('~/.config/nvim_back/plugged'))
+call plug#begin(expand('~/.config/nvim/plugged'))
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -179,8 +179,8 @@ Plug 'buoto/gotests-vim'
 "*****************************************************************************
 
 "" Include user's extra bundle
-if filereadable(expand("~/.config/nvim_back/local_bundles.vim"))
-  source ~/.config/nvim_back/local_bundles.vim
+if filereadable(expand("~/.config/nvim/local_bundles.vim"))
+  source ~/.config/nvim/local_bundles.vim
 endif
 
 call plug#end()
@@ -225,7 +225,7 @@ else
 endif
 
 " session management
-let g:session_directory = "~/.config/nvim_back/session"
+let g:session_directory = "~/.config/nvim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
@@ -750,8 +750,8 @@ let g:vim_vue_plugin_load_full_syntax = 1
 "*****************************************************************************
 
 "" Include user's local vim config
-if filereadable(expand("~/.config/nvim_back/local_init.vim"))
-  source ~/.config/nvim_back/local_init.vim
+if filereadable(expand("~/.config/nvim/local_init.vim"))
+  source ~/.config/nvim/local_init.vim
 endif
 
 "*****************************************************************************
@@ -851,9 +851,9 @@ set incsearch				" 输入搜索内容时就同步显示搜索结果
 set ignorecase				" 搜索时大小写不敏感
 set smartcase
 set noswapfile
-set backupdir=~/.vim_back/backup/
-set directory=~/.vim_back/swap/
-set undodir=~/.vim_back/undo/
+set backupdir=~/.vim/backup/
+set directory=~/.vim/swap/
+set undodir=~/.vim/undo/
 set undofile "undo !!!!!!!!!!!!!
 set nowrap				" 长度超过窗口宽度不要换行显示
 "set list				" 让vim显示空格、tab、换行等不可见字符
