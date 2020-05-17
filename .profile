@@ -24,13 +24,6 @@ set -o ignoreeof
 # fuck 
 command -v fuck >/dev/null && eval "$(thefuck --alias)"
 
-# conda
-#eval "$(register-python-argcomplete conda)" # it does not work
-
-if [ "x$MACHINE_NAME" = "xD" ]
-then
-	echo "Have a good time";
-fi
 
 # for visual studio code
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
