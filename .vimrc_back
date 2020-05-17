@@ -1217,7 +1217,8 @@ tnoremap <Esc> <C-\><C-n>
 
 set lazyredraw
 let g:go_version_warning = 0
-nnoremap <silent> <Leader>h :<C-u>hide<CR>
+nnoremap <silent> <Leader>h :<C-u>if winnr() == winnr('$') <BAR> bd <BAR> else <BAR> hide <BAR> endif <CR>
+nnoremap <silent> <Leader>H :<C-u>only<CR>
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
