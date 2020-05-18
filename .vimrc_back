@@ -604,7 +604,7 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
 nmap <leader>H :History<CR>
-nmap <leader>M :Marks<CR>
+" nmap <leader>M :Marks<CR>
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -1218,7 +1218,7 @@ tnoremap <Esc> <C-\><C-n>
 set lazyredraw
 let g:go_version_warning = 0
 nnoremap <silent> <Leader>h :<C-u>if winnr() == winnr('$') <BAR> bd <BAR> else <BAR> hide <BAR> endif <CR>
-nnoremap <silent> <Leader>H :<C-u>only<CR>
+nnoremap <silent> <Leader>M :<C-u>only<CR>
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
@@ -1372,7 +1372,7 @@ set wildmenu
 "
 "set cindent
 set smartindent
-"set noautoindent
+set autoindent
 
 
 """" Formatting
