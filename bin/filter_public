@@ -1,5 +1,6 @@
 #!/bin/bash -e
 BRANCH=good-day
+RBRANCH=master
 
 cd $HOME
 if [ -d "$HOME/$(basename $HOME)" ]; then
@@ -30,6 +31,6 @@ git filter-repo \
 --invert-paths
 git remote add public git@github.com:pennz/dotfiles.git || true
 git fetch public
-git merge public/$BRANCH
-git push --set-upstream public $BRANCH
+git merge public/$RBRANCH
+git push --set-upstream public $BRANCH:$RBRANCH
 popd

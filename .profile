@@ -1,8 +1,8 @@
 #!/bin/bash
 # env vars
 export GOPATH="$HOME"/go
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+# export LC_ALL=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 
 # make less more friendly for non-text input files, see lesspipe(1)
