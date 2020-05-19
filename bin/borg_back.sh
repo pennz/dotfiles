@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
-test -d /Volumes/mac_files/bor && export BORG_REPO=/Volumes/mac_files/borg
+test -d /Volumes/mac_files/borg && export BORG_REPO=/Volumes/mac_files/borg
 test -d /media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg &&
   export BORG_REPO=/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
 
@@ -72,7 +72,7 @@ backup() {
       --exclude '/private/tmp/*' \
       --exclude '/tmp/*' \
       \
-      ::'{hostname}-{now}' \
+      "$BORG_REPO"::'{hostname}-{now}' \
       /etc \
       $SOURCE_HOME \
       /Applications \
