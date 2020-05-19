@@ -100,4 +100,4 @@ alias tmux="$HOME/.nix-profile/bin/tmux"
 pgrep nix-daemon >/dev/null || ( sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )
 # source $HOME/.nix-profile/etc/profile.d/nix.sh
 [ -d /Volumes/CaseSensitive/ ] || ( which hdiutil >/dev/null && hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage )
-[ -z $NO_FISH ] && fish
+[ x$FISH = x1 ] && fish
