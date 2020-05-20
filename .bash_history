@@ -1,7 +1,3 @@
-ps aux| grep nix
-echo $PATH
-nix-env -q
-fish
 . ~/.profile
 nix-env -q
 . ~/.bashrc
@@ -498,3 +494,7 @@ fg
 mail
 exit
 exit
+clear
+tmux ls
+which tmux
+tmux

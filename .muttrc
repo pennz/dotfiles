@@ -12,7 +12,11 @@ set spoolfile = "+INBOX"
 set ssl_force_tls = yes
 
 # G to get mail
-# bind index G imap-fetch-mail
+bind index G imap-fetch-mail
+
+bind pager a noop
+bind pager g noop
+
 set charset = "utf-8"
 set record = ''
 # https://lukeross.github.io/MuttrcBuilder/#build/1.11.4
