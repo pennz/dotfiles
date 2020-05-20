@@ -498,3 +498,60 @@ clear
 tmux ls
 which tmux
 tmux
+clear
+nv
+nv -i pv
+nv -i tmuxplugin-vim-tmux-navigator-unstable-2019-12-10
+nv -i matrix
+nv -i cmatrix
+nv -i neomutt
+clear
+pwd
+cat .muttrc 
+clear
+neomutt
+setproxy
+nv -i autojump
+fg
+jobs
+neomutt
+clear
+ls
+locale
+export LC_ALL=en_US.UTF-8
+locale
+locale-gen
+sudo locale-gen
+ss
+clear
+sss
+clear
+nix-env
+vi ~/.profile
+. ~/.profile
+clear
+ls
+nix-env
+clear
+alacritty 
+nixGLIntel alacritty
+clear
+ls
+tmux ls
+nix-env
+nix-env -q
+vi ~/.tmux.conf
+fish
+clear
+ls
+htop
+clear
+tmux ls
+tat 1
+tat v
+clear
+tmux ls
+ls ~/.tmux/plugins/tpm/tpm 
+clear
+nvim
+which python
