@@ -639,13 +639,13 @@ if has('macunix')
 endif
 
 "" Buffer nav
-noremap <leader>z :bp<CR>
+noremap <leader>, :bp<CR>
 "noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
+noremap <leader>. :bn<CR>
 "noremap <leader>w :bn<CR>
 
 "" Close buffer
-"noremap <leader>c :bd<CR>
+noremap <leader>x :bd<CR>
 ""inoremap <leader>c <ESC>:BD<CR>
 "noremap <leader>C :BD<CR>
 
