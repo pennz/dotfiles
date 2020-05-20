@@ -1,164 +1,3 @@
-clear
-who
-tmux ls
-tat kaggle
-jobs
-exit
-curl -v localhost:28080/lab?
-who
-tmux ls
-tmux ls
-tat kaggle
-tmux ls
-tat kaggle
-exit
-ls
-ls *hs
-runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
-runhaskell zsh-history-merge.hs 
-runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac zsh_history_merged
-runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
-wc -l zsh_history_mac 
-wc -l .zsh_history 
-vi zsh-history-merge.hs +87
-cp .zsh_history wsl_zsh_history
-git checkout HEAD .zsh_history
-wl -l *zsh_history
-wc -l *zsh_history
-wc -l *sh_history
-wc -l .*sh_history
-history
-head .zsh_history 
-head wsl_zsh_history 
-ls
-help
-exit
-exit
-ls
-clear
-ls
-ps aux | grep tmux
-ps aux | grep clash
-tat 0
-who
-who
-clear
-who
-uname -a
-tmux ls
-tat -=0
-tat 0
-ghci
-tmux ls
-tat kaggle
-who
-htop
-exit
-ls
-tat kaggle
-tmux new-session go-ci
-tmux new-session 
-clear
-jobs
-exit
-pass add
-pass add github_tok
-pass github_tok
-pass
-pass test
-pass delete test
-clear
-tmux ls
-tat kaggle
-exit
-clear
- conda env list
-conda activate tf
-conda init bash
-conda activate tf
-vi ~/.profile 
-vi ~/.shrc_customised
-fg
-. ~/.shrc_customised
-conda activate pyt
-conda activate tf
-conda activate torch
-clear
-ls
-pytest -k "TestCoor" -s -v tests/test_coord.py 
-which jupytext
-git diff
-git diff --cached
-git stash
-pytest -k "TestCoor" -s -v tests/test_coord.py 
-clear
-pip list
-clear
-ls
-git status
-clear
-ls
-pgrep nc
-ps aux| grep rvs
-ps aux| grep bash
-psnc
-psnc nc
-pgrep | grep nc
-ps aux | grep nc
-ps aux | grep "\<nc\>"
-jobs
-exit
-conda activate torch
-pytest -k "TestCoor" -s -v tests/test_coord.py 
-pytest  -s -v tests/test_coord.py 
-python -V
-which python
-conda activate python
-conda activate torch
-pip list
-which python
-ls
-clear
-ls
-which python
-conda env list
-conda activate t
-conda activate tf
-which python
-exit
-. ~/profile
-source ~/.profile
-echo $SHELL
-exit
-source ~/.bashrc
-vi ~/.bashrc
-who
-clear
-. ~/.profile
-vi ~/.profile
-clear
-exit
-unner
-ls
-cd .runner
-ls
-cd .runner
-cd kaggle_runner
-ls
-ls .*
-cd ..
-ls .*
-cd .runners
-cd in*
-clear
-ls
-which bash
-bash -x rvs.sh
-wxit
-exit
-zsh
-exit
-ps aux| grep nix
 ps aux| grep nix
 echo $PATH
 nix-env -q
@@ -532,3 +371,130 @@ fish
 fish
 . ~/.profile
 which python
+pkill tcpserver
+cd reversShells/
+ls
+cd tcpservers_setup 
+vi tcpservers_setup 
+bash -x tcpservers_setup 
+exit
+clear
+clear
+fg
+exit
+exit
+clear
+alacritty 
+alacritty 
+cler
+clear
+cd /Applications/Utilities/
+ls
+cd ~/Applications/
+ls
+clear
+ls
+cd /Applications/
+ls
+clear
+tree Utilities/
+clear
+tat runer
+tat runner
+clear
+logout
+elinks
+l
+elinks google.com
+jobs
+git pull
+git status
+export FISH=1
+fish
+clear
+ps aux| grep tcpserver
+cd reversShells/
+ls
+./tcpservers_setup 
+mkdir history
+cp .bash_history history/bh1
+git checkout HEAD .bash_history
+git pull
+clear
+ls
+git push
+git checkout master
+cat ~/.muttrc
+cat > ~/.muttrc
+vi ~/.muttrc 
+mutt
+setproxy
+fg
+mutt
+setproxy
+curl https://google.com
+curl https://www.google.com
+vi /usr/local/etc/proxychains.conf
+proxychains4 curl https://www.google.com
+unsetproxy
+proxychains4 curl https://www.google.com
+proxychains4 mutt
+fg
+fg
+clear
+proxychains4 neomutt
+proxychains4 neomutt
+proxychains4 neomutt
+ps aux| grep receive
+pkill -f "receive_logs"
+ps aux| grep receive
+clear
+make get_log
+make get_log
+make push
+conda activate torch
+make push
+which python
+export PATH=~/anaconda3/envs/torch/bin:$PATH
+which python
+make push
+clear
+make push
+cron
+sudo cron
+sudo crontab
+sudo crontab -h
+sudo crontab --help
+sudo crontab -l
+crontab -l
+crontab -e
+crontab -e
+which vim
+echo $EDITOR
+vi ~/.profile
+export EDITOR=vim
+crontab -e
+crontab -l
+clear
+git status
+g
+git status
+clear
+clear
+mutt -f /var/mail/v
+ls -lh /var/mail/v 
+mail
+mail
+mutt -f /var/mail/v
+clear
+ls
+clear
+which python
+clear
+vi .runners/intercept-resnet-384/main.py 
+tail -f logs_check
+fg
+fg
+mail
+exit
+exit
