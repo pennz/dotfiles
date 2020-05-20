@@ -187,9 +187,9 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-set -gx CONDA_EXE "/Users/v/anaconda3/bin/conda"
-set _CONDA_ROOT "/Users/v/anaconda3"
-set _CONDA_EXE "/Users/v/anaconda3/bin/conda"
+set -gx CONDA_EXE "$HOME/miniconda3/bin/conda"
+set _CONDA_ROOT "$HOME/miniconda3"
+set _CONDA_EXE "$HOME/miniconda3/bin/conda"
 # Copyright (C) 2012 Anaconda, Inc
 # SPDX-License-Identifier: BSD-3-Clause
 #
