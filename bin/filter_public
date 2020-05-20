@@ -8,7 +8,7 @@ if [ -d "$HOME/$(basename $HOME)" ]; then
   git remote add local file://$HOME/ || true
   git fetch local
   git checkout $BRANCH
-  git merge local/$BRANCH
+  git merge local/$BRANCH --no-edit
 else
   git clone --single-branch --branch ${BRANCH} file://$HOME/
   pushd $(basename $HOME)
@@ -24,6 +24,7 @@ git filter-repo \
 --path-glob '.config/v2ray*.json' \
 --path-glob '.*history' \
 --path .duckdns \
+--path .muttrc \
 --path .electrum \
 --path .pypirc \
 --path works \
@@ -31,6 +32,6 @@ git filter-repo \
 --invert-paths
 git remote add public git@github.com:pennz/dotfiles.git || true
 git fetch public
-git merge public/$RBRANCH
+git merge public/$RBRANCH --no-edit
 git push --set-upstream public $BRANCH:$RBRANCH
 popd
