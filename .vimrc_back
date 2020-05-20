@@ -540,8 +540,8 @@ noremap <Leader>c :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
 noremap <Leader>C :AsyncRun git -C %:p:h commit -sm<SPACE>
 noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && git commit -sm "Good Game" && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <silent> <Leader>gsh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
-noremap <silent> <Leader>gll :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
+noremap <silent> <Leader>gp :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
+noremap <silent> <Leader>gpl :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
