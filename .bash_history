@@ -399,8 +399,14 @@ ip route
 exit
 alacity
 . .profile
-alacritty
-exit
+ls .profile 
+. .bashrc
+tmux ls
+  $ nix-shell -p nix-info --run "nix-info -m"
+  $ n
+  $ nix-shell -p nix-info --run "nix-info -m"
+ nix-shell -p nix-info --run "nix-info -m"
+nix
 exit
 exit
 exit
@@ -459,8 +465,34 @@ clear
 fg
 zsh
 exit
-fish
+curl -v localhost:28080/lab?
+who
+tmux ls
+tmux ls
+tat kaggle
+tmux ls
+tat kaggle
 exit
+ls
+ls *hs
+runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
+runhaskell zsh-history-merge.hs 
+runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac zsh_history_merged
+runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
+wc -l zsh_history_mac 
+wc -l .zsh_history 
+vi zsh-history-merge.hs +87
+cp .zsh_history wsl_zsh_history
+git checkout HEAD .zsh_history
+wl -l *zsh_history
+wc -l *zsh_history
+wc -l *sh_history
+wc -l .*sh_history
+history
+head .zsh_history 
+head wsl_zsh_history 
+ls
+help
 exit
 exit
 htop
