@@ -1,6 +1,6 @@
 # Settings {{{
   set fish_greeting
-  set -U  fish_user_paths            /usr/local/opt/openssl/bin $HOME/bin $HOME/.asdf/shims $HOME/.asdf/bin $HOME/.fzf/bin
+  set -U  fish_user_paths            /usr/local/opt/openssl/bin $HOME/bin $HOME/.fzf/bin # $HOME/.asdf/shims $HOME/.asdf/bin 
   set -gx FZF_DEFAULT_OPTS           '--height=50% --min-height=15 --reverse'
   set -gx FZF_DEFAULT_COMMAND        'rg --files --no-ignore-vcs --hidden'
   set -gx FZF_CTRL_T_COMMAND         $FZF_DEFAULT_COMMAND
@@ -10,6 +10,7 @@
   set -gx GPG_TTY                    (tty)
   set -gx PROXY_URL                  'http://127.0.0.1:7890'
   set -gx QT_QPA_PLATFORM_PLUGIN_PATH /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/
+  set -gx PYTHON_KEYRING_BACKEND     keyring.backends.null.Keyring
 # }}}
 
 # Abbreviations {{{
