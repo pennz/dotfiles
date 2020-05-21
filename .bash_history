@@ -1,366 +1,3 @@
-git status
-git pull
-git status
-clear
-ls
-tig .travis.yml 
-cp ../kaggle_runner/Makefile  .
-ls
-git add Makefile 
-ls
-git status
-git 
-git status
-cat .gitignore 
-ls
-clear
-ls
-cat notes.md 
-fg
-clear
-ls
-tig .
-ls
-ls
-wc -l *
-kaggle kernels list --user k1gaggle
-mkdir kaggle
-kaggle kernels pull -p kaggle/ k1gaggle/nb-toxic 
-cd kaggle/nb-toxic.ipynb 
-ls
-clear
-ls
-cd kaggle/
-ls
-which python
-fish
-cd kaggle/nb-toxic.ipynb 
-bash
-. ~/.bashrc
-kaggle kernels pull -p . -m k1gaggle/nb-toxic 
-ls
-vi kernel-metadata.json 
-clear
-ls
-vi nb-toxic.py 
-v nb-toxic.py 
-exit
-asldfj
-aldjfslajkdfalsfj
-ls
-clear
-ls
-clear
-ls
-nix-env 
-nv -q
-cmatrix
-ncat 127.1 9098
-ncat 127.1 9099
-clear
-ncat 127.1 9099
-ncat 127.1 9100
-ncat 127.1 9101
-ncat 127.1 9198
-ncat 127.1 9098
-vi ~/.tmux.conf
-git add ~/.tmux.conf
-ncat 127.1 9104 8
-ncat 127.1 9104 
-ncat 127.1 9138
-ncat 127.1 9140
-ncat 127.1 9141
-ncat 127.1 9142
-ncat 127.1 9117
-ncat 127.1 9126
-ncat 127.1 9141
-stty raw -echo && fg
-clear
-. ~/.profile 
-nv
-ps aux| grep nix
-clear
-. ~/.bashrc
-mv
-nv
-who
-clar
-clear
-ip route
-exit
-alacity
-. .profile
-ls .profile 
-. .bashrc
-tmux ls
-  $ nix-shell -p nix-info --run "nix-info -m"
-  $ n
-  $ nix-shell -p nix-info --run "nix-info -m"
- nix-shell -p nix-info --run "nix-info -m"
-nix
-exit
-exit
-exit
-cd
-git status
-git status
-cat >> .gitignore
-git status
-git commit -asm "Updates"
-git status
-git status
-git push
-wc -l bin/go_add_debug
-clear
-jobs
-htop
-sudo htop
-exit
-setproxy
-make install_dep
-bg
-exit
-ncat 127.1 9302
-ncat 127.1 9305
-ncat 127.1 9302
-exit
-tmux ls
-fish
-echo $ANDROID_HOME 
-vi .profile 
-vi .profile 
-fish
-clear
-ls
-clear
-ls
-cd /Volumes/CaseSensitive/kaggle_runner/
-ls
-clear
-cd reversShells/
-bash -x tcpservers_setup 
-jobs
-pkill tcpserver
-clear
-bash tcpservers_setup 
-pkill tcpserver
-bash -x tcpservers_setup 
-pkill tcpserver
-bash tcpservers_setup 
-exit
- bash -c "[ -z \"$(python3 -m albumentations 2>&1 | grep direct)\" ] && pip install -U git+https://github.com/albu/albumentations"
-
-which python
- bash -c "[ -z \"$(python3 -m albumentations 2>&1 | grep direct)\" ] && pip install -U git+https://github.com/albu/albumentations"
-clear
-fg
-zsh
-exit
-curl -v localhost:28080/lab?
-who
-tmux ls
-tmux ls
-tat kaggle
-tmux ls
-tat kaggle
-exit
-ls
-ls *hs
-runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
-runhaskell zsh-history-merge.hs 
-runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac zsh_history_merged
-runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
-wc -l zsh_history_mac 
-wc -l .zsh_history 
-vi zsh-history-merge.hs +87
-cp .zsh_history wsl_zsh_history
-git checkout HEAD .zsh_history
-wl -l *zsh_history
-wc -l *zsh_history
-wc -l *sh_history
-wc -l .*sh_history
-history
-head .zsh_history 
-head wsl_zsh_history 
-ls
-help
-exit
-exit
-htop
-htop
-htop
-clear
-ls
-htop
-docker ps
-exit
-cd
-ls
-git status
-git add .vimrc_back 
-git commit -asm "vim nocompitible"
-git status
-cd bin
-ls
-rg filter-repo
-ls git-filter-repo 
-rg filter-repo
-git push
-clear
-ls
-clear
-exit
-.nix-profile/bin/alacritty
-fish
-setproxy
-cd /Volumes/CaseSensitive/kaggle_runner/
-ls
-make
-file ./cc-test-reporter 
-./cc-test-reporter 
-make test
-fish
-fish
-. ~/.profile
-which python
-pkill tcpserver
-cd reversShells/
-ls
-cd tcpservers_setup 
-vi tcpservers_setup 
-bash -x tcpservers_setup 
-exit
-clear
-clear
-fg
-exit
-exit
-clear
-alacritty 
-alacritty 
-cler
-clear
-cd /Applications/Utilities/
-ls
-cd ~/Applications/
-ls
-clear
-ls
-cd /Applications/
-ls
-clear
-tree Utilities/
-clear
-tat runer
-tat runner
-clear
-logout
-elinks
-l
-elinks google.com
-jobs
-git pull
-git status
-export FISH=1
-fish
-clear
-ps aux| grep tcpserver
-cd reversShells/
-ls
-./tcpservers_setup 
-mkdir history
-cp .bash_history history/bh1
-git checkout HEAD .bash_history
-git pull
-clear
-ls
-git push
-git checkout master
-cat ~/.muttrc
-cat > ~/.muttrc
-vi ~/.muttrc 
-mutt
-setproxy
-fg
-mutt
-setproxy
-curl https://google.com
-curl https://www.google.com
-vi /usr/local/etc/proxychains.conf
-proxychains4 curl https://www.google.com
-unsetproxy
-proxychains4 curl https://www.google.com
-proxychains4 mutt
-fg
-fg
-clear
-proxychains4 neomutt
-proxychains4 neomutt
-proxychains4 neomutt
-ps aux| grep receive
-pkill -f "receive_logs"
-ps aux| grep receive
-clear
-make get_log
-make get_log
-make push
-conda activate torch
-make push
-which python
-export PATH=~/anaconda3/envs/torch/bin:$PATH
-which python
-make push
-clear
-make push
-cron
-sudo cron
-sudo crontab
-sudo crontab -h
-sudo crontab --help
-sudo crontab -l
-crontab -l
-crontab -e
-crontab -e
-which vim
-echo $EDITOR
-vi ~/.profile
-export EDITOR=vim
-crontab -e
-crontab -l
-clear
-git status
-g
-git status
-clear
-clear
-mutt -f /var/mail/v
-ls -lh /var/mail/v 
-mail
-mail
-mutt -f /var/mail/v
-clear
-ls
-clear
-which python
-clear
-vi .runners/intercept-resnet-384/main.py 
-tail -f logs_check
-fg
-fg
-mail
-exit
-exit
-clear
-tmux ls
-which tmux
-tmux
-clear
-nv
-nv -i pv
-nv -i tmuxplugin-vim-tmux-navigator-unstable-2019-12-10
-nv -i matrix
-nv -i cmatrix
-nv -i neomutt
 clear
 pwd
 cat .muttrc 
@@ -498,3 +135,366 @@ tat 3
 . ~/.bashrc
 tat 3
 make get_log
+vi ~/.profile
+vi ~/.profile
+. ~/.profile
+dos2unix ~/.profile
+nv -i dos2unix
+nix-env -i dos2unix
+dos2unix ~/.profile
+source ~/.profile
+fg
+nvim ~/.profile
+echo $PS1
+. ~/.shrc_customised
+clear
+clear
+vi .profile
+echo $SHELL
+fg
+git status
+clear
+git status
+tmux ls
+which tmux
+git commit -asm "clean massive profile thing"
+git commit -asm "clean massive profile thing" --no-gpg-sign
+git status
+git push
+bin/upnp-ports 
+bin/upnp-add-port 6002 UDP
+bin/upnp-add-port 60003 UDP
+bin/upnp-add-port 60002 UDP
+bin/upnp-add-port 60004 UDP
+which mosh-server
+clear
+tmux ls
+zsh
+clear
+git status
+git push
+ss
+fish
+tmux
+tat 3
+clear
+which tmux
+clear
+tmux ls
+tat 3
+tmux ls
+tat 0
+[ x$(pgrep -f "make toxic" | sort | head -n 1) != x$$ ] && (echo "we will kill existing `make toxic`"; kill $(pgrep -f "make toxic" | sort | head -n 1))
+[ x$(pgrep -f "make toxic" | sort | head -n 1) != x$$ ] && (echo "we will kill existing `make toxic`")
+ps aux | grep make
+[ x$(pgrep -f "make toxic" | sort | head -n 1) != x$$ ] && echo "checkfine"
+fg
+exit
+ps aux| grep mosh
+pkill mosh-server
+ps aux| grep mosh
+ls
+clear
+tmux ls
+tat 3
+tat 3
+tmux ls
+tat 3
+pkill mosh-server
+pkill mosh-server
+tat 3
+clear
+./receive_logs_topic \*.\* 2>&1
+clear
+make toxic_debug
+vi Makefile 
+git pull
+tig
+pwd
+jobs
+exit
+tmux ls
+tat 3
+tmux ls
+tat 3
+clear
+tmux ls
+tat 0
+tmu xls
+tmux ls
+clea
+clear
+ls
+git diff
+git status
+clear
+ls
+tmux ls
+tat 0
+sudo apt update
+apt list --upgradable
+tmux ls
+which tmux
+tat 3
+tmux ls
+tat 3
+tmux ls
+tat 3
+
+
+exit
+II
+tmux --version
+tmux -V
+which tmux
+nix-env -qa tmux
+nix-env -qa "tmux.*"
+tmux -V
+which tmux
+/usr/bin/tmux -V
+/usr/bin/tmux 
+c
+c
+setproxy
+alias setproxy
+export PROXY_URL=http://127.0.0.1:7890
+setproxy
+ps aux| grep tmux
+]bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
+bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
+setproxy
+bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
+curl https://google.com
+clash -f .config/clash/config.yaml 
+bg
+curl https://google.com
+bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
+bg
+pkill mosh-server
+tmux ls
+tat 3
+tat 3
+tmux -vv
+tmux ls
+tat 3
+clear
+ls
+clear
+ls
+fg
+tmux ls
+tat 3
+mv .tmux.conf back.tmux.conf
+tmux
+ls
+ps aux | grep tmux
+pkill -f "tmux"
+ps aux | grep tmux
+clear
+ls
+/usr/bin/tmux 
+git clone --recursive https://git::@github.com/tmux-plugins/tmux-pain-control
+git clone --recursive https://github.com/tmux-plugins/tmux-pain-control
+rm -rf tmux-pain-control/
+vi ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
+bash -x ~/.tmux/plugins/tpm/scripts/update_plugin.sh --tmux-echo
+bash -x ~/.tmux/plugins/tpm/scripts/source_plugins.sh --tmux-echo
+exit
+clear
+cd ~/.tmux/plugins/tpm/
+tig scripts/install_plugins.sh
+tig f746ae2305f6452c245
+clear
+exit
+vi ~/.profile 
+nix-env -h
+nix-env --help
+vi .nix-profile/manifest.nix 
+git add .nix-profile/manifest.nix
+git add .nix-profile/manifest.nix
+ls -lh .nix-profile/manifest.nix
+nix-env -e tmux
+which tmux
+git dif
+git diff .tmux.conf
+
+git checkout HEAD .tmux.conf
+git status
+tmux -V
+tmux source ~/.tmux.conf 
+ps aux| grep tmux
+vi ~/.tmux.conf 
+ps aux| grep tmux
+ps aux| grep tmux
+ps aux| grep tmux
+ps aux| grep tmux
+setproxy
+setproxy
+ps aux| grep tmux
+kill 15937
+ps aux| grep tmux
+pkill -f "install_plugins"
+ps aux| grep tmux
+setproxy
+setproxy
+bash
+clear
+exit
+jobs
+fg
+clear
+fg
+clear
+tmux ls
+tat 0
+vi ~/.bash_history 
+fg
+source source_tmux_plugins 
+cd ~/.tmux/plugins/tpm/
+ls
+cd scripts/
+ls
+bash -x update_plugin.sh 
+bash install_plugins.sh 
+bash install_plugins.sh 
+bash -x source_plugins.sh 
+vi ~/.tmux.conf 
+vi /home/v/.bash_history
+exit
+vi /home/v/.bash_history
+clear
+qa
+exit
+clea
+exit
+tmux ls
+which tmux
+tat 0
+clear
+ps aux| grep tmux
+pstree
+pstree|less
+pstree -la |less
+cd ~/.tmux/plugins/tpm/scripts/
+ls
+rg "git::" 
+rg "git\:\:" 
+rg "git\:" 
+rg "git:" 
+rg "git" 
+
+git diff
+vi ~/.gitconfig 
+pstree
+pstree -l
+which tmux
+tmux  ls
+tat 0
+clear
+tat 0
+clear
+git diff
+git diff .gitconfig
+pkill -f "it-credential-libsecret"
+pstree
+pstree -la
+clear
+tmux ls
+tat 0
+pkill mosh-server
+clea
+which mosh-server
+exit
+tmux ls
+clear
+which tmux
+clear
+clear
+tmux ls
+clea
+clear
+tmux ls
+tmux
+ss
+which ss
+ss
+ff
+ff
+which ff
+vi ~/.config/fish/config.fish
+ssh-agent -s
+SSH_AUTH_SOCK=/tmp/ssh-xTEyNznya8ik/agent.18271; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=18272; export SSH_AGENT_PID;
+exi
+exit
+fg
+fg
+exit
+pkill pstree
+ps aux| grep pstree
+ps aux| grep pstree
+ps aux| grep mosh
+kill 14590
+ps aux| grep mosh
+pstree 
+pstree  | less
+clear
+pstree  -p | tmux
+pstree  -p |grep  tmux
+pstree -tap 15921
+pstree -tap 14697
+tmux ls
+tat 0
+clear
+tig .tmux.conf
+clear
+clear
+ls
+clear
+tig .tmux.conf
+vi .tmux.conf
+echo $HOST
+echo $HOSTNAME
+fg
+echo $TERM
+fg
+fish
+fg
+ssh-agent -s
+fg
+clear
+tmux ls
+tat 0
+exit
+exit
+exit
+clear
+echo $TERM
+exit
+clear
+exit
+exit
+vi /home/v/.bash_history
+pstree
+pstree -la
+clear
+clear
+tmux ls
+exit
+exit
+clear
+tmux ls
+tat 5
+tat 3
+tmux ls
+tat 2
+tmux ls
+tat 0
+tmux ls
+tat 5
+clear
+tmux ls
+exit
+clear
+tmux ls
