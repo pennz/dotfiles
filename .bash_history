@@ -1,147 +1,3 @@
-. ~/.profile
-nix-env -q
-. ~/.bashrc
-fish
-vi history_bash 
-vi history_zsh 
-ls /nix
-ls /nix/
-echo $PATH
-who
-echo $BASHID
-echo $BASHPID
-chsh -s /bin/bash
-cat /etc/fstab.hd
-cat /etc/fstab
-clear
-cat /etc/fstab.hd
-sudo -i
-cat >> .shrc_customised
-vi ~/.shrc_customised
-pgrep nix-daemon
-fg
-exit
-echo $BASHPID
-setopt
-who
-clear
-echo $PATH 
-which python
-fish
-nix-env
-nix-env -q
-cmatrix 
-clear
-which fish
-ls -lh /usr/local/bin/fish
-clear
-who
-ls
-exit
-exit
-exit
-nix-env -q
-fish
-vi ~/.config/fish/config.fish
-which
-clear
-fish
-fish
-fish
-zsh
-exit
-clear
-who
-asf
-ncat 127.1 9005
-stty raw -echo && fg
-tmux ls
-tat 2
-exit
-clear
-ncat 127.1 9080
-exit
-stty raw -echo && fg
-which python
-python35
-echo $PATH
-echo $$
-ps aux 80989
-ls //nix/store/b6afqd7jcf40k7m1qnk5zssgxpjikw6q-bash-interactive-4.4-p23/bin:
-ls /nix/store/b6afqd7jcf40k7m1qnk5zssgxpjikw6q-bash-interactive-4.4-p23/bin
-which python3
-python35
-man nix-shell
-which python3
-python3 --version
-exit
-cat >> nix_basic_usage.nix
-nix-shell nix_basic_usage.nix 
-vi nix_basic_usage.nix +15
-nix-shell nix_basic_usage.nix 
-nix-shell nix_basic_usage.nix 
-jobs
-vi nix_basic_usage.nix 
-nix-shell nix_basic_usage.nix 
-fg
-nix-shell nix_basic_usage.nix 
-fg
-git status
-git diff
-clear
-git status
-psnc ncat
-git diff bin/
-psnc
-clear
-fg
-cat nix_basic_usage.nix 
-nix-shell nix_basic_usage.nix 
-fg
-fg
-vi nix_basic_usage.nix 
-cat > build.nix
-nix-shell build.nix 
-clear
-ls
-nv -e todoman
-nv -i todoman umlet
-nv -i umlet
-umlet 
-nv -i log4j
-clear
-who
-nix-env -qa go\*
-which go
-go --version
-go version
-nv -i go
-which go
-go env
-go /usr/local/Cellar/go/1.14.2_1/libexec/pkg/tool/darwin_amd64
-ls /usr/local/Cellar/go/1.14.2_1/libexec/pkg/tool/darwin_amd64
-which go
-/usr/local/go/bin/go env
-nv -qa firefox
-nv
-cd /Volumes/CaseSensitive/mq/
-ls
-go run receive_logs_topic.go \*.\*
-exit
-source ~/.bashrc
-ls
-clear
-exit
-cd /Volumes/CaseSensitive/
-ls
-cd toxic_bias/
-ls
-cat README.md 
-git remote show
-git pull
-git status
-tig
-git commit -asm "Split codes"
 git status
 git pull
 git status
@@ -555,3 +411,90 @@ ls ~/.tmux/plugins/tpm/tpm
 clear
 nvim
 which python
+tat 0
+clear
+pip install neovim pyvim jedi
+setproxy
+pip install neovim pyvim jedi
+exit
+jobs
+fg
+exit
+proxychains neomutt
+fg
+kill %1
+fg
+clear
+exit
+tmux
+clear
+tmux
+tmux ls
+tat 3
+exit
+tmux ls
+clear
+tmux ls
+tat 0
+jobs
+tat3
+tat 3
+nix-env -i expect
+proxychains neomutt
+pwd
+make get_log
+clear
+mutter 
+mutter -h
+proxychains neomutt
+fg
+kill %1
+proxychains neomutt
+proxychains4 curl https://www.google.com
+proxychains curl https://www.google.com
+proxychains neomutt
+clear
+exit
+wxit
+exit
+proxychains neomutt
+exit
+jobs
+fg
+exit
+nix-env -i falkon
+falkon 
+nixGLIntel falkon
+bg
+nix-env  -qa ".*pass.*"
+nix-env  -i lastpass-cli
+lastpass-cli
+hash -r
+lastpass-cli
+lastpass
+lpass
+lpass login fireflysuccess@gmail.com
+lpass show kaggle.com
+lpass show 4248442519897108635
+exit
+fg
+ls
+cd ../mq/
+ls
+go build receive_logs_topic.go 
+which go
+/snap/bin/go build receive_logs_topic.go
+ls
+ls -lh
+cp receive_logs_topic ../kaggle_runner/
+clear
+cd ../kaggle_runner/
+ls
+./receive_logs_topic 
+proxychains neomutt
+exit
+tmux ls
+tat 3
+. ~/.bashrc
+tat 3
+make get_log

@@ -31,11 +31,11 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 # for my binaries
 PATH=$PATH:"$HOME"/bin:"$HOME"/.local/bin
 
-export WORKON_HOME="$HOME"/.virtualenvs
+#export WORKON_HOME="$HOME"/.virtualenvs
 # virtualenv and virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
-[ -f /usr/bin/virtualenvwrapper.sh ] && source /usr/bin/virtualenvwrapper.sh
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+#[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
+#[ -f /usr/bin/virtualenvwrapper.sh ] && source /usr/bin/virtualenvwrapper.sh
 
 export GPG_TTY=$(tty)
 export KEYTIMEOUT=1
@@ -43,11 +43,11 @@ export BASH_ENV=~/.vim_bash_env
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 if [ -e /etc/profile.d/nix.sh ]; then source /etc/profile.d/nix.sh; fi # added by Nix installer
 
-TERM=screen-256color
+export TERM=screen-256color
 [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -clrtabs
 [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -regtabs 4    
 [ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
-pgrep ssh-agent >/dev/null || eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa
+pgrep ssh-agent >/dev/null || ( eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa )
 
 if [ -f "$HOME"/.bash_aliases ]; then
     source "$HOME"/.bash_aliases
@@ -56,3 +56,5 @@ fi
 if [ -f "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised
 fi
+
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
