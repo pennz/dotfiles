@@ -1619,4 +1619,3 @@ noremap <silent><leader>tc :Pytest class<CR>
 noremap <silent><leader>M :wincmd \| <BAR> wincmd _<CR>
 
 let g:go_debug=['shell-commands']
-let g:loaded_node_provider=0
