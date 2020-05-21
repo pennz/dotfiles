@@ -494,12 +494,12 @@ runtime! ftplugin/man.vim
 
 " Show byte offset 
 set statusline+=%o
+if has('ale')
 " ALE linting events
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
-if has('ale')
 augroup ale
   autocmd!
 
@@ -540,8 +540,8 @@ noremap <Leader>c :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
 noremap <Leader>C :AsyncRun git -C %:p:h commit -sm<SPACE>
 noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && git commit -sm "Good Game" && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <silent> <Leader>gp :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
-noremap <silent> <Leader>gpl :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
+noremap <silent> <Leader>gh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
+noremap <silent> <Leader>gl :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
@@ -668,7 +668,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 "" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
+"nnoremap <Leader>o :.Gbrowse<CR>
 
 "*****************************************************************************
 "" Custom configs
@@ -973,7 +973,7 @@ nnoremap <Leader>s <ESC>:w<CR>
 "inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
-"nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>F :Files<CR>
 nnoremap <silent> <leader>t :Tags<CR>
 nnoremap <silent> <leader>rg       :Rg <C-R><C-W><CR>
 xnoremap <silent> \       y:Rg <C-R><C-W><CR>
@@ -1619,3 +1619,7 @@ noremap <silent><leader>tc :Pytest class<CR>
 noremap <silent><leader>M :wincmd \| <BAR> wincmd _<CR>
 
 let g:go_debug=['shell-commands']
+let g:loaded_node_provider=0
+
+setlocal spell spelllang=en_us
+nnoremap <Leader>o :on<CR>

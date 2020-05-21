@@ -8,17 +8,13 @@ fi
 alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
 
-alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim_back/init.vim'
-alias v='/snap/bin/nvim -u ~/.config/nvim_back/init.vim'
+alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim/init.vim'
+alias v='nvim -u ~/.config/nvim/init.vim'
 alias ccc="source $HOME/bin/ccc"
 
 export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$GOPATH/bin:/usr/local/lib/ruby/gems/2.5.0/bin/:$PATH
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
-
-PROXY_URL='http://127.0.0.1:7890'
-
-# export SHELL=$(which zsh)
 
 __conda_folder=miniconda3
 if [ -d "$HOME/anaconda3" ]; then
@@ -37,8 +33,6 @@ else
 fi
 unset __conda_setup
 
-#source activate torch
-
 test -e /usr/libexec/java_home && export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Get list of gnubin directories
@@ -50,17 +44,27 @@ if type brew &>/dev/null; then
   #for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnuman; do export MANPATH=$d:$MANPATH; done
 fi
 
-# for cross compilation
-#. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
-#. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
-#
-#export GIT_PS1_SHOWDIRTYSTATE=1
-#export GIT_PS1_SHOWSTASHSTATE=1
-#export GIT_PS1_SHOWCOLORHINTS=1
-##export GIT_PS1_SHOWUNTRACKEDFILES=1
-#export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+
 export ANDROID_HOME=$HOME/Library/Android/sdk
-#eval "$(/home/v/miniconda3/bin/conda shell.YOUR_SHELL_NAME hook)"
+
+color_my_prompt () {
+    local __user_and_host="\[\033[01;32m\]\u@\h"
+    local __cur_location="\[\033[01;34m\]\w"
+    local __git_branch_color="\[\033[31m\]"
+    # local __git_branch="\`ruby -e \"print (%x{git branch 2> /dev/null}.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`"
+    local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+    local __prompt_tail="\[\033[35m\]$"
+    local __last_color="\[\033[00m\]"
+    export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
+}
+[ "$SHELL" = "/bin/bash" ] && color_my_prompt
+
+
 ###-begin-leetcode-completions-###
 #
 # yargs command completion script
@@ -95,8 +99,16 @@ export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/qt5/plugins/platfor
 alias connect='fpipe | trap "" INT;  ncat localhost'
 alias gdrive='gdrive  --service-account go-2-learn-00c8bf796e90.json'
 stty eof ^\f
-alias tmux="$HOME/.nix-profile/bin/tmux"
-pgrep nix-daemon >/dev/null || ( sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )
-# source $HOME/.nix-profile/etc/profile.d/nix.sh
+
+### { for mac
+pgrep nix-daemon >/dev/null || ( which launchctl >/dev/null && sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )
 [ -d /Volumes/CaseSensitive/ ] || ( which hdiutil >/dev/null && hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage )
+# source $HOME/.nix-profile/etc/profile.d/nix.sh
+# for cross compilation
+#. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+#. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+#
+### }
+
 [ x$FISH = x1 ] && fish
+PROXY_URL='http://127.0.0.1:7890'
