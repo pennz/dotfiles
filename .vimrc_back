@@ -1620,3 +1620,5 @@ noremap <silent><leader>M :wincmd \| <BAR> wincmd _<CR>
 
 let g:go_debug=['shell-commands']
 let g:loaded_node_provider=0
+
+setlocal spell spelllang=en_us
