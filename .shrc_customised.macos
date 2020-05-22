@@ -16,10 +16,7 @@ export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
-__conda_folder=miniconda3
-if [ -d "$HOME/anaconda3" ]; then
-    __conda_folder=anaconda3
-fi
+PROXY_URL='http://127.0.0.1:7890'
 
 __conda_setup="$( $HOME/${__conda_folder}/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
