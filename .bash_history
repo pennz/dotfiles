@@ -1,321 +1,3 @@
-clear
-pwd
-cat .muttrc 
-clear
-neomutt
-setproxy
-nv -i autojump
-fg
-jobs
-neomutt
-clear
-ls
-locale
-export LC_ALL=en_US.UTF-8
-locale
-locale-gen
-sudo locale-gen
-ss
-clear
-sss
-clear
-nix-env
-vi ~/.profile
-. ~/.profile
-clear
-ls
-nix-env
-clear
-alacritty 
-nixGLIntel alacritty
-clear
-ls
-tmux ls
-nix-env
-nix-env -q
-vi ~/.tmux.conf
-fish
-clear
-ls
-htop
-clear
-tmux ls
-tat 1
-tat v
-clear
-tmux ls
-ls ~/.tmux/plugins/tpm/tpm 
-clear
-nvim
-which python
-tat 0
-clear
-pip install neovim pyvim jedi
-setproxy
-pip install neovim pyvim jedi
-exit
-jobs
-fg
-exit
-proxychains neomutt
-fg
-kill %1
-fg
-clear
-exit
-tmux
-clear
-tmux
-tmux ls
-tat 3
-exit
-tmux ls
-clear
-tmux ls
-tat 0
-jobs
-tat3
-tat 3
-nix-env -i expect
-proxychains neomutt
-pwd
-make get_log
-clear
-mutter 
-mutter -h
-proxychains neomutt
-fg
-kill %1
-proxychains neomutt
-proxychains4 curl https://www.google.com
-proxychains curl https://www.google.com
-proxychains neomutt
-clear
-exit
-wxit
-exit
-proxychains neomutt
-exit
-jobs
-fg
-exit
-nix-env -i falkon
-falkon 
-nixGLIntel falkon
-bg
-nix-env  -qa ".*pass.*"
-nix-env  -i lastpass-cli
-lastpass-cli
-hash -r
-lastpass-cli
-lastpass
-lpass
-lpass login fireflysuccess@gmail.com
-lpass show kaggle.com
-lpass show 4248442519897108635
-exit
-fg
-ls
-cd ../mq/
-ls
-go build receive_logs_topic.go 
-which go
-/snap/bin/go build receive_logs_topic.go
-ls
-ls -lh
-cp receive_logs_topic ../kaggle_runner/
-clear
-cd ../kaggle_runner/
-ls
-./receive_logs_topic 
-proxychains neomutt
-exit
-tmux ls
-tat 3
-. ~/.bashrc
-tat 3
-make get_log
-vi ~/.profile
-vi ~/.profile
-. ~/.profile
-dos2unix ~/.profile
-nv -i dos2unix
-nix-env -i dos2unix
-dos2unix ~/.profile
-source ~/.profile
-fg
-nvim ~/.profile
-echo $PS1
-. ~/.shrc_customised
-clear
-clear
-vi .profile
-echo $SHELL
-fg
-git status
-clear
-git status
-tmux ls
-which tmux
-git commit -asm "clean massive profile thing"
-git commit -asm "clean massive profile thing" --no-gpg-sign
-git status
-git push
-bin/upnp-ports 
-bin/upnp-add-port 6002 UDP
-bin/upnp-add-port 60003 UDP
-bin/upnp-add-port 60002 UDP
-bin/upnp-add-port 60004 UDP
-which mosh-server
-clear
-tmux ls
-zsh
-clear
-git status
-git push
-ss
-fish
-tmux
-tat 3
-clear
-which tmux
-clear
-tmux ls
-tat 3
-tmux ls
-tat 0
-[ x$(pgrep -f "make toxic" | sort | head -n 1) != x$$ ] && (echo "we will kill existing `make toxic`"; kill $(pgrep -f "make toxic" | sort | head -n 1))
-[ x$(pgrep -f "make toxic" | sort | head -n 1) != x$$ ] && (echo "we will kill existing `make toxic`")
-ps aux | grep make
-[ x$(pgrep -f "make toxic" | sort | head -n 1) != x$$ ] && echo "checkfine"
-fg
-exit
-ps aux| grep mosh
-pkill mosh-server
-ps aux| grep mosh
-ls
-clear
-tmux ls
-tat 3
-tat 3
-tmux ls
-tat 3
-pkill mosh-server
-pkill mosh-server
-tat 3
-clear
-./receive_logs_topic \*.\* 2>&1
-clear
-make toxic_debug
-vi Makefile 
-git pull
-tig
-pwd
-jobs
-exit
-tmux ls
-tat 3
-tmux ls
-tat 3
-clear
-tmux ls
-tat 0
-tmu xls
-tmux ls
-clea
-clear
-ls
-git diff
-git status
-clear
-ls
-tmux ls
-tat 0
-sudo apt update
-apt list --upgradable
-tmux ls
-which tmux
-tat 3
-tmux ls
-tat 3
-tmux ls
-tat 3
-
-
-exit
-II
-tmux --version
-tmux -V
-which tmux
-nix-env -qa tmux
-nix-env -qa "tmux.*"
-tmux -V
-which tmux
-/usr/bin/tmux -V
-/usr/bin/tmux 
-c
-c
-setproxy
-alias setproxy
-export PROXY_URL=http://127.0.0.1:7890
-setproxy
-ps aux| grep tmux
-]bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
-bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
-setproxy
-bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
-curl https://google.com
-clash -f .config/clash/config.yaml 
-bg
-curl https://google.com
-bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
-bg
-pkill mosh-server
-tmux ls
-tat 3
-tat 3
-tmux -vv
-tmux ls
-tat 3
-clear
-ls
-clear
-ls
-fg
-tmux ls
-tat 3
-mv .tmux.conf back.tmux.conf
-tmux
-ls
-ps aux | grep tmux
-pkill -f "tmux"
-ps aux | grep tmux
-clear
-ls
-/usr/bin/tmux 
-git clone --recursive https://git::@github.com/tmux-plugins/tmux-pain-control
-git clone --recursive https://github.com/tmux-plugins/tmux-pain-control
-rm -rf tmux-pain-control/
-vi ~/.tmux/plugins/tpm/scripts/install_plugins.sh
-bash -x ~/.tmux/plugins/tpm/scripts/install_plugins.sh --tmux-echo
-bash -x ~/.tmux/plugins/tpm/scripts/update_plugin.sh --tmux-echo
-bash -x ~/.tmux/plugins/tpm/scripts/source_plugins.sh --tmux-echo
-exit
-clear
-cd ~/.tmux/plugins/tpm/
-tig scripts/install_plugins.sh
-tig f746ae2305f6452c245
-clear
-exit
-vi ~/.profile 
-nix-env -h
-nix-env --help
-vi .nix-profile/manifest.nix 
-git add .nix-profile/manifest.nix
-git add .nix-profile/manifest.nix
-ls -lh .nix-profile/manifest.nix
-nix-env -e tmux
-which tmux
 git dif
 git diff .tmux.conf
 
@@ -498,3 +180,321 @@ tmux ls
 exit
 clear
 tmux ls
+tat 5
+cd 
+ls
+git status
+git commit -asm "Fix git issue causing tpm not loading, makes tmux hang"
+git commit -asm "Fix git issue causing tpm not loading, makes tmux hang" --no-gpg-sign 
+git push
+gpg2
+git push
+clear
+git status
+git status
+git submodule update
+git submodule status
+rm -rf .git/modules/.dotfiles/dotfiles/
+git submodule status
+cat .gitmodules 
+clear
+git status
+git submodule status
+vi .git/config 
+git submodule status
+git rm --cached .dotfiles/dotfiles
+git rm --cached -r .dotfiles/dotfiles
+ git status
+git status
+vi .git/config 
+git pull
+git status
+git submodule status
+cd .tmux/plugins/tpm/
+git pull
+git status
+git reset --hard
+cd ../..
+ls
+clear
+cd .'
+'
+cd
+git status
+git status
+~/bin/filter_public 
+cd v/
+git mergetool
+git commit
+git commit --no-gpg-sign
+cat ~/bin/filter_public 
+source ~/bin/filter_public 
+fg
+vi ~/bin/filter_public 
+source ~/bin/filter_public 
+fg
+vi ~/bin/filter_public 
+source -x ~/bin/filter_public 
+source  ~/bin/filter_public 
+fg
+bash -x  ~/bin/filter_public 
+fg
+source  ~/bin/filter_public 
+tig
+clear
+tig
+cd ~/v/
+ls
+tig
+clear
+tig
+git status
+cd ~/dotfiles/
+ls
+tig
+git pull
+tig
+clear
+tig
+tig show
+tig log
+tig log --oneline
+exit
+fg
+clear
+exit
+" ALE linting events
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
+mkdir dp
+cd dp/
+git clone " ALE linting events
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
+git clone git@gitlab.com:MrCue/shconf.git
+ls
+cd shconf/
+cat .gitconfig 
+clear
+git submodule status
+vi .gitmodules 
+ls .dotfiles/dotfiles/
+fg
+vi .git/config 
+git rm --cached .dotfiles/dotfiles/
+git commit -sm "remove dotfiles submodule"
+git commit -sm "remove dotfiles submodule" --no-gpg-sign
+git push
+git submodule status
+git checkout good-day
+git rm --cached .dotfiles/dotfiles/
+git commit -sm "remove dotfiles submodule" --no-gpg-sign
+git push
+clear
+exit
+jobs
+fg
+cler
+cd ../..
+rm -rf dp
+exit
+clear
+ls
+cd works/kaggle_runner/
+ls
+clear
+ls
+cd reversShells/
+ls
+clear
+clear
+clear
+git status
+exit
+echo "abc" | cat -
+fg
+exit
+tmux ls
+tmux new-session -h
+exit
+tmux new-session -s abc
+tmux new-session -d -s abc
+fg
+tat 
+exit
+tmux
+tmux ls
+tat 5
+ps aux| grep tcpserver
+exit
+exit
+exit
+clear
+clear
+echo "check" | { stty raw -echo && (cat - >/dev/tty & cat -) }
+echo "check" |  bash -c 'stty raw -echo && (cat - >/dev/tty & cat -)' 
+echo "check" |  bash -ic 'stty raw -echo && (cat - >/dev/tty & cat -)' 
+echo $TERM
+fg
+jobs
+echo "check" |  bash -c ' (cat - >/dev/tty & cat -)' 
+echo "check" |  bash -c ' (cat - >/dev/tty & cat -)' 
+echo "check" |  bash -c '(cat - >/dev/tty & cat -)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat -)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat -)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat -)' 
+bash -c 'cat -'
+cat </dev/tty 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat </dev/tty)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat </dev/tty >/dev/null)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat </dev/tty)' | grep "test" 
+fg
+fg
+clear
+exit
+# Welcome, Good day.\rls
+ls
+lls
+ls
+lls
+ls
+tmux new-window ls
+tmux new-window 
+exit
+man tmux
+exit
+ls
+clear
+exit
+ls
+exit
+clear
+~/bin/upnp-ports 
+exit
+tmux
+clear
+ls
+ps aux| grep Xw
+kill 2191
+sudo kill 2191
+startx
+exit
+tmux ls
+tmux ls
+tt
+v ~/.tmux.conf
+clear
+pkill tmux
+tmux ls
+tat 5
+clear
+vi ~/.tmux.conf
+tig ~/.tmux.conf
+clash -f .config/clash/old_config.yaml 
+tig .tmux.conf
+tig .tmux.conf
+git diff
+git diff .tmux.conf
+git diff --cached .tmux.conf
+fg
+vi .tmux.conf
+clear
+ls
+stty -a
+exit
+vim ~/.tmux.conf
+clear
+tmux ls
+which tmux
+pkill tmux
+stty -a
+ls
+clear
+ls
+ls
+sss
+exit
+vi .tmux.conf
+exit
+exit
+exit
+exit
+exit
+exit
+tmux ls
+clear
+tmux ls
+exit
+tmux ls
+exit
+exit
+exit
+tat 5
+stty -a
+tmux ls
+exit
+tat 5
+tat rvsConnector
+tmxu ls
+tat rvsConnector
+pwd
+exit
+PORT=$(./reversShells/addNewNode.sh 2>/dev/null); echo $PORT 
+./reversShells/addNewNode.sh 2>/dev/null
+./reversShells/addNewNode.sh >/dev/null
+./reversShells/addNewNode.sh 2>/dev/null
+./reversShells/addNewNode.sh
+exit
+exit
+tat 5
+exit
+tmux ls
+tat 7
+tat 5
+tmux ls
+tat 5
+clear
+pkill mosh-server
+exit
+exit
+exit
+exit
+cd ~/works/kaggle_runner/
+ls
+clear
+tig
+v .
+ps aux| grep addNew
+kill 12958
+ps aux| grep addNew
+kill 12
+kill 12959
+fg
+reversShells/addNewNode.sh 
+kill %2
+fg
+cat serverNodes 
+echo "" > serverNodes 
+fg
+reversShells/addNewNode.sh 
+fg
+kill %2
+fg
+reversShells/addNewNode.sh 
+reversShells/addNewNode.sh 
+reversShells/addNewNode.sh 
+~/bin/upnp-ports 
+ip route
+clear
+. ~/.fzf.bash 
+zsh
+fish
+exit
+jobs
+fg
+jobs
+exit
+stty -a
+exit

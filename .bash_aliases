@@ -27,7 +27,7 @@ alias ping='ping -n'
 alias p='popd'
 alias c='pushd'
 alias cc='pushd -'
-alias m='mosh --ssh="ssh -t -p 29932" pengyu@'${SERVER_IP}' -- tmux attach -d'
+alias m='mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com -- tmux'
 alias setproxy="eval export HTTP_PROXY=\$PROXY_URL HTTPS_PROXY=\$PROXY_URL http_proxy=\$PROXY_URL https_proxy=\$PROXY_URL; echo \$http_proxy"
 alias unsetproxy='export http_proxy= ; export https_proxy= ;export HTTP_PROXY= ; export HTTPS_PROXY= '
 alias antlr4='java org.antlr.v4.Tool'
