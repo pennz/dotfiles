@@ -498,9 +498,3 @@ jobs
 exit
 stty -a
 exit
-. ~/.profile 
-. ~/shrc_customized
-. ~/.bashrc
-ls
-clear
-exit
