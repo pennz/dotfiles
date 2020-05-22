@@ -5,8 +5,8 @@ if [ -n "$BASH_VERSION" ]; then
 	test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 fi
 
-abbr octave	'/usr/local/octave/3.8.0/bin/octave-3.8.0'
-abbr pycharm	'/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
+alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
+alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
 
 alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim/init.vim'
 alias v='nvim -u ~/.config/nvim/init.vim'
