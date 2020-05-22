@@ -54,6 +54,8 @@
   abbr ll	'tree -rt -L 1 -a -x -p -h -i -f -D' 
   abbr t	'tmux attach -d'
   abbr tat	'tmux attach -d -t'
+  abbr tlw	'tmux list-windows'
+  abbr tlp	'tmux list-panes'
   abbr p	'popd'
   abbr c	'pushd'
   abbr cc	'pushd -'
@@ -179,11 +181,11 @@
 # }}}
 
 # TMUX {{{
-if status --is-interactive
-and command -s tmux >/dev/null
-and not set -q TMUX
-  exec tmux new -A -s (whoami) # 24301
-end
+#if status --is-interactive
+#and command -s tmux >/dev/null
+#and not set -q TMUX
+#  exec tmux new -A -s (whoami) # 24301
+#end
 # }}}
 
 [ -d $HOME/miniconda3 ]; and set conda_path $HOME/miniconda3
