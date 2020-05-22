@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -xe
 BRANCH=good-day
 RBRANCH=master
 
@@ -32,6 +32,9 @@ git filter-repo \
 --invert-paths
 git remote add public git@github.com:pennz/dotfiles.git || true
 git fetch public
-git merge public/$RBRANCH --no-edit --no-gpg-sign
-git push --set-upstream public $BRANCH:$RBRANCH
+git checkout --track public/$RBRANCH
+git merge $BRANCH --no-edit --no-gpg-sign
+#git merge public/$RBRANCH
+#git push --set-upstream public $BRANCH:$RBRANCH
+git push
 popd
