@@ -1,0 +1,37 @@
+#!/bin/bash -e
+BRANCH=good-day
+RBRANCH=master
+
+cd $HOME
+if [ -d "$HOME/$(basename $HOME)" ]; then
+  pushd $(basename $HOME)
+  git remote add local file://$HOME/ || true
+  git fetch local
+  git checkout $BRANCH
+  git merge local/$BRANCH --no-edit --no-gpg-sign
+else
+  git clone --single-branch --branch ${BRANCH} file://$HOME/
+  pushd $(basename $HOME)
+fi
+
+git filter-repo \
+--path .lc \
+--path notes.md \
+--path .config/clash \
+--path .kaggle  \
+--path bin/v2ray_client.json \
+--path bin/v2ray_router_client.json \
+--path-glob '.config/v2ray*.json' \
+--path-glob '.*history' \
+--path .duckdns \
+--path .muttrc \
+--path .electrum \
+--path .pypirc \
+--path works \
+--path bin/filter_public \
+--invert-paths
+git remote add public git@github.com:pennz/dotfiles.git || true
+git fetch public
+git merge public/$RBRANCH --no-edit --no-gpg-sign
+git push --set-upstream public $BRANCH:$RBRANCH
+popd

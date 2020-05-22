@@ -125,3 +125,50 @@ https://superuser.com/questions/212714/how-to-find-which-tmux-session-a-process-
 2. python3 pip install 
 3 install ctags
 htop
+
+
+losses summed is 280.71681679505855, cnt is 80, loss_dict_reduced is {'loss_classifier': tensor(0.0049, grad_fn=<NllLossBackward>), 'loss_mask': tensor(0.0020, grad_fn=<MeanBackward0>), 'loss_objectness': tensor(0.0045, grad_fn=<BinaryCrossEntropyWithLogitsBackward>)}
+Epoch: [0]  [ 80/663]  eta: 8:38:53  lr: 0.000122  loss: 3.508960  loss_mask: 0.158282  loss_classifier: 0.0046 (0.1389)  loss_objectness: 0.0048 (3.2118)  time: 54.7966  data: 0.0231
+
+....
+pass exports
+then we can update pypi, the script for runner which uses gdrive(just remove it for now), do not block the normal process
+
+alacritty-0.4.2
+asciinema-2.0.2
+autoconf-2.69
+autojump-22.5.3
+bash-5.0-p16
+binutils-2.31.1
+browsh-1.6.4
+cmatrix-2.0
+coreutils-8.31
+cowsay-3.03+dfsg2
+ctags-816
+emacs-26.3
+expect-5.45.4
+fish-3.1.2
+gcc-9.3.0
+go-1.14.2
+googler-4.1
+hello-2.10
+heroku-7.39.2
+htop-2.2.0
+lolcat-100.0.0
+mosh-1.3.2
+mpv-0.32.0
+mutt-1.14.0
+neomutt-20200501
+neovim-0.4.3
+nodejs-10.20.1
+pstree-2.39
+pv-1.6.6
+ripgrep-12.0.1
+shellcheck-0.7.1
+tmux-3.1b
+tmuxplugin-vim-tmux-navigator-unstable-2019-12-10
+tree-1.8.0
+umlet-14.3.0
+w3m-0.5.3+git20190105
+watch-1003.1-2008
+zsh-5.8

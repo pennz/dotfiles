@@ -1,500 +1,500 @@
-fg
-alias connect
-fpipe | (trap "" INT;  ncat localhost 9022)
-clear
-exit
-stty -echo
-sss
-stty echo
-ls
-clear
-ls
-man stty
-stty echoctl
-sldfjasf
-stty -echoctl
-lsjflaskf
-stty echoctl
-man stty
-stty raw
-ls 
-stty -raw
-clear
-ls
-man stty
-stty -a
-ls
-jobs
-fg
-stty -icanon min 5 time 2
-stty -a
-ls
-stty -echoe
-stty -echok
-lksdjfl
-stty -a
-stty -echoke
-stty -a
-stty -echoctl
-stty -a
-set -bs0
-stty -bs0
-stty bs0
-stty bs
-stty bs1
-stty -a
-connect 9011
-fg
-stty min 20
-stty -a
-fg
-stty time 20
-fg
-lsfjlksajf lasdfjlkasdfjllsadfjlksdfj
-clear
-ls
-jobs
-fg
-stty echoctl
-stty -a
-fg
-set bs0
-fg
-stty echoke
-fg
-stty -a
-stty -astty -a
-stty echok 
-stty echoe
-fg
-set -a
-stty -a
-fg
-stty -a
-stty icanon
-fg
-stty -a
-stty -ignpar
-stty -icrnl
-stty -opost
-fg
-jobs
-clear
-ls
-stty -a
-connect 9025
-fg
-set -a
-stty -a
-stty icrnl
-ls
-fg
-stty -a
-stty time 0
-fg
-stty  min 1
-fg
-stty -a
-set -cread
-@s
-stty -a
-stty -a > mock_raw
-ls
-cat mock_raw 
-vi mock_raw 
-stty -a
-clear
-fg
-jobs
-kill %1
-kill %2
-kill %3
-kill %4
-jobs
-clear
-ls
-stty -a
-clear
-l
-clear
-ls
-stty raw
-clear
-ls
-clear
-ls
-stty 0a
-stty -a
-ls
-clear
-ls
-stty snae
-stty sane
-ls
-clear
-ls
-stty raw
-ls
-stty -a
-set icanon
-clear
-ls
-set -a
-stty -a
-stty -a > _raw
-clear
-ls
-stty isig
-clear
-ls
-clear
-ls
-clear
-ls
-clear
-ljklsadfj
-while true; do sleep 1; done
-jobs
-kill %1
-clear
-connect 9041
-clear
-ls
-stty bs3
-stty bs1
-sttty bs2
-stty -a | grep canon
-stty time 5 min 10
-fg
-clear
-ls
-stty time 20
-fg
-set opost
-stty opost
-stty osp
-stty opost
-fg
-stty -a
-stty intr \^k
-stty -a
-fg
-stty time 3
-fg
-echo -echo
-fg
-stty echoe
-fg
-stty echoprt
-fg
-stty
-stty -a
-stty
-stty icanon
-fg
-stty -icanon
-fg
-clear
-stty
-fg
-stty intr ^\c
-fg
-stty 
-stty icrnl
-fg
-stty
-stty icanon
-stty
-stty bs0
-stty
-fg
-stty
-stty -echoprt
-fg
-kill %2
-jobs
-fg
-stty
-stty sane
-fg
-clear
-ls
-jobs
-kill %1
-jobs
-fg
-clear
-ls
-clear
-l
-connect 9041
-ls
-fg
-stty raw
-fg
-ls
-exit
-jobs
-stty sane
-clear
-fg
-connect 9047
-clear
-stty
-stty raw -echo
-stty echo
-ls
-stty isig
-clear
-ls
-stty
-stty isig
-stty
-clear
-ls
-stty
-fg
-stty icrnl
-stty -a
-stty
-fg
-stty susp ^\x
-ls
-stty
-fg
-stty crterase
-stty
-fg
-clear
-stty
-set echoe
-stty echoe
-fg
-stty prterase
-fg
-stty 
-fg
-clear
-stty raw
-clear
-stty
-fg
-IFS=', ' read -r -a array <<< "$string"
-exit
-stty raw isig -echo icrnl time 3 echoprt opost
-stty -a
-fg
-cexit
-exit
-cat ENVS
-exit
-ls
-exit
-spd-say "test"
-vim
-:q
-clear
-which vim
-alias
-which vim
-v
-:q
-clear
-man man
-clear
-stty -a
-exit
-yasr -s festival -p '| festival --pipe'
-exit
-sudo apt upgrade
-clear
-ip route
-unsetopt
-echo $SHELL
+git dif
+git diff .tmux.conf
+
+git checkout HEAD .tmux.conf
+git status
+tmux -V
+tmux source ~/.tmux.conf 
+ps aux| grep tmux
+vi ~/.tmux.conf 
+ps aux| grep tmux
+ps aux| grep tmux
+ps aux| grep tmux
+ps aux| grep tmux
+setproxy
+setproxy
+ps aux| grep tmux
+kill 15937
+ps aux| grep tmux
+pkill -f "install_plugins"
+ps aux| grep tmux
+setproxy
+setproxy
 bash
-zsh
-bash
-echo $$
-ps ww 4660
-. ~/.bashrc
-which vim
-vim -ed
-:q
 clear
-ls
-ls -lh
-ls
-cleaar
-stty
-stty -a
-clear
-stty rows 40
-ls
-ls -l
-stty rows 30
-ls -l
-stty rows 34
-ls -l
-stty rows 38
-ls -l
-clear
-ls
-stty columns 80
-ls
-ls -lh
-stty columns 150
-ls
-clear
-vim
-stty columns 140
-fg
-vim .vimrc_back 
-stty columns 120
-stty columns 100
-stty columns 140
-vim
-stty columns 135
-stty columns 138
-vim
-stty columns 137
-stty columns 136
-vim
-stty
-stty -a
-stty rows 39
-stty
-stty rows 38
-clear
-ls
-clear
-elinks
+exit
 jobs
-tmux
+fg
+clear
+fg
+clear
+tmux ls
 tat 0
+vi ~/.bash_history 
+fg
+source source_tmux_plugins 
+cd ~/.tmux/plugins/tpm/
+ls
+cd scripts/
+ls
+bash -x update_plugin.sh 
+bash install_plugins.sh 
+bash install_plugins.sh 
+bash -x source_plugins.sh 
+vi ~/.tmux.conf 
+vi /home/v/.bash_history
+exit
+vi /home/v/.bash_history
+clear
+qa
+exit
+clea
+exit
+tmux ls
+which tmux
+tat 0
+clear
+ps aux| grep tmux
+pstree
+pstree|less
+pstree -la |less
+cd ~/.tmux/plugins/tpm/scripts/
+ls
+rg "git::" 
+rg "git\:\:" 
+rg "git\:" 
+rg "git:" 
+rg "git" 
+
+git diff
+vi ~/.gitconfig 
+pstree
+pstree -l
+which tmux
+tmux  ls
+tat 0
+clear
+tat 0
+clear
+git diff
+git diff .gitconfig
+pkill -f "it-credential-libsecret"
+pstree
+pstree -la
+clear
+tmux ls
+tat 0
+pkill mosh-server
+clea
+which mosh-server
+exit
+tmux ls
+clear
+which tmux
+clear
+clear
+tmux ls
+clea
+clear
+tmux ls
+tmux
+ss
+which ss
+ss
+ff
+ff
+which ff
+vi ~/.config/fish/config.fish
+ssh-agent -s
+SSH_AUTH_SOCK=/tmp/ssh-xTEyNznya8ik/agent.18271; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=18272; export SSH_AGENT_PID;
+exi
+exit
+fg
+fg
+exit
+pkill pstree
+ps aux| grep pstree
+ps aux| grep pstree
+ps aux| grep mosh
+kill 14590
+ps aux| grep mosh
+pstree 
+pstree  | less
+clear
+pstree  -p | tmux
+pstree  -p |grep  tmux
+pstree -tap 15921
+pstree -tap 14697
+tmux ls
+tat 0
+clear
+tig .tmux.conf
+clear
+clear
+ls
+clear
+tig .tmux.conf
+vi .tmux.conf
+echo $HOST
+echo $HOSTNAME
+fg
 echo $TERM
 fg
-mv ~/.profile.bak ~/.profile
-vi .profile 
+fish
 fg
-[[ x == x -o x == x ]] && echo "yes"
-[[ x == x -or x == x ]] && echo "yes"
-man test
-[[ x == x ]] -o [[ x == x ]] && echo "yes"
-[ [[ x == x ]] -o [[ x == x ]] ] && echo "yes"
-test [[ x == x ]]
+ssh-agent -s
 fg
-vim
+clear
+tmux ls
+tat 0
+exit
+exit
+exit
+clear
+echo $TERM
+exit
+clear
+exit
+exit
+vi /home/v/.bash_history
+pstree
+pstree -la
+clear
+clear
+tmux ls
+exit
+exit
+clear
+tmux ls
+tat 5
+tat 3
+tmux ls
+tat 2
+tmux ls
+tat 0
+tmux ls
+tat 5
+clear
+tmux ls
+exit
+clear
+tmux ls
+tat 5
+cd 
+ls
+git status
+git commit -asm "Fix git issue causing tpm not loading, makes tmux hang"
+git commit -asm "Fix git issue causing tpm not loading, makes tmux hang" --no-gpg-sign 
+git push
+gpg2
+git push
+clear
+git status
+git status
+git submodule update
+git submodule status
+rm -rf .git/modules/.dotfiles/dotfiles/
+git submodule status
+cat .gitmodules 
+clear
+git status
+git submodule status
+vi .git/config 
+git submodule status
+git rm --cached .dotfiles/dotfiles
+git rm --cached -r .dotfiles/dotfiles
+ git status
+git status
+vi .git/config 
+git pull
+git status
+git submodule status
+cd .tmux/plugins/tpm/
+git pull
+git status
+git reset --hard
+cd ../..
+ls
+clear
+cd .'
+'
+cd
+git status
+git status
+~/bin/filter_public 
+cd v/
+git mergetool
+git commit
+git commit --no-gpg-sign
+cat ~/bin/filter_public 
+source ~/bin/filter_public 
+fg
+vi ~/bin/filter_public 
+source ~/bin/filter_public 
+fg
+vi ~/bin/filter_public 
+source -x ~/bin/filter_public 
+source  ~/bin/filter_public 
+fg
+bash -x  ~/bin/filter_public 
+fg
+source  ~/bin/filter_public 
+tig
+clear
+tig
+cd ~/v/
+ls
+tig
+clear
+tig
+git status
+cd ~/dotfiles/
+ls
+tig
+git pull
+tig
+clear
+tig
+tig show
+tig log
+tig log --oneline
+exit
+fg
+clear
+exit
+" ALE linting events
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
+mkdir dp
+cd dp/
+git clone " ALE linting events
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
+git clone git@gitlab.com:MrCue/shconf.git
+ls
+cd shconf/
+cat .gitconfig 
+clear
+git submodule status
+vi .gitmodules 
+ls .dotfiles/dotfiles/
+fg
+vi .git/config 
+git rm --cached .dotfiles/dotfiles/
+git commit -sm "remove dotfiles submodule"
+git commit -sm "remove dotfiles submodule" --no-gpg-sign
+git push
+git submodule status
+git checkout good-day
+git rm --cached .dotfiles/dotfiles/
+git commit -sm "remove dotfiles submodule" --no-gpg-sign
+git push
+clear
+exit
+jobs
+fg
+cler
+cd ../..
+rm -rf dp
+exit
+clear
+ls
+cd works/kaggle_runner/
+ls
+clear
+ls
+cd reversShells/
+ls
+clear
+clear
+clear
+git status
+exit
+echo "abc" | cat -
+fg
+exit
+tmux ls
+tmux new-session -h
+exit
+tmux new-session -s abc
+tmux new-session -d -s abc
+fg
+tat 
+exit
 tmux
-tat kaggle
-setopt
-unsetopt
-echo $$
-pstree -pa $$
-. .profile
-ls .profile 
-. .bashrc
 tmux ls
-  $ nix-shell -p nix-info --run "nix-info -m"
-  $ n
-  $ nix-shell -p nix-info --run "nix-info -m"
- nix-shell -p nix-info --run "nix-info -m"
-nix
+tat 5
+ps aux| grep tcpserver
 exit
-help
+exit
+exit
+clear
+clear
+echo "check" | { stty raw -echo && (cat - >/dev/tty & cat -) }
+echo "check" |  bash -c 'stty raw -echo && (cat - >/dev/tty & cat -)' 
+echo "check" |  bash -ic 'stty raw -echo && (cat - >/dev/tty & cat -)' 
+echo $TERM
+fg
+jobs
+echo "check" |  bash -c ' (cat - >/dev/tty & cat -)' 
+echo "check" |  bash -c ' (cat - >/dev/tty & cat -)' 
+echo "check" |  bash -c '(cat - >/dev/tty & cat -)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat -)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat -)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat -)' 
+bash -c 'cat -'
+cat </dev/tty 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat </dev/tty)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat </dev/tty >/dev/null)' 
+echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat </dev/tty)' | grep "test" 
+fg
+fg
+clear
+exit
+# Welcome, Good day.\rls
 ls
-ghc
-nix-env -qa
-nix-env -q
-nix-channel -l
-nix-channel --help
-nix-channel --list
-nix-channel -h
-nix-channel --help
+lls
+ls
+lls
+ls
+tmux new-window ls
+tmux new-window 
+exit
+man tmux
+exit
+ls
+clear
+exit
+ls
+exit
+clear
+~/bin/upnp-ports 
+exit
+tmux
+clear
+ls
+ps aux| grep Xw
+kill 2191
+sudo kill 2191
+startx
+exit
+tmux ls
+tmux ls
+tt
+v ~/.tmux.conf
+clear
+pkill tmux
+tmux ls
+tat 5
+clear
+vi ~/.tmux.conf
+tig ~/.tmux.conf
+clash -f .config/clash/old_config.yaml 
+tig .tmux.conf
+tig .tmux.conf
+git diff
+git diff .tmux.conf
+git diff --cached .tmux.conf
+fg
+vi .tmux.conf
+clear
+ls
+stty -a
+exit
+vim ~/.tmux.conf
+clear
+tmux ls
+which tmux
+pkill tmux
+stty -a
+ls
+clear
+ls
+ls
+sss
+exit
+vi .tmux.conf
+exit
+exit
+exit
+exit
+exit
+exit
+tmux ls
+clear
+tmux ls
+exit
+tmux ls
+exit
+exit
+exit
+tat 5
+stty -a
+tmux ls
+exit
+tat 5
+tat rvsConnector
+tmxu ls
+tat rvsConnector
+pwd
+exit
+PORT=$(./reversShells/addNewNode.sh 2>/dev/null); echo $PORT 
+./reversShells/addNewNode.sh 2>/dev/null
+./reversShells/addNewNode.sh >/dev/null
+./reversShells/addNewNode.sh 2>/dev/null
+./reversShells/addNewNode.sh
+exit
+exit
+tat 5
+exit
+tmux ls
+tat 7
+tat 5
+tmux ls
+tat 5
+clear
+pkill mosh-server
+exit
+exit
+exit
+exit
+cd ~/works/kaggle_runner/
+ls
+clear
+tig
+v .
+ps aux| grep addNew
+kill 12958
+ps aux| grep addNew
+kill 12
+kill 12959
+fg
+reversShells/addNewNode.sh 
+kill %2
+fg
+cat serverNodes 
+echo "" > serverNodes 
+fg
+reversShells/addNewNode.sh 
+fg
+kill %2
+fg
+reversShells/addNewNode.sh 
+reversShells/addNewNode.sh 
+reversShells/addNewNode.sh 
+~/bin/upnp-ports 
+ip route
+clear
+. ~/.fzf.bash 
+zsh
+fish
+exit
+jobs
 fg
 jobs
 exit
-curl -v localhost:28080
-curl -v localhost:28080/lab?
-exit
-exit
-exit
-clear
-ls
-ls
-clear
-who
-exit
-sudo apt upgrade -y
-clear
-who
-tmux ls
-tat kaggle
-jobs
-exit
-curl -v localhost:28080/lab?
-who
-tmux ls
-tmux ls
-tat kaggle
-tmux ls
-tat kaggle
-exit
-ls
-ls *hs
-runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
-runhaskell zsh-history-merge.hs 
-runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac zsh_history_merged
-runhaskell zsh-history-merge.hs .zsh_history zsh_history_mac 
-wc -l zsh_history_mac 
-wc -l .zsh_history 
-vi zsh-history-merge.hs +87
-cp .zsh_history wsl_zsh_history
-git checkout HEAD .zsh_history
-wl -l *zsh_history
-wc -l *zsh_history
-wc -l *sh_history
-wc -l .*sh_history
-history
-head .zsh_history 
-head wsl_zsh_history 
-ls
-help
-exit
-exit
-ls
-clear
-ls
-ps aux | grep tmux
-ps aux | grep clash
-tat 0
-who
-who
-clear
-who
-uname -a
-tmux ls
-tat -=0
-tat 0
-ghci
-tmux ls
-tat kaggle
-who
-htop
-exit
-ls
-tat kaggle
-tmux new-session go-ci
-tmux new-session 
-clear
-jobs
-exit
-pass add
-pass add github_tok
-pass github_tok
-pass
-pass test
-pass delete test
-clear
-tmux ls
-tat kaggle
+stty -a
 exit

@@ -5,9 +5,10 @@ set encoding=utf-8
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
-let vimplug_exists=expand('~/.config/nvim_back/autoload/plug.vim')
+set nocompatible			" 不使用vi兼容模式
 
-"let g:vim_bootstrap_langs = "python"
+let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
+
 let $VIRTUAL_ENV = $CONDA_PREFIX
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 
@@ -21,7 +22,7 @@ if !filereadable(vimplug_exists)
   silent exec "!\curl -fLo " . vimplug_exists . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
   let g:not_finish_vimplug = "yes"
 
-  autocmd VimEnter * PlugInstall
+  "autocmd VimEnter * PlugInstall
 endif
 
 let lite = 0
@@ -34,7 +35,7 @@ nnoremap <SPACE> <Nop>
 "" Map leader to <SPACE>
 let mapleader=' '
 " Required:
-call plug#begin(expand('~/.config/nvim_back/plugged'))
+call plug#begin(expand('~/.config/nvim/plugged'))
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -54,7 +55,9 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
+if has('nvim')
 Plug 'skywind3000/asyncrun.vim'
+endif
 
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -143,6 +146,11 @@ Plug 'honza/vim-snippets'
 "nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 "imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
+" tmux
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'roxma/vim-tmux-clipboard'
+Plug 'christoomey/vim-tmux-navigator'
+
 " python
 "" Python Bundle
 Plug 'tmhedberg/SimpylFold'
@@ -173,8 +181,8 @@ Plug 'buoto/gotests-vim'
 "*****************************************************************************
 
 "" Include user's extra bundle
-if filereadable(expand("~/.config/nvim_back/local_bundles.vim"))
-  source ~/.config/nvim_back/local_bundles.vim
+if filereadable(expand("~/.config/nvim/local_bundles.vim"))
+  source ~/.config/nvim/local_bundles.vim
 endif
 
 call plug#end()
@@ -219,7 +227,7 @@ else
 endif
 
 " session management
-let g:session_directory = "~/.config/nvim_back/session"
+let g:session_directory = "~/.config/nvim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
@@ -486,12 +494,12 @@ runtime! ftplugin/man.vim
 
 " Show byte offset 
 set statusline+=%o
+if has('ale')
 " ALE linting events
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
-if has('ale')
 augroup ale
   autocmd!
 
@@ -532,8 +540,8 @@ noremap <Leader>c :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
 noremap <Leader>C :AsyncRun git -C %:p:h commit -sm<SPACE>
 noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && git commit -sm "Good Game" && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <silent> <Leader>gsh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
-noremap <silent> <Leader>gll :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
+noremap <silent> <Leader>gh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
+noremap <silent> <Leader>gl :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gvdiff<CR>
@@ -596,7 +604,7 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
 nmap <leader>H :History<CR>
-nmap <leader>M :Marks<CR>
+" nmap <leader>M :Marks<CR>
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -631,24 +639,24 @@ if has('macunix')
 endif
 
 "" Buffer nav
-noremap <leader>z :bp<CR>
+noremap <leader>, :bp<CR>
 "noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
+noremap <leader>. :bn<CR>
 "noremap <leader>w :bn<CR>
 
 "" Close buffer
-"noremap <leader>c :bd<CR>
+noremap <leader>x :bd<CR>
 ""inoremap <leader>c <ESC>:BD<CR>
 "noremap <leader>C :BD<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<CR>
 
-"" Switching windows
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
+"" Switching windows -> controlled by https://github.com/christoomey/vim-tmux-navigator now
+" noremap <C-j> <C-w>j
+" noremap <C-k> <C-w>k
+" noremap <C-l> <C-w>l
+" noremap <C-h> <C-w>h
 "noremap <C-p> <C-w><C-p>
 
 "" Vmap for maintain Visual Mode after shifting > and <
@@ -660,7 +668,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 "" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
+"nnoremap <Leader>o :.Gbrowse<CR>
 
 "*****************************************************************************
 "" Custom configs
@@ -671,8 +679,8 @@ nnoremap <Leader>o :.Gbrowse<CR>
 function SetPythonOptions()
   setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79 formatoptions+=croq softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
   set errorformat=%f:%l:\ %m
-  "set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
-  nnoremap <Leader>l :copen \| wincmd p \| AsyncRun pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p <CR>
+  set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
+  nnoremap <Leader>l :copen \| wincmd p \| make <CR>
 endfunction
 
 augroup vimrc-python
@@ -709,7 +717,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'tslint'],
 \   'vue': ['eslint'],
-\   'python': ['pylint', 'flake8'],
+\   'python': ['pylint','black'],
 \   'sh': ['shellcheck'],
 \}
 let g:ale_python_pylint_executable = '/home/v/miniconda3/envs/pyt/bin/pylint'
@@ -719,7 +727,7 @@ let g:ale_fixers = {
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
-\    'python': ['remove_trailing_lines', 'trim_whitespace', 'isort','black','autopep8'],
+\    'python': ['add_blank_lines_for_python_control_statements', 'remove_trailing_lines', 'trim_whitespace', 'isort'],
 \    'sh': ['shfmt'],
 \}
 let g:ale_fix_on_save = 1
@@ -744,8 +752,8 @@ let g:vim_vue_plugin_load_full_syntax = 1
 "*****************************************************************************
 
 "" Include user's local vim config
-if filereadable(expand("~/.config/nvim_back/local_init.vim"))
-  source ~/.config/nvim_back/local_init.vim
+if filereadable(expand("~/.config/nvim/local_init.vim"))
+  source ~/.config/nvim/local_init.vim
 endif
 
 "*****************************************************************************
@@ -828,7 +836,7 @@ set nojoinspaces
 nnoremap <silent><Leader>p :CtrlP<CR>
 
 " Run commands that require an interactive shell
-nnoremap <silent> <Leader>r :source ~/.vimrc_back<CR>
+nnoremap <Leader>r :source ~/.vimrc_back<CR>
 
 
 " Always use vertical diffs
@@ -838,7 +846,6 @@ endif
 
 
 """ ### vim 特性配置 {{{
-set nocompatible			" 不使用vi兼容模式
 "set nonu
 set relativenumber			" 显示相对（当前光标所在行）行号而不是绝对行号
 set hlsearch				" 高亮搜索结果
@@ -846,9 +853,9 @@ set incsearch				" 输入搜索内容时就同步显示搜索结果
 set ignorecase				" 搜索时大小写不敏感
 set smartcase
 set noswapfile
-set backupdir=~/.vim_back/backup/
-set directory=~/.vim_back/swap/
-set undodir=~/.vim_back/undo/
+set backupdir=~/.vim/backup/
+set directory=~/.vim/swap/
+set undodir=~/.vim/undo/
 set undofile "undo !!!!!!!!!!!!!
 set nowrap				" 长度超过窗口宽度不要换行显示
 "set list				" 让vim显示空格、tab、换行等不可见字符
@@ -915,8 +922,8 @@ let g:SimpylFold_docstring_preview = 1
 "noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
-let g:python3_host_prog = "/usr" . "/bin/python3"
-let g:python_host_prog = "/usr" . "/bin/python"
+let g:python3_host_prog = trim(system('bash -c "which python3"'))
+let g:python_host_prog = trim(system('bash -c "which python"'))
 
 "set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
 "noremap <Leader>x :bunload<CR>
@@ -966,7 +973,7 @@ nnoremap <Leader>s <ESC>:w<CR>
 "inoremap <silent> <Leader>S <ESC>:silent wq<CR><CR>
 noremap <Leader>s :<C-U>w<CR>
 noremap <silent> <Leader>S :<C-U>silent wq<CR><CR>
-"nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>F :Files<CR>
 nnoremap <silent> <leader>t :Tags<CR>
 nnoremap <silent> <leader>rg       :Rg <C-R><C-W><CR>
 xnoremap <silent> \       y:Rg <C-R><C-W><CR>
@@ -1210,7 +1217,8 @@ tnoremap <Esc> <C-\><C-n>
 
 set lazyredraw
 let g:go_version_warning = 0
-nnoremap <silent> <Leader>h :<C-u>hide<CR>
+nnoremap <silent> <Leader>h :<C-u>if winnr() == winnr('$') <BAR> bd <BAR> else <BAR> hide <BAR> endif <CR>
+nnoremap <silent> <Leader>M :<C-u>only<CR>
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
@@ -1364,7 +1372,7 @@ set wildmenu
 "
 "set cindent
 set smartindent
-"set noautoindent
+set autoindent
 
 
 """" Formatting
@@ -1431,7 +1439,7 @@ vnoremap c y:cd "\|pwd<cr>
 noremap h :nohl<cr>
 
 " n> L          light background
-noremap L :set bg=light<cr>
+"noremap L :set bg=light<cr> " conflict with L goto bottom of the screen
 
 " v) m-yY	gradual yank - first use m-Y and then m-y, it is accumulated into "a register
 "		just use p to put it eventually; you don't have to pre-select "a register
@@ -1535,13 +1543,13 @@ let g:ctrlp_user_command =
     \ ['.git', 'cd %s && git ls-files . -co --exclude-standard']
 "" Gundo
 nnoremap U :GundoToggle<CR>
-"" Syntastic
-let g:syntastic_mode_map = { 'mode': 'active',
-                        \ 'passive_filetypes': ['java', 'markdown'] }
-let g:syntastic_cpp_compiler_options = ' -std=gnu++11'
-let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
-let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
-let g:syntastic_python_python_exec = 'python3'
+"" Syntastic -> we use ALE
+" let g:syntastic_mode_map = { 'mode': 'active',
+"                         \ 'passive_filetypes': ['java', 'markdown'] }
+" let g:syntastic_cpp_compiler_options = ' -std=gnu++11'
+" let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
+" let g:syntastic_python_flake8_args = '--ignore="E226,E501,F403"'
+" let g:syntastic_python_python_exec = 'python3'
 "" Eclim
 let g:EclimCValidate = 0
 let g:EclimCppValidate = 0
@@ -1611,3 +1619,7 @@ noremap <silent><leader>tc :Pytest class<CR>
 noremap <silent><leader>M :wincmd \| <BAR> wincmd _<CR>
 
 let g:go_debug=['shell-commands']
+let g:loaded_node_provider=0
+
+setlocal spell spelllang=en_us
+nnoremap <Leader>o :on<CR>
