@@ -547,3 +547,37 @@ fg
 grep TERM
 git grep TERM
 exit
+clear
+exit
+urxvt
+clear
+xrdb ~/.Xresources 
+vi ~/.profile 
+fg
+tmux
+xclip -o
+$(xclip -o)
+bash -c "$(xclip -o)"
+echo $TERM
+fg
+clear
+ip route
+ls
+clear
+ip route
+clea
+clear
+tmux ls
+which xrdb
+man xrdb
+tmux ls
+tat 5
+pkill Xwayland
+urxvt
+stty ros 25
+clear
+stty rows 25
+clear
+ls
+echo $TERM
+locale
