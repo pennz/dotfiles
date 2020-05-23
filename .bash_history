@@ -1,82 +1,3 @@
-git dif
-git diff .tmux.conf
-
-git checkout HEAD .tmux.conf
-git status
-tmux -V
-tmux source ~/.tmux.conf 
-ps aux| grep tmux
-vi ~/.tmux.conf 
-ps aux| grep tmux
-ps aux| grep tmux
-ps aux| grep tmux
-ps aux| grep tmux
-setproxy
-setproxy
-ps aux| grep tmux
-kill 15937
-ps aux| grep tmux
-pkill -f "install_plugins"
-ps aux| grep tmux
-setproxy
-setproxy
-bash
-clear
-exit
-jobs
-fg
-clear
-fg
-clear
-tmux ls
-tat 0
-vi ~/.bash_history 
-fg
-source source_tmux_plugins 
-cd ~/.tmux/plugins/tpm/
-ls
-cd scripts/
-ls
-bash -x update_plugin.sh 
-bash install_plugins.sh 
-bash install_plugins.sh 
-bash -x source_plugins.sh 
-vi ~/.tmux.conf 
-vi /home/v/.bash_history
-exit
-vi /home/v/.bash_history
-clear
-qa
-exit
-clea
-exit
-tmux ls
-which tmux
-tat 0
-clear
-ps aux| grep tmux
-pstree
-pstree|less
-pstree -la |less
-cd ~/.tmux/plugins/tpm/scripts/
-ls
-rg "git::" 
-rg "git\:\:" 
-rg "git\:" 
-rg "git:" 
-rg "git" 
-
-git diff
-vi ~/.gitconfig 
-pstree
-pstree -l
-which tmux
-tmux  ls
-tat 0
-clear
-tat 0
-clear
-git diff
 git diff .gitconfig
 pkill -f "it-credential-libsecret"
 pstree
@@ -538,3 +459,91 @@ setproxy
 neomutt
 proxychains neomutt
 proxychains4 neomutt
+pstree -laps $$
+mosh
+clear
+kill 18781
+aaa=$(stty -g)
+stty $aaa
+stty size
+stty rows 1
+stty $aaa
+stty size
+stty "$aaa"
+stty size
+bbb=$(stty -g)
+aaa
+echo $aaa
+echo $bbb
+bbb=$(stty -a -g)
+stty size
+fg
+v Makefile 
+stty rows 24
+v Makefile 
+exit
+size=123 321
+size="123 321"
+size
+echo $size
+echo $size|cut -f1
+echo $size|cut -d" " -f1
+exit
+ls
+ls
+clear
+who
+who
+wfwefwe
+wfeawfeawf
+awefwefwefwef
+exit
+[ $(pgrep -cf "50001.*vulp 50002") -gt 1 ] || echo "yes"
+fg
+clear
+make tmp
+clear
+make tmp
+clear
+make tmp
+fg
+make tmp
+fg
+make tmp
+make pc_connector 
+make tmp
+gg
+fg
+make tmp
+echo "\|"
+echo "|"
+echo "|" asdfsdf
+fg
+exit
+ncat -vvu 127.0.0.1 50001 -c 'tee /dev/tty | ncat -vvu 127.0.0.1 60002 | tee /dev/tty'
+zsh
+exit
+clear
+exit
+{ echo a; echo b; }
+{ echo a; echo b; } &
+fg
+exit
+ls
+. ~/.pretty_prompt_console 
+ls
+fg
+rm ~/.pretty_prompt_console 
+cledar
+clear
+git status
+fg
+color_my_prompt 
+fg
+clear
+vim ~/.profile 
+exit
+fg
+grep TERM
+git grep TERM
+exit
