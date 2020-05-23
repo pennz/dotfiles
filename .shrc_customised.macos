@@ -107,5 +107,7 @@ pgrep nix-daemon >/dev/null || ( which launchctl >/dev/null && sudo launchctl lo
 #
 ### }
 
-[ x$FISH = x1 ] && fish
+[ x$FISH = x1 -o -f $HOME/.enable_fish ] && fish
 PROXY_URL='http://127.0.0.1:7890'
+alias clash='clash -f ~/.config/clash/config.yaml'
+alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
