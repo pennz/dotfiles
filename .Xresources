@@ -40,10 +40,10 @@
 !! URxvt Appearance
 ! Fira Mono for Powerline:style=Regular
 
-*.font: xft:Iosevka Term:style=Regular:size=20
-*.boldFont: xft:Iosevka Term:style=Bold:size=20
-*.italicFont: xft:Iosevka Term:style=Italic:size=20
-*.boldItalicFont: xft:Iosevka Term:style=Bold Italic:size=20
+*.font: xft:Iosevka Term:style=Regular:size=18,xft:Ubuntu Mono:size=18,xft:Fira Mono for Powerline:style=Regular:size=18,xft:Monospace:size=18:antialias=true:hinting=true 
+*.boldFont: xft:Iosevka Term:style=Bold:size=18
+*.italicFont: xft:Iosevka Term:style=Italic:size=18
+*.boldItalicFont: xft:Iosevka Term:style=Bold Italic:size=18
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
