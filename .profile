@@ -50,9 +50,5 @@ if [ -f "$HOME"/.bash_aliases ]; then
     source "$HOME"/.bash_aliases
 fi
 
-if [ -f "$HOME"/.shrc_customised ]; then
-    source "$HOME"/.shrc_customised
-fi
-
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
-export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive"  # fix locale prolem for nix pkgs, reference https://unix.stackexchange.com/questions/187402/nix-package-manager-perl-warning-setting-locale-failed
+export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive" # fix locale prolem for nix pkgs, reference https://unix.stackexchange.com/questions/187402/nix-package-manager-perl-warning-setting-locale-failed
