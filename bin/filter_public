@@ -32,6 +32,7 @@ git filter-repo \
 --invert-paths
 git remote add public git@github.com:pennz/dotfiles.git || true
 git fetch public
+git branch -D $RBRANCH 
 git checkout --track public/$RBRANCH
 git merge $BRANCH --no-edit --no-gpg-sign
 #git merge public/$RBRANCH
