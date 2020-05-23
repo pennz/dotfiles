@@ -4,7 +4,6 @@ export GOPATH="$HOME"/go
 # export LC_ALL=en_US.UTF-8
 # export LANG=en_US.UTF-8
 
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -17,13 +16,12 @@ fi
 set -o ignoreeof
 
 # nvim back folder
-[ ! -d "$HOME"/.vim/backup/ ] && mkdir -p "$HOME"/.vim/backup 
-[ ! -d "$HOME"/.vim/swap/   ] && mkdir -p "$HOME"/.vim/swap   
-[ ! -d "$HOME"/.vim/undo/   ] && mkdir -p "$HOME"/.vim/undo  
+[ ! -d "$HOME"/.vim/backup/ ] && mkdir -p "$HOME"/.vim/backup
+[ ! -d "$HOME"/.vim/swap/ ] && mkdir -p "$HOME"/.vim/swap
+[ ! -d "$HOME"/.vim/undo/ ] && mkdir -p "$HOME"/.vim/undo
 
-# fuck 
+# fuck
 command -v fuck >/dev/null && eval "$(thefuck --alias)"
-
 
 # for visual studio code
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
@@ -43,11 +41,10 @@ export BASH_ENV=~/.vim_bash_env
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 if [ -e /etc/profile.d/nix.sh ]; then source /etc/profile.d/nix.sh; fi # added by Nix installer
 
-export TERM=screen-256color
-[[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -clrtabs
-[[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -regtabs 4    
+[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -clrtabs
+[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -regtabs 4
 [ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
-pgrep ssh-agent >/dev/null || ( eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa )
+pgrep ssh-agent >/dev/null || (eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa)
 
 if [ -f "$HOME"/.bash_aliases ]; then
     source "$HOME"/.bash_aliases
@@ -58,3 +55,4 @@ if [ -f "$HOME"/.shrc_customised ]; then
 fi
 
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive"  # fix locale prolem for nix pkgs, reference https://unix.stackexchange.com/questions/187402/nix-package-manager-perl-warning-setting-locale-failed
