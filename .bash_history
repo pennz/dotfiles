@@ -1,261 +1,3 @@
-git diff .gitconfig
-pkill -f "it-credential-libsecret"
-pstree
-pstree -la
-clear
-tmux ls
-tat 0
-pkill mosh-server
-clea
-which mosh-server
-exit
-tmux ls
-clear
-which tmux
-clear
-clear
-tmux ls
-clea
-clear
-tmux ls
-tmux
-ss
-which ss
-ss
-ff
-ff
-which ff
-vi ~/.config/fish/config.fish
-ssh-agent -s
-SSH_AUTH_SOCK=/tmp/ssh-xTEyNznya8ik/agent.18271; export SSH_AUTH_SOCK;
-SSH_AGENT_PID=18272; export SSH_AGENT_PID;
-exi
-exit
-fg
-fg
-exit
-pkill pstree
-ps aux| grep pstree
-ps aux| grep pstree
-ps aux| grep mosh
-kill 14590
-ps aux| grep mosh
-pstree 
-pstree  | less
-clear
-pstree  -p | tmux
-pstree  -p |grep  tmux
-pstree -tap 15921
-pstree -tap 14697
-tmux ls
-tat 0
-clear
-tig .tmux.conf
-clear
-clear
-ls
-clear
-tig .tmux.conf
-vi .tmux.conf
-echo $HOST
-echo $HOSTNAME
-fg
-echo $TERM
-fg
-fish
-fg
-ssh-agent -s
-fg
-clear
-tmux ls
-tat 0
-exit
-exit
-exit
-clear
-echo $TERM
-exit
-clear
-exit
-exit
-vi /home/v/.bash_history
-pstree
-pstree -la
-clear
-clear
-tmux ls
-exit
-exit
-clear
-tmux ls
-tat 5
-tat 3
-tmux ls
-tat 2
-tmux ls
-tat 0
-tmux ls
-tat 5
-clear
-tmux ls
-exit
-clear
-tmux ls
-tat 5
-cd 
-ls
-git status
-git commit -asm "Fix git issue causing tpm not loading, makes tmux hang"
-git commit -asm "Fix git issue causing tpm not loading, makes tmux hang" --no-gpg-sign 
-git push
-gpg2
-git push
-clear
-git status
-git status
-git submodule update
-git submodule status
-rm -rf .git/modules/.dotfiles/dotfiles/
-git submodule status
-cat .gitmodules 
-clear
-git status
-git submodule status
-vi .git/config 
-git submodule status
-git rm --cached .dotfiles/dotfiles
-git rm --cached -r .dotfiles/dotfiles
- git status
-git status
-vi .git/config 
-git pull
-git status
-git submodule status
-cd .tmux/plugins/tpm/
-git pull
-git status
-git reset --hard
-cd ../..
-ls
-clear
-cd .'
-'
-cd
-git status
-git status
-~/bin/filter_public 
-cd v/
-git mergetool
-git commit
-git commit --no-gpg-sign
-cat ~/bin/filter_public 
-source ~/bin/filter_public 
-fg
-vi ~/bin/filter_public 
-source ~/bin/filter_public 
-fg
-vi ~/bin/filter_public 
-source -x ~/bin/filter_public 
-source  ~/bin/filter_public 
-fg
-bash -x  ~/bin/filter_public 
-fg
-source  ~/bin/filter_public 
-tig
-clear
-tig
-cd ~/v/
-ls
-tig
-clear
-tig
-git status
-cd ~/dotfiles/
-ls
-tig
-git pull
-tig
-clear
-tig
-tig show
-tig log
-tig log --oneline
-exit
-fg
-clear
-exit
-" ALE linting events
-" Move between linting errors
-nnoremap ]r :ALENextWrap<CR>
-nnoremap [r :ALEPreviousWrap<CR>
-mkdir dp
-cd dp/
-git clone " ALE linting events
-" Move between linting errors
-nnoremap ]r :ALENextWrap<CR>
-nnoremap [r :ALEPreviousWrap<CR>
-git clone git@gitlab.com:MrCue/shconf.git
-ls
-cd shconf/
-cat .gitconfig 
-clear
-git submodule status
-vi .gitmodules 
-ls .dotfiles/dotfiles/
-fg
-vi .git/config 
-git rm --cached .dotfiles/dotfiles/
-git commit -sm "remove dotfiles submodule"
-git commit -sm "remove dotfiles submodule" --no-gpg-sign
-git push
-git submodule status
-git checkout good-day
-git rm --cached .dotfiles/dotfiles/
-git commit -sm "remove dotfiles submodule" --no-gpg-sign
-git push
-clear
-exit
-jobs
-fg
-cler
-cd ../..
-rm -rf dp
-exit
-clear
-ls
-cd works/kaggle_runner/
-ls
-clear
-ls
-cd reversShells/
-ls
-clear
-clear
-clear
-git status
-exit
-echo "abc" | cat -
-fg
-exit
-tmux ls
-tmux new-session -h
-exit
-tmux new-session -s abc
-tmux new-session -d -s abc
-fg
-tat 
-exit
-tmux
-tmux ls
-tat 5
-ps aux| grep tcpserver
-exit
-exit
-exit
-clear
-clear
-echo "check" | { stty raw -echo && (cat - >/dev/tty & cat -) }
-echo "check" |  bash -c 'stty raw -echo && (cat - >/dev/tty & cat -)' 
 echo "check" |  bash -ic 'stty raw -echo && (cat - >/dev/tty & cat -)' 
 echo $TERM
 fg
@@ -581,3 +323,178 @@ clear
 ls
 echo $TERM
 locale
+exit
+tmux ls
+tat 4
+tat 5
+exit
+ex
+man ex
+exit
+stty ros 25
+stty rows 25
+ls
+echo $TERM
+locale
+tat 4
+htop
+fg
+tat 5
+clear
+tmux ls
+exit
+fg
+exit
+exit
+exit
+locale
+tmux ls
+tat 4
+tat 5
+ex
+man ex
+stty ros 25
+stty rows 25
+echo $TERM
+locale
+tat 4
+htop
+fg
+tat 5
+tmux ls
+fg
+cd works/
+git clone https://github.com/sylveon/terminology-themes
+ sudo add-apt-repository ppa:niko2040/e19
+cd terminology-themes/
+make 
+hash -r
+sudo apt remove libethumb-client-bin
+sudo apt remove terminology
+sudo apt remove libethumb-client-bin 
+sudo apt remove libefreet-bin
+apt --fix-broken install
+sudo apt --fix-broken install
+sudo apt remove libevas-loaders
+sudo apt remove libevas-loaders libevas1 
+sudo apt remove libevas-loaders libevas1  libefi-bin
+sudo apt remove libevas-loaders libevas1  libe*
+sudo apt remove libevas-loaders libevas1  
+sudo apt remove libevas-loaders libevas1  libethumb*
+sudo apt remove libevas-loaders libevas1  libethumb*  libecore-evas1  libecore-imf1  libecore-input1  libedje1  libemotion1   libevas1-engines-x  
+sudo apt remove libevas-loaders libevas1  libethumb*  libecore-evas1  libecore-imf1  libecore-input1  libedje1  libemotion1   libevas1-engines-x    libecore-fb1  libecore-x1  libefl-bin 
+sudo apt remove libefreet1a
+sudo apt remove libefl-bin
+sudo apt auto-remove
+sudo apt install libefl-bin
+make
+cat README.md 
+sudo make install
+ls /usr/share/terminology/themes/
+ls themes/
+ls
+which terminology
+terminology 
+fljf
+ajflkwajeflkawjef
+tyalpha -h
+clear
+ip route
+exit
+locale
+echo $SHELL
+cheese
+sudo apt install cheese
+which cheese
+fish
+exit
+tail -f logs_check
+fg
+exit
+ps aux |  grep vvlp
+pstree -laps 3152
+kill 3152
+exit
+make push
+ps aux | grep tcpserver
+make log_receiver
+fg
+locale
+fg
+make pc_connector
+echo $TERM
+locale
+htop
+cd ../PneumothoraxSegmentation
+tig
+c -
+clear
+jobs
+ls
+fish
+nixGLIntel mpv *.mp4
+clash
+exit
+cat >> .xmodmap
+xmodmap 
+cat .xmodmap 
+xmodmap -pke
+xmodmap
+keycode  66    = Super_L NoSymbol Super_L
+add control    = Control_L
+clear lock
+xmodmap -pke > ~/.Xmodmap
+v .Xmodmap 
+nvim .Xmodmap 
+fg
+xmodmap ~/.Xmodmap 
+make push
+clear
+make pc
+xinput 
+xinput -l
+keycode  66    = Super_L NoSymbol Super_L
+add control    = Control_L
+clear
+ls
+xmodmap ~/.Xmodmap 
+export DISPLAY=:0
+xmodmap ~/.Xmodmap 
+nvim ~/.Xmodmap 
+jobs
+fish
+elinks
+tail -f logs_check
+exit
+exit
+ls
+exit
+exit
+exit
+cd bin/
+cat > xm.c
+gcc -lX11 xm -o xmodmap1
+ls xm.c 
+gcc -lX11 xm.c -o xmodmap1
+which gcc
+/usr/bin/gcc -lX11 xm.c 
+clea
+clear
+ls
+touch ~/.enable_fish
+fish
+exit
+xev -event keyboard
+exit
+fg
+exit
+man tmux
+fg
+exit
+man tmux
+exit
+exit
+elinks
+exit
+fish
+exit
