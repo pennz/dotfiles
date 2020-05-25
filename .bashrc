@@ -164,8 +164,6 @@ fi
 
 [[ -e ~/.profile ]] && source ~/.profile
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 set -o vi
 
 # credit https://stackoverflow.com/questions/4133904/ps1-line-with-git-current-branch-and-colors
@@ -201,3 +199,21 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 if [ -f "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/v/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/v/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/v/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/v/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+conda activate base # as my dotfiles will fiddle with conda
+conda activate base # as my dotfiles will fiddle with conda
