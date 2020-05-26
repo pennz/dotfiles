@@ -676,7 +676,7 @@ vnoremap K :m '<-2<CR>gv=gv
 
 " python
 " vim-python
-function SetPythonOptions()
+function! SetPythonOptions()
   setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79 formatoptions+=croq softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
   set errorformat=%f:%l:\ %m
   set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
@@ -922,8 +922,8 @@ let g:SimpylFold_docstring_preview = 1
 "noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
-let g:python3_host_prog = trim(system('bash -c "which python3"'))
-let g:python_host_prog = trim(system('bash -c "which python"'))
+let g:python3_host_prog = system('bash -c "which python3"')[:-2]
+let g:python_host_prog = system('bash -c "which python"')[:-2]
 
 "set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
 "noremap <Leader>x :bunload<CR>
@@ -1627,3 +1627,4 @@ autocmd FileType gitcommit setlocal spell
 set complete+=kspell
 
 nnoremap <Leader>o :on<CR>
+hi Visual term=reverse cterm=reverse guibg=Grey
