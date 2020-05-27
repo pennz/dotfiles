@@ -1,24 +1,3 @@
-ps aux| grep Xw
-kill 2191
-sudo kill 2191
-startx
-exit
-tmux ls
-tmux ls
-tt
-v ~/.tmux.conf
-clear
-pkill tmux
-tmux ls
-tat 5
-clear
-vi ~/.tmux.conf
-tig ~/.tmux.conf
-clash -f .config/clash/old_config.yaml 
-tig .tmux.conf
-tig .tmux.conf
-git diff
-git diff .tmux.conf
 git diff --cached .tmux.conf
 fg
 vi .tmux.conf
@@ -516,3 +495,6 @@ conda activate pyt
 fg
 cd
 tig
+exit
+tmux ls
+exit
