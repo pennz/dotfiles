@@ -1,44 +1,3 @@
-echo "check" |  bash -ic 'stty raw -echo && (cat - >/dev/tty & cat -)' 
-echo $TERM
-fg
-jobs
-echo "check" |  bash -c ' (cat - >/dev/tty & cat -)' 
-echo "check" |  bash -c ' (cat - >/dev/tty & cat -)' 
-echo "check" |  bash -c '(cat - >/dev/tty & cat -)' 
-echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat -)' 
-echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat -)' 
-echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat -)' 
-bash -c 'cat -'
-cat </dev/tty 
-echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat </dev/tty)' 
-echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat </dev/tty >/dev/null)' 
-echo "check" |  bash -c '(cat README.md  - >/dev/tty & cat </dev/tty)' | grep "test" 
-fg
-fg
-clear
-exit
-# Welcome, Good day.\rls
-ls
-lls
-ls
-lls
-ls
-tmux new-window ls
-tmux new-window 
-exit
-man tmux
-exit
-ls
-clear
-exit
-ls
-exit
-clear
-~/bin/upnp-ports 
-exit
-tmux
-clear
-ls
 ps aux| grep Xw
 kill 2191
 sudo kill 2191
@@ -498,3 +457,62 @@ elinks
 exit
 fish
 exit
+. ~/.bashrc
+clear
+which tmux
+zsh
+. ~/.bashrc
+cd
+git status
+clear
+tig
+clear
+exit
+clear
+conda env list
+conda create pyt
+conda create -n pyt
+conda create -n pyt python=3
+conda activate pyt
+conda init bash
+. ~/.bashrc
+conda activate pyt
+cd kaggle_runner/
+make install_dev_dep
+pip install -e .
+clear
+ls
+make pccnct
+fg
+jobs
+tmux 
+m
+export LC_ALL='en_US.UTF-8'
+locale-gen
+sudo locale-gen
+locale
+m
+tmux ls
+tat 3
+vi Makefile 
+tmux ls
+tat pengyu
+exit
+cd
+clear
+cd
+git pull
+tig
+vim ~/.bashrc
+ls ~/*conda
+pwd
+ls miniconda3/
+ls ~/*conda*
+ls -d ~/*conda*
+ls -d ~/*conda* | head -n 1
+fg
+. ~/.bashrc
+conda activate pyt
+fg
+cd
+tig
