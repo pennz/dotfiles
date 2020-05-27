@@ -225,6 +225,7 @@ ncat -vvu 127.0.0.1 50001 -c 'tee /dev/tty | ncat -vvu 127.0.0.1 60002 | tee /de
 zsh
 exit
 clear
+tmux ls
 exit
 { echo a; echo b; }
 { echo a; echo b; } &
