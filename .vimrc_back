@@ -309,15 +309,15 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
 " vim-airline
 
-func! GetCustomisedText()
-    if exists("*coc#status")
-      echo coc#status() . " Fighting"
-    endif
-endfunc
-
-call airline#parts#define_function('customise_st', 'GetCustomisedText')
-call airline#parts#define_minwidth('customise_st', 150)
-call airline#parts#define_condition('customise_st', 'getcwd() =~ "works"')
+"func! GetCustomisedText()
+"    if exists("*coc#status")
+"      echo coc#status() . " Fighting"
+"    endif
+"endfunc
+"
+"call airline#parts#define_function('customise_st', 'GetCustomisedText')
+"call airline#parts#define_minwidth('customise_st', 150)
+"call airline#parts#define_condition('customise_st', 'getcwd() =~ "works"')
 "let g:airline_section_y = airline#section#create_right(['ffenc','customise_st'])
 
 let g:airline_theme = 'papercolor'
