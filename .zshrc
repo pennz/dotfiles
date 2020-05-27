@@ -68,11 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-<<<<<<< HEAD
 plugins=(git osx)
-=======
-plugins=(git)
->>>>>>> caff8b6... Merge stash ?
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,9 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -Uz compinit
 compinit
-<<<<<<< HEAD
-source /home/pengyu/.jfrog/jfrog_zsh_completion
-=======
+[-f /home/pengyu/.jfrog/jfrog_zsh_completion ] && source /home/pengyu/.jfrog/jfrog_zsh_completion
 
 autoload -U promptinit; promptinit
 
@@ -135,5 +129,15 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
->>>>>>> caff8b6... Merge stash ?
+# Avoid duplicates
+HISTCONTROL=ignoredups:erasedups  
+# When the shell exits, append to the history file instead of overwriting it
+setopt inc_append_history
+setopt share_history
+
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+if [ -f "$HOME"/.shrc_customised ]; then
+    source "$HOME"/.shrc_customised
+fi
