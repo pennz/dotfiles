@@ -68,7 +68,6 @@
 [gui]
 	commitmsgwidth = 0
 [merge]
-    ff = only
 	log = true
 	tool = diffconflicts
 [mergetool "diffconflicts"]
