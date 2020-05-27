@@ -41,14 +41,10 @@ export BASH_ENV=~/.vim_bash_env
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 if [ -e /etc/profile.d/nix.sh ]; then source /etc/profile.d/nix.sh; fi # added by Nix installer
 
-[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -clrtabs
-[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -regtabs 4
-[ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
-pgrep ssh-agent >/dev/null || (eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa)
-
 if [ -f "$HOME"/.bash_aliases ]; then
     source "$HOME"/.bash_aliases
 fi
 
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
 export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive" # fix locale prolem for nix pkgs, reference https://unix.stackexchange.com/questions/187402/nix-package-manager-perl-warning-setting-locale-failed
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
