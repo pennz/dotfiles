@@ -1,7 +1,7 @@
 FROM debian:buster
 LABEL maintainer="fireflysuccess@gmail.com"
 
-ENV TOOLS 'curl tig ctags htop tree pv nmap screen time tmux netcat psmisc vim neovim ca-certificates fish' 
+ENV TOOLS 'rsync curl tig ctags htop tree pv nmap screen time tmux netcat psmisc vim neovim ca-certificates fish' 
 
 RUN apt-get update && apt-get install -y ${TOOLS} --no-install-recommends
     
