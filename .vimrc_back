@@ -26,10 +26,10 @@ if !filereadable(vimplug_exists)
 endif
 
 let lite = 0
-let home_path = expand('~')
-if home_path =~ "pengyu"
-  let lite = 1
-endif
+"let home_path = expand('~')
+"if home_path =~ "pengyu"
+"  let lite = 1
+"endif
 
 nnoremap <SPACE> <Nop>
 "" Map leader to <SPACE>
@@ -309,15 +309,15 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
 " vim-airline
 
-func! GetCustomisedText()
-    if exists("*coc#status")
-      echo coc#status() . " Fighting"
-    endif
-endfunc
-
-call airline#parts#define_function('customise_st', 'GetCustomisedText')
-call airline#parts#define_minwidth('customise_st', 150)
-call airline#parts#define_condition('customise_st', 'getcwd() =~ "works"')
+"func! GetCustomisedText()
+"    if exists("*coc#status")
+"      echo coc#status() . " Fighting"
+"    endif
+"endfunc
+"
+"call airline#parts#define_function('customise_st', 'GetCustomisedText')
+"call airline#parts#define_minwidth('customise_st', 150)
+"call airline#parts#define_condition('customise_st', 'getcwd() =~ "works"')
 "let g:airline_section_y = airline#section#create_right(['ffenc','customise_st'])
 
 let g:airline_theme = 'papercolor'
@@ -538,7 +538,7 @@ noremap <Leader>gw :Gwrite<CR>
 "noremap <Leader>gc :copen \| wincmd p \| AsyncRun git -C %:p:h commit -sm<SPACE>
 noremap <Leader>c :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
 noremap <Leader>C :AsyncRun git -C %:p:h commit -sm<SPACE>
-noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && git commit -sm "Good Game" && git push<CR>
+noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && (git commit -sm "Good Game" \|\| true) && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
 noremap <silent> <Leader>gh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
 noremap <silent> <Leader>gl :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
@@ -676,7 +676,7 @@ vnoremap K :m '<-2<CR>gv=gv
 
 " python
 " vim-python
-function SetPythonOptions()
+function! SetPythonOptions()
   setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=79 formatoptions+=croq softtabstop=4 cinwords=if,elif,else,for,while,try,except,finally,def,class,with
   set errorformat=%f:%l:\ %m
   set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
@@ -922,8 +922,8 @@ let g:SimpylFold_docstring_preview = 1
 "noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
-let g:python3_host_prog = trim(system('bash -c "which python3"'))
-let g:python_host_prog = trim(system('bash -c "which python"'))
+let g:python3_host_prog = system('bash -c "which python3"')[:-2]
+let g:python_host_prog = system('bash -c "which python"')[:-2]
 
 "set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
 "noremap <Leader>x :bunload<CR>
@@ -1250,20 +1250,28 @@ func! BufSwitch()
   let currbufnr = 1
   let numexists = 0
   let firstmatchingbufnr = 0
+  let previous_buf_deleted = 1
+  let pn = bufnr("#")
+  let cnr = bufnr("%")
+
   while currbufnr <= bufcount
-    if(bufexists(currbufnr) && buflisted(bufname(currbufnr)))
+    if(bufexists(currbufnr) && bufloaded(currbufnr))
       "echo numexists . "/" . currbufnr . ": ". bufname(currbufnr)
       let bufdict[numexists] = currbufnr
       let numexists = numexists + 1
       call add(buflist, currbufnr)
+      if pn == currbufnr
+        let previous_buf_deleted = 0
+      endif
     endif
     let currbufnr = currbufnr + 1
+    "echo currbufnr
   endwhile
   if(numexists <= 1)
     CtrlP
   else
-    if bufnr("#") == bufnr()
-      if bufnr() == buflist[0]
+    if pn == cnr || previous_buf_deleted == 1
+      if cnr == buflist[0]
           bn
       else
           bp
@@ -1271,7 +1279,7 @@ func! BufSwitch()
     else
       if @# =~ "NERD" || @# == "" || @# =~ "__" || @# =~ "term"
         " if it is the fist buf
-        if bufnr() == buflist[0]
+        if cnr == buflist[0]
           echo "bn"
           bn
         else
@@ -1287,17 +1295,17 @@ func! BufSwitch()
 endfunc
 
 func! BufDelete()
-  let @" = bufnr()
+  let @" = bufnr("")
   call BufSwitch()
   if @# =~ "NERD" || @# == ""
     "echo "buffer not good, try close\" b" . @" . " EOL"
     bd "
   else
     echo "buffer not good, try close\" b" . @" . " EOL"
-    "let @" = bufnr("#")
+    "let @" = pn
     bd #
   endif
-  let @#=bufnr()
+  let @#=bufnr("")
 endfunc
 
 nnoremap <silent><Leader>m :make<CR>
@@ -1621,5 +1629,10 @@ noremap <silent><leader>M :wincmd \| <BAR> wincmd _<CR>
 let g:go_debug=['shell-commands']
 let g:loaded_node_provider=0
 
-setlocal spell spelllang=en_us
+" https://thoughtbot.com/blog/vim-spell-checking
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+autocmd FileType gitcommit setlocal spell
+set complete+=kspell
+
 nnoremap <Leader>o :on<CR>
+hi Visual term=reverse cterm=reverse guibg=Grey
