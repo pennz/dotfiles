@@ -8,7 +8,7 @@ if [ ! -d "$HOME/$RREPO_COPY" ]; then
 	git clone --mirror git@github.com:pennz/dotfiles.git $RREPO_COPY
 else
 	pushd $RREPO_COPY
-	git fetch
+	git fetch origin
 	popd
 fi
 
@@ -43,8 +43,8 @@ git remote add public file://$HOME/$RREPO_COPY || true
 git fetch public
 git branch -D $RBRANCH 
 git checkout --track public/$RBRANCH
-git merge local/$BRANCH --no-edit --no-gpg-sign
-if [ ! $? -eq 0 ]; then echo "Failed when merge with local/$BRANCH. Please merge manually in subshell, exit when finished, it will continue."; PS1="Merge>" bash; fi
+git merge $BRANCH --no-edit --no-gpg-sign
+if [ ! $? -eq 0 ]; then echo "Failed when merge with branch \"$BRANCH\". Please merge manually in subshell, exit when finished, it will continue."; PS1="Merge>" bash; fi
 git push
 
 pushd $HOME/$RREPO_COPY
