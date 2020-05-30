@@ -1,11 +1,3 @@
-conda env list
-conda create pyt
-conda create -n pyt
-conda create -n pyt python=3
-conda activate pyt
-conda init bash
-. ~/.bashrc
-conda activate pyt
 cd kaggle_runner/
 make install_dev_dep
 pip install -e .
@@ -497,4 +489,12 @@ git diff
 git commit -asm "Update history, plus font SS06"
 docker ps
 clear
+exit
+fish
+clear
+ls
+fish
+cd
+echo  Downloads/ttf-iosevka-term-ss06 > ~/notes.md
+nvim notes.md 
 exit
