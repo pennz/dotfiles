@@ -1,435 +1,3 @@
-ls
-stty -a
-exit
-vim ~/.tmux.conf
-clear
-tmux ls
-which tmux
-pkill tmux
-stty -a
-ls
-clear
-ls
-ls
-sss
-exit
-vi .tmux.conf
-exit
-exit
-exit
-exit
-exit
-exit
-tmux ls
-clear
-tmux ls
-exit
-tmux ls
-exit
-exit
-exit
-tat 5
-stty -a
-tmux ls
-exit
-tat 5
-tat rvsConnector
-tmxu ls
-tat rvsConnector
-pwd
-exit
-PORT=$(./reversShells/addNewNode.sh 2>/dev/null); echo $PORT 
-./reversShells/addNewNode.sh 2>/dev/null
-./reversShells/addNewNode.sh >/dev/null
-./reversShells/addNewNode.sh 2>/dev/null
-./reversShells/addNewNode.sh
-exit
-exit
-tat 5
-exit
-tmux ls
-tat 7
-tat 5
-tmux ls
-tat 5
-clear
-pkill mosh-server
-exit
-exit
-exit
-exit
-cd ~/works/kaggle_runner/
-ls
-clear
-tig
-v .
-ps aux| grep addNew
-kill 12958
-ps aux| grep addNew
-kill 12
-kill 12959
-fg
-reversShells/addNewNode.sh 
-kill %2
-fg
-cat serverNodes 
-echo "" > serverNodes 
-fg
-reversShells/addNewNode.sh 
-fg
-kill %2
-fg
-reversShells/addNewNode.sh 
-reversShells/addNewNode.sh 
-reversShells/addNewNode.sh 
-~/bin/upnp-ports 
-ip route
-clear
-. ~/.fzf.bash 
-zsh
-fish
-exit
-jobs
-fg
-jobs
-exit
-stty -a
-exit
-which proxychains4
-/usr/bin/proxychains4 
-/usr/bin/proxychains4 neomutt
-clear
-echo $PATH
-hash -r
-which proxychains4
-/home/v/.nix-profile/bin/proxychains4
-nix-env -e proxychains4
-nix-env --remove proxychains4
-sudo apt install i2p
-i2prouter
-i2prouter install
-dpkg-reconfigure i2p
-sudo dpkg-reconfigure i2p
-sudo systemctl start i2p
-sudo systemctl status i2p
-dmesg
-sudo systemctl status i2p
-ls -lh /var/lop/i2p
-ls -lh /var/log/i2p
-sudo systemctl status i2p
-sudo systemctl start i2p
-sudo systemctl status i2p
-ls -lh /var/log/i2p
-i2p
-i2prouter
-i2prouter console 
-ls /usr/bin/i2prouter
-ls -lh /usr/bin/i2prouter
-sudo i2prouter console 
-i2prouter console 
-ps aux|grep i2p
-sudo systemctl status i2p
-ls
-clear
-setproxy
-neomutt
-proxychains neomutt
-proxychains4 neomutt
-pstree -laps $$
-mosh
-clear
-kill 18781
-aaa=$(stty -g)
-stty $aaa
-stty size
-stty rows 1
-stty $aaa
-stty size
-stty "$aaa"
-stty size
-bbb=$(stty -g)
-aaa
-echo $aaa
-echo $bbb
-bbb=$(stty -a -g)
-stty size
-fg
-v Makefile 
-stty rows 24
-v Makefile 
-exit
-size=123 321
-size="123 321"
-size
-echo $size
-echo $size|cut -f1
-echo $size|cut -d" " -f1
-exit
-ls
-ls
-clear
-who
-who
-wfwefwe
-wfeawfeawf
-awefwefwefwef
-exit
-[ $(pgrep -cf "50001.*vulp 50002") -gt 1 ] || echo "yes"
-fg
-clear
-make tmp
-clear
-make tmp
-clear
-make tmp
-fg
-make tmp
-fg
-make tmp
-make pc_connector 
-make tmp
-gg
-fg
-make tmp
-echo "\|"
-echo "|"
-echo "|" asdfsdf
-fg
-exit
-ncat -vvu 127.0.0.1 50001 -c 'tee /dev/tty | ncat -vvu 127.0.0.1 60002 | tee /dev/tty'
-zsh
-exit
-clear
-exit
-{ echo a; echo b; }
-{ echo a; echo b; } &
-fg
-exit
-ls
-. ~/.pretty_prompt_console 
-ls
-fg
-rm ~/.pretty_prompt_console 
-cledar
-clear
-git status
-fg
-color_my_prompt 
-fg
-clear
-vim ~/.profile 
-exit
-fg
-grep TERM
-git grep TERM
-exit
-clear
-exit
-urxvt
-clear
-xrdb ~/.Xresources 
-vi ~/.profile 
-fg
-tmux
-xclip -o
-$(xclip -o)
-bash -c "$(xclip -o)"
-echo $TERM
-fg
-clear
-ip route
-ls
-clear
-ip route
-clea
-clear
-tmux ls
-which xrdb
-man xrdb
-tmux ls
-tat 5
-pkill Xwayland
-urxvt
-stty ros 25
-clear
-stty rows 25
-clear
-ls
-echo $TERM
-locale
-exit
-tmux ls
-tat 4
-tat 5
-exit
-ex
-man ex
-exit
-stty ros 25
-stty rows 25
-ls
-echo $TERM
-locale
-tat 4
-htop
-fg
-tat 5
-clear
-tmux ls
-exit
-fg
-exit
-exit
-exit
-locale
-tmux ls
-tat 4
-tat 5
-ex
-man ex
-stty ros 25
-stty rows 25
-echo $TERM
-locale
-tat 4
-htop
-fg
-tat 5
-tmux ls
-fg
-cd works/
-git clone https://github.com/sylveon/terminology-themes
- sudo add-apt-repository ppa:niko2040/e19
-cd terminology-themes/
-make 
-hash -r
-sudo apt remove libethumb-client-bin
-sudo apt remove terminology
-sudo apt remove libethumb-client-bin 
-sudo apt remove libefreet-bin
-apt --fix-broken install
-sudo apt --fix-broken install
-sudo apt remove libevas-loaders
-sudo apt remove libevas-loaders libevas1 
-sudo apt remove libevas-loaders libevas1  libefi-bin
-sudo apt remove libevas-loaders libevas1  libe*
-sudo apt remove libevas-loaders libevas1  
-sudo apt remove libevas-loaders libevas1  libethumb*
-sudo apt remove libevas-loaders libevas1  libethumb*  libecore-evas1  libecore-imf1  libecore-input1  libedje1  libemotion1   libevas1-engines-x  
-sudo apt remove libevas-loaders libevas1  libethumb*  libecore-evas1  libecore-imf1  libecore-input1  libedje1  libemotion1   libevas1-engines-x    libecore-fb1  libecore-x1  libefl-bin 
-sudo apt remove libefreet1a
-sudo apt remove libefl-bin
-sudo apt auto-remove
-sudo apt install libefl-bin
-make
-cat README.md 
-sudo make install
-ls /usr/share/terminology/themes/
-ls themes/
-ls
-which terminology
-terminology 
-fljf
-ajflkwajeflkawjef
-tyalpha -h
-clear
-ip route
-exit
-locale
-echo $SHELL
-cheese
-sudo apt install cheese
-which cheese
-fish
-exit
-tail -f logs_check
-fg
-exit
-ps aux |  grep vvlp
-pstree -laps 3152
-kill 3152
-exit
-make push
-ps aux | grep tcpserver
-make log_receiver
-fg
-locale
-fg
-make pc_connector
-echo $TERM
-locale
-htop
-cd ../PneumothoraxSegmentation
-tig
-c -
-clear
-jobs
-ls
-fish
-nixGLIntel mpv *.mp4
-clash
-exit
-cat >> .xmodmap
-xmodmap 
-cat .xmodmap 
-xmodmap -pke
-xmodmap
-keycode  66    = Super_L NoSymbol Super_L
-add control    = Control_L
-clear lock
-xmodmap -pke > ~/.Xmodmap
-v .Xmodmap 
-nvim .Xmodmap 
-fg
-xmodmap ~/.Xmodmap 
-make push
-clear
-make pc
-xinput 
-xinput -l
-keycode  66    = Super_L NoSymbol Super_L
-add control    = Control_L
-clear
-ls
-xmodmap ~/.Xmodmap 
-export DISPLAY=:0
-xmodmap ~/.Xmodmap 
-nvim ~/.Xmodmap 
-jobs
-fish
-elinks
-tail -f logs_check
-exit
-exit
-ls
-exit
-exit
-exit
-cd bin/
-cat > xm.c
-gcc -lX11 xm -o xmodmap1
-ls xm.c 
-gcc -lX11 xm.c -o xmodmap1
-which gcc
-/usr/bin/gcc -lX11 xm.c 
-clea
-clear
-ls
-touch ~/.enable_fish
-fish
-exit
-xev -event keyboard
-exit
-fg
-exit
-man tmux
-fg
-exit
-man tmux
-exit
-exit
-elinks
-exit
 fish
 exit
 . ~/.bashrc
@@ -497,4 +65,436 @@ clear
 tig
 cd
 tig
+exit
+mt
+clear
+exit
+exit
+clear
+source ~/bin/filter_public 
+tig --all
+git branch
+git checkout master
+git branch
+cd v
+git branch
+tig --all
+tig
+git push
+git merge good-day
+tig
+cd
+tig --all
+exit
+urxvt
+xrdb ~/.Xresources 
+clear
+echo $TERM
+exit
+urxvt
+clear
+xrdb ~/.Xresources 
+clear
+exit
+urxvtd
+xrdb  ~/.Xresources 
+clear
+who
+nix-env
+clea
+vim ~/.Xresources 
+xrdb ~/.Xresources 
+clear
+tmux ls
+vim .profile
+exit
+urxvt
+echo $DISPLAY
+dwm
+cat > .Xdefaults
+clear
+ip route
+tmux ls
+vi ~/.Xresources 
+clear
+clear
+tmux ls
+firefox
+clear
+echo $TERM
+nvim ~/.Xresources 
+exit
+fc-match 
+fc-match 
+clear
+ip route
+who
+xterm 
+font_cache 
+fc-list 
+clear
+exit
+xrdb ~/.Xdefaults 
+exit
+urxvt
+bg
+clear
+which gcc
+gcc -V
+gcc --version
+clear
+ip route
+gvim
+nix-env -qa ".*vim.*"
+font_cache 
+fc-list 
+xrdb ~/.Xdefaults 
+vim
+ip rotue
+export TERM=xterm
+clear
+ls
+fish
+fg
+exit
+m
+exit
+cd
+clear
+git reset --hard HEAD
+git status
+tig
+vim ~/bin/filter_public 
+git filter-repo
+git filter-repo -h
+fg
+cd v
+git remote show
+git remote
+git remote help
+git -v remote help
+git remote -v help
+ls .git/refs/remotes/local/
+ls .git/refs/remotes/local/
+ls
+clear
+ls
+ls
+fg
+git filter-repo
+git filter-repo -h
+fg
+cd ..
+cd .dotfiles/
+tig
+git pull
+tig
+fg
+cd ..
+rm -rf .dotfiles/
+bash -x bin/filter_public 
+cd .dotfiles/
+ls
+git status
+tig
+git pul
+git pull
+vi ~/bin/filter_public 
+cd ../v
+git remote remove publich
+git remote remove public
+git remote show
+clear
+ls
+cd ..
+bash -x ~/bin/fi
+bash -x ~/bin/filter_public 
+tig
+cd v
+tig --all
+git branch
+git remote -v
+git push
+git pull
+git branch
+tig --all
+git merge good-day
+tig
+tig origin/good-day
+tig local/good-day
+git merge local/good-day
+vi ~/bin/filter_public 
+git push
+cd .dotfiles/
+tig
+git branch -a
+git upsh
+git push
+git remote show
+git remote show public
+git remote show origin
+git remote show
+cd ../v
+cd ../v/
+pwd
+cd ../..
+cd ~/.dotfiles/
+ls
+tig
+git push
+git push master
+git push origin master
+git push origin 
+git push origin --help
+tig
+vi ~/bin/filter_public 
+git push
+clear
+tig
+tig --all
+ls
+cd refs/
+ls
+cat heads/master 
+ls
+cd ..
+ls
+tree
+ls
+grep "fetch =" -nr .
+vi ./config 
+git remote update
+git push orign
+git push origin
+ls
+cat packed-refs 
+vi packed-refs 
+git push
+git pull
+git push
+cd ..
+clear
+ls
+bash -x ~/bin/filter_public 
+fg
+clear
+bash -x ~/bin/filter_public 
+tig
+clear
+vi ~/.git/hooks/post-commit 
+ls -lh .git_template/hooks/
+ls -lh .git_template/hooks/
+vi .git_template/hooks/
+touch -p
+man touch
+mkdir -p "$HOME"/.git_template.local/hooks/post-commit
+mrdir "$HOME"/.git_template.local/hooks/post-commit
+rmdir  "$HOME"/.git_template.local/hooks/post-commit
+vi  "$HOME"/.git_template.local/hooks/post-commit
+chmod u+x  "$HOME"/.git_template.local/hooks/post-commit
+git commit
+git add bin/filter_public 
+git commit -sm "Bin: filter public"
+cp ~/bin/filter_public fp
+git reset HEAD^
+git add bin/filter_public 
+tig
+overcommit --help
+overcommit --uninstall
+vi .gitconfig
+git commit
+tig
+clear
+ls
+fg
+nvim .gitconfig
+clear
+ls
+ls .git_template.local/hooks/post-commit 
+ls -lh .git_template.local/hooks/post-commit 
+ .git_template.local/hooks/post-commit
+tig
+cd ~/v/
+tig --all
+git checkout good-day
+tig
+git fetch
+git fetch local
+vi ~/bin/filter_public 
+bash -x ~/bin/filter_public 
+fg
+vi ~/bin/filter_public 
+fg
+clear
+git status
+bash -x ~/bin/filter_public 
+PS4="${LINENO} " bash -x ~/bin/filter_public 
+PS4='${LINENO} ' bash -x ~/bin/filter_public 
+bash -x ~/bin/filter_public 
+tig
+tig --all
+tig local/good-day
+bash -x ~/bin/filter_public 
+tig
+tig
+tig
+bash -x ~/bin/filter_public 
+tig --all
+bash -x ~/bin/filter_public 
+tig
+cd ..
+git diff
+git add bin/filter_public 
+git commit -sm "Bin: Filter public"
+fg
+tig
+git diff
+git status
+git status|less
+git add .git_template/hooks/post-commit
+git commit -sm "post-commit hooks test"
+~/bin/filter_public 
+cd v
+tig --all
+tig --all
+cd ..
+git clone https://github.com/greg0ire/git_template ~/.git_template
+rm -rf ~/.git_template
+git clone https://github.com/greg0ire/git_template ~/.git_template
+git config --global init.templatedir '~/.git_template/template'
+git diff .gitconfig
+cd works/
+fish
+exit
+nix-env -i gnvim
+clear
+mt
+tmux ls
+m
+mt
+mt
+fg
+clear
+clear
+ls
+make pccnct
+ps aux | grep 50001
+pkill ncat
+ps aux | grep 50001
+make pccnct
+vi Makefile 
+make pccnct
+clear
+m
+m
+exit
+setproxy
+vi ~/bin/filter_public 
+clear
+ls
+vi ~/.git_template/hooks/post-commit 
+fg
+$(git config --path --get init.templatedir)/../update.sh
+git staus
+git diff
+git status
+cd
+git status
+git status | less
+$(git config --path --get init.templatedir)/../update.sh
+git status | less
+git commit -as
+clear
+ls
+clear
+ls
+clear
+rm -rf .git_template/
+git submodule add https://github.com/greg0ire/git_template ~/.git_template
+git add .gitmodules 
+git add .git_template
+git commit -s
+~/.git_template/update.sh 
+clear
+"$(git rev-parse --git-dir)/configure.sh"
+clear
+git status
+git status |less
+clear
+vim ~/.git/hooks/post-commit 
+tig
+vim ~/.gitmodules 
+git add .gitmodules 
+git commit -sm "gitmodules path to relative"
+clear
+sudo chown -R v:wheel /usr/local/Caskroom/xquartz/ 
+ls -lh /usr/local/Caskroom/
+sudo chown -R v:admin /usr/local/Caskroom/xquartz/ 
+vi ~/.Xdefaults 
+xrdb ~/.Xdefaults 
+clear
+exit
+nix-env -i gnvim
+vi ~/.config/clash/old_config.yaml 
+vi ~/.config/clash/*
+eixt
+exit
+exit
+nix-env -i gnvim
+alias m
+alias m='LC_ALL="en_US.UTF-8" mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com -- tmux attach'
+alias m='LC_ALL="en_US.UTF-8" mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com -- tmux attach
+LC_ALL="en_US.UTF-8" ssh -t -p 29932 pengyu@pengyuzhou.com
+clear
+m
+exit
+setproxy
+. ~/.bashrc
+setproxy
+nix-env -i gnvim
+which gcc
+export CC_FOR_BUILD=gcc
+nix-env -i gnvim
+exit
+proxychains4 nix-env -i gnvim
+setrpxoxy
+setproxy
+nix-env -i gnvim
+exit
+nc -vvu 127.1 9006
+nc -vv 127.1 9006
+clear
+exit
+ps aux| grep vvlp
+make clean
+exit
+m
+tmux ls
+tat 5
+r
+clear
+clear
+htop
+tmux ls
+tat 0
+tat 0 5
+tat 5
+tmux ls
+tat runner
+clear
+tat runner
+m
+mt
+mt
+mt
+mt
+alias mt
+c
+tmux ls
+tat runner
+exit
+cp ~/.config/clash/old_config.yaml ~/
+cd
+mv old_config.yaml config.yaml 
+clear
 exit

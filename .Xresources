@@ -42,9 +42,9 @@
 
 *.font: xft:Iosevka Term:style=Regular:size=24,xft:Noto Color Emoji:style=Regular:size=24,xft:Noto Sans CJK SC:size=24,xft:PowerlineSymbols:style=Medium:size=24,xft:Ubuntu Mono:size=24,xft:Fira Mono for Powerline:style=Regular:size=24,xft:Monospace:size=24:antialias=true:hinting=true 
 
-*.boldFont: xft:Iosevka Term:style=Bold:size=24
-*.italicFont: xft:Iosevka Term:style=Italic:size=24
-*.boldItalicFont: xft:Iosevka Term:style=Bold Italic:size=24
+*.boldFont: xft:Iosevka Term SS06:style=Bold:size=24
+*.italicFont: xft:Iosevka Term SS06:style=Italic:size=24
+*.boldItalicFont: xft:Iosevka Term SS06:style=Bold Italic:size=24
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
