@@ -1,6 +1,12 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -clrtabs
+[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -regtabs 4
+[ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
+
+pgrep ssh-agent >/dev/null || (eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa)
+
 if [ -n "$BASH_VERSION" ]; then
 	test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 fi
@@ -16,10 +22,7 @@ export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
-__conda_folder=miniconda3
-if [ -d "$HOME/anaconda3" ]; then
-    __conda_folder=anaconda3
-fi
+PROXY_URL='http://127.0.0.1:7890'
 
 __conda_setup="$( $HOME/${__conda_folder}/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -110,5 +113,9 @@ pgrep nix-daemon >/dev/null || ( which launchctl >/dev/null && sudo launchctl lo
 #
 ### }
 
-[ x$FISH = x1 ] && fish
 PROXY_URL='http://127.0.0.1:7890'
+alias clash='clash -f ~/.config/clash/config.yaml'
+alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
+[ -z $(pgrep clash) ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
+
+[ x$FISH = x1 -o -f $HOME/.enable_fish ] && fish
