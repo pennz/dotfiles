@@ -35,6 +35,8 @@ SETUVAR _fish_abbr_setproxy:set\x20\x2dgx\x20HTTP_PROXY\x20http\x3a//127\x2e0\x2
 SETUVAR _fish_abbr_ss:eval\x20\x28ssh\x2dagent\x20\x2ds\x20\x7c\x20sed\x20\x22s/\x5c\x28\x5b\x5e\x3d\x5d\x2a\x5c\x29\x3d\x5c\x28\x5b\x5e\x3b\x5d\x2a\x5c\x29/set\x20\x5c1\x20\x5c2/\x22\x29\x20\x26\x26\x20ssh\x2dadd\x20\x7e/\x2essh/id_rsa
 SETUVAR _fish_abbr_t:tmux\x20attach\x20\x2dd
 SETUVAR _fish_abbr_tat:tmux\x20attach\x20\x2dd\x20\x2dt
+SETUVAR _fish_abbr_tlp:tmux\x20list\x2dpanes
+SETUVAR _fish_abbr_tlw:tmux\x20list\x2dwindows
 SETUVAR _fish_abbr_tmux:/home/v/\x2enix\x2dprofile/bin/tmux
 SETUVAR _fish_abbr_tt:nvim\x20\x7e/\x2etmux\x2econf
 SETUVAR _fish_abbr_unsetproxy:set\x20\x2dgx\x20http_proxy\x20\x20\x3b\x20set\x20\x2dgx\x20https_proxy\x20\x20\x3bset\x20\x2dgx\x20HTTP_PROXY\x20\x20\x3b\x20set\x20\x2dgx\x20HTTPS_PROXY\x09\x20
@@ -75,4 +77,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/usr/local/opt/openssl/bin\x1e/home/v/bin\x1e/home/v/\x2efzf/bin
+SETUVAR fish_user_paths:/usr/local/opt/openssl/bin\x1e/Users/v/bin\x1e/Users/v/\x2efzf/bin
