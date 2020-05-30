@@ -1,0 +1,17 @@
+partial modifier_keys
+
+
+xkb_symbols "caps_to_esc" {
+    key.type = "ONE_LEVEL";
+    key <CAPS> { [ Escape ] };
+};
+
+xkb_symbols "caps_to_f10" {
+    key.type = "ONE_LEVEL";
+    key <CAPS>  { [ F10 ] };
+};
+
+xkb_symbols "swap_l_shift_ctrl" {
+    replace key <LCTL>  { [ Shift_L ] };
+    replace key <LFSH> { [ Control_L ] };
+};
