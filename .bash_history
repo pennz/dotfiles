@@ -1,17 +1,3 @@
-fish
-exit
-. ~/.bashrc
-clear
-which tmux
-zsh
-. ~/.bashrc
-cd
-git status
-clear
-tig
-clear
-exit
-clear
 conda env list
 conda create pyt
 conda create -n pyt
@@ -496,5 +482,19 @@ exit
 cp ~/.config/clash/old_config.yaml ~/
 cd
 mv old_config.yaml config.yaml 
+clear
+exit
+docker ps
+docker exec -it serene_nash elinks
+clear
+cd ~/
+git status
+git status|head
+git diff .config/
+git status
+git diff .config/
+git diff 
+git commit -asm "Update history, plus font SS06"
+docker ps
 clear
 exit
