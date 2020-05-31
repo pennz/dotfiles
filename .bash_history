@@ -1,92 +1,3 @@
-git diff --cached .tmux.conf
-fg
-vi .tmux.conf
-clear
-ls
-stty -a
-exit
-vim ~/.tmux.conf
-clear
-tmux ls
-which tmux
-pkill tmux
-stty -a
-ls
-clear
-ls
-ls
-sss
-exit
-vi .tmux.conf
-exit
-exit
-exit
-exit
-exit
-exit
-tmux ls
-clear
-tmux ls
-exit
-tmux ls
-exit
-exit
-exit
-tat 5
-stty -a
-tmux ls
-exit
-tat 5
-tat rvsConnector
-tmxu ls
-tat rvsConnector
-pwd
-exit
-PORT=$(./reversShells/addNewNode.sh 2>/dev/null); echo $PORT 
-./reversShells/addNewNode.sh 2>/dev/null
-./reversShells/addNewNode.sh >/dev/null
-./reversShells/addNewNode.sh 2>/dev/null
-./reversShells/addNewNode.sh
-exit
-exit
-tat 5
-exit
-tmux ls
-tat 7
-tat 5
-tmux ls
-tat 5
-clear
-pkill mosh-server
-exit
-exit
-exit
-exit
-cd ~/works/kaggle_runner/
-ls
-clear
-tig
-v .
-ps aux| grep addNew
-kill 12958
-ps aux| grep addNew
-kill 12
-kill 12959
-fg
-reversShells/addNewNode.sh 
-kill %2
-fg
-cat serverNodes 
-echo "" > serverNodes 
-fg
-reversShells/addNewNode.sh 
-fg
-kill %2
-fg
-reversShells/addNewNode.sh 
-reversShells/addNewNode.sh 
-reversShells/addNewNode.sh 
-~/bin/upnp-ports 
 ip route
 clear
 . ~/.fzf.bash 
@@ -498,3 +409,178 @@ tig
 exit
 tmux ls
 exit
+bash ~/bin/xcb_change 
+exit
+exit
+tat 0
+sudo cp -r /mnt/old_root/overlay/etc/profile.d/nix.sh /etc/profile.d/
+sudo mkdir /mnt/old_root
+sudo mount /dev/nvme0n1p6 /mnt/old_root/
+cd ..
+ls
+sudo mount --bind /mnt/old_root/ /home/v
+cd
+ls
+clear
+cd ..
+sudo umount v
+sudo mount --bind /mnt/old_root/overlay/home/v /home/v
+cd
+ls
+clear
+. ~/.bashrc
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+firefox 
+bg
+clear
+nvim
+sudo cp -ar /mnt/old_root/overlay/nix/ /
+t
+. ~/.profile 
+ls
+clear
+nix-env
+. ~/.bashrc
+ls
+source /etc/profile.d/nix.sh 
+nix-env -q
+clear
+nvim
+locale
+nvim
+conda env list
+conda activate pyt
+fg
+nvim
+which python3
+git pull
+pwd
+cd
+ls
+pwd
+ls
+clear
+tig
+clear
+git status
+clear
+urxvt
+xrdb .Xresources
+urxvt
+which urxvt
+locale
+LC_ALL='en_US.UTF-8' urxvt
+bg
+clear
+terminology 
+sudo reboot
+sudo mount /dev/nvme0n1p6 /mnt/old_root/
+sudo mount --bind /mnt/old_root/overlay/home/v /home/v
+cd
+ls
+clear
+source ~/.bashrc
+clear
+tmux ls
+ip route
+exit
+exit
+tig
+bash bin/xcb_change 
+fg
+exit
+ip route
+tig
+exit
+pwd
+cd
+pwd
+clear
+ls
+clear
+pwd
+ls
+which nvim
+which nix-env
+clear
+. ~/.bashrc
+ls
+nix-env
+clear
+ls
+sudo ls
+sudo cp -ar /home/overlay/nix/ /
+df -h
+. ~/.bashrc
+which nix-env
+modprobe efivars
+exit
+ls
+clear
+ls
+who
+clear
+cd
+ls
+clear
+ls
+clear
+ls
+nix-env
+. ~/.bashrc
+vi ~/.bashrc 
+nvim ~/.shrc_customised
+source /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
+nix-env
+source /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
+cat /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
+which nix-env
+cat /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
+source ~/.nix-profile/etc/profile.d/autojump.sh 
+clear
+ls
+cd
+ls
+vim
+clear
+stty -a
+stty rows 32 columns 80
+vim
+stty rows 34 columns 110
+vim
+stty rows 34 columns 120
+vim
+clear
+stty rows 33 columns 115
+vim
+clear
+tmux ls
+source /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
+source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
+sudo /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
+sudo sh /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
+ps aux| grep nix
+source /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
+nix-env
+cat >> .shrc_customised
+clear
+nix-env -q
+docker ps
+clear
+df -h
+ls /home/
+clear
+ls
+clear
+mount
+pwd
+git pull
+ls -lh .shrc_customised
+cp .shrc_customised .shrc_c
+rm .shrc_customised
