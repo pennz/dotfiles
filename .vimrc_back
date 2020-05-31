@@ -538,9 +538,9 @@ noremap <Leader>gw :Gwrite<CR>
 "noremap <Leader>gc :copen \| wincmd p \| AsyncRun git -C %:p:h commit -sm<SPACE>
 noremap <Leader>c :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
 noremap <Leader>C :AsyncRun git -C %:p:h commit -sm<SPACE>
-noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && (git commit -sm "Good Game" \|\| true) && git push<CR>
+noremap <Leader>ggg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && (git commit -sm "Good Game" \|\| true) && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <silent> <Leader>gh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
+noremap <silent> <Leader>gg :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
 noremap <silent> <Leader>gl :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
