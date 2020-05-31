@@ -498,3 +498,185 @@ cd
 echo  Downloads/ttf-iosevka-term-ss06 > ~/notes.md
 nvim notes.md 
 exit
+clear
+ls
+nix-env
+clear
+nvim ~/.tmux.conf
+tmux source ~/.tmux.conf
+nix-env -qa ".*vim.*"
+clear
+ls
+nvim
+cd ~/Videos/
+mpv *.mp4
+mpv *.mp4 --no-video
+git pull
+which elinks
+pip install -e .
+clear
+make pccnct
+exit
+fg
+exit
+elinks
+exit
+mpv --no-video *.mp4 
+exit
+fg
+exit
+tat 1
+nix-env
+tmux ls
+cd
+stty -a
+stty rows 32 columns 80
+stty rows 34 columns 110
+stty rows 34 columns 120
+stty rows 33 columns 115
+source /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
+source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
+sudo /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
+sudo sh /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
+ps aux| grep nix
+source /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
+nix-env
+cat >> .shrc_customised
+nix-env -q
+docker ps
+df -h
+ls /home/
+mount
+pwd
+ls -lh .shrc_customised
+cp .shrc_customised .shrc_c
+rm .shrc_customised
+asdfasf
+git commit -asm "Update history"
+vi .gitconfig
+which vim
+vi ~/.gitconfig
+ln -s $HOME/.nix-profile/bin/nvim ~/bin/vim
+vim
+tig .
+git show
+git fetch
+git branch gd
+git reset --hard origin/good-day
+git merge gd
+vim .gitconfig
+git mergetool
+git commit
+git checkout gd
+git checkout good-day .gitconfig
+tig --all
+git commit -sm "gitconfig not change"
+tig
+tig .gitconfig
+git rebase good-day
+fish
+git status
+git push
+git pull
+clea
+ip route
+whch nvim
+which nvim
+ps aux | grep nix
+tmux ls
+export DISPLAY=:0.7
+urxvt
+which ncat
+sudo pacman -S ncat
+sudo pacman -S nmap
+ncat
+cd works/
+cd kaggle_runner/
+clear
+ls
+tmux new
+tmux new-session -d
+ss
+. ~/.bashrc
+ss
+tmux new-session -d
+export SHELL=/bin/bash
+tmux new-session -d
+clear
+ip route
+ping baidu.com
+git pull
+clear
+ip route
+htop
+clear
+make pccnct
+ip route
+nix-env
+cat ~/.shrc_c
+source ~/.shrc_c
+nix-env
+mosh
+source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
+nix-env
+source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
+nix-env
+cat >> ~/.shrc_c
+vi ~/.shrc_c
+nix-env -i mosh
+nix-env -q
+sudo pacman -S mosh
+m
+git pull
+vi Makefile 
+git add Makefile 
+git commit -sm "Fix makefile"
+make install_dep
+make install_template 
+.git_template/update.sh 
+.git_template/template/configure.sh 
+clear
+git status
+git commit 
+git status
+clear
+git rm .shrc_customised
+git commit -sm "Remove .shrc_customized, it shoule be a link file"
+diff .shrc_c .shrc_customised.macos 
+nvim .shrc_c .shrc_customised.macos 
+rm .shrc_c
+ln -s .shrc_customised.macos  .shrc_customised
+clear
+ls
+. ~/.profile 
+source ~/.bashrc
+nix-env
+clear
+ls
+git add .shrc_customised.macos 
+git diff
+git diff --cached
+echo $__conda_folder 
+fg
+nvim ~/.shrc_customised
+__conda_folder=$(basename $(ls $HOME/*conda/ | head -n 1))
+ls ~/*conda
+ls ~/\*conda
+find $HOME -name "*conda*" -t d --maxdepth 1
+find $HOME -name "*conda*" -type d --maxdepth=1
+find $HOME -name "*conda*" -type d --maxdepth 1
+find $HOME -name "*conda*" -type d --max-depth 1
+find $HOME -name "*conda*" -type d --maxdepth 1
+man find
+find $HOME -name "*conda*" -type d -maxdepth 1
+find $HOME -name "*conda*" -type d -maxdepth 1 | grep -v "\.conda"
+find -maxdepth 1 $HOME -name "*conda*" -type d  | grep -v "\.conda"
+find $HOME -maxdepth 1 -name "*conda*" -type d  | grep -v "\.conda"
+fg
+. ~/.bashrc
+echo $__conda_folder 
+conda activate pyt
+which python
+git status
+git status |less
+git rm --cached .shrc_customised
