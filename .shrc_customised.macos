@@ -14,7 +14,7 @@ fi
 alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
 
-alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim/init.vim'
+#alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim/init.vim'
 alias v='nvim -u ~/.config/nvim/init.vim'
 alias ccc="source $HOME/bin/ccc"
 
@@ -24,7 +24,8 @@ export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
 PROXY_URL='http://127.0.0.1:7890'
 
-__conda_setup="$( $HOME/${__conda_folder}/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
+__conda_folder=$(find $HOME -maxdepth 1 -name "*conda*" -type d  | grep -v "\.conda" | head -n 1)
+__conda_setup="$($HOME/${__conda_folder}/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -117,5 +118,6 @@ PROXY_URL='http://127.0.0.1:7890'
 alias clash='clash -f ~/.config/clash/config.yaml'
 alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
 [ -z $(pgrep clash) ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
-
+source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
 [ x$FISH = x1 -o -f $HOME/.enable_fish ] && fish
