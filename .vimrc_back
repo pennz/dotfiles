@@ -26,10 +26,10 @@ if !filereadable(vimplug_exists)
 endif
 
 let lite = 0
-let home_path = expand('~')
-if home_path =~ "pengyu"
-  let lite = 1
-endif
+"let home_path = expand('~')
+"if home_path =~ "pengyu"
+"  let lite = 1
+"endif
 
 nnoremap <SPACE> <Nop>
 "" Map leader to <SPACE>
@@ -1250,20 +1250,28 @@ func! BufSwitch()
   let currbufnr = 1
   let numexists = 0
   let firstmatchingbufnr = 0
+  let previous_buf_deleted = 1
+  let pn = bufnr("#")
+  let cnr = bufnr("%")
+
   while currbufnr <= bufcount
-    if(bufexists(currbufnr) && buflisted(bufname(currbufnr)))
+    if(bufexists(currbufnr) && bufloaded(currbufnr))
       "echo numexists . "/" . currbufnr . ": ". bufname(currbufnr)
       let bufdict[numexists] = currbufnr
       let numexists = numexists + 1
       call add(buflist, currbufnr)
+      if pn == currbufnr
+        let previous_buf_deleted = 0
+      endif
     endif
     let currbufnr = currbufnr + 1
+    "echo currbufnr
   endwhile
   if(numexists <= 1)
     CtrlP
   else
-    if bufnr("#") == bufnr()
-      if bufnr() == buflist[0]
+    if pn == cnr || previous_buf_deleted == 1
+      if cnr == buflist[0]
           bn
       else
           bp
@@ -1271,7 +1279,7 @@ func! BufSwitch()
     else
       if @# =~ "NERD" || @# == "" || @# =~ "__" || @# =~ "term"
         " if it is the fist buf
-        if bufnr() == buflist[0]
+        if cnr == buflist[0]
           echo "bn"
           bn
         else
@@ -1287,17 +1295,17 @@ func! BufSwitch()
 endfunc
 
 func! BufDelete()
-  let @" = bufnr()
+  let @" = bufnr("")
   call BufSwitch()
   if @# =~ "NERD" || @# == ""
     "echo "buffer not good, try close\" b" . @" . " EOL"
     bd "
   else
     echo "buffer not good, try close\" b" . @" . " EOL"
-    "let @" = bufnr("#")
+    "let @" = pn
     bd #
   endif
-  let @#=bufnr()
+  let @#=bufnr("")
 endfunc
 
 nnoremap <silent><Leader>m :make<CR>

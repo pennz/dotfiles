@@ -1,14 +1,23 @@
-#!/bin/bash -xe
+#!/bin/bash -x
 BRANCH=good-day
 RBRANCH=master
 
 cd $HOME
+RREPO_COPY=".dotfiles"
+if [ ! -d "$HOME/$RREPO_COPY" ]; then
+	git clone --mirror git@github.com:pennz/dotfiles.git $RREPO_COPY
+else
+	pushd $RREPO_COPY
+	git fetch origin
+	popd
+fi
+
 if [ -d "$HOME/$(basename $HOME)" ]; then
   pushd $(basename $HOME)
   git remote add local file://$HOME/ || true
   git fetch local
   git checkout $BRANCH
-  git merge local/$BRANCH --no-edit --no-gpg-sign
+  git reset --hard local/$BRANCH
 else
   git clone --single-branch --branch ${BRANCH} file://$HOME/
   pushd $(basename $HOME)
@@ -30,12 +39,16 @@ git filter-repo \
 --path works \
 --path bin/filter_public \
 --invert-paths
-git remote add public git@github.com:pennz/dotfiles.git || true
+git remote add public file://$HOME/$RREPO_COPY || true
 git fetch public
 git branch -D $RBRANCH 
 git checkout --track public/$RBRANCH
 git merge $BRANCH --no-edit --no-gpg-sign
-#git merge public/$RBRANCH
-#git push --set-upstream public $BRANCH:$RBRANCH
+if [ ! $? -eq 0 ]; then echo "Failed when merge with branch \"$BRANCH\". Please merge manually in subshell, exit when finished, it will continue."; PS1="Merge>" bash; fi
 git push
+
+pushd $HOME/$RREPO_COPY
+  git push origin
+popd
+
 popd
