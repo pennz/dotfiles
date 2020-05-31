@@ -1,91 +1,3 @@
-ip route
-clear
-. ~/.fzf.bash 
-zsh
-fish
-exit
-jobs
-fg
-jobs
-exit
-stty -a
-exit
-which proxychains4
-/usr/bin/proxychains4 
-/usr/bin/proxychains4 neomutt
-clear
-echo $PATH
-hash -r
-which proxychains4
-/home/v/.nix-profile/bin/proxychains4
-nix-env -e proxychains4
-nix-env --remove proxychains4
-sudo apt install i2p
-i2prouter
-i2prouter install
-dpkg-reconfigure i2p
-sudo dpkg-reconfigure i2p
-sudo systemctl start i2p
-sudo systemctl status i2p
-dmesg
-sudo systemctl status i2p
-ls -lh /var/lop/i2p
-ls -lh /var/log/i2p
-sudo systemctl status i2p
-sudo systemctl start i2p
-sudo systemctl status i2p
-ls -lh /var/log/i2p
-i2p
-i2prouter
-i2prouter console 
-ls /usr/bin/i2prouter
-ls -lh /usr/bin/i2prouter
-sudo i2prouter console 
-i2prouter console 
-ps aux|grep i2p
-sudo systemctl status i2p
-ls
-clear
-setproxy
-neomutt
-proxychains neomutt
-proxychains4 neomutt
-pstree -laps $$
-mosh
-clear
-kill 18781
-aaa=$(stty -g)
-stty $aaa
-stty size
-stty rows 1
-stty $aaa
-stty size
-stty "$aaa"
-stty size
-bbb=$(stty -g)
-aaa
-echo $aaa
-echo $bbb
-bbb=$(stty -a -g)
-stty size
-fg
-v Makefile 
-stty rows 24
-v Makefile 
-exit
-size=123 321
-size="123 321"
-size
-echo $size
-echo $size|cut -f1
-echo $size|cut -d" " -f1
-exit
-ls
-ls
-clear
-who
-who
-wfwefwe
 wfeawfeawf
 awefwefwefwef
 exit
@@ -584,3 +496,5 @@ git pull
 ls -lh .shrc_customised
 cp .shrc_customised .shrc_c
 rm .shrc_customised
+git commit -asm "Update history"
+git pull
