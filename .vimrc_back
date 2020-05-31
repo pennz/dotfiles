@@ -1328,6 +1328,7 @@ endif
 
 func! s:cclose_on_good()
     if g:asyncrun_status == 'success'
+        echo g:asyncrun_code
         cclose
     else
         echo "ERROR. Please check."
