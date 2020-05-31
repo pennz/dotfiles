@@ -56,6 +56,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
 if has('nvim')
+"Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 endif
 
@@ -435,16 +436,17 @@ autocmd FileType python let b:noNCM2=0
 autocmd FileType * let b:coc_enabled=0
 "autocmd FileType * CocDisable
 
-func! NCM2_enable()
-  if exists('b:noNCM2')
-    return
-  endif
-  call ncm2#enable_for_buffer()
-endfunc
-
-if !lite
-  autocmd BufEnter * call NCM2_enable()
-endif
+" always enable?
+"func! NCM2_enable()
+"  if exists('b:noNCM2')
+"    return
+"  endif
+"  call ncm2#enable_for_buffer()
+"endfunc
+"
+"if !lite
+"  autocmd BufEnter * call NCM2_enable()
+"endif
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
   autocmd!
@@ -1324,7 +1326,9 @@ if filereadable(expand("~/.rc.local"))
   source ~/.rc.local
 endif
 
-let g:asyncrun_open = 8
+let g:asyncrun_open = 6
+let g:asyncrun_save = 1
+autocmd User AsyncRunStop cclose
 
 " copy from pasky
 """" Core stuff
