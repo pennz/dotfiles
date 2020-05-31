@@ -1326,9 +1326,17 @@ if filereadable(expand("~/.rc.local"))
   source ~/.rc.local
 endif
 
+func! s:cclose_on_good()
+    if g:asyncrun_status == 'success'
+        cclose
+    else
+        echo "ERROR. Please check."
+    endif
+endfunc
+
 let g:asyncrun_open = 6
 let g:asyncrun_save = 1
-autocmd User AsyncRunStop cclose
+autocmd User AsyncRunStop call s:cclose_on_good()
 
 " copy from pasky
 """" Core stuff
