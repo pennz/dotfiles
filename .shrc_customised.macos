@@ -120,4 +120,4 @@ alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
 [ -z $(pgrep clash) ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
 source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
-[ x$FISH = x1 -o -f $HOME/.enable_fish ] && fish
+[ -z $NOFISH -a -f $HOME/.enable_fish ] && fish
