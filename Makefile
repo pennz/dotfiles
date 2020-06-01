@@ -12,4 +12,4 @@ vps:
 	git checkout $@
 	mv .zhhh .zsh_history
 test:
-	@echo "Pass"
+	source ~/.profile
