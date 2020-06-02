@@ -1649,3 +1649,4 @@ set complete+=kspell
 
 nnoremap <Leader>o :on<CR>
 hi Visual term=reverse cterm=reverse guibg=Grey
+colorscheme xcodedarkhc

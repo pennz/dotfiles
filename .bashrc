@@ -166,6 +166,11 @@ fi
 
 set -o vi
 
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="auto"
 # credit https://stackoverflow.com/questions/4133904/ps1-line-with-git-current-branch-and-colors
 function color_my_prompt() {
     local __user_and_host="\[\033[01;32m\]\u@\h"
@@ -183,8 +188,9 @@ export CALIBRE_USE_SYSTEM_THEME=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 
-setterm -clrtabs
-setterm -regtabs 4
+[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -clrtabs
+[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -regtabs 4
+
 [ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
 FILE=/etc/bashrc
 [ -f "$FILE" ] && source "$FILE"
@@ -196,14 +202,14 @@ shopt -s histappend
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-if [ -f "$HOME"/.shrc_customised ]; then
+if [ -L "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised
 fi
 
 TRY_CONDA=$(ls -d ~/*conda* | head -n 1)
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$("$TRY_CONDA/bin/conda" 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$("$TRY_CONDA/bin/conda" 'shell.bash' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
