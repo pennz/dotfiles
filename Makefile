@@ -20,4 +20,4 @@ vps:
 	chmod 644 .ssh/config
 	mv .zhhh .zsh_history
 test:
-	@echo "Pass"
+	source ~/.profile

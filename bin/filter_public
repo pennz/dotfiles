@@ -42,6 +42,7 @@ git filter-repo \
     --path .muttrc \
     --path .electrum \
     --path .pypirc \
+    --path .ssh \
     --path works \
     --path bin/filter_public \
     --invert-paths
