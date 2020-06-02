@@ -10,9 +10,10 @@ good-day:
 	mv .zhhh .zsh_history
 pull:
 	mv .zsh_history .zhhh
+	chmod 644 .ssh/config
 	git fetch
 	git checkout HEAD .zsh_history
-	git merge
+	git merge --no-edit
 	mv .zhhh .zsh_history
 vps:
 	mv .zsh_history .zhhh
@@ -20,4 +21,4 @@ vps:
 	chmod 644 .ssh/config
 	mv .zhhh .zsh_history
 test:
-	source ~/.profile
+	@echo "Pass"
