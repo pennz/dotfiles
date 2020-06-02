@@ -6,10 +6,12 @@ install_template:
 good-day:
 	mv .zsh_history .zhhh
 	git checkout $@
+	chmod 644 .ssh/config
 	mv .zhhh .zsh_history
 vps:
 	mv .zsh_history .zhhh
 	git checkout $@
+	chmod 644 .ssh/config
 	mv .zhhh .zsh_history
 test:
 	@echo "Pass"
