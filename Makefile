@@ -13,7 +13,7 @@ pull:
 	chmod 644 .ssh/config
 	git fetch
 	git checkout HEAD .zsh_history
-	git merge --no-edit
+	git merge --no-edit --no-gpg
 	mv .zhhh .zsh_history
 vps:
 	mv .zsh_history .zhhh
