@@ -8,6 +8,12 @@ good-day:
 	git checkout $@
 	chmod 644 .ssh/config
 	mv .zhhh .zsh_history
+pull:
+	mv .zsh_history .zhhh
+	git fetch
+	git checkout HEAD .zsh_history
+	git merge
+	mv .zhhh .zsh_history
 vps:
 	mv .zsh_history .zhhh
 	git checkout $@
