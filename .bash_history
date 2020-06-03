@@ -503,3 +503,5 @@ clear
 git pull
 git diff .ssh/config
 git checkout HEAD .ssh/config
+git commit -asm "history" && git pull
+chmod 644 .ssh/config
