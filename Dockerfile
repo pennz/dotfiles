@@ -18,6 +18,6 @@ RUN echo "unalias vim" >> .bash_aliases && bash -c "source .bashrc; fish"
 RUN ( curl -fLo /root/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
     nvim -u .vimrc_back "+call plug#begin()" +PlugInstall +checkhealth +qa ); \
     cd /root/.config/nvim/plugged/jedi-vim && git submodule update --init ;\
-    $(git config --path --get init.templatedir)/../update.sh
+    sh -c '$(git config --path --get init.templatedir)/../update.sh'
 
 ENTRYPOINT ["/usr/bin/vim"]
