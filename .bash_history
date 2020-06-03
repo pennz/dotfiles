@@ -1,507 +1,522 @@
-ls
-make pccnct
-ps aux | grep 50001
-pkill ncat
-ps aux | grep 50001
-make pccnct
-vi Makefile 
-make pccnct
-clear
-m
-m
-exit
-setproxy
-vi ~/bin/filter_public 
-clear
-ls
-vi ~/.git_template/hooks/post-commit 
-fg
-$(git config --path --get init.templatedir)/../update.sh
-git staus
-git diff
-git status
-cd
-git status
-git status | less
-$(git config --path --get init.templatedir)/../update.sh
-git status | less
-git commit -as
-clear
-ls
-clear
-ls
-clear
-rm -rf .git_template/
-git submodule add https://github.com/greg0ire/git_template ~/.git_template
-git add .gitmodules 
-git add .git_template
-git commit -s
-~/.git_template/update.sh 
-clear
-"$(git rev-parse --git-dir)/configure.sh"
-clear
-git status
-git status |less
-clear
-vim ~/.git/hooks/post-commit 
-tig
-vim ~/.gitmodules 
-git add .gitmodules 
-git commit -sm "gitmodules path to relative"
-clear
-sudo chown -R v:wheel /usr/local/Caskroom/xquartz/ 
-ls -lh /usr/local/Caskroom/
-sudo chown -R v:admin /usr/local/Caskroom/xquartz/ 
-vi ~/.Xdefaults 
-xrdb ~/.Xdefaults 
-clear
-exit
-nix-env -i gnvim
-vi ~/.config/clash/old_config.yaml 
-vi ~/.config/clash/*
-eixt
-exit
-exit
-nix-env -i gnvim
-alias m
-alias m='LC_ALL="en_US.UTF-8" mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com -- tmux attach'
-alias m='LC_ALL="en_US.UTF-8" mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com -- tmux attach
-LC_ALL="en_US.UTF-8" ssh -t -p 29932 pengyu@pengyuzhou.com
-clear
-m
-exit
-setproxy
-. ~/.bashrc
-setproxy
-nix-env -i gnvim
-which gcc
-export CC_FOR_BUILD=gcc
-nix-env -i gnvim
-exit
-proxychains4 nix-env -i gnvim
-setrpxoxy
-setproxy
-nix-env -i gnvim
-exit
-nc -vvu 127.1 9006
-nc -vv 127.1 9006
-clear
-exit
-ps aux| grep vvlp
-make clean
-exit
-m
-tmux ls
-tat 5
-r
-clear
-clear
-htop
-tmux ls
-tat 0
-tat 0 5
-tat 5
-tmux ls
-tat runner
-clear
-tat runner
-m
-mt
-mt
-mt
-mt
-alias mt
-c
-tmux ls
-tat runner
-exit
-cp ~/.config/clash/old_config.yaml ~/
-cd
-mv old_config.yaml config.yaml 
-clear
-exit
-docker ps
-docker exec -it serene_nash elinks
-clear
-cd ~/
-git status
-git status|head
-git diff .config/
-git status
-git diff .config/
-git diff 
-git commit -asm "Update history, plus font SS06"
-docker ps
-clear
-exit
-fish
-clear
-ls
-fish
-cd
-echo  Downloads/ttf-iosevka-term-ss06 > ~/notes.md
-nvim notes.md 
-exit
-clear
-ls
-nix-env
-clear
-nvim ~/.tmux.conf
-tmux source ~/.tmux.conf
-nix-env -qa ".*vim.*"
-clear
-ls
-nvim
-cd ~/Videos/
-mpv *.mp4
-mpv *.mp4 --no-video
-git pull
-which elinks
-pip install -e .
-clear
-make pccnct
-exit
-fg
-exit
-elinks
-exit
-mpv --no-video *.mp4 
-exit
-fg
-exit
-tat 1
-nix-env
-tmux ls
-cd
-stty -a
-stty rows 32 columns 80
-stty rows 34 columns 110
-stty rows 34 columns 120
-stty rows 33 columns 115
-source /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
-source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
-sudo /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
-sudo sh /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
-ps aux| grep nix
-source /nix/var/nix/profiles/default/etc/profile.d/nix.sh 
-nix-env
-cat >> .shrc_customised
-nix-env -q
-docker ps
-df -h
-ls /home/
-mount
-pwd
-ls -lh .shrc_customised
-cp .shrc_customised .shrc_c
-rm .shrc_customised
-asdfasf
-git commit -asm "Update history"
-vi .gitconfig
-which vim
-vi ~/.gitconfig
-ln -s $HOME/.nix-profile/bin/nvim ~/bin/vim
-vim
-tig .
-git show
+vo config
+vi config
 git fetch
-git branch gd
-git reset --hard origin/good-day
-git merge gd
-vim .gitconfig
-git mergetool
-git commit
-git checkout gd
-git checkout good-day .gitconfig
-tig --all
-git commit -sm "gitconfig not change"
-tig
-tig .gitconfig
-git rebase good-day
-fish
-git status
+git fetch --prune
+git push origin
+git tag -d refs/pull/*/head
+git tag -d refs/pull/1/head
+git tag -d refs/origin/pull/1/head
+git tag
+tree refs/tags/
+tree -a refs/tags/
+git update-ref -d refs/pull/1/head
+git update-ref -d refs/pull/2/head
+git push origin
+fg
+vi ~/bin/filter_public
+nvim ~/bin/filter_public
+sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n fetch = +refs\/heads\/*:refs\/heads\/*/' config
+cat config
+fg
+git update-ref -d refs/pull/1/head
+git update-ref -d refs/pull/2/head
+git update-ref -d refs/pull/3/head
+git update-ref -d refs/pull/4/head
+git update-ref -d refs/pull/5/head
 git push
-git pull
-clea
-ip route
-whch nvim
-which nvim
-ps aux | grep nix
-tmux ls
-export DISPLAY=:0.7
-urxvt
-which ncat
-sudo pacman -S ncat
-sudo pacman -S nmap
-ncat
-cd works/
-cd kaggle_runner/
+fg
+git status
+cd ..
+git status
+tig
 clear
 ls
-tmux new
-tmux new-session -d
 ss
+clear
+git push
+tig
+clear
+tig --all
+~/bin/filter_public 
+git pull
+cd v
+git pull
+git push
+tig --all
+git remote
+git remote show origin
+tig --all
+tig --all
+cd ..
+~/bin/filter_public 
+fg
+clear
+tat 5
+clear
+sudo reboot
+exit
+fish
+ssh -t -p 29932 pengyu@pengyuzhou.com
+fish
+sh
+clear
+cd works/
+ls
+clear
+cd ../snd/
+ls
+clear
+ls
+cd snd_hda_macbookpro/
+ls
+./build/
+urvxt
+clear
+ip route
+clear
+ls
+fish
+clear
+tmux ls
+clear
+exit
+vi .r/intercept-384/main.py 
+exit
+exit
+sudo ./install.cirrus.driver.sh 
+tmux
+tmux ls
+mt
+exit
+ls /usr/lib/modules/5.6.11-1-MANJARO/build
+ls
+vi install.cirrus.driver.sh 
+sudo bash -x install.cirrus.driver.sh 
+cd /usr/lib/modules/5.6.11-1-MANJARO/build
+cd ../
+cd kernel/sound/pci/hda/
+ls
+c -
+c ~/snd/snd_hda_macbookpro/build/
+ls
+cd hda-5.6.11/
+ls
+make
+vi Makefile
+make
+fg
+make
+vi Makefile
+ls
+cd ../..
+ls
+cat README.md 
+sudo pacman -S wget make gcc linux-headers
+ls
+sudo sh install.cirrus.driver.sh 
+sudo -i
+ls
+cd build/hda-5.6.11/
+ls
+vi Makefile
+cat Makefile
+sudo make
+ls -lh /lib64
+cd /usr/lib64/modules/5.6.11-1-MANJARO/
+ls
+make -C build/ M=/home/v/snd/snd_hda_macbookpro/build/hda-5.6.11 modules
+cd build/
+ls
+cd ..
+ls
+cd ..
+ls
+cd extramodules-5.6-MANJARO/
+ls
+cd ../
+cd 5.6.12-1-MANJARO/
+ls
+uname -a
+cd build/
+ls
+make M=/home/v/snd/snd_hda_macbookpro/build/hda-5.6.11 modules
+sudo make M=/home/v/snd/snd_hda_macbookpro/build/hda-5.6.11 modules
+popd
+cd ~/snd/
+sl
+cd
+cd snd/snd_hda_macbookpro/
+ls
+cd build/hda-5.6.11/
+ls
+cat Makefile
+sudo make install
+lsmod| grep snd
+clear
+sudo vi /boot/grub/grub.cfg 
+sudo nvim /boot/grub/grub.cfg 
+clear
+bash ~/bin/xcb_change 
+vi ~/.tmux.conf
+tmux source ~/.tmux.conf
+ssh -t -p 29932 pengyu@pengyuzhou.com
+tat 5
+urxvt
+terminology 
+stty raw -echo && ncat -vlp 9070
+ls
+epwd
+pwd
+ip route
+nc -kvlp 9070
+stty sane
+clear
+stty raw -echo && ncat -vklp 9070
+fish
+sudo reboot
+cd macbook12-bluetooth-driver/
+clear
+ls
+ls build/
+uname  -a
+sh ./install.bluetooth.sh 
+exit
+sudo sh ./install.bluetooth.sh 
+lsmod | gre phci
+lsmod | grep phci
+lsmod | grep hci
+sudo vi /boot/grub/grub.cfg 
+clear
+sudo reboot
+uname -a
+cd macbook12-bluetooth-driver/
+ls
+cd build/bluetooth-5.6.12/
+ls
+cat Makefile
+sudo mv /lib/modules/5.6.12-1-MANJARO/updates/hci_uart.ko ~/
+sudo depmod -a
+cd ~
+ls ~/snd/snd_hda_macbookpro/build/hda-5.6.11/snd-hda-codec-cirrus.ko 
+cat ~/snd/snd_hda_macbookpro/build/hda-5.6.11/Makefile
+sudo ls -lh /liby4
+sudo ls -lh /lib64
+ls /lib64/modules/$(shell uname -r)/updates
+sh -c 'ls /lib64/modules/$(shell uname -r)/updates'
+sudo -i
+clear
+ls
+clear
+ls -lh .X*
+clear
+ps aux| grep X
+sudo kill 597
+sudo -i
+cd mpv
+nix-env
+clear
+tmux
+pkill tmux
+ss
+cd ~/Videos/
+ls
+clar
 . ~/.bashrc
+mpv *.mp4
+tmux
+terminology 
+pkill tmux
 ss
-tmux new-session -d
-export SHELL=/bin/bash
-tmux new-session -d
+cd ~/macbook12-spi-driver/
+ls
+sudo make
+sudo make install
+cat Makefile 
+lsmod| grep apple
+clear
+sudo reboot
+df -h
+clear
+docker ps
+sudo pacman -S docer
+sudo pacman -S docker
+docker ps
+sudo systemctl start docker.service 
+docker ps
+sudo docker ps
+which elinks
+elinks --version
+elinks
+tmux ls
+clear
+which tmux
+exit
+bash ~/bin/xcb_change 
+clear
+make check
+which python
+conda activate pyt
+. ~/.bashrc
+conda activate pyt
+nvim Makefile 
+qhich git
+which git
 clear
 ip route
 ping baidu.com
-git pull
 clear
 ip route
+jobs
+fg
+pip install pythonx
+pip install jedi
+fg
+xclip
+c ~/.config/nvim/plugged/jedi-vim/
+git submodule update --init --recursive
+fg
+pwd
+fg
+clear
+p
+vi multilang_bert_data.sh 
+fg
+cd
+git pull
+exit
+make clean
+exit
+stty raw -echo && ncat -vklp 9070
+tmux 
+exit
+tmux
+tmux ls
+stty size
+make clean
+exit
+make clean
+clear
+exit
 htop
 clear
-make pccnct
+exit
+htop
+bluetooth 
+bluetoothctl
+sudo pacman -S bluetoothctl
+sudo pacman -S bluetooth
+sudo -i
+clear
+blueman-adapters 
+blueman-services 
+blueman-assistant 
+eixt
+fg
+exit
+ssh -t -p 29932 pengyu@pengyuzhou.com
+terminology 
+nixGLIntel falkon
+bg
+clear
+fish
+fish
+fish
+elinks
+tmux ls
+which tmux
+df -h
+docker ps
+sudo docker run hello
+firefix &
+sudo docker run 
+firefox &
+clear
+sudo docker run https://hub.docker.com/r/ravikumarjg/elinks 
+sudo docker pull ravikumarjg/elinks 
+sudo docker image ls
+sudo docker run -n el -it ravikumarjg/elinks elinks
+sudo docker run -name el -it ravikumarjg/elinks elinks
+sudo docker run --name el -it ravikumarjg/elinks elinks
+sudo docker run  -v $HOME/.elinks:/root/.elinks --name elinks -it ravikumarjg/elinks elinks
+fish
+clear
+systemctl status bluetooth
+bluetooth -h
+bluetooth --help
+clear
+exit
+bluetooth --help
+exit
+ping 219.158.33.173
+sudo pacman -S traceroute
+traceroute 219.158.33.173
+clear
 ip route
-nix-env
-cat ~/.shrc_c
-source ~/.shrc_c
-nix-env
-mosh
-source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
-nix-env
-source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh 
-nix-env
-cat >> ~/.shrc_c
-vi ~/.shrc_c
-nix-env -i mosh
-nix-env -q
-sudo pacman -S mosh
-m
-git pull
-vi Makefile 
-git add Makefile 
-git commit -sm "Fix makefile"
-make install_dep
-make install_template 
-.git_template/update.sh 
-.git_template/template/configure.sh 
-clear
-git status
-git commit 
-git status
-clear
-git rm .shrc_customised
-git commit -sm "Remove .shrc_customized, it shoule be a link file"
-diff .shrc_c .shrc_customised.macos 
-nvim .shrc_c .shrc_customised.macos 
-rm .shrc_c
-ln -s .shrc_customised.macos  .shrc_customised
-clear
-ls
+. ~/.basrc
 . ~/.profile 
-source ~/.bashrc
-nix-env
-clear
-ls
-git add .shrc_customised.macos 
-git diff
-git diff --cached
-echo $__conda_folder 
-fg
-nvim ~/.shrc_customised
-__conda_folder=$(basename $(ls $HOME/*conda/ | head -n 1))
-ls ~/*conda
-ls ~/\*conda
-find $HOME -name "*conda*" -t d --maxdepth 1
-find $HOME -name "*conda*" -type d --maxdepth=1
-find $HOME -name "*conda*" -type d --maxdepth 1
-find $HOME -name "*conda*" -type d --max-depth 1
-find $HOME -name "*conda*" -type d --maxdepth 1
-man find
-find $HOME -name "*conda*" -type d -maxdepth 1
-find $HOME -name "*conda*" -type d -maxdepth 1 | grep -v "\.conda"
-find -maxdepth 1 $HOME -name "*conda*" -type d  | grep -v "\.conda"
-find $HOME -maxdepth 1 -name "*conda*" -type d  | grep -v "\.conda"
-fg
 . ~/.bashrc
-echo $__conda_folder 
-conda activate pyt
-which python
-git status
-git status |less
-git rm --cached .shrc_customised
-tmux
-cd /mnt/d/workspace/
-cd
+watch -n 10 nmap -p 443 google.com
+watch -n 10 nmap -p 23455 vtool.duckdns.org
+sudo pacman -S iperf
+clear
+iperf -h
+iperf -s
+iperf -s -p 50002
+man iperf
+fg
+iperf -s -u -p 50002
+exit
+ping 34.80.115.119
+make clean
+clear
+exit
+make clean
+make clean
+exit
+clear
+exit
+htop
+exit
+neomutt 
+exit
+ps aux | grep ncat
+kill 149403
+htop
+eixt
+fg
+exit
+htop
+exit
+neomutt 
+exit
+nvim ~/Dockerfile 
+clear
+cd ~/v
 ls
-pwd
-git status
+sudo systemctrl start docker.service
+sudo systemctl start docker.service
+sudo docker build .
+sudo -i
+df -h
+cd ~/v/
+vi Dockerfile 
+nvim Dockerfile 
+sudo docker run -it ide bash
+exit
+sudo docker run  -v $HOME/.elinks:/root/.elinks --name elinks -it ravikumarjg/elinks elinks
+fish
+cd ~/Videos/
+cleardd
+stty sane
+ls
 clear
-pwd
-ti
-tig
-clear
-which vim
-vim
-/usr/bin/vim
-which nvim
-clear
-which mosh
-fzf
-cd DDFs
-cd
-fzf -C
-fzf -h
-fzf -h |less
-fzf
-clear
-which fzf
-zsh
-mt
-bash
+nixGLIntel mpv *.mp4
+fg
+exit
+firefox
+bg
+pacman -Ss font Iosevka
+pacman -Ss font 
+pacman -Ss Iosevka
+cd works/
+git clone https://aur.archlinux.org/ttf-iosevka-term.git
+cd ttf-iosevka-term/
+less PKGBUILD 
 ms
-cd
 . ~/.bashrc
 ms
+vi ~/.bash_aliases 
+exit
+exit
+makepkg -si
+sudo gparted
+df -h
+exit
+exit
+stty raw -echo && ncat -vlp 9103
+fish
+bash ~/bin/xcb_change 
+df -h
+sudo parted /dev/nvme0n1 -s p
+lsblk 
+lsblk  -l
+ls -l /dev/disk/by-uuid/
+cat /etc/fstab 
+man lsblk
+lsblk  -lf
 s
-mt
-ms
+conda activate pyt
+fish
+tmux
+nixGLIntel falkon
+df -h
+stty raw -echo && ncat -vlp 9111
+exitmake  clean
+make clean
+sudo  reboot
+df -h
+fsck.ext4 
+sudo fsck.ext4  /dev/nvme01p7
+sudo fsck.ext4  /dev/nvme0n1p7
+clear
+cd works/kaggle_runner/
+ss
+ss
+sudo gparted
+bg
+cd ..
+cd ../..
+ls
+du -sh v
+exit
+exit
+exit
+exit
+tmux
 bash
-cd
+bash -x ~/bin/xcb_change 
+cd ..
+clear
+make pccnct
+s
+nvim bert/extract_features.py kaggle_runner/kernels/bert.py 
+fish
+sudo fsck.ext4  /dev/nvme0n1p7
+cd works/kaggle_runner/
+ss
+make m
+stty sane
+clear
+ps aux | grep mosh
+ps aux | grep make
+stty raw -echo && ncat -vlp 9111
+exit
+exit
+exit
+tmux
+ps aux | grep make
+pkill "mosh-server"
+pkill -f "setup_mosh_server"
+ps aux | grep mosh
+. ~/.bashrc
+clear
+ip route
 git pull
+git add ~/Dockerfile
+git commit -sm "Updated dockerfile"
+clear
+git merge
+clear
+git push
 vi ~/.ssh/config 
-man ssh
-git staus
-git status
-git add .ssh//config 
-git commit -sm "ssh config github use proxy" --no-gpg
-git push
-chmod 644 .ssh/config
-git push
-git pull
-cat .git/config 
-vim ~/.ssh/config 
-git add .ssh/config
-git commit -sm "ssh config gitlab use proxy too"
-git push
-git pull
-git pull
-vi ~/.ssh/config
-git pull
-git pull
-git pull
-ping gitlab.com
-clear
-exit~
-xit
-exit
-git status
-git diff --cached
-git diff
-git checkout EPH-2386-build_ph00_sw012_apps 
-git checkout --force EPH-2386-build_ph00_sw012_apps 
-git diff
-clear
-git status
-ls -lh beip30/1500-build/LB/scripts/System_Specification.py
-git checkout HEAD beip30/1500-build/LB/scripts/System_Specification.py
-ls -lh beip30/1500-build/LB/scripts/System_Specification.py
-rm beip30/1500-build/LB/scripts/System_Specification.py
-sudo rm beip30/1500-build/LB/scripts/System_Specification.py
-ls -lh beip30/1500-build/LB/scripts/System_Specification.py
-git checkout HEAD beip30/1500-build/LB/scripts/System_Specification.py
-sudo rm beip30/1500-build/LB/scripts/System_Specification.py
-explorer.exe beip30/1500-build/LB/scripts/
-explorer.exe .
-git checkout HEAD beip30/1500-build/LB/scripts/System_Specification.py
-tig in_rule
-tig in_rule
-clear
-git status
-git diff
-git commit -asm "Removed suspended status"
-git status
-tig _in_rule_tttech
-clear
-ls
-ls
-clear
-git staus
-tig
-clear
-ls
-ls
-grep "status" -nr .
-grep "status" -nr *csv
-grep "status" -nr exalate.log 
-grep "status.*reviewing" -nr exalate.log 
-grep "status.*Reviewing" -nr exalate.log 
-grep "status.*name.*Reviewing" -nr exalate.log 
-grep "status.*name.*Reviewing.*307" -nr exalate.log 
-grep "status.*name.*Reviewing.*320" -nr exalate.log 
-grep "status.*name.*Reviewing.*328" -nr exalate.log 
-grep "status.*name.*Reviewing" -nr exalate.log 
-grep "status.*name\":\"Reviewing" -nr exalate.log 
-grep "454.*status.*name\":\"Reviewing" -nr exalate.log 
-grep "TNDSK-454.*status.*name\":\"Reviewing" -nr exalate.log 
-grep "TNDSK-467.*status.*name\":\"Reviewing" -nr exalate.log 
-grep "TNDSK-467" -nr exalate.log 
-grep "TNDSK-454" -nr exalate.log 
-grep "TNDSK-454" -nr *csv
-grep "TNDSK-445" -nr *csv
-grep "TNDSK-458" -nr *csv
-grep "TNDSK-458" -nr *csv exalate.log 
-vi support_4.7.9-j7_7.12.3_AO_08F1AF_REPLICA_20200528-171044.csv 
-grep "TTT-258" -nr *csv
-fg
-exit
-clear
-git status
-tig
-clear
-ls
-nvim beip30/1500-build/LB/scripts/System_Specification.py
-clear
-tig
-git rebase -i 1d0264988e93137a
-vi ~/.gitconfig 
-git rebase -i 1d0264988e93137a
-git rebase --continue
-git mergetool
-git commit --allow-empty
-git rebase --continue
-git rebase --abort
-vi ~/.gitconfig 
-nvim ~/.gitconfig 
-git rebase -i 1d0264988e93137a
-git mergetool
-git rebase --continue
-git mergetool
-git rebase --continue
-git mergetool
-git rebase --continue
-git mergetool
-git rebase --continue
-tig
-clear
-tig
-clear
-tig
-git push
-git push --force
-tig
 clear
 git push
-clear
-git pull
-clear
-ip route
-clear
-tig
-git lg2
+ss
+git add .ssh/id_rsa
+git rm --cached .ssh/id_rsa 
+git add .ssh/config 
+nvim ~/bin/filter_public 
 clear
 git status
-sudo apt update
 clear
-ip route
-cd
-clear
-git pull
-git diff .ssh/config
-git checkout HEAD .ssh/config
 git commit -asm "history" && git pull
-chmod 644 .ssh/config
