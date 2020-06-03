@@ -1,359 +1,3 @@
-cd kaggle_runner/
-make install_dev_dep
-pip install -e .
-clear
-ls
-make pccnct
-fg
-jobs
-tmux 
-m
-export LC_ALL='en_US.UTF-8'
-locale-gen
-sudo locale-gen
-locale
-m
-tmux ls
-tat 3
-vi Makefile 
-tmux ls
-tat pengyu
-exit
-cd
-clear
-cd
-git pull
-tig
-vim ~/.bashrc
-ls ~/*conda
-pwd
-ls miniconda3/
-ls ~/*conda*
-ls -d ~/*conda*
-ls -d ~/*conda* | head -n 1
-fg
-. ~/.bashrc
-conda activate pyt
-fg
-cd
-tig
-exit
-exit
-clear
-tig
-cd
-tig
-exit
-mt
-clear
-exit
-exit
-clear
-source ~/bin/filter_public 
-tig --all
-git branch
-git checkout master
-git branch
-cd v
-git branch
-tig --all
-tig
-git push
-git merge good-day
-tig
-cd
-tig --all
-exit
-urxvt
-xrdb ~/.Xresources 
-clear
-echo $TERM
-exit
-urxvt
-clear
-xrdb ~/.Xresources 
-clear
-exit
-urxvtd
-xrdb  ~/.Xresources 
-clear
-who
-nix-env
-clea
-vim ~/.Xresources 
-xrdb ~/.Xresources 
-clear
-tmux ls
-vim .profile
-exit
-urxvt
-echo $DISPLAY
-dwm
-cat > .Xdefaults
-clear
-ip route
-tmux ls
-vi ~/.Xresources 
-clear
-clear
-tmux ls
-firefox
-clear
-echo $TERM
-nvim ~/.Xresources 
-exit
-fc-match 
-fc-match 
-clear
-ip route
-who
-xterm 
-font_cache 
-fc-list 
-clear
-exit
-xrdb ~/.Xdefaults 
-exit
-urxvt
-bg
-clear
-which gcc
-gcc -V
-gcc --version
-clear
-ip route
-gvim
-nix-env -qa ".*vim.*"
-font_cache 
-fc-list 
-xrdb ~/.Xdefaults 
-vim
-ip rotue
-export TERM=xterm
-clear
-ls
-fish
-fg
-exit
-m
-exit
-cd
-clear
-git reset --hard HEAD
-git status
-tig
-vim ~/bin/filter_public 
-git filter-repo
-git filter-repo -h
-fg
-cd v
-git remote show
-git remote
-git remote help
-git -v remote help
-git remote -v help
-ls .git/refs/remotes/local/
-ls .git/refs/remotes/local/
-ls
-clear
-ls
-ls
-fg
-git filter-repo
-git filter-repo -h
-fg
-cd ..
-cd .dotfiles/
-tig
-git pull
-tig
-fg
-cd ..
-rm -rf .dotfiles/
-bash -x bin/filter_public 
-cd .dotfiles/
-ls
-git status
-tig
-git pul
-git pull
-vi ~/bin/filter_public 
-cd ../v
-git remote remove publich
-git remote remove public
-git remote show
-clear
-ls
-cd ..
-bash -x ~/bin/fi
-bash -x ~/bin/filter_public 
-tig
-cd v
-tig --all
-git branch
-git remote -v
-git push
-git pull
-git branch
-tig --all
-git merge good-day
-tig
-tig origin/good-day
-tig local/good-day
-git merge local/good-day
-vi ~/bin/filter_public 
-git push
-cd .dotfiles/
-tig
-git branch -a
-git upsh
-git push
-git remote show
-git remote show public
-git remote show origin
-git remote show
-cd ../v
-cd ../v/
-pwd
-cd ../..
-cd ~/.dotfiles/
-ls
-tig
-git push
-git push master
-git push origin master
-git push origin 
-git push origin --help
-tig
-vi ~/bin/filter_public 
-git push
-clear
-tig
-tig --all
-ls
-cd refs/
-ls
-cat heads/master 
-ls
-cd ..
-ls
-tree
-ls
-grep "fetch =" -nr .
-vi ./config 
-git remote update
-git push orign
-git push origin
-ls
-cat packed-refs 
-vi packed-refs 
-git push
-git pull
-git push
-cd ..
-clear
-ls
-bash -x ~/bin/filter_public 
-fg
-clear
-bash -x ~/bin/filter_public 
-tig
-clear
-vi ~/.git/hooks/post-commit 
-ls -lh .git_template/hooks/
-ls -lh .git_template/hooks/
-vi .git_template/hooks/
-touch -p
-man touch
-mkdir -p "$HOME"/.git_template.local/hooks/post-commit
-mrdir "$HOME"/.git_template.local/hooks/post-commit
-rmdir  "$HOME"/.git_template.local/hooks/post-commit
-vi  "$HOME"/.git_template.local/hooks/post-commit
-chmod u+x  "$HOME"/.git_template.local/hooks/post-commit
-git commit
-git add bin/filter_public 
-git commit -sm "Bin: filter public"
-cp ~/bin/filter_public fp
-git reset HEAD^
-git add bin/filter_public 
-tig
-overcommit --help
-overcommit --uninstall
-vi .gitconfig
-git commit
-tig
-clear
-ls
-fg
-nvim .gitconfig
-clear
-ls
-ls .git_template.local/hooks/post-commit 
-ls -lh .git_template.local/hooks/post-commit 
- .git_template.local/hooks/post-commit
-tig
-cd ~/v/
-tig --all
-git checkout good-day
-tig
-git fetch
-git fetch local
-vi ~/bin/filter_public 
-bash -x ~/bin/filter_public 
-fg
-vi ~/bin/filter_public 
-fg
-clear
-git status
-bash -x ~/bin/filter_public 
-PS4="${LINENO} " bash -x ~/bin/filter_public 
-PS4='${LINENO} ' bash -x ~/bin/filter_public 
-bash -x ~/bin/filter_public 
-tig
-tig --all
-tig local/good-day
-bash -x ~/bin/filter_public 
-tig
-tig
-tig
-bash -x ~/bin/filter_public 
-tig --all
-bash -x ~/bin/filter_public 
-tig
-cd ..
-git diff
-git add bin/filter_public 
-git commit -sm "Bin: Filter public"
-fg
-tig
-git diff
-git status
-git status|less
-git add .git_template/hooks/post-commit
-git commit -sm "post-commit hooks test"
-~/bin/filter_public 
-cd v
-tig --all
-tig --all
-cd ..
-git clone https://github.com/greg0ire/git_template ~/.git_template
-rm -rf ~/.git_template
-git clone https://github.com/greg0ire/git_template ~/.git_template
-git config --global init.templatedir '~/.git_template/template'
-git diff .gitconfig
-cd works/
-fish
-exit
-nix-env -i gnvim
-clear
-mt
-tmux ls
-m
-mt
-mt
-fg
-clear
-clear
 ls
 make pccnct
 ps aux | grep 50001
@@ -680,3 +324,182 @@ which python
 git status
 git status |less
 git rm --cached .shrc_customised
+tmux
+cd /mnt/d/workspace/
+cd
+ls
+pwd
+git status
+clear
+pwd
+ti
+tig
+clear
+which vim
+vim
+/usr/bin/vim
+which nvim
+clear
+which mosh
+fzf
+cd DDFs
+cd
+fzf -C
+fzf -h
+fzf -h |less
+fzf
+clear
+which fzf
+zsh
+mt
+bash
+ms
+cd
+. ~/.bashrc
+ms
+s
+mt
+ms
+bash
+cd
+git pull
+vi ~/.ssh/config 
+man ssh
+git staus
+git status
+git add .ssh//config 
+git commit -sm "ssh config github use proxy" --no-gpg
+git push
+chmod 644 .ssh/config
+git push
+git pull
+cat .git/config 
+vim ~/.ssh/config 
+git add .ssh/config
+git commit -sm "ssh config gitlab use proxy too"
+git push
+git pull
+git pull
+vi ~/.ssh/config
+git pull
+git pull
+git pull
+ping gitlab.com
+clear
+exit~
+xit
+exit
+git status
+git diff --cached
+git diff
+git checkout EPH-2386-build_ph00_sw012_apps 
+git checkout --force EPH-2386-build_ph00_sw012_apps 
+git diff
+clear
+git status
+ls -lh beip30/1500-build/LB/scripts/System_Specification.py
+git checkout HEAD beip30/1500-build/LB/scripts/System_Specification.py
+ls -lh beip30/1500-build/LB/scripts/System_Specification.py
+rm beip30/1500-build/LB/scripts/System_Specification.py
+sudo rm beip30/1500-build/LB/scripts/System_Specification.py
+ls -lh beip30/1500-build/LB/scripts/System_Specification.py
+git checkout HEAD beip30/1500-build/LB/scripts/System_Specification.py
+sudo rm beip30/1500-build/LB/scripts/System_Specification.py
+explorer.exe beip30/1500-build/LB/scripts/
+explorer.exe .
+git checkout HEAD beip30/1500-build/LB/scripts/System_Specification.py
+tig in_rule
+tig in_rule
+clear
+git status
+git diff
+git commit -asm "Removed suspended status"
+git status
+tig _in_rule_tttech
+clear
+ls
+ls
+clear
+git staus
+tig
+clear
+ls
+ls
+grep "status" -nr .
+grep "status" -nr *csv
+grep "status" -nr exalate.log 
+grep "status.*reviewing" -nr exalate.log 
+grep "status.*Reviewing" -nr exalate.log 
+grep "status.*name.*Reviewing" -nr exalate.log 
+grep "status.*name.*Reviewing.*307" -nr exalate.log 
+grep "status.*name.*Reviewing.*320" -nr exalate.log 
+grep "status.*name.*Reviewing.*328" -nr exalate.log 
+grep "status.*name.*Reviewing" -nr exalate.log 
+grep "status.*name\":\"Reviewing" -nr exalate.log 
+grep "454.*status.*name\":\"Reviewing" -nr exalate.log 
+grep "TNDSK-454.*status.*name\":\"Reviewing" -nr exalate.log 
+grep "TNDSK-467.*status.*name\":\"Reviewing" -nr exalate.log 
+grep "TNDSK-467" -nr exalate.log 
+grep "TNDSK-454" -nr exalate.log 
+grep "TNDSK-454" -nr *csv
+grep "TNDSK-445" -nr *csv
+grep "TNDSK-458" -nr *csv
+grep "TNDSK-458" -nr *csv exalate.log 
+vi support_4.7.9-j7_7.12.3_AO_08F1AF_REPLICA_20200528-171044.csv 
+grep "TTT-258" -nr *csv
+fg
+exit
+clear
+git status
+tig
+clear
+ls
+nvim beip30/1500-build/LB/scripts/System_Specification.py
+clear
+tig
+git rebase -i 1d0264988e93137a
+vi ~/.gitconfig 
+git rebase -i 1d0264988e93137a
+git rebase --continue
+git mergetool
+git commit --allow-empty
+git rebase --continue
+git rebase --abort
+vi ~/.gitconfig 
+nvim ~/.gitconfig 
+git rebase -i 1d0264988e93137a
+git mergetool
+git rebase --continue
+git mergetool
+git rebase --continue
+git mergetool
+git rebase --continue
+git mergetool
+git rebase --continue
+tig
+clear
+tig
+clear
+tig
+git push
+git push --force
+tig
+clear
+git push
+clear
+git pull
+clear
+ip route
+clear
+tig
+git lg2
+clear
+git status
+sudo apt update
+clear
+ip route
+cd
+clear
+git pull
+git diff .ssh/config
+git checkout HEAD .ssh/config
