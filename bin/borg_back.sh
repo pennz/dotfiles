@@ -4,6 +4,8 @@
 test -d /Volumes/mac_files/borg && export BORG_REPO=/Volumes/mac_files/borg
 test -d /media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg &&
     export BORG_REPO=/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
+TRY=/run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
+test -d $TRY && export BORG_REPO=$TRY
 
 # Setting this, so you won't be asked for your repository passphrase:
 # or this to ask an external program to supply the passphrase:
@@ -26,6 +28,8 @@ test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 BORG="sudo borg"
 TRY=/home/v/miniconda3/bin/borg
 test -e $TRY && BORG="sudo $TRY"
+
+echo "borg used: $(which borg)"
 
 backup() {
     (
@@ -72,7 +76,7 @@ backup() {
             --exclude '/private/tmp/*' \
             --exclude '/tmp/*' \
             \
-            "$BORG_REPO"::'{hostname}-{now}' \
+            "$BORG_REPO""${HOSTNAME}-$(date | sed -e 's/ /_/g' -e 's/:/_/g')" \
             /etc \
             $SOURCE_HOME \
             /usr/local \
@@ -93,7 +97,7 @@ remove_old_backup() {
 
     $BORG prune \
         --list \
-        --prefix '{hostname}-' \
+        --prefix "${HOSTNAME}-" \
         --show-rc \
         --keep-daily 7 \
         --keep-weekly 4 \
