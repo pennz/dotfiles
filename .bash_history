@@ -1,5 +1,3 @@
-xrdb ~/.Xresources 
-clear
 exit
 urxvtd
 xrdb  ~/.Xresources 
@@ -499,3 +497,5 @@ exit
 exit
 exit
 . ~/.bashrc
+exit
+ exit
