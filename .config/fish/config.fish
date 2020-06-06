@@ -61,7 +61,7 @@
   abbr cc	'pushd -'
   abbr antlr4	'java org.antlr.v4.Tool'
   abbr grun	'java org.antlr.v4.gui.TestRig'
-  abbr vim	'nvim -u ~/.config/nvim_back/init.vim'
+  abbr vi	'nvim'
   abbr ss	'eval (ssh-agent -s | sed "s/\([^=]*\)=\([^;]*\)/set \1 \2/") && ssh-add ~/.ssh/id_rsa'
   abbr nv	'nix-env'
   abbr setproxy "set -gx HTTP_PROXY $PROXY_URL; set -gx HTTPS_PROXY $PROXY_URL; set -gx http_proxy $PROXY_URL; set -gx https_proxy	$PROXY_URL; echo $PROXY_URL"
