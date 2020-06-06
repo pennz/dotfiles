@@ -17,6 +17,7 @@ RUN git submodule update --init && .fzf/install --all; \
 RUN echo "unalias vim" >> .bash_aliases && bash -c "source .bashrc; fish"
 RUN ( curl -fLo /root/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
     nvim -u .vimrc_back "+call plug#begin()" +PlugInstall +checkhealth +qa ); \
-    $(git config --path --get init.templatedir)/../update.sh
+    cd /root/.config/nvim/plugged/jedi-vim && git submodule update --init ;\
+    sh -c '$(git config --path --get init.templatedir)/../update.sh'
 
 ENTRYPOINT ["/usr/bin/vim"]

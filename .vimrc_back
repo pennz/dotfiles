@@ -56,6 +56,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
 if has('nvim')
+"Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 endif
 
@@ -435,16 +436,17 @@ autocmd FileType python let b:noNCM2=0
 autocmd FileType * let b:coc_enabled=0
 "autocmd FileType * CocDisable
 
-func! NCM2_enable()
-  if exists('b:noNCM2')
-    return
-  endif
-  call ncm2#enable_for_buffer()
-endfunc
-
-if !lite
-  autocmd BufEnter * call NCM2_enable()
-endif
+" always enable?
+"func! NCM2_enable()
+"  if exists('b:noNCM2')
+"    return
+"  endif
+"  call ncm2#enable_for_buffer()
+"endfunc
+"
+"if !lite
+"  autocmd BufEnter * call NCM2_enable()
+"endif
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
   autocmd!
@@ -538,9 +540,9 @@ noremap <Leader>gw :Gwrite<CR>
 "noremap <Leader>gc :copen \| wincmd p \| AsyncRun git -C %:p:h commit -sm<SPACE>
 noremap <Leader>c :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
 noremap <Leader>C :AsyncRun git -C %:p:h commit -sm<SPACE>
-noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && (git commit -sm "Good Game" \|\| true) && git push<CR>
+noremap <Leader>ggg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && (git commit -sm "Good Game" \|\| true) && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <silent> <Leader>gh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
+noremap <silent> <Leader>gg :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
 noremap <silent> <Leader>gl :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
@@ -1324,7 +1326,18 @@ if filereadable(expand("~/.rc.local"))
   source ~/.rc.local
 endif
 
-let g:asyncrun_open = 8
+func! s:cclose_on_good()
+    if g:asyncrun_status == 'success'
+        echo g:asyncrun_code
+        cclose
+    else
+        echo "ERROR. Please check."
+    endif
+endfunc
+
+let g:asyncrun_open = 6
+let g:asyncrun_save = 1
+autocmd User AsyncRunStop call s:cclose_on_good()
 
 " copy from pasky
 """" Core stuff
@@ -1636,3 +1649,4 @@ set complete+=kspell
 
 nnoremap <Leader>o :on<CR>
 hi Visual term=reverse cterm=reverse guibg=Grey
+colorscheme xcodedarkhc
