@@ -1,76 +1,3 @@
-cd kaggle_runner/
-make install_dev_dep
-pip install -e .
-clear
-ls
-make pccnct
-fg
-jobs
-tmux 
-m
-export LC_ALL='en_US.UTF-8'
-locale-gen
-sudo locale-gen
-locale
-m
-tmux ls
-tat 3
-vi Makefile 
-tmux ls
-tat pengyu
-exit
-cd
-clear
-cd
-git pull
-tig
-vim ~/.bashrc
-ls ~/*conda
-pwd
-ls miniconda3/
-ls ~/*conda*
-ls -d ~/*conda*
-ls -d ~/*conda* | head -n 1
-fg
-. ~/.bashrc
-conda activate pyt
-fg
-cd
-tig
-exit
-exit
-clear
-tig
-cd
-tig
-exit
-mt
-clear
-exit
-exit
-clear
-source ~/bin/filter_public 
-tig --all
-git branch
-git checkout master
-git branch
-cd v
-git branch
-tig --all
-tig
-git push
-git merge good-day
-tig
-cd
-tig --all
-exit
-urxvt
-xrdb ~/.Xresources 
-clear
-echo $TERM
-exit
-urxvt
-clear
 xrdb ~/.Xresources 
 clear
 exit
@@ -498,3 +425,77 @@ cd
 echo  Downloads/ttf-iosevka-term-ss06 > ~/notes.md
 nvim notes.md 
 exit
+tmux
+m
+tmux ls
+tat 4
+ps aux| grep 23455
+clear
+ps aux| grep make
+ps aux| grep make
+ps aux| grep make
+ps aux| grep make
+ps aux| grep make
+clear
+make pc
+make pc
+bash -x ./pcc
+bash -x ./pcc
+cat serverNodes 
+fg
+bash -x reversShells/addNewNode.sh mosh
+bash -x reversShells/addNewNode.sh mosh
+fg
+bash -x reversShells/addNewNode.sh mosh
+ps aux | grep PS
+ps aux | grep 50001
+ps aux | grep 50001
+kill 72234
+ps aux | grep 50001
+kill 72271
+ps aux | grep 50001
+kill 722832
+kill 722832
+kill 72283
+ps aux | grep 50001
+ bash -xc cnt=$(pgrep -f "50001.*addNew" | wc -l); echo $cnt; if [ $cnt -lt 3 ]; then echo "start mosh connector"; /Users/v/.nix-profile/bin/unbuffer ncat -uklp 50001 -c "echo $(date): New Incoming >>mosh_log; bash -x reversShells/addNewNode.sh mosh"; fi'
+pgrep -f "50001.*addNew" | wc -l
+ bash -xc 'cnt=$(pgrep -f "50001.*addNew" | wc -l); echo $cnt; if [ $cnt -lt 3 ]; then echo "start mosh connector"; /Users/v/.nix-profile/bin/unbuffer ncat -uklp 50001 -c "echo $(date): New Incoming >>mosh_log; bash -x reversShells/addNewNode.sh mosh"; fi'
+fg
+clear
+make _pccnct
+make _pccnct
+make _pccnct
+make _pccnct
+/Users/v/.nix-profile/bin/unbuffer ncat -uklp 50001 -c 'echo Sat May 30 22:36:18 CST 2020: New Incoming >>mosh_log; bash -x reversShells/addNewNode.sh mosh'
+/Users/v/.nix-profile/bin/unbuffer ncat -uklp 50001 -c 'echo Sat May 30 22:36:18 CST 2020: New Incoming >>mosh_log; bash -x reversShells/addNewNode.sh mosh'
+make _pccnct
+ps aux | grep 50001
+tmux ls
+tat ssh-keygen -f "/home/pengyu/.ssh/known_hosts" -R "[vtool.duckdns.org]:29922"5
+tat 5
+clear
+tmux ls
+stty eho
+stty echo
+ls
+clear
+stty sane
+ls
+clear
+tmux ls
+htop
+ps aux | grep sync
+unsetproxy
+clear
+setproxy
+curl www.google.com
+clear
+ping google.com
+ping baidu.com
+traceroute google.com
+tmux
+exit
+exit
+exit
+. ~/.bashrc
