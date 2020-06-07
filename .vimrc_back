@@ -33,7 +33,7 @@ let lite = 0
 
 nnoremap <SPACE> <Nop>
 "" Map leader to <SPACE>
-let mapleader=' '
+let mapleader="\<SPACE>"
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
 
