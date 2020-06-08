@@ -61,6 +61,7 @@ Plug 'skywind3000/asyncrun.vim'
 endif
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Yggdroot/indentLine'
 
 if !lite
 "*****************************************************************************

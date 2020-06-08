@@ -1,712 +1,3 @@
-clear
-p
-vi multilang_bert_data.sh 
-fg
-cd
-git pull
-exit
-make clean
-exit
-stty raw -echo && ncat -vklp 9070
-tmux 
-exit
-tmux
-tmux ls
-stty size
-make clean
-exit
-make clean
-clear
-exit
-htop
-clear
-exit
-htop
-bluetooth 
-bluetoothctl
-sudo pacman -S bluetoothctl
-sudo pacman -S bluetooth
-sudo -i
-clear
-blueman-adapters 
-blueman-services 
-blueman-assistant 
-eixt
-fg
-exit
-ssh -t -p 29932 pengyu@pengyuzhou.com
-terminology 
-nixGLIntel falkon
-bg
-clear
-fish
-fish
-fish
-elinks
-tmux ls
-which tmux
-df -h
-docker ps
-sudo docker run hello
-firefix &
-sudo docker run 
-firefox &
-clear
-sudo docker run https://hub.docker.com/r/ravikumarjg/elinks 
-sudo docker pull ravikumarjg/elinks 
-sudo docker image ls
-sudo docker run -n el -it ravikumarjg/elinks elinks
-sudo docker run -name el -it ravikumarjg/elinks elinks
-sudo docker run --name el -it ravikumarjg/elinks elinks
-sudo docker run  -v $HOME/.elinks:/root/.elinks --name elinks -it ravikumarjg/elinks elinks
-fish
-clear
-systemctl status bluetooth
-bluetooth -h
-bluetooth --help
-clear
-exit
-bluetooth --help
-exit
-ping 219.158.33.173
-sudo pacman -S traceroute
-traceroute 219.158.33.173
-clear
-ip route
-. ~/.basrc
-. ~/.profile 
-. ~/.bashrc
-watch -n 10 nmap -p 443 google.com
-watch -n 10 nmap -p 23455 vtool.duckdns.org
-sudo pacman -S iperf
-clear
-iperf -h
-iperf -s
-iperf -s -p 50002
-man iperf
-fg
-iperf -s -u -p 50002
-exit
-ping 34.80.115.119
-make clean
-clear
-exit
-make clean
-make clean
-exit
-clear
-exit
-htop
-exit
-neomutt 
-exit
-ps aux | grep ncat
-kill 149403
-htop
-eixt
-fg
-exit
-htop
-exit
-neomutt 
-exit
-nvim ~/Dockerfile 
-clear
-cd ~/v
-ls
-sudo systemctrl start docker.service
-sudo systemctl start docker.service
-sudo docker build .
-sudo -i
-df -h
-cd ~/v/
-vi Dockerfile 
-nvim Dockerfile 
-sudo docker run -it ide bash
-exit
-sudo docker run  -v $HOME/.elinks:/root/.elinks --name elinks -it ravikumarjg/elinks elinks
-fish
-cd ~/Videos/
-cleardd
-stty sane
-ls
-clear
-nixGLIntel mpv *.mp4
-fg
-exit
-firefox
-bg
-pacman -Ss font Iosevka
-pacman -Ss font 
-pacman -Ss Iosevka
-cd works/
-git clone https://aur.archlinux.org/ttf-iosevka-term.git
-cd ttf-iosevka-term/
-less PKGBUILD 
-ms
-. ~/.bashrc
-ms
-vi ~/.bash_aliases 
-exit
-exit
-makepkg -si
-sudo gparted
-df -h
-exit
-exit
-stty raw -echo && ncat -vlp 9103
-fish
-bash ~/bin/xcb_change 
-df -h
-sudo parted /dev/nvme0n1 -s p
-lsblk 
-lsblk  -l
-ls -l /dev/disk/by-uuid/
-cat /etc/fstab 
-man lsblk
-lsblk  -lf
-s
-conda activate pyt
-fish
-tmux
-nixGLIntel falkon
-df -h
-stty raw -echo && ncat -vlp 9111
-exitmake  clean
-make clean
-sudo  reboot
-df -h
-fsck.ext4 
-sudo fsck.ext4  /dev/nvme01p7
-sudo fsck.ext4  /dev/nvme0n1p7
-clear
-cd works/kaggle_runner/
-ss
-ss
-sudo gparted
-bg
-cd ..
-cd ../..
-ls
-du -sh v
-exit
-exit
-exit
-exit
-tmux
-bash
-bash -x ~/bin/xcb_change 
-cd ..
-clear
-make pccnct
-s
-nvim bert/extract_features.py kaggle_runner/kernels/bert.py 
-fish
-sudo fsck.ext4  /dev/nvme0n1p7
-cd works/kaggle_runner/
-ss
-make m
-stty sane
-clear
-ps aux | grep mosh
-ps aux | grep make
-stty raw -echo && ncat -vlp 9111
-exit
-exit
-exit
-tmux
-ps aux | grep make
-pkill "mosh-server"
-pkill -f "setup_mosh_server"
-ps aux | grep mosh
-. ~/.bashrc
-clear
-ip route
-git pull
-git add ~/Dockerfile
-git commit -sm "Updated dockerfile"
-clear
-git merge
-clear
-git push
-vi ~/.ssh/config 
-clear
-git push
-ss
-git add .ssh/id_rsa
-git rm --cached .ssh/id_rsa 
-git add .ssh/config 
-nvim ~/bin/filter_public 
-clear
-git status
-clear
-git commit -asm "update"
-git push
-clear
-git pull
-bg
-stty rows 34 columns 110
-clear
-vim
-stty rows 54 columns 170
-vim
-clear
-stty rows 44 columns 150
-clear
-ip route
-r
-clear
-tmux ls
-terminology 
-tat 5
-tmux
-git pull
-bg
-stty rows 34 columns 110
-vim
-stty rows 54 columns 170
-vim
-stty rows 44 columns 150
-bash -x ~/bin/xcb_change 
-pwd
-vi ~/.tmux.conf
-tmux source ~/.tmux.conf
-bash ~/bin/xcb_change 
-who
-ip route
-ping baidu.com
-cd
-git status
-tig
-clear
-bash -x ~/bin/filter_public 
-ss
-vi ~/.ssh/config 
-git add .ssh/config
-git commit -sm "proxy username fixed"
-sudo reboot
-clear
-terminology &
-clear
-tmux ls
-clear
-git status
-ss
-clear
-vi ~/.gitconfig
-clear
-git status
-tmix
-tmux
-git status
-ss
-vi ~/.gitconfig
-git status
-tmix
-cd ~/.dotfiles/
-tig --all
-clera
-df -h
-ip route
-ls
-ls /home/
-clear
-firefox 
-ss
-vi ~/.gitconfig
-git status
-tmix
-ls
-clera
-cd ~
-cat mexit 
-mv mexit ~/bin
-clear
-ip route
-sudo reboot
-ls /home/v
-ls
-cat /etc/fstab 
-ls /home/
-sudo mv /home/home/v/ /home/
-clear
-cd
-ls
-clear
-df -h
-clear
-ip route
-ping baidu.com
-ip route
-df -h
-clear
-ip route
-docker ps
-clear
-ls
-clear
-cd /
-ls -lh 
-ls -lh /var/
-clear
-sudo snap list
-clear
-sudo ip route
-sudo ls
-clear
-ls
-clear
-ls
-lsblk
-sudo chroot /dev/nvme0n1p7
-sudo mount -B /dev/nvme0n1p7 /mnt/
-sudo mount -B /dev/nvme0n1p7 /mnt/
-sudo mkdir /mnt/root
-sudo mount -B /dev/nvme0n1p7 /mnt/root/
-clear
-ls
-sudo reboot
-clear
-tmux ls
-df -h
-cd Downloads/
-ls -t|head
-ls
-cd ../works/
-ls -t | head
-cd ttf-iosevka-term/
-clear
-ls
-makepkg -si
-clear
-ip route
-exit
-bash ~/bin/xcb_change 
-clear
-ip route
-clear
-ip route
-clear
-ip route
-clear
-. ~/.bashrc
-pwd
-clear
-exit
-clear
-ip route
-eexit
-exit
-clear
-sudo pacman -S openssh-server
-sudo pacman -S openssh
-sudo systemctl enable openssh
-sudo systemctl enable sshd
-sudo systemctl start sshd
-ps aux| grep ssh
-cd ~/works/kaggle_runner/
-clear
-git pull
-ss
-clear
-fish
-which fish
-. ~/.bashrc
-vi ~/.bashrc
-pushd ~
-git status|less
-git checkout HEAD .bashrc .profile
-. ~/.bashrc
-clear
-popd
-cd ~/Videos/
-clear
-~/bin/borg_back.sh 
-which borg
-borg --version
-pip list | grep borg
-cd ~/Downloads/borg/
-ls
-clear
-ls
-pip install -e .
-git pull
-which borg
-c
-~/bin/borg_back.sh 
-rm ~/.lastbackup 
-~/bin/borg_back.sh 
-rm ~/.lastbackup 
-vi ~/bin/borg_back.sh 
-which borg
-fg
-vi ~/bin/borg_back.sh 
-rm ~/.lastbackup 
-~/bin/borg_back.sh 
-vi ~/bin/borg_back.sh 
-date
-date 
-date | sed 's/ /_/g'
-nixGLIntel mpv *.mp4
-fg
-clear
-cd
-~/bin/borg_back.sh 
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-vim ~/bin/borg_back.sh 
-~/bin/borg_back.sh 
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-ls /run/media/
-clear
-date | sed 's/ /_/g'
-clear
-stty sane
-ls
-exit
-fg
-mount
-mount| grep dev
-ls /dev/disk/by-uuid/
-ls -l /dev/disk/by-uuid/
-lsblk 
-clear
-exit
-make pccnct
-exit
-fg
-clear
-lsusb
-exit
-nixGLIntel falkon
-clear
-make clean
-nixGLIntel mpv *.mp4
-tmux 
-sudo reboot
-s
-. ~/.bashrc
-s
-. ~/.bash_aliases 
-s
-fish
-ss
-clear
-git status
-git status|less
-clear
-exir
-exit
-clear
-cd works/kaggle_runner/
-make pccnct
-exit
-exit
-exit
-exit
-uname -a
-ip route
-ps aux| grep 2345
-fish
-stty raw -echo && ncat -vlp 23454
-tmux
-s
-groups
-sudo vi /etc/sudoers
-sudo vim /etc/sudoers
-ss
-git status
-filter_public 
-cd ~/.dotfiles/
-tig --all
-tig
-exit
-bash -x ~/bin/xcb_change 
-tmux
-tmux ls
-mac pccnct
-make pccnct
-vim Makefile 
-s
-vi ~/.git/hooks/pre-push 
-git push
-git diff
-tig
-git checkout -- .bashrc .bash_logout
-clear
-mt
-alias mt
-mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com
-s
-exit
-cd works/kaggle_runner/
-make rpdbs
-mt
-make clean
-ps aux| grep vlp
-kill 48576
-stty raw -echo && ncat -vlp 9122
-man split
-vi ~/.shrc_customised
-pgrep clash
-fg
-exit
-bash
-fg
-exit
-bash
-fg
-exit
-#
-[0
-clear
-stty sane
-s
-clear
-git pull
-ss
-~/bin/filter_public 
-cd v/
-git status
-tig
-vi .git/config 
-vi ../.dotfiles/config
-git push
-git pull
-git push --tags
-clear
-cd ..
-tmux ls
-tat 0
-exit
-clear
-clear
-stty raw -echo && while true; do ncat -vlp 9122; sleep 1; done
-mt
-pwd
-clear
-htop
-make clean
-stty raw -echo && ncat -vlp 9417
-stty sane
-stty raw -echo && ncat -vlp 9185
-clear
-ls
-exit
-stty raw -echo && ncat -vlp 9417
-exit
-ps aux| grep vlp
-tat 0
-clear
-hwo
-clear
-tig
-clear
-tmux ls
-cler
-stty raw -echo && ncat -vlp 9185
-fg
-fish
-stty raw -echo && ncat -vlp 9185
-stty raw -echo &&while true; do ncat -vlp 9185; sleep 1; echo "new"; done
-clear
-bash -x ~/bin/xcb_change 
-make pccnct
-cd ..
-clear
-cat .r/intercept-384/main.py 
-vi logs_check 
-clear
-exit
-pwd
-clear
-ip route
-tig
-git pull
-tig
-s
-vim kaggle_runner/datasets/jigsaw_toxic_data.py 
-stty raw -echo &&while true; do ncat -vlp 9185; sleep 1; echo "new"; done
-tmux
-bash -x bin/xcb_change 
-clear
-exi
-exit
-nvim
-clear
-ip route
-ping baidu.com
-cd bert/
-ss
-clear
-ip route
-git commit -asm "Test with less data"
-cd ..
-which python
-make push PHASE=data
-exit
-tig
-exit
-exit
-cd works/kaggle_runner/
-fg
-git commit -asm "Update debug and multilang"
-git push
-tig
-m
-cd bert/
-ls
-fg
-tig
-fg
-sed -i -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"{1,2}$//' $TI
-echo "awefaw\"\""| sed -i -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"{1,2}$//' 
-echo "awefaw\"\""| sed -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"{1,2}$//' 
-echo "awefaw\"\""| sed  's/"{1,2}$//' 
-echo "awefaw\"\""| sed  's/"\{1,2\}$//' 
-echo "awefaw\"\""| sed -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"\{1,2\}$//' 
-sudo vi /etc/ssh/sshd_config 
-sudo vim /etc/ssh/sshd_config 
-clear
-sudo systemctl restart sshd
-sudo systemctl restart ssh
-clear
-firefox 
-pkill firefox
-firefox -P
-firefox 
-clear
-firefox --no-remote --no-xshm
-bg
-clear
-tmux ls
-fg
-clear
-pkill firefox
-clear
-exit
-fg
-clear
-ls
-cd ..
-cd bert/
-sl
-ls
-tig
-git push
-cd ..
-mv bert/ bert_new
-git add submodule git@github.com:pennz/bert bert
-git  submodule add git@github.com:pennz/bert bert
 fg
 clear
 git status
@@ -1002,3 +293,208 @@ git status | less
 git diff
 clea
 clear
+git pull
+git commit -asm "history"
+git pull
+git add .bash_history
+git commit
+cx
+xxc
+c
+git pull
+git mergetool
+git commit
+exit
+cd .dotfiles/
+tig
+clear
+exit
+clear
+ls
+k1gaggle/toxic-bert-plain-vanila/
+fish
+exit
+clear
+sh
+git status
+c
+clear
+tig
+git push
+exit
+stty size
+pwd
+pwd
+/usr/local/cuda/bin/nvcc 
+stty raw -echo && while true; do ncat -vlp 9017; sleep 1; done
+kaggle dataset
+kaggle datasets
+kaggle datasets create --help
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+make clean
+clear
+make clean
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+bash -x python3 -c "from kaggle_runner.kernels.bert_torch import for_pytorch;from kaggle_runner.datasets.bert import pack_data; for_pytorch(pack_data());"
+python3 -c "from kaggle_runner.kernels.bert_torch import for_pytorch;from kaggle_runner.datasets.bert import pack_data; for_pytorch(pack_data());"
+python3 -c "from kaggle_runner.kernels.bert_torch import for_pytorch;from kaggle_runner.datasets.bert import pack_data; for_pytorch(pack_data());"
+pwd
+exit
+make clean
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+cd /Volumes/CaseSensitive/kaggle_runner/
+make mq
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+clear
+exit
+stty raw -echo && while true; do ncat -vlp 9017; sleep 1; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+pbcopy < ~/.kaggle/kaggle.json 
+make clean
+exit
+fish
+exit
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+cd /tmp/
+wget https://github.com/frainzy1477/luci-app-clash/releases/download/v1.7.1.1/luci-app-clash_1.7.1.1_all.ipk
+scp luci-app-clash_1.7.1.1_all.ipk root@192.168.1.1:/tmp
+exit
+bash -c "cat -"
+bash -c "cat -" </dev/tty
+bash -c "cat -" </dev/tty
+while true; do cat ; done
+while true; do cat ;echo "done" ; done
+docker ps
+ssh root@192.168.1.1
+exit
+clear
+htop
+tmux
+tmux ls
+tat 5
+fish
+stty raw -echo && while true; do ncat -vlp 9017; sleep 1; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+clear
+cd 
+fish
+exit
+bash
+. ~/.bashrc
+ps aux| grep clash
+clash
+exit
+exit
+exit
+exit
+. ~/.shrc_customised.macos 
+ps aux| grep clash
+clash
+ln -s .shrc_customised.macos .shrc_customised
+. ~/.bashrc
+color_my_prompt 
+ls
+clear
+git status
+clear
+scp ~/Downloads/clash root@192.168.1.1:/tmp/
+ssh root@192.168.1.1
+exit
+ssh root@192.168.1.1
+exit
+clear
+ls
+cd /tmp/
+wget https://github.com/frainzy1477/luci-app-clash/releases/download/v1.7.1.1/luci-app-clash_1.7.1.1_all.ipk
+cd ~/.config/clash/
+ls
+ls -lh Country.mmdb 
+scp Country.mmdb root@192.168.1.1:/tmp/
+scp V2club「蓝岸」.yaml root@192.168.1.1:/tmp/
+exit
+clear
+pbcopy < ~/.config/clash/config.yaml 
+fish
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+make mq
+exit
+pbcopy < ~/.config/clash/config.yaml 
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+docker ps
+docker image ls
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+tat 1
+tmux detach
+fish
+exit
+pwd
+tail -f logs_check 
+tail mq_log 
+tail mosh_log 
+tail mosh_log 
+fg
+exit
+cat <<'EOF' "shonenkov/open-subtitles-toxic-pseudo-labeling", "shonenkov/jigsaw-public-baseline-train-data", "shonenkov/jigsaw-public-baseline-results" EOF
+m
+
+ls
+'
+
+fg
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+pbcopy < ~/.kaggle/kaggle.json 
+stty size
+kaggle competition
+kaggle competitions
+kaggle competitions download -h
+exit
+sed -i 's/F10/`/' ~/.tmux.conf
+head ~/.tmux.conf
+git checkout HEAD ~/.tmux.conf
+cd 
+git checkout HEAD ~/.tmux.conf
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+which true; do make data_download ; sleep 10; done
+while true; do make data_download ; sleep 10; done
+clear
+kaggle
+kaggle datasets
+kaggle datasets download
+kaggle datasets download -h
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+ping pengyuzhou.com
+exit
+tmux ls
+tat rvsConnector
+tat 1
+tmux ls
+tat 0
+python
+exit
