@@ -1,210 +1,3 @@
-vo config
-vi config
-git fetch
-git fetch --prune
-git push origin
-git tag -d refs/pull/*/head
-git tag -d refs/pull/1/head
-git tag -d refs/origin/pull/1/head
-git tag
-tree refs/tags/
-tree -a refs/tags/
-git update-ref -d refs/pull/1/head
-git update-ref -d refs/pull/2/head
-git push origin
-fg
-vi ~/bin/filter_public
-nvim ~/bin/filter_public
-sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n fetch = +refs\/heads\/*:refs\/heads\/*/' config
-cat config
-fg
-git update-ref -d refs/pull/1/head
-git update-ref -d refs/pull/2/head
-git update-ref -d refs/pull/3/head
-git update-ref -d refs/pull/4/head
-git update-ref -d refs/pull/5/head
-git push
-fg
-git status
-cd ..
-git status
-tig
-clear
-ls
-ss
-clear
-git push
-tig
-clear
-tig --all
-~/bin/filter_public 
-git pull
-cd v
-git pull
-git push
-tig --all
-git remote
-git remote show origin
-tig --all
-tig --all
-cd ..
-~/bin/filter_public 
-fg
-clear
-tat 5
-clear
-sudo reboot
-exit
-fish
-ssh -t -p 29932 pengyu@pengyuzhou.com
-fish
-sh
-clear
-cd works/
-ls
-clear
-cd ../snd/
-ls
-clear
-ls
-cd snd_hda_macbookpro/
-ls
-./build/
-urvxt
-clear
-ip route
-clear
-ls
-fish
-clear
-tmux ls
-clear
-exit
-vi .r/intercept-384/main.py 
-exit
-exit
-sudo ./install.cirrus.driver.sh 
-tmux
-tmux ls
-mt
-exit
-ls /usr/lib/modules/5.6.11-1-MANJARO/build
-ls
-vi install.cirrus.driver.sh 
-sudo bash -x install.cirrus.driver.sh 
-cd /usr/lib/modules/5.6.11-1-MANJARO/build
-cd ../
-cd kernel/sound/pci/hda/
-ls
-c -
-c ~/snd/snd_hda_macbookpro/build/
-ls
-cd hda-5.6.11/
-ls
-make
-vi Makefile
-make
-fg
-make
-vi Makefile
-ls
-cd ../..
-ls
-cat README.md 
-sudo pacman -S wget make gcc linux-headers
-ls
-sudo sh install.cirrus.driver.sh 
-sudo -i
-ls
-cd build/hda-5.6.11/
-ls
-vi Makefile
-cat Makefile
-sudo make
-ls -lh /lib64
-cd /usr/lib64/modules/5.6.11-1-MANJARO/
-ls
-make -C build/ M=/home/v/snd/snd_hda_macbookpro/build/hda-5.6.11 modules
-cd build/
-ls
-cd ..
-ls
-cd ..
-ls
-cd extramodules-5.6-MANJARO/
-ls
-cd ../
-cd 5.6.12-1-MANJARO/
-ls
-uname -a
-cd build/
-ls
-make M=/home/v/snd/snd_hda_macbookpro/build/hda-5.6.11 modules
-sudo make M=/home/v/snd/snd_hda_macbookpro/build/hda-5.6.11 modules
-popd
-cd ~/snd/
-sl
-cd
-cd snd/snd_hda_macbookpro/
-ls
-cd build/hda-5.6.11/
-ls
-cat Makefile
-sudo make install
-lsmod| grep snd
-clear
-sudo vi /boot/grub/grub.cfg 
-sudo nvim /boot/grub/grub.cfg 
-clear
-bash ~/bin/xcb_change 
-vi ~/.tmux.conf
-tmux source ~/.tmux.conf
-ssh -t -p 29932 pengyu@pengyuzhou.com
-tat 5
-urxvt
-terminology 
-stty raw -echo && ncat -vlp 9070
-ls
-epwd
-pwd
-ip route
-nc -kvlp 9070
-stty sane
-clear
-stty raw -echo && ncat -vklp 9070
-fish
-sudo reboot
-cd macbook12-bluetooth-driver/
-clear
-ls
-ls build/
-uname  -a
-sh ./install.bluetooth.sh 
-exit
-sudo sh ./install.bluetooth.sh 
-lsmod | gre phci
-lsmod | grep phci
-lsmod | grep hci
-sudo vi /boot/grub/grub.cfg 
-clear
-sudo reboot
-uname -a
-cd macbook12-bluetooth-driver/
-ls
-cd build/bluetooth-5.6.12/
-ls
-cat Makefile
-sudo mv /lib/modules/5.6.12-1-MANJARO/updates/hci_uart.ko ~/
-sudo depmod -a
-cd ~
-ls ~/snd/snd_hda_macbookpro/build/hda-5.6.11/snd-hda-codec-cirrus.ko 
-cat ~/snd/snd_hda_macbookpro/build/hda-5.6.11/Makefile
-sudo ls -lh /liby4
-sudo ls -lh /lib64
-ls /lib64/modules/$(shell uname -r)/updates
-sh -c 'ls /lib64/modules/$(shell uname -r)/updates'
-sudo -i
-clear
 ls
 clear
 ls -lh .X*
@@ -520,3 +313,188 @@ clear
 git status
 clear
 git commit -asm "history" && git pull
+sh 
+tig
+clear
+pwd
+sudo apt upgrade
+clear
+tig
+tmux
+which bash
+sudo chsh --shell /bin/bash pengyu
+tmux ls
+nix-channel --update
+ls ~/.nix-profile/bin/nix-env 
+~/.nix-profile/bin/nix-env 
+~/.nix-profile/bin/nix-env  -q
+~/.nix-profile/bin/nix-env  -i neovim
+~/.nix-profile/bin/nix-env  -i nvim
+~/.nix-profile/bin/nix-env  -i vim
+clear
+git status
+git pull
+git diff
+chmod 644 ~/.ssh/config 
+git diff
+tig
+git pull
+clear
+ip route
+clear
+tat pengyu
+exit
+bash
+clear
+exit
+cd /mnt/d/workspace/
+ls
+cd ../PIE/
+clear
+ls
+cd BEIP_dev/
+ls
+git checkout  EPH-2386-build_ph00_sw012_apps
+git fetch
+git checkout  EPH-2386-build_ph00_sw012_apps
+git diff
+git stash
+git branch
+bash
+fish
+exit
+tmux ls
+tat 5
+exit
+clear
+cd
+clear
+. ~/.bashrc
+. ~/.fzf.bash 
+cd /mnt/e/
+cd /mnt/d/
+scp -P 29922 v@vtool.duckdns.org:~/works/kaggle_runner/.r/\*/main.ipynb .
+ssh-keygen -f "/home/pengyu/.ssh/known_hosts" -R "[vtool.duckdns.org]:29922"
+scp -P 29922 v@vtool.duckdns.org:~/works/kaggle_runner/.r/\*/main.ipynb .
+ssh-copy-id -p 29922 v@vtool.duckdns.org
+cat ~/.ssh/id_rsa.pub 
+scp -P 29922 v@vtool.duckdns.org:~/works/kaggle_runner/.r/\*/main.ipynb .
+clear
+scp -P 29922 v@vtool.duckdns.org:~/works/kaggle_runner/.r/\*/main.ipynb .
+vi 
+fg
+scp -P 29922 v@vtool.duckdns.org:~/works/kaggle_runner/.r/\*/main.ipynb .
+cd
+git pull
+clear
+ssh  -L 1443:192.168.1.1:443 -p 29922 v@vtool.duckdns.org
+exit
+exit
+clear
+tmux
+exit
+cd
+ssh -L 8080:192.168.1.1:80  -p 29922 v@vtool.duckdns.org
+ssh -L 18080:192.168.1.1:80  -p 29922 v@vtool.duckdns.org
+ssh -L 18080:192.168.1.1:80  -p 29922 v@vtool.duckdns.org
+m
+b
+bg
+s
+ping 192.168.1.5
+ping 192.168.1.50
+ping 192.168.1.70
+ping 192.168.1.70
+ssh root@192.168.1.0
+ssh root@192.168.1.70
+ssh root@192.168.1.70
+ssh root@192.168.1.70
+exit
+exit
+cd
+clear
+cd /mnt/d/workspace/
+ls
+clear
+nvim check_port
+cat - | xargs -I{} foldercvt  {}
+fg
+fg
+fg
+cat - | xargs -I{} foldercvt  '{}'
+fg
+cat check_port | xargs -I{} foldercvt '{}'
+foldercvt D:\PIE\bEIP_3.0_official_Release\iECU_EP21H_bEIP_3.0-P1.5-258\1100-os-tc29-microsar4
+foldercvt 'D:\PIE\bEIP_3.0_official_Release\iECU_EP21H_bEIP_3.0-P1.5-258\1100-os-tc29-microsar4'
+fg
+foldercvt 'D:\PIE\bEIP_3.0_official_Release\iECU_EP21H_bEIP_3.0-P1.5-258\1100-os-tc29-microsar4'
+cat check_port | xargs -I{} foldercvt '{}'
+fg
+cat check_port | xargs -I{} find {} -name "*.a"
+cat check_port | xargs -I{} find {} -name "*.a" 
+tmux
+cd /mnt/d/workspace/
+ar -t 
+which true; do bash get_o_list ; sleep 3; done
+while true; do bash get_o_list ; sleep 3; done
+bash get_o_list 
+chmod +x ./get_o_list 
+./get_o_list 
+ls /usr/bin/env
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+ls olist.pkl 
+ls -lh olist.pkl 
+./get_o_list 
+python
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+./get_o_list 
+cp get_o_list olist.pkl o_list data_modules/test_build/
+cd data_modules/test_build/
+ls
+clear
+ls
+./get_o_list 
+./get_o_list 
+pip install pandas
+cd ../../../PIE/
+clear
+ls
+cd BEIP_dev/
+ls
+cd beip30/1500-build/LB/
+ls
+tig pre_build.py
+tig
+tig --all
+ls
+tig vector_output_file_list
+exit
+cd /mnt/d/update/compare/
+md5sum CtCdTimeMonitor_PH00
+md5sum CtCdTimeMonitor_PH002 
+ssh root@192.168.1.70
+ssh -p 29922 v@vtool.duckdns.org
+cd /mnt/d/workspace/
+nvim get_o_list
+fg
+clear
+ssh  -p 29922 v@vtool.duckdns.org
+mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
+locale
+LC_ALL=en_US.UTF-8 mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
+exit
+zsh
