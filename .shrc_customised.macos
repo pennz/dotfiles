@@ -11,7 +11,7 @@ alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
 
 #alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim/init.vim'
-alias v='nvim -u ~/.config/nvim/init.vim'
+#alias v='nvim -u ~/.config/nvim/init.vim'
 alias ccc="source $HOME/bin/ccc"
 
 export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$GOPATH/bin:/usr/local/lib/ruby/gems/2.5.0/bin/:$PATH
