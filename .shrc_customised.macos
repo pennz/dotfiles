@@ -90,10 +90,11 @@ pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl l
 #
 ### }
 
-PROXY_URL='http://127.0.0.1:7890'
+PROXY_URL='http://127.0.0.1:28080'
 alias clash='clash -f ~/.config/clash/config.yaml'
 alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
 [ -z "$(pgrep clash)" ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
 source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
 [ -z $NOFISH ] && [ -f $HOME/.enable_fish ] && fish
+export SSH_PORT=29922
