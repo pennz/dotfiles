@@ -1,27 +1,23 @@
 {
-  "inbound": {
-    "port": 28080,
-    "listen": "127.0.0.1",
-    "protocol": "http",
-    "settings": {
-	    "timeout": 0
-    }
-  },
-  "outbound": {
-    "protocol": "vmess", // 出口协议
-    "settings": {
-      "vnext": [
-        {
-          "address": "pengyuzhou.com", // 服务器地址，请修改为你自己的服务器 ip 或域名
-          "port": 27990,  // 服务器端口
-          "users": [
-            {
-              "id": "a37cd4fd-6dfd-4ebe-a2ce-afe1b4cdaca5", "alterID": 64
-            }
-          ]
+    "inbound": {
+        "port": 28080,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "settings": {
+            "timeout": 0
         }
-      ]
     },
-    "streamSettings": { "network": "kcp" }
-  }
+    "outbound": {
+        "protocol": "vmess", // 出口协议
+        "settings": {
+            "vnext": [{
+                "address": "pengyuzhou.com", // 服务器地址，请修改为你自己的服务器 ip 或域名
+                "port": 27990, // 服务器端口
+                "users": [{
+                    "id": "a37cd4fd-6dfd-4ebe-a2ce-afe1b4cdaca5",
+                    "alterID": 64
+                }]
+            }]
+        } //, "streamSettings": { "network": "kcp" }
+    }
 }
