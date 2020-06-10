@@ -482,14 +482,32 @@ clear
 color_my_prompt 
 setproxy
 clear
-curl https://youtube.com
-curl -v https://youtube.com
-curl -v https://www.youtube.com
+htop
+fg
+jobs
+make check
+exit
+cd /mnt/d/update/compare/
+md5sum CtCdTimeMonitor_PH00
+md5sum CtCdTimeMonitor_PH002 
+ssh root@192.168.1.70
+ssh -p 29922 v@vtool.duckdns.org
+cd /mnt/d/workspace/
+nvim get_o_list
+fg
 clear
-git pull
-echo $TERM
-clear
-sudo vi /etc/v2ray/config.json
+ssh  -p 29922 v@vtool.duckdns.org
+mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
+locale
+LC_ALL=en_US.UTF-8 mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
+exit
+ls -lh ~/.ssh/authorized_keys 
+sudo -i
+cd
+git status
+git status | less
+git diff
+clea
 clear
 cd ~
 cp works/v2ray/config.json .config/v2ray_client.json 
