@@ -1,866 +1,3 @@
-clear
-p
-vi multilang_bert_data.sh 
-fg
-cd
-git pull
-exit
-make clean
-exit
-stty raw -echo && ncat -vklp 9070
-tmux 
-exit
-tmux
-tmux ls
-stty size
-make clean
-exit
-make clean
-clear
-exit
-htop
-clear
-exit
-htop
-bluetooth 
-bluetoothctl
-sudo pacman -S bluetoothctl
-sudo pacman -S bluetooth
-sudo -i
-clear
-blueman-adapters 
-blueman-services 
-blueman-assistant 
-eixt
-fg
-exit
-ssh -t -p 29932 pengyu@pengyuzhou.com
-terminology 
-nixGLIntel falkon
-bg
-clear
-fish
-fish
-fish
-elinks
-tmux ls
-which tmux
-df -h
-docker ps
-sudo docker run hello
-firefix &
-sudo docker run 
-firefox &
-clear
-sudo docker run https://hub.docker.com/r/ravikumarjg/elinks 
-sudo docker pull ravikumarjg/elinks 
-sudo docker image ls
-sudo docker run -n el -it ravikumarjg/elinks elinks
-sudo docker run -name el -it ravikumarjg/elinks elinks
-sudo docker run --name el -it ravikumarjg/elinks elinks
-sudo docker run  -v $HOME/.elinks:/root/.elinks --name elinks -it ravikumarjg/elinks elinks
-fish
-clear
-systemctl status bluetooth
-bluetooth -h
-bluetooth --help
-clear
-exit
-bluetooth --help
-exit
-ping 219.158.33.173
-sudo pacman -S traceroute
-traceroute 219.158.33.173
-clear
-ip route
-. ~/.basrc
-. ~/.profile 
-. ~/.bashrc
-watch -n 10 nmap -p 443 google.com
-watch -n 10 nmap -p 23455 vtool.duckdns.org
-sudo pacman -S iperf
-clear
-iperf -h
-iperf -s
-iperf -s -p 50002
-man iperf
-fg
-iperf -s -u -p 50002
-exit
-ping 34.80.115.119
-make clean
-clear
-exit
-make clean
-make clean
-exit
-clear
-exit
-htop
-exit
-neomutt 
-exit
-ps aux | grep ncat
-kill 149403
-htop
-eixt
-fg
-exit
-htop
-exit
-neomutt 
-exit
-nvim ~/Dockerfile 
-clear
-cd ~/v
-ls
-sudo systemctrl start docker.service
-sudo systemctl start docker.service
-sudo docker build .
-sudo -i
-df -h
-cd ~/v/
-vi Dockerfile 
-nvim Dockerfile 
-sudo docker run -it ide bash
-exit
-sudo docker run  -v $HOME/.elinks:/root/.elinks --name elinks -it ravikumarjg/elinks elinks
-fish
-cd ~/Videos/
-cleardd
-stty sane
-ls
-clear
-nixGLIntel mpv *.mp4
-fg
-exit
-firefox
-bg
-pacman -Ss font Iosevka
-pacman -Ss font 
-pacman -Ss Iosevka
-cd works/
-git clone https://aur.archlinux.org/ttf-iosevka-term.git
-cd ttf-iosevka-term/
-less PKGBUILD 
-ms
-. ~/.bashrc
-ms
-vi ~/.bash_aliases 
-exit
-exit
-makepkg -si
-sudo gparted
-df -h
-exit
-exit
-stty raw -echo && ncat -vlp 9103
-fish
-bash ~/bin/xcb_change 
-df -h
-sudo parted /dev/nvme0n1 -s p
-lsblk 
-lsblk  -l
-ls -l /dev/disk/by-uuid/
-cat /etc/fstab 
-man lsblk
-lsblk  -lf
-s
-conda activate pyt
-fish
-tmux
-nixGLIntel falkon
-df -h
-stty raw -echo && ncat -vlp 9111
-exitmake  clean
-make clean
-sudo  reboot
-df -h
-fsck.ext4 
-sudo fsck.ext4  /dev/nvme01p7
-sudo fsck.ext4  /dev/nvme0n1p7
-clear
-cd works/kaggle_runner/
-ss
-ss
-sudo gparted
-bg
-cd ..
-cd ../..
-ls
-du -sh v
-exit
-exit
-exit
-exit
-tmux
-bash
-bash -x ~/bin/xcb_change 
-cd ..
-clear
-make pccnct
-s
-nvim bert/extract_features.py kaggle_runner/kernels/bert.py 
-fish
-sudo fsck.ext4  /dev/nvme0n1p7
-cd works/kaggle_runner/
-ss
-make m
-stty sane
-clear
-ps aux | grep mosh
-ps aux | grep make
-stty raw -echo && ncat -vlp 9111
-exit
-exit
-exit
-tmux
-ps aux | grep make
-pkill "mosh-server"
-pkill -f "setup_mosh_server"
-ps aux | grep mosh
-. ~/.bashrc
-clear
-ip route
-git pull
-git add ~/Dockerfile
-git commit -sm "Updated dockerfile"
-clear
-git merge
-clear
-git push
-vi ~/.ssh/config 
-clear
-git push
-ss
-git add .ssh/id_rsa
-git rm --cached .ssh/id_rsa 
-git add .ssh/config 
-nvim ~/bin/filter_public 
-clear
-git status
-clear
-git commit -asm "update"
-git push
-clear
-git pull
-bg
-stty rows 34 columns 110
-clear
-vim
-stty rows 54 columns 170
-vim
-clear
-stty rows 44 columns 150
-clear
-ip route
-r
-clear
-tmux ls
-terminology 
-tat 5
-tmux
-git pull
-bg
-stty rows 34 columns 110
-vim
-stty rows 54 columns 170
-vim
-stty rows 44 columns 150
-bash -x ~/bin/xcb_change 
-pwd
-vi ~/.tmux.conf
-tmux source ~/.tmux.conf
-bash ~/bin/xcb_change 
-who
-ip route
-ping baidu.com
-cd
-git status
-tig
-clear
-bash -x ~/bin/filter_public 
-ss
-vi ~/.ssh/config 
-git add .ssh/config
-git commit -sm "proxy username fixed"
-sudo reboot
-clear
-terminology &
-clear
-tmux ls
-clear
-git status
-ss
-clear
-vi ~/.gitconfig
-clear
-git status
-tmix
-tmux
-git status
-ss
-vi ~/.gitconfig
-git status
-tmix
-cd ~/.dotfiles/
-tig --all
-clera
-df -h
-ip route
-ls
-ls /home/
-clear
-firefox 
-ss
-vi ~/.gitconfig
-git status
-tmix
-ls
-clera
-cd ~
-cat mexit 
-mv mexit ~/bin
-clear
-ip route
-sudo reboot
-ls /home/v
-ls
-cat /etc/fstab 
-ls /home/
-sudo mv /home/home/v/ /home/
-clear
-cd
-ls
-clear
-df -h
-clear
-ip route
-ping baidu.com
-ip route
-df -h
-clear
-ip route
-docker ps
-clear
-ls
-clear
-cd /
-ls -lh 
-ls -lh /var/
-clear
-sudo snap list
-clear
-sudo ip route
-sudo ls
-clear
-ls
-clear
-ls
-lsblk
-sudo chroot /dev/nvme0n1p7
-sudo mount -B /dev/nvme0n1p7 /mnt/
-sudo mount -B /dev/nvme0n1p7 /mnt/
-sudo mkdir /mnt/root
-sudo mount -B /dev/nvme0n1p7 /mnt/root/
-clear
-ls
-sudo reboot
-clear
-tmux ls
-df -h
-cd Downloads/
-ls -t|head
-ls
-cd ../works/
-ls -t | head
-cd ttf-iosevka-term/
-clear
-ls
-makepkg -si
-clear
-ip route
-exit
-bash ~/bin/xcb_change 
-clear
-ip route
-clear
-ip route
-clear
-ip route
-clear
-. ~/.bashrc
-pwd
-clear
-exit
-clear
-ip route
-eexit
-exit
-clear
-sudo pacman -S openssh-server
-sudo pacman -S openssh
-sudo systemctl enable openssh
-sudo systemctl enable sshd
-sudo systemctl start sshd
-ps aux| grep ssh
-cd ~/works/kaggle_runner/
-clear
-git pull
-ss
-clear
-fish
-which fish
-. ~/.bashrc
-vi ~/.bashrc
-pushd ~
-git status|less
-git checkout HEAD .bashrc .profile
-. ~/.bashrc
-clear
-popd
-cd ~/Videos/
-clear
-~/bin/borg_back.sh 
-which borg
-borg --version
-pip list | grep borg
-cd ~/Downloads/borg/
-ls
-clear
-ls
-pip install -e .
-git pull
-which borg
-c
-~/bin/borg_back.sh 
-rm ~/.lastbackup 
-~/bin/borg_back.sh 
-rm ~/.lastbackup 
-vi ~/bin/borg_back.sh 
-which borg
-fg
-vi ~/bin/borg_back.sh 
-rm ~/.lastbackup 
-~/bin/borg_back.sh 
-vi ~/bin/borg_back.sh 
-date
-date 
-date | sed 's/ /_/g'
-nixGLIntel mpv *.mp4
-fg
-clear
-cd
-~/bin/borg_back.sh 
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-vim ~/bin/borg_back.sh 
-~/bin/borg_back.sh 
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-ls /run/media/
-clear
-date | sed 's/ /_/g'
-clear
-stty sane
-ls
-exit
-fg
-mount
-mount| grep dev
-ls /dev/disk/by-uuid/
-ls -l /dev/disk/by-uuid/
-lsblk 
-clear
-exit
-make pccnct
-exit
-fg
-clear
-lsusb
-exit
-nixGLIntel falkon
-clear
-make clean
-nixGLIntel mpv *.mp4
-tmux 
-sudo reboot
-s
-. ~/.bashrc
-s
-. ~/.bash_aliases 
-s
-fish
-ss
-clear
-git status
-git status|less
-clear
-exir
-exit
-clear
-cd works/kaggle_runner/
-make pccnct
-exit
-exit
-exit
-exit
-uname -a
-ip route
-ps aux| grep 2345
-fish
-stty raw -echo && ncat -vlp 23454
-tmux
-s
-groups
-sudo vi /etc/sudoers
-sudo vim /etc/sudoers
-ss
-git status
-filter_public 
-cd ~/.dotfiles/
-tig --all
-tig
-exit
-bash -x ~/bin/xcb_change 
-tmux
-tmux ls
-mac pccnct
-make pccnct
-vim Makefile 
-s
-vi ~/.git/hooks/pre-push 
-git push
-git diff
-tig
-git checkout -- .bashrc .bash_logout
-clear
-mt
-alias mt
-mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com
-s
-exit
-cd works/kaggle_runner/
-make rpdbs
-mt
-make clean
-ps aux| grep vlp
-kill 48576
-stty raw -echo && ncat -vlp 9122
-man split
-vi ~/.shrc_customised
-pgrep clash
-fg
-exit
-bash
-fg
-exit
-bash
-fg
-exit
-#
-[0
-clear
-stty sane
-s
-clear
-git pull
-ss
-~/bin/filter_public 
-cd v/
-git status
-tig
-vi .git/config 
-vi ../.dotfiles/config
-git push
-git pull
-git push --tags
-clear
-cd ..
-tmux ls
-tat 0
-exit
-clear
-clear
-stty raw -echo && while true; do ncat -vlp 9122; sleep 1; done
-mt
-pwd
-clear
-htop
-make clean
-stty raw -echo && ncat -vlp 9417
-stty sane
-stty raw -echo && ncat -vlp 9185
-clear
-ls
-exit
-stty raw -echo && ncat -vlp 9417
-exit
-ps aux| grep vlp
-tat 0
-clear
-hwo
-clear
-tig
-clear
-tmux ls
-cler
-stty raw -echo && ncat -vlp 9185
-fg
-fish
-stty raw -echo && ncat -vlp 9185
-stty raw -echo &&while true; do ncat -vlp 9185; sleep 1; echo "new"; done
-clear
-bash -x ~/bin/xcb_change 
-make pccnct
-cd ..
-clear
-cat .r/intercept-384/main.py 
-vi logs_check 
-clear
-exit
-pwd
-clear
-ip route
-tig
-git pull
-tig
-s
-vim kaggle_runner/datasets/jigsaw_toxic_data.py 
-stty raw -echo &&while true; do ncat -vlp 9185; sleep 1; echo "new"; done
-tmux
-bash -x bin/xcb_change 
-clear
-exi
-exit
-nvim
-clear
-ip route
-ping baidu.com
-cd bert/
-ss
-clear
-ip route
-git commit -asm "Test with less data"
-cd ..
-which python
-make push PHASE=data
-exit
-tig
-exit
-exit
-cd works/kaggle_runner/
-fg
-git commit -asm "Update debug and multilang"
-git push
-tig
-m
-cd bert/
-ls
-fg
-tig
-fg
-sed -i -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"{1,2}$//' $TI
-echo "awefaw\"\""| sed -i -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"{1,2}$//' 
-echo "awefaw\"\""| sed -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"{1,2}$//' 
-echo "awefaw\"\""| sed  's/"{1,2}$//' 
-echo "awefaw\"\""| sed  's/"\{1,2\}$//' 
-echo "awefaw\"\""| sed -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"\{1,2\}$//' 
-sudo vi /etc/ssh/sshd_config 
-sudo vim /etc/ssh/sshd_config 
-clear
-sudo systemctl restart sshd
-sudo systemctl restart ssh
-clear
-firefox 
-pkill firefox
-firefox -P
-firefox 
-clear
-firefox --no-remote --no-xshm
-bg
-clear
-tmux ls
-fg
-clear
-pkill firefox
-clear
-exit
-fg
-clear
-ls
-cd ..
-cd bert/
-sl
-ls
-tig
-git push
-cd ..
-mv bert/ bert_new
-git add submodule git@github.com:pennz/bert bert
-git  submodule add git@github.com:pennz/bert bert
-fg
-clear
-git status
-git commit -sm  "Added bert as submodule"
-git push
-clear
-ls
-clear
-fg
-tig
-clear
-git status
-tig
-git pull
-clear
-tig
-nvim Makefile 
-git status
-ls bert_new/
-cd bert
-git status
-git push
-tig
-fg
-clear
-ls
-clear
-ls
-cat __init__.py 
-cd ..
-ls
-fg
-clear
-ls
-clear
-ls
-mv bert kaggle_runner/
-cd kaggle_runner
-ls
-clear
-ls
-mkdir hub
-mv bert/ hub
-cd ..
-git status
-git add kaggle_runner/hub/bert/
-git stats
-clear
-vim .gitmodules 
-git status
-tig
-git revert HEAD
-git stash
-git revert HEAD
-tig
-clear
-git status
-git submodule status
-clear
-git status
-vi .git/config 
-git status
-clear
-ls
-git status
-cle
-clear
-ls
-rm -rf kaggle_runner/hub/bert/
-git  submodule add git@github.com:pennz/bert kaggle_runner/hub/bert
-git status
-clear
-git status
-git commit -asm "submodule place udpate"
-git psuh
-eit
-exit
-git push
-git statu
-clear
-cd kaggle_runner
-ls
-cd hub/
-tig
-clear
-cd bert/
-tig
-clea
-clear
-ls
-cd ..
-ls
-touch __init__.py
-cat bert/__init__.py 
-cd ..
-clear
-fg
-git status
-git add kaggle_runner/hub/__init__.py 
-git commit -sm "hub as module"
-clear
-cd bert_new/
-tig
-cd ..
-rm -rf bert
-rm -rf bert_new/
-git status
-clear
-ls
-mv mykbd.xkm ~
-ls
-clear
-fg
-git status
-clear
-ip route
-fg
-clear
-ls
-fg
-clear
-fg
-clear
-cd kaggle_runner/hub/bert/
-ls
-git status
-git commit -asm "Try splic data preprocess"
-c -
-make p
-tig
-clear
-git status
-git commit -asm "Update dataset prepare code"
-git push
-clear
-git status
-tig
-clear
-ls
-make check
-which python
-clear
-ls
-conda activate pyt
-make check
-fg
-git status
-fg
-clear
-fg
-clear
-fg
-make push PHASE=data
-make pccnct
 exit
 exit
 exit
@@ -1004,4 +141,371 @@ git status
 git status | less
 git diff
 clea
+clear
+cd /mnt/d/
+cd PIE/
+git clone ssh://git@git.technomous.com.cn:7999/vdcu/peip_dev.git
+exit
+cd
+pwd
+git pull
+sh
+clear
+ls -lh .shrc_customised
+ln -s .shrc_customised.wsl .shrc_customised
+clear
+. ~/.bashrc
+tig
+ls
+clear
+git status
+cd
+git status
+tig
+git lg2
+clear
+tig
+tig --all
+ls
+tig
+clear
+git pull
+cd
+cd ~/v/
+cd ~/pengyu/
+ls
+git
+tig
+git mergetool
+cd ..
+rm -rf pengyu/ .dotfiles/
+clear
+exit
+bash -x ~/bin/filter_public 
+exit
+man ssh
+ssh -L 10003:localhost:10003 -p 29922 v@vtool.duckdns.org
+cd /mnt/d/
+clear
+ls
+cd PIE/peip_dev/
+ls
+clear
+tig --all
+tig
+tig --all
+git status
+git branch
+. ~/.bashrc
+git branch
+cd -
+git checkout integration/master
+git diff
+clear
+cd
+m
+mosh --ssh="ssh -p 29932" v@vtool.duckdns.org
+ping baidu.com
+ping vtool.duckdns.org
+mosh --ssh="ssh -p 29932" v@vtool.duckdns.org
+mosh --ssh="ssh -p 29922" v@vtool.duckdns.org
+ssh-keygen -f "/home/pengyu/.ssh/known_hosts" -R "[vtool.duckdns.org]:29922"
+mosh --ssh="ssh -p 29922" v@vtool.duckdns.org
+mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
+LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
+ssh -L 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
+tig
+qqqqqq
+exit
+autossh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
+ssh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
+vi /home/pengyu/.ssh/known_hosts +34
+ssh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
+ssh -p 29922 v@vtool.duckdns.org
+ssh -fNL 10001:localhost:10001 -p 29922 v@vtool.duckdns.org
+ssh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
+cd ~/works
+cd /mnt/d/workspace/
+ls
+cd kaggle_runner/
+git pull
+git mergetool
+git commit
+git status
+tig
+git revert 8baa5fa85aad7dd92028b49d73
+git mergetool
+git commit
+tig
+git status
+git push
+tig
+clear
+cp /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
+git status
+git diff
+git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
+git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
+git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
+git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
+git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline\(1\).ipynb  kaggle_runner/hub/
+git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline\(1\).ipynb  kaggle_runner/hub/shonenkov_training_pipeline.ipynb
+git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline\(1\).ipynb  kaggle_runner/hub/shonenkov_training_pipeline.ipynb
+cp /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline\(1\).ipynb  kaggle_runner/hub/shonenkov_training_pipeline.ipynb
+git diff
+git commit -sm "Update ipynb" --no-gpg
+git commit -sm "Update ipynb" --no-gpg -a
+git push
+ssh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.co
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com
+cd /mnt/d/workspace/
+clear
+ls
+clear
+cd ../PIE/
+ls
+cd BEIP_dev/
+ls
+git fetch
+clear
+git status
+c -
+c ~
+git pull
+p
+p
+ . ~/.bashrc
+clear
+c -
+git status
+git checkout integration/master 
+tig
+git reset HEAD^
+tig
+git pull
+git stash list
+git checkout HEAD  beip30/1500-build/LB/scripts/System_Specification.py
+git stash list
+git pull
+clear
+ls
+clear
+tig --all
+git merge origin/0605_BF 
+git rm beip30/1500-build/LB/scripts/*.pyc
+ rm beip30/1500-build/LB/scripts/*.pyc
+git merge origin/0605_BF 
+tig
+clear
+git status
+git rm beip30/1500-build/LB/scripts/*.pyc
+git commit -sm "Clean up beip30/1500-build/LB/scripts/*.pyc"
+tig
+clear
+tig
+cat ~/.gitconfig 
+vi ~/.gitconfig 
+tig
+git reflog
+git reset --hard  bd050376
+tig
+vi ~/.gitconfig 
+git merge origin/0605_BF 
+git rm beip30/1500-build/LB/scripts/*.pyc
+git commit -sm "Clean up beip30/1500-build/LB/scripts/*.pyc"
+tig
+ls
+clear
+tig
+cd beip30/
+ls
+cd 
+c -
+ls
+cd 1500-build/LB/
+s
+clear
+ls
+vi config.ini 
+clear
+cmd.exe .
+set PYTHONIOENCODING=UTF-8
+cmd.exe .
+git mergetool
+tig
+ls
+vim config.ini 
+nvim config.ini 
+rg Copy_debug
+cd ..
+rg Copy_debug
+cd /mnt/d/PIE/BEIP_dev/beip30
+. ~/.bashrc
+c -
+nvim build.py
+clear
+cd LB/
+ls
+clear
+ip route
+cd ../PIE/BEIP_dev/
+ls
+foldercvt 'D:\PIE\BEIP_dev\beip30\1700-configout\bsw\Rte_TTTech\src\Rte_CpApMiddlewareASIL_SH00.c'
+tig /mnt/d/PIE/BEIP_dev/beip30/1700-configout/bsw/Rte_TTTech/src/Rte_CpApMiddlewareASIL_SH00.c
+nvim /mnt/d/PIE/BEIP_dev/beip30/1700-configout/bsw/Rte_TTTech/src/Rte_CpApMiddlewareASIL_SH00.c
+fg
+foldercvt 'D:\PIE\BEIP_dev\beip30\1700-configout\bsw\Rte_TTTech\src\Rte_CpApMiddlewareASIL_SH00.c'
+fg
+sudo apt install clang-foramt
+sudo apt install clang-format
+setproxy
+vi ~/.shrc_customised
+unsetproxy
+sudo vi /etc/apt/apt.conf.d/02-proxy 
+sudo apt install clang-format
+fg
+tig
+fg
+foldercvt "D:\PIE\BEIP_dev\beip30\1500-build\LB\..\..\1700-configout\core\safetyhealth\memoryhandling\MemMap\SH00\MemMap.h"
+fg
+tig
+tig beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/
+fg
+git checkout  62d9681d  /mnt/d/PIE/BEIP_dev/beip30/1500-build/LB/../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00/MemMap.h
+git diff
+git diff --cached
+git checkout  62d9681d  /mnt/d/PIE/BEIP_dev/beip30/1500-build/LB/../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00/MemMap.h
+tig  62d9681d
+tig beip30/1700-configout/bsw/Rte_TTTech/
+tig beip30/1700-configout/bsw/Rte_TTTech/inc/Rte_Type.h
+tig
+tig beip30/1700-configout/bsw/Rte_TTTech/inc/Rte_Type.h
+tig beip30/1700-configout/rte/SH00/Rte_MemMap.h
+fg
+ls
+tig beip30/1700-configout/build/
+git status
+tig  beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00/Rte_MemMap.h
+rm  beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00/Rte_MemMap.h
+git status
+clear
+t
+clear
+ls
+ti
+tig
+qq:q
+git fetch
+tig --all
+qqqqqqqqqqq
+q
+q
+k
+exit
+cd /mnt/d/PIE/BEIP_dev/
+git fetch
+git show
+git show origin/0605_BF 
+git show origin/feature/update_258 
+git show origin/feature/update_258 
+git merge origin/feature/update_258
+git merge origin/feature/update_258 --no-gpg
+git show
+git reset --hard
+git reset --hard
+rm .git/index.lock 
+git reset --hard
+tig --all
+git fetch
+tig --all
+git merge origin/feature/update_258 
+git mergetool
+git commit
+tig
+clear
+tig
+cd beip30/1500-build/LB/
+python build.py -s Can
+cmd.exe .
+tig --all
+git status|head
+git push
+ git push --set-upstream origin integration/master_merge_update_258
+tig
+tig status
+exit
+ncat -v pengyuzhou.com 26990
+cd
+ncat -vv pengyuzhou.com 26990
+ncat -vv pengyuzhou.com 29932
+ncat -vv pengyuzhou.com 29931
+ncat -vv pengyuzhou.com 29932
+clear
+clear
+ip route
+clear
+ncat -vv pengyuzhou.com 26991
+ncat -vv pengyuzhou.com 26990
+ncat -vv pengyuzhou.com 26990
+exit
+ncat -vv pengyuzhou.com 27990
+exit
+m
+alias m
+m
+clear
+git pull
+git fetch
+git pull
+ls
+tig
+git pull
+ls
+tig
+git fetch
+clear
+tig --all
+git checkout 3492c571c8a35fd878a9ccc8724880 
+ls
+vi uploadcopy_and_prebuild.py 
+cmd.exe
+vi uploadcopy_and_prebuild.py 
+cmd.exe
+tig --all
+git checkout origin/origin/integration/master_merge_update_258 
+git add uploadcopy_and_prebuild.py 
+git diff --cached
+fg
+clear
+nvim uploadcopy_and_prebuild.py 
+git branch
+git checkout origin/origin/integration/master_merge_update_258 
+git branch
+git commit -sm "LB script: check the copy script"
+tig
+fg
+clear
+cmd.exe .
+git push
+git push orgin HEAD:origin/integration/master_merge_update_258
+git push origin HEAD:origin/integration/master_merge_update_258
+tig
+fg
+cd /mnt/d/PIE/BEIP_dev/
+git branch
+clear
+exit
+exit
+vi uploadcopy_and_prebuild.py 
+clear
+cd
+clea
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com
+ncat -vv pengyuzhou.com 19999
+d
+dddddddd
+ncat -vv pengyuzhou.com 19999
+ncat -vv pengyuzhou.com 19992
 clear
