@@ -1,119 +1,486 @@
 exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+ping pengyuzhou.com
 exit
+tmux ls
+tat rvsConnector
+tat 1
+tmux ls
+tat 0
+python
 exit
-exit
+git 
+git status
+git status | head
+cd
+git status | less
+git diff --cached
+git commit -asm 'vimrc: added indentLine plugbin"
+'
 exit
 clear
-ps aux| grep ncat
+ls
+git status
+cd 
+~/bin/filter_public 
+tig
+cd .dotfiles/
+tig
 exit
+stty size
+pbcopy < ~/.kaggle/kaggle.json 
+make dmetadata
+ls datas/
+mkdir datas
+pbcopy < ~/.kaggle/kaggle.json 
+pwd
+mkdir datas
+make dmetadata
+cat
+exit
+htop
+git pull
+htop
+ping baidu.com
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+cat ~/.kaggle/kaggle.json 
+exit
+stty size
+pbcopy < ~/.kaggle/kaggle.json 
+pbcopy 
+pbcopy -o
+pbcopy --help
+pbcopy -h
+pbcopy -help
+pbcopy -help
+pbcopy -l
+pbcopy -h
+cat ~/.kaggle/kaggle.json 
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty size
+exit
+man ssh
+exit
+clear
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+ncat -vklp 10002 -c 'ncat -vklp 10003'
+fg
+ncat -vklp 10002 -c 'ncat -vklp 10003'
+cat ~/.kaggle/kaggle.json 
+nc -vlp 9001
+nc -vklp 10001
+ncat -vklp 10001
+ncat -vklp 10001
+pip3 install 'prompt-toolkit<2.0.0,>=1.0.15' --force-reinstall
+ls
+clear
+clear
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+pbcopy < ~/.kaggle/kaggle.json 
+ man ssh
+man ssh
+man git-diff
+clear
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+m
+tmux ls
+tat 0
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+tail -f logs_check
+exit
+exit
+exit
+cd
+git diff
+vi .shrc_customised.macos 
+git add .shrc_customised.macos 
+git commit -sm "nvim unalias"
+cd .dotfiles/
+tig
+exit
+tmux ls
+tmux ls
+tmux ls
+ps aux
+clear
+htop
+clear
+tmux
+tmx ls
+tmux ls
+tat rvsConnector
+vi /Users/v/.shrc_customised.macos
+git diff
+ss
+git pull 
+nvim Makefile 
+fg
+python3 -m jupyter
 fg
 clear
+ls
+ls kaggle_runner
+ls
 fg
+. ~/.bashrc
+color_my_prompt 
+conda activate pyt
+conda activate torch
+jobs
+nvim
+git status
+cd kaggle_runner/hub/
+git checkout  34bd8c4 shonenkov_training_pipeline.py 
+git diff --cached
 clear
-make p
+ls
+cat shonenkov_training_pipeline.py 
+fg
+git status
+clear
+git diff
+clear
+ls
+cat shonenkov_training_pipeline.py 
+cat ~/.kaggle/kaggle.json 
+exit
+make clean
+clear
+exit
+make mq
+clear
+ip route
+jobs
+exit
+fg
+git status
+clear
+git diff
+clear
+cd ../..
+ls
+ls submission.csv 
+vi submission.csv 
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+clear
+vi submission.csv 
+cp ~/submission.csv .
+git diff
+git status
+tig submission.csv 
+fg
+head submission.csv 
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+clear
+diff ~/submission.csv submission.csv 
+rm submission.csv 
+clear
+ls
+git status
+rm ~/submission.csv 
+clear
+ls
+git status
+git diff
+clear
+ls
+git checkout -- kaggle_runner/hub/
+git status
+clear
+ls
+git status
+ls
+clear
+sl
+ls
+git pull
+tig
+git revert 6f5dd6ecc79b53a4adb1e
+clear
+ls
+ls nbs/
+ls lstm.py 
+tig lstm.py 
+ls
+rm -rf XNLI/
+clear
+ls
+tree -L 1
+git status
+tig serverNodes 
+cat .gitignore 
+git status
+ls
+git status
+rm kaggle_runner/kernels/xlmr.py 
+rm -r kaggle_runner/hub/xlmr/
+clear
+ls
+clea
+clear
+git status
+mv kaggle_runner/hub/ .
+rm hub/__init__.py 
+clear
+ls
+ls hub/
+git satus
+git status
+git add kaggle_runner/
+git status
+git add -r hub/
+git status
+git add hub/
+git commit -sm "Move hub code out of kaggle_runner lib"
+git status
+git rm --cached hub/combat-wombat-bias-in-toxicity/
+git status
+git rm --cached hub/combat-wombat-bias-in-toxicity/
+git rm -r --cached hub/combat-wombat-bias-in-toxicity/
+git status
+git commit -sm "move hub out"
+git status
+clear
+git status
+vi ~/.git/hooks/pre-commit 
 fg
 git status
 git diff
-git commit -sm "Update bert data preprocess "
-git push
-clear
-fg
-nvim Makefile 
-jobs
-clear
+git status
+git commit sm "Move hub "
+git commit -sm "Move hub "
 ls
 clear
-fg
-clear
-tig
-clear
-jobs
-clear
-fg
-clear
-cat .gitmodules 
-fg
-clear
-fg
-make p
-m
-make rpdbs
-tat 0
-stty raw -echo && while true; do ncat -vlp 9220; sleep 1; done
-ss
-bash -x ~/bin/xcb_change 
-make pccnct
-exit
-exit
-exit
-fg
-clear
-exit
-vim datasets/bert.py 
-from kaggle_datasets import KaggleDatasets
-ss
-sh ~/bin/xcb*
-make push PHASE=data
-make pccnct
-exit
-clear
-nvim ../mq_log 
-clear
-fg
-git status
-make check
-fg
-cat ../.gitmodules 
-fg
-cat ../.git/config 
-fg
-cd ..
-sed -i 's/git@\(.*\):\(.*\)/https:\/\/\1\/\2/' .gitmodules 
-cat .gitmodules 
-git checkout -- .gitmodules
-cat .gitmodules 
-fg
-stty raw -echo && while true; do ncat -vlp 9220; sleep 1; done
-exi
-exit
-exit
-make clean
-exit
-clear
-git status
-make p
-git status
-git commit -asm "Data prepare"
-clear
-stty -a
-exit
-fg
-rg GCS_M_DS_PATH
-fg
+ls
+tree -L 2
+vi .gitmodules 
 git submodule status
 clear
-stty raw -echo && while true; do ncat -vlp 9230; sleep 1; done
-fg
-clear
-make push PHASE=data
-fg
-m
-exit
-ps aux| grep clash
-setproxy
-curl google.com
-s
-clear
-exit
-fish
-clear
 ls
 git status
-make p
-git push
-make push PHASE=data
+cat .gitmodules 
+cat .git/config
+fg
+git submodule status
+git submodule update --init
+git status
+git add .gitmodules 
+git commit -sm "Move submodule to upper layer folder"
+jobs
+git status
+git submodule status
+git submodule init 
+git submodule status
+git submodule ls
+clear
+ls
+mv .git/modules/kaggle_runner/hub .git/modules/
+rmdir .git/modules/kaggle_runner/
+ls
+clear
+git status
+git submodule status
+git status
+pwd
+cd ..
+test_package
+mkdir test_package
+ls test_package/
+mkdir test_package/
+cd test_package/
+tig
+git clone git@github.com:pennz/kaggle-runner
+git clone git@github.com:pennz/kaggle_runner
+ls
+cd kaggle_runner/
+git submodule status
+git submodule update
+git submodule init
+git submodule update
+git submodule status
+pwd
+cd ../..
+rm -r test_package/
+rm -rf test_package/
+ls
+fg
+exit
+tig
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+clear
+htop
+vi ~/.config/clash/old_config.yaml 
+vi ~/.config/clash/vps.yaml 
+exit
+ping baidu.com
+ncat -v pengyuzhou.com 26990
+nmap -p 26990 pengyuzhou.com
+clear
+ip route
 setproxy
-make push PHASE=data
+curl google.com
+ping baidu.com
+clear
+which v2ray
+clear
+brew install v2ray
+brew install v2rayX
+ls ~/go/src/github.com/v2ray/v2ray-core/
+clear
+cd ~/go/src/github.com/v2ray/v2ray-core/
+ls
+clear
+ls
+git pull
+ls
+clear
+ls
+go build
+ls
+ls ~/go/bin/
+clear
+ls
+go run v2ray
+go run v2ray.go 
+cd ..
+ls
+clear
+ls
+cd v2ray-core/
+ls
+go build .
+go run v2ray_test.go 
+ls main/
+go run main/main
+go run main/main.go 
+cd main/
+clear
+ls
+go build .
+ls
+ls ~/bin/
+cd ~/go/src/
+ls
+ls wt/
+cd v2ray.com/
+ls
+clear
+ls
+cd core/
+ls
+vi README.md 
+go build
+ls
+go run .
+cd main/
+go run .
+cp ~/.config/v2ray_client.json config.json
+vi config.json 
+go run .
+vi ~/.config/clash/vps.yaml 
+ping baidu.com
+exit
+exit
+cat ~/.config/v2ray_client.json 
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+man wget
+man curl
+vim
+nvim
+jobs
+nvim Makefile 
+jupyter lab
+fg
+cd hub/
+clear
+ls
+. ~/.bashrc
+conda activate pyt
+conda activate torch
+color_my_prompt 
+clear
+ls
+ip route
+ping baidu.com
+man jupytext
+jupytext -h
+vi /usr/local/etc/proxychains.conf
+ps aux| grep ssh
+vi ~/.shrc_customised
+ps aux| grep ssh
+. ~/.shrc_customised
+setproxy
+unsetproxy
+proxychains4 curl google.com
+proxychains4 brew update
+cd ..
+ls
+proxychains4 brew upgrade
+nvim Makefile 
+clear
+fg
+fg
+cat ~/.config/v2ray_client.json 
+clear
+fg
+fg
+cat ~/.config/v2ray_client.json 
+ping pengyuzhou.com
+nvim Makefile 
+nvim Makefile 
+ncat -vv pengyuzhou.com 26990
+clear
+ls
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+ncat -vv pengyuzhou.com 13979
+clear
+ls
+cd work
+clear
+setproxy
+. ~/.bashrc
+setproxy
+ss
+which ss
+cd ~/works/
+ls
+clear
+cd v2ray/
+ls
+clear
+ls
+nvim config.json config.json.http
+setproxy
+./v2ray -config config.json
+pkill v2ray
+suod pkill v2ray
+sudo pkill v2ray
+ps aux| grep v2ray
+sudo pkill -9 v2ray
+ps aux| grep v2ray
+sudo pkill 18629
+ps aux| grep v2ray
+jobs
+fg
+clear
+vi ~/.shrc_customised
+. ~/.shrc_customised
+clear
+fish
+clear
+. ~/.bashrc
+color_my_prompt 
+setproxy
 clear
 htop
 fg
@@ -142,370 +509,10 @@ git status | less
 git diff
 clea
 clear
-cd /mnt/d/
-cd PIE/
-git clone ssh://git@git.technomous.com.cn:7999/vdcu/peip_dev.git
-exit
-cd
-pwd
-git pull
-sh
-clear
-ls -lh .shrc_customised
-ln -s .shrc_customised.wsl .shrc_customised
-clear
-. ~/.bashrc
-tig
-ls
-clear
-git status
-cd
-git status
-tig
-git lg2
-clear
-tig
-tig --all
-ls
-tig
-clear
-git pull
-cd
-cd ~/v/
-cd ~/pengyu/
-ls
-git
-tig
-git mergetool
-cd ..
-rm -rf pengyu/ .dotfiles/
-clear
-exit
-bash -x ~/bin/filter_public 
-exit
-man ssh
-ssh -L 10003:localhost:10003 -p 29922 v@vtool.duckdns.org
-cd /mnt/d/
-clear
-ls
-cd PIE/peip_dev/
-ls
-clear
-tig --all
-tig
-tig --all
-git status
-git branch
-. ~/.bashrc
-git branch
-cd -
-git checkout integration/master
-git diff
-clear
-cd
-m
-mosh --ssh="ssh -p 29932" v@vtool.duckdns.org
-ping baidu.com
-ping vtool.duckdns.org
-mosh --ssh="ssh -p 29932" v@vtool.duckdns.org
-mosh --ssh="ssh -p 29922" v@vtool.duckdns.org
-ssh-keygen -f "/home/pengyu/.ssh/known_hosts" -R "[vtool.duckdns.org]:29922"
-mosh --ssh="ssh -p 29922" v@vtool.duckdns.org
-mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
-LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
-ssh -L 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
-tig
-qqqqqq
-exit
-autossh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
-ssh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
-vi /home/pengyu/.ssh/known_hosts +34
-ssh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
-ssh -p 29922 v@vtool.duckdns.org
-ssh -fNL 10001:localhost:10001 -p 29922 v@vtool.duckdns.org
-ssh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
-cd ~/works
-cd /mnt/d/workspace/
-ls
-cd kaggle_runner/
-git pull
-git mergetool
-git commit
-git status
-tig
-git revert 8baa5fa85aad7dd92028b49d73
-git mergetool
-git commit
-tig
-git status
-git push
-tig
-clear
-cp /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
-git status
-git diff
-git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
-git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
-git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
-git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline.ipynb kaggle_runner/hub/
-git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline\(1\).ipynb  kaggle_runner/hub/
-git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline\(1\).ipynb  kaggle_runner/hub/shonenkov_training_pipeline.ipynb
-git diff /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline\(1\).ipynb  kaggle_runner/hub/shonenkov_training_pipeline.ipynb
-cp /mnt/c/Users/ZhouPengyu/Downloads/shonenkov_training_pipeline\(1\).ipynb  kaggle_runner/hub/shonenkov_training_pipeline.ipynb
-git diff
-git commit -sm "Update ipynb" --no-gpg
-git commit -sm "Update ipynb" --no-gpg -a
-git push
-ssh -fNL 10000:localhost:10000 -p 29922 v@vtool.duckdns.org
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.co
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com
-cd /mnt/d/workspace/
-clear
-ls
-clear
-cd ../PIE/
-ls
-cd BEIP_dev/
-ls
-git fetch
-clear
-git status
-c -
-c ~
-git pull
-p
-p
- . ~/.bashrc
-clear
-c -
-git status
-git checkout integration/master 
-tig
-git reset HEAD^
-tig
-git pull
-git stash list
-git checkout HEAD  beip30/1500-build/LB/scripts/System_Specification.py
-git stash list
-git pull
-clear
-ls
-clear
-tig --all
-git merge origin/0605_BF 
-git rm beip30/1500-build/LB/scripts/*.pyc
- rm beip30/1500-build/LB/scripts/*.pyc
-git merge origin/0605_BF 
-tig
-clear
-git status
-git rm beip30/1500-build/LB/scripts/*.pyc
-git commit -sm "Clean up beip30/1500-build/LB/scripts/*.pyc"
-tig
-clear
-tig
-cat ~/.gitconfig 
-vi ~/.gitconfig 
-tig
-git reflog
-git reset --hard  bd050376
-tig
-vi ~/.gitconfig 
-git merge origin/0605_BF 
-git rm beip30/1500-build/LB/scripts/*.pyc
-git commit -sm "Clean up beip30/1500-build/LB/scripts/*.pyc"
-tig
-ls
-clear
-tig
-cd beip30/
-ls
-cd 
-c -
-ls
-cd 1500-build/LB/
-s
-clear
-ls
-vi config.ini 
-clear
-cmd.exe .
-set PYTHONIOENCODING=UTF-8
-cmd.exe .
-git mergetool
-tig
-ls
-vim config.ini 
-nvim config.ini 
-rg Copy_debug
-cd ..
-rg Copy_debug
-cd /mnt/d/PIE/BEIP_dev/beip30
-. ~/.bashrc
-c -
-nvim build.py
-clear
-cd LB/
-ls
-clear
-ip route
-cd ../PIE/BEIP_dev/
-ls
-foldercvt 'D:\PIE\BEIP_dev\beip30\1700-configout\bsw\Rte_TTTech\src\Rte_CpApMiddlewareASIL_SH00.c'
-tig /mnt/d/PIE/BEIP_dev/beip30/1700-configout/bsw/Rte_TTTech/src/Rte_CpApMiddlewareASIL_SH00.c
-nvim /mnt/d/PIE/BEIP_dev/beip30/1700-configout/bsw/Rte_TTTech/src/Rte_CpApMiddlewareASIL_SH00.c
-fg
-foldercvt 'D:\PIE\BEIP_dev\beip30\1700-configout\bsw\Rte_TTTech\src\Rte_CpApMiddlewareASIL_SH00.c'
-fg
-sudo apt install clang-foramt
-sudo apt install clang-format
-setproxy
-vi ~/.shrc_customised
-unsetproxy
-sudo vi /etc/apt/apt.conf.d/02-proxy 
-sudo apt install clang-format
-fg
-tig
-fg
-foldercvt "D:\PIE\BEIP_dev\beip30\1500-build\LB\..\..\1700-configout\core\safetyhealth\memoryhandling\MemMap\SH00\MemMap.h"
-fg
-tig
-tig beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/
-fg
-git checkout  62d9681d  /mnt/d/PIE/BEIP_dev/beip30/1500-build/LB/../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00/MemMap.h
-git diff
-git diff --cached
-git checkout  62d9681d  /mnt/d/PIE/BEIP_dev/beip30/1500-build/LB/../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00/MemMap.h
-tig  62d9681d
-tig beip30/1700-configout/bsw/Rte_TTTech/
-tig beip30/1700-configout/bsw/Rte_TTTech/inc/Rte_Type.h
-tig
-tig beip30/1700-configout/bsw/Rte_TTTech/inc/Rte_Type.h
-tig beip30/1700-configout/rte/SH00/Rte_MemMap.h
-fg
-ls
-tig beip30/1700-configout/build/
-git status
-tig  beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00/Rte_MemMap.h
-rm  beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00/Rte_MemMap.h
-git status
-clear
-t
-clear
-ls
-ti
-tig
-qq:q
-git fetch
-tig --all
-qqqqqqqqqqq
-q
-q
-k
-exit
-cd /mnt/d/PIE/BEIP_dev/
-git fetch
-git show
-git show origin/0605_BF 
-git show origin/feature/update_258 
-git show origin/feature/update_258 
-git merge origin/feature/update_258
-git merge origin/feature/update_258 --no-gpg
-git show
-git reset --hard
-git reset --hard
-rm .git/index.lock 
-git reset --hard
-tig --all
-git fetch
-tig --all
-git merge origin/feature/update_258 
-git mergetool
-git commit
-tig
-clear
-tig
-cd beip30/1500-build/LB/
-python build.py -s Can
-cmd.exe .
-tig --all
-git status|head
-git push
- git push --set-upstream origin integration/master_merge_update_258
-tig
-tig status
-exit
-ncat -v pengyuzhou.com 26990
-cd
-ncat -vv pengyuzhou.com 26990
-ncat -vv pengyuzhou.com 29932
-ncat -vv pengyuzhou.com 29931
-ncat -vv pengyuzhou.com 29932
-clear
-clear
-ip route
-clear
-ncat -vv pengyuzhou.com 26991
-ncat -vv pengyuzhou.com 26990
-ncat -vv pengyuzhou.com 26990
-exit
-ncat -vv pengyuzhou.com 27990
-exit
-m
-alias m
-m
-clear
-git pull
-git fetch
-git pull
-ls
-tig
-git pull
-ls
-tig
-git fetch
-clear
-tig --all
-git checkout 3492c571c8a35fd878a9ccc8724880 
-ls
-vi uploadcopy_and_prebuild.py 
-cmd.exe
-vi uploadcopy_and_prebuild.py 
-cmd.exe
-tig --all
-git checkout origin/origin/integration/master_merge_update_258 
-git add uploadcopy_and_prebuild.py 
-git diff --cached
-fg
-clear
-nvim uploadcopy_and_prebuild.py 
-git branch
-git checkout origin/origin/integration/master_merge_update_258 
-git branch
-git commit -sm "LB script: check the copy script"
-tig
-fg
-clear
-cmd.exe .
-git push
-git push orgin HEAD:origin/integration/master_merge_update_258
-git push origin HEAD:origin/integration/master_merge_update_258
-tig
-fg
-cd /mnt/d/PIE/BEIP_dev/
-git branch
-clear
-exit
-exit
-vi uploadcopy_and_prebuild.py 
-clear
-cd
-clea
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com
-ncat -vv pengyuzhou.com 19999
-d
-dddddddd
-ncat -vv pengyuzhou.com 19999
-ncat -vv pengyuzhou.com 19992
-clear
+cd ~
+cp works/v2ray/config.json .config/v2ray_client.json 
+git add .config/v2ray_client.json 
+cat > .config/v2ray_server.json
+nvim .config/v2ray_server.json 
+git add -f .config/v2ray_server.json 
+git commit -sm "Added v2ray updated config"

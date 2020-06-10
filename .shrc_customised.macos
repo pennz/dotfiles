@@ -11,7 +11,7 @@ alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
 
 #alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim/init.vim'
-alias v='nvim -u ~/.config/nvim/init.vim'
+#alias v='nvim -u ~/.config/nvim/init.vim'
 alias ccc="source $HOME/bin/ccc"
 
 export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$GOPATH/bin:/usr/local/lib/ruby/gems/2.5.0/bin/:$PATH
@@ -90,10 +90,11 @@ pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl l
 #
 ### }
 
-PROXY_URL='http://127.0.0.1:7890'
+PROXY_URL='http://127.0.0.1:28080'
 alias clash='clash -f ~/.config/clash/config.yaml'
 alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
 [ -z "$(pgrep clash)" ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
 source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
 [ -z $NOFISH ] && [ -f $HOME/.enable_fish ] && fish
+export SSH_PORT=29922
