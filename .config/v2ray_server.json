@@ -28,7 +28,8 @@
         "strategy": "random",  // 随机开启
         "concurrency": 4,      // 同时开放两个端口,这个值最大不能超过端口范围的 1/3
         "refresh": 4           // 每三分钟刷新一次
-      }
+      },
+      "streamSettings": { "network": "kcp" }
     }
   ],
   "outbounds": [
