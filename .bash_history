@@ -1,323 +1,3 @@
-exit
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-ping pengyuzhou.com
-exit
-tmux ls
-tat rvsConnector
-tat 1
-tmux ls
-tat 0
-python
-exit
-git 
-git status
-git status | head
-cd
-git status | less
-git diff --cached
-git commit -asm 'vimrc: added indentLine plugbin"
-'
-exit
-clear
-ls
-git status
-cd 
-~/bin/filter_public 
-tig
-cd .dotfiles/
-tig
-exit
-stty size
-pbcopy < ~/.kaggle/kaggle.json 
-make dmetadata
-ls datas/
-mkdir datas
-pbcopy < ~/.kaggle/kaggle.json 
-pwd
-mkdir datas
-make dmetadata
-cat
-exit
-htop
-git pull
-htop
-ping baidu.com
-exit
-pbcopy < ~/.kaggle/kaggle.json 
-cat ~/.kaggle/kaggle.json 
-exit
-stty size
-pbcopy < ~/.kaggle/kaggle.json 
-pbcopy 
-pbcopy -o
-pbcopy --help
-pbcopy -h
-pbcopy -help
-pbcopy -help
-pbcopy -l
-pbcopy -h
-cat ~/.kaggle/kaggle.json 
-exit
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-stty size
-exit
-man ssh
-exit
-clear
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-ncat -vklp 10002 -c 'ncat -vklp 10003'
-fg
-ncat -vklp 10002 -c 'ncat -vklp 10003'
-cat ~/.kaggle/kaggle.json 
-nc -vlp 9001
-nc -vklp 10001
-ncat -vklp 10001
-ncat -vklp 10001
-pip3 install 'prompt-toolkit<2.0.0,>=1.0.15' --force-reinstall
-ls
-clear
-clear
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-pbcopy < ~/.kaggle/kaggle.json 
- man ssh
-man ssh
-man git-diff
-clear
-exit
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-m
-tmux ls
-tat 0
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-tail -f logs_check
-exit
-exit
-exit
-cd
-git diff
-vi .shrc_customised.macos 
-git add .shrc_customised.macos 
-git commit -sm "nvim unalias"
-cd .dotfiles/
-tig
-exit
-tmux ls
-tmux ls
-tmux ls
-ps aux
-clear
-htop
-clear
-tmux
-tmx ls
-tmux ls
-tat rvsConnector
-vi /Users/v/.shrc_customised.macos
-git diff
-ss
-git pull 
-nvim Makefile 
-fg
-python3 -m jupyter
-fg
-clear
-ls
-ls kaggle_runner
-ls
-fg
-. ~/.bashrc
-color_my_prompt 
-conda activate pyt
-conda activate torch
-jobs
-nvim
-git status
-cd kaggle_runner/hub/
-git checkout  34bd8c4 shonenkov_training_pipeline.py 
-git diff --cached
-clear
-ls
-cat shonenkov_training_pipeline.py 
-fg
-git status
-clear
-git diff
-clear
-ls
-cat shonenkov_training_pipeline.py 
-cat ~/.kaggle/kaggle.json 
-exit
-make clean
-clear
-exit
-make mq
-clear
-ip route
-jobs
-exit
-fg
-git status
-clear
-git diff
-clear
-cd ../..
-ls
-ls submission.csv 
-vi submission.csv 
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-clear
-vi submission.csv 
-cp ~/submission.csv .
-git diff
-git status
-tig submission.csv 
-fg
-head submission.csv 
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-clear
-diff ~/submission.csv submission.csv 
-rm submission.csv 
-clear
-ls
-git status
-rm ~/submission.csv 
-clear
-ls
-git status
-git diff
-clear
-ls
-git checkout -- kaggle_runner/hub/
-git status
-clear
-ls
-git status
-ls
-clear
-sl
-ls
-git pull
-tig
-git revert 6f5dd6ecc79b53a4adb1e
-clear
-ls
-ls nbs/
-ls lstm.py 
-tig lstm.py 
-ls
-rm -rf XNLI/
-clear
-ls
-tree -L 1
-git status
-tig serverNodes 
-cat .gitignore 
-git status
-ls
-git status
-rm kaggle_runner/kernels/xlmr.py 
-rm -r kaggle_runner/hub/xlmr/
-clear
-ls
-clea
-clear
-git status
-mv kaggle_runner/hub/ .
-rm hub/__init__.py 
-clear
-ls
-ls hub/
-git satus
-git status
-git add kaggle_runner/
-git status
-git add -r hub/
-git status
-git add hub/
-git commit -sm "Move hub code out of kaggle_runner lib"
-git status
-git rm --cached hub/combat-wombat-bias-in-toxicity/
-git status
-git rm --cached hub/combat-wombat-bias-in-toxicity/
-git rm -r --cached hub/combat-wombat-bias-in-toxicity/
-git status
-git commit -sm "move hub out"
-git status
-clear
-git status
-vi ~/.git/hooks/pre-commit 
-fg
-git status
-git diff
-git status
-git commit sm "Move hub "
-git commit -sm "Move hub "
-ls
-clear
-ls
-tree -L 2
-vi .gitmodules 
-git submodule status
-clear
-ls
-git status
-cat .gitmodules 
-cat .git/config
-fg
-git submodule status
-git submodule update --init
-git status
-git add .gitmodules 
-git commit -sm "Move submodule to upper layer folder"
-jobs
-git status
-git submodule status
-git submodule init 
-git submodule status
-git submodule ls
-clear
-ls
-mv .git/modules/kaggle_runner/hub .git/modules/
-rmdir .git/modules/kaggle_runner/
-ls
-clear
-git status
-git submodule status
-git status
-pwd
-cd ..
-test_package
-mkdir test_package
-ls test_package/
-mkdir test_package/
-cd test_package/
-tig
-git clone git@github.com:pennz/kaggle-runner
-git clone git@github.com:pennz/kaggle_runner
-ls
-cd kaggle_runner/
-git submodule status
-git submodule update
-git submodule init
-git submodule update
-git submodule status
-pwd
-cd ../..
-rm -r test_package/
-rm -rf test_package/
-ls
-fg
-exit
-tig
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-clear
-htop
-vi ~/.config/clash/old_config.yaml 
 vi ~/.config/clash/vps.yaml 
 exit
 ping baidu.com
@@ -516,3 +196,306 @@ cat > .config/v2ray_server.json
 nvim .config/v2ray_server.json 
 git add -f .config/v2ray_server.json 
 git commit -sm "Added v2ray updated config"
+tig
+cd ~/.dotfiles/
+ls
+tig
+vi ~/bin/filter_public 
+clear
+exit
+git status
+git pull
+git mergetool
+git commit
+git push
+clear
+clear
+exit
+cd
+git push
+git pull
+git commit -asm "Update history"
+sh
+exit
+clear
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+clear
+proxychains4 curl https://www.google.com
+proxychains4 curl https://www.google.com
+proxychains4 curl https://www.google.com
+proxychains4 curl https://www.google.com
+proxychains4 curl https://www.google.com
+tail ~/.shrc_customised
+vi /usr/local/etc/proxychains.conf
+proxychains4 curl google.com
+ncat -vv pengyuzhou.com 26990
+ddd
+vi ~/.config/v2ray_client.json 
+clear
+which v2ray
+ls
+ncat -v pengyuzhou.com 26990
+dd
+ncat -v pengyuzhou.com 26990
+dddd
+clear
+ls
+clear
+vi /usr/local/etc/proxychains.conf
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+clear
+clear
+proxychains4 curl google.com
+clear
+pwd
+vi /usr/local/etc/proxychains.conf
+proxychains4 curl google.com
+jobs
+vi /usr/local/etc/proxychains.conf
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+clear
+ip route
+proxychains4 curl google.com
+proxychains4 neomutt
+cd
+ls
+clear
+ls
+which v2ray
+clear
+ls
+locate v2ray
+cd works/v2ray/
+ls
+head config.json
+vi config.json
+./v2ray 
+./v2ray -h
+./v2ray -config ~/.config/v2ray_client.json 
+git pull
+pwd
+ls
+vi config.json
+./v2ray -config ~/.config/v2ray_client.json 
+./v2ray -config ~/config.yaml 
+./v2ray -config config.json
+vi config.json
+./v2ray -config config.json
+clear
+./v2ray -config config.json
+vi config.json
+./v2ray -config config.json
+ls
+clear
+pwd
+vi config.json
+nvim config.json
+./v2ray -config config.json
+proxychains4 wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.4/v2ray-macos.zip
+clear
+ip route
+mv ~/v.zip .
+unzip -d v.zip 
+unzip  v.zip 
+clear
+ls
+./v2ray -config config.json
+vi /usr/local/etc/proxychains.conf
+fg
+ssh -f -2qTnN -D 1080 -p 29932 pengyu@pengyuzhou.com 
+ssh -f -2qTnN -D 11080 -p 29932 pengyu@pengyuzhou.com 
+man ssh
+ssh -f -2qTn -D 11080 -p 29932 pengyu@pengyuzhou.com 
+ssh -f -2Tn -D 11080 -p 29932 pengyu@pengyuzhou.com 
+man ssh
+ssh -f -N -D 127.0.0.1:11080 -p 29932 pengyu@pengyuzhou.com 
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
+ssh -p 29932 pengyu@pengyuzhou.com
+s
+alais
+alias s
+s
+ssh -p 29932 pengyu@pengyuzhou.com
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
+  
+pbcopy < ~/.kaggle/kaggle.json 
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
+clear
+ps aux | grep v2ray
+kill 61103
+ps aux | grep v2ray
+kill 40514
+ps aux | grep v2ray
+kill 94663
+ps aux | grep v2ray
+pkill v2ray
+ps aux | grep v2ray
+pwd
+cd ~/works/v2ray/
+ls
+clear
+ls
+vi config.json
+clear
+ls
+./v2ray -config config.json
+bg
+cat config.json
+clear
+ls
+vi config.json
+m
+tmux ls
+tat rvsConnector
+r
+clclear
+clear
+stty sane
+clear
+fg
+jobs
+jobs
+jobs -p
+ps ww 59793
+fg
+jobs
+clear
+tmux ls
+clear
+exit
+clear
+clear
+m
+clear
+ps aux| grep v2ray
+cd v2ray/
+pwd
+ls
+cd ../works/v2ray/
+ls
+vi config.json
+rm config.json
+ln -s ~/.config/v2ray_client.json config.json
+./v2ray -config config.json
+bg
+clear
+. ~/.bashrc
+setproxy
+cat config.json
+setproxy
+color_my_prompt 
+curl google.com
+curl https://www.google.com
+clear
+nvim ~/.config/v2ray_server.json 
+clear
+git status
+clear
+git status | less
+git commit -sm "Format config v2ray server"
+clear
+setproxy
+curl https://www.google.com
+clear
+exi
+exit
+fish
+clear
+ls
+ss
+clear
+. ~/.bashrc
+setproxy
+exit
+curl https://www.google.com
+clear
+curl https://www.google.com
+clear
+curl https://www.google.com
+curl -vv https://www.google.com
+git commit -sm "Format config v2ray server"
+setproxy
+curl https://www.google.com
+exi
+fish
+ls
+ss
+vi config.json
+nvim config.json
+git status
+git status|less
+git diff --cached
+tig
+git branch
+pwd
+clear
+fg
+exit
+exit
+clear
+exit
+exit
+ip route
+clear
+exit
+ss
+clear
+. ~/.bashrc
+conda activate pyt
+conda activate torch
+nvim Makefile 
+kaggle datasets
+kaggle datasets download --help
+fg
+make get_submission
+fg
+make get_submission
+which kaggle
+/usr/local/bin/kaggle 
+vi /usr/local/bin/kaggle 
+python3 -m kaggle.cli
+python3 -m kaggle.cli -j
+python3 -m kaggle.cli -h
+python3 -m kaggle.cli asfsadf
+fg
+make get_submission
+clear
+ls
+pwd
+ls *csv
+fg
+unzip '*.zip' && rm *.zip && mv *.csv submission.csv
+rm submission.csv 
+unzip '*.zip' && rm *.zip && mv *.csv submission.csv
+make get_submission
+ls submission.csv 
+head submission.csv 
+ls *.zip
+fg
+git add submission.csv 
+git status
+git commit -asm "Update submission and makefile"
+clear
+ls submission.csv 
+tig submission.csv 
+clear
+ls
+jobs
+fg
+clear
+ls
+mv ~/Downloads/Copy_of_shonenkov_training_pipeline.ipynb hub/shonenkov_training_pipeline.ipynb 
+git commit -sm "Updated ipynb code from colab v6~v7 submission"
