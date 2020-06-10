@@ -21,6 +21,7 @@
           ]
         }
       ]
-    }
+    },
+    "streamSettings": { "network": "kcp" }
   }
 }
