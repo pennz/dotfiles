@@ -1,29 +1,3 @@
-exit
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-ping pengyuzhou.com
-exit
-tmux ls
-tat rvsConnector
-tat 1
-tmux ls
-tat 0
-python
-exit
-git 
-git status
-git status | head
-cd
-git status | less
-git diff --cached
-git commit -asm 'vimrc: added indentLine plugbin"
-'
-exit
-clear
-ls
-git status
-cd 
-~/bin/filter_public 
-tig
 cd .dotfiles/
 tig
 exit
@@ -516,3 +490,11 @@ cat > .config/v2ray_server.json
 nvim .config/v2ray_server.json 
 git add -f .config/v2ray_server.json 
 git commit -sm "Added v2ray updated config"
+sh
+ls
+clear
+git pull
+cp ~/.config/v2ray_client.json /mnt/C/Users
+cp ~/.config/v2ray_client.json /mnt/c/Users/ZhouPengyu/Downloads/v2ray-windows-64/New\ folder/
+LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
+exit
