@@ -8,7 +8,6 @@
   set -gx EDITOR                     nvim
   set -gx HOMEBREW_FORCE_VENDOR_RUBY 1
   set -gx GPG_TTY                    (tty)
-  set -gx PROXY_URL                  'http://127.0.0.1:7890'
   set -gx QT_QPA_PLATFORM_PLUGIN_PATH /usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/
   set -gx PYTHON_KEYRING_BACKEND     keyring.backends.null.Keyring
 # }}}
