@@ -1,735 +1,499 @@
-tmux ls
-terminology 
-tat 5
-tmux
-git pull
-bg
-stty rows 34 columns 110
-vim
-stty rows 54 columns 170
-vim
-stty rows 44 columns 150
-bash -x ~/bin/xcb_change 
-pwd
-vi ~/.tmux.conf
-tmux source ~/.tmux.conf
-bash ~/bin/xcb_change 
-who
-ip route
+vi ~/.config/clash/vps.yaml 
+exit
 ping baidu.com
-cd
-git status
-tig
-clear
-bash -x ~/bin/filter_public 
-ss
-vi ~/.ssh/config 
-git add .ssh/config
-git commit -sm "proxy username fixed"
-sudo reboot
-clear
-terminology &
-clear
-tmux ls
-clear
-git status
-ss
-clear
-vi ~/.gitconfig
-clear
-git status
-tmix
-tmux
-git status
-ss
-vi ~/.gitconfig
-git status
-tmix
-cd ~/.dotfiles/
-tig --all
-clera
-df -h
-ip route
-ls
-ls /home/
-clear
-firefox 
-ss
-vi ~/.gitconfig
-git status
-tmix
-ls
-clera
-cd ~
-cat mexit 
-mv mexit ~/bin
+ncat -v pengyuzhou.com 26990
+nmap -p 26990 pengyuzhou.com
 clear
 ip route
-sudo reboot
-ls /home/v
-ls
-cat /etc/fstab 
-ls /home/
-sudo mv /home/home/v/ /home/
-clear
-cd
-ls
-clear
-df -h
-clear
-ip route
-ping baidu.com
-ip route
-df -h
-clear
-ip route
-docker ps
-clear
-ls
-clear
-cd /
-ls -lh 
-ls -lh /var/
-clear
-sudo snap list
-clear
-sudo ip route
-sudo ls
-clear
-ls
-clear
-ls
-lsblk
-sudo chroot /dev/nvme0n1p7
-sudo mount -B /dev/nvme0n1p7 /mnt/
-sudo mount -B /dev/nvme0n1p7 /mnt/
-sudo mkdir /mnt/root
-sudo mount -B /dev/nvme0n1p7 /mnt/root/
-clear
-ls
-sudo reboot
-clear
-tmux ls
-df -h
-cd Downloads/
-ls -t|head
-ls
-cd ../works/
-ls -t | head
-cd ttf-iosevka-term/
-clear
-ls
-makepkg -si
-clear
-ip route
-exit
-bash ~/bin/xcb_change 
-clear
-ip route
-clear
-ip route
-clear
-ip route
-clear
-. ~/.bashrc
-pwd
-clear
-exit
-clear
-ip route
-eexit
-exit
-clear
-sudo pacman -S openssh-server
-sudo pacman -S openssh
-sudo systemctl enable openssh
-sudo systemctl enable sshd
-sudo systemctl start sshd
-ps aux| grep ssh
-cd ~/works/kaggle_runner/
-clear
-git pull
-ss
-clear
-fish
-which fish
-. ~/.bashrc
-vi ~/.bashrc
-pushd ~
-git status|less
-git checkout HEAD .bashrc .profile
-. ~/.bashrc
-clear
-popd
-cd ~/Videos/
-clear
-~/bin/borg_back.sh 
-which borg
-borg --version
-pip list | grep borg
-cd ~/Downloads/borg/
-ls
-clear
-ls
-pip install -e .
-git pull
-which borg
-c
-~/bin/borg_back.sh 
-rm ~/.lastbackup 
-~/bin/borg_back.sh 
-rm ~/.lastbackup 
-vi ~/bin/borg_back.sh 
-which borg
-fg
-vi ~/bin/borg_back.sh 
-rm ~/.lastbackup 
-~/bin/borg_back.sh 
-vi ~/bin/borg_back.sh 
-date
-date 
-date | sed 's/ /_/g'
-nixGLIntel mpv *.mp4
-fg
-clear
-cd
-~/bin/borg_back.sh 
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-vim ~/bin/borg_back.sh 
-~/bin/borg_back.sh 
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-rm .lastbackup 
-~/bin/borg_back.sh 
-fg
-ls /run/media/
-clear
-date | sed 's/ /_/g'
-clear
-stty sane
-ls
-exit
-fg
-mount
-mount| grep dev
-ls /dev/disk/by-uuid/
-ls -l /dev/disk/by-uuid/
-lsblk 
-clear
-exit
-make pccnct
-exit
-fg
-clear
-lsusb
-exit
-nixGLIntel falkon
-clear
-make clean
-nixGLIntel mpv *.mp4
-tmux 
-sudo reboot
-s
-. ~/.bashrc
-s
-. ~/.bash_aliases 
-s
-fish
-ss
-clear
-git status
-git status|less
-clear
-exir
-exit
-clear
-cd works/kaggle_runner/
-make pccnct
-exit
-exit
-exit
-exit
-uname -a
-ip route
-ps aux| grep 2345
-fish
-stty raw -echo && ncat -vlp 23454
-tmux
-s
-groups
-sudo vi /etc/sudoers
-sudo vim /etc/sudoers
-ss
-git status
-filter_public 
-cd ~/.dotfiles/
-tig --all
-tig
-exit
-bash -x ~/bin/xcb_change 
-tmux
-tmux ls
-mac pccnct
-make pccnct
-vim Makefile 
-s
-vi ~/.git/hooks/pre-push 
-git push
-git diff
-tig
-git checkout -- .bashrc .bash_logout
-clear
-mt
-alias mt
-mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com
-s
-exit
-cd works/kaggle_runner/
-make rpdbs
-mt
-make clean
-ps aux| grep vlp
-kill 48576
-stty raw -echo && ncat -vlp 9122
-man split
-vi ~/.shrc_customised
-pgrep clash
-fg
-exit
-bash
-fg
-exit
-bash
-fg
-exit
-#
-[0
-clear
-stty sane
-s
-clear
-git pull
-ss
-~/bin/filter_public 
-cd v/
-git status
-tig
-vi .git/config 
-vi ../.dotfiles/config
-git push
-git pull
-git push --tags
-clear
-cd ..
-tmux ls
-tat 0
-exit
-clear
-clear
-stty raw -echo && while true; do ncat -vlp 9122; sleep 1; done
-mt
-pwd
-clear
-htop
-make clean
-stty raw -echo && ncat -vlp 9417
-stty sane
-stty raw -echo && ncat -vlp 9185
-clear
-ls
-exit
-stty raw -echo && ncat -vlp 9417
-exit
-ps aux| grep vlp
-tat 0
-clear
-hwo
-clear
-tig
-clear
-tmux ls
-cler
-stty raw -echo && ncat -vlp 9185
-fg
-fish
-stty raw -echo && ncat -vlp 9185
-stty raw -echo &&while true; do ncat -vlp 9185; sleep 1; echo "new"; done
-clear
-bash -x ~/bin/xcb_change 
-make pccnct
-cd ..
-clear
-cat .r/intercept-384/main.py 
-vi logs_check 
-clear
-exit
-pwd
-clear
-ip route
-tig
-git pull
-tig
-s
-vim kaggle_runner/datasets/jigsaw_toxic_data.py 
-stty raw -echo &&while true; do ncat -vlp 9185; sleep 1; echo "new"; done
-tmux
-bash -x bin/xcb_change 
-clear
-exi
-exit
-nvim
-clear
-ip route
-ping baidu.com
-cd bert/
-ss
-clear
-ip route
-git commit -asm "Test with less data"
-cd ..
-which python
-make push PHASE=data
-exit
-tig
-exit
-exit
-cd works/kaggle_runner/
-fg
-git commit -asm "Update debug and multilang"
-git push
-tig
-m
-cd bert/
-ls
-fg
-tig
-fg
-sed -i -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"{1,2}$//' $TI
-echo "awefaw\"\""| sed -i -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"{1,2}$//' 
-echo "awefaw\"\""| sed -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"{1,2}$//' 
-echo "awefaw\"\""| sed  's/"{1,2}$//' 
-echo "awefaw\"\""| sed  's/"\{1,2\}$//' 
-echo "awefaw\"\""| sed -e 's/^"\{1,3\}\s*\(.*\)\s*"\{1,3\}$/\1/' -e 's/"\{1,2\}$//' 
-sudo vi /etc/ssh/sshd_config 
-sudo vim /etc/ssh/sshd_config 
-clear
-sudo systemctl restart sshd
-sudo systemctl restart ssh
-clear
-firefox 
-pkill firefox
-firefox -P
-firefox 
-clear
-firefox --no-remote --no-xshm
-bg
-clear
-tmux ls
-fg
-clear
-pkill firefox
-clear
-exit
-fg
-clear
-ls
-cd ..
-cd bert/
-sl
-ls
-tig
-git push
-cd ..
-mv bert/ bert_new
-git add submodule git@github.com:pennz/bert bert
-git  submodule add git@github.com:pennz/bert bert
-fg
-clear
-git status
-git commit -sm  "Added bert as submodule"
-git push
-clear
-ls
-clear
-fg
-tig
-clear
-git status
-tig
-git pull
-clear
-tig
-nvim Makefile 
-git status
-ls bert_new/
-cd bert
-git status
-git push
-tig
-fg
-clear
-ls
-clear
-ls
-cat __init__.py 
-cd ..
-ls
-fg
-clear
-ls
-clear
-ls
-mv bert kaggle_runner/
-cd kaggle_runner
-ls
-clear
-ls
-mkdir hub
-mv bert/ hub
-cd ..
-git status
-git add kaggle_runner/hub/bert/
-git stats
-clear
-vim .gitmodules 
-git status
-tig
-git revert HEAD
-git stash
-git revert HEAD
-tig
-clear
-git status
-git submodule status
-clear
-git status
-vi .git/config 
-git status
-clear
-ls
-git status
-cle
-clear
-ls
-rm -rf kaggle_runner/hub/bert/
-git  submodule add git@github.com:pennz/bert kaggle_runner/hub/bert
-git status
-clear
-git status
-git commit -asm "submodule place udpate"
-git psuh
-eit
-exit
-git push
-git statu
-clear
-cd kaggle_runner
-ls
-cd hub/
-tig
-clear
-cd bert/
-tig
-clea
-clear
-ls
-cd ..
-ls
-touch __init__.py
-cat bert/__init__.py 
-cd ..
-clear
-fg
-git status
-git add kaggle_runner/hub/__init__.py 
-git commit -sm "hub as module"
-clear
-cd bert_new/
-tig
-cd ..
-rm -rf bert
-rm -rf bert_new/
-git status
-clear
-ls
-mv mykbd.xkm ~
-ls
-clear
-fg
-git status
-clear
-ip route
-fg
-clear
-ls
-fg
-clear
-fg
-clear
-cd kaggle_runner/hub/bert/
-ls
-git status
-git commit -asm "Try splic data preprocess"
-c -
-make p
-tig
-clear
-git status
-git commit -asm "Update dataset prepare code"
-git push
-clear
-git status
-tig
-clear
-ls
-make check
-which python
-clear
-ls
-conda activate pyt
-make check
-fg
-git status
-fg
-clear
-fg
-clear
-fg
-make push PHASE=data
-make pccnct
-exit
-exit
-exit
-exit
-exit
-clear
-ps aux| grep ncat
-exit
-fg
-clear
-fg
-clear
-make p
-fg
-git status
-git diff
-git commit -sm "Update bert data preprocess "
-git push
-clear
-fg
-nvim Makefile 
-jobs
-clear
-ls
-clear
-fg
-clear
-tig
-clear
-jobs
-clear
-fg
-clear
-cat .gitmodules 
-fg
-clear
-fg
-make p
-m
-make rpdbs
-tat 0
-stty raw -echo && while true; do ncat -vlp 9220; sleep 1; done
-ss
-bash -x ~/bin/xcb_change 
-make pccnct
-exit
-exit
-exit
-fg
-clear
-exit
-vim datasets/bert.py 
-from kaggle_datasets import KaggleDatasets
-ss
-sh ~/bin/xcb*
-make push PHASE=data
-make pccnct
-exit
-clear
-nvim ../mq_log 
-clear
-fg
-git status
-make check
-fg
-cat ../.gitmodules 
-fg
-cat ../.git/config 
-fg
-cd ..
-sed -i 's/git@\(.*\):\(.*\)/https:\/\/\1\/\2/' .gitmodules 
-cat .gitmodules 
-git checkout -- .gitmodules
-cat .gitmodules 
-fg
-stty raw -echo && while true; do ncat -vlp 9220; sleep 1; done
-exi
-exit
-exit
-make clean
-exit
-clear
-git status
-make p
-git status
-git commit -asm "Data prepare"
-clear
-stty -a
-exit
-fg
-rg GCS_M_DS_PATH
-fg
-git submodule status
-clear
-stty raw -echo && while true; do ncat -vlp 9230; sleep 1; done
-fg
-clear
-make push PHASE=data
-fg
-m
-exit
-ps aux| grep clash
 setproxy
 curl google.com
-s
+ping baidu.com
 clear
-exit
-fish
+which v2ray
+clear
+brew install v2ray
+brew install v2rayX
+ls ~/go/src/github.com/v2ray/v2ray-core/
+clear
+cd ~/go/src/github.com/v2ray/v2ray-core/
+ls
 clear
 ls
-git status
-make p
-git push
-make push PHASE=data
+git pull
+ls
+clear
+ls
+go build
+ls
+ls ~/go/bin/
+clear
+ls
+go run v2ray
+go run v2ray.go 
+cd ..
+ls
+clear
+ls
+cd v2ray-core/
+ls
+go build .
+go run v2ray_test.go 
+ls main/
+go run main/main
+go run main/main.go 
+cd main/
+clear
+ls
+go build .
+ls
+ls ~/bin/
+cd ~/go/src/
+ls
+ls wt/
+cd v2ray.com/
+ls
+clear
+ls
+cd core/
+ls
+vi README.md 
+go build
+ls
+go run .
+cd main/
+go run .
+cp ~/.config/v2ray_client.json config.json
+vi config.json 
+go run .
+vi ~/.config/clash/vps.yaml 
+ping baidu.com
+exit
+exit
+cat ~/.config/v2ray_client.json 
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+man wget
+man curl
+vim
+nvim
+jobs
+nvim Makefile 
+jupyter lab
+fg
+cd hub/
+clear
+ls
+. ~/.bashrc
+conda activate pyt
+conda activate torch
+color_my_prompt 
+clear
+ls
+ip route
+ping baidu.com
+man jupytext
+jupytext -h
+vi /usr/local/etc/proxychains.conf
+ps aux| grep ssh
+vi ~/.shrc_customised
+ps aux| grep ssh
+. ~/.shrc_customised
 setproxy
-make push PHASE=data
+unsetproxy
+proxychains4 curl google.com
+proxychains4 brew update
+cd ..
+ls
+proxychains4 brew upgrade
+nvim Makefile 
+clear
+fg
+fg
+cat ~/.config/v2ray_client.json 
+clear
+fg
+fg
+cat ~/.config/v2ray_client.json 
+ping pengyuzhou.com
+nvim Makefile 
+nvim Makefile 
+ncat -vv pengyuzhou.com 26990
+clear
+ls
+exit
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
+ncat -vv pengyuzhou.com 13979
+clear
+ls
+cd work
+clear
+setproxy
+. ~/.bashrc
+setproxy
+ss
+which ss
+cd ~/works/
+ls
+clear
+cd v2ray/
+ls
+clear
+ls
+nvim config.json config.json.http
+setproxy
+./v2ray -config config.json
+pkill v2ray
+suod pkill v2ray
+sudo pkill v2ray
+ps aux| grep v2ray
+sudo pkill -9 v2ray
+ps aux| grep v2ray
+sudo pkill 18629
+ps aux| grep v2ray
+jobs
+fg
+clear
+vi ~/.shrc_customised
+. ~/.shrc_customised
+clear
+fish
+clear
+. ~/.bashrc
+color_my_prompt 
+setproxy
 clear
 htop
 fg
 jobs
 make check
 exit
+cd /mnt/d/update/compare/
+md5sum CtCdTimeMonitor_PH00
+md5sum CtCdTimeMonitor_PH002 
+ssh root@192.168.1.70
+ssh -p 29922 v@vtool.duckdns.org
+cd /mnt/d/workspace/
+nvim get_o_list
+fg
 clear
+ssh  -p 29922 v@vtool.duckdns.org
+mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
+locale
+LC_ALL=en_US.UTF-8 mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
+exit
+ls -lh ~/.ssh/authorized_keys 
+sudo -i
+cd
+git status
+git status | less
+git diff
+clea
+clear
+cd ~
+cp works/v2ray/config.json .config/v2ray_client.json 
+git add .config/v2ray_client.json 
+cat > .config/v2ray_server.json
+nvim .config/v2ray_server.json 
+git add -f .config/v2ray_server.json 
+git commit -sm "Added v2ray updated config"
+tig
+cd ~/.dotfiles/
+ls
+tig
+vi ~/bin/filter_public 
+clear
+exit
+git status
+git pull
+git mergetool
+git commit
 git push
-make pccnct
-cd works/kaggle_runner/
-make pccnct
+clear
+clear
+exit
+cd
+git push
+git pull
+git commit -asm "Update history"
+sh
+exit
+clear
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+clear
+proxychains4 curl https://www.google.com
+proxychains4 curl https://www.google.com
+proxychains4 curl https://www.google.com
+proxychains4 curl https://www.google.com
+proxychains4 curl https://www.google.com
+tail ~/.shrc_customised
+vi /usr/local/etc/proxychains.conf
+proxychains4 curl google.com
+ncat -vv pengyuzhou.com 26990
+ddd
+vi ~/.config/v2ray_client.json 
+clear
+which v2ray
+ls
+ncat -v pengyuzhou.com 26990
+dd
+ncat -v pengyuzhou.com 26990
+dddd
+clear
+ls
+clear
+vi /usr/local/etc/proxychains.conf
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+clear
+clear
+proxychains4 curl google.com
+clear
+pwd
+vi /usr/local/etc/proxychains.conf
+proxychains4 curl google.com
+jobs
+vi /usr/local/etc/proxychains.conf
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+proxychains4 curl google.com
+clear
+ip route
+proxychains4 curl google.com
+proxychains4 neomutt
+cd
+ls
+clear
+ls
+which v2ray
+clear
+ls
+locate v2ray
+cd works/v2ray/
+ls
+head config.json
+vi config.json
+./v2ray 
+./v2ray -h
+./v2ray -config ~/.config/v2ray_client.json 
+git pull
+pwd
+ls
+vi config.json
+./v2ray -config ~/.config/v2ray_client.json 
+./v2ray -config ~/config.yaml 
+./v2ray -config config.json
+vi config.json
+./v2ray -config config.json
+clear
+./v2ray -config config.json
+vi config.json
+./v2ray -config config.json
+ls
+clear
+pwd
+vi config.json
+nvim config.json
+./v2ray -config config.json
+proxychains4 wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.4/v2ray-macos.zip
+clear
+ip route
+mv ~/v.zip .
+unzip -d v.zip 
+unzip  v.zip 
+clear
+ls
+./v2ray -config config.json
+vi /usr/local/etc/proxychains.conf
+fg
+ssh -f -2qTnN -D 1080 -p 29932 pengyu@pengyuzhou.com 
+ssh -f -2qTnN -D 11080 -p 29932 pengyu@pengyuzhou.com 
+man ssh
+ssh -f -2qTn -D 11080 -p 29932 pengyu@pengyuzhou.com 
+ssh -f -2Tn -D 11080 -p 29932 pengyu@pengyuzhou.com 
+man ssh
+ssh -f -N -D 127.0.0.1:11080 -p 29932 pengyu@pengyuzhou.com 
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
+ssh -p 29932 pengyu@pengyuzhou.com
+s
+alais
+alias s
+s
+ssh -p 29932 pengyu@pengyuzhou.com
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
+  
+pbcopy < ~/.kaggle/kaggle.json 
+ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
+clear
+ps aux | grep v2ray
+kill 61103
+ps aux | grep v2ray
+kill 40514
+ps aux | grep v2ray
+kill 94663
+ps aux | grep v2ray
+pkill v2ray
+ps aux | grep v2ray
+pwd
+cd ~/works/v2ray/
+ls
+clear
+ls
+vi config.json
+clear
+ls
+./v2ray -config config.json
+bg
+cat config.json
+clear
+ls
+vi config.json
+m
+tmux ls
+tat rvsConnector
+r
+clclear
+clear
+stty sane
+clear
+fg
+jobs
+jobs
+jobs -p
+ps ww 59793
+fg
+jobs
+clear
+tmux ls
+clear
+exit
+clear
+clear
+m
+clear
+ps aux| grep v2ray
+cd v2ray/
+pwd
+ls
+cd ../works/v2ray/
+ls
+vi config.json
+rm config.json
+ln -s ~/.config/v2ray_client.json config.json
+./v2ray -config config.json
+bg
+clear
+. ~/.bashrc
+setproxy
+cat config.json
+setproxy
+color_my_prompt 
+curl google.com
+curl https://www.google.com
+clear
+nvim ~/.config/v2ray_server.json 
+clear
+git status
+clear
+git status | less
+git commit -sm "Format config v2ray server"
+clear
+setproxy
+curl https://www.google.com
+clear
+exi
+exit
+fish
+clear
+ls
+ss
+clear
+. ~/.bashrc
+setproxy
+exit
+curl https://www.google.com
+clear
+curl https://www.google.com
+clear
+curl https://www.google.com
+curl -vv https://www.google.com
+git commit -sm "Format config v2ray server"
+setproxy
+curl https://www.google.com
+exi
+fish
+ls
+ss
+vi config.json
+nvim config.json
+git status
+git status|less
+git diff --cached
+tig
+git branch
+pwd
+clear
+fg
+exit
+exit
+clear
+exit
+exit
+ip route
+clear
+exit
+ss
+clear
+. ~/.bashrc
+conda activate pyt
+conda activate torch
+nvim Makefile 
+kaggle datasets
+kaggle datasets download --help
+fg
+make get_submission
+fg
+make get_submission
+which kaggle
+/usr/local/bin/kaggle 
+vi /usr/local/bin/kaggle 
+python3 -m kaggle.cli
+python3 -m kaggle.cli -j
+python3 -m kaggle.cli -h
+python3 -m kaggle.cli asfsadf
+fg
+make get_submission
+clear
+ls
+pwd
+ls *csv
+fg
+unzip '*.zip' && rm *.zip && mv *.csv submission.csv
+rm submission.csv 
+unzip '*.zip' && rm *.zip && mv *.csv submission.csv
+make get_submission
+ls submission.csv 
+head submission.csv 
+ls *.zip
+fg
+git add submission.csv 
+git status
+git commit -asm "Update submission and makefile"
+clear
+ls submission.csv 
+tig submission.csv 
+clear
+ls
+jobs
 fg
 clear
 tmux ls
