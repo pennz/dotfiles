@@ -1,6 +1,4 @@
-cd /mnt/d/workspace
-
-export PROXY_URL='http://127.0.0.1:7890'
+export PROXY_URL='http://127.0.0.1:21080'
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
 alias vim='nvim -u ~/.config/nvim_back/init.vim'

@@ -33,7 +33,7 @@ let lite = 0
 
 nnoremap <SPACE> <Nop>
 "" Map leader to <SPACE>
-let mapleader=' '
+let mapleader="\<SPACE>"
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
 
@@ -61,6 +61,7 @@ Plug 'skywind3000/asyncrun.vim'
 endif
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Yggdroot/indentLine'
 
 if !lite
 "*****************************************************************************
@@ -206,7 +207,7 @@ set backspace=indent,eol,start
 
 "" Tabs. May be overridden by autocmd rules
 set tabstop=4
-set softtabstop=0
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 
@@ -729,7 +730,7 @@ let g:ale_fixers = {
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
-\    'python': ['add_blank_lines_for_python_control_statements', 'remove_trailing_lines', 'trim_whitespace', 'isort'],
+\    'python': ['add_blank_lines_for_python_control_statements', 'remove_trailing_lines', 'trim_whitespace'],
 \    'sh': ['shfmt'],
 \}
 let g:ale_fix_on_save = 1
