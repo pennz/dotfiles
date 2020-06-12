@@ -1279,7 +1279,7 @@ func! BufSwitch()
           bp
       endif
     else
-      if @# =~ "NERD" || @# == "" || @# =~ "__" || @# =~ "term"
+      if @# =~ "NERD" || @# == "" || @# =~ "^__" || @# =~ "term"
         " if it is the fist buf
         if cnr == buflist[0]
           echo "bn"
