@@ -1,331 +1,3 @@
-vi ~/.config/clash/vps.yaml 
-exit
-ping baidu.com
-ncat -v pengyuzhou.com 26990
-nmap -p 26990 pengyuzhou.com
-clear
-ip route
-setproxy
-curl google.com
-ping baidu.com
-clear
-which v2ray
-clear
-brew install v2ray
-brew install v2rayX
-ls ~/go/src/github.com/v2ray/v2ray-core/
-clear
-cd ~/go/src/github.com/v2ray/v2ray-core/
-ls
-clear
-ls
-git pull
-ls
-clear
-ls
-go build
-ls
-ls ~/go/bin/
-clear
-ls
-go run v2ray
-go run v2ray.go 
-cd ..
-ls
-clear
-ls
-cd v2ray-core/
-ls
-go build .
-go run v2ray_test.go 
-ls main/
-go run main/main
-go run main/main.go 
-cd main/
-clear
-ls
-go build .
-ls
-ls ~/bin/
-cd ~/go/src/
-ls
-ls wt/
-cd v2ray.com/
-ls
-clear
-ls
-cd core/
-ls
-vi README.md 
-go build
-ls
-go run .
-cd main/
-go run .
-cp ~/.config/v2ray_client.json config.json
-vi config.json 
-go run .
-vi ~/.config/clash/vps.yaml 
-ping baidu.com
-exit
-exit
-cat ~/.config/v2ray_client.json 
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-man wget
-man curl
-vim
-nvim
-jobs
-nvim Makefile 
-jupyter lab
-fg
-cd hub/
-clear
-ls
-. ~/.bashrc
-conda activate pyt
-conda activate torch
-color_my_prompt 
-clear
-ls
-ip route
-ping baidu.com
-man jupytext
-jupytext -h
-vi /usr/local/etc/proxychains.conf
-ps aux| grep ssh
-vi ~/.shrc_customised
-ps aux| grep ssh
-. ~/.shrc_customised
-setproxy
-unsetproxy
-proxychains4 curl google.com
-proxychains4 brew update
-cd ..
-ls
-proxychains4 brew upgrade
-nvim Makefile 
-clear
-fg
-fg
-cat ~/.config/v2ray_client.json 
-clear
-fg
-fg
-cat ~/.config/v2ray_client.json 
-ping pengyuzhou.com
-nvim Makefile 
-nvim Makefile 
-ncat -vv pengyuzhou.com 26990
-clear
-ls
-exit
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-ncat -vv pengyuzhou.com 13979
-clear
-ls
-cd work
-clear
-setproxy
-. ~/.bashrc
-setproxy
-ss
-which ss
-cd ~/works/
-ls
-clear
-cd v2ray/
-ls
-clear
-ls
-nvim config.json config.json.http
-setproxy
-./v2ray -config config.json
-pkill v2ray
-suod pkill v2ray
-sudo pkill v2ray
-ps aux| grep v2ray
-sudo pkill -9 v2ray
-ps aux| grep v2ray
-sudo pkill 18629
-ps aux| grep v2ray
-jobs
-fg
-clear
-vi ~/.shrc_customised
-. ~/.shrc_customised
-clear
-fish
-clear
-. ~/.bashrc
-color_my_prompt 
-setproxy
-clear
-htop
-fg
-jobs
-make check
-exit
-cd /mnt/d/update/compare/
-md5sum CtCdTimeMonitor_PH00
-md5sum CtCdTimeMonitor_PH002 
-ssh root@192.168.1.70
-ssh -p 29922 v@vtool.duckdns.org
-cd /mnt/d/workspace/
-nvim get_o_list
-fg
-clear
-ssh  -p 29922 v@vtool.duckdns.org
-mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
-locale
-LC_ALL=en_US.UTF-8 mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
-exit
-ls -lh ~/.ssh/authorized_keys 
-sudo -i
-cd
-git status
-git status | less
-git diff
-clea
-clear
-cd ~
-cp works/v2ray/config.json .config/v2ray_client.json 
-git add .config/v2ray_client.json 
-cat > .config/v2ray_server.json
-nvim .config/v2ray_server.json 
-git add -f .config/v2ray_server.json 
-git commit -sm "Added v2ray updated config"
-tig
-cd ~/.dotfiles/
-ls
-tig
-vi ~/bin/filter_public 
-clear
-exit
-git status
-git pull
-git mergetool
-git commit
-git push
-clear
-clear
-exit
-cd
-git push
-git pull
-git commit -asm "Update history"
-sh
-exit
-clear
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-clear
-proxychains4 curl https://www.google.com
-proxychains4 curl https://www.google.com
-proxychains4 curl https://www.google.com
-proxychains4 curl https://www.google.com
-proxychains4 curl https://www.google.com
-tail ~/.shrc_customised
-vi /usr/local/etc/proxychains.conf
-proxychains4 curl google.com
-ncat -vv pengyuzhou.com 26990
-ddd
-vi ~/.config/v2ray_client.json 
-clear
-which v2ray
-ls
-ncat -v pengyuzhou.com 26990
-dd
-ncat -v pengyuzhou.com 26990
-dddd
-clear
-ls
-clear
-vi /usr/local/etc/proxychains.conf
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-clear
-clear
-proxychains4 curl google.com
-clear
-pwd
-vi /usr/local/etc/proxychains.conf
-proxychains4 curl google.com
-jobs
-vi /usr/local/etc/proxychains.conf
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-clear
-ip route
-proxychains4 curl google.com
-proxychains4 neomutt
-cd
-ls
-clear
-ls
-which v2ray
-clear
-ls
-locate v2ray
-cd works/v2ray/
-ls
-head config.json
-vi config.json
-./v2ray 
-./v2ray -h
-./v2ray -config ~/.config/v2ray_client.json 
-git pull
-pwd
-ls
-vi config.json
-./v2ray -config ~/.config/v2ray_client.json 
-./v2ray -config ~/config.yaml 
-./v2ray -config config.json
-vi config.json
-./v2ray -config config.json
-clear
-./v2ray -config config.json
-vi config.json
-./v2ray -config config.json
-ls
-clear
-pwd
-vi config.json
-nvim config.json
-./v2ray -config config.json
-proxychains4 wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.4/v2ray-macos.zip
-clear
-ip route
-mv ~/v.zip .
-unzip -d v.zip 
-unzip  v.zip 
-clear
-ls
-./v2ray -config config.json
-vi /usr/local/etc/proxychains.conf
-fg
-ssh -f -2qTnN -D 1080 -p 29932 pengyu@pengyuzhou.com 
-ssh -f -2qTnN -D 11080 -p 29932 pengyu@pengyuzhou.com 
-man ssh
-ssh -f -2qTn -D 11080 -p 29932 pengyu@pengyuzhou.com 
-ssh -f -2Tn -D 11080 -p 29932 pengyu@pengyuzhou.com 
-man ssh
-ssh -f -N -D 127.0.0.1:11080 -p 29932 pengyu@pengyuzhou.com 
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
-ssh -p 29932 pengyu@pengyuzhou.com
-s
-alais
 alias s
 s
 ssh -p 29932 pengyu@pengyuzhou.com
@@ -499,3 +171,330 @@ clear
 ls
 mv ~/Downloads/Copy_of_shonenkov_training_pipeline.ipynb hub/shonenkov_training_pipeline.ipynb 
 git commit -sm "Updated ipynb code from colab v6~v7 submission"
+cd
+sh
+cp .config/v2ray_client.json /mnt/c/Users/ZhouPengyu/Downloads/v2ray-windows-64/New\ folder/
+cd /mnt/c/Users/ZhouPengyu/Downloads/v2ray-windows-64/New\ folder/
+./v2ray.exe -config v2ray_client.json 
+cmd.exe .
+powershell
+powershell.exe
+cp ~/.config/v2ray_client_u.json .
+cp ~/.config/v2ray_client.json /mnt/c/Users/ZhouPengyu/Downloads/v2ray-windows-64/New\ folder/
+LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
+LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
+LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
+exit
+. ~/.fzf.bash 
+nvim ~/.config/v2ray_client.json 
+git push
+cd
+git push
+tig
+clear
+git status | less
+clear
+LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
+clear
+git status
+clear
+tig
+pwd
+clear
+tig
+ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
+cd /mnt/d/PIE/
+cd peip_dev/
+clear
+git fetch
+ls
+clear
+cd beip30/
+ls
+tig
+git remote show
+git remote show origin
+clear
+tig
+git fetch
+tig --all
+clear
+ls
+tig
+git fetch
+clear
+git pull
+git branch -a
+git chekcout integration/master_fix
+git checkcout integration/master_fix
+git checkout integration/master_fix
+rm -r 1500-build/LB/Release/
+git checkout integration/master_fix
+rm -r 1500-build/LB/licenses/
+git merge
+git pull
+git checkout integration/master_fix
+git checkout --force integration/master_fix
+clear
+git status
+cat > .gitignore
+git status
+git status
+tig
+git status
+git status
+clear
+git rm -r 1500-build/LB/Release/
+clear
+git status
+tig
+clear
+git status
+clear
+clear
+no
+clear
+pwd
+cd /mnt/d/PIE/BEIP_dev/
+ls beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00
+ls beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00|wc -l
+ls beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00|wc -l
+pwd
+cd beip30/1500-build/LB/
+clear
+cat SH00.ini 
+wc -l SH00.ini 
+clear
+clear
+ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
+clear
+ps aux| grep ssh
+pkill ssh
+ps aux| grep ssh
+ps aux| grep ssh
+ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
+ps aux| grep ssh
+ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
+clear
+ssh -L 9001:localhost:10001 -p 29922 v@vtool.duckdns.org
+clear
+ip route
+clear
+cd $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0900_System')
+ls
+cd 02_configout/
+ls
+clear
+ls
+nvim rte/
+cd ../..
+clear
+fzf
+git init
+git add 0900_System/02_configout/
+jobs
+nvim 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
+vi 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
+which vi
+vim -u None 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
+fg
+rg CdIoHwAbASIL_Adc_ChannelValue_mV
+fg
+git diff
+clear
+fzf
+git diff
+vi 0900_System/02_configout/build/swc/CtApVMS.ini 
+vi -u NONE 0900_System/02_configout/build/swc/CtApVMS.ini 
+git diff
+git status
+git diff --cached
+clear
+jobs
+fg
+fzf
+fg
+fzf
+tree $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
+ls $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
+echo $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
+cd /mnt/c/Users/ZhouPengyu/Downloads/SAIC_EP21H2_SW011_PIE-CD-15/0200_Platform/SH00/03_src/CDD/
+ls
+clear
+cd AdcHwAb/
+ls
+tree
+cd ..
+ls
+fzf
+cd ..
+fzf
+cd ../..
+cd ..
+fzf
+cp -r ME04RC3_2265(OLDVMS+SDM13ENABLE)/0200_Platform/SH00/03_src/CDD/AdcHwAb/cfg/ 0200_Platform/SH00/03_src/CDD/AdcHwAb/
+cp -r 'ME04RC3_2265(OLDVMS+SDM13ENABLE)/0200_Platform/SH00/03_src/CDD/AdcHwAb/cfg' 0200_Platform/SH00/03_src/CDD/AdcHwAb/
+jobs
+fg
+git status
+clear
+git status 
+git commit -sm "init added 0900"
+git status
+git diff
+git status
+rsync -v  0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini
+rsync -v 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c
+vi ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVM
+vi -u NONE ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini 
+. ~/.fzf.bash 
+echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" "
+echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" " -f 2,1
+echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" " -f 1,2
+echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | sed 's/\(.*\) \(.*\)/\2 \1/'
+cat ~/bin/swap2
+cat >> ~/bin/swap2
+chmod +x ~/bin/swap2 
+~/bin/swap2 
+~/bin/swap2 aaa bbb
+git status
+rsync -v $(swap2 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini )
+rsync -v $(swap2 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c)
+git diff
+vim 0900_System/02_configout/build/swc/CtApVMS.ini
+find 0200_Platform/SH00/03_src/CDD/ --type f
+find 0200_Platform/SH00/03_src/CDD/ -type f
+find 0200_Platform/SH00/03_src/CDD/ -type f --name "*.c"
+find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c"
+find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" | xargs rm
+find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" 
+find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" | cat
+git diff
+find 0200_Platform/SH00/03_src/MCAL/ -type d
+find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c"
+find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c" | xarg rm 
+find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c" | xargs rm 
+git status
+git commit -asm "Added VMS code for read ADC"
+tig
+clear
+ls
+exit
+clear
+git diff
+tig
+pwd
+$PWD
+echo $PWD
+cmd.exe .
+tig
+clear
+tig
+man tig
+tig
+explorer.exe .
+git 
+clear
+git whatchanged
+rsync -r 0900_System/02_configout/build/swc/CtApVMS.ini
+0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c
+mkdir -p send/0900_System/02_configout/build/swc/CtApVMS.ini
+0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c
+mkdir -p send/0900_System/02_configout/build/swc/
+mkdir -p send/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/
+tree send/
+rmdir send/0900_System/02_configout/build/swc/CtApVMS.ini
+tree send/
+cp 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c send/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c
+cp 0900_System/02_configout/build/swc/CtApVMS.ini send/0900_System/02_configout/build/swc/CtApVMS.ini
+tree send/
+tig
+clea
+clear
+tig
+cd /mnt/c/Users/ZhouPengyu/Downloads/SAIC_EP21H2_SW011_PIE-CD-15/
+ls
+clear
+ls
+clear
+rsync -r 0200_Platform/SH00/03_src/CDD/AdcHwAb/api/ send/0900_System/02_configout/nd
+rsync -vr 0200_Platform/SH00/03_src/CDD/AdcHwAb/api/ send/
+tree send
+rm -rf send/0900_System/02_configout/nd/
+rm send/*.h
+tree send/
+clear
+ls 0200_Platform/SH00/03_src/CDD/
+ls 0200_Platform/SH00/03_src/CDD/AdcHwAb/
+ls 0200_Platform/SH00/03_src/CDD/AdcHwAb/api/
+tree 0200_Platform/SH00/03_src/CDD/AdcHwAb/
+mkdir -p send/0200_Platform/SH00/03_src/CDD/AdcHwAb/
+cp -r 0200_Platform/SH00/03_src/CDD/AdcHwAb/* send/0200_Platform/SH00/03_src/CDD/AdcHwAb/
+mkdir -p send/0200_Platform/SH00/03_src/MCAL
+cp -r 0200_Platform/SH00/03_src/MCAL/Vadc/ send/0200_Platform/SH00/03_src/MCAL/
+tree send/
+clear
+ls
+clear
+tree send/
+clear
+tig
+ git whatchanged
+tig
+clear
+ls
+tree send/
+rsync -vr send/* ../SAIC_EP21H2_SW011_PIE-CD-15-2
+cd /mnt/d/PIE/peip_dev/beip30
+clear
+cmd.exe 1500-build/LB/
+tig 
+tig ../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00/
+tig ../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00
+git status
+git status | less
+git status
+ls ../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00
+ls ../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00| wc -l
+ls ../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00| wc -l
+ls ../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00| wc -l
+git status
+git rm scripts/*.pyc
+git rm *.pyc
+git rm **/*.pyc
+git rm -f **/*.pyc
+git status
+git commit -sm "Remove building cahce files"
+tig
+git status
+cat SH00.ini 
+cat ../../.gitignore 
+cat >> ../../.gitignore 
+git status
+git status
+git rm --cached -r _MotionWise/
+git status
+clear
+git commit -sm "Removed building cache"
+git status
+git push
+pwd
+cd ../../1700-configout/
+ir
+clear
+c -
+ls
+python build.py  --host SafetyHost
+python.exe build.py  --host SafetyHost
+tig ../../1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00
+tmux
+echo $PYTHONIOENCODING
+vi ~/.bashrc
+vi ~/.shrc_customised
+source ~/.shrc_customised
+echo $PYTHONIOENCODING
+echo $SHELL
+man make
+clear
+exit
+LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
