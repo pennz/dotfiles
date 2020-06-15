@@ -37,6 +37,7 @@ let mapleader="\<SPACE>"
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
 
+Plug 'vim-scripts/Conque-Shell'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
@@ -1220,8 +1221,8 @@ tnoremap <Esc> <C-\><C-n>
 
 set lazyredraw
 let g:go_version_warning = 0
-nnoremap <silent> <Leader>h :<C-u>if winnr() == winnr('$') <BAR> bd <BAR> else <BAR> hide <BAR> endif <CR>
-nnoremap <silent> <Leader>M :<C-u>only<CR>
+nnoremap <silent><Leader>h :<C-u>if 1 == winnr('$') <BAR> bd <BAR> else <BAR> hide <BAR> endif <CR>
+nnoremap <silent><Leader>M :<C-u>only<CR>
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
@@ -1316,8 +1317,8 @@ nnoremap <silent><Leader>E :e ~/.vimrc_back<CR>
 "noremap <silent><Leader>p :<C-u>wincmd p<CR>
 nnoremap <leader>ss :<C-u>wq<CR>
 nnoremap <silent><Leader><Leader> :call BufSwitch()<CR>
-"nnoremap <leader>D :<C-u>let @#="<C-R>#" <BAR> keepalt BD<CR> nnoremap
-"<leader>dd :keepalt bd<CR>
+nnoremap <leader>D :<C-u>let @#="<C-R>#" <BAR> keepalt BD<CR>
+nnoremap <leader>dd :keepalt bd<CR>
 nnoremap <leader>ddd :<C-u>bd!<CR>
 nnoremap <silent><leader>dd :call BufDelete()<CR>
 vnoremap <Leader><Leader><Leader> <ESC>
@@ -1580,7 +1581,7 @@ let g:EclimLoggingDisabled = 1  " trouble with class hierarchies where the ances
 "" jedi
 "let g:jedi#goto_assignments_command = '<cr>'
 let g:jedi#use_tabs_not_buffers = "0"
-let g:jedi#use_splits_not_buffers = "0"
+let g:jedi#use_splits_not_buffers = "bottom"
 let g:jedi#popup_on_dot = 0
 let g:pymode_rope = 0
 
@@ -1651,3 +1652,7 @@ set complete+=kspell
 nnoremap <Leader>o :on<CR>
 hi Visual term=reverse cterm=reverse guibg=Grey
 colorscheme xcodedarkhc
+nmap <silent><Leader>tf <Esc>:Pytest file<CR>
+nmap <silent><Leader>tc <Esc>:Pytest class<CR>
+nmap <silent><Leader>tm <Esc>:Pytest method<CR>
+nmap <silent><Leader>ts <Esc>:Pytest session<CR>

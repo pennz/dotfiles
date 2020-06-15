@@ -202,22 +202,20 @@ shopt -s histappend
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-if [ -L "$HOME"/.shrc_customised ]; then
-    source "$HOME"/.shrc_customised
-fi
-
-TRY_CONDA=$(ls -d ~/*conda* | head -n 1)
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$("$TRY_CONDA/bin/conda" 'shell.bash' 'hook' 2>/dev/null)"
+__conda_folder="$HOME/$(basename $(find $HOME -maxdepth 1 -name "*conda*" -type d,l | grep -v "\.conda" | head -n 1))"
+__conda_setup="$(${__conda_folder}/bin/conda 'shell.bash' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "$TRY_CONDA/etc/profile.d/conda.sh" ]; then
-        . "$TRY_CONDA/etc/profile.d/conda.sh"
+    if [ -f "${__conda_folder}/etc/profile.d/conda.sh" ]; then
+        source "${__conda_folder}/etc/profile.d/conda.sh"  # commented out by conda initialize
     else
-        export PATH="$TRY_CONDA/bin:$PATH"
+        export PATH="${__conda_folder}/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
+conda deactivate
+
+if [ -L "$HOME"/.shrc_customised ]; then
+    source "$HOME"/.shrc_customised
+fi
