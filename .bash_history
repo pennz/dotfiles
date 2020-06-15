@@ -1,917 +1,3 @@
-vi ~/.config/clash/vps.yaml 
-exit
-ping baidu.com
-ncat -v pengyuzhou.com 26990
-nmap -p 26990 pengyuzhou.com
-clear
-ip route
-setproxy
-curl google.com
-ping baidu.com
-clear
-which v2ray
-clear
-brew install v2ray
-brew install v2rayX
-ls ~/go/src/github.com/v2ray/v2ray-core/
-clear
-cd ~/go/src/github.com/v2ray/v2ray-core/
-ls
-clear
-ls
-git pull
-ls
-clear
-ls
-go build
-ls
-ls ~/go/bin/
-clear
-ls
-go run v2ray
-go run v2ray.go 
-cd ..
-ls
-clear
-ls
-cd v2ray-core/
-ls
-go build .
-go run v2ray_test.go 
-ls main/
-go run main/main
-go run main/main.go 
-cd main/
-clear
-ls
-go build .
-ls
-ls ~/bin/
-cd ~/go/src/
-ls
-ls wt/
-cd v2ray.com/
-ls
-clear
-ls
-cd core/
-ls
-vi README.md 
-go build
-ls
-go run .
-cd main/
-go run .
-cp ~/.config/v2ray_client.json config.json
-vi config.json 
-go run .
-vi ~/.config/clash/vps.yaml 
-ping baidu.com
-exit
-exit
-cat ~/.config/v2ray_client.json 
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-man wget
-man curl
-vim
-nvim
-jobs
-nvim Makefile 
-jupyter lab
-fg
-cd hub/
-clear
-ls
-. ~/.bashrc
-conda activate pyt
-conda activate torch
-color_my_prompt 
-clear
-ls
-ip route
-ping baidu.com
-man jupytext
-jupytext -h
-vi /usr/local/etc/proxychains.conf
-ps aux| grep ssh
-vi ~/.shrc_customised
-ps aux| grep ssh
-. ~/.shrc_customised
-setproxy
-unsetproxy
-proxychains4 curl google.com
-proxychains4 brew update
-cd ..
-ls
-proxychains4 brew upgrade
-nvim Makefile 
-clear
-fg
-fg
-cat ~/.config/v2ray_client.json 
-clear
-fg
-fg
-cat ~/.config/v2ray_client.json 
-ping pengyuzhou.com
-nvim Makefile 
-nvim Makefile 
-ncat -vv pengyuzhou.com 26990
-clear
-ls
-exit
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-stty raw -echo &&while true; do ncat -vlp 9017; sleep 1; echo "new"; done
-ncat -vv pengyuzhou.com 13979
-clear
-ls
-cd work
-clear
-setproxy
-. ~/.bashrc
-setproxy
-ss
-which ss
-cd ~/works/
-ls
-clear
-cd v2ray/
-ls
-clear
-ls
-nvim config.json config.json.http
-setproxy
-./v2ray -config config.json
-pkill v2ray
-suod pkill v2ray
-sudo pkill v2ray
-ps aux| grep v2ray
-sudo pkill -9 v2ray
-ps aux| grep v2ray
-sudo pkill 18629
-ps aux| grep v2ray
-jobs
-fg
-clear
-vi ~/.shrc_customised
-. ~/.shrc_customised
-clear
-fish
-clear
-. ~/.bashrc
-color_my_prompt 
-setproxy
-clear
-htop
-fg
-jobs
-make check
-exit
-cd /mnt/d/update/compare/
-md5sum CtCdTimeMonitor_PH00
-md5sum CtCdTimeMonitor_PH002 
-ssh root@192.168.1.70
-ssh -p 29922 v@vtool.duckdns.org
-cd /mnt/d/workspace/
-nvim get_o_list
-fg
-clear
-ssh  -p 29922 v@vtool.duckdns.org
-mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
-locale
-LC_ALL=en_US.UTF-8 mosh --ssh="ssh  -p 29922" v@vtool.duckdns.org
-exit
-ls -lh ~/.ssh/authorized_keys 
-sudo -i
-cd
-git status
-git status | less
-git diff
-clea
-clear
-cd ~
-cp works/v2ray/config.json .config/v2ray_client.json 
-git add .config/v2ray_client.json 
-cat > .config/v2ray_server.json
-nvim .config/v2ray_server.json 
-git add -f .config/v2ray_server.json 
-git commit -sm "Added v2ray updated config"
-tig
-cd ~/.dotfiles/
-ls
-tig
-vi ~/bin/filter_public 
-clear
-exit
-git status
-git pull
-git mergetool
-git commit
-git push
-clear
-clear
-exit
-cd
-git push
-git pull
-git commit -asm "Update history"
-sh
-exit
-clear
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-clear
-proxychains4 curl https://www.google.com
-proxychains4 curl https://www.google.com
-proxychains4 curl https://www.google.com
-proxychains4 curl https://www.google.com
-proxychains4 curl https://www.google.com
-tail ~/.shrc_customised
-vi /usr/local/etc/proxychains.conf
-proxychains4 curl google.com
-ncat -vv pengyuzhou.com 26990
-ddd
-vi ~/.config/v2ray_client.json 
-clear
-which v2ray
-ls
-ncat -v pengyuzhou.com 26990
-dd
-ncat -v pengyuzhou.com 26990
-dddd
-clear
-ls
-clear
-vi /usr/local/etc/proxychains.conf
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-clear
-clear
-proxychains4 curl google.com
-clear
-pwd
-vi /usr/local/etc/proxychains.conf
-proxychains4 curl google.com
-jobs
-vi /usr/local/etc/proxychains.conf
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-proxychains4 curl google.com
-clear
-ip route
-proxychains4 curl google.com
-proxychains4 neomutt
-cd
-ls
-clear
-ls
-which v2ray
-clear
-ls
-locate v2ray
-cd works/v2ray/
-ls
-head config.json
-vi config.json
-./v2ray 
-./v2ray -h
-./v2ray -config ~/.config/v2ray_client.json 
-git pull
-pwd
-ls
-vi config.json
-./v2ray -config ~/.config/v2ray_client.json 
-./v2ray -config ~/config.yaml 
-./v2ray -config config.json
-vi config.json
-./v2ray -config config.json
-clear
-./v2ray -config config.json
-vi config.json
-./v2ray -config config.json
-ls
-clear
-pwd
-vi config.json
-nvim config.json
-./v2ray -config config.json
-proxychains4 wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.4/v2ray-macos.zip
-clear
-ip route
-mv ~/v.zip .
-unzip -d v.zip 
-unzip  v.zip 
-clear
-ls
-./v2ray -config config.json
-vi /usr/local/etc/proxychains.conf
-fg
-ssh -f -2qTnN -D 1080 -p 29932 pengyu@pengyuzhou.com 
-ssh -f -2qTnN -D 11080 -p 29932 pengyu@pengyuzhou.com 
-man ssh
-ssh -f -2qTn -D 11080 -p 29932 pengyu@pengyuzhou.com 
-ssh -f -2Tn -D 11080 -p 29932 pengyu@pengyuzhou.com 
-man ssh
-ssh -f -N -D 127.0.0.1:11080 -p 29932 pengyu@pengyuzhou.com 
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
-ssh -p 29932 pengyu@pengyuzhou.com
-s
-alais
-alias s
-s
-ssh -p 29932 pengyu@pengyuzhou.com
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
-  
-pbcopy < ~/.kaggle/kaggle.json 
-ssh -f -N -D 21080 -p 29932 pengyu@pengyuzhou.com 
-clear
-ps aux | grep v2ray
-kill 61103
-ps aux | grep v2ray
-kill 40514
-ps aux | grep v2ray
-kill 94663
-ps aux | grep v2ray
-pkill v2ray
-ps aux | grep v2ray
-pwd
-cd ~/works/v2ray/
-ls
-clear
-ls
-vi config.json
-clear
-ls
-./v2ray -config config.json
-bg
-cat config.json
-clear
-ls
-vi config.json
-m
-tmux ls
-tat rvsConnector
-r
-clclear
-clear
-stty sane
-clear
-fg
-jobs
-jobs
-jobs -p
-ps ww 59793
-fg
-jobs
-clear
-tmux ls
-clear
-exit
-clear
-clear
-m
-clear
-ps aux| grep v2ray
-cd v2ray/
-pwd
-ls
-cd ../works/v2ray/
-ls
-vi config.json
-rm config.json
-ln -s ~/.config/v2ray_client.json config.json
-./v2ray -config config.json
-bg
-clear
-. ~/.bashrc
-setproxy
-cat config.json
-setproxy
-color_my_prompt 
-curl google.com
-curl https://www.google.com
-clear
-nvim ~/.config/v2ray_server.json 
-clear
-git status
-clear
-git status | less
-git commit -sm "Format config v2ray server"
-clear
-setproxy
-curl https://www.google.com
-clear
-exi
-exit
-fish
-clear
-ls
-ss
-clear
-. ~/.bashrc
-setproxy
-exit
-curl https://www.google.com
-clear
-curl https://www.google.com
-clear
-curl https://www.google.com
-curl -vv https://www.google.com
-git commit -sm "Format config v2ray server"
-setproxy
-curl https://www.google.com
-exi
-fish
-ls
-ss
-vi config.json
-nvim config.json
-git status
-git status|less
-git diff --cached
-tig
-git branch
-pwd
-clear
-fg
-exit
-exit
-clear
-exit
-exit
-ip route
-clear
-exit
-ss
-clear
-. ~/.bashrc
-conda activate pyt
-conda activate torch
-nvim Makefile 
-kaggle datasets
-kaggle datasets download --help
-fg
-make get_submission
-fg
-make get_submission
-which kaggle
-/usr/local/bin/kaggle 
-vi /usr/local/bin/kaggle 
-python3 -m kaggle.cli
-python3 -m kaggle.cli -j
-python3 -m kaggle.cli -h
-python3 -m kaggle.cli asfsadf
-fg
-make get_submission
-clear
-ls
-pwd
-ls *csv
-fg
-unzip '*.zip' && rm *.zip && mv *.csv submission.csv
-rm submission.csv 
-unzip '*.zip' && rm *.zip && mv *.csv submission.csv
-make get_submission
-ls submission.csv 
-head submission.csv 
-ls *.zip
-fg
-git add submission.csv 
-git status
-git commit -asm "Update submission and makefile"
-clear
-ls submission.csv 
-tig submission.csv 
-clear
-ls
-jobs
-fg
-clear
-tmux ls
-tmux
-make push PHASE=data
-exit
-ls -lh ~/.ssh/authorized_keys 
-sudo -i
-cd
-git status
-git status | less
-git diff
-clea
-clear
-git commit -asm "Update"
-make push
-clear
-make p
-vi Makefile 
-git push
-git status
-clear
-ip route
-p
-c ~/works/kaggle_runner/
-clear
-ip route
-ping baidu.com
-unsetproxy
-curl google.com
-clear
-ip route
-ssh root@192.168.1.1
-vi  /home/v/.ssh/known_hosts +40
-s
-curl google.com
-m
-clear
-s
-dig pengyuzhou.com
-sudo pacman -S dnsutils
-dig pengyuzhou.com
-ssh root@192.168.1.1
-curl google.com
-curl baidu.com
-sudo vi /etc/sudoers
-sudo ls
-clear
-git sttus
-cat ~/.ssh/config 
-git checkout HEAD^ ~/.ssh/config
-cd ~
-git checkout HEAD^ ~/.ssh/config
-git diff
-git diff --cahced
-git diff --cached
-git pull
-clear
-ip route
-ping baidu.com
-ping google.com
-exit
-jobs
-fg
-clear
-git status
-clear
-p
-c ~/works/kaggle_runner/
-make push PHASE=data
-make clean
-exit
-clear
-ip route
-ping baidu.com
-firefox
-exit
-ls
-who
-exitfg
-fg
-clear
-ls
-git status
-vim Makefile 
-nvim multilang_bert_data.sh 
-git status
-git diff
-git diff --cached
-git commit -asm "dataset prepare"
-clear
-git push
-ls
-clear
-ls
-fg
-make push PHASE=data
-fg
-jobs
-clear
-fg
-exit
-clear
-s
-exit
-exit
-s
-mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com
-fg
-git status
-git diff
-clear
-ls
-make p
-vi ~/.ssh/config 
-make p
-git status
-tig
-git status
-c kaggle_runner/hub/bert/
-tig
-git status
-clear
-c -
-make push PHASE=data
-man ssh
-htop
-fg
-git status
-clear
-git staus
-git status
-git commit -asm 'Try get data"
-'
-git push
-git status
-clear
-setproxy
-ps aux| grep clash
-curl google.com
-curl https://google.com
-curl https://www.google.com
-clear
-ls
-make push PHASE=pretrain
-fg
-setproxy
-make check
-make push PHASE=pretrain
-fg
-clear
-make push PHASE=pretrain
-fg
-make push PHASE=pretrain
-bg
-fg
-make push PHASE=pretrain
-clear
-git status
-git commit -asm "try to fix http_proxy for kaggle "
-git push
-s
-clear
-exit
-clear
-s
-clear
-s
-git status
-make push PHASE=pretrain
-m
-s
-clear
-s
-clear
-ip route
-s
-pwd
-exit
-pwd
-exit
-fg
-exit
-fg
-pwd
-clear
-ping baidu.com
-git pull
-fg
-git status
-git diff
-git diff --cached
-fg
-clear
-make dir abc@cde
-make dir abc@cdeefg
-mkdir abc@cdef
-ls
-cd abc@cdef/
-ls
-cd ..
-rm abc@cdef/
-rmdir abc@cdef/
-mkdir abc@cdef
-python -c 'import os; os.chdir("abc@cdef");'
-python -c 'import os; os.chdir("abc@cdef"); print(os.ls());'
-python -c 'import os; os.chdir("abc@cdef"); print(os.listdir());'
-python -c 'import os; os.chdir("abc@def"); print(os.listdir());'
-mkdir cdef@kljlk
-python -c 'import os; os.chdir("cdef@kljlk"); print(os.listdir());'
-python -c 'import os; os.chdir("cdef@klk"); print(os.listdir());'
-python -c 'import os; os.chdir("cdef@kljlk"); print(os.listdir());'
-python -c 'import os; os.chdir("cdef@jlk"); print(os.listdir());'
-clera
-clear
-ls
-rm *@*
-rmdir *@*
-clear
-fg
-git commit --help
-fg
-git diff
-git diff --cached
-clear
-ls
-ip route
-make push PHASE=pretrain
-fg
-git status
-git diff
-git diff --cached
-git commit -sm "Build 512 pkl first"
-git push
-clear
-ip orute
-ip route
-curl https://192.168.1.1:80
-curl -k https://192.168.1.1:80
-curl -k https://192.168.1.1:443
-ip route
-exit
-ssh root@192.168.1.1
-exit
-ssh root@192.168.1.1
-exit
-s
-exit
-make push PHASE=pretrain
-stty raw -echo &&while true; do ncat -vlp 9417; sleep 1; echo "new"; done
-clear
-clear
-jobs
-pwd
-exit
-make clean
-clear
-ip route
-clear
-exit
-fg
-git status
-fg
-git status
-fg
-clear
-fg
-git status
-fg
-clear
-git status
-ls
-cd kaggle_runner/hub/
-ls
-tree
-clear
-mkdir refs
-cd refs/
-kaggle kernels pull k1gaggle/toxic-bert-plain-vanila .
-kaggle kernels pull k1gaggle/toxic-bert-plain-vanila 
-kaggle kernels pull -m k1gaggle/toxic-bert-plain-vanila 
-ls
-jupytext --to .py toxic-bert-plain-vanila.ipynb 
-vi toxic-bert-plain-vanila.py 
-fish
-tat 0
-nvim toxic-bert-plain-vanila.py 
-clear
-ip route
-ss
-tmux ls
-bash -x ~/bin/xcb_change 
-clear
-exit
-git status
-exit
-clea
-clear
-exit
-make pccnct
-ssh root@192.168.1.1
-cd ~/Videos/
-mpv *
-vlc *
-exit
-ps aux| grep clash
-exit
-nvim kaggle_runner/hub/refs/toxic-bert-plain-vanila.py 
-git status
-git commit -asm "Added bert_torch"
-clear
-git status
-make p
-vi ~/.ssh/config 
-clear
-git status
-clear
-git status
-cd kaggle_runner/hub/bert/
-ls
-git status
-git push
-c -
-clea
-git status
-git commit -sm "Update bert"
-git commit -sm "Update bert" -a
-git push
-make check
-fg
-clera
-exit
-fg
-c ../m
-c ../mq
-clear
-go build 
-go build  receive_logs_topic.go 
-cp receive_logs_topic.go $OLDPWD 
-p
-ls
-clear
-ls
-make mq
-fg
-clear
-users 
-users -a
-man users
-grep v /etc/passwd 
-grep -z v /etc/passwd 
-man grep
-grep -q v /etc/passwd 
-fg
-id -u v
-id -u rabbit
-fg
-id -u rabbit
-echo $?
-jobs
-ps aux | grep recei
-pkill -f "receive_logs"
-ps aux | grep recei
-make mq
-make check
-fg
-fg
-pkill -f "receive_logs"
-make mq
-mmake check
-make check
-fg
-pkill -f "receive_logs"
-make check
-clear
-make push PHASE=pretrain
-clear
-clear
-ip route
-ping baidu.com
-clear
-exit
-jobs
-fg
-make check
-clear
-pkill -f "receive_logs"
-fg
-fg
-make check
-make mq
-make check
-fg
-clear
- 
-pkill -f "receive_logs"
-make mq
-make check
-fg
-jq
-clea
-clear
-sudo pacman -S jq
-pkill -f "receive_logs"
-make mq
-make check
-fg
-git commit -asm "Update mq"
-git push
-fg
-git status
-,
-clear
-git push
-clear
-fg
-clear
-ls
 make push PHASE=pretrain
 clear
 ip route
@@ -1762,3 +848,1159 @@ exit
 exit
 exit
 exit
+clear
+git pull
+htop
+cler
+git submodule update --init
+clear
+git pull
+clear
+ls
+tig
+tig
+nvim .bashrc
+git status
+git commit -sm ".bashrc revert back"
+git commit -sm ".bashrc revert back" --no-gpg
+clear
+tig
+clear
+cd ~/.dotfiles/
+tig
+git push
+c -
+clear
+which v2ay
+which v2ray
+clear
+git status
+conda activate pyt
+clear
+ls
+clear
+ls
+fg
+nvim kaggle_runner/utils/kernel_utils.py 
+fg
+clear
+ip route
+df -h
+fg
+mount | grep var
+fg
+man usr
+clear
+vi ~/.config/v2ray_client_u.json 
+fg
+clear
+git status
+git status|less
+git submodule udpate
+git submodule update
+clear
+fg
+clear
+ip route
+ping baidu.com
+clear
+fg
+clear
+pip list
+rm ~/.mozilla/firefox/38veqstv.default-release/webappsstore.sqlite
+fg
+fg
+fish
+exit
+exit
+tmux
+tmux ls
+fg
+fg
+fg
+git status
+git diff
+git diff --cached
+fg
+make update_sh_ipynb:
+make update_sh_ipynb
+git status
+git diff
+git commit -asm "Updated ipynb"
+tig
+git push
+xclip-copyfile ~/.kaggle/kaggle.json 
+xclip -o
+xclip 
+xclip -h
+xclip -o -selection clipboard
+xclip-copyfile ~/.kaggle/kaggle.json  -selection primary
+xclip-copyfile -h ~/.kaggle/kaggle.json  -selection primary
+xclip-copyfile -h
+xclip-copyfile --help
+xclip-copyfile 
+xclip ~/.kaggle/kaggle.json 
+xclip ~/.kaggle/kaggle.json -selection primary
+xclip ~/.kaggle/kaggle.json -selection secondary
+xclip ~/.kaggle/kaggle.json -selection clipboard
+fg
+make kaggle
+exit
+fg
+git diff --cached
+fg
+git status
+make update_sh_ipynb
+git diff
+git status
+git commit -asm "Update ipynb"
+rm -r kaggle_runner/hub/
+git status
+git push
+fg
+git staus
+git status
+make pccnct
+stty size
+fg
+clear
+fg
+make sshR
+fg
+ip addr show dev eth0 | grep inet | sed 's/inet \([^\/]*\).*/\1/'
+ip addr show
+exit
+fg
+git pull
+fg
+jupyter lab
+jupyter lab -h
+xclip -selection clipboard
+ps aux | grep ssh
+ps aux| grep 10000
+ps aux| grep ssh
+ckear
+stty raw -echo &&while true; do ncat -4vlp 9017; sleep 1; echo "new"; done
+fg
+clear
+fg
+clear
+xclip -selection clipboard
+ibus-ui-emojier-plasma 
+clear
+fctix
+fcit
+fcitx
+fg
+git status
+make update_sh_ipynb
+git diff
+git status
+git commit -sm "Update ipynb"
+git commit -sm "Update ipynb" -a
+git push
+clear
+fg
+jobs
+fg
+tig
+git push
+git pull
+git push
+r
+clear
+cler
+clear
+fg
+clear
+tig
+clear
+stty raw -echo &&while true; do ncat -4lp 9017; sleep 1; echo "new"; done
+exit
+exit
+exit
+exit
+fg
+xclip -selection clipboard
+fg
+xclip -selection clipboard
+fg
+clear
+git status
+git diff
+git diff --cached
+git diff --help
+git diff --
+git diff --no-index
+git diff -no-index
+git diff
+clear
+git diff --cached
+vi Makefile 
+make d
+make update_sh_ipynb
+make d
+git commit -asm "Import missing"
+git push
+clear
+git status
+tig
+clear
+ls
+stty raw -echo &&while true; do ncat -4lp 9017; sleep 1; echo "new"; done
+stty raw -echo &&while true; do ncat -4lp -i 4s  9017; sleep 1; echo "new"; done
+man ncat
+exit
+fg
+make update_sh_ipynb
+git commit -asm "Fix debug code"
+git push
+pwd
+clear
+git status
+stty raw -echo &&while true; do ncat -i 3s -4lp 9017; sleep 1; echo "new"; done
+clear
+stty raw -echo &&while true; do ncat -4vlp 9017; sleep 1; echo "new"; done
+clear
+make mq
+fg
+make update_sh_ipynb
+git commit -sm "Update ipynb"
+git push
+fg
+git diff 
+git commit -sm "Update ipynb" -a
+git push
+clear
+tig
+clear
+fg
+mv ~/Downloads/shonenkov_training_pipeline.ipynb hub/
+make update_sh_ipynb
+fg
+make update_sh_ipynb
+fg
+git commit -sm "Update ipynb" -a
+tig
+clear
+make clean
+stty raw -echo &&while true; do ncat -4lp 9017; sleep 1; echo "new"; done
+fg
+clear
+stty raw -echo &&while true; do ncat -4vlp 9017; sleep 1; echo "new"; done
+fg
+clear
+ls
+clear
+ls
+cd hub/
+ls
+cd ..
+rm kaggle_runner/runner_template/main.ipynb 
+ln -s hub/shonenkov_training_pipeline.ipynb kaggle_runner/runner_template/main.ipynb
+clear
+make push PHASE=pretrain
+git commit -asm "Main use sh ipynb"
+fg
+make push PHASE=pretrain
+ls -lh kaggle_runner/runner_template/main.ipynb 
+kaggle kernels push -p kaggle_runner/runner_template/
+kaggle kernels push -p kaggle_runner/runner_template/main.ipynb 
+head kaggle_runner/runner_template/main.ipynb 
+ls -lh kaggle_runner/runner_template/main.ipynb 
+cd kaggle_runner/runner_template/
+rm main.ipynb 
+ln -s ../../hub/shonenkov_training_pipeline.ipynb main.ipynb
+cd ../..
+kaggle kernels push -p kaggle_runner/runner_template/
+clear
+vi logs_check 
+ls
+clear
+ls
+pwd
+clear
+git status
+git diff
+git commit -asm "template path fix"
+git push
+fg
+clear
+tig hub/shonenkov_training_pipeline.py 
+maka kaggle
+make kaggle
+fg
+make push PHASE=pretrain
+make clean
+ps aux| grep "vp"
+ps aux| grep "lp"
+vi Makefile 
+make clean
+vi Makefile 
+make clean
+fg
+clear
+make pccnct
+clear
+make clean
+clear
+clear
+ps aux| grep 50001
+cat mosh_log 
+clear
+cat mosh_log 
+clear
+ls
+ps aux| grep aux
+ps aux| grep 50001
+ls reversShells/addNewNode.sh 
+bash -x pcc
+clear
+fg
+mv reversShells/* bin/
+chmod +x bin/*
+rmdir reversShells/
+fg
+reversShells/addNewNode.sh mosh 
+bin/addNewNode.sh mosh
+clear
+exit
+bash -x reversShells/addNewNode.sh mosh
+clear
+make pccnct
+clear
+bash -x bin/pcc 9332
+bash -x bin/addNewNode.sh mosh
+fg
+clear
+clear
+clear
+fg
+fg
+clear
+make pccnct
+exit
+make check
+clear
+make check
+clear
+make mq
+make check
+clear
+make pccnct
+ls *log
+bash -x bin/addNewNode.sh 
+bash -x bin/addNewNode.sh  mosh
+cp bin/pcc .
+bash -x bin/addNewNode.sh  mosh
+pcc 9332
+fg
+clear
+ls
+clear
+ls *log
+make pccnct
+make clean
+pkill 50001
+clear
+pkill -f "50001"
+clear
+ps aux| grep 50001
+make pccnct
+clear
+tail -f mosh_log 
+make mosh
+make m
+clear
+make m
+tail add_node_log 
+clear
+make m
+clear
+make m
+clear
+exit
+tail -f  add_node_log 
+clear
+make pccnct
+make m
+make pccnct
+fg
+r
+clear
+make pccnct
+fg
+clear
+make m
+clear
+exit
+fg
+grep "\&2" -nr .
+fg
+clear
+make pccnct
+make mosh
+make m
+tail mosh_log 
+clear
+tail logs_check 
+make m
+clear
+make pccnct
+clear
+make m
+clear
+tail add_node_error 
+make pccnct
+make m
+clear
+make m
+clear
+make m
+clear
+MOSH_KEY=r15iQPQUe5CNK7zFldLpIQ mosh-client 127.0.0.1 9345
+clear
+alias ss
+unalias ss
+sudo ss -lpanus
+sudo ss -lpanus | grep mosh
+make m &
+sudo ss -lpanus | grep mosh
+make m
+exit
+sudo ss -lpanus | grep mosh
+clear
+ps aux | grep ncat
+ps aux | grep "ncat *90"
+ps aux | grep "ncat *9"
+ps aux | grep "ncat .*9"
+make
+make m
+ps aux | grep "ncat .*9"
+ps aux| grep 9305
+ps aux| grep 9350
+clear
+ps aux | grep 9351
+fg
+clear
+fg
+cat add_node_error 
+make pccnct
+make m
+clear
+make m
+fg
+clear
+clear
+make pccnct
+make m
+ps aux| grep 60003
+pkill -f "6000*"
+clear
+pkill -f "6000*"
+clear
+make pccnct
+make m
+MOSH_KEY=2JxlyTIJaySgnpguDqkrWg mosh-client 127.0.0.1 9356
+clear
+ls
+clear
+fg
+clear
+ clear
+fg
+clear
+make pccnct
+make mosh
+pstree -laps
+pstree -laps $$
+tmux ls
+clear
+tmux ls
+echo $TMUX
+exit
+clear
+exit
+make mosh
+clear
+fg
+git staus
+git commit -asm "Fix mosh"
+git push
+git status
+rm pcc
+cat bin/pcc 
+clear
+git status
+fg
+clear
+make clean
+clear
+git status
+git tag
+make publish TAG=0.1.6
+gpg2 
+fg
+git status
+tig
+fg
+man true
+fg
+git push --tags
+git pull
+tig
+git tag
+git tag "v0.1.6"
+tig
+git push --tags
+git push --tags --force
+tig
+git push
+tig
+clear
+clear
+exit
+clear
+ip rpute
+ip route
+clear
+git status
+git diff
+git commit -asm "Make: not sign, don't care"
+mv ~/Downloads/shonenkov_training_pipeline.ipynb hub/
+make update_sh_ipynb
+fg
+git status
+make update_sh_ipynb
+fg
+git diff
+git diff hub/shonenkov_training_pipeline.py
+git commit -sm "Update ipynb" -a
+git push
+fg
+git diff
+fg
+make update_sh_ipynb
+git diff
+git diff *.py
+clear
+git status
+exit
+git cfg
+xclip -selection clipboard
+clear
+exit
+fg
+git diff
+git commit -asm "Update ipynb"
+git push
+clear
+clear
+curl     #validation_sampler = torch.utils.data.distributed.DistributedSampler(
+    #    validation_dataset,
+    #    num_replicas=xm.xrt_world_size(),
+    #    rank=xm.get_ordinal(),
+    #    shuffle=False
+curl 
+https://storage.cloud.google.com/kaggle_runner/remote/path/storage.txt
+curl https://storage.cloud.google.com/kaggle_runner/remote/path/storage.txt
+curl -v https://storage.cloud.google.com/kaggle_runner/remote/path/storage.txt
+setproxy
+vi ~/.shrc_customised
+. ~/.bashrc 
+setproxy
+curl -v https://storage.cloud.google.com/kaggle_runner/remote/path/storage.txt
+wget -v https://storage.cloud.google.com/kaggle_runner/remote/path/storage.txt
+cat storage.txt 
+rm storage.txt 
+cd hub/
+ls
+clear
+ls
+cd combat-wombat-bias-in-toxicity/
+ls
+mkdir inference
+cd in
+cd inference/
+kaggle kernels pull -m     #validation_sampler = torch.utils.data.distributed.DistributedSampler(
+    #    validation_dataset,
+    #    num_replicas=xm.xrt_world_size(),
+    #    rank=xm.get_ordinal(),
+    #    shuffle=False
+kaggle kernels pull -m  k1gaggle/wombat-inference-kernel
+kaggle kernels pull -m k1gaggle/wombat-inference-kernel
+l
+ls
+vi kernel-metadata.json 
+fg
+git diff
+git diff --cached
+git commit -asm "Try with 2 epochs"
+git push
+make update_sh_ipynb
+make get_submission
+git diff
+git commit -asm "submission: v18"
+tig
+git push
+head submission.csv 
+fg
+clear
+clear
+mv ~/Downloads/shonenkov_training_pipeline.ipynb hub/shonenkov_training_pipeline.ipynb 
+mv ~/Downloads/shonenkov_training_pipeline.ipynb hub/shonenkov_training_pipeline.v19.ipynb 
+fg
+clear
+tig submission.csv 
+clear
+sudo pacman -S
+pacman -h
+sudo pacman -S --help
+sudo pacman -u
+sudo pacman -Su
+exit
+exit
+exit
+exit
+exit
+fg
+clear
+git status
+git diff
+fg
+clear
+make get_submission
+git diff
+clear
+tig submission.csv 
+head submission.csv 
+git add submission.csv 
+git commit -sm "Submission: v19"
+git push
+fg
+exit
+exit
+exit
+exit
+pip install fastai
+nvim notes.md 
+clear
+exit
+fg
+jobs
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+fg
+setproxy
+. ~/.bashrc
+setproxy
+pip install tensorflow
+vi /etc/proxychains.conf 
+proxhchains4 pip install tensorflow
+proxhchains pip install tensorflow
+proxychains pip install tensorflow
+clea
+tmux ls
+clear
+bash ~/bin/xcb_change 
+clear
+conda activate pyt
+clear
+clear
+sudo pacman -S orca
+setproxy
+sudo pacman -S orca
+sudo proxychains pacman -S orca
+make pccnct
+fg
+make kaggle
+fg
+exit
+exit
+make mq
+nvim Makefile 
+git status
+head submission.csv 
+make get_submission
+git add submission.csv 
+git commit -sm "Submission V20, 3 epochs"
+git push
+clear
+git status
+clear
+ip route
+ping baidu.com
+ 
+jobs
+stty raw -echo &&while true; do ncat -4vlp 9017; sleep 1; echo "new"; done
+vi Makefile
+exit
+exit
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+df -h
+clear
+pip install tensorflow
+jobs
+clear
+ls
+du -sh ~/miniconda3/
+clear
+ls
+ls -lh
+clear
+cd ~
+clear
+ls
+clear
+ls /var/
+sudo mv miniconda3/ /var/
+df -h
+clear
+df -h
+clear
+cd
+clear
+ls /var/miniconda3/
+ln -s /var/miniconda3/ .
+clear
+ls
+clear
+df -h
+fg
+clear
+exit
+xclip -selection clipboard
+clear
+git status
+git commit -asm "Test fastai kernel"
+git push
+ss
+clear
+fg
+clear
+jobs
+fg
+clear
+tmux ls
+df -h
+clear
+ls -lh /var/
+clear
+conda activate pyt
+conda install tensorflow
+bash -x ~/bin/xcb_change 
+clear
+conda install tensorflow
+ conda update -n base -c defaults conda
+clear
+clear
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+cd works/kaggle_runner/
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+conda install tensorflow
+which pytest
+head ~/.local/bin/pytest 
+vi ~/.local/bin/pytest 
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+clear
+ip route
+clear
+nvim
+conda activate pyt
+clear
+cd works/kaggle_runner/
+vim kaggle_runner/kernels/fastai_kernel.py 
+vi ~/.config/v2ray_client_u.json 
+fg
+exit
+tmux
+tmux detach
+vi ~/.tmux.conf
+clear
+man tmux
+clear
+locale
+clear
+cd works/kaggle_runner/
+git pull
+ss
+nvim Makefile 
+which python3
+conda activate pyt
+which python
+which python3
+fg
+nvim kaggle_runner/utils/kernel_utils.py 
+which python
+echo $PATH
+fg
+which python
+conda deactivate
+which python
+which python3
+which pytest
+head ~/.local/bin/pytest 
+env python3
+env -p python3
+env --help
+env python3
+clear
+python3 -m pytest
+python3 -m pip uninstall pytest
+vi ~/.local/bin/py.test 
+clear
+exit
+fg
+sudo locale-gen
+fg
+ls
+fg
+df -h
+clear
+df -h
+clear
+nix-env -qa
+ps aux| grep nix
+bash -x ~/bin/xcb_change 
+clear
+vi ~/.shrc_customised
+exit
+conda deactivate
+exit
+which conda
+conda
+conda env list
+conda deactivate
+conda env list
+conda activate pyt
+echo $PATH
+. ~/.bashrc
+tmux -u 
+ -u_conda_folder=$(find $HOME -maxdepth 1 -name "*conda*" -type d | grep -v "\.conda" | head -n 1)
+ -u_conda_folder=$(find $HOME -maxdepth 1 -name "*conda*" -type d | grep -v "\.conda" | head -n 1)
+ -u_conda_folder=$(find $HOME -maxdepth 1 -name "*conda*" -type d | grep -v "\.conda" | head -n 1)
+ echo $(find $HOME -maxdepth 1 -name "*conda*" -type d | grep -v "\.conda" | head -n 1)
+find $HOME -maxdepth 1 -name "*conda*" -type d
+man find
+find $HOME -maxdepth 1 -name "*conda*" -type d,l
+conda env list
+conda activate pyt
+fg
+find $HOME -maxdepth 1 -name "*conda*" -type d,l | grep -v "\.conda" | head -n 1
+man basename
+which conda
+which python
+which python3
+ps aux| grep clash
+which python3
+exit
+exit
+fg
+fg
+vim Makefile .tmux.conf
+fg
+clear
+ls
+exit
+nvim
+exit
+exit
+exit
+fg
+tmux ls
+clear
+exit
+v2ray -config ~/.config/v2ray_client_u.json 
+exit
+tat 0
+clear
+tmux ls
+tmux -u
+tmux ls
+ls
+clear
+nvim Makefile 
+conda activate pyt
+clear
+nvim Makefile 
+cd hub/
+kaggle kernels download  christianwallenwein/beginners-guide-to-mnist-with-fast-ai
+kaggle kernels download  christianwallenwein/beginners-guide-to-mnist-with-fast-ai -p .
+kaggle kernels pull  christianwallenwein/beginners-guide-to-mnist-with-fast-ai -p .
+kaggle kernels pull  christianwallenwein/beginners-guide-to-mnist-with-fast-ai -p . -m
+cat kernel-metadata.json 
+kaggle datasets download --unzip digit-recognizer
+kaggle competitions download --unzip digit-recognizer
+kaggle competitions download digit-recognizer
+git status
+unzip digit-recognizer.zip 
+mkdir ../../input
+mkdir ../../input/digit-recognizer
+mv *.csv ../../input/digit-recognizer/
+fg
+cd ..
+cler
+clear
+python hub/beginners-guide-to-mnist-with-fast-ai.py 
+ls test
+ls tests/
+fg
+cd works/kaggle_runner/
+tig
+make get_submisstion
+make get_submission
+head submission.csv 
+tig submission.csv 
+git commit -asm "Submission V21"
+tig
+git push
+fg
+git status
+clear
+git status
+fg
+clear
+htop
+clear
+htop
+python -m ipdb hub/beginners-guide-to-mnist-with-fast-ai.py 
+xclip -selection clipboard
+fg
+cd works/kaggle_runner/
+conda activate pyt
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+nvim notes.md 
+exit
+cd works/kaggle_runner/
+make pccnct
+clear
+ps aux| grep receive
+vi Makefile 
+exit
+make pccnct
+cd works/kaggle_runner/
+make pccnct
+clear
+make pccnct
+vi Makefile 
+make pccnct
+bin bin/pcc 9420
+bash bin/pcc 9420
+nvim ~/bin/pcc
+nvim bin/pcc 
+bash bin/pcc 9420
+df -h
+make get_submission
+git add submission.csv 
+git commit -asm 
+git commit -sm "Sub version 22"
+tig submission.csv 
+exit
+head submission.csv 
+git push
+ss
+tig
+htop
+fg
+head submission.csv 
+fg
+head submission.csv 
+head ~/submission.csv 
+mv ~/submission.csv .
+git add submission.csv 
+git commit -sm "Check merged data"
+git push
+tig
+bash -x ~/bin/xcb_change 
+aslfjk
+xit
+jobs
+exit
+fg
+git pull
+git commit -asm "Make: "
+git show
+git pull
+git push
+python -m ipdb hub/beginners-guide-to-mnist-with-fast-ai.py 
+clear
+fg
+clear
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+setproxy
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+proxychains pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+pytest -sv kaggle_runner/kernels/fastai_kernel.py --pdb
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py --pdb
+fg
+exit
+pytest -sv kaggle_runner/kernels/fastai_kernel.py --pdb
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+fg
+pytest -sv kaggle_runner/kernels/fastai_kernel.py 
+fg
+vim Makefile 
+git pull
+fg
+clear
+jobs
+stty size
+exit
+nvim Makefile 
+git status
+git pull
+git commit -asm "Update for test"
+git push
+stty size
+fg
+git diff
+fg
+git diff --cached
+fg
+git status
+fg
+bash -x ~/bin/xcb_change 
+clear
+jobs
+xclip -selection clipboard
+exit
+exit
+xclip -selection clipboard <~/.kaggle/kaggle.json 
+cat ~/.kaggle/kaggle.
+cat ~/.kaggle/kaggle.json 
+exit
+exit
+fg
+git stauts
+git status
+mv ~/Downloads/shonenkov_training_pipeline.ipynb hub/
+cd hub/
+cd ..
+make update_sh_ipynb
+fg
+make update_sh_ipynb
+fg
+git status
+fg
+git status
+git add kaggle_runner/kernels/fastai_kernel_bert.ipynb 
+igt commit -asm "Added ipynb to test"
+git commit -asm "Added ipynb to test"
+git push
+cd  kaggle_runner/kernels/fastai_kernel_bert.ipynb
+cp  kaggle_runner/kernels/fastai_kernel_bert.ipynb hub/shonenkov_training_pipeline.ipynb 
+gg
+fish
+fg
+mv ~/Downloads/shonenkov_training_pipeline.ipynb hub/
+git status
+fg
+make update_sh_ipynb
+jupytext --set-formats ipynb,py hub/shonenkov_training_pipeline.ipynb
+fg
+mv ~/Downloads/Copy_of_shonenkov_training_pipeline.ipynb hub/shonenkov_training_pipeline.ipynb 
+make update_sh_ipynb
+jupytext --set-formats ipynb,py hub/shonenkov_training_pipeline.ipynb
+fg
+git status
+git commit -asm "Update ipynb"
+clear
+fg
+git status
+rm add_node_e`
+rm add_node_error 
+clear
+git status
+fg
+make update_sh_ipynb
+git diff
+git commit -asm "Update ipynb"
+git push
+tig
+fg
+make update_sh_ipynb
+git commit -asm "Update ipynb"
+git grep reload_ext
+git grep reload
+git push
+tig
+git status
+mv ~/Downloads/*ipynb .
+git status
+diff Copy_of_shonenkov_training_pipeline.ipynb hub/shonenkov_training_pipeline.
+diff Copy_of_shonenkov_training_pipeline.ipynb hub/shonenkov_training_pipeline.ipynb 
+fg
+mv Copy_of_shonenkov_training_pipeline.ipynb hub/shonenkov_training_pipeline.ipynb 
+make update_sh_ipynb
+fg
+make update_sh_ipynb
+fg
+tig
+make update_sh_ipynb
+git status
+fg
+tig
+git status
+git commit -asm "Update ipynb"
+git push
+tig
+clear
+exit
+fg
+make update_sh_ipynb
+fg
+cd works/kaggle_runner/
+ls
+clear
+make update_sh_ipynb
+git commit -asm "Update ipynb"
+exit
+cat ~/.kaggle/kaggle.json 
+exit
+jobs
+fg
+exit
+fish
+jobs
+git status
+jobs
+exit
+clear
+tmux ls
+tat 0
+clear
+ip route
+clear
+tat 0
+clear
+htop
+clear
+tmux ls
+clear
+echo $TERM
+t
+clear
+exit
+vim ~/.bashrc +212
+clear
+exit
+bash
+. ~/.bashrc
+clear
+tmux ls
+ss
+clear
+tmux ls
