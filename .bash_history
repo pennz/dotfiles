@@ -1,20 +1,3 @@
-make push PHASE=pretrain
-clear
-ip route
-fg
-git satus
-git status
-rm receive_logs_topic.go 
-git diff
-git diff --cached
-fg
-git status
-python3 -c "from kaggle_runner.kernels.bert_torch import for_pytorch;from kaggle_runner.datasets.bert import pack_data; for_pytorch(pack_data());"
-fg
-git push
-fg
-git push
-fg
 git status
 make push PHASE=pretrain
 git push
@@ -2003,4 +1986,16 @@ clear
 tmux ls
 ss
 clear
+tmux ls
+git checkout .mozilla/firefox/38veqstv.default-release/user.js
+tig .mozilla/firefox/38veqstv.default-release/user.js
+tig
+git checkout .mozilla/firefox/38veqstv.default-release/chrome/userChrome.css
+vi .gitignore.local 
+git status
+exit
+fg
+exit
+tat 0
+exit
 tmux ls
