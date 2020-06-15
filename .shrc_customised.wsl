@@ -5,3 +5,5 @@ alias vim='nvim -u ~/.config/nvim_back/init.vim'
 alias vi='nvim'
 source /home/pengyu/.jfrog/jfrog_zsh_completion
 export PATH=$HOME/.local/bin:$PATH
+export PYTHONIOENCODING="UTF-8"
+
