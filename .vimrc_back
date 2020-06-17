@@ -254,7 +254,7 @@ set colorcolumn=80
 
 "let no_buffers_menu=1
 
-silent! colorscheme xcodedark
+"silent! colorscheme xcodedark
 
 "set mousemodel=popup
 set t_Co=256
@@ -1651,7 +1651,6 @@ set complete+=kspell
 
 nnoremap <Leader>o :on<CR>
 hi Visual term=reverse cterm=reverse guibg=Grey
-colorscheme xcodedarkhc
 nmap <silent><Leader>tf <Esc>:Pytest file<CR>
 nmap <silent><Leader>tc <Esc>:Pytest class<CR>
 nmap <silent><Leader>tm <Esc>:Pytest method<CR>
