@@ -3,3 +3,5 @@ export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
 source /home/pengyu/.jfrog/jfrog_zsh_completion
 export PATH=$HOME/.local/bin:$PATH
+export PYTHONIOENCODING="UTF-8"
+
