@@ -1,327 +1,3 @@
-git status
-make push PHASE=pretrain
-git push
-make clean
-exit
-xclip
-ls -lh .elinks/elinks.conf 
-chown v:v .elinks/elinks.conf 
-sudo chown v:v .elinks/elinks.conf 
-sudo systemctl restart sudo_logsrvd.service 
-ls
-clear
-cd works/kaggle_runner/
-ls
-cat .git/config 
-firefox  -P
-exit
-git status
-git diff
-cat .r/intercept-384/main.py | grep runner.sh
-c
-.
-clea
-clear
-make mq
-man basename 
-make clean
-exit
-lpass 
-lpass show --all -G "kaggle.com"
-lpass show --all -G "kaggle.com" 4248442519897108635
-exit
-xclip
-xclip -h
-xclip -o
-xclip -selection primary -o
-xclip -selection secondary -o
-xclip -selection secondary -i
-xclip -selection secondary -o
-mv ~/Downloads/kaggle.json ~/.kaggle/kaggle.json 
-clear
-kaggle status
-chmod 600 /home/v/.kaggle/kaggle.json
-kaggle status
-clear
-aaq---
-clear
-make mq
-make push
-fg
-clear
-make push PHASE=pretrain
-kaggle kernels push -p .r/intercept-384
-s
-stty raw -echo &&while true; do ncat -vlp 9264; sleep 1; echo "new"; done
-firefox -P &>/dev/null
-fish
-elinks
-tmux
-E
-clear
-stty sane
-ls
-tmux ls
-clear
-ss
-cat .runners/intercept-resnet-384/main.py 
-cat .runners/intercept-resnet-384/main.py |grep runner.sh
-exit
-make mq
-clear
-make check
-fg
-s
-make check
-make mq
-nvim Makefile 
-clear
-pip install kaggle
-pip install --update kaggle
-kaggle kernels
-kaggle kernels -h
-kaggle kernels -h push
-kaggle kernels push --help
-fg
-git show --no-patch --oneline | tr " " "_"
-fg
-sed 's/title\(.*\)"/title\1'$(git show --no-patch --oneline | tr " " "_")\" kaggle_runner/runner_template/kernel-metadata.json
-fg
-make push
-fg
-make push
-make clean
-clear
-exit
-fg
-sed 's/title\(.*\)"/title\1'$(git show --no-patch --oneline | tr " " "_")"\"/" kaggle_runner/runner_template/kernel-metadata.json
-fg
-sed 's/title\(.*\)\|.*"/title\1' "\|"$$(git show --no-patch --oneline | tr " " "_")"\"/" kaggle_runner/runner_template/kernel-metadata.json
-clear
-make push
-fg
-sed 's/title\(.*\)\|.*"/title\1' "\|"$(git show --no-patch --oneline | tr " " "_")"\"/" kaggle_runner/runner_template/kernel-metadata.json
-fg
-sed 's/title\(.*\)\|.*"/title\1' "\|"$(git show --no-patch --oneline | tr " " "_")\"/ kaggle_runner/runner_template/kernel-metadata.json
-fg
-make push
-fg
-make push
-fg
-make push
-fg
-make push
-fg
-make push
-fg
-make push
-fg
-make push
-fg
-make push
-fg
-make push
-fg
-clear
-ls
-make push PHASE=pretrain
-tig
-clear
-ls
-make clean
-clear
-ps aux | grep 962
-ps aux | grep 92
-pkill -f "vvlp 92"
-ps aux | grep 92
-clear
-clewar
-clera
-clear
-tmux
-jobs
-fg
-make clean
-exit
-clear
-fg
-tmux ls
-clear
-stty raw -echo &&while true; do ncat -vlp 25454; sleep 1; echo "new"; done
-fg
-make clean
-exit
-exit
-fg
-clear
-make push PHASE=pretrain
-stty raw -echo &&while true; do ncat -vlp 9267; sleep 1; echo "new"; done
-stty raw -echo &&while true; do ncat -vlp 9265; sleep 1; echo "new"; done
-fg
-tig
-fg
-clear
-fg
-clear
-ls
-fg
-make push PHASE=pretrain
-clear
-tmux ls
-which elinks
-sudo pacman -S elinks
-which elinks
-ls
-which proxychains4 
-proxychains4 neomutt
-which proxychains4 
-neomutt 
-setproxy
-ps aux | grep clash
-fg
-clear
-ls
-clear
-ls
-make push PHASE=pretrain
-clear
-firefox -P
-htop
-make push PHASE=pretrain
-fg
-git status
-fg
-make push PHASE=pretrain
-fg
-clear
-kaggle kernels status k1gaggle/toxic-bert-plain-vanila 
-kaggle kernels status dancez/jigsaw-multilingual-toxicity-eda-models
-fg
-clear
-tat 0
-tmux ls
-neomutt 
-which proxychains4 
-sudo pacman -S proxychains4
-sudo pacman -S proxychains
-which proxychains
-sudo vi /etc/proxychains.conf 
-proxychains neomutt
-tat 0
-clear
-tmux ls
-tmuxls
-tmux ls
-clear
-fg
-tmux ls
-tat 0
-clear
-fg
-make push PHASE=pretrain
-git status
-tig
-git status
-gti push
-git push
-tig --all
-git
-exit
-clear
-jobs
-fg
-git push
-git status
-stty raw -echo &&while true; do ncat -vlp 9269; sleep 1; echo "new"; done
-stty raw -echo &&while true; do ncat -vlp 9270; sleep 1; echo "new"; done
-fg
-git status
-cd
-git status
-git status|less
-ls .kaggle/kaggle.json
-mv .kaggle/kaggle.json
-mv .kaggle/kaggle.json .kaggle/kaggle.z.json 
-git checkout .kaggle/kaggle.json 
-git status
-fg
-fg
-make push PHASE=pretrain
-sed -i 's/\(id": "\)\(.*\)\//\1'$(jq '.username' ~/.kaggle/kaggle.json)\// kaggle_runner/runner_template/kernel-metadata.json
-$(jq '.username' ~/.kaggle/kaggle.json)
-echo $(jq '.username' ~/.kaggle/kaggle.json)
-sed -i 's/\(id": "\)\(.*\)\//\1'test\// kaggle_runner/runner_template/kernel-metadata.json
-sed -i 's/\(id": "\)\(.*\)\//\1test\//' kaggle_runner/runner_template/kernel-metadata.json
-cat kaggle_runner/runner_template/kernel-metadata.json
-fg
-make push PHASE=pretrain
-fg
-make push PHASE=pretrain
-fg
-make push PHASE=pretrain
-cd
-tig
-~/bin/filter_public 
-ss
-~/bin/filter_public 
-clear
-exit
-clear
-fg
-clear
-ls
-clear
-watch -n 10 kaggle kernels status dancez/jigsaw-multilingual-toxicity-eda-models
-ps aux| grep firefox
-watch -n 10 kaggle kernels status k1gaggle/jigsaw-multilingual-toxicity-eda-models
-jobs
-fg %1
-bg
-jobs
-exit
-make push PHASE=pretrain
-exit
-stty raw -echo &&while true; do ncat -vlp 9271; sleep 1; echo "new"; done
-clear
-cp ~/.kaggle/kaggle.z.json ~/.kaggle/kaggle.json 
-clear
-ls
-make push PHASE=pretrain
-clear
-fg
-conda 
-clear
-conda env 
-conda env list
-conda activate pyt
-fg
-clear
-ls
-nvim Makefile 
-clear
-cd kaggle_runner/runner_template/
-ls
-kaggle kernels pull dancez/toxic-bert-plain-vanila  -m
-cp ~/.kaggle/kaggle.z.json ~/.kaggle/kaggle.json 
-kaggle kernels pull dancez/toxic-bert-plain-vanila  -m
-kaggle kernels pull dancez/jigsaw-multilingual-toxicity-eda-models  -m
-ls
-git diff
-fg
-kaggle kernels pull dancez/jigsaw-multilingual-toxicity-eda-models  -m
-fg
-clear
-p
-c ../../
-make push PHASE=pretrain
-pip install -e .
-make push PHASE=pretrain
-fg %2
-bg
-clear
-jobs
-make push PHASE=pretrain
-chmod 600 /home/v/.kaggle/kaggle.json
 kaggle kernels push -p .r/intercept-384
 vi .r/intercept-384/kernel-metadata.json 
 fg
@@ -1999,3 +1675,356 @@ exit
 tat 0
 exit
 tmux ls
+cd works/kaggle_runner/ 
+make clean
+clear
+make clean
+exit
+fish
+exit
+clear
+ls
+exit
+cat ~/.kaggle/kaggle.json 
+exit
+tmux ls
+tat 0
+sudo vi /etc/ssh/sshd_config 
+sudo systemctl restart sshd
+clear
+ls -lh ~/.ssh/
+ssh localhost
+vi ~/.ssh/known_hosts +70
+ssh localhost
+ssh -vT localhost
+ssh -vT -i ~/.ssh/id_rsa localhost
+ssh -vvvT -i ~/.ssh/id_rsa localhost
+sudo vi /etc/ssh/sshd_config 
+sudo systemctl restart sshd
+ssh -vvvT -i ~/.ssh/id_rsa localhost
+ssh-copy-id -i ~/.ssh/id_rsa localhost
+ssh -vvvT -i ~/.ssh/id_rsa localhost
+ssh -vvvT -i ~/.ssh/id_rsa -p 29932 pengyu@pengyuzhou.com
+sudo chown v:v /home/v -R
+df -h
+clear
+ls -lh ~/.ssh/
+sudo chmod o-rwx /home/v/ -$
+sudo chmod o-rwx /home/v/ -R
+tail -f ~/.ssh/known_hosts
+tail -f ~/.ssh/authorized_keys 
+vi ~/.ssh/authorized_keys 
+tail -f ~/.ssh/authorized_keys 
+dmesg -w
+tmux join-pane
+sudo nvim /etc/ssh/sshd_config 
+sudo systemctl restart sshd
+ls -lh ~/.ssh/
+ls -lhd ~/.ssh/
+chmod 700 .ssh/
+ls -lhd ~/.ssh/
+cd ~/.ssh/
+ls
+chmod 644 id_rsa.pub 
+ls -lh
+exit
+sudo -i
+clear
+ssh -vvvT -i ~/.ssh/id_rsa localhost
+ssh-copy-id -i ~/.ssh/id_rsa localhost
+ssh -vvvT -i ~/.ssh/id_rsa localhost
+exit
+ssh -v -i ~/.ssh/id_rsa localhost
+exit
+sudo dmesg -w
+exit
+cd ~/works/kaggle_runner/
+make kaggle
+cat /tmp/asfasdf
+cat > /tmp/asfasdf
+exit
+xclip -selection clipboard
+r
+exit
+vi Makefile 
+cat ~/.kaggle/kaggle.
+cat ~/.kaggle/kaggle.json 
+t
+exit
+stty size
+exit
+bash ~/bin/xcb_change 
+git checkout HEAD .tmux.conf
+tmux source .tmux.conf
+exit
+tat 0
+fg
+bash -x bin/xcb_change 
+cd /home/v/works/orca-git
+which python
+python --version
+makepkg -si
+orca
+clear
+ddd 
+tmux ls
+clear
+
+sudo pacman -S speech-dispatcher
+speech-dispatcher 
+exit
+exit
+cd works/kaggle_runner/
+make mq
+tmux ls
+tat 0
+make clean
+clear
+tat 0
+clear
+exit
+tmux ls
+exit
+stty raw -echo &&while true; do ncat -4vlp 9017; sleep 1; echo "new"; done
+tmux ls
+tat 0
+tmuxls
+tmux ls
+ls
+cat Makefile 
+exit
+make pccnct
+make mq
+make kaggle
+bash -x ~/bin/xcb_change 
+vi ~/.tmux.conf
+tmux source .tmux.conf
+tmux source ~/.tmux.conf
+exit
+tmux
+tmux ls
+make pc
+make pccnct
+clear
+make clean
+make kaggle
+tmux ls
+tat 0
+tat 0
+tmux ls
+make kaggle
+xclip -o
+xclip -h
+xclip -o -selection clipboard
+man ssh
+exit
+tat 0
+tmux ls
+clear
+make pc
+tmux new-window -d -t rvsConnector
+tmux new-session rvsConnector
+TMUX= ; tmux new-session rvsConnector
+TMUX= && tmux new-session rvsConnector
+TMUX= && tmux new-session --name rvsConnector
+TMUX= && tmux new-session -s rvsConnector
+tmux detach
+clear
+make mq
+tmux ls
+tat rvsConnector
+tat 0
+bash -x ~/bin/xcb_change 
+make clean
+make kaggle
+----------------------------
+bash ~/bin/xcb_change 
+cd works/kaggle_runner/
+make clean
+exit
+clear
+make mq
+make check
+pkill -f "make amqp_log"
+make mq
+make check
+htop
+make clean
+cd works/kaggle_runner/
+make clean
+tmux ls
+make check
+ps aux| grep receive
+pkill receive_logs_topic
+make check
+make clean
+exit
+cat ~/.kaggle/kaggle.
+cat ~/.kaggle/kaggle.json 
+clear
+ps aux| grep receive
+pkill receive_logs_topic
+ps aux| grep receive
+pkill -9 receive_logs_topic
+ps aux| grep receive
+clear
+ps aux| grep receive
+pstree -laps 847006
+pkill -9 -f receive_logs_topic
+pstree -laps 847006
+ps aux| grep receive
+make mq
+make clean
+pwd
+exit
+exit
+----
+make mq
+top
+-------
+make clean
+-------------
+clear
+cat ~/.kaggle/kaggle.json 
+exit
+cd works/kaggle_runner/
+make mq
+----------
+tat 0
+clear
+make kaggle
+export DISPLAY=:0
+make kaggle
+bash -x ~/bin/xcb_change 
+cd works/kaggle_runner/
+make clean
+exit
+clear
+fg
+make kaggle
+wxit
+exit
+step: 0, loss: 1.257812
+step: 0, loss: 1.445312
+step: 0, loss: 0.910156
+step: 0, loss: 1.109375
+step: 0, loss: 1.062500
+step: 0, loss: 1.101562
+stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
+cd works/kaggle_runner/
+make clean
+tat 0
+tmux ls
+clear
+make pccnct
+clera
+make pccnct
+bash -x ~/bin/xcb_change 
+cd works/kaggle_runner/
+conda activate pyt
+vim Makefile 
+fg
+make get_submission
+fg
+git pull
+ss
+fg
+make update_sh_ipynb
+fg
+make update_sh_ipynb
+exit
+git commit -asm "Log grads"
+exit
+exit
+git push
+fg
+fg
+exit
+fg
+make update_sh_ipynb
+git push
+tig
+git commit -asm "new debug"
+fg
+git commit -asm "fastai still problem"
+git push
+exit
+make kaggle
+exit
+clear
+exit
+cd works/kaggle_runner/
+make pccnct
+fg
+make update_sh_ipynb
+fg
+git status
+git diff
+tat
+vi ~/.bash_aliases 
+. ~/.bash_aliases 
+make kaggle
+cat ~/.kaggle/kaggle.json 
+exit
+fg
+git push
+fg
+clear
+make xla
+fg
+ss
+fg
+git push
+tig
+fg
+stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
+cd works/kaggle_runner/
+make mq
+nvim Makefile 
+tg
+tig
+fg
+clear
+nvim hub/shonenkov_training_pipeline.py 
+git push
+fg
+git push
+tig
+fg
+pip install pysnooper
+fg
+fg
+git push
+git pull
+tig
+exit
+jupyter console --generate-config
+conda activate pyt
+jupyter console --generate-config
+python3 -m jupyter console --generate-config
+which jupyter
+python3 -m jupyter console --generate-config
+python3 -m  pip install --upgrade jupyter-console
+python3 -m jupyter console --generate-config
+vi ~/.jupyter/jupyter_console_config.py 
+jupyter console
+git status
+tig
+git status
+fg
+jobs
+fg
+tig
+git push
+fg
+git pull
+clear
+make mq
+fg
+git status
+git push
+fg
+tig
+pushd ~
+clear
+git commit -asm "Added jupyter vim plugin"
