@@ -159,6 +159,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Chiel92/vim-autoformat'
 Plug 'alfredodeza/pytest.vim'
+Plug 'jupyter-vim/jupyter-vim'
 
 " javascript
 Plug 'pangloss/vim-javascript'
