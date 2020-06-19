@@ -1667,10 +1667,163 @@ git checkout .mozilla/firefox/38veqstv.default-release/user.js
 tig .mozilla/firefox/38veqstv.default-release/user.js
 tig
 git checkout .mozilla/firefox/38veqstv.default-release/chrome/userChrome.css
-vi .gitignore.local 
+clear
+git pull
+git branch -a
+git chekcout integration/master_fix
+git checkcout integration/master_fix
+git checkout integration/master_fix
+rm -r 1500-build/LB/Release/
+git checkout integration/master_fix
+rm -r 1500-build/LB/licenses/
+git merge
+git pull
+git checkout integration/master_fix
+git checkout --force integration/master_fix
+clear
 git status
-exit
+cat > .gitignore
+git status
+git status
+tig
+git status
+git status
+clear
+git rm -r 1500-build/LB/Release/
+clear
+git status
+tig
+clear
+git status
+clear
+clear
+no
+clear
+pwd
+cd /mnt/d/PIE/BEIP_dev/
+ls beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00
+ls beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00|wc -l
+ls beip30/1700-configout/core/safetyhealth/memoryhandling/MemMap/SH00|wc -l
+pwd
+cd beip30/1500-build/LB/
+clear
+cat SH00.ini 
+wc -l SH00.ini 
+clear
+clear
+ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
+clear
+ps aux| grep ssh
+pkill ssh
+ps aux| grep ssh
+ps aux| grep ssh
+ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
+ps aux| grep ssh
+ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
+clear
+ssh -L 9001:localhost:10001 -p 29922 v@vtool.duckdns.org
+clear
+ip route
+clear
+cd $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0900_System')
+ls
+cd 02_configout/
+ls
+clear
+ls
+nvim rte/
+cd ../..
+clear
+fzf
+git init
+git add 0900_System/02_configout/
+jobs
+nvim 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
+vi 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
+which vi
+vim -u None 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
 fg
+rg CdIoHwAbASIL_Adc_ChannelValue_mV
+fg
+git diff
+clear
+fzf
+git diff
+vi 0900_System/02_configout/build/swc/CtApVMS.ini 
+vi -u NONE 0900_System/02_configout/build/swc/CtApVMS.ini 
+git diff
+git status
+git diff --cached
+clear
+jobs
+fg
+fzf
+fg
+fzf
+tree $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
+ls $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
+echo $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
+cd /mnt/c/Users/ZhouPengyu/Downloads/SAIC_EP21H2_SW011_PIE-CD-15/0200_Platform/SH00/03_src/CDD/
+ls
+clear
+cd AdcHwAb/
+ls
+tree
+cd ..
+ls
+fzf
+cd ..
+fzf
+cd ../..
+cd ..
+fzf
+cp -r ME04RC3_2265(OLDVMS+SDM13ENABLE)/0200_Platform/SH00/03_src/CDD/AdcHwAb/cfg/ 0200_Platform/SH00/03_src/CDD/AdcHwAb/
+cp -r 'ME04RC3_2265(OLDVMS+SDM13ENABLE)/0200_Platform/SH00/03_src/CDD/AdcHwAb/cfg' 0200_Platform/SH00/03_src/CDD/AdcHwAb/
+jobs
+fg
+git status
+clear
+git status 
+git commit -sm "init added 0900"
+git status
+git diff
+git status
+rsync -v  0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini
+rsync -v 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c
+vi ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVM
+vi -u NONE ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini 
+. ~/.fzf.bash 
+echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" "
+echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" " -f 2,1
+echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" " -f 1,2
+echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | sed 's/\(.*\) \(.*\)/\2 \1/'
+cat ~/bin/swap2
+cat >> ~/bin/swap2
+chmod +x ~/bin/swap2 
+~/bin/swap2 
+~/bin/swap2 aaa bbb
+git status
+rsync -v $(swap2 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini )
+rsync -v $(swap2 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c)
+git diff
+vim 0900_System/02_configout/build/swc/CtApVMS.ini
+find 0200_Platform/SH00/03_src/CDD/ --type f
+find 0200_Platform/SH00/03_src/CDD/ -type f
+find 0200_Platform/SH00/03_src/CDD/ -type f --name "*.c"
+find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c"
+find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" | xargs rm
+find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" 
+find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" | cat
+git diff
+find 0200_Platform/SH00/03_src/MCAL/ -type d
+find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c"
+find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c" | xarg rm 
+find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c" | xargs rm 
+git status
+git commit -asm "Added VMS code for read ADC"
+tig
+clear
+ls
 exit
 tat 0
 exit
