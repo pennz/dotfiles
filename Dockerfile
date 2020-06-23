@@ -16,7 +16,7 @@ RUN git submodule update --init && .fzf/install --all; \
     (yes | timeout 600 vim -u .vimrc_back "+call plug#begin()" +PlugInstall +qa) ) &
 RUN echo "unalias vim" >> .bash_aliases && bash -c "source .bashrc; fish"
 RUN ( curl -fLo /root/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
-    (yes | timeout 600 nvim -u .vimrc_back "+call plug#begin()" +PlugInstall +checkhealth +qa) &; sleep ); \
+    (yes | timeout 600 nvim -u .vimrc_back "+call plug#begin()" +PlugInstall +checkhealth +qa) ); \
     cd /root/.config/nvim/plugged/jedi-vim && git submodule update --init ;\
     sh -c '$(git config --path --get init.templatedir)/../update.sh'
 
