@@ -89,7 +89,7 @@
 [gpg]
     program = gpg
 [commit]
-    gpgsign = false
+    gpgsign = true
     template = ~/.gitmessage
 [include]
     path = ~/.gitconfig.local
