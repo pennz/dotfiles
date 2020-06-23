@@ -1,36 +1,3 @@
-xclip -o -selection clipboard
-man ssh
-exit
-tat 0
-tmux ls
-clear
-make pc
-tmux new-window -d -t rvsConnector
-tmux new-session rvsConnector
-TMUX= ; tmux new-session rvsConnector
-TMUX= && tmux new-session rvsConnector
-TMUX= && tmux new-session --name rvsConnector
-TMUX= && tmux new-session -s rvsConnector
-tmux detach
-clear
-make mq
-tmux ls
-tat rvsConnector
-tat 0
-bash -x ~/bin/xcb_change 
-make clean
-make kaggle
-----------------------------
-bash ~/bin/xcb_change 
-cd works/kaggle_runner/
-make clean
-exit
-clear
-make mq
-make check
-pkill -f "make amqp_log"
-make mq
-make check
 htop
 make clean
 cd works/kaggle_runner/
@@ -498,3 +465,36 @@ pbcopy < ~/.kaggle/kaggle.json
 exit
 s
 ms
+ip rout
+ip route
+ping baidu.com
+pwd
+clear
+cd
+git status
+cat >> .gitignore.local 
+git status
+clear
+clear
+eit
+clear
+git pull
+tig
+tig
+tig
+git reset 9eee052d28dcc977bb233efe
+git reset 9eee052d28dcc977bb2
+tig
+git reset 2f889eee052d28dcc
+git status
+tig
+pwd
+who
+clear
+git commit -asm "CCC"
+tig
+git push
+tig
+clear
+cat 
+exit
