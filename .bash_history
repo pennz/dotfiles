@@ -1,264 +1,3 @@
-cat SH00.ini 
-wc -l SH00.ini 
-clear
-clear
-ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
-clear
-ps aux| grep ssh
-pkill ssh
-ps aux| grep ssh
-ps aux| grep ssh
-ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
-ps aux| grep ssh
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-clear
-ssh -L 9001:localhost:10001 -p 29922 v@vtool.duckdns.org
-clear
-ip route
-clear
-cd $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0900_System')
-ls
-cd 02_configout/
-ls
-clear
-ls
-nvim rte/
-cd ../..
-clear
-fzf
-git init
-git add 0900_System/02_configout/
-jobs
-nvim 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
-vi 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
-which vi
-vim -u None 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
-fg
-rg CdIoHwAbASIL_Adc_ChannelValue_mV
-fg
-git diff
-clear
-fzf
-git diff
-vi 0900_System/02_configout/build/swc/CtApVMS.ini 
-vi -u NONE 0900_System/02_configout/build/swc/CtApVMS.ini 
-git diff
-git status
-git diff --cached
-clear
-jobs
-fg
-fzf
-fg
-fzf
-tree $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
-ls $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
-echo $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
-cd /mnt/c/Users/ZhouPengyu/Downloads/SAIC_EP21H2_SW011_PIE-CD-15/0200_Platform/SH00/03_src/CDD/
-ls
-clear
-cd AdcHwAb/
-ls
-tree
-cd ..
-ls
-fzf
-cd ..
-fzf
-cd ../..
-cd ..
-fzf
-cp -r ME04RC3_2265(OLDVMS+SDM13ENABLE)/0200_Platform/SH00/03_src/CDD/AdcHwAb/cfg/ 0200_Platform/SH00/03_src/CDD/AdcHwAb/
-cp -r 'ME04RC3_2265(OLDVMS+SDM13ENABLE)/0200_Platform/SH00/03_src/CDD/AdcHwAb/cfg' 0200_Platform/SH00/03_src/CDD/AdcHwAb/
-jobs
-fg
-git status
-clear
-git status 
-git commit -sm "init added 0900"
-git status
-git diff
-git status
-rsync -v  0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini
-rsync -v 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c
-vi ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVM
-vi -u NONE ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini 
-. ~/.fzf.bash 
-echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" "
-echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" " -f 2,1
-echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" " -f 1,2
-echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | sed 's/\(.*\) \(.*\)/\2 \1/'
-cat ~/bin/swap2
-cat >> ~/bin/swap2
-chmod +x ~/bin/swap2 
-~/bin/swap2 
-~/bin/swap2 aaa bbb
-git status
-rsync -v $(swap2 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini )
-rsync -v $(swap2 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c)
-git diff
-vim 0900_System/02_configout/build/swc/CtApVMS.ini
-find 0200_Platform/SH00/03_src/CDD/ --type f
-find 0200_Platform/SH00/03_src/CDD/ -type f
-find 0200_Platform/SH00/03_src/CDD/ -type f --name "*.c"
-find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c"
-find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" | xargs rm
-find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" 
-find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" | cat
-git diff
-find 0200_Platform/SH00/03_src/MCAL/ -type d
-find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c"
-find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c" | xarg rm 
-find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c" | xargs rm 
-git status
-git commit -asm "Added VMS code for read ADC"
-tig
-clear
-ls
-exit
-tat 0
-exit
-tmux ls
-cd works/kaggle_runner/ 
-make clean
-clear
-make clean
-exit
-fish
-exit
-clear
-ls
-exit
-cat ~/.kaggle/kaggle.json 
-exit
-tmux ls
-tat 0
-sudo vi /etc/ssh/sshd_config 
-sudo systemctl restart sshd
-clear
-ls -lh ~/.ssh/
-ssh localhost
-vi ~/.ssh/known_hosts +70
-ssh localhost
-ssh -vT localhost
-ssh -vT -i ~/.ssh/id_rsa localhost
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-sudo vi /etc/ssh/sshd_config 
-sudo systemctl restart sshd
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-ssh-copy-id -i ~/.ssh/id_rsa localhost
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-ssh -vvvT -i ~/.ssh/id_rsa -p 29932 pengyu@pengyuzhou.com
-sudo chown v:v /home/v -R
-df -h
-clear
-ls -lh ~/.ssh/
-sudo chmod o-rwx /home/v/ -$
-sudo chmod o-rwx /home/v/ -R
-tail -f ~/.ssh/known_hosts
-tail -f ~/.ssh/authorized_keys 
-vi ~/.ssh/authorized_keys 
-tail -f ~/.ssh/authorized_keys 
-dmesg -w
-tmux join-pane
-sudo nvim /etc/ssh/sshd_config 
-sudo systemctl restart sshd
-ls -lh ~/.ssh/
-ls -lhd ~/.ssh/
-chmod 700 .ssh/
-ls -lhd ~/.ssh/
-cd ~/.ssh/
-ls
-chmod 644 id_rsa.pub 
-ls -lh
-exit
-sudo -i
-clear
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-ssh-copy-id -i ~/.ssh/id_rsa localhost
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-exit
-ssh -v -i ~/.ssh/id_rsa localhost
-exit
-sudo dmesg -w
-exit
-cd ~/works/kaggle_runner/
-make kaggle
-cat /tmp/asfasdf
-cat > /tmp/asfasdf
-exit
-xclip -selection clipboard
-r
-exit
-vi Makefile 
-cat ~/.kaggle/kaggle.
-cat ~/.kaggle/kaggle.json 
-t
-exit
-stty size
-exit
-bash ~/bin/xcb_change 
-git checkout HEAD .tmux.conf
-tmux source .tmux.conf
-exit
-tat 0
-fg
-bash -x bin/xcb_change 
-cd /home/v/works/orca-git
-which python
-python --version
-makepkg -si
-orca
-clear
-ddd 
-tmux ls
-clear
-
-sudo pacman -S speech-dispatcher
-speech-dispatcher 
-exit
-exit
-cd works/kaggle_runner/
-make mq
-tmux ls
-tat 0
-make clean
-clear
-tat 0
-clear
-exit
-tmux ls
-exit
-stty raw -echo &&while true; do ncat -4vlp 9017; sleep 1; echo "new"; done
-tmux ls
-tat 0
-tmuxls
-tmux ls
-ls
-cat Makefile 
-exit
-make pccnct
-make mq
-make kaggle
-bash -x ~/bin/xcb_change 
-vi ~/.tmux.conf
-tmux source .tmux.conf
-tmux source ~/.tmux.conf
-exit
-tmux
-tmux ls
-make pc
-make pccnct
-clear
-make clean
-make kaggle
-tmux ls
-tat 0
-tat 0
-tmux ls
-make kaggle
-xclip -o
-xclip -h
 xclip -o -selection clipboard
 man ssh
 exit
@@ -601,3 +340,161 @@ git pull
 tig
 fg
 git commit -asm "fish: ss"
+cd kaggle_runner/
+make clean
+clear
+cd /Volumes/Macintosh\ HD/
+ls
+. ~/.bashrc
+ls
+cd ..
+ls
+. ~/.shrc_customised.macos 
+ls
+cat ~/.shrc_customised.macos 
+vi ~/.shrc_customised.macos 
+[ -d /Volumes/CaseSensitive/ ] && ( which hdiutil >/dev/null && hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage )
+ hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage
+cd /Volumes/CaseSensitive/
+ls
+cd mq/
+git pull
+tig
+go build receive_logs_topic.go 
+mv receive_logs_topic ../kaggle_runner/
+cd ../kaggle_runner/
+git pull
+clear
+tig
+fish
+exit
+exit
+exit
+pycopy < ~/.kaggle/kaggle.json 
+pbcopy < ~/.kaggle/kaggle.json 
+clear
+exit
+clear
+m
+alias m
+m
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+stty raw -echo &&while true; do ncat -4vlp 23456; sleep 1; echo "new"; done
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+stty raw -echo &&while true; do ncat -4vlp 23458; sleep 1; echo "new"; done
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+stty raw -echo &&while true; do ncat -4vlp 23458; sleep 1; echo "new"; done
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+make clean
+exit
+stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
+cd works/kaggle/
+cd ..
+cd ..
+fish
+exit
+stty size
+exit
+clear
+s
+ssh -L 9001:localhost:10001 pengyu@pengyuzhou.com
+ssh -p 29932 -L 9001:localhost:10001 pengyu@pengyuzhou.com
+ssh -f -N -p 29932 -L 9001:localhost:10001 pengyu@pengyuzhou.com
+ssh -f -N -p 29932 -L 9001:localhost:10011 pengyu@pengyuzhou.com
+ssh -f -N -p 29932 -L 9011:localhost:10011 pengyu@pengyuzhou.com
+man ssh
+exit
+exit
+fish
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+cd /Volumes/CaseSensitive/kaggle_runner/
+git commit -asm 
+git commit -asm "Split to modules"
+conda activate torch
+fish
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+cat  ~/.kaggle/kaggle.json 
+ exit
+m
+exit
+fish
+stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
+m
+clear
+s
+cd /Volumes/CaseSensitive/kaggle_runner/
+make clean
+clear
+pwd
+make mq
+make clean
+make clean
+make clean
+make clean
+make clean
+make clean
+make clean
+clear
+s
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+clear
+make pccnct
+exit
+stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
+m
+exit
+s
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+ms
+ssh -f -N -p 29932 -L 9001:localhost:10000 pengyu@pengyuzhou.com
+htop
+exit
+ms
+stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
+pyton3
+python3
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+make clean
+exit
+make clean
+exit
+git commit -asm "Test change transformer"
+tig
+git status
+git push
+tig
+exit
+vi ~/.bash_aliases 
+. ~/.bash_aliases 
+ms
+m
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+ms
+stty size
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+cler
+pwd
+conda activate torch
+stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
+fish
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+s
+ms
