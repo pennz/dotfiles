@@ -29,6 +29,7 @@ alias c='pushd'
 alias cc='pushd -'
 alias m='LC_ALL="en_US.UTF-8" mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com -- tmux attach'
 alias mt='LC_ALL="en_US.UTF-8" mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com -- tmux'
+alias ms='LC_ALL="en_US.UTF-8" mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.com'
 alias s='LC_ALL="en_US.UTF-8" ssh -p 29932 pengyu@pengyuzhou.com'
 alias setproxy="eval export HTTP_PROXY=\$PROXY_URL HTTPS_PROXY=\$PROXY_URL http_proxy=\$PROXY_URL https_proxy=\$PROXY_URL; echo \$http_proxy"
 alias unsetproxy='export http_proxy= ; export https_proxy= ;export HTTP_PROXY= ; export HTTPS_PROXY= '
