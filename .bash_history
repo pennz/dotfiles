@@ -1,16 +1,3 @@
-htop
-make clean
-cd works/kaggle_runner/
-make clean
-tmux ls
-make check
-ps aux| grep receive
-pkill receive_logs_topic
-make check
-make clean
-exit
-cat ~/.kaggle/kaggle.
-cat ~/.kaggle/kaggle.json 
 clear
 ps aux| grep receive
 pkill receive_logs_topic
@@ -497,4 +484,17 @@ git push
 tig
 clear
 cat 
+exit
+tig
+cd
+tig
+tig .gitconfig
+git checkout  62819fd9013ff303fa03fd43b2a^ .gitconfig
+git diff
+git diff .gitconfig
+git diff .gitconfig --cached
+vi .gitconfig
+git commit -asm "git config"
+ls
+vi ~/bin/filter_public 
 exit
