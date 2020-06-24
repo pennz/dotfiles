@@ -1,500 +1,500 @@
-cd /mnt/d/PIE/BEIP_dev/
-ls
 clear
-ls
-git push
-git pull
-exit
-git pull
-git config --global pull.rebase false
-git status
-git fetch
-tig --all
-c
-git pull
-git push
+ps aux| grep receive
+pkill receive_logs_topic
+ps aux| grep receive
+pkill -9 receive_logs_topic
+ps aux| grep receive
 clear
-. ~/.bashrc
-clear
-git status
-clear
+ps aux| grep receive
+pstree -laps 847006
+pkill -9 -f receive_logs_topic
+pstree -laps 847006
+ps aux| grep receive
+make mq
+make clean
 pwd
-cd ../..
-cd ..
-rg -l BC_WDGM_SUPERVISION
-git commit -asm "undef BC_WDGM_ in Rte_Type.h"
-git push
+exit
+exit
+----
+make mq
+top
+-------
+make clean
+-------------
 clear
-tig
+cat ~/.kaggle/kaggle.json 
+exit
+cd works/kaggle_runner/
+make mq
+----------
+tat 0
+clear
+make kaggle
+export DISPLAY=:0
+make kaggle
+bash -x ~/bin/xcb_change 
+cd works/kaggle_runner/
+make clean
+exit
 clear
 fg
-ls
+make kaggle
+wxit
+exit
+step: 0, loss: 1.257812
+step: 0, loss: 1.445312
+step: 0, loss: 0.910156
+step: 0, loss: 1.109375
+step: 0, loss: 1.062500
+step: 0, loss: 1.101562
+stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
+cd works/kaggle_runner/
+make clean
+tat 0
+tmux ls
 clear
-git show
-nvim
-git push
-tig
-q
-qq
-cd /mnt/d/PIE/BEIP_dev/
-cd beip301_bugfix/
-vim 
-nvim
-git push
-tig
-qqq
-:q
-:q
-bash
+make pccnct
+clera
+make pccnct
+bash -x ~/bin/xcb_change 
+cd works/kaggle_runner/
+conda activate pyt
+vim Makefile 
+fg
+make get_submission
+fg
 git pull
+ss
+fg
+make update_sh_ipynb
+fg
+make update_sh_ipynb
+exit
+git commit -asm "Log grads"
+exit
+exit
 git push
 fg
-cd /mnt/d/PIE/BEIP_dev/
-git lg2
-git push
-git diff 
-git diff --cached
-git commit -asm "LCSS_PH00: added LCS_SM src"
-git commit -asm "LCSS_PH00: added LCS_SM src" --no-gpg
+fg
+exit
+fg
+make update_sh_ipynb
 git push
 tig
+git commit -asm "new debug"
 fg
+git commit -asm "fastai still problem"
+git push
+exit
+make kaggle
+exit
 clear
-jobs
-tig
-nvim
-git status
-git branch
-fzf
+exit
+cd works/kaggle_runner/
+make pccnct
 fg
-tig
-tig beip301_bugfix/1700-configout/build/swc/Posix_CtCdLCSS_PH00.ini
+make update_sh_ipynb
 fg
-git diff
-git diff --cached
-git commit -asm "Fixed some var should be P2VAR"
-git push
-fg
-tig
-fg
-fg
-clear
-tig
-git revert 2cf7e050c7f04f10b10a3b4
-tig
-fg
-git diff
- git status
-tig
-git commit -asm "Fix trace"
-git push
-fg
-git push
-fg
-git revert HEAD
-fg
-git push
-fg
-clear
-tig
-tig
-clear
 git status
 git diff
-git diff --cached
-git stash
-gtig
-tig
-git push
-git pull
-tig --all
-git rebase -i c100a00420b2dcb9bc7704d^
-git reflog
-git reset --hard c26524c0e
-tig
-git rebase -i c100a00420b2dcb9bc7704d^
-git mergetool
-git rebase --continue
-tig
-git rebase -i  149e1953b240^
-tig
-git rebase -i  751218a59^
-tig
-git rebase -i  06055^
-tig
-clear
-tig --all
-git rebase -i 4c229cda6ca6c7789
-tig
-git push
-git push --force
-tig
-tig --all
-clear
-exit
-fg
-exit
-cd  /d/PIE/BEIP_dev/beip301_bugf*
-cd  /mnt/d/PIE/BEIP_dev/beip301_bugf*
-tig 1500-build/LB/scripts/
-tig 1500-build/LB/scripts/MoWi_QNX.py
-git pull
-tig
-git push
-tig
-clear
-fg
-ping 192.168.56.102
-ip route
-ping 192.168.56.102
-clear
-cd /mnt/d/new/
-ls
-mkdir swc
-mv * swc
-ls
-scp -r swc/ kali@192.168.56.102:/media/kali/82ac350d-7415-4011-8944-f38c220d8042/update/
-scp -r swc/ root@192.168.56.102:/media/kali/82ac350d-7415-4011-8944-f38c220d8042/update
-scp -r swc/ root@192.168.56.102:/media/kali/82ac350d-7415-4011-8944-f38c220d8042/update
-scp -r swc/ root@192.168.56.102:/media/kali/82ac350d-7415-4011-8944-f38c220d8042/update
-scp -r swc/ kali@192.168.56.102:/media/kali/82ac350d-7415-4011-8944-f38c220d8042/update/
-cd swc/
-md5sum CtApADASDecision 
-md5sum CtApADASDecision 
-ping 192.168.1.70
-ls
-scp * root@192.168.1.70://opt/tttech/motionwise/app/bin
-ls -lh
-ls -l
-exit
-cd /mnt/d/new/swc/
-
-cd /mnt/d/new/swc/
-ls -lh libSchedTable.so 
-ls -l libSchedTable.so 
-ps exit
-exit
-LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org 
-bash
-ssh root@172.26.253.164
-ssh root@172.26.253.167
-scp root@172.26.253.167:~/\*pdf /mnt/d
-cd /mnt/d/
-cd workspace/git_sources/
-ls
-cd SV51/
-ls
-cd jenkins_integration/
-ls
-tig
-git reset f7edff63eae12dfff4caa61a11484c25a8b53998 
-tig
-tig
-git reset --hard f7edff63eae12dfff4caa61a11484c25a8b53998 
-tig
-git push --force
-tig
-git push --force
-tig
-git checkout um_file
-git checkout -b um_file
-git push
-git push --set-upstream origin um_file
-cd /mnt/d/workspace/git_sources/SV51/
-ls
-cd jenkins_integration/
-git fetch
-vi .git/config 
-cat ~/.ssh/id_rsa.pub 
-fg
-git pull
-git branch
-git checkout um21_update_src 
-git --all
-tig --all
-tig --all
-git checkout um21_update_src
-git fetch
-git pull
-ls
-clear
-ls
-tig
-tig
-clear
-ls
-vi Dockerfile 
-nvim Dockerfile 
-git commit -asm "Change to Template name"
-git push
-tig
-clear
-ls
-fg
-tig
-fg
-git status
-tig
-fg
-clar
-clear
-ls
-fg
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-
-~
-clear
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-exit
-cd /mnt/d/PIE/SAIC_EP21H2_SW011_PIE-CD10-217/
-cd 0900_System/03_flashing/
-ls
-cd 01_Debug/
-ls
-cd PH00/
-ls
-clear
-ls
-cd QNX/
-ls
-ls
-ls -lh
-hexdump ifs-update-image.bin | head
-hexdump -d ifs-update-image.bin | head
-man hexdump
-hexdump -C ifs-update-image.bin | head
-hexdump -C ifs-update-image.bin | head -n 100
-hexdump -C ifs-update-image.bin > ifs-update.hexdump
-tmux
-clear
-ls
-cd /mnt/d/new/swc/
-ls *bin
-scp *bin kali@192.168.56.102:/media/kali/B2\*
-md5sum *bin
-ssh-copy-id kali@192.168.56.102
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-clear
-exit
-cd /mnt/d/new/swc/
-ssh-copy-id qnx@172.26.253.188
-scp * qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0137_SWC
-ssh qnx@172.26.253.188
-exit
-ssh zhoupengyu@172.26.253.203
-ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
-ssh zhoupengyu@172.26.253.203
-cd /mnt/d/workspace/kaggle_runner/
-ls
-git pull
-exit
-LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org 
-ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-clear
-ls
-clear
-cd ../../Users/ZhouPengyu/Documents/
-grep "float" -n *csv
-exit
-cd ../../Users/ZhouPengyu/Documents/
-ls
-grep padding -n *.csv
-grep PAD -n *.csv
-grep float -n *.csv
-grep Pad -n *.csv
-vim Dt_RECORD_Environment_InitData.csv 
-clear
-exit
-ssh zhoupengyu@172.26.253.203
-exit
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-. ~/.bashrc
-cd
-pwd
-clear
-git status
-cd v
-clear
-git pull
-git commit -asm "History"
-clear
-LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org 
-htop
-pwd
-htop
-vi ~/bin/move_patches
-fg
-fg
-cd $(foldercvt 'D:\new\new_bf\qnx-application')
-scp * qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0137_SWC
-scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0131_BSP/images/ifs-update-image.bin .
-ls -lh ifs-update-image.bin 
-scp ifs-update-image.bin 192.168.56.102:/media/kali/B2E9-A0B9/
-scp ifs-update-image.bin kali@192.168.56.102:/media/kali/B2E9-A0B9/
-scp ifs-update-image.bin kali@192.168.56.102:/media/kali/B2E9-A0B9
-scp ifs-update-image.bin kali@192.168.56.102:/media/kali/B2E9-A0B9
-md5sum ifs-update-image.bin 
-clear
-ssh zhoupengyu@172.26.253.203
-ssh zhoupengyu@172.26.253.203
-scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0131_BSP/images/ifs-update-image.bin .
-md5sum ifs-update-image.bin 
-explorer.exe .
-cd /mnt/d/new/
-scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0131_BSP/images/ifs-update-image.bin .
-scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0137_SWC/libSchedTable.so .
-ls
-rm ifs-update-image.bin 
-scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0131_BSP/images/ifs-update-image.bin .
-cd /mnt/d/PIE/peip_dev/
-clear
-tig --all
-git fetch
-tig
-clear
-git status
-git pull
-clear
-clear
-vi ~/bin/vd
-fg
-fg
-man nvim
-fg
-clear
-git status
-chmod +x ~/bin/vd
-clear
-ls
-cd beip30/
-ls
-vd 1700-configout/build/precompiled/Aurix_img.ini 
-fg
-vd 1700-configout/build/precompiled/Aurix_img.ini 
-fg
-jobs
-fg
-vi ~/bin/vd
-vd 1700-configout/build/precompiled/Aurix_img.ini 
-jobs
-vi ~/bin/vd
-vd 1700-configout/build/precompiled/Aurix_img.ini 
-fg
-vd 1700-configout/build/precompiled/Aurix_img.ini 
-vd 1700-configout/build/precompiled/Aurix_img.ini 
-vd 1700-configout/SW_Units.xml 
-vd 1500-build/LB/scripts/System_Specification.py
-vd 1500-build/LB/scripts/System_Specification.py
-vd 1700-configout/build/precompiled/Aurix_img.ini 
-vd 1700-configout/SW_Units.xml 
-vd 1500-build/LB/scripts/System_Specification.py
-git status
-git status
-git commit -asm "Use EP21H2 files"
-ls
-vi 1700-configout/SW_Units.xml 
-vd 1700-configout/build/precompiled/CtApBISTQM_SH00.ini
-fg
-vd 1700-configout/build/precompiled/CtApBISTQM_SH00.ini
-vd 1700-configout/build/precompiled/CtApBISTQM_SH00.ini
-vd 1700-configout/build/precompiled/Aurix_img.ini 
-vd 1700-configout/build/swc/CtApComQM.ini 
-tig --all
-git fetch
-tig
-tig --all
-git merge origin/EPH-2160-vdcu-schedule-config-test
-clear
-git push
-tig
-git status
-fg
-git fetch
-tig
-fg
-clear
-jobs
-fg
-clear
-diff -rq
-vi ~/vd
-vi ~/bin/vd
-clear
-vi 1700-configout/build/precompiled/
-vd 1700-configout/build/precompiled/
-fg
-vi ~/bin/vd 
-vd 1700-configout/build/precompiled/
-clear
-clear
-. ~/.bashrc
+tat
+vi ~/.bash_aliases 
 . ~/.bash_aliases 
-cd /mnt/d/PIE/BEIP_dev/
-ls
-clear
-ls
-cd beip301_bugfix/
-clear
-ls
-clear
-cd ../../peip_dev/beip30/
-cd 1500-build/LB/
-git status
-git commit -asm "Update Aurix_img.ini"
+make kaggle
+cat ~/.kaggle/kaggle.json 
+exit
+fg
 git push
-explorer.exe .
-python.exe build.py 
-python.exe build.py  -s can
-python.exe build.py  -s Can -j 8
-clear
-cd ../..
-vd 1500-build/LB/system_config.py
-vi ~/bin/vd
-vd 1500-build/LB/system_config.py
-f
-fg
-fg
-vi ~/bin/vd
-vd 1700-configout/build/precompiled/
-vi ~/bin/vd
-vd 1700-configout/build/precompiled/
-cp /mnt/d/PIE/BEIP_dev/beip301_bugfix//1700-configout/build/precompiled/{Aurix_BSW_Can.ini,Posix_core_static_lib.ini,Posix_core_static_srv_lib.ini,TSC_IoHwAbQM.ini,US.ini} 1700-configout/build/precompiled
-vd 1700-configout/build/precompiled/
-clear
-vi ~/bin/vd
-vd 1500-build/LB/build.py 
-fg
-vd 1500-build/LB/build.py 
-cd 1500-build/
-ls
-rg IoHwAbQM
-clear
-ssh zhoupengyu@172.26.253.203
-pwd
 fg
 clear
-ls
-cd ../; vd 1700-configout/build/src
-mkdir -p 1700-configout/build/src
- vd 1700-configout/build/src
-clear
- vd 1700-configout/build/precompiled/Aurix_img.ini 
- vi 1700-configout/build/precompiled/Aurix_img.ini 
- vi 1700-configout/build/precompiled/Aurix_img.ini 
-diff -rq . ../../BEIP_dev/beip301_bugfix/
-cd /mnt/d/PIE/peip_dev/beip30/
-diff -rq . ../../BEIP_dev/beip301_bugfix/
-diff -rq . ../../BEIP_dev/beip301_bugfix/ | tee >(grep "^Only" >Only_in_beip301) >(grep "^Files" >  files_differ)  
-ls
-ls
-clear
-ls
-vi Only_in_beip301 
-sort Only_in_beip301 >Only_in
+make xla
+fg
+ss
+fg
+git push
 tig
-qqqqq
-qqqqq
-q
+fg
+stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
+cd works/kaggle_runner/
+make mq
+nvim Makefile 
+tg
+tig
+fg
+clear
+nvim hub/shonenkov_training_pipeline.py 
+git push
+fg
+git push
+tig
+fg
+pip install pysnooper
+fg
+fg
+git push
+git pull
+tig
+exit
+jupyter console --generate-config
+conda activate pyt
+jupyter console --generate-config
+python3 -m jupyter console --generate-config
+which jupyter
+python3 -m jupyter console --generate-config
+python3 -m  pip install --upgrade jupyter-console
+python3 -m jupyter console --generate-config
+vi ~/.jupyter/jupyter_console_config.py 
+jupyter console
+git status
+tig
+git status
+fg
+jobs
+fg
+tig
+git push
+fg
+git pull
+clear
+make mq
+fg
+git status
+git push
+fg
+tig
+pushd ~
+clear
+git commit -asm "Added jupyter vim plugin"
+git commit -asm "Added jupyter vim plugin" --no-gpg
+git checkout HEAD .bash_history 
+git mergetool
+git commit
+git push
+git pull
+exit
+sh
+jobs
+cd ~/v/
+git branch
+git merge good-day
+git push -h
+cd ~/.dotfiles/
+tig
+git pull
+clear
+tig
+tig --all
+clear
+exit
+which sh
+ls -lh /usr/bin/sh
+fish
+fg
+exit
+sh
+exit
+-------------------
+fg
+exit
+fg
+htop
+cd works/kaggle_runner/
+git pull
+make update_sh_ipynb
+git commit -sm "Updated ipynb from code"
+git commit -sm "Updated ipynb from code" -a
+git push
+tig hub/shonenkov_training_pipeline.
+tig hub/shonenkov_training_pipeline.py 
+exit
+jobs
+clear
+fg
+make update_sh_ipynb
+git commit -asm "Debug tpu"
+git push
+stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
+tmux
+ta
+tmux ls
+fg
+make update_sh_ipynb
+git commit -asm "Debug tpu"
+git push
+fg
+make rvs_session
+cat ~/.kaggle/kaggle.json 
+exit
+fg
+make update_sh_ipynb
+git commit -asm "tab change"
+git status
+git push
+tig
+fg
+make update_sh_ipynb
+git status
+fg
+make update_sh_ipynb
+git commit -asm "Debug tpu"
+git push
+fg
+fg
+exit
+---
+tig
+fg
+clear
+make clean
+make update_sh_ipynb
+git commit -asm "Debug tpu"
+git push
+fg
+git push
+exit
+cd ~/v/
+git pull
+mkdir ~/.jupyter/
+cp .jupyter/* ~/.jupyter/
+cd ~
+git add .jupyter/jupyter_*.py
+git add -f .jupyter/jupyter_*.py
+git commit -sm "Jupyter"
+git commit -sm "Jupyter" --no-gpg
+gitpush
+git push
+ o
+clear
+exit
+fg
+git pull
+git diff
+git commit -asm "jupytext in Makefile"
+git revert
+tig
+git revert HEAD
+git pull
+---qa
+ta
+. ~/.bash_aliases 
+fg
+make update_sh_ipynb
+git push
+fg
+git commit -asm "Debug tpu"
+git push
+git pull
+fg
+git push
+bash -x ~/bin/xcb_change 
+fg
+make update_sh_ipynb
+git commit -asm "to_tpu also use sampler"
+git pull
+tig
+fg
+git commit -asm "fish: ss"
+cd kaggle_runner/
+make clean
+clear
+cd /Volumes/Macintosh\ HD/
+ls
+. ~/.bashrc
+ls
+cd ..
+ls
+. ~/.shrc_customised.macos 
+ls
+cat ~/.shrc_customised.macos 
+vi ~/.shrc_customised.macos 
+[ -d /Volumes/CaseSensitive/ ] && ( which hdiutil >/dev/null && hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage )
+ hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage
+cd /Volumes/CaseSensitive/
+ls
+cd mq/
+git pull
+tig
+go build receive_logs_topic.go 
+mv receive_logs_topic ../kaggle_runner/
+cd ../kaggle_runner/
+git pull
+clear
+tig
+fish
+exit
+exit
+exit
+pycopy < ~/.kaggle/kaggle.json 
+pbcopy < ~/.kaggle/kaggle.json 
+clear
+exit
+clear
 m
+alias m
+m
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+stty raw -echo &&while true; do ncat -4vlp 23456; sleep 1; echo "new"; done
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+stty raw -echo &&while true; do ncat -4vlp 23458; sleep 1; echo "new"; done
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+stty raw -echo &&while true; do ncat -4vlp 23458; sleep 1; echo "new"; done
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+make clean
+exit
+stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
+cd works/kaggle/
+cd ..
+cd ..
+fish
+exit
+stty size
+exit
+clear
+s
+ssh -L 9001:localhost:10001 pengyu@pengyuzhou.com
+ssh -p 29932 -L 9001:localhost:10001 pengyu@pengyuzhou.com
+ssh -f -N -p 29932 -L 9001:localhost:10001 pengyu@pengyuzhou.com
+ssh -f -N -p 29932 -L 9001:localhost:10011 pengyu@pengyuzhou.com
+ssh -f -N -p 29932 -L 9011:localhost:10011 pengyu@pengyuzhou.com
+man ssh
+exit
+exit
+fish
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+cd /Volumes/CaseSensitive/kaggle_runner/
+git commit -asm 
+git commit -asm "Split to modules"
+conda activate torch
+fish
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+cat  ~/.kaggle/kaggle.json 
+ exit
+m
+exit
+fish
+stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
+m
+clear
+s
+cd /Volumes/CaseSensitive/kaggle_runner/
+make clean
+clear
+pwd
+make mq
+make clean
+make clean
+make clean
+make clean
+make clean
+make clean
+make clean
+clear
+s
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+clear
+make pccnct
+exit
+stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
+m
+exit
+s
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+ms
+ssh -f -N -p 29932 -L 9001:localhost:10000 pengyu@pengyuzhou.com
+htop
+exit
+ms
+stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
+pyton3
+python3
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+make clean
+exit
+make clean
+exit
+git commit -asm "Test change transformer"
+tig
+git status
+git push
+tig
+exit
+vi ~/.bash_aliases 
+. ~/.bash_aliases 
+ms
+m
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+ms
+stty size
+exit
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+cler
+pwd
+conda activate torch
+stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
+fish
+pbcopy < ~/.kaggle/kaggle.json 
+exit
+s
+ms
+ip rout
+ip route
+ping baidu.com
+pwd
+clear
+cd
+git status
+cat >> .gitignore.local 
+git status
+clear
+clear
+eit
+clear
+git pull
+tig
+tig
+tig
+git reset 9eee052d28dcc977bb233efe
+git reset 9eee052d28dcc977bb2
+tig
+git reset 2f889eee052d28dcc
+git status
+tig
+pwd
+who
+clear
+git commit -asm "CCC"
+tig
+git push
+tig
+clear
+cat 
+exit
+tig
+cd
+tig
+tig .gitconfig
+git checkout  62819fd9013ff303fa03fd43b2a^ .gitconfig
+git diff
+git diff .gitconfig
+git diff .gitconfig --cached
+vi .gitconfig
+git commit -asm "git config"
+ls
+vi ~/bin/filter_public 
+exit

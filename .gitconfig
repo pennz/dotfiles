@@ -1,8 +1,9 @@
 [init]
 	templatedir = ~/.git_template/template
 [user]
-    email = zhoupengyu@technomous.com.cn
-    name = Zhou Pengyu
+    email = fireflysuccess@gmail.com
+    name = Vincent Zhou
+    signingkey = 3FCEC9A87E8D419A
 [color]
     branch = auto
     diff = auto
@@ -88,7 +89,7 @@
 [gpg]
     program = gpg
 [commit]
-    gpgsign = false
+    gpgsign = true
     template = ~/.gitmessage
 [include]
     path = ~/.gitconfig.local
