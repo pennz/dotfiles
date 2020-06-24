@@ -1,184 +1,3 @@
-tig
-du -sh .git
-tar czf git_renamed_301.tar.gz .git 
-bg
-clear
-ls
-jobs
-clear
-ls
-git branch -a
-tig --all
-tig 0605_BF
-git checkout cd285e073ef859b3f25 
-git switch -c before_overwritten
-tig
-clear
-ls
-clear
-tig
-clear
-tig
-clear
-git whatchanged --help
-tig
-git log --author Zhou Pengyu
-git log --author "Zhou Pengyu"
-git log --oneline --author "Zhou Pengyu"
-tig
-git log --oneline --author "ZhouPengyu"
-tig
-git log --oneline --author "Zhou?Pengyu"
-git log --oneline --author="Zhou?Pengyu"
-git log --oneline --author="Zhou.?Pengyu"
-git log --oneline --author="Zhou.Pengyu"
-git log --oneline --author="\(Zhou Pengyu\)"
-git log --oneline --author="\(Zhou Pengyu\)|\(ZhouPengyu\)"
-git log --oneline --author="\(Zhou Pengyu\)\|\(ZhouPengyu\)"
-git log --oneline --author="\(Zhou Pengyu\)\|\(ZhouPengyu\)" > Change_List_Z
-vi Change_List_Z 
-less Change_List_Z 
-tig --all
-vim Change_List_Z 
-man git-am
-man git-apply
-tig
-cut -d" " -f1 Change_List_Z 
-cut -d" " -f1 Change_List_Z | xargs -I{} git format-patch -1
-rm *.patch
-cut -d" " -f1 Change_List_Z | xargs -I{} git format-patch -1 {}
-mkdir formated_patches
-mv *.patch formated_patches/
-cd formated_patches/
-ls
-ls -lht
-man git-am
-ls
-ls -lht
-head ../Change_List_Z 
-ls -t
-head 0001-Added-Posix_p2pcomif-cfg-to-solve-link-problem-for-C.patch 
-vim 0001-Added-Posix_p2pcomif-cfg-to-solve-link-problem-for-C.patch 
-cd ..
-tar czf patched.tgz formated_patches/
-. ~/.fzf.bash 
-scp patched.tgz  zhoupengyu@172.26.253.203:~
-tmux
-ssh zhoupengyu@172.26.253.203
-rm formated_patches/
-rm formated_patches/*
-cut -d" " -f1 Change_List_Z| xargs -I{} bash -c 'git format-patch -1 {}; sleep 1'
-tar czf p.tgz *.patch
-rsync -a *.patch zhoupengyu@172.26.253.203:/home/zhoupengyu/works/beip_dev/beip30
-cd ../../workspace/kaggle_runner/
-git grep 
-git grep "<3"
-ls -t *.patch
-ls
-c -
-ls
-ls -t *.patch
-clear
-tig
-q
-clear
-tig
-tig origin/integration/master
-tig origin/integration/master_merge_update_258 
-git log --oneline --author="\(Zhou Pengyu\)\|\(ZhouPengyu\)" > Change_List_Z
-vi Change_List_Z 
-vim Change_List_Z 
-git checkout integration/master
-git log --oneline --author="\(Zhou Pengyu\)\|\(ZhouPengyu\)" > Change_List_Z
-vim Change_List_Z 
-cut -d" " -f1 Change_List_Z | xargs -I{} bash -c 'git format-patch -1 {}; sleep 1;'
-rsync -a *.patch zhoupengyu@172.26.253.203:/home/zhoupengyu/works/beip_dev/
-ls *.patch
-rm *.patch
-cut -d" " -f1 Change_List_Z | xargs -I{} bash -c 'git format-patch -1 {}; sleep 1;'
-rsync -a *.patch zhoupengyu@172.26.253.203:/home/zhoupengyu/works/beip_dev/
-mkdir patched
-mv *.patch patched
-cut -d" " -f1 Change_List_Z | xargs -I{} bash -c 'git format-patch -1 {}^; sleep 1;'
-head Change_List_Z 
-tig
-ls
-ls -t *.patch
-ls -t patched/*
-vi patched/0001-EPH-2077-Manually-modify-Dcm_Lcfg.c-for-compilation.patch 
-vim patched/0001-EPH-2077-Manually-modify-Dcm_Lcfg.c-for-compilation.patch 
-rm -rf patched
-rm *.patch
-cut -d" " -f1 Change_List_Z | xargs -I{} bash -c 'git format-patch -1 {}; echo {};sleep 1;'
-tig 31a8bbae
-tig 923469ff
-tig 1a6969c6
-tig
-clear
-tig
-clear
-tig
-tig --all
-exit
-tmux attach
-clear
-ls
-clear
-ls
-cd /mnt/d/PIE/
-cd SAIC_EP21H2_SW011_PIE-CD10-217/
-ls
-rg TracePMRunTime
-rg -l TracePMRunTime
-rg -l PMRunTime
-exit
-clear
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-gcc
-which gcc
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-ssh-copy-id -p 29922 v@vtool.duckdns.org
-clear
-exit
-ssh zhoupengyu@172.26.253.203
-/
-clear
-ssh -p 29932 pengyu@pengyuzhou.com
-ssh -p 29922 v@vtool.duckdns.org
-ssh-keygen -f "/home/pengyu/.ssh/known_hosts" -R "[vtool.duckdns.org]:29922"
-ssh -p 29922 v@vtool.duckdns.org
-ssh -p 29922 v@vtool.duckdns.org
-ssh-copy-id -p 29922 v@vtool.duckdns.org
-ssh -p 29922 v@vtool.duckdns.org
-clear
-LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
-LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org 
-LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org 
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-clear
-git fetch
-tig --all
-git checkout 0605_BF_merge_PH00 
-tig
-clear
-git checkout 0605_BF_merge_PH00 
-tig
-git pull
-git branch --set-upstream-to=origin/0605_BF_merge_PH00 0605_BF_merge_PH00
-git remote show
-git remote show b3
-ssh zhoupengyu@172.26.253.203
-git remote add origin ssh://git@git.technomous.com.cn:7999/eph/beip_dev.git
-git branch --set-upstream-to=origin/0605_BF_merge_PH00 0605_BF_merge_PH00
-git fetch
-git pull
-git branch --set-upstream-to=origin/0605_BF_merge_PH00 0605_BF_merge_PH00
-exit
-exit
-exit
-exit
-exit
-exit
 cd /mnt/d/PIE/BEIP_dev/
 ls
 clear
@@ -499,3 +318,183 @@ git status
 cd v
 clear
 git pull
+git commit -asm "History"
+clear
+LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org 
+htop
+pwd
+htop
+vi ~/bin/move_patches
+fg
+fg
+cd $(foldercvt 'D:\new\new_bf\qnx-application')
+scp * qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0137_SWC
+scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0131_BSP/images/ifs-update-image.bin .
+ls -lh ifs-update-image.bin 
+scp ifs-update-image.bin 192.168.56.102:/media/kali/B2E9-A0B9/
+scp ifs-update-image.bin kali@192.168.56.102:/media/kali/B2E9-A0B9/
+scp ifs-update-image.bin kali@192.168.56.102:/media/kali/B2E9-A0B9
+scp ifs-update-image.bin kali@192.168.56.102:/media/kali/B2E9-A0B9
+md5sum ifs-update-image.bin 
+clear
+ssh zhoupengyu@172.26.253.203
+ssh zhoupengyu@172.26.253.203
+scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0131_BSP/images/ifs-update-image.bin .
+md5sum ifs-update-image.bin 
+explorer.exe .
+cd /mnt/d/new/
+scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0131_BSP/images/ifs-update-image.bin .
+scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0137_SWC/libSchedTable.so .
+ls
+rm ifs-update-image.bin 
+scp  qnx@172.26.253.188:/home/qnx/z/src_git/1300-os-iecu-qnx/0131_BSP/images/ifs-update-image.bin .
+cd /mnt/d/PIE/peip_dev/
+clear
+tig --all
+git fetch
+tig
+clear
+git status
+git pull
+clear
+clear
+vi ~/bin/vd
+fg
+fg
+man nvim
+fg
+clear
+git status
+chmod +x ~/bin/vd
+clear
+ls
+cd beip30/
+ls
+vd 1700-configout/build/precompiled/Aurix_img.ini 
+fg
+vd 1700-configout/build/precompiled/Aurix_img.ini 
+fg
+jobs
+fg
+vi ~/bin/vd
+vd 1700-configout/build/precompiled/Aurix_img.ini 
+jobs
+vi ~/bin/vd
+vd 1700-configout/build/precompiled/Aurix_img.ini 
+fg
+vd 1700-configout/build/precompiled/Aurix_img.ini 
+vd 1700-configout/build/precompiled/Aurix_img.ini 
+vd 1700-configout/SW_Units.xml 
+vd 1500-build/LB/scripts/System_Specification.py
+vd 1500-build/LB/scripts/System_Specification.py
+vd 1700-configout/build/precompiled/Aurix_img.ini 
+vd 1700-configout/SW_Units.xml 
+vd 1500-build/LB/scripts/System_Specification.py
+git status
+git status
+git commit -asm "Use EP21H2 files"
+ls
+vi 1700-configout/SW_Units.xml 
+vd 1700-configout/build/precompiled/CtApBISTQM_SH00.ini
+fg
+vd 1700-configout/build/precompiled/CtApBISTQM_SH00.ini
+vd 1700-configout/build/precompiled/CtApBISTQM_SH00.ini
+vd 1700-configout/build/precompiled/Aurix_img.ini 
+vd 1700-configout/build/swc/CtApComQM.ini 
+tig --all
+git fetch
+tig
+tig --all
+git merge origin/EPH-2160-vdcu-schedule-config-test
+clear
+git push
+tig
+git status
+fg
+git fetch
+tig
+fg
+clear
+jobs
+fg
+clear
+diff -rq
+vi ~/vd
+vi ~/bin/vd
+clear
+vi 1700-configout/build/precompiled/
+vd 1700-configout/build/precompiled/
+fg
+vi ~/bin/vd 
+vd 1700-configout/build/precompiled/
+clear
+clear
+. ~/.bashrc
+. ~/.bash_aliases 
+cd /mnt/d/PIE/BEIP_dev/
+ls
+clear
+ls
+cd beip301_bugfix/
+clear
+ls
+clear
+cd ../../peip_dev/beip30/
+cd 1500-build/LB/
+git status
+git commit -asm "Update Aurix_img.ini"
+git push
+explorer.exe .
+python.exe build.py 
+python.exe build.py  -s can
+python.exe build.py  -s Can -j 8
+clear
+cd ../..
+vd 1500-build/LB/system_config.py
+vi ~/bin/vd
+vd 1500-build/LB/system_config.py
+f
+fg
+fg
+vi ~/bin/vd
+vd 1700-configout/build/precompiled/
+vi ~/bin/vd
+vd 1700-configout/build/precompiled/
+cp /mnt/d/PIE/BEIP_dev/beip301_bugfix//1700-configout/build/precompiled/{Aurix_BSW_Can.ini,Posix_core_static_lib.ini,Posix_core_static_srv_lib.ini,TSC_IoHwAbQM.ini,US.ini} 1700-configout/build/precompiled
+vd 1700-configout/build/precompiled/
+clear
+vi ~/bin/vd
+vd 1500-build/LB/build.py 
+fg
+vd 1500-build/LB/build.py 
+cd 1500-build/
+ls
+rg IoHwAbQM
+clear
+ssh zhoupengyu@172.26.253.203
+pwd
+fg
+clear
+ls
+cd ../; vd 1700-configout/build/src
+mkdir -p 1700-configout/build/src
+ vd 1700-configout/build/src
+clear
+ vd 1700-configout/build/precompiled/Aurix_img.ini 
+ vi 1700-configout/build/precompiled/Aurix_img.ini 
+ vi 1700-configout/build/precompiled/Aurix_img.ini 
+diff -rq . ../../BEIP_dev/beip301_bugfix/
+cd /mnt/d/PIE/peip_dev/beip30/
+diff -rq . ../../BEIP_dev/beip301_bugfix/
+diff -rq . ../../BEIP_dev/beip301_bugfix/ | tee >(grep "^Only" >Only_in_beip301) >(grep "^Files" >  files_differ)  
+ls
+ls
+clear
+ls
+vi Only_in_beip301 
+sort Only_in_beip301 >Only_in
+tig
+qqqqq
+qqqqq
+q
+m

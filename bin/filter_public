@@ -45,6 +45,7 @@ git filter-repo \
     --path .ssh \
     --path works \
     --path bin/filter_public \
+    --path bin/vtool \
     --invert-paths
 git remote add public file://$HOME/$RREPO_COPY || true
 git fetch public
