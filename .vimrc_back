@@ -160,6 +160,8 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Chiel92/vim-autoformat'
 Plug 'alfredodeza/pytest.vim'
 Plug 'jupyter-vim/jupyter-vim'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+Plug 'pixelneo/vim-python-docstring'
 
 " javascript
 Plug 'pangloss/vim-javascript'

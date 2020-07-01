@@ -498,3 +498,30 @@ git commit -asm "git config"
 ls
 vi ~/bin/filter_public 
 exit
+vi .gitconfig
+git commit -asm "git config"
+ls
+vi ~/bin/filter_public 
+git comit -asm "VPS history"
+git commit -asm "VPS history"
+git checkout good-day
+chown 644 ~/.ssh/config 
+git pull
+ls bin/vtool 
+git add bin/vtool 
+git commit -sm "Added vtool"
+tig bin/vtool 
+chmod 644 ~/.ssh/config 
+git diff
+git status
+clear
+git commit -asm "hist"
+git merge good-day
+git mergetool
+git commit
+clear
+exit
+type
+which type
+fg
+exit
