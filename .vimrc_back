@@ -161,7 +161,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'alfredodeza/pytest.vim'
 Plug 'jupyter-vim/jupyter-vim'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
-"Plug 'pixelneo/vim-python-docstring'
+Plug 'pixelneo/vim-python-docstring'
 
 nnoremap <leader>ss :Docstring<CR>
 " javascript
