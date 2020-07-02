@@ -1,106 +1,3 @@
-clear
-ps aux| grep receive
-pkill receive_logs_topic
-ps aux| grep receive
-pkill -9 receive_logs_topic
-ps aux| grep receive
-clear
-ps aux| grep receive
-pstree -laps 847006
-pkill -9 -f receive_logs_topic
-pstree -laps 847006
-ps aux| grep receive
-make mq
-make clean
-pwd
-exit
-exit
-----
-make mq
-top
--------
-make clean
--------------
-clear
-cat ~/.kaggle/kaggle.json 
-exit
-cd works/kaggle_runner/
-make mq
-----------
-tat 0
-clear
-make kaggle
-export DISPLAY=:0
-make kaggle
-bash -x ~/bin/xcb_change 
-cd works/kaggle_runner/
-make clean
-exit
-clear
-fg
-make kaggle
-wxit
-exit
-step: 0, loss: 1.257812
-step: 0, loss: 1.445312
-step: 0, loss: 0.910156
-step: 0, loss: 1.109375
-step: 0, loss: 1.062500
-step: 0, loss: 1.101562
-stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
-cd works/kaggle_runner/
-make clean
-tat 0
-tmux ls
-clear
-make pccnct
-clera
-make pccnct
-bash -x ~/bin/xcb_change 
-cd works/kaggle_runner/
-conda activate pyt
-vim Makefile 
-fg
-make get_submission
-fg
-git pull
-ss
-fg
-make update_sh_ipynb
-fg
-make update_sh_ipynb
-exit
-git commit -asm "Log grads"
-exit
-exit
-git push
-fg
-fg
-exit
-fg
-make update_sh_ipynb
-git push
-tig
-git commit -asm "new debug"
-fg
-git commit -asm "fastai still problem"
-git push
-exit
-make kaggle
-exit
-clear
-exit
-cd works/kaggle_runner/
-make pccnct
-fg
-make update_sh_ipynb
-fg
-git status
-git diff
-tat
-vi ~/.bash_aliases 
-. ~/.bash_aliases 
-make kaggle
 cat ~/.kaggle/kaggle.json 
 exit
 fg
@@ -524,4 +421,80 @@ exit
 type
 which type
 fg
+exit
+clear
+ip route
+fish
+clear
+clear
+git pull
+clear
+ss
+clear
+git pull
+clear
+jobs
+fg
+nvim ../dwpa/setup.py 
+c;ear
+clear
+cd
+git pull
+fish
+exit
+jobs
+fg
+exit
+cd
+git pull
+tig
+nvim
+exit
+clear
+ls
+clear
+htop
+clera
+ls
+exit
+pwd
+cd ..
+ls
+cd dwpa/
+ls
+clear
+clear
+exit
+exit
+exit
+tmux ls
+ta
+ta
+tmux
+ta
+cd /Volumes/
+clear
+ls
+cd CaseSensitive/
+cd dwpa/
+ls
+cd src/dwpa/
+ls
+pylint .
+clear
+pwd
+git remote show origin
+git status
+clear
+git status
+pwd
+git remote show origin
+clear
+git pull
+clear
+clear
+git pull
+clear
+clear
+ip fouge
 exit
