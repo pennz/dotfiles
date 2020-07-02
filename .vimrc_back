@@ -160,7 +160,10 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Chiel92/vim-autoformat'
 Plug 'alfredodeza/pytest.vim'
 Plug 'jupyter-vim/jupyter-vim'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+"Plug 'pixelneo/vim-python-docstring'
 
+nnoremap <leader>ss :Docstring<CR>
 " javascript
 Plug 'pangloss/vim-javascript'
 
@@ -1316,7 +1319,6 @@ endfunc
 nnoremap <silent><Leader>m :make<CR>
 nnoremap <silent><Leader>E :e ~/.vimrc_back<CR>
 "noremap <silent><Leader>p :<C-u>wincmd p<CR>
-nnoremap <leader>ss :<C-u>wq<CR>
 nnoremap <silent><Leader><Leader> :call BufSwitch()<CR>
 nnoremap <leader>D :<C-u>let @#="<C-R>#" <BAR> keepalt BD<CR>
 nnoremap <leader>dd :keepalt bd<CR>
