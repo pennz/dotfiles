@@ -1,500 +1,500 @@
+vi Makefile 
+make pydoc
+bg
 clear
-ps aux| grep receive
-pkill receive_logs_topic
-ps aux| grep receive
-pkill -9 receive_logs_topic
-ps aux| grep receive
-clear
-ps aux| grep receive
-pstree -laps 847006
-pkill -9 -f receive_logs_topic
-pstree -laps 847006
-ps aux| grep receive
-make mq
-make clean
-pwd
-exit
-exit
-----
-make mq
-top
--------
-make clean
--------------
-clear
-cat ~/.kaggle/kaggle.json 
-exit
-cd works/kaggle_runner/
-make mq
-----------
-tat 0
-clear
-make kaggle
-export DISPLAY=:0
-make kaggle
-bash -x ~/bin/xcb_change 
-cd works/kaggle_runner/
-make clean
-exit
-clear
+jobs
 fg
-make kaggle
-wxit
+wclear
 exit
-step: 0, loss: 1.257812
-step: 0, loss: 1.445312
-step: 0, loss: 0.910156
-step: 0, loss: 1.109375
-step: 0, loss: 1.062500
-step: 0, loss: 1.101562
-stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
-cd works/kaggle_runner/
-make clean
-tat 0
-tmux ls
+cd /mnt/d/workspace/kaggle_runner/
+git pull
 clear
-make pccnct
-clera
-make pccnct
-bash -x ~/bin/xcb_change 
-cd works/kaggle_runner/
-conda activate pyt
+clear
+clear
+tig
+clear
+git push
+vi Makefile 
 vim Makefile 
-fg
-make get_submission
-fg
-git pull
-ss
-fg
-make update_sh_ipynb
-fg
-make update_sh_ipynb
-exit
-git commit -asm "Log grads"
-exit
-exit
+cmd.exe .
 git push
-fg
-fg
-exit
-fg
-make update_sh_ipynb
-git push
-tig
-git commit -asm "new debug"
-fg
-git commit -asm "fastai still problem"
-git push
-exit
-make kaggle
-exit
-clear
-exit
-cd works/kaggle_runner/
-make pccnct
-fg
-make update_sh_ipynb
-fg
-git status
+git diff --cached
 git diff
-tat
-vi ~/.bash_aliases 
-. ~/.bash_aliases 
-make kaggle
-cat ~/.kaggle/kaggle.json 
-exit
-fg
-git push
+git status
+clear
+clear
+make pydoc
 fg
 clear
-make xla
-fg
-ss
-fg
-git push
-tig
-fg
-stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
-cd works/kaggle_runner/
-make mq
-nvim Makefile 
-tg
-tig
-fg
-clear
-nvim hub/shonenkov_training_pipeline.py 
-git push
-fg
-git push
-tig
-fg
-pip install pysnooper
-fg
-fg
-git push
-git pull
-tig
-exit
-jupyter console --generate-config
-conda activate pyt
-jupyter console --generate-config
-python3 -m jupyter console --generate-config
-which jupyter
-python3 -m jupyter console --generate-config
-python3 -m  pip install --upgrade jupyter-console
-python3 -m jupyter console --generate-config
-vi ~/.jupyter/jupyter_console_config.py 
-jupyter console
-git status
-tig
-git status
-fg
 jobs
-fg
-tig
-git push
-fg
-git pull
+nvim -u Makefile 
+clera
+vim -u ~/.vimrc
+vim -u ~/.vimrc_back 
 clear
-make mq
-fg
-git status
-git push
-fg
-tig
-pushd ~
-clear
-git commit -asm "Added jupyter vim plugin"
-git commit -asm "Added jupyter vim plugin" --no-gpg
-git checkout HEAD .bash_history 
-git mergetool
-git commit
-git push
-git pull
 exit
-sh
-jobs
-cd ~/v/
-git branch
-git merge good-day
-git push -h
-cd ~/.dotfiles/
-tig
-git pull
+m
+m
+ms
+exit
 clear
+cd /mnt/d/workspace/git_sources/
+ls
+cd EPH/
+ls
+cd src_git/
+git pull
+tig -a
+clear
+tig --all
 tig
 tig --all
+git checkout EPH-1500-swdev-software-development-plan-for-eyeqcom-sw010
+tig
+explorer.exe .
+tig
+ls
 clear
-exit
-which sh
-ls -lh /usr/bin/sh
-fish
+tig
+git status
+git diff
+tig
+git remote add lab git@172.26.253.203:root/test_ci.git
+git push -u lab
+git push -u lab
+nvim
 fg
-exit
-sh
-exit
--------------------
-fg
-exit
-fg
-htop
-cd works/kaggle_runner/
-git pull
-make update_sh_ipynb
-git commit -sm "Updated ipynb from code"
-git commit -sm "Updated ipynb from code" -a
-git push
-tig hub/shonenkov_training_pipeline.
-tig hub/shonenkov_training_pipeline.py 
+ls 0900_System/02_configout/rte/common/SWCVersionInfo/SWCVersionInfo.h
+ls 0900_System/02_configout/rte/common/SWCVersionInfos/SWCVersionInfo.h
+cat ~/.ssh/id_rsa.pub 
+clear
+cd ..
 exit
 jobs
-clear
 fg
-make update_sh_ipynb
-git commit -asm "Debug tpu"
-git push
-stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
+exit
+clear
+ssh zhoupengyu@172.26.253.203
+clear
+ssh zhoupengyu@172.26.253.203
+ssh root@172.26.253.164
+ssh root@172.26.253.167
+exit
+nvim
+nvim /mnt/d/PIE/BEIP_dev/beip301_bugfix/1700-configout/core/automotive/lifecycle/LCSM/units/LCSM/
+clear
+git fetch
+cd ../beip302/
+tig
+clear
+tig
+clear
+ls
+tig ../beip301_bugfix/
+clear
+exit
+nvim
 tmux
-ta
-tmux ls
-fg
-make update_sh_ipynb
-git commit -asm "Debug tpu"
-git push
-fg
-make rvs_session
-cat ~/.kaggle/kaggle.json 
 exit
-fg
-make update_sh_ipynb
-git commit -asm "tab change"
-git status
-git push
-tig
-fg
-make update_sh_ipynb
-git status
-fg
-make update_sh_ipynb
-git commit -asm "Debug tpu"
-git push
-fg
-fg
-exit
----
-tig
-fg
+cd /mnt/d/workspace/kaggle_runner/
+git pull
+clea
+pydoc-markdown --server --render-toc -o
 clear
-make clean
-make update_sh_ipynb
-git commit -asm "Debug tpu"
-git push
-fg
-git push
-exit
-cd ~/v/
 git pull
-mkdir ~/.jupyter/
-cp .jupyter/* ~/.jupyter/
-cd ~
-git add .jupyter/jupyter_*.py
-git add -f .jupyter/jupyter_*.py
-git commit -sm "Jupyter"
-git commit -sm "Jupyter" --no-gpg
-gitpush
-git push
- o
+tig
 clear
+clear
+git status
+git status
+git pull
+clear
+ls
+bin/document_thing 
+git status
+gitbook build .
+pydoc-markdown --server -o
+clear
+ls
+vim Makefile 
+git add Makefile 
+git commit -sm "Make: gitlab runner start script" ; git push
+git push
+git push lab
+clear
+git remote show
 exit
-fg
-git pull
-git diff
-git commit -asm "jupytext in Makefile"
-git revert
+cd /mnt/d/workspace/git_sources/SV51/
+ls
+cd jenkins_integration/
+ls
+clear
 tig
-git revert HEAD
-git pull
----qa
-ta
-. ~/.bash_aliases 
+clear
+ls
+clear
+find . -name "release_issues.py"
+ls
+clear
+ls
+git branch
+ls
+cd UserManual/
+ls
+clear
+ls *.py
+cd ..
+ls
+git branch
+git checkout RN_EP21H2 
+ls
+clear
+git status
+clear
+ls
+vi build_RN.sh 
+nvim build_RN.sh 
+python3 -m pip install black
 fg
-make update_sh_ipynb
+python3 -m pip install yapf
+python3 -m pip install autopep8
+fg
 git push
-fg
-git commit -asm "Debug tpu"
+git remote show
+git push origin
+clear
+clear
+ls
+clear
+pwd
+ls
+cd ReleaseNote/
+ls
+clear
+ls
+vi ReleaseNotes_template.rst
+git commit -asm "Change Request"
 git push
-git pull
-fg
-git push
-bash -x ~/bin/xcb_change 
-fg
-make update_sh_ipynb
-git commit -asm "to_tpu also use sampler"
-git pull
-tig
-fg
-git commit -asm "fish: ss"
+git push origin
+cd /mnt/d/PIE/BEIP_dev/
+clear
+tig -a
+git checkout 0605_BF_merge_PH00
+ms
+cd /mnt/d/workspace/
 cd kaggle_runner/
-make clean
 clear
-cd /Volumes/Macintosh\ HD/
 ls
-. ~/.bashrc
-ls
-cd ..
-ls
-. ~/.shrc_customised.macos 
-ls
-cat ~/.shrc_customised.macos 
-vi ~/.shrc_customised.macos 
-[ -d /Volumes/CaseSensitive/ ] && ( which hdiutil >/dev/null && hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage )
- hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage
-cd /Volumes/CaseSensitive/
-ls
-cd mq/
-git pull
-tig
-go build receive_logs_topic.go 
-mv receive_logs_topic ../kaggle_runner/
-cd ../kaggle_runner/
-git pull
 clear
-tig
-fish
-exit
-exit
-exit
-pycopy < ~/.kaggle/kaggle.json 
-pbcopy < ~/.kaggle/kaggle.json 
+nvim .gitlab-ci.yml 
 clear
-exit
-clear
-m
-alias m
-m
-exit
-pbcopy < ~/.kaggle/kaggle.json 
-stty raw -echo &&while true; do ncat -4vlp 23456; sleep 1; echo "new"; done
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-stty raw -echo &&while true; do ncat -4vlp 23458; sleep 1; echo "new"; done
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-stty raw -echo &&while true; do ncat -4vlp 23458; sleep 1; echo "new"; done
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-make clean
-exit
-stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
-cd works/kaggle/
-cd ..
-cd ..
-fish
-exit
-stty size
-exit
-clear
-s
-ssh -L 9001:localhost:10001 pengyu@pengyuzhou.com
-ssh -p 29932 -L 9001:localhost:10001 pengyu@pengyuzhou.com
-ssh -f -N -p 29932 -L 9001:localhost:10001 pengyu@pengyuzhou.com
-ssh -f -N -p 29932 -L 9001:localhost:10011 pengyu@pengyuzhou.com
-ssh -f -N -p 29932 -L 9011:localhost:10011 pengyu@pengyuzhou.com
-man ssh
-exit
-exit
-fish
-exit
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-cd /Volumes/CaseSensitive/kaggle_runner/
-git commit -asm 
-git commit -asm "Split to modules"
-conda activate torch
-fish
-exit
-pbcopy < ~/.kaggle/kaggle.json 
-cat  ~/.kaggle/kaggle.json 
- exit
-m
-exit
-fish
-stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
-m
-clear
-s
-cd /Volumes/CaseSensitive/kaggle_runner/
-make clean
-clear
-pwd
-make mq
-make clean
-make clean
-make clean
-make clean
-make clean
-make clean
-make clean
-clear
-s
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-clear
-make pccnct
-exit
-stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
-m
-exit
-s
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-ms
-ssh -f -N -p 29932 -L 9001:localhost:10000 pengyu@pengyuzhou.com
-htop
-exit
-ms
-stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
-pyton3
-python3
-exit
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-make clean
-exit
-make clean
-exit
-git commit -asm "Test change transformer"
-tig
 git status
+git pull
+clear
+nvim Makefile 
+gitbook
+make gitbook
+fg
+make install_gitbook
+sudo make install_gitbook
+sudo -i 
+make pydoc
+clear
+ls
+cd /
+cd /mnt/d/workspace/kaggle_runner/
+ls
+clear
+git status
+clear
+git status
+clear
+git pull
+ss
+clear
+git pull
+clear
+jobs
+nvim .gitlab-ci.yml 
 git push
-tig
-exit
-vi ~/.bash_aliases 
-. ~/.bash_aliases 
-ms
-m
-exit
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-ms
-stty size
-exit
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-cler
-pwd
-conda activate torch
-stty raw -echo &&while true; do ncat -vlp 23454; sleep 1; echo "new"; done
-fish
-pbcopy < ~/.kaggle/kaggle.json 
-exit
-s
-ms
-ip rout
-ip route
-ping baidu.com
-pwd
-clear
-cd
-git status
-cat >> .gitignore.local 
-git status
-clear
-clear
-eit
-clear
-git pull
-tig
-tig
-tig
-git reset 9eee052d28dcc977bb233efe
-git reset 9eee052d28dcc977bb2
-tig
-git reset 2f889eee052d28dcc
+git push
 git status
 tig
-pwd
-who
 clear
-git commit -asm "CCC"
+clear
+clear
+clear
+git status
 tig
 git push
-tig
+ls
 clear
-cat 
+ls *.md
+mkdocs serve
+ls *yml
+cat pydoc-markdown.yml 
+mkdocs --help
+mkdocs new
+mkdocs new .
+cat mkdocs.yml 
+mkdocs serve
+cat *yml
+pydoc-markdown --server 
+pydoc-markdown -p kaggle_runner --server 
+pydoc-markdown -p kaggle_runner 
+clear
+doctoc .
+clear
+ls
+vi Makefile 
+sudo npm install -g gitbook-summary
+jobs
+nvim Makefile 
+clear
 exit
-tig
-cd
-tig
-tig .gitconfig
-git checkout  62819fd9013ff303fa03fd43b2a^ .gitconfig
+clear
+cd /mnt/d/workspace/kaggle_runner/
+clear
+git status
+clear
+ls
+vi Makefile 
+clear
+git status
+clear
+ls
+ls *md
+find . -name "*.md"
+book sm
+cat SUMMARY.md 
+book sm
+find . -name "*.md"
+book sm
+cat SUMMARY.md 
+ls build/
+rm kaggle_runner.md 
+book sm
+cat SUMMARY.md 
+clear
+git status
+clear
+clear
+ls
+gitbook build .
+clear
+git status
+git commit -asm "Generate summary"
+git push
+clear
+jobs
+nvim Makefile 
+clear
+ls
+book sm
+book --help
+ls
+clear
+ls
+vi SUMMARY.md 
+clear
+vi Makefile 
+git status
 git diff
-git diff .gitconfig
-git diff .gitconfig --cached
-vi .gitconfig
-git commit -asm "git config"
+clear
+fg
+clear
+clear
+fg
+git commit -asm "make: distclean"
+make distclean
+fg
+clear
+jobs
+jobs
 ls
-vi ~/bin/filter_public 
+git status
+vi Makefile 
+cp Makefile  ..
+vi ../Makefile 
+clear
+make distclean
+cp Makefile ..
+clear
+git remote add lab git@172.26.253.203:root/test_ci.git
+git remote add lab
+clear
+ls
+ls .git
+cd ..
+git clone git@gitlab.com:MrCue/kaggle_runner.git kr
+cd kr
+cp ../Makefile .
+git diff
+git commit -asm "Update document generation"
+git push
+clear
+git pull
+clear
+git status
 exit
+cd /mnt/d/workspace/kr
+clear
+ls
+git status
+clear
+git remote add gh git@github.com:pennz/kaggle_runner.git
+git push gh
+clear
+clear
+ls
+clear
+tig
+make publish TAG=0.1.7
+tig
+clear
+git push
+clear
+clear
+which sed
+make check
+bg
+clear
+ls
+nvim Makefile 
+clear
+git status
+cat githubKey 
+vi Makefile 
+fg
+git commit -asm "make: rm tmp file githubKey"
+tig
+clear
+git staus
+clear
+git pull
+git push
+git push
+clear
+clear
+git status
+rm githubKey 
+clear
+git status
+git diff
+cd hub/combat-wombat-bias-in-toxicity/
+git status
+git diff
+tig
+clear
+cd ..
+ls
+clear
+cd ..
+ls
+clear
+ls
+git push gh 
+git fetch
+git fetch gh
+git branch
+git merge gh/master
+clear
+git push 
+git push gh
+tig -a
+clear
+tig
+clear
+clear
+ls
+clear
+exit
+vtool
+clear
+cd /mnt/d/workspace/
+ls
+clear
+cd kaggle_runner/
+nvim Makefile 
+man find
+clear
+jobs
+fg
+clear
+exit
+cd /mnt/d/workspace/
+cd wpa
+clear
+cd kaggle_runner/
+git status
+git diff
+pwd
+clear
+git diff
+cd ..
+rm -r kaggle_runner/
+cd kr
+git status
+git diff
+clear
+git status
+clear
+exit
+clear
+pwd
+cd /mnt/d/workspace/
+git clone git@gitlab.com:MrCue/wpa.git
+git clone git@gitlab.com:MrCue/wpa.git
+clear
+ls
+clear
+cd wpa
+ls
+nvim Makefile 
+git status
+git push
+git push
+clear
+clear
+ls
+clear
+git tag "gitbook_fine"
+git push --tags
+git push --tags
+git push --tags
+git push --tags
+clear
+clear
+nvim 
+clear
+exit
+jobs
+fg
+clear
+clear
+nvim Makefile ../kaggle_runner/Makefile 
+git diff
+cd ../kaggle_runner/
+git diff
+clear
+cp Makefile ../kr
+cp .gitlab-ci.yml ../kr
+cd ../kr/
+git status
+git diff
+git commit -asm "Update gitbook related"
+git push
+git pull
+git mergetool
+git status
+git commit
+clear
+git push
+clear
+git pull
+exit
+a
+clear
+cd
+clear
+git pull
