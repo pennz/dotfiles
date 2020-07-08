@@ -1,648 +1,611 @@
-cat SH00.ini 
-wc -l SH00.ini 
-clear
-clear
-ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
-clear
-ps aux| grep ssh
-pkill ssh
-ps aux| grep ssh
-ps aux| grep ssh
-ssh -f -N -L 9001:localhost:10001  -p 29922 v@vtool.duckdns.org
-ps aux| grep ssh
-ssh -f -N -L 9000:localhost:10000  -p 29922 v@vtool.duckdns.org
-clear
-ssh -L 9001:localhost:10001 -p 29922 v@vtool.duckdns.org
-clear
-ip route
-clear
-cd $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0900_System')
-ls
-cd 02_configout/
-ls
-clear
-ls
-nvim rte/
-cd ../..
-clear
-fzf
-git init
-git add 0900_System/02_configout/
-jobs
-nvim 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
-vi 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
-which vi
-vim -u None 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c 
-fg
-rg CdIoHwAbASIL_Adc_ChannelValue_mV
-fg
-git diff
-clear
-fzf
-git diff
-vi 0900_System/02_configout/build/swc/CtApVMS.ini 
-vi -u NONE 0900_System/02_configout/build/swc/CtApVMS.ini 
-git diff
-git status
-git diff --cached
-clear
-jobs
-fg
-fzf
-fg
-fzf
-tree $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
-ls $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
-echo $(foldercvt 'C:\Users\ZhouPengyu\Downloads\SAIC_EP21H2_SW011_PIE-CD-15\0200_Platform\SH00\03_src\CDD\')
-cd /mnt/c/Users/ZhouPengyu/Downloads/SAIC_EP21H2_SW011_PIE-CD-15/0200_Platform/SH00/03_src/CDD/
-ls
-clear
-cd AdcHwAb/
-ls
-tree
-cd ..
-ls
-fzf
-cd ..
-fzf
-cd ../..
-cd ..
-fzf
-cp -r ME04RC3_2265(OLDVMS+SDM13ENABLE)/0200_Platform/SH00/03_src/CDD/AdcHwAb/cfg/ 0200_Platform/SH00/03_src/CDD/AdcHwAb/
-cp -r 'ME04RC3_2265(OLDVMS+SDM13ENABLE)/0200_Platform/SH00/03_src/CDD/AdcHwAb/cfg' 0200_Platform/SH00/03_src/CDD/AdcHwAb/
-jobs
-fg
-git status
-clear
-git status 
-git commit -sm "init added 0900"
-git status
-git diff
-git status
-rsync -v  0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini
-rsync -v 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c
-vi ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVM
-vi -u NONE ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini 
-. ~/.fzf.bash 
-echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" "
-echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" " -f 2,1
-echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | cut -d" " -f 1,2
-echo 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini | sed 's/\(.*\) \(.*\)/\2 \1/'
-cat ~/bin/swap2
-cat >> ~/bin/swap2
-chmod +x ~/bin/swap2 
-~/bin/swap2 
-~/bin/swap2 aaa bbb
-git status
-rsync -v $(swap2 0900_System/02_configout/build/swc/CtApVMS.ini   ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/build/swc/CtApVMS.ini )
-rsync -v $(swap2 0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c ME04RC3_2265\(OLDVMS+SDM13ENABLE\)/0900_System/02_configout/rte/SH00/CtApVMS/Implementation_Templates/CtApVMS.c)
-git diff
-vim 0900_System/02_configout/build/swc/CtApVMS.ini
-find 0200_Platform/SH00/03_src/CDD/ --type f
-find 0200_Platform/SH00/03_src/CDD/ -type f
-find 0200_Platform/SH00/03_src/CDD/ -type f --name "*.c"
-find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c"
-find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" | xargs rm
-find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" 
-find 0200_Platform/SH00/03_src/CDD/ -type f -name "*.c" | cat
-git diff
-find 0200_Platform/SH00/03_src/MCAL/ -type d
-find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c"
-find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c" | xarg rm 
-find 0200_Platform/SH00/03_src/MCAL/ -type f -name "*.c" | xargs rm 
-git status
-git commit -asm "Added VMS code for read ADC"
-tig
-clear
-ls
-exit
-tat 0
-exit
-tmux ls
-cd works/kaggle_runner/ 
-make clean
-clear
-make clean
-exit
-fish
-exit
-clear
-ls
-exit
-cat ~/.kaggle/kaggle.json 
-exit
-tmux ls
-tat 0
-sudo vi /etc/ssh/sshd_config 
-sudo systemctl restart sshd
-clear
-ls -lh ~/.ssh/
-ssh localhost
-vi ~/.ssh/known_hosts +70
-ssh localhost
-ssh -vT localhost
-ssh -vT -i ~/.ssh/id_rsa localhost
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-sudo vi /etc/ssh/sshd_config 
-sudo systemctl restart sshd
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-ssh-copy-id -i ~/.ssh/id_rsa localhost
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-ssh -vvvT -i ~/.ssh/id_rsa -p 29932 pengyu@pengyuzhou.com
-sudo chown v:v /home/v -R
-df -h
-clear
-ls -lh ~/.ssh/
-sudo chmod o-rwx /home/v/ -$
-sudo chmod o-rwx /home/v/ -R
-tail -f ~/.ssh/known_hosts
-tail -f ~/.ssh/authorized_keys 
-vi ~/.ssh/authorized_keys 
-tail -f ~/.ssh/authorized_keys 
-dmesg -w
-tmux join-pane
-sudo nvim /etc/ssh/sshd_config 
-sudo systemctl restart sshd
-ls -lh ~/.ssh/
-ls -lhd ~/.ssh/
-chmod 700 .ssh/
-ls -lhd ~/.ssh/
-cd ~/.ssh/
-ls
-chmod 644 id_rsa.pub 
-ls -lh
-exit
-sudo -i
-clear
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-ssh-copy-id -i ~/.ssh/id_rsa localhost
-ssh -vvvT -i ~/.ssh/id_rsa localhost
-exit
-ssh -v -i ~/.ssh/id_rsa localhost
-exit
-sudo dmesg -w
-exit
-cd ~/works/kaggle_runner/
-make kaggle
-cat /tmp/asfasdf
-cat > /tmp/asfasdf
-exit
-xclip -selection clipboard
-r
-exit
 vi Makefile 
-cat ~/.kaggle/kaggle.
-cat ~/.kaggle/kaggle.json 
-t
-exit
-stty size
-exit
-bash ~/bin/xcb_change 
-git checkout HEAD .tmux.conf
-tmux source .tmux.conf
-exit
-tat 0
+make pydoc
+bg
+clear
+jobs
 fg
-bash -x bin/xcb_change 
-cd /home/v/works/orca-git
-which python
-python --version
-makepkg -si
-orca
-clear
-ddd 
-tmux ls
-clear
-
-sudo pacman -S speech-dispatcher
-speech-dispatcher 
+wclear
 exit
-exit
-cd works/kaggle_runner/
-make mq
-tmux ls
-tat 0
-make clean
+cd /mnt/d/workspace/kaggle_runner/
+git pull
 clear
-tat 0
 clear
-exit
-tmux ls
-exit
-stty raw -echo &&while true; do ncat -4vlp 9017; sleep 1; echo "new"; done
-tmux ls
-tat 0
-tmuxls
-tmux ls
-ls
-cat Makefile 
-exit
-make pccnct
-make mq
-make kaggle
-bash -x ~/bin/xcb_change 
-vi ~/.tmux.conf
-tmux source .tmux.conf
-tmux source ~/.tmux.conf
-exit
-tmux
-tmux ls
-make pc
-make pccnct
 clear
-make clean
-make kaggle
-tmux ls
-tat 0
-tat 0
-tmux ls
-make kaggle
-xclip -o
-xclip -h
-xclip -o -selection clipboard
-man ssh
-exit
-tat 0
-tmux ls
+tig
 clear
-make pc
-tmux new-window -d -t rvsConnector
-tmux new-session rvsConnector
-TMUX= ; tmux new-session rvsConnector
-TMUX= && tmux new-session rvsConnector
-TMUX= && tmux new-session --name rvsConnector
-TMUX= && tmux new-session -s rvsConnector
-tmux detach
-clear
-make mq
-tmux ls
-tat rvsConnector
-tat 0
-bash -x ~/bin/xcb_change 
-make clean
-make kaggle
-----------------------------
-bash ~/bin/xcb_change 
-cd works/kaggle_runner/
-make clean
-exit
-clear
-make mq
-make check
-pkill -f "make amqp_log"
-make mq
-make check
-htop
-make clean
-cd works/kaggle_runner/
-make clean
-tmux ls
-make check
-ps aux| grep receive
-pkill receive_logs_topic
-make check
-make clean
-exit
-cat ~/.kaggle/kaggle.
-cat ~/.kaggle/kaggle.json 
-clear
-ps aux| grep receive
-pkill receive_logs_topic
-ps aux| grep receive
-pkill -9 receive_logs_topic
-ps aux| grep receive
-clear
-ps aux| grep receive
-pstree -laps 847006
-pkill -9 -f receive_logs_topic
-pstree -laps 847006
-ps aux| grep receive
-make mq
-make clean
-pwd
-exit
-exit
-----
-make mq
-top
--------
-make clean
--------------
-clear
-cat ~/.kaggle/kaggle.json 
-exit
-cd works/kaggle_runner/
-make mq
-----------
-tat 0
-clear
-make kaggle
-export DISPLAY=:0
-make kaggle
-bash -x ~/bin/xcb_change 
-cd works/kaggle_runner/
-make clean
-exit
-clear
-fg
-make kaggle
-wxit
-exit
-step: 0, loss: 1.257812
-step: 0, loss: 1.445312
-step: 0, loss: 0.910156
-step: 0, loss: 1.109375
-step: 0, loss: 1.062500
-step: 0, loss: 1.101562
-stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
-cd works/kaggle_runner/
-make clean
-tat 0
-tmux ls
-clear
-make pccnct
-clera
-make pccnct
-bash -x ~/bin/xcb_change 
-cd works/kaggle_runner/
-conda activate pyt
+git push
+vi Makefile 
 vim Makefile 
-fg
-make get_submission
-fg
-git pull
-ss
-fg
-make update_sh_ipynb
-fg
-make update_sh_ipynb
-exit
-git commit -asm "Log grads"
-exit
-exit
+cmd.exe .
 git push
-fg
-fg
-exit
-fg
-make update_sh_ipynb
-git push
-tig
-git commit -asm "new debug"
-fg
-git commit -asm "fastai still problem"
-git push
-exit
-make kaggle
-exit
-clear
-exit
-cd works/kaggle_runner/
-make pccnct
-fg
-make update_sh_ipynb
-fg
-git status
+git diff --cached
 git diff
-tat
-vi ~/.bash_aliases 
-. ~/.bash_aliases 
-make kaggle
-cat ~/.kaggle/kaggle.json 
-exit
-fg
-git push
+git status
+clear
+clear
+make pydoc
 fg
 clear
-make xla
-fg
-ss
-fg
-git push
-tig
-fg
-stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
-cd works/kaggle_runner/
-make mq
-nvim Makefile 
-tg
-tig
-fg
-clear
-nvim hub/shonenkov_training_pipeline.py 
-git push
-fg
-git push
-tig
-fg
-pip install pysnooper
-fg
-fg
-git push
-git pull
-tig
-exit
-jupyter console --generate-config
-conda activate pyt
-jupyter console --generate-config
-python3 -m jupyter console --generate-config
-which jupyter
-python3 -m jupyter console --generate-config
-python3 -m  pip install --upgrade jupyter-console
-python3 -m jupyter console --generate-config
-vi ~/.jupyter/jupyter_console_config.py 
-jupyter console
-git status
-tig
-git status
-fg
 jobs
-fg
-tig
-git push
-fg
-git pull
+nvim -u Makefile 
+clera
+vim -u ~/.vimrc
+vim -u ~/.vimrc_back 
 clear
-make mq
-fg
-git status
-git push
-fg
-tig
-pushd ~
-clear
-git commit -asm "Added jupyter vim plugin"
-git commit -asm "Added jupyter vim plugin" --no-gpg
-git checkout HEAD .bash_history 
-git mergetool
-git commit
-git push
-git pull
 exit
-sh
-jobs
-cd ~/v/
-git branch
-git merge good-day
-git push -h
-cd ~/.dotfiles/
-tig
-git pull
+m
+m
+ms
+exit
 clear
+cd /mnt/d/workspace/git_sources/
+ls
+cd EPH/
+ls
+cd src_git/
+git pull
+tig -a
+clear
+tig --all
 tig
 tig --all
+git checkout EPH-1500-swdev-software-development-plan-for-eyeqcom-sw010
+tig
+explorer.exe .
+tig
+ls
 clear
-exit
-which sh
-ls -lh /usr/bin/sh
-fish
+tig
+git status
+git diff
+tig
+git remote add lab git@172.26.253.203:root/test_ci.git
+git push -u lab
+git push -u lab
+nvim
 fg
-exit
-sh
-exit
--------------------
-fg
-exit
-fg
-htop
-cd works/kaggle_runner/
-git pull
-make update_sh_ipynb
-git commit -sm "Updated ipynb from code"
-git commit -sm "Updated ipynb from code" -a
-git push
-tig hub/shonenkov_training_pipeline.
-tig hub/shonenkov_training_pipeline.py 
+ls 0900_System/02_configout/rte/common/SWCVersionInfo/SWCVersionInfo.h
+ls 0900_System/02_configout/rte/common/SWCVersionInfos/SWCVersionInfo.h
+cat ~/.ssh/id_rsa.pub 
+clear
+cd ..
 exit
 jobs
+fg
+exit
 clear
-fg
-make update_sh_ipynb
-git commit -asm "Debug tpu"
-git push
-stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
-tmux
-ta
-tmux ls
-fg
-make update_sh_ipynb
-git commit -asm "Debug tpu"
-git push
-fg
-make rvs_session
-cat ~/.kaggle/kaggle.json 
-exit
-fg
-make update_sh_ipynb
-git commit -asm "tab change"
-git status
-git push
-tig
-fg
-make update_sh_ipynb
-git status
-fg
-make update_sh_ipynb
-git commit -asm "Debug tpu"
-git push
-fg
-fg
-exit
----
-tig
-fg
+ssh zhoupengyu@172.26.253.203
 clear
-make clean
-make update_sh_ipynb
-git commit -asm "Debug tpu"
-git push
-fg
-git push
+ssh zhoupengyu@172.26.253.203
+ssh root@172.26.253.164
+ssh root@172.26.253.167
 exit
-cd ~/v/
-git pull
-mkdir ~/.jupyter/
-cp .jupyter/* ~/.jupyter/
-cd ~
-git add .jupyter/jupyter_*.py
-git add -f .jupyter/jupyter_*.py
-git commit -sm "Jupyter"
-git commit -sm "Jupyter" --no-gpg
-gitpush
-git push
- o
+nvim
+nvim /mnt/d/PIE/BEIP_dev/beip301_bugfix/1700-configout/core/automotive/lifecycle/LCSM/units/LCSM/
 clear
-exit
-fg
-git pull
-git diff
-git commit -asm "jupytext in Makefile"
-git revert
+git fetch
+cd ../beip302/
 tig
-git revert HEAD
-git pull
----qa
-ta
-. ~/.bash_aliases 
-fg
-make update_sh_ipynb
-git push
-fg
-git commit -asm "Debug tpu"
-git push
-git pull
-fg
-git push
-bash -x ~/bin/xcb_change 
-fg
-make update_sh_ipynb
-git commit -asm "to_tpu also use sampler"
-git pull
+clear
 tig
-fg
-git commit -asm "fish: ss"
-git commit -asm "fish: ss" --no-gpg
-git push
-ss
-git push
-fg
-nvim hub/shonenkov_training_pipeline.py 
-git pull
-git push
-fg
-git status
-git pull
-fg
-make update_sh_ipynb
-make kaggle
-fg
-git pull
-git commit -asm "deubg"
-git pull
-exit
-stty size
-cd ~/Videos/
+clear
 ls
-fg
+tig ../beip301_bugfix/
+clear
+exit
+nvim
+tmux
+exit
+cd /mnt/d/workspace/kaggle_runner/
+git pull
+clea
+pydoc-markdown --server --render-toc -o
+clear
+git pull
+tig
+clear
+clear
+git status
 git status
 git pull
-git push
-bash ~/bin/xcb_change 
 clear
-conda activate pyt
-make  pccnct
-make mq
+ls
+bin/document_thing 
+git status
+gitbook build .
+pydoc-markdown --server -o
+clear
+ls
+vim Makefile 
+git add Makefile 
+git commit -sm "Make: gitlab runner start script" ; git push
+git push
+git push lab
+clear
+git remote show
+exit
+cd /mnt/d/workspace/git_sources/SV51/
+ls
+cd jenkins_integration/
+ls
+clear
+tig
+clear
+ls
+clear
+find . -name "release_issues.py"
+ls
+clear
+ls
+git branch
+ls
+cd UserManual/
+ls
+clear
+ls *.py
+cd ..
+ls
+git branch
+git checkout RN_EP21H2 
+ls
+clear
+git status
+clear
+ls
+vi build_RN.sh 
+nvim build_RN.sh 
+python3 -m pip install black
+fg
+python3 -m pip install yapf
+python3 -m pip install autopep8
+fg
+git push
+git remote show
+git push origin
+clear
+clear
+ls
+clear
+pwd
+ls
+cd ReleaseNote/
+ls
+clear
+ls
+vi ReleaseNotes_template.rst
+git commit -asm "Change Request"
+git push
+git push origin
+cd /mnt/d/PIE/BEIP_dev/
+clear
+tig -a
+git checkout 0605_BF_merge_PH00
+ms
+cd /mnt/d/workspace/
+cd kaggle_runner/
+clear
+ls
+clear
+nvim .gitlab-ci.yml 
+clear
+git status
+git pull
+clear
+nvim Makefile 
+gitbook
+make gitbook
+fg
+make install_gitbook
+sudo make install_gitbook
+sudo -i 
+make pydoc
+clear
+ls
+cd /
+cd /mnt/d/workspace/kaggle_runner/
+ls
+clear
+git status
+clear
+git status
+clear
 git pull
 ss
-exit
-exit
-git pull
-make kaggle
-exit
-tmux
-v2ray -config ~/.config/v2ray_client_u.json 
-stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
 clear
 git pull
+clear
+jobs
+nvim .gitlab-ci.yml 
+git push
+git push
+git status
+tig
+clear
+clear
+clear
+clear
+git status
+tig
+git push
+ls
+clear
+ls *.md
+mkdocs serve
+ls *yml
+cat pydoc-markdown.yml 
+mkdocs --help
+mkdocs new
+mkdocs new .
+cat mkdocs.yml 
+mkdocs serve
+cat *yml
+pydoc-markdown --server 
+pydoc-markdown -p kaggle_runner --server 
+pydoc-markdown -p kaggle_runner 
+clear
+doctoc .
+clear
+ls
+vi Makefile 
+sudo npm install -g gitbook-summary
+jobs
+nvim Makefile 
+clear
+exit
+clear
+cd /mnt/d/workspace/kaggle_runner/
+clear
+git status
+clear
+ls
+vi Makefile 
+clear
+git status
+clear
+ls
+ls *md
+find . -name "*.md"
+book sm
+cat SUMMARY.md 
+book sm
+find . -name "*.md"
+book sm
+cat SUMMARY.md 
+ls build/
+rm kaggle_runner.md 
+book sm
+cat SUMMARY.md 
+clear
+git status
+clear
+clear
+ls
+gitbook build .
+clear
+git status
+git commit -asm "Generate summary"
+git push
+clear
+jobs
+nvim Makefile 
+clear
+ls
+book sm
+book --help
+ls
+clear
+ls
+vi SUMMARY.md 
+clear
+vi Makefile 
+git status
+git diff
+clear
+fg
+clear
+clear
+fg
+git commit -asm "make: distclean"
+make distclean
+fg
+clear
+jobs
+jobs
+ls
+git status
+vi Makefile 
+cp Makefile  ..
+vi ../Makefile 
+clear
+make distclean
+cp Makefile ..
+clear
+git remote add lab git@172.26.253.203:root/test_ci.git
+git remote add lab
+clear
+ls
+ls .git
+cd ..
+git clone git@gitlab.com:MrCue/kaggle_runner.git kr
+cd kr
+cp ../Makefile .
+git diff
+git commit -asm "Update document generation"
+git push
+clear
+git pull
+clear
+git status
+exit
+cd /mnt/d/workspace/kr
+clear
+ls
+git status
+clear
+git remote add gh git@github.com:pennz/kaggle_runner.git
+git push gh
+clear
+clear
+ls
+clear
+tig
+make publish TAG=0.1.7
+tig
+clear
+git push
+clear
+clear
+which sed
+make check
+bg
+clear
+ls
+nvim Makefile 
+clear
+git status
+cat githubKey 
+vi Makefile 
+fg
+git commit -asm "make: rm tmp file githubKey"
+tig
+clear
+git staus
+clear
+git pull
+git push
+git push
+clear
+clear
+git status
+rm githubKey 
+clear
+git status
+git diff
+cd hub/combat-wombat-bias-in-toxicity/
+git status
+git diff
+tig
+clear
+cd ..
+ls
+clear
+cd ..
+ls
+clear
+ls
+git push gh 
+git fetch
+git fetch gh
+git branch
+git merge gh/master
+clear
+git push 
+git push gh
+tig -a
+clear
+tig
+clear
+clear
+ls
+clear
+exit
+vtool
+clear
+cd /mnt/d/workspace/
+ls
+clear
+cd kaggle_runner/
+nvim Makefile 
+man find
+clear
+jobs
+fg
+clear
+exit
+cd /mnt/d/workspace/
+cd wpa
+clear
+cd kaggle_runner/
+git status
+git diff
+pwd
+clear
+git diff
+cd ..
+rm -r kaggle_runner/
+cd kr
+git status
+git diff
+clear
+git status
+clear
+exit
+clear
+pwd
+cd /mnt/d/workspace/
+git clone git@gitlab.com:MrCue/wpa.git
+git clone git@gitlab.com:MrCue/wpa.git
+clear
+ls
+clear
+cd wpa
+ls
+nvim Makefile 
+git status
+git push
+git push
+clear
+clear
+ls
+clear
+git tag "gitbook_fine"
+git push --tags
+git push --tags
+git push --tags
+git push --tags
+clear
+clear
+nvim 
+clear
+exit
+jobs
+fg
+clear
+clear
+nvim Makefile ../kaggle_runner/Makefile 
+git diff
+cd ../kaggle_runner/
+git diff
+clear
+cp Makefile ../kr
+cp .gitlab-ci.yml ../kr
+cd ../kr/
+git status
+git diff
+git commit -asm "Update gitbook related"
+git push
+git pull
+git mergetool
+git status
+git commit
+clear
+git push
+clear
+git pull
+exit
+a
+clear
+cd
+tig
+tig .gitconfig
+git checkout  62819fd9013ff303fa03fd43b2a^ .gitconfig
+git diff
+git diff .gitconfig
+git diff .gitconfig --cached
+vi .gitconfig
+git commit -asm "git config"
+ls
+vi ~/bin/filter_public 
+exit
+vi .gitconfig
+git commit -asm "git config"
+ls
+vi ~/bin/filter_public 
+git comit -asm "VPS history"
+git commit -asm "VPS history"
+git checkout good-day
+chown 644 ~/.ssh/config 
+git pull
+ls bin/vtool 
+git add bin/vtool 
+git commit -sm "Added vtool"
+tig bin/vtool 
+chmod 644 ~/.ssh/config 
+git diff
+git status
 clear
 git commit -asm "hist"
+git merge good-day
+git mergetool
+git commit
+clear
+exit
+type
+which type
+fg
+exit
+clear
+ip route
+fish
+clear
+clear
+git pull
+clear
+ss
+clear
+git pull
+clear
+jobs
+fg
+nvim ../dwpa/setup.py 
+c;ear
+clear
+cd
+git pull
+fish
+exit
+jobs
+fg
+exit
+cd
+git pull
+tig
+nvim
+exit
+clear
+ls
+clear htop
+clera
+ls
+exit
+pwd
+cd ..
+ls
+cd dwpa/
+ls
+clear
+clear
+exit
+exit
+exit
+tmux ls
+ta
+ta
+tmux
+ta
+cd /Volumes/
+clear
+ls
+cd CaseSensitive/
+cd dwpa/
+ls
+cd src/dwpa/
+ls
+pylint .
+clear
+pwd
+git remote show origin
+git status
+clear
+git status
+pwd
+git remote show origin
+clear
+git pull
+clear
+clear
+git pull
+clear
+clear
+ip fouge
+exit
