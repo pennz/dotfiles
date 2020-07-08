@@ -601,3 +601,48 @@ git pull
 tig
 fg
 git commit -asm "fish: ss"
+git commit -asm "fish: ss" --no-gpg
+git push
+ss
+git push
+fg
+nvim hub/shonenkov_training_pipeline.py 
+git pull
+git push
+fg
+git status
+git pull
+fg
+make update_sh_ipynb
+make kaggle
+fg
+git pull
+git commit -asm "deubg"
+git pull
+exit
+stty size
+cd ~/Videos/
+ls
+fg
+git status
+git pull
+git push
+bash ~/bin/xcb_change 
+clear
+conda activate pyt
+make  pccnct
+make mq
+git pull
+ss
+exit
+exit
+git pull
+make kaggle
+exit
+tmux
+v2ray -config ~/.config/v2ray_client_u.json 
+stty raw -echo &&while true; do ncat -4vlp 23454; sleep 1; echo "new"; done
+clear
+git pull
+clear
+git commit -asm "hist"
