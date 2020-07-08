@@ -1,8 +1,6 @@
 export PROXY_URL='http://127.0.0.1:21080'
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
-alias vim='nvim -u ~/.config/nvim_back/init.vim'
-alias vi='nvim'
 source /home/pengyu/.jfrog/jfrog_zsh_completion
 export PATH=$HOME/.local/bin:$PATH
 export PYTHONIOENCODING="UTF-8"
