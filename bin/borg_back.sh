@@ -25,7 +25,15 @@ test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 TRY=/home/v
 test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 
-BORG="sudo borg"
+BORG=$(which borg 2>/dev/null)
+if which borg 2>/dev/null >&2; then
+    echo "$BORG used."
+else
+    echo >&2 "Error: borg not found."
+    exit 1
+fi
+
+BORG="sudo $BORG"
 TRY=/home/v/miniconda3/bin/borg
 test -e $TRY && BORG="sudo $TRY"
 
@@ -34,6 +42,7 @@ echo "borg used: $(which borg)"
 backup() {
     (
         info "Starting backup"
+        set -x
         $BORG create \
             --progress \
             --filter AME \
@@ -66,6 +75,7 @@ backup() {
             --exclude "$SOURCE_HOME/.docker/*" \
             --exclude "$SOURCE_HOME/.config/electronic-wechat/*" \
             --exclude "$SOURCE_HOME/.local/share/Trash/*" \
+            --exclude "$SOURCE_HOME/.local/share/Steam/" \
             --exclude "$SOURCE_HOME/works/android_build/aosp/*" \
             --exclude '/home/boinc/*' \
             --exclude '/Users/Shared/*' \
@@ -76,13 +86,14 @@ backup() {
             --exclude '/private/tmp/*' \
             --exclude '/tmp/*' \
             \
-            "$BORG_REPO""${HOSTNAME}-$(date | sed -e 's/ /_/g' -e 's/:/_/g')" \
+            "$BORG_REPO"::"${HOSTNAME}-$(date | sed -e 's/ /_/g' -e 's/:/_/g')" \
             /etc \
             $SOURCE_HOME \
             /usr/local \
             /var/log &&
             info "Backup completed" &&
             touch $SOURCE_HOME/.lastbackup
+        set +x
     ) ||
         ([ "$1" -ge 604800 ] && info "ERROR: Backup was failed during week")
 }
