@@ -1,56 +1,3 @@
-vi Makefile 
-make pydoc
-bg
-clear
-jobs
-fg
-wclear
-exit
-cd /mnt/d/workspace/kaggle_runner/
-git pull
-clear
-clear
-clear
-tig
-clear
-git push
-vi Makefile 
-vim Makefile 
-cmd.exe .
-git push
-git diff --cached
-git diff
-git status
-clear
-clear
-make pydoc
-fg
-clear
-jobs
-nvim -u Makefile 
-clera
-vim -u ~/.vimrc
-vim -u ~/.vimrc_back 
-clear
-exit
-m
-m
-ms
-exit
-clear
-cd /mnt/d/workspace/git_sources/
-ls
-cd EPH/
-ls
-cd src_git/
-git pull
-tig -a
-clear
-tig --all
-tig
-tig --all
-git checkout EPH-1500-swdev-software-development-plan-for-eyeqcom-sw010
-tig
 explorer.exe .
 tig
 ls
@@ -1442,3 +1389,616 @@ git diff
 git status
 git add .vimrc_back 
 git diff .gitconfig
+git commit -asm "git lfs config added"
+git push
+git merge good-day 
+tig
+make setup
+git push
+ss
+exit
+~/bin/filter_public 
+cd v
+git pull
+tig -a
+cd ~/.dotfiles/
+tig -a
+tmux
+exit
+tmux ls
+exit
+clear
+clear
+ls
+clear
+ls
+vim ~/.tmux.conf
+clear
+ls
+cd ~/v
+ss
+clear
+tig
+clar
+git remote show
+git push public
+ta
+clear
+ls
+clear
+htop
+clear
+ls
+clear
+sudo vim  /etc/ssh/sshd_config 
+clear
+nginx -s stop
+ps aux| grep nginx
+clear
+nginx
+ip route
+htop
+exit
+clear
+htop
+cd works/
+ls
+clear
+git grep vtool
+cd mkdocstrings/
+ls
+nvim Makefile 
+fg
+cd ../kaggle_runner/
+clear
+make
+fg
+make
+fg
+clear
+make
+fg
+clear
+make
+fg
+make
+fg
+make -C ../mkdocstrings/
+ls
+make
+make format
+make test
+pwd
+make setup
+make format
+make setup
+make
+make check
+make docs
+poetry run mkdocs build
+which poetry
+poetry install -v
+make check
+make check-docs
+fg
+clear
+who
+clear
+pwd
+clear
+cat /etc/nixos
+nix-env -u
+nix-env -u --show-trace
+ps aux| grep nix
+nix-env -q
+cmatrix
+:
+:w
+:q
+:exit
+fg
+which mosh-server
+exit
+clear
+clera
+clear
+ls
+clear
+tmux ls
+ls
+clear
+ip route
+clear
+celar
+clear
+tmux ls
+r
+clear
+ip route
+clear
+who
+clear
+ls
+clear
+ls
+cd ~/works/kaggle_runner/
+ls
+clear
+ls
+vim Makefile 
+exit
+clear
+cd ~
+ls
+clear
+ls
+cd macbook12-bluetooth-driver/
+clear
+ls
+cat install.bluetooth.sh 
+clear
+ls
+./install.bluetooth.sh 
+setproxy
+tig -a
+git fetch
+tig -a
+exit
+fg
+clear
+make
+make docs
+vi Makefile 
+nvim Makefile 
+git status
+make docs
+fg
+make docs
+sudo ./install.bluetooth.sh 
+fg
+make setup
+fg
+cd kaggle_runner/
+ls /home/v/.cache/pypoetry/virtualenvs/mkdocstrings-tOw7I-1m-py3.8
+ /home/v/.cache/pypoetry/virtualenvs/mkdocstrings-tOw7I-1m-py3.8/bin/python3
+ /home/v/.cache/pypoetry/virtualenvs/mkdocstrings-tOw7I-1m-py3.8/bin/python3 -m pip list
+ /home/v/.cache/pypoetry/virtualenvs/mkdocstrings-tOw7I-1m-py3.8/bin/python3 -m pip install requests
+make docs
+make setup
+cd ../mkdocstrings/
+make docs
+ls site/
+clear
+make
+cd ..
+cd macbook12-spi-driver/
+ls
+cat README.md 
+clear
+ls
+cd ..
+ls
+clear
+ls
+tree -L 2 | grep mac
+cd macbook12-spi-driver/
+ls
+cd ..
+tree -L 2 | grep -C 3 mac
+tree -L 2
+tree -L 2 | less
+cd snd/
+ls
+cd snd_hda_macbookpro/
+ls
+make docs-serve
+clear
+ls
+git status
+git diff
+clear
+ls
+git diff
+git diff --cached
+clear
+cd ..
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+cp mkdocstrings/pyproject.toml kaggle_runner/
+cat mkdocstrings/poetry.lock 
+cd kaggle_runner/
+clear
+ls
+clear
+ls
+sudo ./install.cirrus.driver.sh 
+vimdiff Makefile ../mkdocstrings/Makefile 
+clear
+ls
+fg
+clear
+fg
+make 
+clear
+ls
+rm -r build/
+rm -rf build/
+sudo rm -rf build/
+ls
+clear
+ls
+cd ..
+ls
+cd ..
+cd macbook12-bluetooth-driver/
+ls
+sudo rm -rf build/
+clear
+cd ..
+exit
+make setup
+fg
+clear
+ls
+conda activate pyt
+pip show slug
+pip show parse
+pip show kaggle
+pip show colorama
+pip show python_logging_rabbitmq
+fg
+clear
+clear
+cd ../kaggle_runner/
+clear
+ls
+fg
+clear
+clea
+clear
+make kr
+clear
+make setup
+fg
+nvim pyproject.toml 
+fg
+cd ..
+find . -maxdepth=3 -name pyproject.toml
+find . -max-depth=3 -name pyproject.toml
+find . --maxdepth=3 -name pyproject.toml
+find . -maxdepth 3 -name pyproject.toml
+cat ./kaggle_runner/pyproject.toml 
+fg
+git status
+find . -maxdepth 3 -name pyproject.toml
+cd kaggle_runner/
+ls
+fg
+clear
+man find
+clear
+git status
+git rm -f doc/introduction.rst
+fg
+git commit -sm "Remove useless"
+cd mkdocstrings/
+ls
+clear
+ls
+ls src/
+ls src/mkdocstrings
+clear
+make setup
+fg
+pip show kaggle
+fg
+clear
+make setup\
+make setup
+fg
+make setup
+fg
+make setup
+fg
+make setup
+fg
+make setup
+fg
+make setup
+fg
+make setup
+fg
+clear
+make setup
+rm -rf /home/v/.cache/pypoetry/virtualenvs/kaggle-runner-1eKJK3ag-py3.8
+make setup
+ls | grep lock
+rm poetry.lock 
+clear
+ls
+rm -rf /home/v/.cache/pypoetry/virtualenvs/kaggle-runner-1eKJK3ag-py3.8
+clear
+ls
+df -h
+docker ps
+clear
+nvim --diff Makefile  ../kaggle_runner/Makefile 
+make setup
+nvim Makefile  ../kaggle_runner/Makefile 
+clear
+fg
+cler
+clear
+make
+fg
+clear
+cp -r config/ ../kaggle_runner/
+cd ../kaggle_runner/
+ls config/
+clear
+fg
+make
+clear
+make
+clear
+clear
+fg
+clear
+git status
+clear
+make docs
+cp -r ../mkdocstrings/scripts/ .
+ls
+cat ../mkdocstrings/LICENSE 
+ls LICENSE 
+cat LICENSE 
+fg
+cat LICENSE ../mkdocstrings/LICENSE > LICENSE 
+cat LICENSE 
+git diff
+nvim LICENSE 
+git status
+clear
+fg
+git commit -asm "Added mkdocstrings codes"
+git status
+git add config/
+git add scripts/
+ls scripts/
+clear
+git commit --amend
+git commit -asm "Added mkdocstrings files"
+tig
+git push
+git push --force
+git push lab
+clear
+make docs
+clear
+make 
+fg
+git status
+clear
+ls
+rm README
+ls
+clear
+git status
+ls
+git status
+cat ../mkdocstrings/mkdocs.yml 
+clear
+fg
+clear
+ls
+fg
+make changelog
+fg
+clear
+fg
+clear
+make changelog
+fg
+make
+fg
+make
+fg
+clear
+make
+fg
+clear
+fg
+clear
+make
+clear
+fg
+clear
+make
+fg
+git status
+git commit asm "Update comments in make"
+git commit -asm "Update comments in make"
+exit
+fg
+clear
+ls
+make check
+which python
+fg
+clear
+make check
+fg
+make check
+fg
+make check
+clear
+conda env list
+clear
+fg
+clear
+ls
+fg
+clear
+make release
+fg
+clear
+fg
+clear
+make check
+poetry run python -c 'import sys;print(sys.path)'
+fg
+make release v=0.1.7
+git status
+git diff
+git status
+git diff --cached
+fg
+make check
+poetry run
+poetry run --help
+poetry run ls
+fg
+man poetry
+fg
+make check
+make check_all
+fg
+python3 -c 'import sys; print(sys.path);'
+poetry run python3 -c 'import sys; print(sys.path);'
+ls /usr/lib/python3.8/
+clear
+git push
+git status
+git diff
+tig
+make release v=0.1.8
+git diff
+make changelog
+clear
+exit
+fg
+exit
+fg
+clear
+make changelog 
+touch CHANGELOG.md
+make changelog 
+cat Makefile 
+cat CHANGELOG.md 
+clear
+fg
+cd mkdocstrings/
+ls
+tig CHANGELOG.md 
+tig 
+clear
+ls
+vim CHANGELOG.md ../mkdocstrings/CHANGELOG.md 
+make changelog 
+cat config/
+cat CHANGELOG.md 
+clear
+ls
+git commit -asm "Copy changelog file from mkdocstrings"
+git push
+tig
+clear
+vi .gitlab-ci.yml 
+git commit -asm "ci make setup"
+git push lab
+ss
+git push
+git push lab
+clear
+itg
+tig
+c;ear
+clear
+fg
+make check
+ta
+fg
+nvim .gitlab-ci.yml 
+tig
+git push
+tig
+git push lab
+clear
+tmux ls
+clear
+cd Videos/
+clear
+v2ray --conig
+mpv --no-video *
+v2ray -config ~/.config/v2ray_client_u.json 
+bg
+clear
+tmux ls
+~/bin/xcb_change 
+clear
+woh
+who
+clear
+cd
+ls
+bin/borg_back.sh 
+clear
+bash -x bin/borg_back.sh 
+pass borg
+sudo -i
+bash -x bin/borg_back.sh 
+ls /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg/vtool-Sat_11_Jul_2020_06_19_02_PM_CST
+ls /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg/
+fg
+clear
+nvim ~/bin/borg_back.sh 
+clear
+fg
+bin/borg_back.sh 
+clear
+jobs
+bin/borg_back.sh 
+conda env list
+which borg
+fg
+clear
+fg
+bin/borg_back.sh 
+which borg
+borg
+sudo borg
+clear
+fg
+cd borg
+clear
+pip install borg
+bin/borg_back.sh 
+which borg
+python -m borg
+which python
+which pip
+head ~/.local/bin/pip
+python3 -m borg
+borg_back.sh 
+clear
+sudo pacman -S borg
+which borg
+bin/borg_back.sh 
+cd
+bin/borg_back.sh 
+sudo /usr//bin/borg create --progress --filter AME --stats --show-rc --compression lz4 --exclude-caches --exclude '/home/*/.cache/*' --exclude '/Applications/Xcode.app/*' --exclude '/usr/local/texlive/*' --exclude '/usr/local/Homebrew/.git/*' --exclude '/usr/local/Homebrew/.github/*' --exclude /home/v/Library/Containers/com.docker.docker/Data/vms --exclude /home/v/works/android_build/aosp.sparseimage --exclude '/home/v/VirtualBox\ VMs/*' --exclude '/home/v/VirtualBox VMs/*' --exclude '/home/v/not-backup/*' --exclude '/home/v/d/*' --exclude '/home/v/anaconda3/*' --exclude '/home/v/snap/*' --exclude '/home/v/miniconda3/*' --exclude '/home/v/.Genymobile/*' --exclude '/home/v/Android/*' --exclude '/home/v/Arduino/*' --exclude '/home/v/Library/Caches/*' --exclude '/home/v/oldhome/*' --exclude '/home/v/e/*' --exclude '/home/v/Downloads/*' --exclude '/home/v/.android/avd/*' --exclude '/home/v/.docker/*' --exclude '/home/v/.config/electronic-wechat/*' --exclude '/home/v/.local/share/Trash/*' --exclude '/home/v/works/android_build/aosp/*' --exclude '/home/boinc/*' --exclude '/Users/Shared/*' --exclude '/var/cache/*' --exclude '/var/tmp/*' --exclude '/var/lib/docker/*' --exclude '/var/lib/snapd/*' --exclude '/private/tmp/*' --exclude '/tmp/*' /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg/vtool-Sat_11_Jul_2020_07_23_38_PM_CST /etc /home/v /usr/local /var/log
+sudo /usr/bin/borg create --progress --filter AME --stats --show-rc --compression lz4 --exclude-caches --exclude '/home/*/.cache/*' --exclude '/Applications/Xcode.app/*' --exclude '/usr/local/texlive/*' --exclude '/usr/local/Homebrew/.git/*' --exclude '/usr/local/Homebrew/.github/*' --exclude /home/v/Library/Containers/com.docker.docker/Data/vms --exclude /home/v/works/android_build/aosp.sparseimage --exclude '/home/v/VirtualBox\ VMs/*' --exclude '/home/v/VirtualBox VMs/*' --exclude '/home/v/not-backup/*' --exclude '/home/v/d/*' --exclude '/home/v/anaconda3/*' --exclude '/home/v/snap/*' --exclude '/home/v/miniconda3/*' --exclude '/home/v/.Genymobile/*' --exclude '/home/v/Android/*' --exclude '/home/v/Arduino/*' --exclude '/home/v/Library/Caches/*' --exclude '/home/v/oldhome/*' --exclude '/home/v/e/*' --exclude '/home/v/Downloads/*' --exclude '/home/v/.android/avd/*' --exclude '/home/v/.docker/*' --exclude '/home/v/.config/electronic-wechat/*' --exclude '/home/v/.local/share/Trash/*' --exclude '/home/v/works/android_build/aosp/*' --exclude '/home/boinc/*' --exclude '/Users/Shared/*' --exclude '/var/cache/*' --exclude '/var/tmp/*' --exclude '/var/lib/docker/*' --exclude '/var/lib/snapd/*' --exclude '/private/tmp/*' --exclude '/tmp/*' /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg/vtool-Sat_11_Jul_2020_07_23_38_PM_CST /etc /home/v /usr/local /var/log
+fg
+sudo /usr/bin/borg create --progress --filter AME --stats --show-rc --compression lz4 --exclude-caches --exclude '/home/*/.cache/*' --exclude '/Applications/Xcode.app/*' --exclude '/usr/local/texlive/*' --exclude '/usr/local/Homebrew/.git/*' --exclude '/usr/local/Homebrew/.github/*' --exclude /home/v/Library/Containers/com.docker.docker/Data/vms --exclude /home/v/works/android_build/aosp.sparseimage --exclude '/home/v/VirtualBox\ VMs/*' --exclude '/home/v/VirtualBox VMs/*' --exclude '/home/v/not-backup/*' --exclude '/home/v/d/*' --exclude '/home/v/anaconda3/*' --exclude '/home/v/snap/*' --exclude '/home/v/miniconda3/*' --exclude '/home/v/.Genymobile/*' --exclude '/home/v/Android/*' --exclude '/home/v/Arduino/*' --exclude '/home/v/Library/Caches/*' --exclude '/home/v/oldhome/*' --exclude '/home/v/e/*' --exclude '/home/v/Downloads/*' --exclude '/home/v/.android/avd/*' --exclude '/home/v/.docker/*' --exclude '/home/v/.config/electronic-wechat/*' --exclude '/home/v/.local/share/Trash/*' --exclude '/home/v/works/android_build/aosp/*' --exclude '/home/boinc/*' --exclude '/Users/Shared/*' --exclude '/var/cache/*' --exclude '/var/tmp/*' --exclude '/var/lib/docker/*' --exclude '/var/lib/snapd/*' --exclude '/private/tmp/*' --exclude '/tmp/*' /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg/vtool-Sat_11_Jul_2020_07_23_38_PM_CST /etc /home/v /usr/local /var/log
+fg
+clear
+vim ~/bin/borg_back.sh 
+clear
+cd
+pwd
+git fetch
