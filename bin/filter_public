@@ -60,9 +60,9 @@ if [ ! $merge_result -eq 0 ]; then
 fi
 git push
 
-pushd $HOME/$RREPO_COPY
-git push origin
-popd
+#pushd $HOME/$RREPO_COPY
+git push public
+#popd
 
 popd
-git push # push hte secret one
+git push # push the secret one

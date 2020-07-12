@@ -1,6 +1,3 @@
-clear
-tig
-clear
 ls
 tig ../beip301_bugfix/
 clear
@@ -2000,3 +1997,19 @@ fg
 exit
 sudo vim /etc/ssh/sshd_config 
 sudo systemctl restart sshd
+exit
+ms
+clear
+~/bin/filter_public 
+cd ~/v
+ls
+tig -a
+git push public
+git remote show 
+git remote show public
+clear
+tig
+vim ~/bin/filter_public 
+clear
+cd ..
+git status
