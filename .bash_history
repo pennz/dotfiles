@@ -1,38 +1,3 @@
-explorer.exe .
-tig
-ls
-clear
-tig
-git status
-git diff
-tig
-git remote add lab git@172.26.253.203:root/test_ci.git
-git push -u lab
-git push -u lab
-nvim
-fg
-ls 0900_System/02_configout/rte/common/SWCVersionInfo/SWCVersionInfo.h
-ls 0900_System/02_configout/rte/common/SWCVersionInfos/SWCVersionInfo.h
-cat ~/.ssh/id_rsa.pub 
-clear
-cd ..
-exit
-jobs
-fg
-exit
-clear
-ssh zhoupengyu@172.26.253.203
-clear
-ssh zhoupengyu@172.26.253.203
-ssh root@172.26.253.164
-ssh root@172.26.253.167
-exit
-nvim
-nvim /mnt/d/PIE/BEIP_dev/beip301_bugfix/1700-configout/core/automotive/lifecycle/LCSM/units/LCSM/
-clear
-git fetch
-cd ../beip302/
-tig
 clear
 tig
 clear
@@ -2002,3 +1967,36 @@ clear
 cd
 pwd
 git fetch
+git commit -asm "Fixed backup script"
+git push
+ti
+tig
+~/bin/filter_public 
+ss
+tig
+nvim ~/bin/filter_public 
+exit
+bin/borg_back.sh 
+~/bin/filter_public 
+clear
+eject /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/
+sudo eject /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/
+sudo eject /dev/sda
+plasmashell 
+udiskctl
+udisksctl 
+udisksctl  unmount /dev/sda
+udisksctl  unmount -b /dev/sda
+udisksctl  unmount -b /run/media/v
+ls /run/media/v/
+thunar
+udisksctl power-off -b /dev/sda
+clear
+ps aux| grep ssh
+ip route
+vi ~/.config/clash/vps.yaml 
+dig pengyuzhou.com
+fg
+exit
+sudo vim /etc/ssh/sshd_config 
+sudo systemctl restart sshd

@@ -52,8 +52,9 @@ git fetch public
 git branch -D $RBRANCH
 git checkout --track public/$RBRANCH
 git merge $BRANCH --no-edit --no-gpg-sign
+merge_result=$?
 sed -i 's/F10/\`/' .tmux.conf && git add .tmux.conf && git commit -sm "Tmux: prefix use \`" --no-edit --no-gpg
-if [ ! $? -eq 0 ]; then
+if [ ! $merge_result -eq 0 ]; then
     echo "Failed when merge with branch \"$BRANCH\". Please merge manually in subshell, exit when finished, it will continue."
     PS1="Merge>" bash
 fi
