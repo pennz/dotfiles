@@ -1,4 +1,40 @@
 ls
+tig ../beip301_bugfix/
+clear
+exit
+nvim
+tmux
+exit
+cd /mnt/d/workspace/kaggle_runner/
+git pull
+clea
+pydoc-markdown --server --render-toc -o
+clear
+git pull
+tig
+clear
+clear
+git status
+git status
+git pull
+clear
+ls
+bin/document_thing 
+git status
+gitbook build .
+pydoc-markdown --server -o
+clear
+ls
+vim Makefile 
+git add Makefile 
+git commit -sm "Make: gitlab runner start script" ; git push
+git push
+git push lab
+clear
+git remote show
+exit
+cd /mnt/d/workspace/git_sources/SV51/
+ls
 cd jenkins_integration/
 ls
 clear
@@ -1977,32 +2013,3 @@ vim ~/bin/filter_public
 clear
 cd ..
 git status
-while true; do ls -l; sleep 3; done
-clear
-cd
-clear
-git branch
-. ~/.bashrc
-clear
-tig
-clear
-fish
-clear
-exit
-nvim 
-clear
-ls -lh .shrc_customised*
-rm .shrc_customised
-ln -s .shrc_customised.macos .shrc_customised
-rm .shrc_customised
-ls -lh .shrc_customised*
-ln -s .shrc_customised.macos .shrc_customised
-ls -lh .shrc_customised*
-. ~/.bashrc
-clear
-nvim
-vim
-fg
-clear
-/usr/bin/vim
-fg
