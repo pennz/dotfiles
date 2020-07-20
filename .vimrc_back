@@ -163,6 +163,8 @@ Plug 'alfredodeza/pytest.vim'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 Plug 'pixelneo/vim-python-docstring'
 
+let g:pydocstring_formatter = 'google'
+
 nnoremap <leader>ss :Docstring<CR>
 " javascript
 Plug 'pangloss/vim-javascript'
