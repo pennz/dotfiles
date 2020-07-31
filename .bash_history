@@ -1,53 +1,12 @@
+git status
+git diff
+git status
+git diff --cached
 fg
-tat 5
-tmux ls
-fg
-cd works/
-git clone https://github.com/sylveon/terminology-themes
- sudo add-apt-repository ppa:niko2040/e19
-cd terminology-themes/
-make 
-hash -r
-sudo apt remove libethumb-client-bin
-sudo apt remove terminology
-sudo apt remove libethumb-client-bin 
-sudo apt remove libefreet-bin
-apt --fix-broken install
-sudo apt --fix-broken install
-sudo apt remove libevas-loaders
-sudo apt remove libevas-loaders libevas1 
-sudo apt remove libevas-loaders libevas1  libefi-bin
-sudo apt remove libevas-loaders libevas1  libe*
-sudo apt remove libevas-loaders libevas1  
-sudo apt remove libevas-loaders libevas1  libethumb*
-sudo apt remove libevas-loaders libevas1  libethumb*  libecore-evas1  libecore-imf1  libecore-input1  libedje1  libemotion1   libevas1-engines-x  
-sudo apt remove libevas-loaders libevas1  libethumb*  libecore-evas1  libecore-imf1  libecore-input1  libedje1  libemotion1   libevas1-engines-x    libecore-fb1  libecore-x1  libefl-bin 
-sudo apt remove libefreet1a
-sudo apt remove libefl-bin
-sudo apt auto-remove
-sudo apt install libefl-bin
-make
-cat README.md 
-sudo make install
-ls /usr/share/terminology/themes/
-ls themes/
-ls
-which terminology
-terminology 
-fljf
-ajflkwajeflkawjef
-tyalpha -h
-clear
-ip route
-exit
-locale
-echo $SHELL
-cheese
-sudo apt install cheese
-which cheese
-fish
-exit
-tail -f logs_check
+make check
+poetry run
+poetry run --help
+poetry run ls
 fg
 exit
 ps aux |  grep vvlp
@@ -136,8 +95,6 @@ tig
 git push lab
 clear
 tmux ls
-echo $DIRSTACK 
-echo $DISPLAY
 clear
 cd Videos/
 clear
@@ -210,336 +167,355 @@ fg
 cd
 pwd
 git fetch
-. ~/.basc
-. ~/.bashrc
-clear
-. ~/.shrc_*
-cd works/
-ls
-cd chm/
-unzip UserManual-iECU_SV51H.chm 
-file UserManual-iECU_SV51H.chm 
-sudo apt install archmage
-archmage UserManual-iECU_SV51H.chm dec
-ls dec
-man pandoc
-ls
-vi dec/motionwisesdk/softwareintheloop.html.md 
-clear
-ls
-ls dec
-ls
-clear
-ls
-cd dec/
-ls
-cleawr
-find . -name "*.md" | xargs rm
-find . -name "*.md" | xargs -I{} rm "{}"
-ls
-docker ps
-docker image ls
-ls
-clear
-ls
-vi index2.html.rst 
-ls otherdocumentation/
-clear
-cd ~/works/kaggle_runner/
-git pull
-clear
-make
-make setup
-sudo apt install python3-pip
-make setup
-sudo apt install python-pip
-clear
-clear
-ls
-clear
-clear
-ls
-clear
-ssh -p 29932 v@vtool.dudkdns.org
-ssh -p 29932 v@vtool.duckdns.org
-exit
-fish
-clear
-exit
-docker image ls
-docker pull pandoc/core
-docker pull pandoc/latex:latest
-clear
-ls
-pwd
-clear
-ls
-docker run -it --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex bash
-docker run -it --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex 
-docker run -it --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex sh
-tmux
-clear
-ni
-nix
-clear
-which bash
-exit
-clear
-which pytho
-which python
-clear
-ls
-cd works/
-ls
-cd conan_dep_
-cd conan_dep_test/
+git commit -asm "Fixed backup script"
+git push
+ti
 tig
-clear
-fg
-clear
-fg
-jobs
-nvim tnconan/__main__.py 
-git diff
-git diff --cached
-fg
-clear
-git commit -asm "Makefile \t and spaces"
-git push
-git pull
-clear
-git push
-cd test_package/
-s
-ls
-rm Makefile 
-rm -r *
-python2 -m tnconan
-which python2
-python2 -m pip install -e ..
-python2 -m tnconan
-ls
-cat Makefile 
-make 
-fg
-which python
-which python2
-fg
-make
-fg
-which python2
-python2 -m tnconan
-make
-rm -r *
-python2 -m tnconan
-cat Makefile 
-vi Makefile 
-clear
-make
-conan install .
-fg
-ls
-cat conanfile.py 
-clear
-make install
-fg
-conan install .
-fg
-clear
-make
-conan install .
-ls
-conan install --help
-clear
-vi conanfile.py 
-clear
-ls
-make install
-fg
-clear
-rm -r *
-claer
-python2 -m tnconan
-clear
-python2 -m tnconan
-clear
-python2 -m tnconan
-fg
-clear
-python2 -m tnconan
-fg
-git commit -asm "Fix requires null string and install error"
-git push
-clear
+~/bin/filter_public 
+ss
 tig
-clear
-fg
-git status
-clear
-fg
-clear
+nvim ~/bin/filter_public 
 exit
-tmux ls
-ta
-fg
-ls
+bin/borg_back.sh 
+~/bin/filter_public 
 clear
-python2 -m tnconan
-ls
-vi build_parameters.json 
-mv README_ORIG.md README_DEP2.md
-fg
-conan search AdcHwAb/0.2
-conan search AdcHwAb/0.2@
-conan search AdcHwAb/0.2@\*
-conan search AdcHwAb/0.2@\* --remote=tn
-conan search AdcHwAb/0.2@\* --remote=tnd
-fg
-pwd
-conan install . -g json
-tmux ls
-ta
+eject /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/
+sudo eject /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/
+sudo eject /dev/sda
+plasmashell 
+udiskctl
+udisksctl 
+udisksctl  unmount /dev/sda
+udisksctl  unmount -b /dev/sda
+udisksctl  unmount -b /run/media/v
+ls /run/media/v/
+thunar
+udisksctl power-off -b /dev/sda
 clear
-tmux ls
-tat 3
-vtool
-ssh-keygen -f "/home/zhoupengyu/.ssh/known_hosts" -R "[vtool.duckdns.org]:29922"
-vtool
-tmux ls
-ta
-clear
-clear
-vtool
-tmux ls
-ping vtool.duckdns.org
-tmux ls
-vtool
-clear
-clear
-git status
-clear
-clear
-ls
-clear
-ta
-clear
-vtool
-tmux ls
-clear
-tmux ls
-ta
-clear
-vtool
-clear
-clear
-ls
-docker ps
-docker exec -it suspicious_bell bash
-ls
-cler
-ls
+ps aux| grep ssh
 ip route
-docker ps
-ip route
-cd works/
-clear
-ls
-clear
-ls
-cat test_script.py 
-git clone git@github.com:pennz/antlr_lifestyle.git
-cd antlr_lifestyle/
-mv ../test_script.py kg_all.py 
-git diff
-git commit -asm "Fixed kg script, CLI call fine now"
-git push
+vi ~/.config/clash/vps.yaml 
+dig pengyuzhou.com
+fg
 exit
-clear
-ip route
-vootl
-vtool
-ping vtool.duckdns.org
-vtool
-ip route
-clear
-ip route
-clear
-ls
-clear
-git status
-clear
-clear
-ip route
-clear
-i proute
-clear
-vtool
-clear
-ls
-curl https://gist.github.com/pennz/2dfdf292f3dfea8c70edd325cdc7ee37/raw/62d3647eac8bb5e8b20249ab6af38b5dbe052b16/kg_get_entities.py
-curl -vv https://gist.github.com/pennz/2dfdf292f3dfea8c70edd325cdc7ee37/raw/62d3647eac8bb5e8b20249ab6af38b5dbe052b16/kg_get_entities.py
-fg
-clear
-clear
+sudo vim /etc/ssh/sshd_config 
+sudo systemctl restart sshd
+exit
 ms
 clear
-ip route
+~/bin/filter_public 
+cd ~/v
 ls
-docker save --help
-doker image ls
-docker image ls
-cd works/antlr_lifestyle/
-ls
+tig -a
+git push public
+git remote show 
+git remote show public
 clear
-ls
-cp ~/works/wiki_sentences_v2.csv .
-ls
-git add wiki_sentences_v2.csv 
-git commit -sm 'Added wiki sentence dataset'
-git commit -sm 'Added wiki sentence dataset'
-git add wiki_sentences_v2.csv 
-git commit -sm 'Added wiki sentence dataset'
-git status
-git commit -sm 'Added wiki sentence dataset'
-git commit -asm 'Added wiki sentence dataset'
-git status
-git pull
-git status
-git commit -m "add data"
-git commit -m "add data"|head
-git commit -m "add data" | head
-vim Makefile 
-vi ~/.git/hooks/pre-commit.sample 
+tig
+vim ~/bin/filter_public 
 clear
-ls
+cd ..
 git status
-mv ~/.git/hooks/ githooks
-git commit -m "add data" | head
-vim ~/.git_template.local/hooks/pre-commit 
-cd ~
-git grep toxic
-vim ~/.git_template.local/hooks/pre-commit 
-cd -
-git commit -m "add data" | head
-git commit -m "add data" 2>&1 | head
-git commit -m "add data" 
-git status
-vim wiki_sentences_v2.csv 
-git add wiki_sentences_v2.csv 
-git commit -m "add data" 
-tig
-tig
-git push
 exit
+clear
+. ~/.bashrc
+exit
+which mpv
+mpv https://www.youtube.com/watch?v=1EwUSfzwWXQ&list=PLdPXM3kciNXmIQiNJcS6hAwqNCma17A3Y
+mpv "https://www.youtube.com/watch?v=1EwUSfzwWXQ&list=PLdPXM3kciNXmIQiNJcS6hAwqNCma17A3Y"
+exit
+xcode-select --instal
+xcode-select --instal 
+xcode-select --install 
+clear
+fg
+exit
+exit
+clear
+tmux ls
+clear
+clear
+bash
+which bash
+nix-env -e bash
+clea
+clear
+bash
+hash -r
+bash
+clear
+. ~/.shrc_customised
+. ~/.shrc_customised.macos 
+clear
+clear
+cat .shrc_customised
+cat .shrc_customised.macos 
+hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage
+fish
+clear
+make broker
+clear
+make r
+cd kaggle_runner
+pwd
+rm -r .git
+rm -rf .git
+ls
+ls
+clear
+rm .git*
+ls
+cd ..
+ls
+clear
+clear
+ls
 fg
 clear
+ls
+clear
+fg
+clear
+fg
+clear
+clear
+fg
+clear
+fg
+clear
+fg
+fg
+clear
+export SERVER=127.0.0.1
+make r
+clear
+make dbroker
+ps aux| grep 23454
+ps aux| grep 23454
+pkill 83343
+clear
+pkilclear
+clear
+pkill 83343
+clear
+ps aux| grep 2354
+ps aux| grep 23454
+clear
+cleawr
+clear
+ps aux| grep 23454
+ps aux| grep make
+pkill -f "make"
+ps aux| grep make
+clear
+clear
+make broker
+ta
+r
+ta
+clear
+ls
 exit
-vtool
 clear
 ta
 clear
 ls
-vtool
+tmux ls
+ta
+exit
+tmux ls
 clear
-vtool
-vtool
+ta
+exit
+export SERVER=127.0.0.1
+clear
+make r
+fish
+fg
+clear
+exit
+ls
+exit
+git commit -asm "make: docs use default python3"
+ss
+sss
+git status
+clear
+git diff
+clear
+tig
+
+clear
+conda activate torch
+clear
+fish
+exit
+make check-dependencies
+fish
+exit
+export SERVER=127.0.0.1
+ps aux| grep 23454
+pkill -f "make"
+ps aux| grep 23454
+kill -9 83343
+ps aux| grep 23454
+clear
+make dbroker
+htop
+exit
+clear
+tmux ls
+echo $DIRSTACK 
+echo $DISPLAY
+clear
+echo $DISPLAY
+clear
+xeyes 
+export DISPLAY=localhost:10
+xeyes 
+ta
+clear
+ip route
+clear
+clear
+bash
+jobs
+clear
+clear
+hto
+htop
+clear
+clear
+tmux ls
+clear
+clear
+git status
+clea
+clear
+exit
+clear
+tmux ls
+ta
+clear
+exit
+exit
+exit
+htop
+clear
+clear
+tmux ls
+clera
+ls
+clear
+tmux ls
+clear
+ls
+pwd
+clear
+ssh -p 22292 pengyu@localhost
+exit
+exit
+r
+clear
+ls
+clera
+clear
+fg
+fg
+clera
+exit
+clear
+ms
+alias ms
+ssh -t -p 29932 pengyu@pengyuzhou.com
+ssh -vvv -p 29932 pengyu@pengyuzhou.com
+vi ~/.shrc_customised
+setproxy
+. ~/.shrc_customised
+setproxy
+clear
+curl google.com
+curl  -vv google.com
+setproxy
+vi .shrc_customised
+setproxy
+curl  -vv google.com
+fg
+exit
+bash
+fg
+vi .shrc_customised
+git satus
+git status
+curl  -vv www.google.com
+ping 104.225.151.98
+ncat  -vv 104.225.151.98  29932
+ls Calibre\ Library/
+du -sh Calibre\ Library/
+cd ~/Sync/with_box/
+lc
+clear
+ls
+clear
+cd -
+cd Sync/with_box/
+ls
+clear
+clear
+ln -s ~/Calibre\ Library/ .
+ls Calibre\ Library
+clear
+ls
+clear
+ip route
+cd Calibre\ Library/
+clear
+ls
+cd ..
+rm Calibre\ Library
+clear
+mv ~/Calibre\ Library/ .
+clear
+clear
+exit
+exit
+setproxy
+bash
+fg
+clear
+exit
+clear
+cd works/
+clear
+ls
+clear
+ls
+cd /Volumes/CaseSensitive/ANTLR_test/
+clear
+git pull
+cat notes.md 
+clear
+clear
+clear
+exit
+exit
+clear
+tmux ls
+ta
+tat
+ta
+clear
+tmux ls
+ta
+exit
+ms
+exit
+fish
+exit
+ncat -vv 27990 pengyuzhouc.om
+ncat -vv 27990 pengyuzhouc.com
+ncat -vv pengyuzhouc.com 27990 #m
+ncat -vv pengyuzhou.com 27990 #m
+clear
+tmux ls
+ta
