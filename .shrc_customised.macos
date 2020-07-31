@@ -111,8 +111,7 @@ pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl l
 #
 ### }
 
-PROXY_URL='http://127.0.0.1:7890'
-alias clash='clash -f ~/.config/clash/config.yaml'
+PROXY_URL='http://127.0.0.1:4444'
 alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
 [ -z $(pgrep clash) ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
 

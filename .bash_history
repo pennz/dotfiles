@@ -129,15 +129,28 @@ fg
 exit
 man tmux
 fg
-exit
-man tmux
-exit
-exit
-elinks
-exit
-fish
-exit
-. ~/.bashrc
+nvim .gitlab-ci.yml 
+tig
+git push
+tig
+git push lab
+clear
+tmux ls
+echo $DIRSTACK 
+echo $DISPLAY
+clear
+cd Videos/
+clear
+v2ray --conig
+mpv --no-video *
+v2ray -config ~/.config/v2ray_client_u.json 
+bg
+clear
+tmux ls
+~/bin/xcb_change 
+clear
+woh
+who
 clear
 which tmux
 zsh
@@ -386,6 +399,7 @@ pwd
 conan install . -g json
 tmux ls
 ta
+clear
 tmux ls
 tat 3
 vtool
