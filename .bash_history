@@ -1,323 +1,3 @@
-ps aux| grep Xw
-kill 2191
-sudo kill 2191
-startx
-exit
-tmux ls
-tmux ls
-tt
-v ~/.tmux.conf
-clear
-pkill tmux
-tmux ls
-tat 5
-clear
-vi ~/.tmux.conf
-tig ~/.tmux.conf
-clash -f .config/clash/old_config.yaml 
-tig .tmux.conf
-tig .tmux.conf
-git diff
-git diff .tmux.conf
-git diff --cached .tmux.conf
-fg
-vi .tmux.conf
-clear
-ls
-stty -a
-exit
-vim ~/.tmux.conf
-clear
-tmux ls
-which tmux
-pkill tmux
-stty -a
-ls
-clear
-ls
-ls
-sss
-exit
-vi .tmux.conf
-exit
-exit
-exit
-exit
-exit
-exit
-tmux ls
-clear
-tmux ls
-exit
-tmux ls
-exit
-exit
-exit
-tat 5
-stty -a
-tmux ls
-exit
-tat 5
-tat rvsConnector
-tmxu ls
-tat rvsConnector
-pwd
-exit
-PORT=$(./reversShells/addNewNode.sh 2>/dev/null); echo $PORT 
-./reversShells/addNewNode.sh 2>/dev/null
-./reversShells/addNewNode.sh >/dev/null
-./reversShells/addNewNode.sh 2>/dev/null
-./reversShells/addNewNode.sh
-exit
-exit
-tat 5
-exit
-tmux ls
-tat 7
-tat 5
-tmux ls
-tat 5
-clear
-pkill mosh-server
-exit
-exit
-exit
-exit
-cd ~/works/kaggle_runner/
-ls
-clear
-tig
-v .
-ps aux| grep addNew
-kill 12958
-ps aux| grep addNew
-kill 12
-kill 12959
-fg
-reversShells/addNewNode.sh 
-kill %2
-fg
-cat serverNodes 
-echo "" > serverNodes 
-fg
-reversShells/addNewNode.sh 
-fg
-kill %2
-fg
-reversShells/addNewNode.sh 
-reversShells/addNewNode.sh 
-reversShells/addNewNode.sh 
-~/bin/upnp-ports 
-ip route
-clear
-. ~/.fzf.bash 
-zsh
-fish
-exit
-jobs
-fg
-jobs
-exit
-stty -a
-exit
-which proxychains4
-/usr/bin/proxychains4 
-/usr/bin/proxychains4 neomutt
-clear
-echo $PATH
-hash -r
-which proxychains4
-/home/v/.nix-profile/bin/proxychains4
-nix-env -e proxychains4
-nix-env --remove proxychains4
-sudo apt install i2p
-i2prouter
-i2prouter install
-dpkg-reconfigure i2p
-sudo dpkg-reconfigure i2p
-sudo systemctl start i2p
-sudo systemctl status i2p
-dmesg
-sudo systemctl status i2p
-ls -lh /var/lop/i2p
-ls -lh /var/log/i2p
-sudo systemctl status i2p
-sudo systemctl start i2p
-sudo systemctl status i2p
-ls -lh /var/log/i2p
-i2p
-i2prouter
-i2prouter console 
-ls /usr/bin/i2prouter
-ls -lh /usr/bin/i2prouter
-sudo i2prouter console 
-i2prouter console 
-ps aux|grep i2p
-sudo systemctl status i2p
-ls
-clear
-setproxy
-neomutt
-proxychains neomutt
-proxychains4 neomutt
-pstree -laps $$
-mosh
-clear
-kill 18781
-aaa=$(stty -g)
-stty $aaa
-stty size
-stty rows 1
-stty $aaa
-stty size
-stty "$aaa"
-stty size
-bbb=$(stty -g)
-aaa
-echo $aaa
-echo $bbb
-bbb=$(stty -a -g)
-stty size
-fg
-v Makefile 
-stty rows 24
-v Makefile 
-exit
-size=123 321
-size="123 321"
-size
-echo $size
-echo $size|cut -f1
-echo $size|cut -d" " -f1
-exit
-ls
-ls
-clear
-who
-who
-wfwefwe
-wfeawfeawf
-awefwefwefwef
-exit
-[ $(pgrep -cf "50001.*vulp 50002") -gt 1 ] || echo "yes"
-fg
-clear
-make tmp
-clear
-make tmp
-clear
-make tmp
-fg
-make tmp
-fg
-make tmp
-make pc_connector 
-make tmp
-gg
-fg
-make tmp
-echo "\|"
-echo "|"
-echo "|" asdfsdf
-fg
-exit
-ncat -vvu 127.0.0.1 50001 -c 'tee /dev/tty | ncat -vvu 127.0.0.1 60002 | tee /dev/tty'
-zsh
-exit
-clear
-exit
-{ echo a; echo b; }
-{ echo a; echo b; } &
-fg
-exit
-ls
-. ~/.pretty_prompt_console 
-ls
-fg
-rm ~/.pretty_prompt_console 
-cledar
-clear
-git status
-fg
-color_my_prompt 
-fg
-clear
-vim ~/.profile 
-exit
-fg
-grep TERM
-git grep TERM
-exit
-clear
-exit
-urxvt
-clear
-xrdb ~/.Xresources 
-vi ~/.profile 
-fg
-tmux
-xclip -o
-$(xclip -o)
-bash -c "$(xclip -o)"
-echo $TERM
-fg
-clear
-ip route
-ls
-clear
-ip route
-clea
-clear
-tmux ls
-which xrdb
-man xrdb
-tmux ls
-tat 5
-pkill Xwayland
-urxvt
-stty ros 25
-clear
-stty rows 25
-clear
-ls
-echo $TERM
-locale
-exit
-tmux ls
-tat 4
-tat 5
-exit
-ex
-man ex
-exit
-stty ros 25
-stty rows 25
-ls
-echo $TERM
-locale
-tat 4
-htop
-fg
-tat 5
-clear
-tmux ls
-exit
-fg
-exit
-exit
-exit
-locale
-tmux ls
-tat 4
-tat 5
-ex
-man ex
-stty ros 25
-stty rows 25
-echo $TERM
-locale
-tat 4
-htop
 fg
 tat 5
 tmux ls
@@ -515,4 +195,337 @@ fg
 conda activate pyt
 fg
 cd
+pwd
+git fetch
+. ~/.basc
+. ~/.bashrc
+clear
+. ~/.shrc_*
+cd works/
+ls
+cd chm/
+unzip UserManual-iECU_SV51H.chm 
+file UserManual-iECU_SV51H.chm 
+sudo apt install archmage
+archmage UserManual-iECU_SV51H.chm dec
+ls dec
+man pandoc
+ls
+vi dec/motionwisesdk/softwareintheloop.html.md 
+clear
+ls
+ls dec
+ls
+clear
+ls
+cd dec/
+ls
+cleawr
+find . -name "*.md" | xargs rm
+find . -name "*.md" | xargs -I{} rm "{}"
+ls
+docker ps
+docker image ls
+ls
+clear
+ls
+vi index2.html.rst 
+ls otherdocumentation/
+clear
+cd ~/works/kaggle_runner/
+git pull
+clear
+make
+make setup
+sudo apt install python3-pip
+make setup
+sudo apt install python-pip
+clear
+clear
+ls
+clear
+clear
+ls
+clear
+ssh -p 29932 v@vtool.dudkdns.org
+ssh -p 29932 v@vtool.duckdns.org
+exit
+fish
+clear
+exit
+docker image ls
+docker pull pandoc/core
+docker pull pandoc/latex:latest
+clear
+ls
+pwd
+clear
+ls
+docker run -it --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex bash
+docker run -it --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex 
+docker run -it --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex sh
+tmux
+clear
+ni
+nix
+clear
+which bash
+exit
+clear
+which pytho
+which python
+clear
+ls
+cd works/
+ls
+cd conan_dep_
+cd conan_dep_test/
 tig
+clear
+fg
+clear
+fg
+jobs
+nvim tnconan/__main__.py 
+git diff
+git diff --cached
+fg
+clear
+git commit -asm "Makefile \t and spaces"
+git push
+git pull
+clear
+git push
+cd test_package/
+s
+ls
+rm Makefile 
+rm -r *
+python2 -m tnconan
+which python2
+python2 -m pip install -e ..
+python2 -m tnconan
+ls
+cat Makefile 
+make 
+fg
+which python
+which python2
+fg
+make
+fg
+which python2
+python2 -m tnconan
+make
+rm -r *
+python2 -m tnconan
+cat Makefile 
+vi Makefile 
+clear
+make
+conan install .
+fg
+ls
+cat conanfile.py 
+clear
+make install
+fg
+conan install .
+fg
+clear
+make
+conan install .
+ls
+conan install --help
+clear
+vi conanfile.py 
+clear
+ls
+make install
+fg
+clear
+rm -r *
+claer
+python2 -m tnconan
+clear
+python2 -m tnconan
+clear
+python2 -m tnconan
+fg
+clear
+python2 -m tnconan
+fg
+git commit -asm "Fix requires null string and install error"
+git push
+clear
+tig
+clear
+fg
+git status
+clear
+fg
+clear
+exit
+tmux ls
+ta
+fg
+ls
+clear
+python2 -m tnconan
+ls
+vi build_parameters.json 
+mv README_ORIG.md README_DEP2.md
+fg
+conan search AdcHwAb/0.2
+conan search AdcHwAb/0.2@
+conan search AdcHwAb/0.2@\*
+conan search AdcHwAb/0.2@\* --remote=tn
+conan search AdcHwAb/0.2@\* --remote=tnd
+fg
+pwd
+conan install . -g json
+tmux ls
+ta
+tmux ls
+tat 3
+vtool
+ssh-keygen -f "/home/zhoupengyu/.ssh/known_hosts" -R "[vtool.duckdns.org]:29922"
+vtool
+tmux ls
+ta
+clear
+clear
+vtool
+tmux ls
+ping vtool.duckdns.org
+tmux ls
+vtool
+clear
+clear
+git status
+clear
+clear
+ls
+clear
+ta
+clear
+vtool
+tmux ls
+clear
+tmux ls
+ta
+clear
+vtool
+clear
+clear
+ls
+docker ps
+docker exec -it suspicious_bell bash
+ls
+cler
+ls
+ip route
+docker ps
+ip route
+cd works/
+clear
+ls
+clear
+ls
+cat test_script.py 
+git clone git@github.com:pennz/antlr_lifestyle.git
+cd antlr_lifestyle/
+mv ../test_script.py kg_all.py 
+git diff
+git commit -asm "Fixed kg script, CLI call fine now"
+git push
+exit
+clear
+ip route
+vootl
+vtool
+ping vtool.duckdns.org
+vtool
+ip route
+clear
+ip route
+clear
+ls
+clear
+git status
+clear
+clear
+ip route
+clear
+i proute
+clear
+vtool
+clear
+ls
+curl https://gist.github.com/pennz/2dfdf292f3dfea8c70edd325cdc7ee37/raw/62d3647eac8bb5e8b20249ab6af38b5dbe052b16/kg_get_entities.py
+curl -vv https://gist.github.com/pennz/2dfdf292f3dfea8c70edd325cdc7ee37/raw/62d3647eac8bb5e8b20249ab6af38b5dbe052b16/kg_get_entities.py
+fg
+clear
+clear
+ms
+clear
+ip route
+ls
+docker save --help
+doker image ls
+docker image ls
+cd works/antlr_lifestyle/
+ls
+clear
+ls
+cp ~/works/wiki_sentences_v2.csv .
+ls
+git add wiki_sentences_v2.csv 
+git commit -sm 'Added wiki sentence dataset'
+git commit -sm 'Added wiki sentence dataset'
+git add wiki_sentences_v2.csv 
+git commit -sm 'Added wiki sentence dataset'
+git status
+git commit -sm 'Added wiki sentence dataset'
+git commit -asm 'Added wiki sentence dataset'
+git status
+git pull
+git status
+git commit -m "add data"
+git commit -m "add data"|head
+git commit -m "add data" | head
+vim Makefile 
+vi ~/.git/hooks/pre-commit.sample 
+clear
+ls
+git status
+mv ~/.git/hooks/ githooks
+git commit -m "add data" | head
+vim ~/.git_template.local/hooks/pre-commit 
+cd ~
+git grep toxic
+vim ~/.git_template.local/hooks/pre-commit 
+cd -
+git commit -m "add data" | head
+git commit -m "add data" 2>&1 | head
+git commit -m "add data" 
+git status
+vim wiki_sentences_v2.csv 
+git add wiki_sentences_v2.csv 
+git commit -m "add data" 
+tig
+tig
+git push
+exit
+fg
+clear
+exit
+vtool
+clear
+ta
+clear
+ls
+vtool
+clear
+vtool
+vtool
