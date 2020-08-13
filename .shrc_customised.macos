@@ -103,7 +103,7 @@ stty eof ^\f
 
 ### { for mac
 pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )
-[ -d /Volumes/CaseSensitive/ ] || ( which hdiutil &>/dev/null && hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage )
+[ -d /Volumes/CaseSensitive/ ] || hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage >/dev/null 2>&1
 # source $HOME/.nix-profile/etc/profile.d/nix.sh
 # for cross compilation
 #. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
@@ -111,7 +111,7 @@ pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl l
 #
 ### }
 
-PROXY_URL='http://127.0.0.1:4444'
+PROXY_URL='http://127.0.0.1:7890'
 alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
 [ -z $(pgrep clash) ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
 
