@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-[ -d ~/.oh-my-zsh ] && export ZSH=$HOME/.oh-my-zsh
+export ZSH="/home/pengyu/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="amuse"
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -26,8 +26,14 @@
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -64,7 +70,7 @@
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git osx)
 
-[ -d ~/.oh-my-zsh ] && source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -83,9 +89,6 @@ plugins=(git osx)
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -99,28 +102,30 @@ plugins=(git osx)
 
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-fpath+=$HOME/.zsh/pure
+
+autoload -Uz compinit
+compinit
+[-f /home/pengyu/.jfrog/jfrog_zsh_completion ] && source /home/pengyu/.jfrog/jfrog_zsh_completion
 
 autoload -U promptinit; promptinit
 
 zstyle :prompt:pure:git:stash show yes
 prompt pure
-#eval "$(starship init zsh)"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/Users/v/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/Users/v/anaconda3/etc/profile.d/conda.sh" ]; then
-#        . "/Users/v/anaconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/Users/v/anaconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
+__conda_setup="$('/home/pengyu/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/pengyu/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/pengyu/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/pengyu/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
 
 
