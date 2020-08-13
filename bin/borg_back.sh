@@ -42,6 +42,7 @@ echo "borg used: $(which borg)"
 backup() {
     (
         info "Starting backup"
+        #set -x
         $BORG create \
             --progress \
             --filter AME \
