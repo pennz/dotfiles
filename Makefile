@@ -24,3 +24,6 @@ vps:
 	mv .zhhh .zsh_history
 test:
 	@echo "Pass"
+
+setup:
+	git submodule update --init
