@@ -1,3 +1,503 @@
+make test
+make test | jq .
+clear
+ls
+cat Makefile 
+make test
+clear
+git status
+fg
+git status
+ls
+cat Dockerfile 
+make test
+clear
+cat Makefile 
+cat Dockerfile 
+clear
+ls
+git status
+docker pull neelkamath/spacy-server:2-en_core_web_lg-sense2vec
+heroku
+sudo snap install heroku
+sudo snap install heroku --classic
+heroku
+heroku login
+heroku container:login
+docker image ls
+docker tag neelkamath/spacy-server:2-en_core_web_lg-sense2vec registry.heroku.com/life-spacy-server/web
+docker push  registry.heroku.com/life-spacy-server/web
+heroku apps
+heroku container:release web
+heroku container:release -a life-spacy-server web
+tig
+clear
+ls
+ls
+ta
+clear
+tig
+ta
+clear
+vim ~/.tmux.conf 
+ta
+cd works/
+ls
+cd wpa/
+./test_server 
+vim ./test_
+vim ./test_server 
+./test_server 
+cat ./test_server 
+fg
+clear
+exit
+ta
+clear
+exit
+ls
+clear
+clear
+cd works/
+ls
+clear
+ip route
+ls
+conda env list
+git clone git@gitlab.com:MrCue/wpa.git
+ls
+clear
+ls
+cd doc
+cd .../wp
+cd ../wpa
+ls
+ls
+ls -t | head
+cd wpa/
+ls
+clear
+ls
+which python
+cat Makefile 
+make
+ls
+vim Makefile 
+tig Makefile
+clear
+make setup
+make setup
+ls ..
+cd ../antlr_lifestyle/
+git pull
+ls
+make
+cp Makefile  ../wpa/
+cd ../wpa/
+cla
+clear
+make
+make setup
+poetry init
+make setup
+sudo make setup
+make setup
+cat setup.py 
+poetry install
+poetry add ortools editdistance numpy pytest pandas
+fg
+vim pyproject.toml 
+poetry add ortools editdistance numpy pytest pandas
+fg
+clear
+ls
+git status
+git diff
+clear
+poetry add ortools editdistance numpy pytest pandas
+fg
+vim pyproject.toml 
+fg
+poetry add ortools editdistance numpy pytest pandas
+r
+git status
+git add pyproject.toml 
+git add poetry.lock 
+git add -u
+git commit -sm "Added poetry setup"
+tig
+git commit -sm "Added poetry setup"
+vim Makefile 
+fg
+git commit -sm "Added poetry setup"
+git commit -sm "Added poetry setup" -a
+tig
+git pull
+tig
+tig
+vim test_command 
+chmod +x ./test_command 
+./test_command 
+fg
+which poetry
+fg
+which poetry
+./test_command 
+git status
+git add test_command 
+git commit -sm "Update test command with poetry"
+git push
+clear
+tig
+clear
+ls
+clear
+ls
+vim setup.py 
+clear
+ls
+which python
+clear
+ls
+poetry run python
+git status
+git diff
+git status
+fg
+git status
+git diff
+clear
+git status
+tig
+git diff
+fg
+clear
+git status
+clear
+tig
+./test_command 
+vim fjsp_data/instances/Brandimarte_Mk01.fjs
+fg
+clear
+ls
+ls
+clear
+ls
+`
+
+
+clear
+ls
+tig TODO.md
+clear
+ls
+ls
+clear
+ls
+poetry 
+clear
+ls
+curl https://life-spacy-server.herokuapp.com/ner -H 'Content-Type: application/json' -d '{"sections": ["My name is John Doe. I grew up in California."]}'
+curl https://life-spacy-server.herokuapp.com/ner -H 'Content-Type: application/json' -d '{"sections": ["My name is John Doe. I grew up in California."]}'
+curl https://life-spacy-server.herokuapp.com/ner -H 'Content-Type: application/json' -d '{"sections": ["My name is John Doe. I grew up in California."]}'
+curl https://life-spacy-server.herokuapp.com/ner -H 'Content-Type: application/json' -d '{"sections": ["My name is John Doe. I grew up in California."]}' | jq .
+fg
+clear
+ls
+cat test_command 
+cat > test_server
+chmod +x test_server 
+clear
+ls
+./test_
+./test_server 
+cat >> ./test_server 
+vim ./test_server 
+./test_server 
+cat ./test_server 
+./test_server 
+ls -lh mychart.png 
+open mychart.png 
+head mychart.png 
+cat mychart.png 
+clear
+clear
+ls
+exit
+fg
+clear
+heroku
+heroku logs --tail
+heroku logs -a ancient-thicket-34735 --tail
+clear
+fg
+ls
+vim TODO.md 
+clear
+git status
+fg
+poetry add requests
+fg
+/bin/env
+/usr/bin/env
+fg
+clear
+chmod +x ./test_server.py 
+./test_server.py 
+fg
+poetry add -h
+poetry add -D ipdb
+fg
+./test_server.py 
+fg
+fg
+clear
+./test_server.py 
+clear
+fg
+clear
+./test_server.py 
+ls -lh get_image.png 
+fg
+poetry run pytest test_server.py 
+tmux ls
+ta
+ip route
+clear
+tmux ls
+clear
+cler
+cd works/
+ls
+clear
+git clone https://github.com/slightfoot/rally_app.git
+clear
+ls
+cd rally_app/
+ls
+clear
+tg
+tig
+ls
+clear
+ls
+vim pubspec.yaml 
+clear
+ls
+ls
+vim lib/main.dart 
+clear
+git fetch
+clear
+ls
+tig
+git lg
+clear
+git status
+ta
+wget https://download3.portableapps.com/portableapps/GIMPPortable/GIMPPortable_2.10.18-2.paf.exe?20190321
+ls
+clar
+clear
+ls
+ip route
+clear
+git pull
+clear
+tig
+clear
+git fetch
+git remote show
+git remote show origin
+git pull
+r
+clear
+ls
+cd UserManual/
+ls
+tig
+clear
+ls
+cd ..
+ls
+git pull
+clear
+ls
+clear
+ip route
+clear
+ls
+ls
+clear
+ls
+ls
+clear
+ls
+clear
+ls
+ls
+git status
+git status
+git status
+git status
+clear
+exit
+tig
+git lg
+clear
+ls
+clear
+ls
+vim UserManual/Introduction/Flashing.rst 
+git pull
+clear
+git pull
+clear
+ls
+tig
+clear
+ls
+git status
+rm GIMPPortable_2.10.18-2.paf.exe\?20190321 
+clear
+tig
+git push
+clear
+git pull
+clear
+ip route
+ls
+clear
+vtool
+clear
+t
+cler
+clear
+tig
+clear
+tig
+git diff
+git commit -asm "fixup! name for dataset fixed"
+git push
+exit
+ta
+clear
+ls
+vim UserManual/Introduction/Flashing.rst 
+git branch
+tig
+git fetch
+ta
+clear
+tmux
+clear
+ta
+clear
+ta
+echo $DISPLAY
+clear
+git fetch
+tig
+git lg
+clear
+exit
+sudo ý¿¿¼³
+ý¿¿¼³
+heroku
+heroku access
+heroku access -a
+heroku  git
+heroku notifications
+clear
+ip route
+clear
+clear
+ps aux| grep ssh
+ps aux| grep ssh
+kill 72839
+ps aux| grep ssh
+sudo apt install xauth
+exit
+sudo mv aaa /etc/ssh/sshd_config 
+sudo systemctl restart sshd
+sudo systemctl restart ssh
+ip route
+nc -klp 2223
+nc -vvklp 2223
+pwd
+clear
+ls
+ps aux| grep ssh
+ps aux| grep ssh
+kill 73033
+ps aux| grep ssh
+ssh -p 29922 172.26.253.203:22222:vtool.duckdns.org:29922 v@vtool.duckdns.org
+ssh -p 29922 -L 172.26.253.203:22222:vtool.duckdns.org:29922 v@vtool.duckdns.org
+exit
+echo $DISPLAY
+xeyes 
+xcalc 
+clear
+firefox 
+bg
+clear
+jobs
+clear
+gvim
+sudo apt install neovim-qt
+gvim
+clear
+clear
+ls
+ping vtool.duckdns.org
+clear
+clear
+ls
+sudo snap install --classic code
+clear
+code
+clear
+ip route
+clear
+ip route
+sudo snap install golang
+sudo snap install go
+sudo snap install go --classic
+which go
+which go
+clear
+ls
+cat bin/vtool 
+ssh -L 2222:localhost:29922 -p 29922 v@vtool.duckdns.org
+ssh -vv -fNL 22222:localhost:29922 -p 29922 v@vtool.duckdns.org
+ssh -vv -fNL 172.26.253.203:22222:localhost:29922 -p 29922 v@vtool.duckdns.org
+clear
+ls
+ip route
+ip route
+clear
+clear
+ssh -p 22222 v@localhost
+ssh -vvv -p 22222 v@localhost
+ssh -vvv -p 22222 v@172.26.253.203
+ssh -vvv -p 22222 v@172.26.253.203
+ssh -vvv -p 22222 v@172.26.253.203
+ls -lh ~/.ssh/
+clear
+ssh -vvv -p 22222 v@172.26.253.203
+ssh -vvv -p 29922 v@vtool.duckdns.org
+clear
+jobs
+jobs
+ps aux | grep ssh
+clear
+echo $DISPLAY 
+ssh -vv -fNL 172.26.253.203:22222:vtool.duckdns.org:29922 -p 29922 v@vtool.duckdns.org
+exit
+ta
+clera
+ta
+echo $DISPLAY
 ls
 setproxy
 bash
@@ -538,457 +1038,502 @@ elinks
 tail -f logs_check
 exit
 exit
-ls
-exit
-exit
-exit
-cd bin/
-cat > xm.c
-gcc -lX11 xm -o xmodmap1
-ls xm.c 
-gcc -lX11 xm.c -o xmodmap1
-which gcc
-/usr/bin/gcc -lX11 xm.c 
-clea
-clear
-ls
-touch ~/.enable_fish
-fish
-exit
-xev -event keyboard
-exit
-fg
-exit
-man tmux
-fg
-nvim .gitlab-ci.yml 
-tig
-git push
-tig
-git push lab
-clear
-tmux ls
-clear
-cd Videos/
-clear
-v2ray --conig
-mpv --no-video *
-v2ray -config ~/.config/v2ray_client_u.json 
-bg
-clear
-tmux ls
-~/bin/xcb_change 
-clear
-woh
-who
-clear
-which tmux
-zsh
-. ~/.bashrc
-cd
-git status
-clear
-tig
-clear
-exit
-clear
-conda env list
-conda create pyt
-conda create -n pyt
-conda create -n pyt python=3
-conda activate pyt
-conda init bash
-. ~/.bashrc
-conda activate pyt
-cd kaggle_runner/
-make install_dev_dep
-pip install -e .
-clear
-ls
-make pccnct
-fg
-jobs
-tmux 
-m
-export LC_ALL='en_US.UTF-8'
-locale-gen
-sudo locale-gen
-locale
-m
-tmux ls
-tat 3
-vi Makefile 
-tmux ls
-tat pengyu
-exit
-cd
-clear
-cd
-git pull
-tig
-vim ~/.bashrc
-ls ~/*conda
-pwd
-ls miniconda3/
-ls ~/*conda*
-ls -d ~/*conda*
-ls -d ~/*conda* | head -n 1
-fg
-. ~/.bashrc
-conda activate pyt
-fg
-cd
-pwd
-git fetch
-git commit -asm "Fixed backup script"
-git push
-ti
-tig
-~/bin/filter_public 
-ss
-tig
-nvim ~/bin/filter_public 
-exit
-bin/borg_back.sh 
-~/bin/filter_public 
-clear
-eject /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/
-sudo eject /run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/
-sudo eject /dev/sda
-plasmashell 
-udiskctl
-udisksctl 
-udisksctl  unmount /dev/sda
-udisksctl  unmount -b /dev/sda
-udisksctl  unmount -b /run/media/v
-ls /run/media/v/
-thunar
-udisksctl power-off -b /dev/sda
-clear
-ps aux| grep ssh
-ip route
-vi ~/.config/clash/vps.yaml 
-dig pengyuzhou.com
-fg
-exit
-sudo vim /etc/ssh/sshd_config 
-sudo systemctl restart sshd
-exit
-ms
-clear
-~/bin/filter_public 
-cd ~/v
-ls
-tig -a
-git push public
-git remote show 
-git remote show public
-clear
-tig
-vim ~/bin/filter_public 
-clear
-cd ..
-git status
-exit
-clear
-. ~/.bashrc
-exit
-which mpv
-mpv https://www.youtube.com/watch?v=1EwUSfzwWXQ&list=PLdPXM3kciNXmIQiNJcS6hAwqNCma17A3Y
-mpv "https://www.youtube.com/watch?v=1EwUSfzwWXQ&list=PLdPXM3kciNXmIQiNJcS6hAwqNCma17A3Y"
-exit
-xcode-select --instal
-xcode-select --instal 
-xcode-select --install 
-clear
-fg
-exit
-exit
-clear
-tmux ls
-clear
-clear
-bash
-which bash
-nix-env -e bash
-clea
-clear
-bash
-hash -r
-bash
-clear
-. ~/.shrc_customised
-. ~/.shrc_customised.macos 
-clear
-clear
-cat .shrc_customised
-cat .shrc_customised.macos 
-hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage
-fish
-clear
-make broker
-clear
-make r
-cd kaggle_runner
-pwd
-rm -r .git
-rm -rf .git
-ls
-ls
-clear
-rm .git*
-ls
-cd ..
-ls
-clear
-clear
-ls
 fg
 clear
 ls
-clear
-fg
-clear
-fg
-clear
-clear
-fg
-clear
-fg
-clear
-fg
-fg
-clear
-export SERVER=127.0.0.1
-make r
-clear
-make dbroker
-ps aux| grep 23454
-ps aux| grep 23454
-pkill 83343
-clear
-pkilclear
-clear
-pkill 83343
-clear
-ps aux| grep 2354
-ps aux| grep 23454
-clear
-cleawr
-clear
-ps aux| grep 23454
-ps aux| grep make
-pkill -f "make"
-ps aux| grep make
-clear
-clear
-make broker
-ta
-r
-ta
-clear
-ls
-exit
-clear
-ta
-clear
-ls
-tmux ls
-ta
-exit
-tmux ls
-clear
-ta
-exit
-export SERVER=127.0.0.1
-clear
-make r
-fish
-fg
-clear
-exit
-ls
-exit
-git commit -asm "make: docs use default python3"
-ss
-sss
-git status
-clear
-git diff
-clear
-tig
-
-clear
-conda activate torch
-clear
-fish
-exit
-make check-dependencies
-fish
-exit
-export SERVER=127.0.0.1
-ps aux| grep 23454
-pkill -f "make"
-ps aux| grep 23454
-kill -9 83343
-ps aux| grep 23454
-clear
-make dbroker
-htop
-exit
-clear
-tmux ls
-echo $DIRSTACK 
-echo $DISPLAY
-clear
-echo $DISPLAY
-clear
-xeyes 
-export DISPLAY=localhost:10
-xeyes 
-ta
-clear
-ip route
-clear
-clear
-bash
-jobs
-clear
-clear
-hto
-htop
-clear
-clear
-tmux ls
-clear
+cat Makefile 
+make test
 clear
 git status
-clea
+fg
+git status
+ls
+cat Dockerfile 
+make test
+clear
+cat Makefile 
+cat Dockerfile 
+clear
+ls
+git status
+docker pull neelkamath/spacy-server:2-en_core_web_lg-sense2vec
+heroku
+sudo snap install heroku
+sudo snap install heroku --classic
+heroku
+heroku login
+heroku container:login
+docker image ls
+docker tag neelkamath/spacy-server:2-en_core_web_lg-sense2vec registry.heroku.com/life-spacy-server/web
+docker push  registry.heroku.com/life-spacy-server/web
+heroku apps
+heroku container:release web
+heroku container:release -a life-spacy-server web
+tig
+clear
+ls
+ls
+ta
+clear
+tig
+ta
+clear
+vim ~/.tmux.conf 
+ta
+cd works/
+ls
+cd wpa/
+./test_server 
+vim ./test_
+vim ./test_server 
+./test_server 
+cat ./test_server 
+fg
 clear
 exit
-clear
-tmux ls
 ta
 clear
 exit
-exit
-exit
-htop
-clear
-clear
-tmux ls
-clera
 ls
 clear
-tmux ls
-clear
-ls
-pwd
-clear
-ssh -p 22292 pengyu@localhost
-exit
-exit
-r
-clear
-ls
-clera
-clear
-fg
-fg
-clera
-exit
-clear
-ms
-alias ms
-ssh -t -p 29932 pengyu@pengyuzhou.com
-ssh -vvv -p 29932 pengyu@pengyuzhou.com
-vi ~/.shrc_customised
-setproxy
-. ~/.shrc_customised
-setproxy
-clear
-curl google.com
-curl  -vv google.com
-setproxy
-vi .shrc_customised
-setproxy
-curl  -vv google.com
-fg
-exit
-bash
-fg
-vi .shrc_customised
-git satus
-git status
-curl  -vv www.google.com
-ping 104.225.151.98
-ncat  -vv 104.225.151.98  29932
-ls Calibre\ Library/
-du -sh Calibre\ Library/
-cd ~/Sync/with_box/
-lc
-clear
-ls
-clear
-cd -
-cd Sync/with_box/
-ls
-clear
-clear
-ln -s ~/Calibre\ Library/ .
-ls Calibre\ Library
-clear
-ls
-clear
-ip route
-cd Calibre\ Library/
-clear
-ls
-cd ..
-rm Calibre\ Library
-clear
-mv ~/Calibre\ Library/ .
-clear
-clear
-exit
-exit
-setproxy
-bash
-fg
-clear
-exit
 clear
 cd works/
+ls
+clear
+ip route
+ls
+conda env list
+git clone git@gitlab.com:MrCue/wpa.git
+ls
+clear
+ls
+cd doc
+cd .../wp
+cd ../wpa
+ls
+ls
+ls -t | head
+cd wpa/
+ls
+clear
+ls
+which python
+cat Makefile 
+make
+ls
+vim Makefile 
+tig Makefile
+clear
+make setup
+make setup
+ls ..
+cd ../antlr_lifestyle/
+git pull
+ls
+make
+cp Makefile  ../wpa/
+cd ../wpa/
+cla
+clear
+make
+make setup
+poetry init
+make setup
+sudo make setup
+make setup
+cat setup.py 
+poetry install
+poetry add ortools editdistance numpy pytest pandas
+fg
+vim pyproject.toml 
+poetry add ortools editdistance numpy pytest pandas
+fg
+clear
+ls
+git status
+git diff
+clear
+poetry add ortools editdistance numpy pytest pandas
+fg
+vim pyproject.toml 
+fg
+poetry add ortools editdistance numpy pytest pandas
+r
+git status
+git add pyproject.toml 
+git add poetry.lock 
+git add -u
+git commit -sm "Added poetry setup"
+tig
+git commit -sm "Added poetry setup"
+vim Makefile 
+fg
+git commit -sm "Added poetry setup"
+git commit -sm "Added poetry setup" -a
+tig
+git pull
+tig
+tig
+vim test_command 
+chmod +x ./test_command 
+./test_command 
+fg
+which poetry
+fg
+which poetry
+./test_command 
+git status
+git add test_command 
+git commit -sm "Update test command with poetry"
+git push
+clear
+tig
 clear
 ls
 clear
 ls
-cd /Volumes/CaseSensitive/ANTLR_test/
+vim setup.py 
+clear
+ls
+which python
+clear
+ls
+poetry run python
+git status
+git diff
+git status
+fg
+git status
+git diff
+clear
+git status
+tig
+git diff
+fg
+clear
+git status
+clear
+tig
+./test_command 
+vim fjsp_data/instances/Brandimarte_Mk01.fjs
+fg
+clear
+ls
+ls
+clear
+ls
+`
+
+
+clear
+ls
+tig TODO.md
+clear
+ls
+ls
+clear
+ls
+poetry 
+clear
+ls
+curl https://life-spacy-server.herokuapp.com/ner -H 'Content-Type: application/json' -d '{"sections": ["My name is John Doe. I grew up in California."]}'
+curl https://life-spacy-server.herokuapp.com/ner -H 'Content-Type: application/json' -d '{"sections": ["My name is John Doe. I grew up in California."]}'
+curl https://life-spacy-server.herokuapp.com/ner -H 'Content-Type: application/json' -d '{"sections": ["My name is John Doe. I grew up in California."]}'
+curl https://life-spacy-server.herokuapp.com/ner -H 'Content-Type: application/json' -d '{"sections": ["My name is John Doe. I grew up in California."]}' | jq .
+fg
+clear
+ls
+cat test_command 
+cat > test_server
+chmod +x test_server 
+clear
+ls
+./test_
+./test_server 
+cat >> ./test_server 
+vim ./test_server 
+./test_server 
+cat ./test_server 
+./test_server 
+ls -lh mychart.png 
+open mychart.png 
+head mychart.png 
+cat mychart.png 
+clear
+clear
+ls
+exit
+fg
+clear
+heroku
+heroku logs --tail
+heroku logs -a ancient-thicket-34735 --tail
+clear
+fg
+ls
+vim TODO.md 
+clear
+git status
+fg
+poetry add requests
+fg
+/bin/env
+/usr/bin/env
+fg
+clear
+chmod +x ./test_server.py 
+./test_server.py 
+fg
+poetry add -h
+poetry add -D ipdb
+fg
+./test_server.py 
+fg
+fg
+clear
+./test_server.py 
+clear
+fg
+clear
+./test_server.py 
+ls -lh get_image.png 
+fg
+poetry run pytest test_server.py 
+tmux ls
+ta
+ip route
+clear
+tmux ls
+clear
+cler
+cd works/
+ls
+clear
+git clone https://github.com/slightfoot/rally_app.git
+clear
+ls
+cd rally_app/
+ls
+clear
+tg
+tig
+ls
+clear
+ls
+vim pubspec.yaml 
+clear
+ls
+ls
+vim lib/main.dart 
+clear
+git fetch
+clear
+ls
+tig
+git lg
+clear
+git status
+ta
+wget https://download3.portableapps.com/portableapps/GIMPPortable/GIMPPortable_2.10.18-2.paf.exe?20190321
+ls
+clar
+clear
+ls
+ip route
 clear
 git pull
-cat notes.md 
 clear
+tig
 clear
+git fetch
+git remote show
+git remote show origin
+git pull
+r
+clear
+ls
+cd UserManual/
+ls
+tig
+clear
+ls
+cd ..
+ls
+git pull
+clear
+ls
+clear
+ip route
+clear
+ls
+ls
+clear
+ls
+ls
+clear
+ls
+clear
+ls
+ls
+git status
+git status
+git status
+git status
 clear
 exit
-exit
+tig
+git lg
 clear
-tmux ls
+ls
+clear
+ls
+vim UserManual/Introduction/Flashing.rst 
+git pull
+clear
+git pull
+clear
+ls
+tig
+clear
+ls
+git status
+rm GIMPPortable_2.10.18-2.paf.exe\?20190321 
+clear
+tig
+git push
+clear
+git pull
+clear
+ip route
+ls
+clear
+vtool
+clear
+t
+cler
+clear
+tig
+clear
+tig
+git diff
+git commit -asm "fixup! name for dataset fixed"
+git push
+exit
 ta
-tat
+clear
+ls
+vim UserManual/Introduction/Flashing.rst 
+git branch
+tig
+git fetch
 ta
 clear
-tmux ls
-ta
-exit
-ms
-exit
-fish
-exit
-ncat -vv 27990 pengyuzhouc.om
-ncat -vv 27990 pengyuzhouc.com
-ncat -vv pengyuzhouc.com 27990 #m
-ncat -vv pengyuzhou.com 27990 #m
+tmux
 clear
-tmux ls
 ta
+clear
+ta
+echo $DISPLAY
+clear
+git fetch
+tig
+git lg
+clear
+exit
+sudo ý¿¿¼³
+ý¿¿¼³
+heroku
+heroku access
+heroku access -a
+heroku  git
+heroku notifications
+clear
+ip route
+clear
+clear
+ps aux| grep ssh
+ps aux| grep ssh
+kill 72839
+ps aux| grep ssh
+sudo apt install xauth
+exit
+sudo mv aaa /etc/ssh/sshd_config 
+sudo systemctl restart sshd
+sudo systemctl restart ssh
+ip route
+nc -klp 2223
+nc -vvklp 2223
+pwd
+clear
+ls
+ps aux| grep ssh
+ps aux| grep ssh
+kill 73033
+ps aux| grep ssh
+ssh -p 29922 172.26.253.203:22222:vtool.duckdns.org:29922 v@vtool.duckdns.org
+ssh -p 29922 -L 172.26.253.203:22222:vtool.duckdns.org:29922 v@vtool.duckdns.org
+exit
+echo $DISPLAY
+xeyes 
+xcalc 
+clear
+firefox 
+bg
+clear
+jobs
+clear
+gvim
+sudo apt install neovim-qt
+gvim
+clear
+clear
+ls
+ping vtool.duckdns.org
+clear
+clear
+ls
+sudo snap install --classic code
+clear
+code
+clear
+ip route
+clear
+ip route
+sudo snap install golang
+sudo snap install go
+sudo snap install go --classic
+which go
+which go
+clear
+ls
+cat bin/vtool 
+ssh -L 2222:localhost:29922 -p 29922 v@vtool.duckdns.org
+ssh -vv -fNL 22222:localhost:29922 -p 29922 v@vtool.duckdns.org
+ssh -vv -fNL 172.26.253.203:22222:localhost:29922 -p 29922 v@vtool.duckdns.org
+clear
+ls
+ip route
+ip route
+clear
+clear
+ssh -p 22222 v@localhost
+ssh -vvv -p 22222 v@localhost
+ssh -vvv -p 22222 v@172.26.253.203
+ssh -vvv -p 22222 v@172.26.253.203
+ssh -vvv -p 22222 v@172.26.253.203
+ls -lh ~/.ssh/
+clear
+ssh -vvv -p 22222 v@172.26.253.203
+ssh -vvv -p 29922 v@vtool.duckdns.org
+clear
+jobs
+jobs
+ps aux | grep ssh
+clear
+echo $DISPLAY 
+ssh -vv -fNL 172.26.253.203:22222:vtool.duckdns.org:29922 -p 29922 v@vtool.duckdns.org
+exit
+ta
+clera
+ta
+echo $DISPLAY
