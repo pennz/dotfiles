@@ -150,8 +150,8 @@ Plug 'honza/vim-snippets'
 "imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
 " tmux
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'roxma/vim-tmux-clipboard'
+"Plug 'tmux-plugins/vim-tmux-focus-events'
+"Plug 'roxma/vim-tmux-clipboard'
 Plug 'christoomey/vim-tmux-navigator'
 
 " python
