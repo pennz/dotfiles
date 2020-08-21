@@ -56,6 +56,10 @@
     ci = commit -v
     co = checkout
     pf = push --force-with-lease
+    ca = commit --allow-empty
+    cc = cherry-pick --continue
+    cs = cherry-pick --skip
+    mt = mergetool
     st = status
     logp = log --pretty=oneline --graph --decorate=full
     logt = log --pretty=oneline --graph --topo-order
