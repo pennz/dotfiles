@@ -66,3 +66,6 @@ git push public
 
 popd
 git push # push the secret one
+
+cd $HOME/.dotfiles
+git push
