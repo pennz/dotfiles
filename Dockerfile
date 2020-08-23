@@ -12,11 +12,11 @@ COPY .git/ ./.git/
 COPY bin/ ./bin/
 
 RUN git submodule update --init && .fzf/install --all; \
-    ( curl -fLo /root/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
-    (yes | timeout 600 vim -u .vimrc_back "+call plug#begin()" +PlugInstall +qa) ) &
-RUN echo "unalias vim" >> .bash_aliases && bash -c "source .bashrc; fish"
-RUN ( curl -fLo /root/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
-    (yes | timeout 600 nvim -u .vimrc_back "+call plug#begin()" +PlugInstall +checkhealth +qa) ); \
-    sh -c '$(git config --path --get init.templatedir)/../update.sh'
+    curl -fLo /root/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
+    (yes | timeout 600 vim -u .vimrc_back "+call plug#begin()" +PlugInstall +checkhealth +qa) 
+RUN sh -c "source .bashrc; timeout 3 fish"
+RUN curl -fLo /root/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
+    (yes | timeout 600 nvim -u .vimrc_back '+call plug#begin()' +PlugInstall +checkhealth +qa)
+RUN sh -c "$(git config --path --get init.templatedir)/../update.sh"
 
 ENTRYPOINT ["/usr/bin/vim"]
