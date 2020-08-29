@@ -183,3 +183,16 @@ uid firstname lastname (description) <email@example.com>
 sub 2048g/DEFABC01 2008-04-13
 
 For frida, reverse enginerring, put the task to another time.
+
+## install free meid bypass tool
+
+- after brew install things are done, you just comment out brew, which is a shell script
+then we have this problem:
+Can't locate Autom4te/C4che.pm in @INC (you may need to install the Autom4te::C4che module) (@INC contains: /usr/local/share/autoconf /Library/Perl/5.18/darwin-thread-multi-2level /Library/Perl/5.18 /Network/Library/Perl/5.18/darwin-thread-multi-2level /Network/Library/Perl/5.18 /Library/Perl/Updates/5.18.4 /System/Library/Perl/5.18/darwin-thread-multi-2level /System/Library/Perl/5.18 /System/Library/Perl/Extras/5.18/darwin-thread-multi-2level /System/Library/Perl/Extras/5.18 .) at /usr/local/bin/autom4te line 37.
+BEGIN failed--compilation aborted at /usr/local/bin/autom4te line 37.
+aclocal: error: echo failed with exit status: 2
+
+
+ brew link --overwrite autoconf
+
+in the path, put /usr/local/opt ones at first
