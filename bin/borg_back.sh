@@ -85,6 +85,7 @@ backup() {
             --exclude '/var/lib/snapd/*' \
             --exclude '/private/tmp/*' \
             --exclude '/tmp/*' \
+            --exclude '/user/local/Cellar/*' \
             \
             "$BORG_REPO"::"${HOSTNAME}-$(date | sed -e 's/ /_/g' -e 's/:/_/g')" \
             /etc \
