@@ -19,6 +19,8 @@ alias v='nvim'
 alias ccc="source $HOME/bin/ccc"
 
 export PATH=$HOME/bin/flutter/bin/cache/dart-sdk/bin:$HOME/bin/flutter/bin:/Users/v/Library/Python/3.8/bin:/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$GOPATH/bin:/usr/local/lib/ruby/gems/2.5.0/bin/:$PATH
+[ -d /snap/bin ] && export PATH=/snap/bin:$PATH
+
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
