@@ -27,7 +27,7 @@
   abbr ks  "kp --tcp"
 
   # git
-  abbr g   'git status'
+  abbr g   'git '
   abbr gc  'git commit --no-gpg-sign -s -m'
   abbr gcg 'git commit -S -m'
   abbr gco 'git checkout'
