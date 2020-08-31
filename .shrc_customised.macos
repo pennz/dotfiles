@@ -15,8 +15,8 @@ fi
 alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
 
-alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim/init.vim'
-alias v='nvim'
+#alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim/init.vim'
+#alias v='nvim'
 alias ccc="source $HOME/bin/ccc"
 alias lc=$(git root)/node_modules/.bin/leetcode
 

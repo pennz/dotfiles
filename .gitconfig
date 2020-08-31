@@ -99,6 +99,7 @@ l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --
 [merge]
     log = true
     tool = diffconflicts
+    branchdesc = true
 [mergetool "diffconflicts"]
     cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
     trustExitCode = true
