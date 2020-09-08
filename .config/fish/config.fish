@@ -18,7 +18,6 @@
 
   # config files
   abbr aa  "$EDITOR ~/.config/alacritty/alacritty.yml"
-  # abbr vv  "$EDITOR ~/.config/nvim/init.vim"
   abbr vv  "$EDITOR ~/.vimrc_back"
   abbr tt  "$EDITOR ~/.tmux.conf"
   abbr zz  "$EDITOR ~/.config/fish/config.fish"
@@ -28,7 +27,7 @@
   abbr ks  "kp --tcp"
 
   # git
-  abbr g   'git status'
+  abbr g   'git '
   abbr gc  'git commit --no-gpg-sign -s -m'
   abbr gcg 'git commit -S -m'
   abbr gco 'git checkout'
@@ -60,10 +59,9 @@
   abbr cc	'pushd -'
   abbr antlr4	'java org.antlr.v4.Tool'
   abbr grun	'java org.antlr.v4.gui.TestRig'
-  abbr vi	'nvim'
   abbr ss	'eval (ssh-agent -s | sed "s/\([^=]*\)=\([^;]*\)/set \1 \2/"); and ssh-add ~/.ssh/id_rsa'
   abbr nv	'nix-env'
-  abbr setproxy "eval 'set -gx HTTP_PROXY $PROXY_URL; set -gx HTTPS_PROXY $PROXY_URL; set -gx http_proxy $PROXY_URL; set -gx https_proxy	$PROXY_URL; echo $PROXY_URL'"
+  abbr setproxy "eval \"set -gx HTTP_PROXY $PROXY_URL; set -gx HTTPS_PROXY $PROXY_URL; set -gx http_proxy $PROXY_URL; set -gx https_proxy	$PROXY_URL; echo $PROXY_URL\""
   abbr unsetproxy 'set -gx http_proxy  ; set -gx https_proxy  ;set -gx HTTP_PROXY  ; set -gx HTTPS_PROXY	 '
   #abbr ccc	"bash $HOME/bin/ccc"
   abbr gdrive	'gdrive  --service-account go-2-learn-00c8bf796e90.json'

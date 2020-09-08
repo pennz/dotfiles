@@ -42,7 +42,7 @@ echo "borg used: $(which borg)"
 backup() {
     (
         info "Starting backup"
-        set -x
+        #set -x
         $BORG create \
             --progress \
             --filter AME \
@@ -85,6 +85,7 @@ backup() {
             --exclude '/var/lib/snapd/*' \
             --exclude '/private/tmp/*' \
             --exclude '/tmp/*' \
+            --exclude '/user/local/Cellar/*' \
             \
             "$BORG_REPO"::"${HOSTNAME}-$(date | sed -e 's/ /_/g' -e 's/:/_/g')" \
             /etc \

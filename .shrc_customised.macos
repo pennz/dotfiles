@@ -1,6 +1,11 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -clrtabs
+[[ ! x$TERM =~ xrxvt ]] && [[ ! x$TERM =~ xscreen ]] && [[ ! x$TERM =~ xxterm ]] && setterm -regtabs 4
+[ -f $HOME/.pretty_prompt_console ] && source $HOME/.pretty_prompt_console
+[ -f /Applications/i2p/i2prouter ] && /Applications/i2p/i2prouter start >/dev/null 2>&1
+
 pgrep ssh-agent >/dev/null || (eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa)
 
 if [ -n "$BASH_VERSION" ]; then
@@ -11,11 +16,27 @@ alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
 alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
 
 #alias vim='test -S /tmp/nvimsocket -a x$(pgrep nvim) != x && echo "vim already started, use nvr to operate." || NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim -u ~/.config/nvim/init.vim'
+#alias v='nvim'
 alias ccc="source $HOME/bin/ccc"
+alias lc=$(git root)/node_modules/.bin/leetcode
 
-export PATH=/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$GOPATH/bin:/usr/local/lib/ruby/gems/2.5.0/bin/:$PATH
+export PATH=$HOME/go/bin:$HOME/bin/flutter/bin/cache/dart-sdk/bin:$HOME/bin/flutter/bin:/Users/v/Library/Python/3.8/bin:/usr/local/opt/mysql-client/bin:/usr/local/sbin:/usr/local/usr/bin:$GOPATH/bin:/usr/local/lib/ruby/gems/2.5.0/bin/:$PATH
+[ -d /snap/bin ] && export PATH=/snap/bin:$PATH
+
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
+
+__conda_setup="$( $HOME/${__conda_folder}/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$HOME/${__conda_folder}/etc/profile.d/conda.sh" ]; then
+        . "$HOME/${__conda_folder}/etc/profile.d/conda.sh"
+    else
+        export PATH="$HOME/${__conda_folder}/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 
 test -e /usr/libexec/java_home && export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -28,7 +49,26 @@ if type brew &>/dev/null; then
   #for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnuman; do export MANPATH=$d:$MANPATH; done
 fi
 
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+
 export ANDROID_HOME=$HOME/Library/Android/sdk
+
+color_my_prompt () {
+    local __user_and_host="\[\033[01;32m\]\u@\h"
+    local __cur_location="\[\033[01;34m\]\w"
+    local __git_branch_color="\[\033[31m\]"
+    # local __git_branch="\`ruby -e \"print (%x{git branch 2> /dev/null}.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`"
+    local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+    local __prompt_tail="\[\033[35m\]$"
+    local __last_color="\[\033[00m\]"
+    export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
+}
+[ "$SHELL" = "/bin/bash" ] && color_my_prompt
+
 
 ###-begin-leetcode-completions-###
 #
@@ -58,7 +98,6 @@ _yargs_completions()
 }
 complete -F _yargs_completions leetcode
 ###-end-leetcode-completions-###
-alias lc='leetcode'
 export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/
 
 alias connect='fpipe | trap "" INT;  ncat localhost'
@@ -67,7 +106,7 @@ stty eof ^\f
 
 ### { for mac
 pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )
-[ -d /Volumes/CaseSensitive/ ] && ( which hdiutil >/dev/null && hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage )
+[ -d /Volumes/CaseSensitive/ ] || hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage >/dev/null 2>&1
 # source $HOME/.nix-profile/etc/profile.d/nix.sh
 # for cross compilation
 #. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
@@ -75,11 +114,41 @@ pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl l
 #
 ### }
 
-PROXY_URL='http://127.0.0.1:1087'
-alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
 # alias clash='clash -f ~/.config/clash/config.yaml'
-# [ -z "$(pgrep clash)" ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
 source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
-[ -z $NOFISH ] && [ -f $HOME/.enable_fish ] && fish
 export SSH_PORT=29922
+
+PROXY_URL='http://127.0.0.1:7890'
+alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
+[ -z $(pgrep clash) ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
+[ -z $NOFISH ] && [ -f $HOME/.enable_fish ] && fish
+###-begin-leetcode-completions-###
+#
+# yargs command completion script
+#
+# Installation: /usr/local/bin/leetcode completion >> ~/.bashrc
+#    or /usr/local/bin/leetcode completion >> ~/.bash_profile on OSX.
+#
+_yargs_completions()
+{
+    local cur_word args type_list
+
+    cur_word="${COMP_WORDS[COMP_CWORD]}"
+    args=("${COMP_WORDS[@]}")
+
+    # ask yargs to generate completions.
+    type_list=$(/usr/local/bin/leetcode --get-yargs-completions "${args[@]}")
+
+    COMPREPLY=( $(compgen -W "${type_list}" -- ${cur_word}) )
+
+    # if no match was found, fall back to filename completion
+    if [ ${#COMPREPLY[@]} -eq 0 ]; then
+      COMPREPLY=( $(compgen -f -- "${cur_word}" ) )
+    fi
+
+    return 0
+}
+complete -F _yargs_completions leetcode
+###-end-leetcode-completions-###
+
