@@ -1,4 +1,7 @@
 SHELL=/bin/bash
+PROJECT=shconf
+PROJECT_ID := $(shell glc list projects --owned -s $(PROJECT) -f json | sed '1d' | jq '.[0].id')
+#PROJECT_ID := 11180959
 
 install_template:
 	git submodule update --init
@@ -24,3 +27,11 @@ vps:
 	mv .zhhh .zsh_history
 test:
 	@echo "Pass"
+
+setup:
+	git submodule update --init
+
+get_jobs:
+	glc list project-jobs $(PROJECT_ID) -f json | sed '1d' | jq '.[].id' | sort
+get_job_trace:
+	glc get project-job-trace $(PROJECT_ID) $$(glc list project-jobs $(PROJECT_ID) -f json | sed '1d' | jq '.[0].id') -i

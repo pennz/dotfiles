@@ -164,7 +164,6 @@ fi
 
 [[ -e ~/.profile ]] && source ~/.profile
 
-set -o vi
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
@@ -219,3 +218,7 @@ conda deactivate
 if [ -L "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised
 fi
+
+set -o vi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
