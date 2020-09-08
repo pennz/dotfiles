@@ -5,3 +5,5 @@ source /home/pengyu/.jfrog/jfrog_zsh_completion
 export PATH=$HOME/.local/bin:$PATH
 export PYTHONIOENCODING="UTF-8"
 
+alias sshqnx='ssh pengyu@172.26.253.188'
+alias sshz='ssh zhoupengyu@172.26.253.203'
