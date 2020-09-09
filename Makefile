@@ -15,11 +15,13 @@ good-day:
 	mv .zhhh .zsh_history
 pull:
 	mv .zsh_history .zhhh
+	mv .bash_history .bhhh
 	chmod 644 .ssh/config
 	git fetch
 	git checkout HEAD .zsh_history
 	git merge --no-edit --no-gpg
 	mv .zhhh .zsh_history
+	mv .bhhh .bash_history
 vps:
 	mv .zsh_history .zhhh
 	git checkout $@
