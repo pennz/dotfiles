@@ -8,25 +8,33 @@ install_template:
 	git config --global init.templatedir '~/.git_template/template'
 	"$$(git config --path --get init.templatedir)/../update.sh"
 	"$$(git config --path --get init.templatedir)/configure.sh"
+
 good-day:
 	mv .zsh_history .zhhh
 	git checkout $@
 	chmod 644 .ssh/config
 	mv .zhhh .zsh_history
+
 pull:
 	mv .zsh_history .zhhh
 	mv .bash_history .bhhh
+	mv Makefile mmmmm
 	chmod 644 .ssh/config
 	git fetch
 	git checkout HEAD .zsh_history
+	git checkout HEAD .bash_history
+	git checkout HEAD Makefile
 	git merge --no-edit --no-gpg
 	mv .zhhh .zsh_history
 	mv .bhhh .bash_history
+	mv mmmmm Makefile
+
 vps:
 	mv .zsh_history .zhhh
 	git checkout $@
 	chmod 644 .ssh/config
 	mv .zhhh .zsh_history
+
 test:
 	@echo "Pass"
 
@@ -35,5 +43,6 @@ setup:
 
 get_jobs:
 	glc list project-jobs $(PROJECT_ID) -f json | sed '1d' | jq '.[].id' | sort
+
 get_job_trace:
 	glc get project-job-trace $(PROJECT_ID) $$(glc list project-jobs $(PROJECT_ID) -f json | sed '1d' | jq '.[0].id') -i
