@@ -196,3 +196,17 @@ aclocal: error: echo failed with exit status: 2
  brew link --overwrite autoconf
 
 in the path, put /usr/local/opt ones at first
+
+# ld.so
+dynamic linker stored in 
+.interp section , 
+
+The programs find and load the sharedd objects, prepare, then run it.
+Finding path for shared object dependencies:
+/ and path names
+no / :
+- DT_RPATH
+- DT_RUNPATH attribute
+- LD_LIBRARY_PATH
+- /etc/ld.so.cache
+- /lib /usr/lib | /lib64 /usr/lib64
