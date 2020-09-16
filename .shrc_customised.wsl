@@ -9,3 +9,6 @@ source /home/pengyu/.jfrog/jfrog_zsh_completion
 export PATH=$HOME/.local/bin:$PATH
 export PYTHONIOENCODING="UTF-8"
 eval "$($HOME/miniconda3/bin/conda shell.zsh hook)"
+
+alias sshqnx='ssh pengyu@172.26.253.188'
+alias sshz='ssh zhoupengyu@172.26.253.203'
