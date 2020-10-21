@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#xpath () {
+	xmllint --format --shell "$2" <<< "cat $1" | sed '/^\/ >/d'
+#}
