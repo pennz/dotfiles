@@ -1,40 +1,3 @@
-clear
-ps aux| grep ssh
-ps aux| grep ssh
-kill 72839
-ps aux| grep ssh
-sudo apt install xauth
-exit
-sudo mv aaa /etc/ssh/sshd_config 
-sudo systemctl restart sshd
-sudo systemctl restart ssh
-ip route
-nc -klp 2223
-nc -vvklp 2223
-pwd
-clear
-ls
-ps aux| grep ssh
-ps aux| grep ssh
-kill 73033
-ps aux| grep ssh
-ssh -p 29922 172.26.253.203:22222:vtool.duckdns.org:29922 v@vtool.duckdns.org
-ssh -p 29922 -L 172.26.253.203:22222:vtool.duckdns.org:29922 v@vtool.duckdns.org
-exit
-echo $DISPLAY
-xeyes 
-xcalc 
-clear
-firefox 
-bg
-clear
-jobs
-clear
-gvim
-sudo apt install neovim-qt
-gvim
-clear
-clear
 ls
 ping vtool.duckdns.org
 clear
@@ -506,3 +469,32 @@ tig
 clear
 tig
 git checkout HEAD .config/clash/vps.yaml
+git commit -asm "Update from MAC"
+tig
+git push
+clear
+git pull
+git push
+tig
+clear
+ls
+tig
+lear
+htop
+clear
+htop
+exit
+exit
+exit
+exit
+git merge
+git mergetool
+git ds
+git dc
+git add -u
+git dc
+git commit -sm "Update submodule"
+git mergetool
+exit
+t
+exit
