@@ -498,3 +498,16 @@ git mergetool
 exit
 t
 exit
+git mergetool
+git sttus
+git status
+git d
+git ds
+git dc
+vi .tmux.conf 
+fg
+jobs
+vi ~/bin/filter_public 
+git status
+tig
+exit
