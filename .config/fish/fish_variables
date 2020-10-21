@@ -11,7 +11,7 @@ SETUVAR _fish_abbr_cc:pushd\x20\x2d
 SETUVAR _fish_abbr_ccc:bash\x20/home/v/bin/ccc
 SETUVAR _fish_abbr_f5:source\x20\x20\x7e/\x2econfig/fish/config\x2efish
 SETUVAR _fish_abbr_ff:nvim\x20\x7e/\x2econfig/fish/config\x2efish
-SETUVAR _fish_abbr_g:git\x20status
+SETUVAR _fish_abbr_g:git\x20
 SETUVAR _fish_abbr_g_2E_:git\x20add\x20\x2e
 SETUVAR _fish_abbr_gc:git\x20commit\x20\x2d\x2dno\x2dgpg\x2dsign\x20\x2ds\x20\x2dm
 SETUVAR _fish_abbr_gcg:git\x20commit\x20\x2dS\x20\x2dm

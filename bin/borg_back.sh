@@ -94,7 +94,7 @@ backup() {
             /var/log &&
             info "Backup completed" &&
             touch $SOURCE_HOME/.lastbackup
-        set +x
+        #set +x
     ) ||
         ([ "$1" -ge 604800 ] && info "ERROR: Backup was failed during week")
 }
