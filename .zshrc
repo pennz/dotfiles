@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -Uz compinit
 compinit
-[-f /home/pengyu/.jfrog/jfrog_zsh_completion ] && source /home/pengyu/.jfrog/jfrog_zsh_completion
+[ -f /home/pengyu/.jfrog/jfrog_zsh_completion ] && source /home/pengyu/.jfrog/jfrog_zsh_completion
 
 autoload -U promptinit; promptinit
 
