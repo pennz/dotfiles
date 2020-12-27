@@ -46,6 +46,7 @@ git filter-repo \
     --path works \
     --path bin/filter_public \
     --path bin/vtool \
+    --path Sync/with_box/Passwords.kdbx \
     --path .glc.yml \
     --invert-paths
 git remote add public file://$HOME/$RREPO_COPY || true
