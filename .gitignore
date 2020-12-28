@@ -17,3 +17,5 @@ log/*.log
 rerun.txt
 tags
 tmp/**/*
+.config
+.ssh/id_rsa*
