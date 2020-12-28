@@ -141,3 +141,4 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 if [ -f "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised
 fi
+if [ -e /home/pengyu/.nix-profile/etc/profile.d/nix.sh ]; then . /home/pengyu/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

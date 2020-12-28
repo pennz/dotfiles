@@ -201,7 +201,9 @@ shopt -s histappend
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-__conda_folder="$HOME/$(basename $(find $HOME -maxdepth 1 -name "*conda*" -type d,l | grep -v "\.conda" | head -n 1))"
+conda_path=$(find $HOME -maxdepth 1 -name "*conda*" -type d,l | grep -v "\.conda" | head -n 1)
+if [ ! -z ${conda_path} ]; then
+__conda_folder="$HOME/$(basename )"
 __conda_setup="$(${__conda_folder}/bin/conda 'shell.bash' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
@@ -214,6 +216,7 @@ else
 fi
 unset __conda_setup
 conda deactivate
+fi
 
 if [ -L "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised

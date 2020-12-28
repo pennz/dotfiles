@@ -49,5 +49,5 @@ if [ -f "$HOME"/.bash_aliases ]; then
 fi
 
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
-export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive" # fix locale prolem for nix pkgs, reference https://unix.stackexchange.com/questions/187402/nix-package-manager-perl-warning-setting-locale-failed
 [ x$SHELL = x/bin/bash ] && [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+if [ -e /home/pengyu/.nix-profile/etc/profile.d/nix.sh ]; then . /home/pengyu/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
