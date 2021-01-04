@@ -49,6 +49,13 @@ git filter-repo \
     --path Sync/with_box/Passwords.kdbx \
     --path .glc.yml \
     --invert-paths
+filter_result=$?
+if [ ! $filter_result -eq 0 ]; then
+    echo "git filter-repo failed."
+    echo $PWD
+    PS1="Merge>" bash
+fi
+
 git remote add public file://$HOME/$RREPO_COPY || true
 git fetch public
 git branch -D $RBRANCH
