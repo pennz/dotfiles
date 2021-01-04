@@ -1,5 +1,5 @@
 [init]
-	templatedir = ~/.git_template/template
+    templatedir = ~/.git_template/template
 [user]
     email = fireflysuccess@gmail.com
     name = Vincent Zhou
@@ -98,6 +98,7 @@ l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --
 [gui]
     commitmsgwidth = 0
 [merge]
+    ff = no
     log = true
     tool = diffconflicts
     branchdesc = true
@@ -124,9 +125,9 @@ l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --
 [include]
     path = ~/.gitconfig.local
 [pull]
-	rebase = false
+    rebase = false
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
