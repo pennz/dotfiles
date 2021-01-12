@@ -1,3 +1,1 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-source ~/.vimrc_back
+../../.config/nixpkgs/stowed/.config/nvim/init.vim
