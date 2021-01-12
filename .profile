@@ -51,3 +51,5 @@ fi
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
 [ x$SHELL = x/bin/bash ] && [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 if [ -e /home/pengyu/.nix-profile/etc/profile.d/nix.sh ]; then . /home/pengyu/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
