@@ -61,6 +61,9 @@ backup() {
             --exclude "$SOURCE_HOME/VirtualBox VMs/*" \
             --exclude "$SOURCE_HOME/not-backup/*" \
             --exclude "$SOURCE_HOME/d/*" \
+            --exclude "$SOURCE_HOME/works/*" \
+            --exclude "$SOURCE_HOME/Dropbox/*" \
+            --exclude "$SOURCE_HOME/not_backup/*" \
             --exclude "$SOURCE_HOME/anaconda3/*" \
             --exclude "$SOURCE_HOME/snap/*" \
             --exclude "$SOURCE_HOME/miniconda3/*" \
@@ -75,7 +78,7 @@ backup() {
             --exclude "$SOURCE_HOME/.docker/*" \
             --exclude "$SOURCE_HOME/.config/electronic-wechat/*" \
             --exclude "$SOURCE_HOME/.local/share/Trash/*" \
-            --exclude "$SOURCE_HOME/.local/share/Steam/" \
+            --exclude "$SOURCE_HOME/.local/share/Steam/*" \
             --exclude "$SOURCE_HOME/works/android_build/aosp/*" \
             --exclude '/home/boinc/*' \
             --exclude '/Users/Shared/*' \
