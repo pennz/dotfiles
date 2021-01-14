@@ -36,7 +36,7 @@ git filter-repo \
     --path .kaggle \
     --path bin/v2ray_client.json \
     --path bin/v2ray_router_client.json \
-    --path-glob '.config/v2ray*.json' \
+    --path-glob '.config/*.json' \
     --path-glob '.*history' \
     --path .duckdns \
     --path .muttrc \

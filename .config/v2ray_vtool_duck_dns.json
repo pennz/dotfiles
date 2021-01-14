@@ -1,8 +1,8 @@
 {
   "log": {
-    "error": "",
-    "loglevel": "info",
-    "access": ""
+    "loglevel": "info"
+    #,"access": "/var/log/v2ray_access.log",
+    #"error": "/var/log/v2ray_error.log"
   },
   "inbounds": [
     {
@@ -46,11 +46,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.225.151.98",
+            "address": "vtool.duckdns.org",
             "users": [
               {
-                "id": "a37cd4fd-6dfd-4ebe-a2ce-afe1b4cdaca5",
-                "alterId": 64,
+                "id": "dee13c98-8b5e-4f94-b7bb-52d8ed53db2b",
+                "alterId": 4,
                 "level": 0,
                 "security": "auto"
               }
