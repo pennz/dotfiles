@@ -2,14 +2,13 @@
 
 # Setting this, so the repo does not need to be given on the commandline:
 test -d /Volumes/mac_files/borg && export BORG_REPO=/Volumes/mac_files/borg
-test -d /media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg &&
-    export BORG_REPO=/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
-TRY=/run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
+
+TRY=$(ls -d /media/*/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg)
 test -d $TRY && export BORG_REPO=$TRY
 
 # Setting this, so you won't be asked for your repository passphrase:
 # or this to ask an external program to supply the passphrase:
-export BORG_PASSCOMMAND='pass borg'
+which pass >/dev/null 2>&1 && export BORG_PASSCOMMAND='pass borg'
 
 # some helpers and error handling:
 info() {
@@ -25,9 +24,12 @@ test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 TRY=/home/v
 test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 
+TRY=$(getent passwd $USER | cut -d: -f6)
+test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
+
 BORG=$(which borg 2>/dev/null)
 if which borg 2>/dev/null >&2; then
-    echo "$BORG used."
+    echo "borg used: $(which borg)"
 else
     echo >&2 "Error: borg not found."
     exit 1
@@ -36,8 +38,6 @@ fi
 BORG="sudo $BORG"
 TRY=/home/v/miniconda3/bin/borg
 test -e $TRY && BORG="sudo $TRY"
-
-echo "borg used: $(which borg)"
 
 backup() {
     (
@@ -94,6 +94,7 @@ backup() {
             /etc \
             $SOURCE_HOME \
             /usr/local \
+            /nix \
             /var/log &&
             info "Backup completed" &&
             touch $SOURCE_HOME/.lastbackup
@@ -121,11 +122,11 @@ remove_old_backup() {
 }
 
 check_and_backup() {
-    if [ ! -f ~/.lastbackup ]; then
-        touch ~/.lastbackup
+    if [ ! -f $SOURCE_HOME/.lastbackup ]; then
+        touch $SOURCE_HOME/.lastbackup
         backup 604801
     else
-        LASTBACKUP=$(date -r ~/.lastbackup +%s)
+        LASTBACKUP=$(date -r $SOURCE_HOME/.lastbackup +%s)
         CURTIME=$(date +%s)
         DIFF=$((CURTIME - LASTBACKUP))
         #echo $DIFF
