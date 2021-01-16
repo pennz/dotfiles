@@ -3,6 +3,10 @@
 # Setting this, so the repo does not need to be given on the commandline:
 test -d /Volumes/mac_files/borg && export BORG_REPO=/Volumes/mac_files/borg
 
+HOSTNAME=${HOSTNAME:-$(hostname)}
+
+echo "Hostname is ${HOSTNAME}"
+
 TRY=$(ls -d /media/*/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg)
 test -d $TRY && export BORG_REPO=$TRY
 
