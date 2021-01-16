@@ -39,6 +39,10 @@ BORG="sudo $BORG"
 TRY=/home/v/miniconda3/bin/borg
 test -e $TRY && BORG="sudo $TRY"
 
+# https://manpages.debian.org/testing/borgbackup/borg-patterns.1.en.html
+# if a given pattern ends in a path separator, a '*' is appended before
+# matching is attempted.
+
 backup() {
     (
         info "Starting backup"
@@ -50,45 +54,43 @@ backup() {
             --show-rc \
             --compression lz4 \
             --exclude-caches \
-            --exclude '/home/*/.cache/*' \
-            --exclude '/Applications/Xcode.app/*' \
-            --exclude "/usr/local/texlive/*" \
-            --exclude "/usr/local/Homebrew/.git/*" \
-            --exclude "/usr/local/Homebrew/.github/*" \
+            --exclude '/home/*/.cache/' \
+            --exclude '/Applications/Xcode.app/' \
+            --exclude "/usr/local/texlive/" \
+            --exclude "/usr/local/Homebrew/.git/" \
+            --exclude "/usr/local/Homebrew/.github/" \
             --exclude "$SOURCE_HOME/Library/Containers/com.docker.docker/Data/vms" \
-            --exclude "$SOURCE_HOME/works/android_build/aosp.sparseimage" \
-            --exclude "$SOURCE_HOME/VirtualBox\ VMs/*" \
-            --exclude "$SOURCE_HOME/VirtualBox VMs/*" \
-            --exclude "$SOURCE_HOME/not-backup/*" \
-            --exclude "$SOURCE_HOME/d/*" \
-            --exclude "$SOURCE_HOME/works/*" \
-            --exclude "$SOURCE_HOME/Dropbox/*" \
-            --exclude "$SOURCE_HOME/not_backup/*" \
-            --exclude "$SOURCE_HOME/anaconda3/*" \
-            --exclude "$SOURCE_HOME/snap/*" \
-            --exclude "$SOURCE_HOME/miniconda3/*" \
-            --exclude "$SOURCE_HOME/.Genymobile/*" \
-            --exclude "$SOURCE_HOME/Android/*" \
-            --exclude "$SOURCE_HOME/Arduino/*" \
-            --exclude "$SOURCE_HOME/Library/Caches/*" \
-            --exclude "$SOURCE_HOME/oldhome/*" \
-            --exclude "$SOURCE_HOME/e/*" \
-            --exclude "$SOURCE_HOME/Downloads/*" \
-            --exclude "$SOURCE_HOME/.android/avd/*" \
-            --exclude "$SOURCE_HOME/.docker/*" \
-            --exclude "$SOURCE_HOME/.config/electronic-wechat/*" \
-            --exclude "$SOURCE_HOME/.local/share/Trash/*" \
-            --exclude "$SOURCE_HOME/.local/share/Steam/*" \
-            --exclude "$SOURCE_HOME/works/android_build/aosp/*" \
-            --exclude '/home/boinc/*' \
-            --exclude '/Users/Shared/*' \
-            --exclude '/var/cache/*' \
-            --exclude '/var/tmp/*' \
-            --exclude '/var/lib/docker/*' \
-            --exclude '/var/lib/snapd/*' \
-            --exclude '/private/tmp/*' \
-            --exclude '/tmp/*' \
-            --exclude '/user/local/Cellar/*' \
+            --exclude "$SOURCE_HOME/VirtualBox\ VMs/" \
+            --exclude "$SOURCE_HOME/VirtualBox VMs/" \
+            --exclude "$SOURCE_HOME/not-backup/" \
+            --exclude "$SOURCE_HOME/d/" \
+            --exclude "$SOURCE_HOME/works/" \
+            --exclude "$SOURCE_HOME/Dropbox/" \
+            --exclude "$SOURCE_HOME/not_backup/" \
+            --exclude "$SOURCE_HOME/anaconda3/" \
+            --exclude "$SOURCE_HOME/snap/" \
+            --exclude "$SOURCE_HOME/miniconda3/" \
+            --exclude "$SOURCE_HOME/.Genymobile/" \
+            --exclude "$SOURCE_HOME/Android/" \
+            --exclude "$SOURCE_HOME/Arduino/" \
+            --exclude "$SOURCE_HOME/Library/Caches/" \
+            --exclude "$SOURCE_HOME/oldhome/" \
+            --exclude "$SOURCE_HOME/e/" \
+            --exclude "$SOURCE_HOME/Downloads/" \
+            --exclude "$SOURCE_HOME/.android/avd/" \
+            --exclude "$SOURCE_HOME/.docker/" \
+            --exclude "$SOURCE_HOME/.config/electronic-wechat/" \
+            --exclude "$SOURCE_HOME/.local/share/Trash/" \
+            --exclude "$SOURCE_HOME/.local/share/Steam/" \
+            --exclude '/home/boinc/' \
+            --exclude '/Users/Shared/' \
+            --exclude '/var/cache/' \
+            --exclude '/var/tmp/' \
+            --exclude '/var/lib/docker/' \
+            --exclude '/var/lib/snapd/' \
+            --exclude '/private/tmp/' \
+            --exclude '/tmp/' \
+            --exclude '/user/local/Cellar/' \
             \
             "$BORG_REPO"::"${HOSTNAME}-$(date | sed -e 's/ /_/g' -e 's/:/_/g')" \
             /etc \
