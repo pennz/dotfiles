@@ -1,0 +1,5 @@
+host: https://gitlab.com
+api_path: /api/v4
+token: kQFuPEg1gz6CYU3cFYSH
+output_format: yaml
+aliases: []

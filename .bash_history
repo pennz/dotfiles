@@ -216,6 +216,26 @@ git status
 fg
 color_my_prompt 
 fg
+make ps_command
+fg
+adb shell
+adb device
+adb devices
+adb shell
+ms
+alias ms
+s
+ms
+ping pengyuzhou.com
+ms
+ms
+clera
+ms
+s
+ms
+tmux ls
+mpv 'https://www.youtube.com/watch?v=o2pEZ3KQI1g'
+youtube-dl 'https://www.youtube.com/watch?v=o2pEZ3KQI1g'
 clear
 vim ~/.profile 
 exit
@@ -403,6 +423,8 @@ exit
 exit
 ls
 exit
+ms
+bash
 exit
 exit
 cd bin/

@@ -5,50 +5,76 @@ RBRANCH=master
 cd $HOME
 RREPO_COPY=".dotfiles"
 if [ ! -d "$HOME/$RREPO_COPY" ]; then
-	git clone --mirror git@github.com:pennz/dotfiles.git $RREPO_COPY
+    git clone --mirror git@github.com:pennz/dotfiles.git $RREPO_COPY
+    git update-ref -d refs/pull/1/head
+    git update-ref -d refs/pull/2/head
+    git update-ref -d refs/pull/3/head
+    git update-ref -d refs/pull/4/head
+    git update-ref -d refs/pull/5/head
+    sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n\tfetch = +refs\/heads\/*:refs\/heads\/*/' $RREPO_COPY/config
 else
-	pushd $RREPO_COPY
-	git fetch origin
-	popd
+    pushd $RREPO_COPY
+    git fetch origin
+    popd
 fi
 
 if [ -d "$HOME/$(basename $HOME)" ]; then
-  pushd $(basename $HOME)
-  git remote add local file://$HOME/ || true
-  git fetch local
-  git checkout $BRANCH
-  git reset --hard local/$BRANCH
+    pushd $(basename $HOME)
+    git remote add local file://$HOME/ || true
+    git fetch local
+    git checkout $BRANCH
+    git reset --hard local/$BRANCH
 else
-  git clone --single-branch --branch ${BRANCH} file://$HOME/
-  pushd $(basename $HOME)
+    git clone --single-branch --branch ${BRANCH} file://$HOME/
+    pushd $(basename $HOME)
 fi
 
 git filter-repo \
---path .lc \
---path notes.md \
---path .config/clash \
---path .kaggle  \
---path bin/v2ray_client.json \
---path bin/v2ray_router_client.json \
---path-glob '.config/v2ray*.json' \
---path-glob '.*history' \
---path .duckdns \
---path .muttrc \
---path .electrum \
---path .pypirc \
---path works \
---path bin/filter_public \
---invert-paths
+    --path .lc \
+    --path notes.md \
+    --path .config/clash \
+    --path .kaggle \
+    --path bin/v2ray_client.json \
+    --path bin/v2ray_router_client.json \
+    --path-glob '.config/*.json' \
+    --path-glob '.*history' \
+    --path .duckdns \
+    --path .muttrc \
+    --path .electrum \
+    --path .pypirc \
+    --path .ssh \
+    --path works \
+    --path bin/filter_public \
+    --path bin/vtool \
+    --path Sync/with_box/Passwords.kdbx \
+    --path .glc.yml \
+    --invert-paths
+filter_result=$?
+if [ ! $filter_result -eq 0 ]; then
+    echo "git filter-repo failed."
+    echo $PWD
+    PS1="Merge>" bash
+fi
+
 git remote add public file://$HOME/$RREPO_COPY || true
 git fetch public
-git branch -D $RBRANCH 
+git branch -D $RBRANCH
 git checkout --track public/$RBRANCH
-git merge $BRANCH --no-edit --no-gpg-sign
-if [ ! $? -eq 0 ]; then echo "Failed when merge with branch \"$BRANCH\". Please merge manually in subshell, exit when finished, it will continue."; PS1="Merge>" bash; fi
+git merge $BRANCH --no-edit --no-gpg-sign -m "Merge upstream changes"
+merge_result=$?
+if [ ! $merge_result -eq 0 ]; then
+    echo "Failed when merge with branch \"$BRANCH\". Please merge manually in subshell, exit when finished, it will continue."
+    PS1="Merge>" bash
+fi
+grep F10 .tmux.conf && sed -i 's/F10/\`/' .tmux.conf && git add .tmux.conf && git commit -sm "Tmux: prefix use \`" --no-edit --no-gpg
 git push
 
-pushd $HOME/$RREPO_COPY
-  git push origin
-popd
+#pushd $HOME/$RREPO_COPY
+git push public
+#popd
 
 popd
+git push # push the secret one
+
+cd $HOME/.dotfiles
+git push

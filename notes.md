@@ -172,3 +172,41 @@ umlet-14.3.0
 w3m-0.5.3+git20190105
 watch-1003.1-2008
 zsh-5.8
+
+user@remotehost:~$ gpg --import ~/mygpgkey_pub.gpg
+ user@remotehost:~$ gpg --allow-secret-key-import --import ~/mygpgkey_sec.gpg
+user@remotehost:~$ gpg --list-keys
+/home/user/.gnupg/pubring.gpg
+--------------------------------
+pub 1024D/ABCDFE01 2008-04-13
+uid firstname lastname (description) <email@example.com>
+sub 2048g/DEFABC01 2008-04-13
+
+For frida, reverse enginerring, put the task to another time.
+
+## install free meid bypass tool
+
+- after brew install things are done, you just comment out brew, which is a shell script
+then we have this problem:
+Can't locate Autom4te/C4che.pm in @INC (you may need to install the Autom4te::C4che module) (@INC contains: /usr/local/share/autoconf /Library/Perl/5.18/darwin-thread-multi-2level /Library/Perl/5.18 /Network/Library/Perl/5.18/darwin-thread-multi-2level /Network/Library/Perl/5.18 /Library/Perl/Updates/5.18.4 /System/Library/Perl/5.18/darwin-thread-multi-2level /System/Library/Perl/5.18 /System/Library/Perl/Extras/5.18/darwin-thread-multi-2level /System/Library/Perl/Extras/5.18 .) at /usr/local/bin/autom4te line 37.
+BEGIN failed--compilation aborted at /usr/local/bin/autom4te line 37.
+aclocal: error: echo failed with exit status: 2
+
+
+ brew link --overwrite autoconf
+
+in the path, put /usr/local/opt ones at first
+
+# ld.so
+dynamic linker stored in 
+.interp section , 
+
+The programs find and load the sharedd objects, prepare, then run it.
+Finding path for shared object dependencies:
+/ and path names
+no / :
+- DT_RPATH
+- DT_RUNPATH attribute
+- LD_LIBRARY_PATH
+- /etc/ld.so.cache
+- /lib /usr/lib | /lib64 /usr/lib64

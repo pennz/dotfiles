@@ -33,10 +33,11 @@ let lite = 0
 
 nnoremap <SPACE> <Nop>
 "" Map leader to <SPACE>
-let mapleader=' '
+let mapleader="\<SPACE>"
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
 
+Plug 'vim-scripts/Conque-Shell'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
@@ -56,10 +57,12 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
 if has('nvim')
+"Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 endif
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Yggdroot/indentLine'
 
 if !lite
 "*****************************************************************************
@@ -147,8 +150,8 @@ Plug 'honza/vim-snippets'
 "imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
 " tmux
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'roxma/vim-tmux-clipboard'
+"Plug 'tmux-plugins/vim-tmux-focus-events'
+"Plug 'roxma/vim-tmux-clipboard'
 Plug 'christoomey/vim-tmux-navigator'
 
 " python
@@ -156,7 +159,13 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Chiel92/vim-autoformat'
 Plug 'alfredodeza/pytest.vim'
+"Plug 'jupyter-vim/jupyter-vim'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+Plug 'pixelneo/vim-python-docstring'
 
+let g:pydocstring_formatter = 'google'
+
+nnoremap <leader>ss :Docstring<CR>
 " javascript
 Plug 'pangloss/vim-javascript'
 
@@ -205,7 +214,7 @@ set backspace=indent,eol,start
 
 "" Tabs. May be overridden by autocmd rules
 set tabstop=4
-set softtabstop=0
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 
@@ -251,7 +260,7 @@ set colorcolumn=80
 
 "let no_buffers_menu=1
 
-silent! colorscheme xcodedark
+"silent! colorscheme xcodedark
 
 "set mousemodel=popup
 set t_Co=256
@@ -435,16 +444,17 @@ autocmd FileType python let b:noNCM2=0
 autocmd FileType * let b:coc_enabled=0
 "autocmd FileType * CocDisable
 
-func! NCM2_enable()
-  if exists('b:noNCM2')
-    return
-  endif
-  call ncm2#enable_for_buffer()
-endfunc
-
-if !lite
-  autocmd BufEnter * call NCM2_enable()
-endif
+" always enable?
+"func! NCM2_enable()
+"  if exists('b:noNCM2')
+"    return
+"  endif
+"  call ncm2#enable_for_buffer()
+"endfunc
+"
+"if !lite
+"  autocmd BufEnter * call NCM2_enable()
+"endif
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
 augroup vimrc-sync-fromstart
   autocmd!
@@ -538,9 +548,9 @@ noremap <Leader>gw :Gwrite<CR>
 "noremap <Leader>gc :copen \| wincmd p \| AsyncRun git -C %:p:h commit -sm<SPACE>
 noremap <Leader>c :AsyncRun git -C %:p:h commit --no-gpg-sign -sm<SPACE>
 noremap <Leader>C :AsyncRun git -C %:p:h commit -sm<SPACE>
-noremap <Leader>gg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && (git commit -sm "Good Game" \|\| true) && git push<CR>
+noremap <Leader>ggg :copen \| wincmd p \| AsyncRun cd %:p:h && git -C %:p:h add %:p:t && (git commit -sm "Good Game" \|\| true) && git push<CR>
 noremap <Leader>gca :Git commit --amend<CR>
-noremap <silent> <Leader>gh :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
+noremap <silent> <Leader>gg :copen \| wincmd p \| AsyncRun git -C %:p:h push<CR>
 noremap <silent> <Leader>gl :copen \| wincmd p \| AsyncRun git -C %:p:h pull<CR>
 noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
@@ -727,7 +737,7 @@ let g:ale_fixers = {
 \    'vue': ['eslint'],
 \    'scss': ['prettier'],
 \    'html': ['prettier'],
-\    'python': ['add_blank_lines_for_python_control_statements', 'remove_trailing_lines', 'trim_whitespace', 'isort'],
+\    'python': ['add_blank_lines_for_python_control_statements', 'remove_trailing_lines', 'trim_whitespace'],
 \    'sh': ['shfmt'],
 \}
 let g:ale_fix_on_save = 1
@@ -922,8 +932,10 @@ let g:SimpylFold_docstring_preview = 1
 "noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
-let g:python3_host_prog = system('bash -c "which python3"')[:-2]
-let g:python_host_prog = system('bash -c "which python"')[:-2]
+let g:python3_host_prog  = system('cd $(git rev-parse --show-toplevel) && echo $(poetry env info -p)/bin/python3 || which python3')[:-2]
+let g:python_host_prog  = system('cd $(git rev-parse --show-toplevel) && echo $(poetry env info -p)/bin/python || which python')[:-2]
+"let g:python_host_prog = "/Users/v/Library/Caches/pypoetry/virtualenvs/lifestyle-TXnZab57-py3.8/bin/python"
+"let g:python3_host_prog = "/Users/v/Library/Caches/pypoetry/virtualenvs/lifestyle-TXnZab57-py3.8/bin/python3"
 
 "set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
 "noremap <Leader>x :bunload<CR>
@@ -1053,6 +1065,7 @@ let g:go_def_mode = 'gopls'
 let g:go_referrers_mode = 'gopls'
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd BufNewFile,BufRead *.dart setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 augroup completion_preview_close
   autocmd!
@@ -1217,8 +1230,8 @@ tnoremap <Esc> <C-\><C-n>
 
 set lazyredraw
 let g:go_version_warning = 0
-nnoremap <silent> <Leader>h :<C-u>if winnr() == winnr('$') <BAR> bd <BAR> else <BAR> hide <BAR> endif <CR>
-nnoremap <silent> <Leader>M :<C-u>only<CR>
+nnoremap <silent><Leader>h :<C-u>if 1 == winnr('$') <BAR> bd <BAR> else <BAR> hide <BAR> endif <CR>
+nnoremap <silent><Leader>M :<C-u>only<CR>
 
 " Define mappings
 autocmd FileType denite call s:denite_my_settings()
@@ -1277,7 +1290,7 @@ func! BufSwitch()
           bp
       endif
     else
-      if @# =~ "NERD" || @# == "" || @# =~ "__" || @# =~ "term"
+      if @# =~ "NERD" || @# == "" || @# =~ "^__" || @# =~ "term"
         " if it is the fist buf
         if cnr == buflist[0]
           echo "bn"
@@ -1311,10 +1324,9 @@ endfunc
 nnoremap <silent><Leader>m :make<CR>
 nnoremap <silent><Leader>E :e ~/.vimrc_back<CR>
 "noremap <silent><Leader>p :<C-u>wincmd p<CR>
-nnoremap <leader>ss :<C-u>wq<CR>
 nnoremap <silent><Leader><Leader> :call BufSwitch()<CR>
-"nnoremap <leader>D :<C-u>let @#="<C-R>#" <BAR> keepalt BD<CR> nnoremap
-"<leader>dd :keepalt bd<CR>
+nnoremap <leader>D :<C-u>let @#="<C-R>#" <BAR> keepalt BD<CR>
+nnoremap <leader>dd :keepalt bd<CR>
 nnoremap <leader>ddd :<C-u>bd!<CR>
 nnoremap <silent><leader>dd :call BufDelete()<CR>
 vnoremap <Leader><Leader><Leader> <ESC>
@@ -1324,7 +1336,18 @@ if filereadable(expand("~/.rc.local"))
   source ~/.rc.local
 endif
 
-let g:asyncrun_open = 8
+func! s:cclose_on_good()
+    if g:asyncrun_status == 'success'
+        echo g:asyncrun_code
+        cclose
+    else
+        echo "ERROR. Please check."
+    endif
+endfunc
+
+let g:asyncrun_open = 6
+let g:asyncrun_save = 1
+autocmd User AsyncRunStop call s:cclose_on_good()
 
 " copy from pasky
 """" Core stuff
@@ -1566,7 +1589,7 @@ let g:EclimLoggingDisabled = 1  " trouble with class hierarchies where the ances
 "" jedi
 "let g:jedi#goto_assignments_command = '<cr>'
 let g:jedi#use_tabs_not_buffers = "0"
-let g:jedi#use_splits_not_buffers = "0"
+let g:jedi#use_splits_not_buffers = "bottom"
 let g:jedi#popup_on_dot = 0
 let g:pymode_rope = 0
 
@@ -1636,3 +1659,7 @@ set complete+=kspell
 
 nnoremap <Leader>o :on<CR>
 hi Visual term=reverse cterm=reverse guibg=Grey
+nmap <silent><Leader>tf <Esc>:Pytest file<CR>
+nmap <silent><Leader>tc <Esc>:Pytest class<CR>
+nmap <silent><Leader>tm <Esc>:Pytest method<CR>
+nmap <silent><Leader>ts <Esc>:Pytest session<CR>
