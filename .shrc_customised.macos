@@ -155,3 +155,4 @@ _yargs_completions()
 complete -F _yargs_completions leetcode
 ###-end-leetcode-completions-###
 
+[ x$FISH = x1 -o -f $HOME/.enable_fish ] && fish
