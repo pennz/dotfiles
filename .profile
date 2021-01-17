@@ -39,12 +39,19 @@ export GPG_TTY=$(tty)
 export KEYTIMEOUT=1
 export BASH_ENV=~/.vim_bash_env
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
-if [ -e /etc/profile.d/nix.sh ]; then source /etc/profile.d/nix.sh; fi # added by Nix installer
+
+TRY=/etc/profile.d/nix.sh
+if [ ! -e $TRY ]; then TRY=$HOME/.nix-profile/etc/profile.d/nix.sh fi
+if [ -e $TRY ]; then
+    source $TRY
+    export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive" # fix locale prolem for nix pkgs, reference https://unix.stackexchange.com/questions/187402/nix-package-manager-perl-warning-setting-locale-failed
+    export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+fi
 
 if [ -f "$HOME"/.bash_aliases ]; then
     source "$HOME"/.bash_aliases
 fi
 
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
-export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive" # fix locale prolem for nix pkgs, reference https://unix.stackexchange.com/questions/187402/nix-package-manager-perl-warning-setting-locale-failed
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ x$SHELL = x/bin/bash ] && [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
