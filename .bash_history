@@ -1,293 +1,220 @@
 ls
-ping vtool.duckdns.org
-clear
-clear
-ls
-sudo snap install --classic code
-clear
-code
-clear
-ip route
-clear
-ip route
-sudo snap install golang
-sudo snap install go
-sudo snap install go --classic
-which go
-which go
-clear
-ls
-cat bin/vtool 
-ssh -L 2222:localhost:29922 -p 29922 v@vtool.duckdns.org
-ssh -vv -fNL 22222:localhost:29922 -p 29922 v@vtool.duckdns.org
-ssh -vv -fNL 172.26.253.203:22222:localhost:29922 -p 29922 v@vtool.duckdns.org
-clear
-ls
-ip route
-ip route
-clear
-clear
-ssh -p 22222 v@localhost
-ssh -vvv -p 22222 v@localhost
-ssh -vvv -p 22222 v@172.26.253.203
-ssh -vvv -p 22222 v@172.26.253.203
-ssh -vvv -p 22222 v@172.26.253.203
-ls -lh ~/.ssh/
-clear
-ssh -vvv -p 22222 v@172.26.253.203
-ssh -vvv -p 29922 v@vtool.duckdns.org
-clear
-jobs
-jobs
-ps aux | grep ssh
-clear
-echo $DISPLAY 
-ssh -vv -fNL 172.26.253.203:22222:vtool.duckdns.org:29922 -p 29922 v@vtool.duckdns.org
+stty -a
 exit
-ta
-clera
-ta
-echo $DISPLAY
-tig
-git fetch origin
-git push -u origin
-git pull -u origin
-git pull origin
-git pull origin/master
-git pull origin master
-git mergetool
-git commit
-git push -u origin
-tig
-clear
-ip route
-ls
-clear
-mv ~/Downloads/frida.tar.gz .
-ls
-mkdir jd
-cd jd/
-tar xf ../frida.tar.gz 
-ls
-ls frida/
-mv frida/frida-agent-example/* ../../
-ls frida/frida-agent-example/ | xargs -I{} mv {} ..
-ls
-ls frida/frida-agent-example/
-rm -r frida/frida-agent-example/
-rm -rf frida/frida-agent-example/
-cd ..
-ls
-rmdir jd/
-cd ..
-ls
-clear
-git status
-clear
-ls
-ls frida-agent-example/Makefile 
-clear
-ls
-ls -t
-ls -lt
-clear
-ls
-itg
-tig
-clear
-ls
-fg
-clear
-ls
-which nvim
-clear
-ls
-htop
-clear
-ip route
-clear
-mpv '%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\'
-mpv 'https://www.youtube.com/watch?v=pj20pGBV8PA'
-clear
-echo $HTTP_PORXY
-echo $HTTP_PROXY
-mpv 'https://www.youtube.com/watch?v=pj20pGBV8PA'
-clear
-ls *.apk
-cp build_result.apk ~/Downloads/
-adb devices
-adb kill-server
-cat Makefile 
-adb devices
-adb connect 192.168.1.188:5555
-adb devices
-adb shell
-cat Makefile 
-adb shell am start -D -n com.jingdong.app.mall/.main.MainActivity
-adb connect 192.168.1.188
-adb devices
-make debug
-ndk-gdb
-clear
-ls
-ls -t ~/Downloads/
-ls -t ~/Downloads/ |head
-rm ~/Downloads/burpsuite_community_macos_v2020_8_1.dmg 
-clear
-ls
-clear
-ip route
-clear
-ip route
-ta
-ta
-ta
-bash
-ta
-who
-bash
-git fetch
-clear
-ls
-vi Makefile 
-make pull
-git checkout @ Makefile
-igt merge
-git merge
-mv mmmmm Makefile
-git diff
-fg
-git add Makefile
-git dc
-git commit -sm "Makefile pull not change history"
-git status
-tig
-exit
-~/bin/borg_back.sh 
-clear
-ls
-bash
-tmux
-ta
-ta
-ta
-ta
-who
-cd ~/works/frida/
-cd frida-agent-example/
-ls
-git remote show
-git remote rename origin old_origin
-git remote add origin git@gitlab.com:re5/jd.git
-git d
-git stash
-git pull
-tig
-clear
-bash
-adb kill-server
-clear
-adb connect 192.168.1.212
-adb devices
-adb kill-server
-adb connect 192.168.1.212
-adb kill-server
-adb connect 192.168.1.212
-adb devices
-adb shell
-adb shell
-cd ~/Downloads/
-clear
-adb push android_server64 /data/local/tmp
-adb shell
-exit
-ls
-rg system
-rg "native"
-rg "native"
-
 vim ~/.tmux.conf
-tmux source ~/.tmux.conf
-rg JNI
-rg loadL
-jobs
-nvim core/nativelib/AuraNative.java 
 clear
-ip route
-ping baidu.com
+tmux ls
+which tmux
+pkill tmux
+stty -a
 ls
 clear
 ls
-ip route
+ls
+sss
+exit
+vi .tmux.conf
+exit
+exit
+exit
+exit
+exit
+exit
+tmux ls
+clear
+tmux ls
+exit
+tmux ls
+exit
+exit
+exit
+tat 5
+stty -a
+tmux ls
+exit
+tat 5
+tat rvsConnector
+tmxu ls
+tat rvsConnector
+pwd
+exit
+PORT=$(./reversShells/addNewNode.sh 2>/dev/null); echo $PORT 
+./reversShells/addNewNode.sh 2>/dev/null
+./reversShells/addNewNode.sh >/dev/null
+./reversShells/addNewNode.sh 2>/dev/null
+./reversShells/addNewNode.sh
+exit
+exit
+tat 5
+exit
+tmux ls
+tat 7
+tat 5
+tmux ls
+tat 5
+clear
+pkill mosh-server
+exit
+exit
+exit
+exit
+cd ~/works/kaggle_runner/
 ls
 clear
-ls
-clear
-ls
-rg "native"
-rg "chrome"
-cd JDMALL-PC2/
-ls
-rg "chrome"
-vim ~/log.txt 
-vim ~/works/log.txt 
-wich sh
-which sh
-exit
-sh
-exit
-sh
-which sh
-history
-exit
-sh
-history
-mpv 'https://www.gayck.com/videos/72300/masculine-strippers-compilation-09/?utm_source=pbweb&utm_medium=pbweb&utm_campaign=pbweb'
-history
-youtube-dl 'https://www.gayck.com/videos/72300/masculine-strippers-compilation-09/?utm_source=pbweb&utm_medium=pbweb&utm_campaign=pbweb'
-exit
-sh
-history 
-exit
-history
-fg
-clear
-jobs
-fg
-jobs
-/Applications/Android\ Studio.app/Contents/
-/Applications/Android\ Studio.app/Contents/MacOS/
-ls /Applications/Android\ Studio.app/Contents/MacOS/
-ls /Applications/Android\ Studio.app/Contents/MacOS/studio/
-find /Applications/Android\ Studio.app/Contents/MacOS/
-find /Applications/Android\ Studio.app/Contents/
-find /Applications/Android\ Studio.app/Contents/ | grep monitor
-find /Applications/Android\ Studio.app/ | grep monitor
 tig
-thop
-htop
-adb logcat -c
-htop
-make ps_command
+v .
+ps aux| grep addNew
+kill 12958
+ps aux| grep addNew
+kill 12
+kill 12959
 fg
-vi Makefile 
-make ps_command
+reversShells/addNewNode.sh 
+kill %2
 fg
-make ps_command
+cat serverNodes 
+echo "" > serverNodes 
 fg
-make ps_command
+reversShells/addNewNode.sh 
 fg
-make ps_command
+kill %2
 fg
-make ps_command
+reversShells/addNewNode.sh 
+reversShells/addNewNode.sh 
+reversShells/addNewNode.sh 
+~/bin/upnp-ports 
+ip route
+clear
+. ~/.fzf.bash 
+zsh
+fish
+exit
+jobs
 fg
-make ps_command
+jobs
+exit
+stty -a
+exit
+which proxychains4
+/usr/bin/proxychains4 
+/usr/bin/proxychains4 neomutt
+clear
+echo $PATH
+hash -r
+which proxychains4
+/home/v/.nix-profile/bin/proxychains4
+nix-env -e proxychains4
+nix-env --remove proxychains4
+sudo apt install i2p
+i2prouter
+i2prouter install
+dpkg-reconfigure i2p
+sudo dpkg-reconfigure i2p
+sudo systemctl start i2p
+sudo systemctl status i2p
+dmesg
+sudo systemctl status i2p
+ls -lh /var/lop/i2p
+ls -lh /var/log/i2p
+sudo systemctl status i2p
+sudo systemctl start i2p
+sudo systemctl status i2p
+ls -lh /var/log/i2p
+i2p
+i2prouter
+i2prouter console 
+ls /usr/bin/i2prouter
+ls -lh /usr/bin/i2prouter
+sudo i2prouter console 
+i2prouter console 
+ps aux|grep i2p
+sudo systemctl status i2p
+ls
+clear
+setproxy
+neomutt
+proxychains neomutt
+proxychains4 neomutt
+pstree -laps $$
+mosh
+clear
+kill 18781
+aaa=$(stty -g)
+stty $aaa
+stty size
+stty rows 1
+stty $aaa
+stty size
+stty "$aaa"
+stty size
+bbb=$(stty -g)
+aaa
+echo $aaa
+echo $bbb
+bbb=$(stty -a -g)
+stty size
 fg
-make ps_command
+v Makefile 
+stty rows 24
+v Makefile 
+exit
+size=123 321
+size="123 321"
+size
+echo $size
+echo $size|cut -f1
+echo $size|cut -d" " -f1
+exit
+ls
+ls
+clear
+who
+who
+wfwefwe
+wfeawfeawf
+awefwefwefwef
+exit
+[ $(pgrep -cf "50001.*vulp 50002") -gt 1 ] || echo "yes"
 fg
-make ps_command
+clear
+make tmp
+clear
+make tmp
+clear
+make tmp
 fg
-make ps_command
+make tmp
+fg
+make tmp
+make pc_connector 
+make tmp
+gg
+fg
+make tmp
+echo "\|"
+echo "|"
+echo "|" asdfsdf
+fg
+exit
+ncat -vvu 127.0.0.1 50001 -c 'tee /dev/tty | ncat -vvu 127.0.0.1 60002 | tee /dev/tty'
+zsh
+exit
+clear
+exit
+{ echo a; echo b; }
+{ echo a; echo b; } &
+fg
+exit
+ls
+. ~/.pretty_prompt_console 
+ls
+fg
+rm ~/.pretty_prompt_console 
+cledar
+clear
+git status
+fg
+color_my_prompt 
 fg
 make ps_command
 fg
@@ -310,204 +237,286 @@ tmux ls
 mpv 'https://www.youtube.com/watch?v=o2pEZ3KQI1g'
 youtube-dl 'https://www.youtube.com/watch?v=o2pEZ3KQI1g'
 clear
-ms
-s
-cler
+vim ~/.profile 
+exit
+fg
+grep TERM
+git grep TERM
+exit
 clear
-ms
+exit
+urxvt
 clear
-ms
-clear
-ms
-s
-adb kill-server
-clear
-ms
-s
-bash
-while true; do s; sleep 3; done
-m
-s
-adb shell
-adb connect 192.168.1.188
-adb shell
+xrdb ~/.Xresources 
+vi ~/.profile 
+fg
 tmux
-clear
+xclip -o
+$(xclip -o)
+bash -c "$(xclip -o)"
+echo $TERM
 fg
 clear
-ta
-python3
-exit
-./test_command.sh 
-clear
-grep 'edit'
-rg 'edit'
-fg
-vim fg
-fg
-vim README.md 
-nvim
-cat test_command.sh 
-exit
-curl -vv http://192.168.1.102:8123
-ping 192.168.1.102
-curl -vv http://192.168.1.102:8123
-curl -vv https://192.168.1.102:8123
-ping 192.168.1.102
 ip route
-curl -vv https://192.168.1.102:8123
-curl -vv http://192.168.1.102:8123
-exit
-ncat -vv -klp 5901
-curl -vv http://192.168.123.172:5901
-curl -vv http://192.168.1.102:8023
-curl -vv http://192.168.1.102:8123
-curl -vv http://192.168.1.102:8123
-ping 192.168.1.102
-ping 192.168.1.102
-ip route
-ip route
-curl -vv http://192.168.1.102:8123
-curl -vv http://192.168.1.102:8123
-curl -vv http://192.168.1.102:8123
-curl -vv http://192.168.1.102:8123
-ncat -vv -klp 5901
-ncat -vv -klp 8123
-/Applications/Tailscale.app/Contents/MacOS/Tailscale up
-exit
-exit
-bash
-exit
-ssh root@192.168.1.1
-clear
-curl http://vtool.duckdns.org:8123
-curl http://vtool.duckdns.org:8123
-clear
-ssh root@192.168.1.102
-clear
-ping 192.168.1.191
-ps aux| grep sync
-clear
-ls /Applications/Tailscale.app/Contents/MacOS/Tailscale 
-ls /Applications/Tailscale.app/Contents/MacOS/Tailscale 
-/Applications/Tailscale.app/Contents/MacOS/Tailscale
-/Applications/Tailscale.app/Contents/MacOS/Tailscale --help
-/Applications/Tailscale.app/Contents/MacOS/Tailscale status
-/Applications/Tailscale.app/Contents/MacOS/Tailscale netcheck
-/Applications/Tailscale.app/Contents/MacOS/Tailscale up
-/Applications/Tailscale.app/Contents/MacOS/Tailscale
-exit
-ssh root@192.168.123.1
-cat ~/.ssh/id_rsa.pub 
-ssh root@192.168.123.1
-ssh admin@192.168.123.1
-ssh admin@192.168.123.1
-exit
-clear
-exit
-exit
-ms
-clear
-alias ss
-alias s
-alias ms
-exit
-ms
-bash
-exit
-ssh v@vtool.duckdns.org
-exit
-htop
-sudo htop
-sudo htop
-clear
-dig vtool.duckdns.org
-ip route
-ip addr
-curl -v http://vtool.duckdns.org:8123
-dig vtool.duckdns.org
-curl -v http://vtool.duckdns.org:8123
-curl -v http://vtool.duckdns.org:22
-ssh root@192.168.1.1
-clear
-tmux
-ms
-ssh root@192.168.1.1
-ssh root@192.168.1.1
-pwd
-wget https://raw.githubusercontent.com/home-assistant/iOS/77c72785ffbe3d781906989dcd2ba16cd6f6d693/Sources/App/Resources/Sounds/MorganFreeman/US-EN-Morgan-Freeman-Welcome-Home.wav
-open US-EN-Morgan-Freeman-Welcome-Home.wav 
-open US-EN-Morgan-Freeman-Welcome-Home.wav 
-open US-EN-Morgan-Freeman-Welcome-Home.wav 
-ping 192.168.1.102
-fg
-clear
-pwd
 ls
-pwd
-cd ..
-fzf
-ls Music/网易云音乐/Eagles\ -\ Hotel\ California.mp3 
-sudo apt-get install omxplayer -y
-sudo apt-get install omxplayer -y
-ssh root@192.168.123.1
-ssh root@192.168.1.1
-ssh root@192.168.1.1
-ssh root@192.168.1.1
-cd ~/.config/
-ls clash/
-cd clash/
-ls -lht|head
-vi config.yaml 
-vi vps.yaml 
-vi vps.yaml 
-git fetch
-sss
-cat Makefile 
-make pull
-tig
 clear
-tig
-git checkout HEAD .config/clash/vps.yaml
-git commit -asm "Update from MAC"
-tig
-git push
+ip route
+clea
 clear
-git pull
-git push
-tig
+tmux ls
+which xrdb
+man xrdb
+tmux ls
+tat 5
+pkill Xwayland
+urxvt
+stty ros 25
+clear
+stty rows 25
 clear
 ls
-tig
-lear
+echo $TERM
+locale
+exit
+tmux ls
+tat 4
+tat 5
+exit
+ex
+man ex
+exit
+stty ros 25
+stty rows 25
+ls
+echo $TERM
+locale
+tat 4
 htop
+fg
+tat 5
 clear
+tmux ls
+exit
+fg
+exit
+exit
+exit
+locale
+tmux ls
+tat 4
+tat 5
+ex
+man ex
+stty ros 25
+stty rows 25
+echo $TERM
+locale
+tat 4
 htop
+fg
+tat 5
+tmux ls
+fg
+cd works/
+git clone https://github.com/sylveon/terminology-themes
+ sudo add-apt-repository ppa:niko2040/e19
+cd terminology-themes/
+make 
+hash -r
+sudo apt remove libethumb-client-bin
+sudo apt remove terminology
+sudo apt remove libethumb-client-bin 
+sudo apt remove libefreet-bin
+apt --fix-broken install
+sudo apt --fix-broken install
+sudo apt remove libevas-loaders
+sudo apt remove libevas-loaders libevas1 
+sudo apt remove libevas-loaders libevas1  libefi-bin
+sudo apt remove libevas-loaders libevas1  libe*
+sudo apt remove libevas-loaders libevas1  
+sudo apt remove libevas-loaders libevas1  libethumb*
+sudo apt remove libevas-loaders libevas1  libethumb*  libecore-evas1  libecore-imf1  libecore-input1  libedje1  libemotion1   libevas1-engines-x  
+sudo apt remove libevas-loaders libevas1  libethumb*  libecore-evas1  libecore-imf1  libecore-input1  libedje1  libemotion1   libevas1-engines-x    libecore-fb1  libecore-x1  libefl-bin 
+sudo apt remove libefreet1a
+sudo apt remove libefl-bin
+sudo apt auto-remove
+sudo apt install libefl-bin
+make
+cat README.md 
+sudo make install
+ls /usr/share/terminology/themes/
+ls themes/
+ls
+which terminology
+terminology 
+fljf
+ajflkwajeflkawjef
+tyalpha -h
+clear
+ip route
+exit
+locale
+echo $SHELL
+cheese
+sudo apt install cheese
+which cheese
+fish
+exit
+tail -f logs_check
+fg
+exit
+ps aux |  grep vvlp
+pstree -laps 3152
+kill 3152
+exit
+make push
+ps aux | grep tcpserver
+make log_receiver
+fg
+locale
+fg
+make pc_connector
+echo $TERM
+locale
+htop
+cd ../PneumothoraxSegmentation
+tig
+c -
+clear
+jobs
+ls
+fish
+nixGLIntel mpv *.mp4
+clash
+exit
+cat >> .xmodmap
+xmodmap 
+cat .xmodmap 
+xmodmap -pke
+xmodmap
+keycode  66    = Super_L NoSymbol Super_L
+add control    = Control_L
+clear lock
+xmodmap -pke > ~/.Xmodmap
+v .Xmodmap 
+nvim .Xmodmap 
+fg
+xmodmap ~/.Xmodmap 
+make push
+clear
+make pc
+xinput 
+xinput -l
+keycode  66    = Super_L NoSymbol Super_L
+add control    = Control_L
+clear
+ls
+xmodmap ~/.Xmodmap 
+export DISPLAY=:0
+xmodmap ~/.Xmodmap 
+nvim ~/.Xmodmap 
+jobs
+fish
+elinks
+tail -f logs_check
 exit
 exit
+ls
+exit
+ms
+bash
 exit
 exit
-git merge
-git mergetool
-git ds
-git dc
-git add -u
-git dc
-git commit -sm "Update submodule"
-git mergetool
+cd bin/
+cat > xm.c
+gcc -lX11 xm -o xmodmap1
+ls xm.c 
+gcc -lX11 xm.c -o xmodmap1
+which gcc
+/usr/bin/gcc -lX11 xm.c 
+clea
+clear
+ls
+touch ~/.enable_fish
+fish
 exit
-t
+xev -event keyboard
 exit
-git mergetool
-git sttus
+fg
+exit
+man tmux
+fg
+exit
+man tmux
+exit
+exit
+elinks
+exit
+fish
+exit
+. ~/.bashrc
+clear
+which tmux
+zsh
+. ~/.bashrc
+cd
 git status
-git d
-git ds
-git dc
-vi .tmux.conf 
+clear
+tig
+clear
+exit
+clear
+conda env list
+conda create pyt
+conda create -n pyt
+conda create -n pyt python=3
+conda activate pyt
+conda init bash
+. ~/.bashrc
+conda activate pyt
+cd kaggle_runner/
+make install_dev_dep
+pip install -e .
+clear
+ls
+make pccnct
 fg
 jobs
-vi ~/bin/filter_public 
-git status
+tmux 
+m
+export LC_ALL='en_US.UTF-8'
+locale-gen
+sudo locale-gen
+locale
+m
+tmux ls
+tat 3
+vi Makefile 
+tmux ls
+tat pengyu
+exit
+cd
+clear
+cd
+git pull
+tig
+vim ~/.bashrc
+ls ~/*conda
+pwd
+ls miniconda3/
+ls ~/*conda*
+ls -d ~/*conda*
+ls -d ~/*conda* | head -n 1
+fg
+. ~/.bashrc
+conda activate pyt
+fg
+cd
+tig
+exit
+exit
+clear
+tig
+cd
 tig
 exit
