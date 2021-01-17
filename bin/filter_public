@@ -1,5 +1,5 @@
 #!/bin/bash -x
-BRANCH=good-day
+BRANCH=master
 RBRANCH=master
 
 cd $HOME
