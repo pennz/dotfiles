@@ -12,7 +12,7 @@ if [ ! -d "$HOME/$RREPO_COPY" ]; then
     git update-ref -d refs/pull/3/head
     git update-ref -d refs/pull/4/head
     git update-ref -d refs/pull/5/head
-    sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n\tfetch = +refs\/heads\/*:refs\/heads\/*/' .git/config
+    sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n\tfetch = +refs\/heads\/*:refs\/heads\/*/' config
     popd
 else
     pushd $RREPO_COPY
@@ -21,31 +21,33 @@ else
     git update-ref -d refs/pull/3/head
     git update-ref -d refs/pull/4/head
     git update-ref -d refs/pull/5/head
-    sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n\tfetch = +refs\/heads\/*:refs\/heads\/*/' .git/config
+    sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n\tfetch = +refs\/heads\/*:refs\/heads\/*/' config
     git fetch origin
     popd
 fi
 
-if [ -d "$HOME/$(basename $HOME)" ]; then
-    pushd $(basename $HOME)
+private_clone_repo="$HOME/.$(basename $HOME)"
+if [ -d $private_clone_repo ]; then
+    pushd $private_clone_repo
     git remote add local file://$HOME/ || true
-    git fetch local
-    git checkout $BRANCH
-    git reset --hard local/$BRANCH
 else
-    git clone --single-branch --branch ${BRANCH} file://$HOME/
-    pushd $(basename $HOME)
+    git clone --single-branch --branch ${BRANCH} file://$HOME/ $private_clone_repo
+    pushd $private_clone_repo
 fi
 
+git checkout $BRANCH
+git fetch local
+git reset --hard local/$BRANCH
+
 git filter-repo \
+    --path-glob '.config/*.json' \
+    --path-glob '.*history' \
     --path .lc \
     --path notes.md \
     --path .config/clash \
     --path .kaggle \
     --path bin/v2ray_client.json \
     --path bin/v2ray_router_client.json \
-    --path-glob '.config/*.json' \
-    --path-glob '.*history' \
     --path .duckdns \
     --path .muttrc \
     --path .electrum \
@@ -57,6 +59,7 @@ git filter-repo \
     --path Sync/with_box/Passwords.kdbx \
     --path .glc.yml \
     --invert-paths
+
 filter_result=$?
 if [ ! $filter_result -eq 0 ]; then
     echo "git filter-repo failed."
