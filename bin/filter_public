@@ -6,14 +6,22 @@ cd $HOME
 RREPO_COPY=".dotfiles"
 if [ ! -d "$HOME/$RREPO_COPY" ]; then
     git clone --mirror git@github.com:pennz/dotfiles.git $RREPO_COPY
+    pushd $RREPO_COPY
     git update-ref -d refs/pull/1/head
     git update-ref -d refs/pull/2/head
     git update-ref -d refs/pull/3/head
     git update-ref -d refs/pull/4/head
     git update-ref -d refs/pull/5/head
-    sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n\tfetch = +refs\/heads\/*:refs\/heads\/*/' $RREPO_COPY/config
+    sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n\tfetch = +refs\/heads\/*:refs\/heads\/*/' .git/config
+    popd
 else
     pushd $RREPO_COPY
+    git update-ref -d refs/pull/1/head
+    git update-ref -d refs/pull/2/head
+    git update-ref -d refs/pull/3/head
+    git update-ref -d refs/pull/4/head
+    git update-ref -d refs/pull/5/head
+    sed -i 's/fetch.*/fetch = +refs\/tags\/*:refs\/tags\/*\n\tfetch = +refs\/heads\/*:refs\/heads\/*/' .git/config
     git fetch origin
     popd
 fi
@@ -56,25 +64,26 @@ if [ ! $filter_result -eq 0 ]; then
     PS1="Merge>" bash
 fi
 
+TMP_BRNACH_NAME=TEMP_MASTER
 git remote add public file://$HOME/$RREPO_COPY || true
 git fetch public
-git branch -D $RBRANCH
-git checkout --track public/$RBRANCH
+git branch -D $TMP_BRNACH_NAME
+git checkout -b $TMP_BRNACH_NAME --track public/$RBRANCH
 git merge $BRANCH --no-edit --no-gpg-sign -m "Merge upstream changes"
 merge_result=$?
 if [ ! $merge_result -eq 0 ]; then
-    echo "Failed when merge with branch \"$BRANCH\". Please merge manually in subshell, exit when finished, it will continue."
+    echo "Failed when merge with branch \"$BRANCH\" to public/$RBRANCH. Please merge manually in subshell, exit when finished, it will continue."
     PS1="Merge>" bash
 fi
 grep F10 .tmux.conf && sed -i 's/F10/\`/' .tmux.conf && git add .tmux.conf && git commit -sm "Tmux: prefix use \`" --no-edit --no-gpg
-git push
 
 #pushd $HOME/$RREPO_COPY
-git push public
+git push public HEAD:$RBRANCH
 #popd
 
 popd
-git push # push the secret one
+#git push # push the secret one # don't need I think
 
-cd $HOME/.dotfiles
+pushd $HOME/.dotfiles
 git push
+popd
