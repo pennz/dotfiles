@@ -1,0 +1,14 @@
+#!/bin/sh
+
+XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
+hotkeysRC="$XDG_CONFIG_HOME/kglobalshortcutsrc"
+
+# Remove application launching shortcuts.
+sed -i 's/_launch=[^,]*/_launch=none/g' $hotkeysRC
+
+# Remove other global shortcuts.
+sed -i 's/^\([^_].*\)=[^,]*/\1=none/g' $hotkeysRC
+
+# Reload hotkeys.
+kquitapp5 kglobalaccel && sleep 2s && kglobalaccel5 &
+
