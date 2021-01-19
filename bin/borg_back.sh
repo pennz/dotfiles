@@ -2,14 +2,17 @@
 
 # Setting this, so the repo does not need to be given on the commandline:
 test -d /Volumes/mac_files/borg && export BORG_REPO=/Volumes/mac_files/borg
-test -d /media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg &&
-    export BORG_REPO=/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
-TRY=/run/media/v/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg
+
+HOSTNAME=${HOSTNAME:-$(hostname)}
+
+echo "Hostname is ${HOSTNAME}"
+
+TRY=$(ls -d /media/*/b7f72e09-1bc0-44f5-88b6-93cd4aa8c445/borg)
 test -d $TRY && export BORG_REPO=$TRY
 
 # Setting this, so you won't be asked for your repository passphrase:
 # or this to ask an external program to supply the passphrase:
-export BORG_PASSCOMMAND='pass borg'
+which pass >/dev/null 2>&1 && export BORG_PASSCOMMAND='pass borg'
 
 # some helpers and error handling:
 info() {
@@ -25,9 +28,12 @@ test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 TRY=/home/v
 test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
 
+TRY=$(getent passwd $USER | cut -d: -f6)
+test -d $TRY && SOURCE_HOME=$TRY # if you sudo, $HOME will be /root ...
+
 BORG=$(which borg 2>/dev/null)
 if which borg 2>/dev/null >&2; then
-    echo "$BORG used."
+    echo "borg used: $(which borg)"
 else
     echo >&2 "Error: borg not found."
     exit 1
@@ -37,7 +43,9 @@ BORG="sudo $BORG"
 TRY=/home/v/miniconda3/bin/borg
 test -e $TRY && BORG="sudo $TRY"
 
-echo "borg used: $(which borg)"
+# https://manpages.debian.org/testing/borgbackup/borg-patterns.1.en.html
+# if a given pattern ends in a path separator, a '*' is appended before
+# matching is attempted.
 
 backup() {
     (
@@ -50,47 +58,49 @@ backup() {
             --show-rc \
             --compression lz4 \
             --exclude-caches \
-            --exclude '/home/*/.cache/*' \
-            --exclude '/Applications/Xcode.app/*' \
-            --exclude "/usr/local/texlive/*" \
-            --exclude "/usr/local/Homebrew/.git/*" \
-            --exclude "/usr/local/Homebrew/.github/*" \
+            --exclude '/home/*/.cache/' \
+            --exclude '/Applications/Xcode.app/' \
+            --exclude "/usr/local/texlive/" \
+            --exclude "/usr/local/Homebrew/.git/" \
+            --exclude "/usr/local/Homebrew/.github/" \
             --exclude "$SOURCE_HOME/Library/Containers/com.docker.docker/Data/vms" \
-            --exclude "$SOURCE_HOME/works/android_build/aosp.sparseimage" \
-            --exclude "$SOURCE_HOME/VirtualBox\ VMs/*" \
-            --exclude "$SOURCE_HOME/VirtualBox VMs/*" \
-            --exclude "$SOURCE_HOME/not-backup/*" \
-            --exclude "$SOURCE_HOME/d/*" \
-            --exclude "$SOURCE_HOME/anaconda3/*" \
-            --exclude "$SOURCE_HOME/snap/*" \
-            --exclude "$SOURCE_HOME/miniconda3/*" \
-            --exclude "$SOURCE_HOME/.Genymobile/*" \
-            --exclude "$SOURCE_HOME/Android/*" \
-            --exclude "$SOURCE_HOME/Arduino/*" \
-            --exclude "$SOURCE_HOME/Library/Caches/*" \
-            --exclude "$SOURCE_HOME/oldhome/*" \
-            --exclude "$SOURCE_HOME/e/*" \
-            --exclude "$SOURCE_HOME/Downloads/*" \
-            --exclude "$SOURCE_HOME/.android/avd/*" \
-            --exclude "$SOURCE_HOME/.docker/*" \
-            --exclude "$SOURCE_HOME/.config/electronic-wechat/*" \
-            --exclude "$SOURCE_HOME/.local/share/Trash/*" \
+            --exclude "$SOURCE_HOME/VirtualBox\ VMs/" \
+            --exclude "$SOURCE_HOME/VirtualBox VMs/" \
+            --exclude "$SOURCE_HOME/not-backup/" \
+            --exclude "$SOURCE_HOME/d/" \
+            --exclude "$SOURCE_HOME/works/" \
+            --exclude "$SOURCE_HOME/Dropbox/" \
+            --exclude "$SOURCE_HOME/not_backup/" \
+            --exclude "$SOURCE_HOME/anaconda3/" \
+            --exclude "$SOURCE_HOME/snap/" \
+            --exclude "$SOURCE_HOME/miniconda3/" \
+            --exclude "$SOURCE_HOME/.Genymobile/" \
+            --exclude "$SOURCE_HOME/Android/" \
+            --exclude "$SOURCE_HOME/Arduino/" \
+            --exclude "$SOURCE_HOME/Library/Caches/" \
+            --exclude "$SOURCE_HOME/oldhome/" \
+            --exclude "$SOURCE_HOME/e/" \
+            --exclude "$SOURCE_HOME/Downloads/" \
+            --exclude "$SOURCE_HOME/.android/avd/" \
+            --exclude "$SOURCE_HOME/.docker/" \
+            --exclude "$SOURCE_HOME/.config/electronic-wechat/" \
+            --exclude "$SOURCE_HOME/.local/share/Trash/" \
             --exclude "$SOURCE_HOME/.local/share/Steam/" \
-            --exclude "$SOURCE_HOME/works/android_build/aosp/*" \
-            --exclude '/home/boinc/*' \
-            --exclude '/Users/Shared/*' \
-            --exclude '/var/cache/*' \
-            --exclude '/var/tmp/*' \
-            --exclude '/var/lib/docker/*' \
-            --exclude '/var/lib/snapd/*' \
-            --exclude '/private/tmp/*' \
-            --exclude '/tmp/*' \
-            --exclude '/user/local/Cellar/*' \
+            --exclude '/home/boinc/' \
+            --exclude '/Users/Shared/' \
+            --exclude '/var/cache/' \
+            --exclude '/var/tmp/' \
+            --exclude '/var/lib/docker/' \
+            --exclude '/var/lib/snapd/' \
+            --exclude '/private/tmp/' \
+            --exclude '/tmp/' \
+            --exclude '/user/local/Cellar/' \
             \
             "$BORG_REPO"::"${HOSTNAME}-$(date | sed -e 's/ /_/g' -e 's/:/_/g')" \
             /etc \
             $SOURCE_HOME \
             /usr/local \
+            /nix \
             /var/log &&
             info "Backup completed" &&
             touch $SOURCE_HOME/.lastbackup
@@ -118,11 +128,11 @@ remove_old_backup() {
 }
 
 check_and_backup() {
-    if [ ! -f ~/.lastbackup ]; then
-        touch ~/.lastbackup
+    if [ ! -f $SOURCE_HOME/.lastbackup ]; then
+        touch $SOURCE_HOME/.lastbackup
         backup 604801
     else
-        LASTBACKUP=$(date -r ~/.lastbackup +%s)
+        LASTBACKUP=$(date -r $SOURCE_HOME/.lastbackup +%s)
         CURTIME=$(date +%s)
         DIFF=$((CURTIME - LASTBACKUP))
         #echo $DIFF
