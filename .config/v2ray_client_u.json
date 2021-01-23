@@ -25,41 +25,27 @@
   ],
   "outbounds": [
     {
-      "mux": {
-        "enabled": true,
-        "concurrency": 8
-      },
-      "protocol": "vmess",
-      "streamSettings": {
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "tlsSettings": {
-          "allowInsecure": true
-        },
-        "security": "none",
-        "network": "tcp"
-      },
-      "tag": "proxy",
-      "settings": {
-        "vnext": [
-          {
-            "address": "104.225.151.98",
-            "users": [
-              {
-                "id": "a37cd4fd-6dfd-4ebe-a2ce-afe1b4cdaca5",
-                "alterId": 64,
-                "level": 0,
-                "security": "auto"
-              }
-            ],
-            "port": 27990
-          }
-        ]
-      }
+    "tag": "proxy",
+    "protocol": "vless",
+    "settings": {
+      "vnext": [{
+        "address": "pengyuzhou.com",
+        "port": 8443,
+        "users": [{
+          "id": "0cb150a9-09ff-61bc-80e1-061bc65985ed",
+          "encryption": "none",
+          "flow": "xtls-rprx-direct"
+        }]
+      }]
     },
+    "streamSettings": {
+      "network": "tcp",
+      "security": "xtls",
+      "xtlsSettings": {
+        "serverName": "pengyuzhou.com"
+      }
+    }
+  },
     {
       "tag": "direct",
       "protocol": "freedom",
