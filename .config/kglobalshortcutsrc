@@ -47,8 +47,6 @@ show_all_notes=none,Alt+Shift+S,Show All Notes
 RunClipboard=none,Alt+Shift+F2,Run command on clipboard contents
 _k_friendly_name=KRunner
 _launch=Alt+F2,none,KRunner
-k_friendly_name=KRunner
-launch=none,none,KRunner
 
 [ksmserver]
 Halt Without Confirmation=none,none,Halt Without Confirmation
@@ -203,7 +201,7 @@ Window to Screen 6=none,none,Window to Screen 6
 Window to Screen 7=none,none,Window to Screen 7
 _k_friendly_name=KWin
 view_actual_size=none,Meta+0,実際のサイズ(A)
-view_zoom_in=Meta+=,,拡大(I)
+view_zoom_in=Meta+=,none,拡大(I)
 view_zoom_out=none,Meta+-,縮小(O)
 
 [mediacontrol]
