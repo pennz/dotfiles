@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git osx)
 
-source $ZSH/oh-my-zsh.sh
+[ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
 # User configuration
 

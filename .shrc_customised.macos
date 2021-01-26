@@ -67,37 +67,40 @@ color_my_prompt () {
     local __last_color="\[\033[00m\]"
     export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
 }
-[ "$SHELL" = "/bin/bash" ] && color_my_prompt
 
+if [ "$(echo $0)" = "-bash" ]; then
+  color_my_prompt
 
-###-begin-leetcode-completions-###
-#
-# yargs command completion script
-#
-# Installation: leetcode completion >> ~/.bashrc
-#    or leetcode completion >> ~/.bash_profile on OSX.
-#
-_yargs_completions()
-{
-    local cur_word args type_list
+  ###-begin-leetcode-completions-###
+  #
+  # yargs command completion script
+  #
+  # Installation: leetcode completion >> ~/.bashrc
+  #    or leetcode completion >> ~/.bash_profile on OSX.
+  #
+  _yargs_completions()
+  {
+      local cur_word args type_list
+  
+      cur_word="${COMP_WORDS[COMP_CWORD]}"
+      args=("${COMP_WORDS[@]}")
+  
+      # ask yargs to generate completions.
+      type_list=$(leetcode --get-yargs-completions "${args[@]}")
+  
+      COMPREPLY=( $(compgen -W "${type_list}" -- ${cur_word}) )
+  
+      # if no match was found, fall back to filename completion
+      if [ ${#COMPREPLY[@]} -eq 0 ]; then
+        COMPREPLY=( $(compgen -f -- "${cur_word}" ) )
+      fi
+  
+      return 0
+  }
+  complete -F _yargs_completions leetcode
+  ###-end-leetcode-completions-###
+fi
 
-    cur_word="${COMP_WORDS[COMP_CWORD]}"
-    args=("${COMP_WORDS[@]}")
-
-    # ask yargs to generate completions.
-    type_list=$(leetcode --get-yargs-completions "${args[@]}")
-
-    COMPREPLY=( $(compgen -W "${type_list}" -- ${cur_word}) )
-
-    # if no match was found, fall back to filename completion
-    if [ ${#COMPREPLY[@]} -eq 0 ]; then
-      COMPREPLY=( $(compgen -f -- "${cur_word}" ) )
-    fi
-
-    return 0
-}
-complete -F _yargs_completions leetcode
-###-end-leetcode-completions-###
 export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms/
 
 alias connect='fpipe | trap "" INT;  ncat localhost'
@@ -122,37 +125,9 @@ fi
 
 export SSH_PORT=29922
 
-PROXY_URL='http://127.0.0.1:7890'
+#PROXY_URL='http://127.0.0.1:7890'
 alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
-[ -z $(pgrep clash) ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
+#[ -z $(pgrep clash) ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
 [ -z $NOFISH ] && [ -f $HOME/.enable_fish ] && fish
-###-begin-leetcode-completions-###
-#
-# yargs command completion script
-#
-# Installation: /usr/local/bin/leetcode completion >> ~/.bashrc
-#    or /usr/local/bin/leetcode completion >> ~/.bash_profile on OSX.
-#
-_yargs_completions()
-{
-    local cur_word args type_list
-
-    cur_word="${COMP_WORDS[COMP_CWORD]}"
-    args=("${COMP_WORDS[@]}")
-
-    # ask yargs to generate completions.
-    type_list=$(/usr/local/bin/leetcode --get-yargs-completions "${args[@]}")
-
-    COMPREPLY=( $(compgen -W "${type_list}" -- ${cur_word}) )
-
-    # if no match was found, fall back to filename completion
-    if [ ${#COMPREPLY[@]} -eq 0 ]; then
-      COMPREPLY=( $(compgen -f -- "${cur_word}" ) )
-    fi
-
-    return 0
-}
-complete -F _yargs_completions leetcode
-###-end-leetcode-completions-###
 
 [ x$FISH = x1 -o -f $HOME/.enable_fish ] && fish
