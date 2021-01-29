@@ -53,4 +53,4 @@ if [ -f "$HOME"/.bash_aliases ]; then
 fi
 
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
-[ x"$SHELL" = x/bin/bash ] && [ -f ~/.fzf.bash ] && source "$HOME"/.fzf.bash
+( ps $$ | grep bash ) && ( [ -f ~/.fzf.bash ] && source "$HOME"/.fzf.bash ) || true
