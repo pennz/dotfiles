@@ -932,8 +932,8 @@ let g:SimpylFold_docstring_preview = 1
 "noremap <Leader>p :set filetype=python<CR>
 "noremap <Leader>j :set filetype=ipynb<CR>  # always called by accident
 
-let g:python3_host_prog  = system('cd $(git rev-parse --show-toplevel) && echo $(poetry env info -p)/bin/python3 || which python3')[:-2]
-let g:python_host_prog  = system('cd $(git rev-parse --show-toplevel) && echo $(poetry env info -p)/bin/python || which python')[:-2]
+"let g:python3_host_prog  = system('cd $(git rev-parse --show-toplevel) && echo $(poetry env info -p)/bin/python3 || which python3')[:-2]
+"let g:python_host_prog  = system('cd $(git rev-parse --show-toplevel) && echo $(poetry env info -p)/bin/python || which python')[:-2]
 "let g:python_host_prog = "/Users/v/Library/Caches/pypoetry/virtualenvs/lifestyle-TXnZab57-py3.8/bin/python"
 "let g:python3_host_prog = "/Users/v/Library/Caches/pypoetry/virtualenvs/lifestyle-TXnZab57-py3.8/bin/python3"
 
