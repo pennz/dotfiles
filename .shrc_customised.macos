@@ -25,14 +25,15 @@ export PATH=$HOME/go/bin:$HOME/bin/flutter/bin/cache/dart-sdk/bin:$HOME/bin/flut
 export SPORT=29932
 export CLASSPATH=".:/usr/local/lib/antlr-4.8-complete.jar:$CLASSPATH"
 
-__conda_setup="$( $HOME/${__conda_folder}/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
+__conda_folder="$HOME/$(ls -d $HOME/*conda*)"
+__conda_setup="$( ${__conda_folder}/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "$HOME/${__conda_folder}/etc/profile.d/conda.sh" ]; then
-        . "$HOME/${__conda_folder}/etc/profile.d/conda.sh"
+    if [ -f "${__conda_folder}/etc/profile.d/conda.sh" ]; then
+        . "${__conda_folder}/etc/profile.d/conda.sh"
     else
-        export PATH="$HOME/${__conda_folder}/bin:$PATH"
+        export PATH="${__conda_folder}/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -40,13 +41,13 @@ unset __conda_setup
 test -e /usr/libexec/java_home && export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Get list of gnubin directories
-if type brew &>/dev/null; then
-  HOMEBREW_PREFIX=$(brew --prefix)
-  # gnubin; gnuman
-  for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
-  # I actually like that man grep gives the BSD grep man page
-  #for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnuman; do export MANPATH=$d:$MANPATH; done
-fi
+#if type brew &>/dev/null; then
+#  HOMEBREW_PREFIX=$(brew --prefix)
+#  # gnubin; gnuman
+#  for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
+#  # I actually like that man grep gives the BSD grep man page
+#  #for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnuman; do export MANPATH=$d:$MANPATH; done
+#fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
@@ -56,19 +57,17 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 
-color_my_prompt () {
-    local __user_and_host="\[\033[01;32m\]\u@\h"
-    local __cur_location="\[\033[01;34m\]\w"
-    local __git_branch_color="\[\033[31m\]"
-    # local __git_branch="\`ruby -e \"print (%x{git branch 2> /dev/null}.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`"
-    local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-    local __prompt_tail="\[\033[35m\]$"
-    local __last_color="\[\033[00m\]"
-    export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
-}
+#color_my_prompt () {
+#j    local __user_and_host="\[\033[01;32m\]\u@\h"
+#j    local __cur_location="\[\033[01;34m\]\w"
+#j    local __git_branch_color="\[\033[31m\]"
+#j    local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+#j    local __prompt_tail="\[\033[35m\]$"
+#j    local __last_color="\[\033[00m\]"
+#j    export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
+#j}
 
 if [ "$(echo $0)" = "-bash" ]; then
-  color_my_prompt
 
   ###-begin-leetcode-completions-###
   #
@@ -112,17 +111,14 @@ pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl l
 ### }
 
 # alias clash='clash -f ~/.config/clash/config.yaml'
-if [ -d /nix/var/nix/profiles/default/etc/profile.d/ ]; then
-source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
-fi
+#if [ -d /nix/var/nix/profiles/default/etc/profile.d/ ]; then
+#source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+#source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
+#fi
 
 export SSH_PORT=29922
 
-#PROXY_URL='http://127.0.0.1:7890'
 alias mutt='/usr/bin/proxychains4 /usr/bin/neomutt'
-#[ -z $(pgrep clash) ] && clash -f ~/.config/clash/config.yaml >/dev/null 2>&1 &
-[ -z $NOFISH ] && [ -f $HOME/.enable_fish ] && fish
 
 [ x$FISH = x1 -o -f $HOME/.enable_fish ] && fish
 export AOS_SDK_PATH="$HOME/works/AliOS-Things"
