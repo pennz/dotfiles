@@ -53,4 +53,13 @@ if [ -f "$HOME"/.bash_aliases ]; then
 fi
 
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
-( ps $$ | grep bash ) && ( [ -f ~/.fzf.bash ] && source "$HOME"/.fzf.bash ) || true
+
+### { for mac
+pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )
+[ -d /Volumes/CaseSensitive/ ] || hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage >/dev/null 2>&1
+# source $HOME/.nix-profile/etc/profile.d/nix.sh
+# for cross compilation
+#. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+#. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+#
+### }
