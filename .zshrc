@@ -100,10 +100,9 @@ plugins=(git osx)
 
 [ -d /usr/local/share/zsh-completions ] && fpath=(/usr/local/share/zsh-completions $fpath)
 
-#[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+test -e ~/.profile && emulate sh -c 'source ~/.profile'
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 autoload -Uz compinit
 compinit
@@ -119,6 +118,7 @@ HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file instead of overwriting it
 setopt inc_append_history
 setopt share_history
+setopt vi
 
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
@@ -126,4 +126,5 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 if [ -f "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised
 fi
-if [ -e /home/pengyu/.nix-profile/etc/profile.d/nix.sh ]; then . /home/pengyu/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+source ~/.fzf.zsh
