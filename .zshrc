@@ -100,7 +100,7 @@ plugins=(git osx)
 
 [ -d /usr/local/share/zsh-completions ] && fpath=(/usr/local/share/zsh-completions $fpath)
 
-#[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+test -e ~/.profile && emulate sh -c 'source ~/.profile'
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
