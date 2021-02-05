@@ -103,7 +103,6 @@ plugins=(git osx)
 test -e ~/.profile && emulate sh -c 'source ~/.profile'
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 autoload -Uz compinit
 compinit
@@ -127,3 +126,5 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 if [ -f "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised
 fi
+
+source ~/.fzf.zsh
