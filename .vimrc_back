@@ -164,8 +164,10 @@ Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 Plug 'pixelneo/vim-python-docstring'
 
 let g:pydocstring_formatter = 'google'
+let g:pydocstring_doq_path = '/usr/local/bin/doq'
 
-nnoremap <leader>ss :Docstring<CR>
+nnoremap <leader>ss :PydocstringFormat<CR>
+let g:python_style = 'google'
 " javascript
 Plug 'pangloss/vim-javascript'
 
@@ -934,8 +936,8 @@ let g:SimpylFold_docstring_preview = 1
 
 "let g:python3_host_prog  = system('cd $(git rev-parse --show-toplevel) && echo $(poetry env info -p)/bin/python3 || which python3')[:-2]
 "let g:python_host_prog  = system('cd $(git rev-parse --show-toplevel) && echo $(poetry env info -p)/bin/python || which python')[:-2]
-"let g:python_host_prog = "/Users/v/Library/Caches/pypoetry/virtualenvs/lifestyle-TXnZab57-py3.8/bin/python"
-"let g:python3_host_prog = "/Users/v/Library/Caches/pypoetry/virtualenvs/lifestyle-TXnZab57-py3.8/bin/python3"
+let g:python_host_prog = "/Users/v/.nix-profile/bin/python"
+let g:python3_host_prog = "/Users/v/.nix-profile/bin/python3"
 
 "set fillchars=stl:^,stlnc:=,vert:│,fold:·,diff:-
 "noremap <Leader>x :bunload<CR>
