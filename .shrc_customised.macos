@@ -112,11 +112,11 @@ pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl l
 [ -d /Volumes/CaseSensitive/ ] || hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage >/dev/null 2>&1
 ### }
 
-# alias clash='clash -f ~/.config/clash/config.yaml'
-#if [ -d /nix/var/nix/profiles/default/etc/profile.d/ ]; then
-#source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-#source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
-#fi
+if [ -d /nix/var/nix/profiles/default/etc/profile.d/ ]; then
+  source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+  source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
+fi
+export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
 
 export SSH_PORT=29922
 
