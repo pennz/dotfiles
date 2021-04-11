@@ -58,6 +58,8 @@ vi_prec_num 1
 mark_all_pages 0
 wrap_search 0
 ignorecase_search 1
+use_migemo 1
+migemo_command cmigemo -q -d /usr/share/cmigemo/utf-8/migemo-dict
 use_mouse 0
 reverse_mouse 0
 relative_wheel_scroll 0
@@ -109,9 +111,10 @@ dns_order 0
 nntpserver 
 nntpmode 
 max_news 50
-use_proxy 1
+use_proxy 0
 http_proxy http://127.0.0.1:7890
 https_proxy http://127.0.0.1:7890
+gopher_proxy 
 ftp_proxy 
 no_proxy 
 noproxy_netaddr 0

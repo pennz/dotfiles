@@ -28,7 +28,7 @@ if [ x"${sys_info/inux/}" != x"$sys_info" ]; then
 fi
 
 SERVER_IP=lab.pengyuzhou.com
-PROXY_URL='http://127.0.0.1:7890'
+PROXY_URL='http://127.0.0.1:1087'
 
 alias p='popd'
 alias c='pushd'

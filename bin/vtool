@@ -1,2 +1,0 @@
-#!/bin/bash
-LC_ALL='en_US.UTF-8' mosh --ssh="ssh -p 29922" v@vtool.duckdns.org --server /Users/v/.nix-profile/bin/mosh-server
