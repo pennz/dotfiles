@@ -1,0 +1,14 @@
+#!/bin/bash
+
+file $1 | grep -q 'ISO-8859'
+if [ $? -eq 0 ]; then
+    iconv -f GBK -t utf-8 "$1" > "$1".conv && mv "$1".conv "$1";
+else
+    file $1 | grep -q 'Non-ISO'
+    if [ $? -eq 0 ]; then
+    iconv -c -t utf-8 "$1" > "$1".conv; 
+    mv "$1".conv "$1";  # Non-ISO, just convert without successful or not
+    fi;
+fi
+
+#dos2unix "$1";
