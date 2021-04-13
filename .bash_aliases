@@ -28,7 +28,7 @@ if [ x"${sys_info/inux/}" != x"$sys_info" ]; then
 fi
 
 SERVER_IP=lab.pengyuzhou.com
-PROXY_URL='http://127.0.0.1:7890'
+PROXY_URL='http://172.26.21.21:1087'
 
 alias p='popd'
 alias c='pushd'
@@ -39,8 +39,13 @@ alias ms='LC_ALL="en_US.UTF-8" mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.co
 alias s='LC_ALL="en_US.UTF-8" ssh -p 29932 pengyu@pengyuzhou.com'
 alias setproxy="eval export HTTP_PROXY=\$PROXY_URL HTTPS_PROXY=\$PROXY_URL http_proxy=\$PROXY_URL https_proxy=\$PROXY_URL; echo \$http_proxy"
 alias unsetproxy='export http_proxy= ; export https_proxy= ;export HTTP_PROXY= ; export HTTPS_PROXY= '
-alias antlr4='java org.antlr.v4.Tool'
-alias grun='java org.antlr.v4.gui.TestRig'
 alias gc='git commit --no-gpg-sign -s -m'
 alias sss='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
 alias nv='nix-env'
+alias antrl4="java org.antlr.v4.Tool"
+alias grun="java org.antlr.v4.runtime.misc.TestRig"
+alias antlr4py3="java org.antlr.v4.Tool -Dlanguage=Python3"
+alias antlr4py2="java org.antlr.v4.Tool -Dlanguage=Python2"
+alias antlr4vpy3="java org.antlr.v4.Tool -Dlanguage=Python3 -no-listener -visitor"
+alias antlr4vpy2="java org.antlr.v4.Tool -Dlanguage=Python2 -no-listener -visitor"
+alias pygrun="poetry run pygrun"
