@@ -63,12 +63,16 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Configuration for Plugins
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+VI_MODE_SET_CURSOR=true
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx)
+plugins=(git git-flow osx vi-mode)
 
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
@@ -118,7 +122,7 @@ HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file instead of overwriting it
 setopt inc_append_history
 setopt share_history
-setopt vi
+#setopt vi
 
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
@@ -128,3 +132,4 @@ if [ -f "$HOME"/.shrc_customised ]; then
 fi
 
 source ~/.fzf.zsh
+source ~/bin/git-subrepo/.rc

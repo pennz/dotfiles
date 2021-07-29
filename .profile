@@ -63,3 +63,5 @@ pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl l
 #. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 #
 ### }
+
+#source $HOME/bin/git-subrepo/.rc
