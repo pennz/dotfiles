@@ -28,7 +28,7 @@ if [ x"${sys_info/inux/}" != x"$sys_info" ]; then
 fi
 
 SERVER_IP=lab.pengyuzhou.com
-PROXY_URL='http://127.0.0.1:7890'
+PROXY_URL='http://127.0.0.1:1087'
 
 alias p='popd'
 alias c='pushd'
@@ -44,3 +44,7 @@ alias grun='java org.antlr.v4.gui.TestRig'
 alias gc='git commit --no-gpg-sign -s -m'
 alias sss='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
 alias nv='nix-env'
+alias rr='DISPLAY=:0 rofi -combi-modi window#drun -show combi -modi combi'
+alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
+alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
+
