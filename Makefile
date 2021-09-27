@@ -2,6 +2,7 @@ SHELL=/bin/bash
 PROJECT=shconf
 PROJECT_ID := $(shell glc list projects --owned -s $(PROJECT) -f json | sed '1d' | jq '.[0].id')
 #PROJECT_ID := 11180959
+SOURCE="dotfiles.tar"
 
 install_template:
 	git submodule update --init
@@ -46,3 +47,20 @@ get_jobs:
 
 get_job_trace:
 	glc get project-job-trace $(PROJECT_ID) $$(glc list project-jobs $(PROJECT_ID) -f json | sed '1d' | jq '.[0].id') -i
+
+gen_tarball:
+	@echo Running git archive...
+	# use HEAD if tag doesn't exist yet, so that development is easier...
+	rm $(SOURCE)
+	git archive -o $(SOURCE) $(VERSION) 2> /dev/null || (echo 'Warning: $(VERSION) does not exist.' && git archive -o $(SOURCE) HEAD)
+	# TODO: if git archive had a --submodules flag this would easier!
+	@echo Running git archive submodules...
+	# i thought i would need --ignore-zeros, but it doesn't seem necessary!
+	p="$$(pwd)" && (echo CWD=$$p; git submodule foreach) | while read entering path; do \
+	    temp="$${path%\'}"; \
+	    temp="$${temp#\'}"; \
+	    path="$$temp"; \
+	    echo Entering $$path; \
+	    [ "$$path" = "" ] && continue; \
+	    (tmp_tar="$$(mktemp)"; cd "$$path" && git archive --prefix=./"$$path"/ HEAD > "$$tmp_tar" && cat "$$tmp_tar" >> $$p/$(SOURCE) && rm "$$tmp_tar") \
+	done

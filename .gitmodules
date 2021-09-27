@@ -7,9 +7,3 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
-[submodule ".git_template"]
-	path = .git_template
-	url = https://github.com/greg0ire/git_template
-[submodule ".config/nixpkgs"]
-	path = .config/nixpkgs
-	url = git@github.com:pennz/dotfiles-1.git
