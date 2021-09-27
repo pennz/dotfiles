@@ -1662,6 +1662,8 @@ set complete+=kspell
 
 nnoremap <Leader>o :on<CR>
 hi Visual term=reverse cterm=reverse guibg=Grey
+" https://vi.stackexchange.com/questions/6040/how-can-i-use-readline-shortcuts-in-the-vim-command-line
+
 nmap <silent><Leader>tf <Esc>:Pytest file<CR>
 nmap <silent><Leader>tc <Esc>:Pytest class<CR>
 nmap <silent><Leader>tm <Esc>:Pytest method<CR>
