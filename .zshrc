@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="gnzh"
+ZSH_THEME="simple"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -131,5 +131,12 @@ if [ -f "$HOME"/.shrc_customised ]; then
     source "$HOME"/.shrc_customised
 fi
 
+function update_environment_from_tmux() {
+  if [ -n "${TMUX}" ]; then
+    eval "$(tmux show-environment -s)"
+  fi
+}
+
+add-zsh-hook precmd update_environment_from_tmux
 source ~/.fzf.zsh
 source ~/bin/git-subrepo/.rc
