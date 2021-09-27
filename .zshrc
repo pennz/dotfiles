@@ -139,9 +139,6 @@ function update_environment_from_tmux() {
 
 add-zsh-hook precmd update_environment_from_tmux
 source ~/.fzf.zsh
-
-source ~/bin/git-subrepo/.rc
-
 #compdef _glc glc
 
 # zsh completion for glc                                  -*- shell-script -*-
