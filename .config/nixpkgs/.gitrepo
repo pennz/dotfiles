@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:pennz/dotfiles-1.git
+	branch = master
+	commit = 285c50d22011d45acd108f7276eb741e083c7380
+	parent = 3a35aae6815d93025a0912eb0ef53d242361a59b
+	method = merge
+	cmdver = 0.4.3
