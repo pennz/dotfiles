@@ -39,8 +39,17 @@ alias ms='LC_ALL="en_US.UTF-8" mosh --ssh="ssh -t -p 29932" pengyu@pengyuzhou.co
 alias s='LC_ALL="en_US.UTF-8" ssh -p 29932 pengyu@pengyuzhou.com'
 alias setproxy="eval export HTTP_PROXY=\$PROXY_URL HTTPS_PROXY=\$PROXY_URL http_proxy=\$PROXY_URL https_proxy=\$PROXY_URL; echo \$http_proxy"
 alias unsetproxy='export http_proxy= ; export https_proxy= ;export HTTP_PROXY= ; export HTTPS_PROXY= '
-alias antlr4='java org.antlr.v4.Tool'
-alias grun='java org.antlr.v4.gui.TestRig'
 alias gc='git commit --no-gpg-sign -s -m'
 alias sss='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
 alias nv='nix-env'
+alias antrl4="java org.antlr.v4.Tool"
+alias grun="java org.antlr.v4.runtime.misc.TestRig"
+alias antlr4py3="java org.antlr.v4.Tool -Dlanguage=Python3"
+alias antlr4py2="java org.antlr.v4.Tool -Dlanguage=Python2"
+alias antlr4vpy3="java org.antlr.v4.Tool -Dlanguage=Python3 -no-listener -visitor"
+alias antlr4vpy2="java org.antlr.v4.Tool -Dlanguage=Python2 -no-listener -visitor"
+alias pygrun="poetry run pygrun"
+
+alias rr='DISPLAY=:0 rofi -combi-modi window#drun -show combi -modi combi'
+alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
+alias pycharm='/Applications/PyCharm\ CE.app/Contents/MacOS/pycharm &'
