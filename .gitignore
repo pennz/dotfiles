@@ -20,3 +20,4 @@ tmp/**/*
 .config
 .ssh/id_rsa*
 .*_history
+.glc.yml

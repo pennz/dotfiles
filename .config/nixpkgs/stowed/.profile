@@ -21,7 +21,7 @@ set -o ignoreeof
 [ ! -d "$HOME"/.vim/undo/ ] && mkdir -p "$HOME"/.vim/undo
 
 # fuck
-command -v fuck >/dev/null && eval "$(thefuck --alias)"
+#command -v fuck >/dev/null && eval "$(thefuck --alias)"
 
 # for visual studio code
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
@@ -56,7 +56,7 @@ export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
 
 ### { for mac
 pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl load /Library/LaunchDaemons/org.nixos.nix-daemon.plist && sudo launchctl start org.nixos.nix-daemon )
-[ -d /Volumes/CaseSensitive/ ] || hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage >/dev/null 2>&1
+[ -d /Volumes/CaseSensitive/ ] || hdiutil attach $HOME/not-backup/CaseSensitive.sparseimage >/dev/null 2>&1 &
 # source $HOME/.nix-profile/etc/profile.d/nix.sh
 # for cross compilation
 #. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
