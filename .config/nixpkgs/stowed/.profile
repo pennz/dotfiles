@@ -64,4 +64,4 @@ pgrep nix-daemon >/dev/null || ( which launchctl &>/dev/null && sudo launchctl l
 #
 ### }
 
-#source $HOME/bin/git-subrepo/.rc
+source $HOME/bin/git-subrepo/.rc

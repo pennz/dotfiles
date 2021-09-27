@@ -226,4 +226,4 @@ set -o vi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-source ~/bin/git-subrepo/.rc
+#source ~/bin/git-subrepo/.rc
